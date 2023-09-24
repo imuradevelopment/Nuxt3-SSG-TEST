@@ -4,9 +4,10 @@ export default defineNuxtConfig({
     app: {
         cdnURL: '/Nuxt3-SSG-TEST'
     },
-    // nitro: {
-    //     preset: 'node-server'
-    // },
+    nitro: {
+        // preset: 'node-server'
+        'netlify '
+    },
     devtools: { enabled: true },
     modules: [
         '@element-plus/nuxt'
