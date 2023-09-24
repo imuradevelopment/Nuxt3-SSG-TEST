@@ -5,8 +5,8 @@ export default defineNuxtConfig({
     //     cdnURL: '/Nuxt3-SSG-TEST'
     // },
     nitro: {
-        // preset: 'node-server'
-        preset: 'netlify'
+        preset: 'node-server'
+        // preset: 'netlify'
         // preset: 'netlify_edge'
         // preset: 'netlify_builder'
     },
