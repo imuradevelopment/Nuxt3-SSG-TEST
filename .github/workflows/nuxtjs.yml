@@ -61,11 +61,18 @@ jobs:
           static_site_generator: nuxt
       - name: Restore cache
         uses: actions/cache@v3
+        # with:
+        #   path: |
+        #     dist
+        #     .nuxt
+        #   key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+        #   restore-keys: |
+        #     ${{ runner.os }}-nuxt-build-
         with:
           path: |
-            dist
+            .output/public
             .nuxt
-          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('.output/public') }}
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
@@ -74,8 +81,10 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
+        # with:
+        #   path: ./dist
         with:
-          path: ./dist
+          path: ./.output/public
 
   # Deployment job
   deploy:
