@@ -6,7 +6,9 @@ export default defineNuxtConfig({
     },
     nitro: {
         // preset: 'node-server'
-        'netlify '
+        'netlify'
+        // 'netlify_edge'
+        // 'netlify_builder'
     },
     devtools: { enabled: true },
     modules: [
