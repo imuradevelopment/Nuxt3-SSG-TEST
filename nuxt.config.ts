@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     ssr: true,
     app: {
         baseURL: '/Nuxt3-SSG-TEST',
-        cdnURL: '/',
+        cdnURL: '/Nuxt3-SSG-TEST',
     },
     nitro: {
         // preset: 'node-server'
