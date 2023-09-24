@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     ssr: true,
+    experimental: {
+        payloadExtraction: false
+    },
     app: {
         baseURL: '/Nuxt3-SSG-TEST',
         cdnURL: '/Nuxt3-SSG-TEST',
