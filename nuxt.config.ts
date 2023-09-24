@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         // preset: 'netlify'
         // preset: 'netlify_edge'
         // preset: 'netlify_builder'
+        priset: 'github_pages'
     },
     devtools: { enabled: true },
     modules: [
