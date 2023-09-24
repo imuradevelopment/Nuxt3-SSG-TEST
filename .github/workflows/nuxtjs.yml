@@ -1,0 +1,88 @@
+# Nuxt サイトをビルドして GitHub Pages にデプロイするサンプルワークフロー
+#
+name: NuxtサイトをPagesにデプロイする
+
+on:
+  # autoDeployブランチを対象としたプッシュで実行
+  push:
+    branches: ["autoDeploy"]
+
+  # アクションタブからワークフローを手動で実行することができます。
+  workflow_dispatch:
+
+# GITHUB_TOKEN のパーミッションを設定し、GitHub Pages へのデプロイを許可する。
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 進行中の実行とキューに入れられた最新の実行の間にキューに入れられた実行をスキップして、1つのみの同時配備を許可する。
+# しかし、本番環境でのデプロイを完了させたいので、実行中のデプロイをキャンセルしないでください。
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Detect package manager
+        id: detect-package-manager
+        run: |
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/package.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "Unable to determine package manager"
+            exit 1
+          fi
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          # Nuxt設定ファイルに自動的にrouter.baseをインジェクトし、次のように設定します。
+          # target to static (https://nuxtjs.org/docs/configuration-glossary/configuration-target/).
+          #
+          # コンフィギュレーションを自分で管理したい場合は、この行を削除してもよい。
+          static_site_generator: nuxt
+      - name: キャッシュの復元
+        uses: actions/cache@v3
+        with:
+          path: |
+            dist
+            .nuxt
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-build-
+      - name: 依存関係をインストールする
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Nuxtによる静的HTMLエクスポート
+        run: ${{ steps.detect-package-manager.outputs.manager }} run generate
+      - name: 成果物のアップロード
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./dist
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
