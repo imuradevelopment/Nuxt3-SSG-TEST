@@ -7,8 +7,8 @@ export default defineNuxtConfig({
     nitro: {
         // preset: 'node-server'
         // preset: 'netlify'
-        preset: 'netlify_edge'
-        // preset: 'netlify_builder'
+        // preset: 'netlify_edge'
+        preset: 'netlify_builder'
     },
     devtools: { enabled: true },
     modules: [
