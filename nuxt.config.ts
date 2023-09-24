@@ -7,10 +7,10 @@ export default defineNuxtConfig({
     },
     nitro: {
         // preset: 'node-server'
-        // preset: 'netlify'
+        // preset: 'netlify',
         // preset: 'netlify_edge'
         // preset: 'netlify_builder'
-        priset: 'github_pages'
+        priset: ['github_pages', 'netlify']
     },
     devtools: { enabled: true },
     modules: [
