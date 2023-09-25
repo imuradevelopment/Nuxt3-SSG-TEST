@@ -1,16 +1,17 @@
 <template>
     <el-footer class="footer">
         <el-row>
-            <el-col :span="6">
-                <div class="back-button"
-                     @click="goBack">
-                    <el-button type="primary"
-                               icon="el-icon-back"
-                               circle></el-button>
-                </div>
-            </el-col>
-            <el-col :span="18">
+            <el-col :span="22">
                 <div class="copy-right">© 2023 企業名. All rights reserved.</div>
+            </el-col>
+            <el-col :span="2">
+                <div class="back-button"
+                        @click="goBack">
+                    <el-button type="primary"
+                                icon="el-icon-back"
+                                circle
+                                ></el-button>
+                </div>
             </el-col>
         </el-row>
     </el-footer>
