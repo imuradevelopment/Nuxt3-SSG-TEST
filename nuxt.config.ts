@@ -5,8 +5,12 @@ export default defineNuxtConfig({
         payloadExtraction: false
     },
     app: {
-        baseURL: '/Nuxt3-SSG-TEST',
-        cdnURL: '/Nuxt3-SSG-TEST',
+        // baseURL: '/',
+        // baseURL: '/Nuxt3-SSG-TEST',
+        // NUXT_APP_BASE_URL
+        // cdnURL: '/',
+        // cdnURL: '/Nuxt3-SSG-TEST',
+        // NUXT_APP_CDN_URL
     },
     // public: {
     //     apiBase: '/api'
