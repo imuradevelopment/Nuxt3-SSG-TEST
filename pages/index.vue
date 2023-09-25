@@ -12,7 +12,13 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const config = useRuntimeConfig()
+console.log('Runtime configの出力:', config)
+if (process.server) {
+    console.log('API secretの出力:', config.apiSecret)
+}
+</script>
 
 <style scoped>
 .container {
