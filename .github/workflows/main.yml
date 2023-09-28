@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./.output/public
-          cname: imuradevelopment.xyz
+          cname: hprenewal.imuradevelopment.xyz
   # Deployment job
   deploy:
     # Add a dependency to the build job
