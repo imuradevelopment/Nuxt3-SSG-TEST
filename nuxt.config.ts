@@ -41,8 +41,8 @@ export default defineNuxtConfig({
     ],
     elementPlus: { /** Options */ },
     microCMS: {
-        serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
-        apiKey: process.env.MICROCMS_API_KEY,
+        serviceDomain: 'test0929',
+        apiKey: '6qCeQWxHgSaBWNWSPydRctPC6xQkSeR0DU5s',
         target: 'all'
     }
 })
