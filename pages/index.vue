@@ -13,6 +13,13 @@
 </template>
 
 <script setup lang="ts">
+import { API2 } from "../.nuxt/types/API2"
+
+const { data } = await useMicroCMSGetList<API2>({
+    endpoint: "api_2",
+});
+console.log(data)
+
 const config = useRuntimeConfig()
 console.log('Runtime configの出力:', config)
 if (process.server) {

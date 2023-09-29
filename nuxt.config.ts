@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    devtools: {
+        enabled: true,
+
+        timeline: {
+            enabled: true
+        }
+    },
     ssr: true,
     experimental: {
         payloadExtraction: false
@@ -20,12 +27,22 @@ export default defineNuxtConfig({
         // preset: 'netlify',
         // preset: 'netlify_edge'
         // preset: 'netlify_builder'
-        priset: ['github_pages', 'netlify', 'netlify_edge', 'netlify_builder']
+        priset: ['github_pages', 'netlify', 'netlify_edge', 'netlify_builder'],
         // NITRO_PRESET=node-server nuxt build
+        esbuild: {
+            options: {
+                target: 'es2022'
+            }
+        }
     },
-    devtools: { enabled: true },
     modules: [
-        '@element-plus/nuxt'
+        '@element-plus/nuxt',
+        'nuxt-microcms-module'
     ],
-    elementPlus: { /** Options */ }
+    elementPlus: { /** Options */ },
+    microCMS: {
+        serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+        apiKey: process.env.MICROCMS_API_KEY,
+        target: 'all'
+    }
 })

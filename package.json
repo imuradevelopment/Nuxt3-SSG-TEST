@@ -15,5 +15,8 @@
     "@nuxt/devtools": "latest",
     "element-plus": "^2.3.14",
     "nuxt": "^3.7.3"
+  },
+  "dependencies": {
+    "nuxt-microcms-module": "^3.0.2"
   }
 }
