@@ -31,7 +31,7 @@ export default defineNuxtConfig({
         // NITRO_PRESET=node-server nuxt build
         esbuild: {
             options: {
-                target: 'es2022'
+                target: 'es2019'
             }
         }
     },
