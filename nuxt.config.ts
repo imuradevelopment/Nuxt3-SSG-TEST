@@ -57,11 +57,12 @@ export default defineNuxtConfig({
         // imports: [],
         // コンポーネントが正しくスタイルをロードしない場合、ここにコンポーネント名を追加する必要があります。
         // noStylesComponents: [],
-        
+
     },
     microCMS: {
         serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
         apiKey: process.env.MICROCMS_API_KEY,
         target: 'all'
-    }
+    },
+    css: ['~/public/assets/css/reset.css'],
 })
