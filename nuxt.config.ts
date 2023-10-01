@@ -39,8 +39,18 @@ export default defineNuxtConfig({
         '@element-plus/nuxt',
         'nuxt-microcms-module'
     ],
+    css: ['~/assets/styles/css/reset.css'],
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: `@use "@/assets/styles/element/index.scss" as element;`,
+                },
+            },
+        },
+    },
     elementPlus: {
-        importStyle: 'css',
+        importStyle: 'scss',
         themes: ['dark'],
         icon: 'ElIcon',
         namespace: 'el',
@@ -64,5 +74,4 @@ export default defineNuxtConfig({
         apiKey: process.env.MICROCMS_API_KEY,
         target: 'all'
     },
-    css: ['~/public/assets/css/reset.css'],
 })
