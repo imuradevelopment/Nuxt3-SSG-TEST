@@ -1,6 +1,20 @@
 <template>
-  <h1>ホームページ</h1>
-  <p>ここにホームページの内容を書きます。</p>
+  <div>
+    <div class="carousel-string">
+      <p>
+        <b>Solution & Evolution</b>
+      </p>
+      <p>
+        新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
+      </p>
+    </div>
+    <el-carousel class="el-carousel">
+      <el-carousel-item indicator-position="outside"><el-image
+          src="./images/top/image06.svg"></el-image></el-carousel-item>
+      <el-carousel-item><el-image src="./images/top/image07.svg"></el-image></el-carousel-item>
+      <el-carousel-item><el-image src="./images/top/image08.svg"></el-image></el-carousel-item>
+    </el-carousel>
+  </div>
   <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink :to="`/${blog.id}`"
@@ -41,4 +55,20 @@
 // }
 </script>
 
-<style scoped></style>
+<style scoped>
+.el-carousel {
+  height: 300px;
+}
+
+.carousel-string {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  color: white;
+  z-index: 1;
+}
+</style>
