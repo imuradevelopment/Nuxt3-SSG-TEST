@@ -1,5 +1,5 @@
 <template>
-    <h1>お問い合わせ</h1>
+    <h1>事業情報</h1>
 </template>
 
 <script setup lang="ts"></script>

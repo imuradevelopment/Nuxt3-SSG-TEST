@@ -1,17 +1,21 @@
 <template>
-    <el-container>
-        <el-header>
-            <Header />
-        </el-header>
+    <el-container class="custom_container">
+        <Header />
         <NuxtLayou :name="layout">
             <NuxtPage />
         </NuxtLayou>
-        <el-footer>
-            <Footer />
-        </el-footer>
+        <Footer />
     </el-container>
 </template>
 
 <script setup lang="ts">
 const layout = "threeLayers";
 </script>
+
+<style scoped>
+.custom_container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+</style>
