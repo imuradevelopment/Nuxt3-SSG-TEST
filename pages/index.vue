@@ -25,20 +25,20 @@
 </template>
 
 <script setup lang = "ts" >
-import { Blog } from "~~/types/Blog";
 
-const { data } = await useMicroCMSGetList<Blog>({
-  endpoint: "blogs",
-});
-console.log('data')
-console.log(data)
-console.log('data')
+// import { Blog } from "~~/types/Blog";
+// const { data } = await useMicroCMSGetList<Blog>({
+//   endpoint: "blogs",
+// });
+// console.log('data')
+// console.log(data)
+// console.log('data')
 
-const config = useRuntimeConfig()
-console.log('Runtime configの出力:', config)
-if (process.server) {
-  console.log('API secretの出力:', config.apiSecret)
-}
+// const config = useRuntimeConfig()
+// console.log('Runtime configの出力:', config)
+// if (process.server) {
+//   console.log('API secretの出力:', config.apiSecret)
+// }
 </script>
 
 <style scoped></style>
