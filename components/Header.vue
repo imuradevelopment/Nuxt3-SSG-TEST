@@ -22,35 +22,35 @@
         </el-menu-item>
         <el-sub-menu index="6">
             <template #title>その他遷移</template>
-            <el-menu-item index="0">
-                <NuxtLink to="/">/recruit/message</NuxtLink>
-            </el-menu-item>
-            <el-menu-item index="1">
-                <NuxtLink to="/">/recruit/feature</NuxtLink>
-            </el-menu-item>
-            <el-menu-item index="2">
-                <NuxtLink to="/">/recruit/office</NuxtLink>
-            </el-menu-item>
-            <el-menu-item index="3">
-                <NuxtLink to="/">/recruit/induction</NuxtLink>
-            </el-menu-item>
-            <el-menu-item index="4">
-                <NuxtLink to="/">/recruit/welfare</NuxtLink>
-            </el-menu-item>
-            <el-menu-item index="5">
-                <NuxtLink to="/">/recruit/data</NuxtLink>
-            </el-menu-item>
-            <el-menu-item index="6">
-                <NuxtLink to="/">/recruit/qa</NuxtLink>
-            </el-menu-item>
             <el-menu-item index="7">
-                <NuxtLink to="/">/recruit/employee</NuxtLink>
+                <NuxtLink to="/recruit/message">採用メッセージ</NuxtLink>
             </el-menu-item>
             <el-menu-item index="8">
-                <NuxtLink to="/">/recruit/information</NuxtLink>
+                <NuxtLink to="/recruit/feature">ベイルの特徴</NuxtLink>
             </el-menu-item>
             <el-menu-item index="9">
-                <NuxtLink to="/">個人情報保護方針ページ</NuxtLink>
+                <NuxtLink to="/recruit/office">オフィス紹介</NuxtLink>
+            </el-menu-item>
+            <el-menu-item index="10">
+                <NuxtLink to="/recruit/induction">研修制度</NuxtLink>
+            </el-menu-item>
+            <el-menu-item index="11">
+                <NuxtLink to="/recruit/welfare">福利厚生</NuxtLink>
+            </el-menu-item>
+            <el-menu-item index="12">
+                <NuxtLink to="/recruit/data">各種データ</NuxtLink>
+            </el-menu-item>
+            <el-menu-item index="13">
+                <NuxtLink to="/recruit/qa">QA</NuxtLink>
+            </el-menu-item>
+            <el-menu-item index="14">
+                <NuxtLink to="/recruit/employee">社員紹介</NuxtLink>
+            </el-menu-item>
+            <el-menu-item index="15">
+                <NuxtLink to="/recruit/information">募集情報</NuxtLink>
+            </el-menu-item>
+            <el-menu-item index="16">
+                <NuxtLink to="/policy">個人情報保護方針ページ</NuxtLink>
             </el-menu-item>
         </el-sub-menu>
     </el-menu>
