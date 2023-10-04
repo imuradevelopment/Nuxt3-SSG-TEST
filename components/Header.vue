@@ -1,12 +1,14 @@
 <template>
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect">
+    <el-menu :default-active="activeIndex" mode="horizontal" :ellipsis="false" @select="handleSelect">
         <el-menu-item index="0" class="logo">
-            <!-- <el-image src="../images/header/logo.png"></el-image> -->
-            LOGO
+            <NuxtLink to="/">
+                <el-image src="../images/header/logo.png"></el-image>
+                <!-- LOGO -->
+            </NuxtLink>
         </el-menu-item>
         <div class="flex-grow" />
         <el-menu-item index="1" class="el-menu-item">
-            <NuxtLink to="/">Company</NuxtLink>
+            <NuxtLink to="/company">Company</NuxtLink>
         </el-menu-item>
         <el-menu-item index="2" class="el-menu-item">
             <NuxtLink to="/service">Service</NuxtLink>
@@ -59,7 +61,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const activeIndex = ref('1')
+const activeIndex = ref('0')
 const handleSelect = (key: string, keyPath: string[]) => {
     console.log(key, keyPath)
 }
@@ -70,14 +72,10 @@ const handleSelect = (key: string, keyPath: string[]) => {
 }
 
 .el-menu-item {
-    padding: 0px;
+    padding: 0 1rem 0 1rem;
 }
-
-.el-menu-item>a {
-    padding: 0 20px 0 20px;
-}
-
 .logo {
-    padding: 0 0 0 0;
+    width: max-content;
+    padding:0;
 }
 </style>

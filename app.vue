@@ -1,7 +1,7 @@
 <template>
     <el-container class="layoutThreeLayers layoutSinglePage">
         <Header />
-        <NuxtLayou :name="layout">
+        <NuxtLayou>
             <NuxtPage />
         </NuxtLayou>
         <Footer />
@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-const layout = "threeLayers";
 </script>
 
 <style scoped>
