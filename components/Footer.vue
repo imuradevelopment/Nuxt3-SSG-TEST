@@ -12,7 +12,9 @@
             </el-col>
             <el-col :span="4">
                 <el-row>
-                    <div class="footerTopTitleText"><NuxtLink to="/company"><span class="footerTopHorizontalLine">会社</span>情報 Company</NuxtLink></div>
+                    <div class="footerTopTitleText">
+                        <LinkIndex linkTo="/company"><span class="footerTopHorizontalLine">会社</span>情報 Company</LinkIndex>
+                    </div>
                 </el-row>
                 <el-row>
                     <div class="footerTopInnnerText">トップメッセージ</div>
@@ -31,13 +33,19 @@
                 </el-row>
             </el-col>
             <el-col :span="4">
-                <div>事業情報 Service</div>
+                <div class="footerTopTitleText">
+                    <LinkIndex linkTo="/service"><span class="footerTopHorizontalLine">事業</span>情報 Service</LinkIndex>
+                </div>
             </el-col>
             <el-col :span="4">
-                <div>採用情報 Recruit</div>
+                <div class="footerTopTitleText">
+                    <LinkIndex linkTo="/recruit"><span class="footerTopHorizontalLine">採用</span>情報 Recruit</LinkIndex>
+                </div>
             </el-col>
             <el-col :span="4">
-                <div>お問い合わせ Contact</div>
+                <div class="footerTopTitleText">
+                    <LinkIndex linkTo="/contact"><span class="footerTopHorizontalLine">お問</span>い合わせ Contact</LinkIndex>
+                </div>
             </el-col>
             <el-col :span="4">
                 <div>本社</div>
@@ -52,37 +60,47 @@
 </template>
 
 <script setup lang="ts">
-
+// import { useActiveIndexStore } from '~/stores/activeIndex'
+// const activeIndexStore = useActiveIndexStore()
+// const updateActiveIndex = () => {
+//     activeIndexStore.activeIndex = "2"
+//     console.log(activeIndexStore.activeIndex)
+// }
 </script>
 
 <style scoped>
-.footerLogoWrapper{
+.footerLogoWrapper {
     background-color: #697F9F;
 }
-.footerLogo{
+
+.footerLogo {
     border-top: #697F9F solid 1px;
     background-color: #FFFFFF;
     margin: 0 1px 1rem 1px;
     padding: 0 0.5rem 0 0;
 }
+
 .footerTop {
     background-color: #697F9F;
     color: #F2F7FC;
 }
-.footerTopTitleText{
-    font-size:large;
+
+.footerTopTitleText {
+    font-size: large;
     font-weight: 500;
     line-height: 1.3;
 }
-.footerTopHorizontalLine{
+
+.footerTopHorizontalLine {
     /* background: linear-gradient(transparent 95%,#F2F7FC 0); */
     border-bottom: 3px solid #F2F7FC;
 }
-.footerTopInnnerText{
+
+.footerTopInnnerText {
     font-size: small;
 }
+
 .footerBottom {
     background-color: #F2F2F2;
     color: #000000;
-}
-</style>
+}</style>

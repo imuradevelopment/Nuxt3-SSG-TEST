@@ -1,5 +1,5 @@
 <template>
-    <el-menu :default-active="activeIndex" mode="horizontal" :ellipsis="false" @select="handleSelect">
+    <el-menu :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false" @select="handleSelect">
         <el-menu-item index="0" class="logo">
             <NuxtLink to="/">
                 <!-- <el-image src="../images/header/logo.png"></el-image> -->
@@ -59,11 +59,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const activeIndex = ref('0')
+import { useActiveIndexStore } from '~/stores/activeIndex'
+const activeIndexStore = useActiveIndexStore()
 const handleSelect = (key: string, keyPath: string[]) => {
     console.log(key, keyPath)
+    activeIndexStore.activeIndex = key
+    console.log(activeIndexStore.activeIndex)
 }
 </script>
 <style scoped>

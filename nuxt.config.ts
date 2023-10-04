@@ -1,17 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindTypography from "@tailwindcss/typography"
+import tailwindTypography from "@tailwindcss/typography";
 
 export default defineNuxtConfig({
     devtools: {
         enabled: true,
 
         timeline: {
-            enabled: true
-        }
+            enabled: true,
+        },
     },
     ssr: true,
     experimental: {
-        payloadExtraction: false
+        payloadExtraction: false,
     },
     app: {
         // baseURL: '/',
@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     //     apiBase: '/api'
     // }
     nitro: {
-        // preset: 'node-server'
+        // preset: 'node-server',
         // preset: 'netlify',
         // preset: 'netlify_edge'
         // preset: 'netlify_builder'
@@ -33,16 +33,17 @@ export default defineNuxtConfig({
         // NITRO_PRESET=node-server nuxt build
         esbuild: {
             options: {
-                target: 'es2019'
-            }
-        }
+                target: "es2019",
+            },
+        },
     },
     modules: [
-        '@element-plus/nuxt',
-        'nuxt-microcms-module',
-        '@nuxtjs/tailwindcss'
+        "@element-plus/nuxt",
+        "nuxt-microcms-module",
+        "@nuxtjs/tailwindcss",
+        "@pinia/nuxt",
     ],
-    css: ['~/assets/styles/css/reset.css'],
+    css: ["~/assets/styles/css/reset.css"],
     vite: {
         css: {
             preprocessorOptions: {
@@ -53,10 +54,10 @@ export default defineNuxtConfig({
         },
     },
     elementPlus: {
-        importStyle: 'scss',
+        importStyle: "scss",
         // themes: ['dark'],
-        icon: 'ElIcon',
-        namespace: 'el',
+        icon: "ElIcon",
+        namespace: "el",
         injectionID: { prefix: 1024, current: 0 },
         // ElTooltipコンポーネントをベースとするすべてのappend-to propsを修正する場合、ここに値を追加する必要があります。
         // appendTo: [],
@@ -70,12 +71,11 @@ export default defineNuxtConfig({
         // imports: [],
         // コンポーネントが正しくスタイルをロードしない場合、ここにコンポーネント名を追加する必要があります。
         // noStylesComponents: [],
-
     },
     microCMS: {
         serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
         apiKey: process.env.MICROCMS_API_KEY,
-        target: 'all'
+        target: "all",
     },
     tailwindcss: {
         config: {
@@ -83,4 +83,11 @@ export default defineNuxtConfig({
             plugins: [tailwindTypography],
         },
     },
-})
+    pinia: {
+        autoImports: [
+            // automatically imports `defineStore`
+            "defineStore", // import { defineStore } from 'pinia'
+            ["defineStore", "definePiniaStore"], // import { defineStore as definePiniaStore } from 'pinia'
+        ],
+    },
+});
