@@ -2,7 +2,8 @@
     <footer>
         <el-row class="footerLogoWrapper">
             <div class="footerLogo drop-shadow-md">
-                <el-image src="./images/footer/logo.png"></el-image>
+                <!-- <el-image src="./images/footer/logo.png"></el-image> -->
+                LOGO
             </div>
         </el-row>
         <el-row class="footerTop">

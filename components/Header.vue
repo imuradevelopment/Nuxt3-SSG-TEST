@@ -2,8 +2,8 @@
     <el-menu :default-active="activeIndex" mode="horizontal" :ellipsis="false" @select="handleSelect">
         <el-menu-item index="0" class="logo">
             <NuxtLink to="/">
-                <el-image src="../images/header/logo.png"></el-image>
-                <!-- LOGO -->
+                <!-- <el-image src="../images/header/logo.png"></el-image> -->
+                LOGO
             </NuxtLink>
         </el-menu-item>
         <div class="flex-grow" />
