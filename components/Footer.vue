@@ -9,7 +9,7 @@
                     </div>
                 </el-row>
                 <el-row class="footerTopLeft">
-                    <el-col :span="4">
+                    <el-col :span="3">
                         <div class="footerTopTitleText">
                             <LinkIndex linkTo="/">トップ Top</LinkIndex>
                         </div>
@@ -37,7 +37,7 @@
                             <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">アクセス</LinkIndex>
                         </el-row>
                     </el-col>
-                    <el-col :span="5">
+                    <el-col :span="4">
                         <el-row>
                             <div class="footerTopTitleText">
                                 <LinkIndex linkTo="/service"><span class="footerTopHorizontalLine">事業</span>情報 Service
@@ -57,7 +57,7 @@
                             <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">開発実績</LinkIndex>
                         </el-row>
                     </el-col>
-                    <el-col :span="5">
+                    <el-col :span="7">
                         <el-row>
                             <el-col :span="24">
                                 <div class="footerTopTitleText">
@@ -65,39 +65,37 @@
                                     </LinkIndex>
                                 </div>
                             </el-col>
-                            <el-row>
-                                <el-col :span="12">
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">採用メッセージ</LinkIndex>
-                                    </el-row>
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">ペイルの特徴</LinkIndex>
-                                    </el-row>
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">オフィス紹介</LinkIndex>
-                                    </el-row>
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">研修制度</LinkIndex>
-                                    </el-row>
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">福利厚生</LinkIndex>
-                                    </el-row>
-                                </el-col>
-                                <el-col :span="12">
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">各種データ</LinkIndex>
-                                    </el-row>
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">Q&A</LinkIndex>
-                                    </el-row>
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">社員紹介</LinkIndex>
-                                    </el-row>
-                                    <el-row>
-                                        <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">募集情報</LinkIndex>
-                                    </el-row>
-                                </el-col>
-                            </el-row>
+                            <el-col :span="12">
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">採用メッセージ</LinkIndex>
+                                </el-row>
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">ペイルの特徴</LinkIndex>
+                                </el-row>
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">オフィス紹介</LinkIndex>
+                                </el-row>
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">研修制度</LinkIndex>
+                                </el-row>
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">福利厚生</LinkIndex>
+                                </el-row>
+                            </el-col>
+                            <el-col :span="12">
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">各種データ</LinkIndex>
+                                </el-row>
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">Q&A</LinkIndex>
+                                </el-row>
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">社員紹介</LinkIndex>
+                                </el-row>
+                                <el-row>
+                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">募集情報</LinkIndex>
+                                </el-row>
+                            </el-col>
                         </el-row>
                     </el-col>
                     <el-col :span="5">
@@ -134,18 +132,18 @@
                 </div>
             </el-col>
         </el-row>
-        <el-row class="footerBottom">
-            <!-- <el-col :span="8"> -->
-                <div>
-                    <el-image src="../images/footer/policy.png" style="width: 40px; height: 40px"></el-image>
-                </div>
-                <div>個人情報保護方針</div>
-            <!-- </el-col> -->
-            <!-- <el-col :span="8"> -->
-            <!-- </el-col> -->
-            <!-- <el-col :span="8"> -->
-                <div>© 2023 企業名. All rights reserved.</div>
-            <!-- </el-col> -->
+        <el-row align="middle" class="footerBottom">
+            <el-col :span="12">
+                <el-row align="middle">
+                    <el-image class="policyMark" src="../images/footer/policy.png"></el-image>
+                    <span class="text-xs">個人情報保護方針</span>
+                </el-row>
+            </el-col>
+            <el-col :span="12">
+                <el-row justify="end" class="text-xs">
+                    <div>© 2023 企業名. All rights reserved.</div>
+                </el-row>
+            </el-col>
         </el-row>
     </footer>
 </template>
@@ -231,8 +229,13 @@
 .footerBottom {
     background-color: #F5F5F5;
     color: #000000;
-    font-size: small;
+    font-size:smaller;
     font-weight: 400;
-    place-items: center;
+    padding: 0 0 0 3rem;
+}
+.policyMark{
+    height: 40px;
+    width: 40px;
+    margin:0 1rem 0 0;
 }
 </style>

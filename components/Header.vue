@@ -8,19 +8,19 @@
         </el-menu-item>
         <div class="flex-grow" />
         <el-menu-item index="1" class="el-menu-item">
-            <NuxtLink to="/company">Company</NuxtLink>
+            <NuxtLink to="/company" class="text-base font-semibold">会社情報</NuxtLink>
         </el-menu-item>
         <el-menu-item index="2" class="el-menu-item">
-            <NuxtLink to="/service">Service</NuxtLink>
+            <NuxtLink to="/service" class="text-base font-semibold">事業情報</NuxtLink>
         </el-menu-item>
         <el-menu-item index="3" class="el-menu-item">
-            <NuxtLink to="/recruit">Recruit</NuxtLink>
+            <NuxtLink to="/recruit" class="text-base font-semibold">採用情報</NuxtLink>
         </el-menu-item>
         <el-menu-item index="4" class="el-menu-item">
-            <NuxtLink to="/access">Access</NuxtLink>
+            <NuxtLink to="/access" class="text-base font-semibold">アクセス</NuxtLink>
         </el-menu-item>
         <el-menu-item index="5" class="el-menu-item">
-            <NuxtLink to="/contact">Contact</NuxtLink>
+            <NuxtLink to="/contact" class="text-base font-semibold">お問い合わせ</NuxtLink>
         </el-menu-item>
         <el-sub-menu index="6">
             <template #title>その他遷移</template>
@@ -78,5 +78,15 @@ const handleSelect = (key: string, keyPath: string[]) => {
 .logo {
     width: max-content;
     padding:0;
+    transition-property: none!important;
+}
+.logo.is-active {
+    border-bottom: 2px solid white!important;
+}
+.logo:hover {
+    background-color: white!important;
+}
+.logo:focus {
+    background-color: white!important;
 }
 </style>
