@@ -35,7 +35,7 @@ const indexList = {
 }
 
 const returnIndex = (path:String) => {
-    let result:String = indexList[path.split("/")[1]]
+    let result:String = indexList[path.split("#")[0].split("/")[1]]
     if(result == undefined || result == ""){
         result = "0"
     }

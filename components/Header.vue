@@ -3,7 +3,7 @@
         <el-menu-item index="0" class="logo">
             <NuxtLink to="/">
                 <!-- <el-image src="../images/header/logo.png"></el-image> -->
-                LOGO
+                <el-image src="../images/header/logo.svg"></el-image>
             </NuxtLink>
         </el-menu-item>
         <div class="flex-grow" />
@@ -28,7 +28,7 @@
                 <NuxtLink to="/recruit/message">採用メッセージ</NuxtLink>
             </el-menu-item>
             <el-menu-item index="8">
-                <NuxtLink to="/recruit/feature">ベイルの特徴</NuxtLink>
+                <NuxtLink to="/recruit/feature">ペイルの特徴</NuxtLink>
             </el-menu-item>
             <el-menu-item index="9">
                 <NuxtLink to="/recruit/office">オフィス紹介</NuxtLink>
