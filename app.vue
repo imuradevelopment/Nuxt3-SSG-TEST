@@ -1,11 +1,11 @@
 <template>
-    <el-container class="layoutThreeLayers layoutSinglePage">
+    <!-- <el-container class="layoutThreeLayers layoutSinglePage"> -->
         <Header />
         <NuxtLayou>
             <NuxtPage />
         </NuxtLayou>
         <Footer />
-    </el-container>
+    <!-- </el-container> -->
 </template>
 
 <script setup lang="ts">
