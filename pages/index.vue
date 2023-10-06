@@ -1,19 +1,26 @@
 <template>
   <div>
-    <div class="carousel-string">
-      <p>
-        <b>Solution & Evolution</b>
-      </p>
-      <p>
-        新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
-      </p>
+    <div>
+      <el-carousel height="400px" arrow="never" indicator-position="none">
+        <el-carousel-item>
+          <el-image src="./images/sample/suits001-blue.png" class="carousel-image"></el-image>
+        </el-carousel-item>
+        <el-carousel-item>
+          <el-image src="./images/sample/suits002-blue.png" class="carousel-image"></el-image>
+        </el-carousel-item>
+        <el-carousel-item>
+          <el-image src="./images/sample/suits003-blue.png" class="carousel-image"></el-image>
+        </el-carousel-item>
+        <div class="carousel-string">
+          <h2 class="catchString fontSerif">
+            Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
+          </h2>
+          <p class="text-sm">
+            新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
+          </p>
+        </div>
+      </el-carousel>
     </div>
-    <el-carousel class="el-carousel">
-      <el-carousel-item indicator-position="outside"><el-image
-          src="./images/top/image06.svg"></el-image></el-carousel-item>
-      <el-carousel-item><el-image src="./images/top/image07.svg"></el-image></el-carousel-item>
-      <el-carousel-item><el-image src="./images/top/image08.svg"></el-image></el-carousel-item>
-    </el-carousel>
   </div>
   <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
@@ -56,19 +63,23 @@
 </script>
 
 <style scoped>
-.el-carousel {
-  height: 300px;
+.catchString {
+  margin-bottom: 30px;
+  font-size: 80px;
+  letter-spacing: 0.1em;
 }
 
-.carousel-string {
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0;
-  margin: 0;
-  font-size: 30px;
-  color: white;
-  z-index: 1;
+.fontSerif {
+  font-family: 'Sorts Mill Goudy', serif;
 }
-</style>
+
+.carousel-image {
+  width: inherit;
+  height: inherit;
+}
+.carousel-string {
+  position: relative;
+  color: white;
+  text-align: center;
+  top: calc(50% - 40px);
+}</style>

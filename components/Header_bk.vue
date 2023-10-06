@@ -1,9 +1,11 @@
 <template>
     <el-menu :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false" @select="handleSelect">
         <el-menu-item index="0" class="logo">
-            <NuxtLink to="/">
-                <el-image src="../images/header/logo.svg"></el-image>
-            </NuxtLink>
+            <h1>
+                <NuxtLink to="/">
+                    <el-image src="../images/header/logo.svg" alt="vaile INC."></el-image>
+                </NuxtLink>
+            </h1>
         </el-menu-item>
         <div class="flex-grow" />
         <el-menu-item index="1" class="el-menu-item">
@@ -56,17 +58,14 @@
         </el-sub-menu>
     </el-menu>
 </template>
-  
+
 <script setup lang="ts">
 import { useActiveIndexStore } from '~/stores/activeIndex'
-
 const activeIndexStore = useActiveIndexStore()
-
 const handleSelect = (key: string, keyPath: string[]) => {
     activeIndexStore.activeIndex = key
 }
 </script>
-  
 <style scoped>
 .flex-grow {
     flex-grow: 1;
@@ -75,19 +74,18 @@ const handleSelect = (key: string, keyPath: string[]) => {
 .el-menu-item {
     padding: 0 1rem 0 1rem;
 }
-
 .logo {
     width: max-content;
-    padding: 0;
-    transition-property: none !important;
+    padding:0;
+    transition-property: none!important;
 }
-
 .logo.is-active {
-    border-bottom: 2px solid white !important;
+    border-bottom: 2px solid white!important;
 }
-
-.logo:hover,
+.logo:hover {
+    background-color: white!important;
+}
 .logo:focus {
-    background-color: white !important;
+    background-color: white!important;
 }
 </style>
