@@ -1,12 +1,17 @@
 <template>
     <el-container class="layoutThreeLayers">
-        <Header />
+    <!-- <el-container> -->
+        <el-header class="el-header-custom">
+            <Header />
+        </el-header>
         <el-main class="el-main-custom">
             <NuxtLayou>
                 <NuxtPage />
             </NuxtLayou>
         </el-main>
-        <Footer />
+        <el-footer class="el-footer-custom">
+            <Footer />
+        </el-footer>
     </el-container>
 </template>
 
@@ -26,7 +31,9 @@
     max-width: 1980px;
     margin: 0 auto;
 } */
-
+.el-header-custom{
+    padding: 0 0 0 0;
+}
 .layoutThreeLayers {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -36,5 +43,9 @@
 }
 .el-main-custom{
     padding:0 0 0 0;
+}
+.el-footer-custom{
+    padding: 0 0 0 0;
+    height: auto;
 }
 </style>

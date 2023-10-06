@@ -1,166 +1,155 @@
 <template>
-    <el-footer class="el-footer-custom">
-        <el-row class="footerLogoWrapper">
-            <el-col :span="20">
-                <el-row>
-                    <div class="footerLogo drop-shadow-md">
-                        <!-- <el-image src="./images/footer/logo.png"></el-image> -->
-                        <el-image src="./images/footer/logo.svg"></el-image>
+    <el-row class="footerLogoWrapper">
+        <el-col :span="20">
+            <el-row>
+                <div class="footerLogo drop-shadow-md">
+                    <!-- <el-image src="./images/footer/logo.png"></el-image> -->
+                    <el-image src="./images/footer/logo.svg"></el-image>
+                </div>
+            </el-row>
+            <el-row class="footerTopLeft">
+                <el-col :span="3">
+                    <div class="footerTopTitleText">
+                        <LinkIndex linkTo="/">トップ Top</LinkIndex>
                     </div>
-                </el-row>
-                <el-row class="footerTopLeft">
-                    <el-col :span="3">
+                </el-col>
+                <el-col :span="5">
+                    <el-row>
                         <div class="footerTopTitleText">
-                            <LinkIndex linkTo="/">トップ Top</LinkIndex>
+                            <LinkIndex linkTo="/company"><span class="footerTopHorizontalLine">会社</span>情報 Company
+                            </LinkIndex>
                         </div>
-                    </el-col>
-                    <el-col :span="5">
-                        <el-row>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">トップメッセージ</LinkIndex>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">ペイルの由来</LinkIndex>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">沿革</LinkIndex>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">会社概要</LinkIndex>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">アクセス</LinkIndex>
+                    </el-row>
+                </el-col>
+                <el-col :span="4">
+                    <el-row>
+                        <div class="footerTopTitleText">
+                            <LinkIndex linkTo="/service"><span class="footerTopHorizontalLine">事業</span>情報 Service
+                            </LinkIndex>
+                        </div>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">SIサービス</LinkIndex>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">ITサービス</LinkIndex>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">SEサービス</LinkIndex>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">開発実績</LinkIndex>
+                    </el-row>
+                </el-col>
+                <el-col :span="7">
+                    <el-row>
+                        <el-col :span="24">
                             <div class="footerTopTitleText">
-                                <LinkIndex linkTo="/company"><span class="footerTopHorizontalLine">会社</span>情報 Company
+                                <LinkIndex linkTo="/recruit"><span class="footerTopHorizontalLine">採用</span>情報 Recruit
                                 </LinkIndex>
                             </div>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">トップメッセージ</LinkIndex>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">ペイルの由来</LinkIndex>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">沿革</LinkIndex>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">会社概要</LinkIndex>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">アクセス</LinkIndex>
-                        </el-row>
-                    </el-col>
-                    <el-col :span="4">
-                        <el-row>
-                            <div class="footerTopTitleText">
-                                <LinkIndex linkTo="/service"><span class="footerTopHorizontalLine">事業</span>情報 Service
-                                </LinkIndex>
-                            </div>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">SIサービス</LinkIndex>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">ITサービス</LinkIndex>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">SEサービス</LinkIndex>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">開発実績</LinkIndex>
-                        </el-row>
-                    </el-col>
-                    <el-col :span="7">
-                        <el-row>
-                            <el-col :span="24">
-                                <div class="footerTopTitleText">
-                                    <LinkIndex linkTo="/recruit"><span class="footerTopHorizontalLine">採用</span>情報 Recruit
-                                    </LinkIndex>
-                                </div>
-                            </el-col>
-                            <el-col :span="12">
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">採用メッセージ</LinkIndex>
-                                </el-row>
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">ペイルの特徴</LinkIndex>
-                                </el-row>
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">オフィス紹介</LinkIndex>
-                                </el-row>
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">研修制度</LinkIndex>
-                                </el-row>
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">福利厚生</LinkIndex>
-                                </el-row>
-                            </el-col>
-                            <el-col :span="12">
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">各種データ</LinkIndex>
-                                </el-row>
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">Q&A</LinkIndex>
-                                </el-row>
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">社員紹介</LinkIndex>
-                                </el-row>
-                                <el-row>
-                                    <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">募集情報</LinkIndex>
-                                </el-row>
-                            </el-col>
-                        </el-row>
-                    </el-col>
-                    <el-col :span="5">
-                        <el-row>
-                            <div class="footerTopTitleText">
-                                <LinkIndex linkTo="/contact"><span class="footerTopHorizontalLine">お問</span>い合わせ Contact
-                                </LinkIndex>
-                            </div>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/contact#TEST" class="footerTopInnnerText">採用に関する問い合わせ</LinkIndex>
-                        </el-row>
-                        <el-row>
-                            <LinkIndex linkTo="/contact#TEST" class="footerTopInnnerText">その他の問い合わせ</LinkIndex>
-                        </el-row>
-                    </el-col>
-                </el-row>
-            </el-col>
-            <el-col :span="4">
-                <div class="footerTopRight">
-                    <div class="footerTopRightInner">
-                        <div class="addressTitle">本社</div>
-                        <div class="address">
-                            〒000-0000<br />
-                            東京都◯◯◯◯◯◯1-6-2<br />
-                            ◯◯◯◯◯ビル<br />
+                        </el-col>
+                        <el-col :span="12">
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">採用メッセージ</LinkIndex>
+                            </el-row>
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">ペイルの特徴</LinkIndex>
+                            </el-row>
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">オフィス紹介</LinkIndex>
+                            </el-row>
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">研修制度</LinkIndex>
+                            </el-row>
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">福利厚生</LinkIndex>
+                            </el-row>
+                        </el-col>
+                        <el-col :span="12">
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">各種データ</LinkIndex>
+                            </el-row>
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">Q&A</LinkIndex>
+                            </el-row>
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">社員紹介</LinkIndex>
+                            </el-row>
+                            <el-row>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">募集情報</LinkIndex>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </el-col>
+                <el-col :span="5">
+                    <el-row>
+                        <div class="footerTopTitleText">
+                            <LinkIndex linkTo="/contact"><span class="footerTopHorizontalLine">お問</span>い合わせ Contact
+                            </LinkIndex>
                         </div>
-                        <div class="addressDetail">
-                            7F（受付）<br />
-                            8F（開発フロア）<br />
-                            9F（セミナーフロア）<br />
-                        </div>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/contact#TEST" class="footerTopInnnerText">採用に関する問い合わせ</LinkIndex>
+                    </el-row>
+                    <el-row>
+                        <LinkIndex linkTo="/contact#TEST" class="footerTopInnnerText">その他の問い合わせ</LinkIndex>
+                    </el-row>
+                </el-col>
+            </el-row>
+        </el-col>
+        <el-col :span="4">
+            <div class="footerTopRight">
+                <div class="footerTopRightInner">
+                    <div class="addressTitle">本社</div>
+                    <div class="address">
+                        〒000-0000<br />
+                        東京都◯◯◯◯◯◯1-6-2<br />
+                        ◯◯◯◯◯ビル<br />
+                    </div>
+                    <div class="addressDetail">
+                        7F（受付）<br />
+                        8F（開発フロア）<br />
+                        9F（セミナーフロア）<br />
                     </div>
                 </div>
-            </el-col>
-        </el-row>
-        <el-row align="middle" class="footerBottom">
-            <el-col :span="12">
-                <el-row align="middle">
-                    <el-image class="policyMark" src="../images/footer/policy.png"></el-image>
-                    <span class="text-xs">個人情報保護方針</span>
-                </el-row>
-            </el-col>
-            <el-col :span="12">
-                <el-row justify="end" class="text-xs">
-                    <div>© 2023 企業名. All rights reserved.</div>
-                </el-row>
-            </el-col>
-        </el-row>
-    </el-footer>
+            </div>
+        </el-col>
+    </el-row>
+    <el-row align="middle" class="footerBottom">
+        <el-col :span="12">
+            <el-row align="middle">
+                <el-image class="policyMark" src="../images/footer/policy.png"></el-image>
+                <span class="text-xs">個人情報保護方針</span>
+            </el-row>
+        </el-col>
+        <el-col :span="12">
+            <el-row justify="end" class="text-xs">
+                <div class="copyrightMark">© 2023 企業名. All rights reserved.</div>
+            </el-row>
+        </el-col>
+    </el-row>
 </template>
 
 <script setup lang="ts">
-// import { useActiveIndexStore } from '~/stores/activeIndex'
-// const activeIndexStore = useActiveIndexStore()
-// const updateActiveIndex = () => {
-//     activeIndexStore.activeIndex = "2"
-//     console.log(activeIndexStore.activeIndex)
-// }
 </script>
 
 <style scoped>
-.el-footer-custom{
-    padding: 0 0 0 0;
-}
 .footerLogoWrapper {
     background-color: #697F9F;
 }
@@ -232,13 +221,17 @@
 .footerBottom {
     background-color: #F5F5F5;
     color: #000000;
-    font-size:smaller;
+    font-size: smaller;
     font-weight: 400;
     padding: 0 0 0 3rem;
 }
-.policyMark{
+
+.policyMark {
     height: 40px;
     width: 40px;
-    margin:0 1rem 0 0;
+    margin: 0 1rem 0 0;
+}
+.copyrightMark{
+    margin: 0 2.5rem 0 0;
 }
 </style>
