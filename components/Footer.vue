@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <el-footer class="el-footer-custom">
         <el-row class="footerLogoWrapper">
             <el-col :span="20">
                 <el-row>
@@ -145,7 +145,7 @@
                 </el-row>
             </el-col>
         </el-row>
-    </footer>
+    </el-footer>
 </template>
 
 <script setup lang="ts">
@@ -158,6 +158,9 @@
 </script>
 
 <style scoped>
+.el-footer-custom{
+    padding: 0 0 0 0;
+}
 .footerLogoWrapper {
     background-color: #697F9F;
 }

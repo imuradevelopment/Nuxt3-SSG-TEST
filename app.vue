@@ -1,9 +1,11 @@
 <template>
     <el-container class="layoutThreeLayers">
         <Header />
-        <NuxtLayou>
-            <NuxtPage />
-        </NuxtLayou>
+        <el-main class="el-main-custom">
+            <NuxtLayou>
+                <NuxtPage />
+            </NuxtLayou>
+        </el-main>
         <Footer />
     </el-container>
 </template>
@@ -31,5 +33,8 @@
     min-height: 100vh;
     max-width: 1980px;
     margin: 0 auto;
+}
+.el-main-custom{
+    padding:0 0 0 0;
 }
 </style>

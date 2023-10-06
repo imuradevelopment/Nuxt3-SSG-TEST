@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <el-header class="el-header-custom">
         <el-menu :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false" @select="handleSelect">
             <el-menu-item index="0" class="logo">
                 <NuxtLink to="/">
@@ -56,7 +56,7 @@
                 </el-menu-item>
             </el-sub-menu>
         </el-menu>
-    </header>
+    </el-header>
 </template>
   
 <script setup lang="ts">
@@ -70,6 +70,9 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </script>
   
 <style scoped>
+.el-header-custom{
+    padding: 0 0 0 0;
+}
 .flex-grow {
     flex-grow: 1;
 }
