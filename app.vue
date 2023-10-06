@@ -12,10 +12,12 @@
 </script>
 
 <style scoped>
+body {
+    min-height: 100vh;
+}
 .layoutThreeLayers {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
 }
 
 .layoutSinglePage {
