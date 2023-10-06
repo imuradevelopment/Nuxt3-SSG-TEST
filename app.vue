@@ -16,7 +16,7 @@ html {
     height: -webkit-fill-available;
 }
 
-body {
+#__nuxt {
     min-height: -webkit-fill-available;
     display: grid;
     grid-template-rows: auto 1fr auto;
