@@ -12,9 +12,15 @@
 </script>
 
 <style scoped>
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
+
 .layoutThreeLayers {
     display: grid;
     grid-template-rows: auto 1fr auto;
