@@ -1,18 +1,18 @@
 <template>
-    <!-- <el-container class="layoutThreeLayers layoutSinglePage"> -->
+    <el-container class="layoutThreeLayers">
         <Header />
         <NuxtLayou>
             <NuxtPage />
         </NuxtLayou>
         <Footer />
-    <!-- </el-container> -->
+    </el-container>
 </template>
 
 <script setup lang="ts">
 </script>
 
 <style scoped>
-html {
+/* html {
     height: -webkit-fill-available;
 }
 
@@ -23,16 +23,13 @@ html {
     min-height: 100vh;
     max-width: 1980px;
     margin: 0 auto;
-}
+} */
 
-/* .layoutThreeLayers {
+.layoutThreeLayers {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-} */
-
-/* .layoutSinglePage {
     max-width: 1980px;
     margin: 0 auto;
-} */
+}
 </style>
