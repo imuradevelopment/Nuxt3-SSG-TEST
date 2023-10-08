@@ -101,16 +101,26 @@ const canvasBackgroundColor = { h: 200, s: 20, l: 10, a: 0.3 };
 //         canvasBackgroundColor,
 //     );
 // })
+
 if (process.client) {
+    onMounted(() => {
+        lines(
+            canvasID,
+            canvasLineStyles,
+            lineCount,
+            canvasBackgroundColor
+        )
+    }),
     onUpdated(() => {
         lines(
             canvasID,
             canvasLineStyles,
             lineCount,
-            canvasBackgroundColor,
-        );
+            canvasBackgroundColor
+        )
     })
- }
+}
+
 
 </script>
 
