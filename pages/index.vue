@@ -5,7 +5,7 @@
         <el-carousel-item>
           <canvas id="lines"></canvas>
         </el-carousel-item>
-        <el-carousel-item>
+        <!-- <el-carousel-item>
           <el-image src="./images/sample/suits001-blue.png" class="carousel-image"></el-image>
         </el-carousel-item>
         <el-carousel-item>
@@ -13,7 +13,7 @@
         </el-carousel-item>
         <el-carousel-item>
           <el-image src="./images/sample/suits003-blue.png" class="carousel-image"></el-image>
-        </el-carousel-item>
+        </el-carousel-item> -->
         <div class="carousel-string">
           <h2 class="catchString fontSerif">
             Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
