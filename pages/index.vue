@@ -1,11 +1,13 @@
 <template id="myTemplate">
-  <div>
     <div>
-      <el-carousel height="400px" arrow="never" indicator-position="none">
-        <el-carousel-item>
-          <canvas id="lines"></canvas>
-        </el-carousel-item>
-        <!-- <el-carousel-item>
+        <div>
+            <el-carousel height="400px"
+                         arrow="never"
+                         indicator-position="none">
+                <el-carousel-item>
+                    <canvas id="lines"></canvas>
+                </el-carousel-item>
+                <!-- <el-carousel-item>
           <el-image src="./images/sample/suits001-blue.png" class="carousel-image"></el-image>
         </el-carousel-item>
         <el-carousel-item>
@@ -14,18 +16,18 @@
         <el-carousel-item>
           <el-image src="./images/sample/suits003-blue.png" class="carousel-image"></el-image>
         </el-carousel-item> -->
-        <div class="carousel-string">
-          <h2 class="catchString fontSerif">
-            Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
-          </h2>
-          <p class="text-sm">
-            新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
-          </p>
+                <div class="carousel-string">
+                    <h2 class="catchString fontSerif">
+                Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
+              </h2>
+                    <p class="text-sm">
+                新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
+              </p>
+                </div>
+            </el-carousel>
         </div>
-      </el-carousel>
     </div>
-  </div>
-  <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
+    <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink :to="`/${blog.id}`"
         class="flex flex-col gap-4 sm:transition-shadow sm:hover:shadow md:flex-row md:items-center lg:gap-6">
@@ -46,7 +48,7 @@
       </NuxtLink>
     </li>
   </ul> -->
-  <!-- <script src="../assets/ts/lines.ts"></script> -->
+    <!-- <script src="../assets/ts/lines.ts"></script> -->
 </template>
 
 <script setup lang = "ts" >
@@ -103,47 +105,46 @@ const canvasBackgroundColor = { h: 200, s: 20, l: 10, a: 0.3 };
 // })
 
 if (process.client) {
-    onMounted(() => {
-        lines(
-            canvasID,
-            canvasLineStyles,
-            lineCount,
-            canvasBackgroundColor
-        )
-    }),
-    onUpdated(() => {
-        lines(
-            canvasID,
-            canvasLineStyles,
-            lineCount,
-            canvasBackgroundColor
-        )
-    })
 }
-
+onMounted(() => {
+    lines(
+        canvasID,
+        canvasLineStyles,
+        lineCount,
+        canvasBackgroundColor
+    )
+})
+onUpdated(() => {
+    lines(
+        canvasID,
+        canvasLineStyles,
+        lineCount,
+        canvasBackgroundColor
+    )
+})
 
 </script>
 
 <style scoped>
 .catchString {
-  margin-bottom: 30px;
-  font-size: 80px;
-  letter-spacing: 0.1em;
+    margin-bottom: 30px;
+    font-size: 80px;
+    letter-spacing: 0.1em;
 }
 
 .fontSerif {
-  font-family: 'Sorts Mill Goudy', serif;
+    font-family: 'Sorts Mill Goudy', serif;
 }
 
 .carousel-image {
-  width: inherit;
-  height: inherit;
+    width: inherit;
+    height: inherit;
 }
 
 .carousel-string {
-  position: relative;
-  color: white;
-  text-align: center;
-  top: calc(50% - 40px);
+    position: relative;
+    color: white;
+    text-align: center;
+    top: calc(50% - 40px);
 }
 </style>
