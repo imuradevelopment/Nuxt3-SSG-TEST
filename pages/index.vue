@@ -1,9 +1,9 @@
 <template id="myTemplate">
     <div>
         <div>
-            <div style="height:400px; float: none; weight:auto;">
+            <div style="height:400px; width:auto;">
                 <canvas id="lines"></canvas>
-                    <div class="carousel-string carousel-image">
+                    <div class="carousel-string" style="float: none;">
                     <h2 class="catchString fontSerif">
                 Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
                 </h2>
