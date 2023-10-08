@@ -1,13 +1,13 @@
 <template id="myTemplate">
     <div>
         <div>
-            <el-carousel height="400px"
+            <div style="height:400px; weight:auto;">
+                <canvas id="lines"></canvas>
+            </div>
+            <!-- <el-carousel height="400px"
                          arrow="never"
                          indicator-position="none">
                 <el-carousel-item>
-                    <canvas id="lines"></canvas>
-                </el-carousel-item>
-                <!-- <el-carousel-item>
           <el-image src="./images/sample/suits001-blue.png" class="carousel-image"></el-image>
         </el-carousel-item>
         <el-carousel-item>
