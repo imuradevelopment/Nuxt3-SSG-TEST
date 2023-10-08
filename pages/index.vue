@@ -3,6 +3,14 @@
         <div>
             <div style="height:400px; weight:auto;">
                 <canvas id="lines"></canvas>
+                    <div class="carousel-string">
+                    <h2 class="catchString fontSerif">
+                Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
+                </h2>
+                    <p class="text-sm">
+                新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
+                </p>
+                </div>
             </div>
             <!-- <el-carousel height="400px"
                          arrow="never"
@@ -15,7 +23,7 @@
         </el-carousel-item>
         <el-carousel-item>
           <el-image src="./images/sample/suits003-blue.png" class="carousel-image"></el-image>
-        </el-carousel-item> -->
+        </el-carousel-item>
                 <div class="carousel-string">
                     <h2 class="catchString fontSerif">
                 Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
@@ -24,7 +32,7 @@
                 新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
               </p>
                 </div>
-            <!-- </el-carousel> -->
+            </el-carousel> -->
         </div>
     </div>
     <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
