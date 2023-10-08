@@ -46,6 +46,7 @@
       </NuxtLink>
     </li>
   </ul> -->
+  <script src="../assets/ts/lines.ts"></script>
 </template>
 
 <script setup lang = "ts" >
