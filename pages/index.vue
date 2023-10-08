@@ -3,7 +3,7 @@
         <div>
             <div style="height:400px; display:flex; weight:auto;">
                 <canvas id="lines"></canvas>
-                    <div class="carousel-string">
+                    <div class="carousel-string carousel-image">
                     <h2 class="catchString fontSerif">
                 Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
                 </h2>
