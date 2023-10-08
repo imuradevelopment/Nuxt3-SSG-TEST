@@ -1,7 +1,10 @@
-<template>
+<template id="myTemplate">
   <div>
     <div>
       <el-carousel height="400px" arrow="never" indicator-position="none">
+        <el-carousel-item>
+          <canvas id="lines"></canvas>
+        </el-carousel-item>
         <el-carousel-item>
           <el-image src="./images/sample/suits001-blue.png" class="carousel-image"></el-image>
         </el-carousel-item>
@@ -46,7 +49,6 @@
 </template>
 
 <script setup lang = "ts" >
-
 // import { Blog } from "~~/types/Blog";
 // const { data } = await useMicroCMSGetList<Blog>({
 //   endpoint: "blogs",
@@ -60,6 +62,10 @@
 // if (process.server) {
 //   console.log('API secretの出力:', config.apiSecret)
 // }
+import { lines } from "~~/assets/ts/lines"
+if (process.client) {
+  lines();
+}
 </script>
 
 <style scoped>
@@ -77,9 +83,11 @@
   width: inherit;
   height: inherit;
 }
+
 .carousel-string {
   position: relative;
   color: white;
   text-align: center;
   top: calc(50% - 40px);
-}</style>
+}
+</style>
