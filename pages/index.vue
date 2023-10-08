@@ -24,7 +24,7 @@
                 新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
               </p>
                 </div>
-            </el-carousel>
+            <!-- </el-carousel> -->
         </div>
     </div>
     <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
