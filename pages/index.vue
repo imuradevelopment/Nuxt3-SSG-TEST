@@ -1,9 +1,9 @@
 <template id="myTemplate">
     <div>
         <div>
-            <div style="height:400px; float: none;">
+            <div style="height:400px; position: relative;">
                 <canvas id="lines"></canvas>
-                <div>
+                <div style="    position: absolute; top: 150px;">
                     <div class="carousel-string">
                         <h2 class="catchString fontSerif">
                     Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
