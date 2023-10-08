@@ -1,7 +1,7 @@
 <template id="myTemplate">
     <div>
         <div>
-            <div style="height:400px; display:flex; weight:auto;">
+            <div style="height:400px; float: none; weight:auto;">
                 <canvas id="lines"></canvas>
                     <div class="carousel-string carousel-image">
                     <h2 class="catchString fontSerif">
