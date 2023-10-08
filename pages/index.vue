@@ -63,7 +63,7 @@
 // if (process.server) {
 //   console.log('API secretの出力:', config.apiSecret)
 // }
-import { lines } from "~~/assets/ts/lines"
+import { lines } from "~~/assets/ts/lines_bk2"
 // if (process.client) {
 //   lines();
 // }

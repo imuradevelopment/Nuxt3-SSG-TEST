@@ -1,37 +1,14 @@
 export const lines = () => {
     // キャンバス要素を取得
-    const canvas = document.getElementById("lines") as HTMLCanvasElement | null;
-    if (!canvas) {
-        console.error("Canvas element not found");
-        return;
-    }
+    const canvas = document.getElementById("lines");
     // 2D コンテキストを取得
     const ctx = canvas.getContext("2d");
-    if (!ctx) {
-        console.error("2D context not available");
-        return;
-    }
-    let width: number; // キャンバスの幅を保持する変数
-    let height: number; // キャンバスの高さを保持する変数
+    let width; // キャンバスの幅を保持する変数
+    let height; // キャンバスの高さを保持する変数
 
     // 線オブジェクトのクラスを定義
     class Line {
-        size: number;
-        origin: { x: number; y: number };
-        length: number;
-        color: { h: number; s: number; l: number; a: number };
-        style: string;
-        offSet: number;
-        line: { path: string; mag: number } | null;
-        offSetSpeed: number;
-
-        constructor(
-            origin: { x: number; y: number },
-            size: number,
-            length: number,
-            color: { h: number; s: number; l: number; a: number },
-            style = "pattern"
-        ) {
+        constructor(origin, size, length, color, style = "pattern") {
             this.size = size; // 線の太さ
             this.origin = origin; // 線の始点座標
             this.length = length; // 線の長さ
@@ -106,20 +83,20 @@ export const lines = () => {
         }
 
         // 線の描画スタイルを設定するメソッド
-        renderStyle(style: string) {
+        renderStyle(style) {
             if (style === "glitches") {
-                ctx.lineDashOffset = this.line!.mag + this.offSet; // ダッシュオフセットを設定
+                ctx.lineDashOffset = this.line.mag + this.offSet; // ダッシュオフセットを設定
                 ctx.setLineDash([
                     this.size ** 1.5,
-                    (this.line!.mag / this.length) * this.size ** 2
+                    (this.line.mag / this.length) * this.size ** 2
                 ]); // ダッシュパターンを設定
                 this.offSet += 20; // オフセットを更新
                 ctx.lineWidth = 2; // 線の幅を設定
                 return this;
             }
             if (style === "pattern") {
-                ctx.lineDashOffset = this.line!.mag - this.offSet; // ダッシュオフセットを設定
-                ctx.setLineDash([this.line!.mag, this.line!.mag]); // ダッシュパターンを設定
+                ctx.lineDashOffset = this.line.mag - this.offSet; // ダッシュオフセットを設定
+                ctx.setLineDash([this.line.mag, this.line.mag]); // ダッシュパターンを設定
                 this.offSet += 10; // オフセットを更新
                 ctx.lineWidth = 0.2; // 線の幅を設定
             }
@@ -127,18 +104,18 @@ export const lines = () => {
 
         // パスの一部をランダムに変更するメソッド
         mutatePath() {
-            let lineFragment = this.line!.path.split(" ").slice(1); // パスを分割
+            let lineFragment = this.line.path.split(" ").slice(1); // パスを分割
             let generator = this.generators(); // ランダムセグメントのリストを取得
             lineFragment[(Math.random() * lineFragment.length) | 0] =
                 generator[(Math.random() * generator.length) | 0].line; // ランダムなセグメントを選択し、パスを変更
-            this.line!.path = `${this.line!.path.split(" ")[0]} ${lineFragment.join(
+            this.line.path = `${this.line.path.split(" ")[0]} ${lineFragment.join(
                 " "
             )}`; // パスを更新
         }
 
         // 線を描画するメソッド
         draw() {
-            if (!this.line) this.generate(); // パスが生成されていない場合は生成
+            !this.line && this.generate(); // パスが生成されていない場合は生成
 
             ctx.strokeStyle = this.getColorString(); // 線の色を設定
             this.renderStyle(this.style); // 描画スタイルを設定
@@ -156,8 +133,8 @@ export const lines = () => {
     }
 
     // 線オブジェクトを生成する関数
-    function generateLines(amount: number): Line[] {
-        let lines: Line[] = []; // 線オブジェクトのリストを初期化
+    function generateLines(amount) {
+        let lines = []; // 線オブジェクトのリストを初期化
         let styles = [
             {
                 size: 1.25,
@@ -190,22 +167,22 @@ export const lines = () => {
         return lines; // 生成した線オブジェクトのリストを返す
     }
 
-    let id: number | undefined; // アニメーションフレームの ID を保持する変数
+    let id; // アニメーションフレームの ID を保持する変数
 
     // ウィンドウのリサイズ時に呼び出される関数
     function resize() {
-        if (id !== undefined) cancelAnimationFrame(id); // アニメーションを停止
+        id = cancelAnimationFrame(id); // アニメーションを停止
         width = window.innerWidth; // キャンバスの幅を更新
         height = window.innerHeight; // キャンバスの高さを更新
         canvas.width = width; // キャンバスの幅を設定
         canvas.height = height; // キャンバスの高さを設定
         const lines = generateLines(40); // 線オブジェクトを生成
         function update() {
-            if (!(id! % 3)) {
+            if (!(id % 3)) {
                 clear(); // キャンバスをクリア
                 lines.forEach((line) => {
                     line.draw(); // 線を描画
-                    if (!(id! % 5) && Math.random() > 0.95) {
+                    if (!(id % 5) && Math.random() > 0.95) {
                         line.mutatePath(); // パスをランダムに変更
                     }
                 });
