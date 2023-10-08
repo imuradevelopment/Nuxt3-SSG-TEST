@@ -3,8 +3,8 @@
         <div>
             <div style="height:400px; position: relative;">
                 <canvas id="lines"></canvas>
-                <div style="    position: absolute; top: 150px;">
-                    <div class="carousel-string">
+                <div class="carousel-string">
+                    <div>
                         <h2 class="catchString fontSerif">
                     Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
                     </h2>
