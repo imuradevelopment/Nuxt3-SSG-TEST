@@ -1,15 +1,17 @@
 <template id="myTemplate">
     <div>
         <div>
-            <div style="height:400px; width:auto;">
+            <div style="height:400px; float: none;">
                 <canvas id="lines"></canvas>
-                    <div class="carousel-string" style="float: none;">
-                    <h2 class="catchString fontSerif">
-                Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
-                </h2>
-                    <p class="text-sm">
-                新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
-                </p>
+                <div>
+                    <div class="carousel-string">
+                        <h2 class="catchString fontSerif">
+                    Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
+                    </h2>
+                        <p class="text-sm">
+                    新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
+                    </p>
+                    </div>
                 </div>
             </div>
             <!-- <el-carousel height="400px"
