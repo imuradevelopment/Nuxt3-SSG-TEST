@@ -63,11 +63,53 @@
 // if (process.server) {
 //   console.log('API secretの出力:', config.apiSecret)
 // }
-import { lines } from "~~/assets/ts/lines_bk2"
+
+import { lines } from "~~/assets/ts/lines"
+const canvasID = "lines";
+const canvasLineStyles = [
+    { size: 1.25, style: "pattern", color: { h: 210, s: 100, l: 70, a: 0.5 } },
+    { size: 2.5, style: "pattern", color: { h: 190, s: 90, l: 50, a: 0.3 } },
+    { size: 5, style: "pattern", color: { h: 210, s: 70, l: 60, a: 0.2 } },
+    { size: 10, style: "pattern", color: { h: 310, s: 80, l: 55, a: 0.15 } },
+    { size: 20, style: "pattern", color: { h: 200, s: 25, l: 35, a: 0.12 } },
+    { size: 20, style: "pattern", color: { h: 210, s: 20, l: 40, a: 0.12 } },
+    { size: 40, style: "pattern", color: { h: 190, s: 40, l: 50, a: 0.12 } },
+    { size: 80, style: "pattern", color: { h: 220, s: 50, l: 60, a: 0.12 } },
+    { size: 40, style: "glitches", color: { h: 300, s: 100, l: 50, a: 0.3 } },
+    { size: 20, style: "glitches", color: { h: 210, s: 100, l: 50, a: 0.3 } },
+    { size: 60, style: "glitches", color: { h: 30, s: 100, l: 50, a: 0.3 } }
+];
+const lineCount = 40
+const canvasBackgroundColor = { h: 200, s: 20, l: 10, a: 0.3 };
+
 // if (process.client) {
-//   lines();
+//     window.addEventListener("load", () => {
+//         lines(
+//             canvasID,
+//             canvasLineStyles,
+//             lineCount,
+//             canvasBackgroundColor,
+//         );
+//     });
 // }
-useNuxtApp().hook('app:mounted', () => lines());
+
+onUpdated(() => {
+    lines(
+        canvasID,
+        canvasLineStyles,
+        lineCount,
+        canvasBackgroundColor,
+    );
+})
+
+onMounted(() => {
+            lines(
+        canvasID,
+        canvasLineStyles,
+        lineCount,
+        canvasBackgroundColor,
+    );
+})
 </script>
 
 <style scoped>
