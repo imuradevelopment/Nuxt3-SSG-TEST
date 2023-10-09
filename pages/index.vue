@@ -6,11 +6,11 @@
                 <div class="carousel-string">
                     <div>
                         <h2 class="catchString fontSerif">
-                    Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
-                    </h2>
+                            Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
+                            </h2>
                         <p class="text-sm">
-                    新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
-                    </p>
+                            新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
+                            </p>
                     </div>
                 </div>
             </div>
@@ -94,53 +94,87 @@ const canvasLineStyles = [
 const lineCount = 40
 const canvasBackgroundColor = { h: 200, s: 20, l: 10, a: 0.3 };
 
+// window.addEventListener("load", () => {
+//     lines(
+//         canvasID,
+//         canvasLineStyles,
+//         lineCount,
+//         canvasBackgroundColor
+//     )
+// })
+// onMounted(() => {
+//     lines(
+//         canvasID,
+//         canvasLineStyles,
+//         lineCount,
+//         canvasBackgroundColor
+//     )
+// })
+// onUpdated(() => {
+//     lines(
+//         canvasID,
+//         canvasLineStyles,
+//         lineCount,
+//         canvasBackgroundColor
+//     )
+// })
+
 // if (process.client) {
 //     window.addEventListener("load", () => {
 //         lines(
 //             canvasID,
 //             canvasLineStyles,
 //             lineCount,
-//             canvasBackgroundColor,
-//         );
-//     });
+//             canvasBackgroundColor
+//         )
+//     })
+//     onMounted(() => {
+//         lines(
+//             canvasID,
+//             canvasLineStyles,
+//             lineCount,
+//             canvasBackgroundColor
+//         )
+//     })
+//     onUpdated(() => {
+//         lines(
+//             canvasID,
+//             canvasLineStyles,
+//             lineCount,
+//             canvasBackgroundColor
+//         )
+//     })
 // }
 
-// onMounted(() => {
-//     lines(
-//         canvasID,
-//         canvasLineStyles,
-//         lineCount,
-//         canvasBackgroundColor,
-//     );
+
+// window.addEventListener("load", () => {
+//     alert('ssr:load')
 // })
-
+// onMounted(() => {
+//     alert('ssr:onMpunted')
+// })
+// onUpdated(() => {
+//     alert('ssr:onUpdated')
+// })
+onMounted(() => {
+    lines(
+        canvasID,
+        canvasLineStyles,
+        lineCount,
+        canvasBackgroundColor
+    )}
+)
 if (process.client) {
-    window.addEventListener("load", () => {
-        lines(
-            canvasID,
-            canvasLineStyles,
-            lineCount,
-            canvasBackgroundColor
-        )
-    })
-    onMounted(() => {
-        lines(
-            canvasID,
-            canvasLineStyles,
-            lineCount,
-            canvasBackgroundColor
-        )
-    })
-    onUpdated(() => {
-        lines(
-            canvasID,
-            canvasLineStyles,
-            lineCount,
-            canvasBackgroundColor
-        )
-    })
+    // window.addEventListener("load", () => {
+    //     alert('cli:load')
+    // })
+    // onMounted(() => {
+    //     alert('cli:onMounted');
+    // })
+    // onUpdated(() => {
+    //     alert('cli:onUpdated')
+    // })
 }
-
 </script>
 
 <style scoped>
