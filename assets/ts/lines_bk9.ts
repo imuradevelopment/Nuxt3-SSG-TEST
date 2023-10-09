@@ -83,26 +83,7 @@ export const lines = (
             //     this.offSetSpeed = length / size;
             // }
 
-            // // Line クラスのコンストラクタ内で origin をランダムに設定する
-            // constructor(
-            //     origin: { x: number; y: number },
-            //     size: number,
-            //     length: number,
-            //     color: { h: number; s: number; l: number; a: number },
-            //     style = "pattern"
-            // ) {
-            //     this.size = size;
-            //     this.origin = { x: Math.random() * origin.x, y: Math.random() *origin.y }
-            //     this.length = length;
-            //     this.color = color;
-            //     this.style = style;
-            //     this.origin = `M${Math.random() * origin.x},${Math.random() * origin.y}`;
-            //     this.offSet = 0;
-            //     this.line = null;
-            //     this.offSetSpeed = length / size;
-            // }
-
-            // Line クラスのコンストラクタ内で origin をキャンバスの中央に設定する
+            // Line クラスのコンストラクタ内で origin をランダムに設定する
             constructor(
                 origin: { x: number; y: number },
                 size: number,
@@ -111,15 +92,34 @@ export const lines = (
                 style = "pattern"
             ) {
                 this.size = size;
-                this.origin = { x: origin.x / 2, y: origin.y / 2 }
+                this.origin = { x: Math.random() * origin.x, y: Math.random() *origin.y }
                 this.length = length;
                 this.color = color;
                 this.style = style;
-                this.origin = `M${origin.x / 2},${origin.y / 2}`;
+                this.origin = `M${Math.random() * origin.x},${Math.random() * origin.y}`;
                 this.offSet = 0;
                 this.line = null;
                 this.offSetSpeed = length / size;
             }
+
+            // // Line クラスのコンストラクタ内で origin をキャンバスの中央に設定する
+            // constructor(
+            //     origin: { x: number; y: number },
+            //     size: number,
+            //     length: number,
+            //     color: { h: number; s: number; l: number; a: number },
+            //     style = "pattern"
+            // ) {
+            //     this.size = size;
+            //     this.origin = { x: origin.x / 2, y: origin.y / 2 }
+            //     this.length = length;
+            //     this.color = color;
+            //     this.style = style;
+            //     this.origin = `M${origin.x / 2},${origin.y / 2}`;
+            //     this.offSet = 0;
+            //     this.line = null;
+            //     this.offSetSpeed = length / size;
+            // }
 
             // HSLA 形式の色文字列を取得
             getColorString() {
@@ -137,33 +137,19 @@ export const lines = (
                     { line: `l${this.size}-${this.size}`, mag: Math.hypot(this.size, this.size) }, // 逆向きの対角線
                     { line: `l-${this.size},${this.size}`, mag: Math.hypot(this.size, this.size) }, // 逆向きの対角線
                     { line: `l-${this.size}-${this.size}`, mag: Math.hypot(this.size, this.size) }, // 対角線
-                    // // 新しい曲線セグメントを追加します
-                    // { curve: `Q${this.size * 2},${this.size * 2},${this.size},${this.size}`, mag: 2 * Math.hypot(this.size, this.size) }, // 二次ベジェ曲線
-                    // { curve: `Q${-this.size * 2},${-this.size * 2},${-this.size},${-this.size}`, mag: 2 * Math.hypot(this.size, this.size) }, // 逆向きの二次ベジェ曲線
-                    // { curve: `q${this.size},${this.size / 2},0,${this.size}`, mag: 2 * this.size }, // sin波
-                    // { curve: `q${this.size},${-this.size / 2},0,${-this.size}`, mag: 2 * this.size }, // cos波
-                    // { curve: `q${this.size},${this.size},0,${this.size}`, mag: 2 * this.size }, // tan波
-                    // { curve: `l${this.size},${this.size / 2}`, mag: Math.hypot(this.size, this.size / 2) }, // ノコギリ波
-                    // { curve: `l${this.size},${0}`, mag: this.size }, // 矩形波
-                    // { curve: `l${this.size},${-this.size}`, mag: this.size }, // ピーク波
-                    // { curve: `q${this.size / 2},${this.size},${-this.size / 2},${-this.size}`, mag: 2 * this.size }, // 三角波
-                    // { curve: `l${this.size / 2},${0} q${this.size / 2},${this.size / 2},0,${this.size}`, mag: this.size + (this.size / 2) }, // パルス波
-                    // { curve: `q${-this.size},${-this.size / 2},0,${-this.size}`, mag: 2 * this.size }, // 逆向きのsin波
-                    // { curve: `l${-this.size},${-this.size / 2}`, mag: Math.hypot(this.size, this.size / 2) }, // 逆向きのノコギリ波
-                    // { line: `h-${this.size}`, mag: this.size }, // 逆向きの水平線
-                    // { line: `v-${this.size}`, mag: this.size }, // 逆向きの垂直線
-                    // { curve: `Q${this.size * 2},${this.size * 2},${this.size},${this.size}`, mag: 2 * Math.hypot(this.size, this.size) }, // 二次ベジェ曲線
-                    // { curve: `Q${-this.size * 2},${-this.size * 2},${-this.size},${-this.size}`, mag: 2 * Math.hypot(this.size, this.size) }, // 逆向きの二次ベジェ曲線
-                    // { curve: `q${this.size},${this.size / 2},0,${this.size}`, mag: 2 * this.size }, // sin波
-                    // { curve: `q${this.size},${-this.size / 2},0,${-this.size}`, mag: 2 * this.size }, // cos波
-                    // { curve: `q${this.size},${this.size},0,${this.size}`, mag: 2 * this.size }, // tan波
-                    // { curve: `l${this.size},${this.size / 2}`, mag: Math.hypot(this.size, this.size / 2) }, // ノコギリ波
-                    // { curve: `l${this.size},${0}`, mag: this.size }, // 矩形波
-                    // { curve: `l${this.size},${-this.size}`, mag: this.size }, // ピーク波
-                    // { curve: `q${this.size / 2},${this.size},${-this.size / 2},${-this.size}`, mag: 2 * this.size }, // 三角波
-                    // { curve: `l${this.size / 2},${0} q${this.size / 2},${this.size / 2},0,${this.size}`, mag: this.size + (this.size / 2) }, // パルス波
-                    // { curve: `q${-this.size},${-this.size / 2},0,${-this.size}`, mag: 2 * this.size }, // 逆向きのsin波
-                    // { curve: `l${-this.size},${-this.size / 2}`, mag: Math.hypot(this.size, this.size / 2) }, // 逆向きのノコギリ波
+                    // 新しい曲線セグメントを追加します
+                    { curve: `Q${this.size * 2},${this.size * 2},${this.size},${this.size}`, mag: 2 * Math.hypot(this.size, this.size) }, // 二次ベジェ曲線
+                    { curve: `Q${-this.size * 2},${-this.size * 2},${-this.size},${-this.size}`, mag: 2 * Math.hypot(this.size, this.size) }, // 逆向きの二次ベジェ曲線
+                    { curve: `q${this.size},${this.size / 2},0,${this.size}`, mag: 2 * this.size }, // sin波
+                    { curve: `q${this.size},${-this.size / 2},0,${-this.size}`, mag: 2 * this.size }, // cos波
+                    { curve: `q${this.size},${this.size},0,${this.size}`, mag: 2 * this.size }, // tan波
+                    { curve: `l${this.size},${this.size / 2}`, mag: Math.hypot(this.size, this.size / 2) }, // ノコギリ波
+                    { curve: `l${this.size},${0}`, mag: this.size }, // 矩形波
+                    { curve: `l${this.size},${-this.size}`, mag: this.size }, // ピーク波
+                    { curve: `q${this.size / 2},${this.size},${-this.size / 2},${-this.size}`, mag: 2 * this.size }, // 三角波
+                    { curve: `l${this.size / 2},${0} q${this.size / 2},${this.size / 2},0,${this.size}`, mag: this.size + (this.size / 2) }, // パルス波
+                    { curve: `q${-this.size},${-this.size / 2},0,${-this.size}`, mag: 2 * this.size }, // 逆向きのsin波
+                    { curve: `l${-this.size},${-this.size / 2}`, mag: Math.hypot(this.size, this.size / 2) }, // 逆向きのノコギリ波
                     // 他のセグメントを追加することができます
                 ];
             }
