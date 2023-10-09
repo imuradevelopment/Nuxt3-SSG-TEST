@@ -76,6 +76,7 @@
 // }
 
 import { lines } from "~~/assets/ts/lines"
+const canvasWrapperID = "canvasBox"
 const canvasID = "lines";
 const canvasLineStyles = [
     // { size: 1.25, style: "pattern", color: { h: 210, s: 100, l: 70, a: 0.5 } },
@@ -167,12 +168,14 @@ const canvasBackgroundColor = { h: 200, s: 20, l: 10, a: 0.3 };
 //     alert('ssr:onUpdated')
 // })
 onMounted(() => {
-    lines(
-        canvasID,
-        canvasLineStyles,
-        lineCount,
-        canvasBackgroundColor
-    )
+    // キャンバスの初期化
+    // lines(canvasID, canvasLineStyles, lineCount, canvasBackgroundColor, canvasWrapperID);
+        lines(
+            canvasID,
+            canvasLineStyles,
+            lineCount,
+            canvasBackgroundColor
+        )
 }
 )
 if (process.client) {
