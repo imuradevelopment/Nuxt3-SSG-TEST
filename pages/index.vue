@@ -1,38 +1,37 @@
 <template id="myTemplate">
     <div>
-        <div>
-            <div style="height:400px; position: relative;">
-                <canvas id="lines"></canvas>
-                <div class="carousel-string">
-                    <div>
-                        <h2 class="catchString fontSerif">
-                            Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
-                            </h2>
-                        <p class="text-sm">
-                            新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
-                            </p>
-                    </div>
-                </div>
+        <div id="canvasBox" style="height: 400px; width: 100%;">
+            <canvas id="lines" style="position: absolute;"></canvas>
+            <div class="carousel-string">
+                <h2 class="catchString fontSerif">
+                Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
+                </h2>
+                <p class="text-sm">
+                新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
+                </p>
             </div>
             <!-- <el-carousel height="400px"
                          arrow="never"
                          indicator-position="none">
+                    <el-carousel-item>
+                    <el-image src="./images/sample/suits001-blue.png"
+                              class="carousel-image"></el-image>
+                </el-carousel-item>
                 <el-carousel-item>
-          <el-image src="./images/sample/suits001-blue.png" class="carousel-image"></el-image>
-        </el-carousel-item>
-        <el-carousel-item>
-          <el-image src="./images/sample/suits002-blue.png" class="carousel-image"></el-image>
-        </el-carousel-item>
-        <el-carousel-item>
-          <el-image src="./images/sample/suits003-blue.png" class="carousel-image"></el-image>
-        </el-carousel-item>
+                    <el-image src="./images/sample/suits002-blue.png"
+                              class="carousel-image"></el-image>
+                </el-carousel-item>
+                <el-carousel-item>
+                    <el-image src="./images/sample/suits003-blue.png"
+                              class="carousel-image"></el-image>
+                </el-carousel-item>
                 <div class="carousel-string">
                     <h2 class="catchString fontSerif">
-                Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
-              </h2>
+                    Solution<span>&nbsp;</span>&<span>&nbsp;</span>Evolution
+                  </h2>
                     <p class="text-sm">
-                新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
-              </p>
+                    新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
+                  </p>
                 </div>
             </el-carousel> -->
         </div>
@@ -162,7 +161,8 @@ onMounted(() => {
         canvasLineStyles,
         lineCount,
         canvasBackgroundColor
-    )}
+    )
+}
 )
 if (process.client) {
     // window.addEventListener("load", () => {
@@ -198,5 +198,4 @@ if (process.client) {
     color: white;
     text-align: center;
     top: calc(50% - 40px);
-}
-</style>
+}</style>

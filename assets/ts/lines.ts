@@ -45,15 +45,12 @@ export const lines = (
         }
         // キャンバスのサイズを親要素に合わせる
         function fitCanvasToParent() {
-            const parent = canvas.parentElement;
+            const parent = document.getElementById('canvasBox');
             if (parent) {
                 canvas.width = parent.clientWidth;
                 canvas.height = parent.clientHeight;
             }
         }
-
-        let width: number; // キャンバスの幅を保持する変数
-        let height: number; // キャンバスの高さを保持する変数
 
         // 線オブジェクトのクラスを定義
         // ランダムな線を生成し描画するためのクラスです。線のスタイル、色、サイズ、形状などを指定できます。
