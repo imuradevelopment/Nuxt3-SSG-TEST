@@ -1,6 +1,6 @@
 <template>
     <el-row class="footerLogoWrapper">
-        <el-col :span="20">
+        <el-col :sm="20" :span="24">
             <el-row>
                 <div class="footerLogo drop-shadow-md">
                     <!-- <el-image src="./images/footer/logo.png"></el-image> -->
@@ -8,12 +8,12 @@
                 </div>
             </el-row>
             <el-row class="footerTopLeft">
-                <el-col :span="3">
+                <el-col :sm="3" :span="24">
                     <div class="footerTopTitleText">
                         <LinkIndex linkTo="/">トップ Top</LinkIndex>
                     </div>
                 </el-col>
-                <el-col :span="5">
+                <el-col :sm="5" :span="24" class="mb-3 md:mb-0">
                     <el-row>
                         <div class="footerTopTitleText">
                             <LinkIndex linkTo="/company"><span class="footerTopHorizontalLine">会社</span>情報 Company
@@ -36,7 +36,7 @@
                         <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">アクセス</LinkIndex>
                     </el-row>
                 </el-col>
-                <el-col :span="4">
+                <el-col :sm="4" :span="24">
                     <el-row>
                         <div class="footerTopTitleText">
                             <LinkIndex linkTo="/service"><span class="footerTopHorizontalLine">事業</span>情報 Service
@@ -56,7 +56,7 @@
                         <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">開発実績</LinkIndex>
                     </el-row>
                 </el-col>
-                <el-col :span="7">
+                <el-col :sm="6" :span="24">
                     <el-row>
                         <el-col :span="24">
                             <div class="footerTopTitleText">
@@ -64,7 +64,7 @@
                                 </LinkIndex>
                             </div>
                         </el-col>
-                        <el-col :span="12">
+                        <el-col :sm="8" :span="24">
                             <el-row>
                                 <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">採用メッセージ</LinkIndex>
                             </el-row>
@@ -81,7 +81,7 @@
                                 <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">福利厚生</LinkIndex>
                             </el-row>
                         </el-col>
-                        <el-col :span="12">
+                        <el-col :sm="16" :span="24">
                             <el-row>
                                 <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">各種データ</LinkIndex>
                             </el-row>
@@ -97,7 +97,7 @@
                         </el-col>
                     </el-row>
                 </el-col>
-                <el-col :span="5">
+                <el-col :sm="6" :span="24">
                     <el-row>
                         <div class="footerTopTitleText">
                             <LinkIndex linkTo="/contact"><span class="footerTopHorizontalLine">お問</span>い合わせ Contact
@@ -113,7 +113,7 @@
                 </el-col>
             </el-row>
         </el-col>
-        <el-col :span="4">
+        <el-col :sm="4" :span="24">
             <div class="footerTopRight">
                 <div class="footerTopRightInner">
                     <div class="addressTitle">本社</div>

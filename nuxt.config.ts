@@ -20,6 +20,15 @@ export default defineNuxtConfig({
         // cdnURL: '/',
         // cdnURL: '/Nuxt3-SSG-TEST',
         // NUXT_APP_CDN_URL
+        head: {
+            charset: 'UTF-8',
+            viewport: 'width=device-width, initial-scale=1',
+            title: 'My App',
+            meta: [
+                // <meta name="description" content="My amazing site.">
+                {name: 'description', content: 'リニューアルサイト'}
+            ]
+        }
     },
     // public: {
     //     apiBase: '/api'
@@ -53,11 +62,11 @@ export default defineNuxtConfig({
         },
     },
     elementPlus: {
-        importStyle: "scss",
-        // themes: ['dark'],
-        icon: "ElIcon",
-        namespace: "el",
-        injectionID: { prefix: 1024, current: 0 },
+        // importStyle: "scss",
+        themes: ['dark'],
+        // icon: "ElIcon",
+        // namespace: "el",
+        // injectionID: { prefix: 1024, current: 0 },
         // ElTooltipコンポーネントをベースとするすべてのappend-to propsを修正する場合、ここに値を追加する必要があります。
         // appendTo: [],
         // Element Plusから自動的にインポートされないコンポーネントがある場合は、ここにコンポーネント名を追加する必要があります。
@@ -76,7 +85,7 @@ export default defineNuxtConfig({
         apiKey: process.env.MICROCMS_API_KEY,
         target: "all",
     },
-    css: ["~/assets/styles/css/reset.css", "~/assets/css/main.css"],
+    css: ["~/assets/styles/css/reset.css", "~/assets/styles/css/main.css"],
     postcss: {
         plugins: {
             tailwindcss: {
@@ -89,7 +98,20 @@ export default defineNuxtConfig({
                         "./app.vue",
                     ],
                     theme: {
-                        extend: {},
+                        theme: {
+                            screens: {
+                                sm: "480px",
+                                md: "768px",
+                                lg: "976px",
+                                xl: "1440px",
+                            },
+                            colors: {},
+                            fontFamily: {
+                                sans: ["メイリオ", "Graphik", "sans-serif"],
+                                serif: ["メイリオ", "Merriweather", "serif"],
+                            },
+                            extend: {},
+                        },
                     },
                     plugins: ["tailwindTypography"],
                 },

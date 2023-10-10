@@ -36,6 +36,9 @@
             </el-carousel> -->
         </div>
     </div>
+    <el-icon color="#409EFC" class="no-inherit">
+    <Share />
+  </el-icon>
     <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink :to="`/${blog.id}`"
