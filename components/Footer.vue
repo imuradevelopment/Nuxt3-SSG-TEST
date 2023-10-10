@@ -36,7 +36,7 @@
                         <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">アクセス</LinkIndex>
                     </el-row>
                 </el-col>
-                <el-col :sm="4" :span="24">
+                <el-col :sm="4" :span="24" class="mb-3 md:mb-0">
                     <el-row>
                         <div class="footerTopTitleText">
                             <LinkIndex linkTo="/service"><span class="footerTopHorizontalLine">事業</span>情報 Service
@@ -56,7 +56,7 @@
                         <LinkIndex linkTo="/service#TEST" class="footerTopInnnerText">開発実績</LinkIndex>
                     </el-row>
                 </el-col>
-                <el-col :sm="6" :span="24">
+                <el-col :sm="6" :span="24" class="mb-3 md:mb-0">
                     <el-row>
                         <el-col :span="24">
                             <div class="footerTopTitleText">
@@ -97,7 +97,7 @@
                         </el-col>
                     </el-row>
                 </el-col>
-                <el-col :sm="6" :span="24">
+                <el-col :sm="6" :span="24" class="mb-3 md:mb-0">
                     <el-row>
                         <div class="footerTopTitleText">
                             <LinkIndex linkTo="/contact"><span class="footerTopHorizontalLine">お問</span>い合わせ Contact
