@@ -1,24 +1,24 @@
 <template>
-    <el-menu :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="true" @select="handleSelect">
+    <el-menu :default-active="activeIndexStore.activeIndex" mode="horizontal" @select="handleSelect">
         <el-menu-item index="0" class="logo">
             <NuxtLink to="/">
                 <el-image src="../images/header/logo.svg"></el-image>
             </NuxtLink>
         </el-menu-item>
         <div class="flex-grow" />
-        <el-menu-item index="1" class="el-menu-item">
+        <el-menu-item :ellipsis="true" index="1" class="el-menu-item">
             <NuxtLink to="/company">会社情報</NuxtLink>
         </el-menu-item>
-        <el-menu-item index="2" class="el-menu-item">
+        <el-menu-item :ellipsis="true" index="2" class="el-menu-item">
             <NuxtLink to="/service">事業情報</NuxtLink>
         </el-menu-item>
-        <el-menu-item index="3" class="el-menu-item">
+        <el-menu-item :ellipsis="true" index="3" class="el-menu-item">
             <NuxtLink to="/recruit">採用情報</NuxtLink>
         </el-menu-item>
-        <el-menu-item index="4" class="el-menu-item">
+        <el-menu-item :ellipsis="true" index="4" class="el-menu-item">
             <NuxtLink to="/access">アクセス</NuxtLink>
         </el-menu-item>
-        <el-menu-item index="5" class="el-menu-item">
+        <el-menu-item :ellipsis="true" index="5" class="el-menu-item">
             <NuxtLink to="/contact">お問い合わせ</NuxtLink>
         </el-menu-item>
         <el-sub-menu index="6">
