@@ -43,7 +43,6 @@ export default defineNuxtConfig({
         "@nuxtjs/tailwindcss",
         "@pinia/nuxt",
     ],
-    css: ["~/assets/styles/css/reset.css"],
     vite: {
         css: {
             preprocessorOptions: {
@@ -77,10 +76,25 @@ export default defineNuxtConfig({
         apiKey: process.env.MICROCMS_API_KEY,
         target: "all",
     },
-    tailwindcss: {
-        config: {
-            content: [],
-            plugins: ['tailwindTypography'],
+    css: ["~/assets/styles/css/reset.css", "~/assets/css/main.css"],
+    postcss: {
+        plugins: {
+            tailwindcss: {
+                config: {
+                    content: [
+                        "./components/**/*.{js,vue,ts}",
+                        "./layouts/**/*.vue",
+                        "./pages/**/*.vue",
+                        "./plugins/**/*.{js,ts}",
+                        "./app.vue",
+                    ],
+                    theme: {
+                        extend: {},
+                    },
+                    plugins: ["tailwindTypography"],
+                },
+            },
+            autoprefixer: {},
         },
     },
     pinia: {
