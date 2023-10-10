@@ -114,8 +114,8 @@
             </el-row>
         </el-col>
         <el-col :sm="4" :span="24">
-            <div class="footerTopRight">
-                <div class="footerTopRightInner pt-3 border-t-2 md:border-t-0 md:border-l-2 md:pl-3" >
+            <div class="footerTopRight px-3 pb-3 md:px-0">
+                <div class="footerTopRightInner pt-3 px-3 border-t-2 mt-3 md:mt-6 md:border-t-0 md:border-l-2" >
                     <div class="addressTitle">本社</div>
                     <div class="address">
                         〒000-0000<br />
@@ -170,7 +170,7 @@
 .footerTopRight {
     background-color: #697F9F;
     color: #F2F7FC;
-    padding: 2rem 1rem 1rem 0;
+    /* padding: 2rem 1rem 1rem 0; */
 }
 
 .footerTopRightInner {

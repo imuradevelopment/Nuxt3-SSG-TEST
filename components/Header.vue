@@ -1,5 +1,5 @@
 <template>
-    <el-menu :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false" @select="handleSelect">
+    <el-menu :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="true" @select="handleSelect">
         <el-menu-item index="0" class="logo">
             <NuxtLink to="/">
                 <el-image src="../images/header/logo.svg"></el-image>
