@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindTypography from "@tailwindcss/typography";
+// import tailwindTypography from "@tailwindcss/typography";
 
 export default defineNuxtConfig({
     devtools: {
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     modules: [
         "@element-plus/nuxt",
         "nuxt-microcms-module",
-        // "@nuxtjs/tailwindcss",
+        "@nuxtjs/tailwindcss",
         "@pinia/nuxt",
     ],
     css: ["~/assets/styles/css/reset.css"],
@@ -77,12 +77,12 @@ export default defineNuxtConfig({
         apiKey: process.env.MICROCMS_API_KEY,
         target: "all",
     },
-    // tailwindcss: {
-    //     config: {
-    //         content: [],
-    //         plugins: [tailwindTypography],
-    //     },
-    // },
+    tailwindcss: {
+        config: {
+            content: [],
+            plugins: ['tailwindTypography'],
+        },
+    },
     pinia: {
         autoImports: [
             // automatically imports `defineStore`
