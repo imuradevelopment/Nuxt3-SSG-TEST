@@ -4,7 +4,7 @@
         <div v-if="menuOpen" class="fixed top-0 left-0 w-full h-screen z-50 bg-black opacity-50" @click="closeMenu"></div>
 
         <!-- ヘッダー -->
-        <div class="fixed top-0 left-0 w-full bg-gray-100 z-50 p-2 flex justify-between items-center">
+        <div class="fixed top-0 left-0 w-full bg-gray-100 z-50 px-2 pt-2 flex justify-between items-center">
             <!-- ロゴ（クリックでメニューを閉じる） -->
             <div @click="closeMenu">
                 <NuxtLink to="/">
