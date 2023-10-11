@@ -7,7 +7,7 @@
                     <el-image src="./images/footer/logo.svg"></el-image>
                 </div>
             </el-row>
-            <el-row class="footerTopLeft">
+            <el-row class="footerTopLeft px-12 md:px-3">
                 <el-col :sm="3" :span="24">
                     <div class="footerTopTitleText">
                         <LinkIndex linkTo="/">トップ Top</LinkIndex>
@@ -115,11 +115,11 @@
         </el-col>
         <el-col :sm="4" :span="24">
             <div class="footerTopRight px-3 pb-3 md:px-0">
-                <div class="footerTopRightInner pt-3 px-3 border-t-2 md:mt-8 md:border-t-0 md:border-l-2" >
+                <div class="footerTopRightInner pt-3 px-9 md:px-3 border-t-2 md:mt-8 md:border-t-0 md:border-l-2" >
                     <div class="addressTitle">本社</div>
                     <div class="address">
                         〒000-0000<br />
-                        東京都◯◯◯◯◯◯1-6-2<br />
+                        東京都◯◯◯◯◯◯1-6-2<br class="hidden md:inline-block" />
                         ◯◯◯◯◯ビル<br />
                     </div>
                     <div class="addressDetail">
@@ -164,7 +164,7 @@
 .footerTopLeft {
     background-color: #697F9F;
     color: #F2F7FC;
-    padding: 0 1rem 1rem 1rem;
+    /* padding: 0 1rem 1rem 1rem; */
 }
 
 .footerTopRight {

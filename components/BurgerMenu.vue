@@ -4,7 +4,7 @@
         <div v-if="menuOpen" class="fixed top-0 left-0 w-full h-screen z-50 bg-black opacity-50" @click="closeMenu"></div>
 
         <!-- ヘッダー -->
-        <div class="fixed top-0 left-0 w-full bg-gray-100 z-50 px-2 pt-2 flex justify-between items-center">
+        <div class="fixed top-0 left-0 w-full bg-white z-50 px-2 pt-2 flex justify-between items-center">
             <!-- ロゴ（クリックでメニューを閉じる） -->
             <div @click="closeMenu">
                 <NuxtLink to="/">
@@ -33,9 +33,12 @@
 
         <!-- ハンバーガーメニュー (ヘッダーの下) -->
         <div v-if="menuOpen" class="fixed top-16 left-0 w-full z-50">
-            <div class="p-4 bg-white">
+            <div class="p-4 bg-white backdrop-blur-md">
                 <!-- メニューコンテンツ -->
-                <ul>
+                <ul class="text-black">
+                    <li>
+                        <NuxtLink to="/" @click="closeMenu">トップ</NuxtLink>
+                    </li>
                     <li>
                         <NuxtLink to="/company" @click="closeMenu">会社情報</NuxtLink>
                     </li>
@@ -45,13 +48,15 @@
                     <li>
                         <NuxtLink to="/recruit" @click="closeMenu">採用情報</NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink to="/access" @click="closeMenu">アクセス</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/contact" @click="closeMenu">お問い合わせ</NuxtLink>
-                    </li>
                 </ul>
+                <div>
+                    <el-button round type="primary">
+                        <NuxtLink to="/access" @click="closeMenu">アクセス</NuxtLink>
+                    </el-button>
+                    <el-button round  type="primary">
+                        <NuxtLink to="/contact" @click="closeMenu">お問い合わせ</NuxtLink>
+                    </el-button>
+                </div>
             </div>
         </div>
     </div>
