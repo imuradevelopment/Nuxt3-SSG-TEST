@@ -1,12 +1,9 @@
 <template>
     <div>
-        <!-- 背景オーバーレイ (ヘッダーとメニューの外) -->
-        <div v-if="menuOpen" class="fixed top-0 left-0 w-full h-screen z-50 bg-black opacity-50" @click="closeMenu"></div>
-
         <!-- ヘッダー -->
         <div class="fixed top-0 left-0 w-full bg-gray-100 z-50 p-2 flex justify-between items-center">
-            <!-- ロゴ（クリックでメニューを閉じる） -->
-            <div @click="closeMenu">
+            <!-- ロゴ -->
+            <div>
                 <NuxtLink to="/">
                     <el-image src="../images/header/logo.svg"></el-image>
                 </NuxtLink>
@@ -31,9 +28,9 @@
             </div>
         </div>
 
-        <!-- ハンバーガーメニュー (ヘッダーの下) -->
-        <div v-if="menuOpen" class="fixed top-16 left-0 w-full z-50">
-            <div class="p-4 bg-white">
+        <!-- ハンバーガーメニュー -->
+        <div v-if="menuOpen" class="fixed top-16 right-0 w-64 h-screen bg-gray-800 z-50">
+            <div class="p-4">
                 <!-- メニューコンテンツ -->
                 <ul>
                     <li>
@@ -56,7 +53,7 @@
         </div>
     </div>
 </template>
-  
+
 <script>
 export default {
     data() {
@@ -88,7 +85,7 @@ export default {
     },
 };
 </script>
-    
+  
 <style scoped>
 /* スタイリングを追加する場合はここに記述 */
 
@@ -96,8 +93,8 @@ export default {
 /* 不要なスタイリングの削除 */
 
 /* スクロールバーを非表示にするためのスタイル */
-.overflow-hidden {
+/* .overflow-hidden {
     overflow: hidden;
-}
+} */
 </style>
-    
+  

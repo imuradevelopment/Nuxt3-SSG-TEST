@@ -1,39 +1,32 @@
 <template>
-    <div>
-        <!-- 背景オーバーレイ (ヘッダーとメニューの外) -->
-        <div v-if="menuOpen" class="fixed top-0 left-0 w-full h-screen z-50 bg-black opacity-50" @click="closeMenu"></div>
-
-        <!-- ヘッダー -->
-        <div class="fixed top-0 left-0 w-full bg-gray-100 z-50 p-2 flex justify-between items-center">
-            <!-- ロゴ（クリックでメニューを閉じる） -->
-            <div @click="closeMenu">
-                <NuxtLink to="/">
-                    <el-image src="../images/header/logo.svg"></el-image>
-                </NuxtLink>
-            </div>
-            <!-- ハンバーガーアイコンとメニューのトグル -->
-            <div>
-                <button @click="toggleMenu"
-                    class="text-gray-500 hover:text-gray-400 focus:text-gray-400 focus:outline-none">
-                    <svg v-if="!menuOpen" class="h-12 w-12 fill-current" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24">
-                        <!-- ハンバーガーアイコン（三本線） -->
-                        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" />
-                        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" />
-                        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" />
-                    </svg>
-                    <svg v-else class="h-12 w-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <!-- ✘のアイコン -->
-                        <path
-                            d="M6.293 6.293a1 1 0 011.414 0L12 10.586l4.293-4.293a1 1 0 111.414 1.414L13.414 12l4.293 4.293a1 1 0 01-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 01-1.414-1.414L10.586 12 6.293 7.707a1 1 0 010-1.414z" />
-                    </svg>
-                </button>
-            </div>
+    <div class="relative">
+        <!-- ロゴ -->
+        <div class="absolute top-0 left-0 pt-2 px-4 z-50">
+            <NuxtLink to="/">
+                <el-image src="../images/header/logo.svg"></el-image>
+            </NuxtLink>
         </div>
 
-        <!-- ハンバーガーメニュー (ヘッダーの下) -->
-        <div v-if="menuOpen" class="fixed top-16 left-0 w-full z-50">
-            <div class="p-4 bg-white">
+        <!-- ハンバーガーアイコンとメニューのトグル -->
+        <div class="absolute top-0 right-0 pt-2 px-4 z-50">
+            <button @click="toggleMenu" class="text-gray-500 hover:text-gray-400 focus:text-gray-400 focus:outline-none">
+                <svg v-if="!menuOpen" class="h-12 w-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- ハンバーガーアイコン（三本線） -->
+                    <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" />
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" />
+                    <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" />
+                </svg>
+                <svg v-else class="h-12 w-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- ✘のアイコン -->
+                    <path
+                        d="M6.293 6.293a1 1 0 011.414 0L12 10.586l4.293-4.293a1 1 0 111.414 1.414L13.414 12l4.293 4.293a1 1 0 01-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 01-1.414-1.414L10.586 12 6.293 7.707a1 1 0 010-1.414z" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- ハンバーガーメニュー -->
+        <div v-if="menuOpen" class="fixed top-16 right-0 w-64 h-screen bg-gray-800 z-50">
+            <div class="p-4">
                 <!-- メニューコンテンツ -->
                 <ul>
                     <li>
@@ -88,7 +81,7 @@ export default {
     },
 };
 </script>
-    
+  
 <style scoped>
 /* スタイリングを追加する場合はここに記述 */
 
@@ -100,4 +93,4 @@ export default {
     overflow: hidden;
 }
 </style>
-    
+  
