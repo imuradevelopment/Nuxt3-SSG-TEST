@@ -4,8 +4,8 @@
       <canvas id="lines" style="position: absolute;"></canvas>
       <div class="carousel-string">
         <h2 class="catchString fontSerif mb-1 pt-12 text-6xl md:mb-3 md:pt-24 md:text-7xl">
-          Solution<br class="inline-block md:hidden" /><span>&nbsp;</span>&<span>&nbsp;</span><br
-            class="inline-block md:hidden" />Evolution
+          Solution<br class="inline-block md2:hidden" /><span>&nbsp;</span>&<span>&nbsp;</span><br
+            class="inline-block md2:hidden" />Evolution
         </h2>
         <p class="pb-12 md:pb-24 text-xs md:text-sm">
           新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。

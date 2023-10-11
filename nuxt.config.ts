@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// import tailwindTypography from "@tailwindcss/typography";
+import tailwindTypography from '@tailwindcss/typography'
 
 export default defineNuxtConfig({
     devtools: {
@@ -21,14 +21,14 @@ export default defineNuxtConfig({
         // cdnURL: '/Nuxt3-SSG-TEST',
         // NUXT_APP_CDN_URL
         head: {
-            charset: 'UTF-8',
-            viewport: 'width=device-width, initial-scale=1',
-            title: 'My App',
+            charset: "UTF-8",
+            viewport: "width=device-width, initial-scale=1",
+            title: "My App",
             meta: [
                 // <meta name="description" content="My amazing site.">
-                {name: 'description', content: 'リニューアルサイト'}
-            ]
-        }
+                { name: "description", content: "リニューアルサイト" },
+            ],
+        },
     },
     // public: {
     //     apiBase: '/api'
@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     },
     elementPlus: {
         importStyle: "scss",
-        themes: ['dark'],
+        themes: ["dark"],
         // icon: "ElIcon",
         // namespace: "el",
         // injectionID: { prefix: 1024, current: 0 },
@@ -85,40 +85,36 @@ export default defineNuxtConfig({
         apiKey: process.env.MICROCMS_API_KEY,
         target: "all",
     },
-    css: ["~/assets/styles/css/reset.css", "~/assets/styles/css/main.css"],
-    postcss: {
-        plugins: {
-            tailwindcss: {
-                config: {
-                    content: [
-                        "./components/**/*.{js,vue,ts}",
-                        "./layouts/**/*.vue",
-                        "./pages/**/*.vue",
-                        "./plugins/**/*.{js,ts}",
-                        "./app.vue",
-                    ],
-                    theme: {
-                        theme: {
-                            screens: {
-                                sm: "480px",
-                                md: "768px",
-                                lg: "976px",
-                                xl: "1440px",
-                            },
-                            colors: {},
-                            fontFamily: {
-                                sans: ["メイリオ", "Graphik", "sans-serif"],
-                                serif: ["メイリオ", "Merriweather", "serif"],
-                            },
-                            extend: {},
-                        },
-                    },
-                    plugins: ["tailwindTypography"],
-                },
-            },
-            autoprefixer: {},
-        },
-    },
+    css: ["~/assets/styles/css/reset.css"],
+    // postcss: {
+    //     plugins: {
+    //         tailwindcss: {
+    //             config: {
+    //                 theme: {
+    //                     extend: {
+    //                         screens: {
+    //                             sm: "480px",
+    //                             md: "768px",
+    //                             lg: "976px",
+    //                             xl: "1440px",
+    //                         },
+    //                         fontFamily: {
+    //                             sans: ["メイリオ", "Graphik", "sans-serif"],
+    //                             serif: ["メイリオ", "Merriweather", "serif"],
+    //                         },
+    //                         colors: {
+    //                             custom: {
+    //                                 gray: "#697F9F",
+    //                                 blue: "#1d4ed8",
+    //                             }
+    //                         }
+    //                     },
+    //                 },
+    //                 plugins: ["tailwindTypography"],
+    //             },
+    //         },
+    //     },
+    // },
     pinia: {
         autoImports: [
             // automatically imports `defineStore`
@@ -126,4 +122,13 @@ export default defineNuxtConfig({
             ["defineStore", "definePiniaStore"], // import { defineStore as definePiniaStore } from 'pinia'
         ],
     },
+    tailwindcss: {
+        // cssPath: '~/assets/css/tailwind.css',
+        configPath: '~/tailwind.config.ts',
+        // exposeConfig: false,
+        // exposeLevel: 2,
+        // config: {},
+        // injectPosition: 'first',
+        // viewer: true,
+      }
 });
