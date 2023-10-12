@@ -21,9 +21,10 @@ export default defineNuxtConfig({
         // cdnURL: '/Nuxt3-SSG-TEST',
         // NUXT_APP_CDN_URL
         head: {
-            charset: "UTF-8",
-            viewport: "width=device-width, initial-scale=1",
-            title: "My App",
+            charset: "utf-8",
+            // viewport: "width=device-width, initial-scale=1",
+            viewport: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes",
+            title: "株式会社ペイル",
             meta: [
                 // <meta name="description" content="My amazing site.">
                 { name: "description", content: "リニューアルサイト" },
