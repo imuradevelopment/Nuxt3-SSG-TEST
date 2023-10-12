@@ -65,36 +65,23 @@
                                 採用情報
                             </NuxtLink>
                             <div class="pr-3">
-                                <el-button size="large" type="primary" :icon="Plus" circle />
+                                <el-button :text=true :bg=true size="large" type="primary" :icon="showTestItem ? Minus : Plus" circle class="recruitButton" @click="toggleTestItem" />
                             </div>
                         </div>
                     </li>
+                    <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/" @click="closeMenu" class="w-full h-full flex items-center"><el-icon
+                                size="1.5rem" class="mb-1">
+                                <DataAnalysis class="text-custom-blue" />
+                            </el-icon>TEST</NuxtLink>
+                    </li>
                 </ul>
-                <el-collapse v-model="activeNames" @change="handleChange">
-                    <el-collapse-item title="TEST" name="1">
-                        <ul class="text-black">
-                            <li class="h-14 border-b border-b-gray-400">
-                                <div class="flex justify-between items-center w-full h-full">
-                                    <NuxtLink to="/recruit" @click="closeMenu" class="flex items-center">
-                                        <el-icon size="1.5rem" class="mb-1">
-                                            <User class="text-custom-blue" />
-                                        </el-icon>
-                                        採用情報
-                                    </NuxtLink>
-                                    <div class="pr-3">
-                                        <el-button size="large" type="primary" :icon="Plus" circle />
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </el-collapse-item>
-                </el-collapse>
                 <div class="flex p-4">
-                    <el-button size="large" round type="primary" class="flex-grow">
-                        <NuxtLink to="/access" @click="closeMenu">アクセス</NuxtLink>
+                    <el-button size="large" round type="primary" class="el-button-custom flex-grow">
+                        <NuxtLink to="/access" class="w-full h-full" @click="closeMenu">アクセス</NuxtLink>
                     </el-button>
-                    <el-button size="large" round type="primary" class="flex-grow">
-                        <NuxtLink to="/contact" @click="closeMenu">お問い合わせ</NuxtLink>
+                    <el-button size="large" round type="primary" class="el-button-custom flex-grow">
+                        <NuxtLink to="/contact" class="w-full h-full" @click="closeMenu">お問い合わせ</NuxtLink>
                     </el-button>
                 </div>
             </div>
@@ -102,44 +89,14 @@
     </div>
 </template>
   
-<!-- <script>
-export default {
-    data() {
-        return {
-            menuOpen: false,
-        };
-    },
-    methods: {
-        toggleMenu() {
-            this.menuOpen = !this.menuOpen;
-            // メニューを開く/閉じるときにbody要素にクラスを追加/削除してstickyヘッダーを制御
-            if (this.menuOpen) {
-                document.body.classList.add("overflow-hidden");
-                // メニューを開いたときにスクロール位置を保存
-                this.scrollY = window.scrollY;
-            } else {
-                document.body.classList.remove("overflow-hidden");
-                // メニューを閉じたときにスクロール位置を復元
-                window.scrollTo(0, this.scrollY);
-            }
-        },
-        closeMenu() {
-            this.menuOpen = false;
-            // メニューを閉じるときにbody要素のクラスを削除してstickyヘッダーを制御
-            document.body.classList.remove("overflow-hidden");
-            // メニューを閉じたときにスクロール位置を復元
-            window.scrollTo(0, this.scrollY);
-        },
-    },
-};
-</script> -->
 <script setup lang="ts">
 import {
     House,
     User,
     DataAnalysis,
     OfficeBuilding,
-    Plus
+    Plus,
+    Minus
 } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 
@@ -163,21 +120,26 @@ const closeMenu = () => {
     window.scrollTo(0, scrollY.value)
 }
 
-const activeNames = ref(['1'])
-const handleChange = (val: string[]) => {
-    console.log(val)
+const showTestItem = ref(false) // TEST項目の表示状態
+
+// メニュー項目の表示/非表示を切り替えるメソッド
+function toggleTestItem() {
+  showTestItem.value = !showTestItem.value
 }
 </script>
     
 <style scoped>
-/* スタイリングを追加する場合はここに記述 */
-
-/* クローズボタンのスタイル */
-/* 不要なスタイリングの削除 */
-
-/* スクロールバーを非表示にするためのスタイル */
-.overflow-hidden {
-    overflow: hidden;
+.recruitButton {
+    background-color: var(--el-color-primary) !important;
+    color: white !important;
+}
+.el-button-custom{
+    padding:0 !important;
+}
+.el-button-custom a{
+    width: calc((100vw-4.75rem)/2);
+    height: 40px;
+    line-height: 2.5rem;
 }
 </style>
     
