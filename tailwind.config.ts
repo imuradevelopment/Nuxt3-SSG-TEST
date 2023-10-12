@@ -21,7 +21,7 @@ export default <Partial<Config>>{
                 colors: {
                     custom: {
                         gray: "#697F9F",
-                        blue: "#1d4ed8",
+                        blue: "#005FB5",
                     }
                 }
             },

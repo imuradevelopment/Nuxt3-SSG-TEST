@@ -1,19 +1,20 @@
 <template>
     <el-row class="bg-custom-gray text-white">
-        <el-col :sm="20" :span="24">
+        <el-col :sm="19" :span="24">
             <el-row>
                 <div class="mb-3 bg-white border-t-2 border-custom-gray drop-shadow-md">
                     <!-- <el-image src="./images/footer/logo.png"></el-image> -->
                     <el-image src="./images/footer/logo.svg"></el-image>
                 </div>
             </el-row>
-            <el-row :gutter="10" class="px-12 md:px-3">
-                <el-col :sm="4" :span="24">
-                    <div class="mb-2 text-lg font-medium leading-6">
+            <el-row class="px-12 md:px-3">
+                <el-col :lg="2" :span="0"></el-col>
+                <el-col :sm="4" :lg="3" :span="24" class="pb-3 md:px-3">
+                    <div class="text-lg font-medium leading-6">
                         <LinkIndex linkTo="/" class="hover:text-gray-200 hover:underline">トップ Top</LinkIndex>
                     </div>
                 </el-col>
-                <el-col :sm="5" :span="24" class="mb-3 md:mb-0">
+                <el-col :sm="5" :lg="4" :span="24" class="pb-3 md:px-3">
                     <el-row>
                         <div class="mb-2 text-lg font-medium leading-6">
                             <LinkIndex linkTo="/company" class="hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">会社</span>情報 Company
@@ -36,7 +37,7 @@
                         <LinkIndex linkTo="/company#TEST" class="text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">アクセス</LinkIndex>
                     </el-row>
                 </el-col>
-                <el-col :sm="5" :span="24" class="mb-3 md:mb-0">
+                <el-col :sm="5" :lg="4" :span="24" class="pb-3 md:px-3">
                     <el-row>
                         <div class="mb-2 text-lg font-medium leading-6">
                             <LinkIndex linkTo="/service" class="hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">事業</span>情報 Service
@@ -56,15 +57,17 @@
                         <LinkIndex linkTo="/service#TEST" class="text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">開発実績</LinkIndex>
                     </el-row>
                 </el-col>
-                <el-col :sm="5" :span="24" class="mb-3 md:mb-0">
-                    <el-row>
-                        <el-col :span="24">
-                            <div class="mb-2 text-lg font-medium leading-6">
-                                <LinkIndex linkTo="/recruit" class="hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">採用</span>情報 Recruit
-                                </LinkIndex>
-                            </div>
-                        </el-col>
-                        <el-col :sm="12" :span="24">
+                <el-col :sm="5" :lg="4" :span="24" class="pb-3 md:px-3">
+                    <!-- <el-row> -->
+                        <!-- <el-col :span="24"> -->
+                            <el-row>
+                                <div class="mb-2 text-lg font-medium leading-6">
+                                    <LinkIndex linkTo="/recruit" class="hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">採用</span>情報 Recruit
+                                    </LinkIndex>
+                                </div>
+                            </el-row>
+                        <!-- </el-col> -->
+                        <!-- <el-col :sm="12" :span="24"> -->
                             <el-row>
                                 <LinkIndex linkTo="/recruit#TEST" class="text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用メッセージ</LinkIndex>
                             </el-row>
@@ -80,8 +83,8 @@
                             <el-row>
                                 <LinkIndex linkTo="/recruit#TEST" class="text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">福利厚生</LinkIndex>
                             </el-row>
-                        </el-col>
-                        <el-col :sm="12" :span="24">
+                        <!-- </el-col> -->
+                        <!-- <el-col :sm="12" :span="24"> -->
                             <el-row>
                                 <LinkIndex linkTo="/recruit#TEST" class="text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">各種データ</LinkIndex>
                             </el-row>
@@ -94,10 +97,10 @@
                             <el-row>
                                 <LinkIndex linkTo="/recruit#TEST" class="text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">募集情報</LinkIndex>
                             </el-row>
-                        </el-col>
-                    </el-row>
+                        <!-- </el-col> -->
+                    <!-- </el-row> -->
                 </el-col>
-                <el-col :sm="5" :span="24" class="mb-3 md:mb-0">
+                <el-col :sm="5" :lg="4" :span="24" class="pb-3 md:px-3">
                     <el-row>
                         <div class="mb-2 text-lg font-medium leading-6">
                             <LinkIndex linkTo="/contact" class="hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">お問</span>い合わせ Contact
@@ -113,7 +116,7 @@
                 </el-col>
             </el-row>
         </el-col>
-        <el-col :sm="4" :span="24">
+        <el-col :sm="5" :span="24">
             <div class=" px-3 pb-3 md:px-0">
                 <div class="pt-3 px-9 md:px-3 border-t-2 md:mt-8 md:border-t-0 md:border-l-2" >
                     <div class="mt-1 text-xs font-normal leading-6">本社</div>
