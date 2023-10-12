@@ -10,20 +10,24 @@
                 </NuxtLink>
             </el-menu-item>
             <div class="flex-grow" />
-            <el-menu-item :ellipsis="true" index="1" class="el-menu-item">
+            <el-menu-item :ellipsis="true" index="1" class="el-menu-item-custom">
                 <NuxtLink to="/company">会社情報</NuxtLink>
             </el-menu-item>
-            <el-menu-item :ellipsis="true" index="2" class="el-menu-item">
+            <el-menu-item :ellipsis="true" index="2" class="el-menu-item-custom">
                 <NuxtLink to="/service">事業情報</NuxtLink>
             </el-menu-item>
-            <el-menu-item :ellipsis="true" index="3" class="el-menu-item">
+            <el-menu-item :ellipsis="true" index="3" class="el-menu-item-custom">
                 <NuxtLink to="/recruit">採用情報</NuxtLink>
             </el-menu-item>
-            <el-menu-item :ellipsis="true" index="4" class="el-menu-item">
-                <NuxtLink to="/access">アクセス</NuxtLink>
+            <el-menu-item :ellipsis="true" index="4" class="el-menu-item-custom2">
+                <el-button type="primary" class="el-button-custom">
+                    <NuxtLink to="/access">アクセス</NuxtLink>
+                </el-button>
             </el-menu-item>
-            <el-menu-item :ellipsis="true" index="5" class="el-menu-item">
-                <NuxtLink to="/contact">お問い合わせ</NuxtLink>
+            <el-menu-item :ellipsis="true" index="5" class="el-menu-item-custom2">
+                <el-button type="primary" class="el-button-custom">
+                    <NuxtLink to="/contact">お問い合わせ</NuxtLink>
+                </el-button>
             </el-menu-item>
             <el-sub-menu index="6">
                 <template #title>その他遷移</template>
@@ -70,6 +74,7 @@ const activeIndexStore = useActiveIndexStore()
 const handleSelect = (key: string, keyPath: string[]) => {
     activeIndexStore.activeIndex = key
 }
+
 let menuOpen = false
 
 const toggleMenu = () => {
@@ -86,13 +91,29 @@ const closeMenu = () => {
     flex-grow: 1;
 }
 
-.el-menu-item {
-    padding: 0 1rem 0 1rem;
-    font-family: 'Ariel';
+.el-menu-item-custom {
+    padding: 0.25rem 1rem 0 1rem;
+    font-family: 'Meiryo';
+    font-size: medium;
+    font-weight: 600;
+    height: auto;
+}
+.el-menu-item-custom2 {
+    padding: 0;
+    margin: 0.25rem 0.5rem 0 0.5rem;
+    font-family: 'Meiryo';
+    font-size: medium;
+    font-weight: 600;
+    height: auto;
+}
+.el-menu-item-custom2 a {
     font-size: medium;
     font-weight: 600;
 }
-
+.el-button-custom{
+    height: 100%;
+    margin: 0 0 0.25rem 0;
+}
 .logo {
     width: 185px;
     padding: 0;

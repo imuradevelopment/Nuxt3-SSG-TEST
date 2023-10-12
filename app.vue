@@ -13,6 +13,7 @@
             <Footer />
         </el-footer>
     </el-container>
+    <el-backtop :right="48" :bottom="48" style="width:60px; height:60px;"/>
 </template>
 
 <script setup lang="ts">

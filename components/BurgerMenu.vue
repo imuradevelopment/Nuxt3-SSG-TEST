@@ -35,27 +35,65 @@
 
         <!-- ハンバーガーメニュー (ヘッダーの下) -->
         <div v-if="menuOpen" class="fixed top-16 left-0 w-full z-50">
-            <div class="p-4 bg-white backdrop-blur-md">
+            <div class="px-4 bg-white backdrop-blur-md">
                 <!-- メニューコンテンツ -->
                 <ul class="text-black">
-                    <li>
-                        <NuxtLink to="/" @click="closeMenu">トップ</NuxtLink>
+                    <li class="h-14 border-b border-b-gray-400">
+                        <NuxtLink to="/" @click="closeMenu" class="w-full h-full flex items-center"><el-icon size="1.5rem"
+                                class="mb-1">
+                                <House class="text-custom-blue" />
+                            </el-icon>トップ</NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink to="/company" @click="closeMenu">会社情報</NuxtLink>
+                    <li class="h-14 border-b border-b-gray-400">
+                        <NuxtLink to="/company" @click="closeMenu" class="w-full h-full flex items-center"><el-icon
+                                size="1.5rem" class="mb-1">
+                                <OfficeBuilding class="text-custom-blue" />
+                            </el-icon>会社情報</NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink to="/service" @click="closeMenu">事業情報</NuxtLink>
+                    <li class="h-14 border-b border-b-gray-400">
+                        <NuxtLink to="/service" @click="closeMenu" class="w-full h-full flex items-center"><el-icon
+                                size="1.5rem" class="mb-1">
+                                <DataAnalysis class="text-custom-blue" />
+                            </el-icon>事業情報</NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink to="/recruit" @click="closeMenu">採用情報</NuxtLink>
+                    <li class="h-14 border-b border-b-gray-400">
+                        <div class="flex justify-between items-center w-full h-full">
+                            <NuxtLink to="/recruit" @click="closeMenu" class="flex items-center">
+                                <el-icon size="1.5rem" class="mb-1">
+                                    <User class="text-custom-blue" />
+                                </el-icon>
+                                採用情報
+                            </NuxtLink>
+                            <div class="pr-3">
+                                <el-button size="large" type="primary" :icon="Plus" circle />
+                            </div>
+                        </div>
                     </li>
                 </ul>
-                <div>
-                    <el-button round type="primary">
+                <el-collapse v-model="activeNames" @change="handleChange">
+                    <el-collapse-item title="TEST" name="1">
+                        <ul class="text-black">
+                            <li class="h-14 border-b border-b-gray-400">
+                                <div class="flex justify-between items-center w-full h-full">
+                                    <NuxtLink to="/recruit" @click="closeMenu" class="flex items-center">
+                                        <el-icon size="1.5rem" class="mb-1">
+                                            <User class="text-custom-blue" />
+                                        </el-icon>
+                                        採用情報
+                                    </NuxtLink>
+                                    <div class="pr-3">
+                                        <el-button size="large" type="primary" :icon="Plus" circle />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </el-collapse-item>
+                </el-collapse>
+                <div class="flex p-4">
+                    <el-button size="large" round type="primary" class="flex-grow">
                         <NuxtLink to="/access" @click="closeMenu">アクセス</NuxtLink>
                     </el-button>
-                    <el-button round  type="primary">
+                    <el-button size="large" round type="primary" class="flex-grow">
                         <NuxtLink to="/contact" @click="closeMenu">お問い合わせ</NuxtLink>
                     </el-button>
                 </div>
@@ -64,7 +102,7 @@
     </div>
 </template>
   
-<script>
+<!-- <script>
 export default {
     data() {
         return {
@@ -94,6 +132,41 @@ export default {
         },
     },
 };
+</script> -->
+<script setup lang="ts">
+import {
+    House,
+    User,
+    DataAnalysis,
+    OfficeBuilding,
+    Plus
+} from '@element-plus/icons-vue'
+import { ref } from 'vue'
+
+let menuOpen = ref(false)
+let scrollY = ref(0)
+
+const toggleMenu = () => {
+    menuOpen.value = !menuOpen.value
+    if (menuOpen.value) {
+        document.body.classList.add("overflow-hidden")
+        scrollY.value = window.scrollY
+    } else {
+        document.body.classList.remove("overflow-hidden")
+        window.scrollTo(0, scrollY.value)
+    }
+}
+
+const closeMenu = () => {
+    menuOpen.value = false
+    document.body.classList.remove("overflow-hidden")
+    window.scrollTo(0, scrollY.value)
+}
+
+const activeNames = ref(['1'])
+const handleChange = (val: string[]) => {
+    console.log(val)
+}
 </script>
     
 <style scoped>
