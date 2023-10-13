@@ -71,120 +71,49 @@
 //   console.log('API secretの出力:', config.apiSecret)
 // }
 
-import { lines } from "~~/assets/ts/lines"
-const canvasWrapperID = "canvasBox"
-const canvasID = "lines";
-const canvasLineStyles = [
-  // { size: 1.25, style: "pattern", color: { h: 210, s: 100, l: 70, a: 0.5 } },
-  // { size: 2.5, style: "pattern", color: { h: 190, s: 90, l: 50, a: 0.3 } },
-  // { size: 5, style: "pattern", color: { h: 210, s: 70, l: 60, a: 0.2 } },
-  // { size: 10, style: "pattern", color: { h: 310, s: 80, l: 55, a: 0.15 } },
-  // { size: 20, style: "pattern", color: { h: 200, s: 25, l: 35, a: 0.12 } },
-  // { size: 20, style: "pattern", color: { h: 210, s: 20, l: 40, a: 0.12 } },
-  // { size: 40, style: "pattern", color: { h: 190, s: 40, l: 50, a: 0.12 } },
-  // { size: 80, style: "pattern", color: { h: 220, s: 50, l: 60, a: 0.12 } },
-  // { size: 40, style: "glitches", color: { h: 300, s: 100, l: 50, a: 0.3 } },
-  // { size: 20, style: "glitches", color: { h: 210, s: 100, l: 50, a: 0.3 } },
-  // { size: 60, style: "glitches", color: { h: 30, s: 100, l: 50, a: 0.3 } }
-  { size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-  { size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-  { size: 5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-  { size: 10, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-  { size: 20, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-  { size: 20, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-  { size: 40, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-  { size: 80, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-  { size: 40, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
-  { size: 20, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
-  { size: 60, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
-];
-const lineCount = 40
-const canvasBackgroundColor = { h: 200, s: 20, l: 10, a: 0.3 };
-
-// window.addEventListener("load", () => {
-//     lines(
-//         canvasID,
-//         canvasLineStyles,
-//         lineCount,
-//         canvasBackgroundColor
-//     )
-// })
-// onMounted(() => {
-//     lines(
-//         canvasID,
-//         canvasLineStyles,
-//         lineCount,
-//         canvasBackgroundColor
-//     )
-// })
-// onUpdated(() => {
-//     lines(
-//         canvasID,
-//         canvasLineStyles,
-//         lineCount,
-//         canvasBackgroundColor
-//     )
-// })
-
-// if (process.client) {
-//     window.addEventListener("load", () => {
-//         lines(
-//             canvasID,
-//             canvasLineStyles,
-//             lineCount,
-//             canvasBackgroundColor
-//         )
-//     })
-//     onMounted(() => {
-//         lines(
-//             canvasID,
-//             canvasLineStyles,
-//             lineCount,
-//             canvasBackgroundColor
-//         )
-//     })
-//     onUpdated(() => {
-//         lines(
-//             canvasID,
-//             canvasLineStyles,
-//             lineCount,
-//             canvasBackgroundColor
-//         )
-//     })
-// }
-
-
-// window.addEventListener("load", () => {
-//     alert('ssr:load')
-// })
-// onMounted(() => {
-//     alert('ssr:onMpunted')
-// })
-// onUpdated(() => {
-//     alert('ssr:onUpdated')
-// })
+// { size: 1.25, style: "pattern", color: { h: 210, s: 100, l: 70, a: 0.5 } },
+// { size: 2.5, style: "pattern", color: { h: 190, s: 90, l: 50, a: 0.3 } },
+// { size: 5, style: "pattern", color: { h: 210, s: 70, l: 60, a: 0.2 } },
+// { size: 10, style: "pattern", color: { h: 310, s: 80, l: 55, a: 0.15 } },
+// { size: 20, style: "pattern", color: { h: 200, s: 25, l: 35, a: 0.12 } },
+// { size: 20, style: "pattern", color: { h: 210, s: 20, l: 40, a: 0.12 } },
+// { size: 40, style: "pattern", color: { h: 190, s: 40, l: 50, a: 0.12 } },
+// { size: 80, style: "pattern", color: { h: 220, s: 50, l: 60, a: 0.12 } },
+// { size: 40, style: "glitches", color: { h: 300, s: 100, l: 50, a: 0.3 } },
+// { size: 20, style: "glitches", color: { h: 210, s: 100, l: 50, a: 0.3 } },
+// { size: 60, style: "glitches", color: { h: 30, s: 100, l: 50, a: 0.3 } }
+import { initCanvas } from "~~/assets/ts/lines"
 onMounted(() => {
-  // キャンバスの初期化
-  // lines(canvasID, canvasLineStyles, lineCount, canvasBackgroundColor, canvasWrapperID);
-  lines(
-    canvasID,
-    canvasLineStyles,
-    lineCount,
-    canvasBackgroundColor
-  )
-}
-)
-if (process.client) {
-  // window.addEventListener("load", () => {
-  //     alert('cli:load')
-  // })
-  // onMounted(() => {
-  //     alert('cli:onMounted');
-  // })
-  // onUpdated(() => {
-  //     alert('cli:onUpdated')
-  // })
-}
+  initCanvas(
+    "lines",
+    "canvasBox",
+    [
+      { required: true, size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 3.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 4.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, size: 5.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: false, size: 10.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: false, size: 20.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: false, size: 20.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: false, size: 40.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: false, size: 80.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: false, size: 40, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
+      { required: false, size: 20, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
+      { required: false, size: 60, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
+    ],
+    { h: 200, s: 20, l: 10, a: 0.3 },
+    20,
+    "center"
+  );
+})
+
 </script>
 
 <style scoped>

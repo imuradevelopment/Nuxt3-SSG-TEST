@@ -244,33 +244,17 @@ function initCanvas(
     }
 
     // 線オブジェクトを生成する関数
-    function generateLines(styles: any[], count: number, position: string) {
+    function generateLines(amount: number, position: string) {
         let lines = [];
-
-        // "required: true" のスタイルを先に描画
-        const requiredStyles = styles.filter((style) => style.required);
-        requiredStyles.forEach((style) => {
+        for (let i = 0; i < amount; i += 1) {
+            let style = styles[(Math.random() * styles.length) | 0];
             lines.push(
                 new Line(
                     style.size,
                     500 + Math.random() * 1000,
                     style.color,
                     style.style,
-                    position
-                )
-            );
-        });
-
-        // "required: false" のスタイルをランダムに描画
-        for (let i = 0; i < count - requiredStyles.length; i += 1) {
-            let randomStyle = styles[(Math.random() * styles.length) | 0];
-            lines.push(
-                new Line(
-                    randomStyle.size,
-                    500 + Math.random() * 1000,
-                    randomStyle.color,
-                    randomStyle.style,
-                    position
+                    position // Pass the 'position' argument to the Line constructor
                 )
             );
         }
@@ -282,7 +266,7 @@ function initCanvas(
     function resizeCanvas() {
         if (animationId !== undefined) cancelAnimationFrame(animationId);
         fit();
-        const animatedLines = generateLines(styles, count, position);
+        const animatedLines = generateLines(count, position);
 
         function update() {
             if (!(animationId % 3)) {
