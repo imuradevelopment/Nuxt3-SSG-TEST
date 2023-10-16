@@ -9,52 +9,52 @@
             </el-row>
             <div class="flex flex-wrap flex-col md:flex-row px-12 md:px-6 lg:px-10 xl:px-20 2xl:px-40">
                 <div class="flex flex-col flex-auto basis-auto md:basis-16 px-1.5 mb-6 text-lg font-medium leading-6">
-                    <LinkIndex linkTo="/" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</LinkIndex>
+                    <NuxtLink to="/" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</NuxtLink>
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
-                    <LinkIndex linkTo="/company" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</LinkIndex>
-                    <!-- <LinkIndex linkTo="/company" class="w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white"><span class="underline underline-offset-8 decoration-2">会社</span>情報</LinkIndex> -->
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">トップメッセージ</LinkIndex>
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの由来</LinkIndex>
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">沿革</LinkIndex>
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">会社概要</LinkIndex>
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">アクセス</LinkIndex>
+                    <NuxtLink to="/company" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</NuxtLink>
+                    <!-- <NuxtLink to="/company" class="w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white"><span class="underline underline-offset-8 decoration-2">会社</span>情報</NuxtLink> -->
+                    <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">トップメッセージ</NuxtLink>
+                    <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの由来</NuxtLink>
+                    <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">沿革</NuxtLink>
+                    <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">会社概要</NuxtLink>
+                    <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">アクセス</NuxtLink>
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
-                    <!-- <LinkIndex linkTo="/service" class="w-fit mb-2 hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">事業</span>情報</LinkIndex> -->
-                    <LinkIndex linkTo="/service" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</LinkIndex>
-                    <LinkIndex linkTo="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SIサービス</LinkIndex>
-                    <LinkIndex linkTo="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ITサービス</LinkIndex>
-                    <LinkIndex linkTo="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SEサービス</LinkIndex>
-                    <LinkIndex linkTo="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">開発実績</LinkIndex>
+                    <!-- <NuxtLink to="/service" class="w-fit mb-2 hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">事業</span>情報</NuxtLink> -->
+                    <NuxtLink to="/service" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</NuxtLink>
+                    <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SIサービス</NuxtLink>
+                    <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ITサービス</NuxtLink>
+                    <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SEサービス</NuxtLink>
+                    <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">開発実績</NuxtLink>
                 </div>
                 <div class="flex flex-auto flex-col justify-around md:flex-row">
                     <div class="flex flex-col px-1.5 mb-6 text-lg font-medium leading-6">
                         <div class="mb-2">
-                            <!-- <LinkIndex linkTo="/recruit" class="w-fit hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">採用</span>情報</LinkIndex> -->
-                            <LinkIndex linkTo="/recruit" class="underLine w-fit hover:text-gray-200 hover:underline">採用情報</LinkIndex>
+                            <!-- <NuxtLink to="/recruit" class="w-fit hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">採用</span>情報</NuxtLink> -->
+                            <NuxtLink to="/recruit" class="underLine w-fit hover:text-gray-200 hover:underline">採用情報</NuxtLink>
                         </div>
                         <div class="flex flex-wrap flex-col md:flex-row">
                             <div class="flex flex-col">
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用メッセージ</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの特徴</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">オフィス紹介</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">研修制度</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">福利厚生</LinkIndex>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用メッセージ</NuxtLink>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの特徴</NuxtLink>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">オフィス紹介</NuxtLink>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">研修制度</NuxtLink>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">福利厚生</NuxtLink>
                             </div>
                             <div class="flex flex-col">
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">各種データ</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">Q&A</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">社員紹介</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">募集情報</LinkIndex>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">各種データ</NuxtLink>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">Q&A</NuxtLink>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">社員紹介</NuxtLink>
+                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">募集情報</NuxtLink>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col px-1.5 mb-6 text-lg font-medium leading-6">
-                        <!-- <LinkIndex linkTo="/contact" class="w-fit mb-2 hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">お問</span>い合わせ</LinkIndex> -->
-                        <LinkIndex linkTo="/contact" class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">お問い合わせ</LinkIndex>
-                        <LinkIndex linkTo="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用に関する問い合わせ</LinkIndex>
-                        <LinkIndex linkTo="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">その他の問い合わせ</LinkIndex>
+                        <!-- <NuxtLink to="/contact" class="w-fit mb-2 hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">お問</span>い合わせ</NuxtLink> -->
+                        <NuxtLink to="/contact" class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">お問い合わせ</NuxtLink>
+                        <NuxtLink to="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用に関する問い合わせ</NuxtLink>
+                        <NuxtLink to="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">その他の問い合わせ</NuxtLink>
                     </div>
                 </div>
             </div>
