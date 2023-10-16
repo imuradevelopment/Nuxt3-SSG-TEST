@@ -2,7 +2,7 @@
     <BurgerMenu class="md:hidden"/>
     <!-- デスクトップメニュー -->
     <div class="hidden md:inline-block" style="width:100%">
-        <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal"
+        <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false"
             @select="handleSelect">
             <el-menu-item index="0" class="logo">
                 <NuxtLink to="/">
@@ -10,21 +10,21 @@
                 </NuxtLink>
             </el-menu-item>
             <div class="flex-grow" />
-            <el-menu-item :ellipsis="true" index="1" class="el-menu-item-custom">
+            <el-menu-item index="1" class="el-menu-item-custom">
                 <NuxtLink to="/company">会社情報</NuxtLink>
             </el-menu-item>
-            <el-menu-item :ellipsis="true" index="2" class="el-menu-item-custom">
+            <el-menu-item index="2" class="el-menu-item-custom">
                 <NuxtLink to="/service">事業情報</NuxtLink>
             </el-menu-item>
-            <el-menu-item :ellipsis="true" index="3" class="el-menu-item-custom">
+            <el-menu-item index="3" class="el-menu-item-custom">
                 <NuxtLink to="/recruit">採用情報</NuxtLink>
             </el-menu-item>
-            <el-menu-item :ellipsis="true" index="4" class="el-menu-item-custom2">
+            <el-menu-item index="4" class="el-menu-item-custom2">
                 <el-button type="primary" class="el-button-custom">
                     <NuxtLink to="/access">アクセス</NuxtLink>
                 </el-button>
             </el-menu-item>
-            <el-menu-item :ellipsis="true" index="5" class="el-menu-item-custom2">
+            <el-menu-item index="5" class="el-menu-item-custom2">
                 <el-button type="primary" class="el-button-custom">
                     <NuxtLink to="/contact">お問い合わせ</NuxtLink>
                 </el-button>
