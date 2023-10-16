@@ -82,35 +82,37 @@
 // { size: 40, style: "glitches", color: { h: 300, s: 100, l: 50, a: 0.3 } },
 // { size: 20, style: "glitches", color: { h: 210, s: 100, l: 50, a: 0.3 } },
 // { size: 60, style: "glitches", color: { h: 30, s: 100, l: 50, a: 0.3 } }
-import { initCanvas } from "~~/assets/ts/lines"
+import { initializeCanvas } from "~~/assets/ts/lines"
 onMounted(() => {
-  initCanvas(
+  initializeCanvas(
     "lines",
     "canvasBox",
     [
-      { required: true, size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 1.25, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 2.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 3.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 4.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: true, size: 5.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: false, size: 10.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: false, size: 20.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: false, size: 20.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: false, size: 40.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: false, size: 80.5, style: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-      { required: false, size: 40, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
-      { required: false, size: 20, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
-      { required: false, size: 60, style: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
+      { required: true, lineSize: 10, lineStyle: "test", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 2.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 2.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 2.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 2.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 3.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 4.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      { required: true, lineSize: 5.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      // { required: false, lineSize: 10.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      // { required: false, lineSize: 20.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      // { required: false, lineSize: 20.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      // { required: false, lineSize: 40.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      // { required: false, lineSize: 80.5, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+      // { required: false, lineSize: 40, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
+      // { required: false, lineSize: 20, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
+      // { required: false, lineSize: 60, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
     ],
     { h: 200, s: 20, l: 10, a: 0.3 },
-    20,
-    "center"
+    0,
+    "center",
+    // {minLength: 500, maxLength: 1000} 
   );
 })
 
