@@ -74,17 +74,15 @@
 //   console.log('API secretの出力:', config.apiSecret)
 // }
 
-// { size: 1.25, style: "pattern", color: { h: 210, s: 100, l: 70, a: 0.5 } },
-// { size: 2.5, style: "pattern", color: { h: 190, s: 90, l: 50, a: 0.3 } },
-// { size: 5, style: "pattern", color: { h: 210, s: 70, l: 60, a: 0.2 } },
-// { size: 10, style: "pattern", color: { h: 310, s: 80, l: 55, a: 0.15 } },
-// { size: 20, style: "pattern", color: { h: 200, s: 25, l: 35, a: 0.12 } },
-// { size: 20, style: "pattern", color: { h: 210, s: 20, l: 40, a: 0.12 } },
-// { size: 40, style: "pattern", color: { h: 190, s: 40, l: 50, a: 0.12 } },
-// { size: 80, style: "pattern", color: { h: 220, s: 50, l: 60, a: 0.12 } },
-// { size: 40, style: "glitches", color: { h: 300, s: 100, l: 50, a: 0.3 } },
-// { size: 20, style: "glitches", color: { h: 210, s: 100, l: 50, a: 0.3 } },
-// { size: 60, style: "glitches", color: { h: 30, s: 100, l: 50, a: 0.3 } }
+// 以下は HSLA の成分についての説明です:
+// 1. Hue (色相): Hue は色の種類やトーンを示します。
+//    赤が 0 度、緑が 120 度、青が 240 度です。
+// 2. Saturation (彩度): Saturation は色の鮮やかさや強さを示します。
+//    0% の場合はグレースケールに近い灰色になり、100% の場合は最も鮮やかな色になります。
+// 3. Lightness (明度): Lightness は色の明るさを示します。
+//    0% の場合は黒に、100% の場合は白に近い明るさになります。
+// 4. Alpha (透明度): Alpha は色の透明度を示します。
+//    0 は完全に透明で、1 は完全に不透明です。
 import { initializeCanvas } from "~~/assets/ts/lines"
 onMounted(() => {
   initializeCanvas(
@@ -111,9 +109,9 @@ onMounted(() => {
       { required: false, lineSize: 20, lineStyle: "pattern", color: { h: 210, s: 20, l: 40, a: 0.12 } },
       { required: false, lineSize: 40, lineStyle: "pattern", color: { h: 190, s: 40, l: 50, a: 0.12 } },
       { required: false, lineSize: 80, lineStyle: "pattern", color: { h: 220, s: 100, l: 60, a: 0.12 } },
-      { required: false, lineSize: 40, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
-      { required: false, lineSize: 20, lineStyle: "glitches", color: { h: 210, s: 100, l: 50, a: 0.3 } },
-      { required: false, lineSize: 60, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } }
+      // { required: false, lineSize: 40, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
+      // { required: false, lineSize: 20, lineStyle: "glitches", color: { h: 210, s: 100, l: 50, a: 0.3 } },
+      // { required: false, lineSize: 60, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } }
       // { required: true, lineSize: 10, lineStyle: "test", color: { h: 209, s: 100, l: 40, a: 0.5 } },
       // { required: true, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
       // { required: true, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
