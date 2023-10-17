@@ -2,11 +2,10 @@
     <BurgerMenu class="md:hidden"/>
     <!-- デスクトップメニュー -->
     <div class="hidden md:inline-block" style="width:100%">
-        <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false"
-            @select="handleSelect">
+        <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false">
             <el-menu-item index="/" class="logo">
                 <NuxtLink to="/">
-                    <el-image src="../images/header/logo.svg"></el-image>
+                    <el-image src="../images/logo/logo.svg"></el-image>
                 </NuxtLink>
             </el-menu-item>
             <div class="flex-grow" />
@@ -70,20 +69,6 @@
 import { useActiveIndexStore } from '~/stores/activeIndex'
 
 const activeIndexStore = useActiveIndexStore()
-
-const handleSelect = (key: string, keyPath: string[]) => {
-    activeIndexStore.activeIndex = key
-}
-
-let menuOpen = false
-
-const toggleMenu = () => {
-    menuOpen = !menuOpen
-}
-
-const closeMenu = () => {
-    menuOpen = false
-}
 </script>
   
 <style scoped>
