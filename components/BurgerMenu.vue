@@ -5,7 +5,7 @@
 
         <!-- ヘッダー -->
         <div>
-            <div class="fixed top-0 left-0 w-full bg-white z-50 px-2 pt-2 flex justify-between items-center">
+            <div class="header fixed top-0 left-0 w-full bg-white z-50 px-2 pt-2 flex justify-between items-center">
                 <!-- ロゴ（クリックでメニューを閉じる） -->
                 <div @click="closeMenu">
                     <NuxtLink to="/">
@@ -37,7 +37,7 @@
         <div v-if="menuOpen" class="fixed top-16 left-0 w-full z-50">
             <div class="px-4 bg-white backdrop-blur-md">
                 <!-- メニューコンテンツ -->
-                <ul class="text-black">
+                <ul class="menuContents overflow-auto text-black">
                     <li class="h-14 border-b border-b-gray-400">
                         <NuxtLink to="/" @click="closeMenu" class="w-full h-full flex items-center"><el-icon size="1.5rem"
                                 class="mb-1">
@@ -70,10 +70,112 @@
                         </div>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
-                        <NuxtLink to="/" @click="closeMenu" class="w-full h-full flex items-center"><el-icon
-                                size="1.5rem" class="mb-1">
-                                <DataAnalysis class="text-custom-blue" />
-                            </el-icon>TEST</NuxtLink>
+                        <NuxtLink to="/recruit/message" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <ChatDotSquare />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">採用メッセージ</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
+                    </li>
+                    <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/recruit/feature" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <Pointer />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">ベイルの特長</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
+                        </li>
+                        <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/recruit/induction" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <EditPen />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">研修制度</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
+                    </li>
+                    <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/recruit/office" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <School />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">オフィス紹介</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
+                    </li>
+                    <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/recruit/welfare" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <ColdDrink />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">福利厚生</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
+                    </li>
+                    <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/recruit/data" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <TrendCharts />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">各種データ</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
+                    </li>
+                    <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/recruit/qa" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <QuestionFilled />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">Q & A</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
+                    </li>
+                    <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/recruit/employee" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <Avatar />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">社員紹介</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
+                    </li>
+                    <li class="h-14 border-b border-b-gray-400" v-if="showTestItem">
+                        <NuxtLink to="/recruit/information" @click="closeMenu" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                            <el-icon size="1.5rem" class="mb-1 mx-4">
+                                <List />
+                            </el-icon>
+                            <span class="w-3 h-full bg-white group-hover:bg-custom-blue"></span>
+                            <span class="px-4 grow">募集情報</span>
+                            <el-icon size="1.5rem" class="mb-1 mr-4">
+                                <CaretRight />
+                            </el-icon>
+                        </NuxtLink>
                     </li>
                 </ul>
                 <div class="flex p-4">
@@ -96,7 +198,20 @@ import {
     DataAnalysis,
     OfficeBuilding,
     Plus,
-    Minus
+    Minus,
+    CaretRight,
+    ChatDotSquare,
+    Pointer,
+    EditPen,
+    School,
+    ColdDrink,
+    QuestionFilled,
+    Avatar,
+    TrendCharts,
+    Checked,
+    List,
+    Flag,
+    DataLine,
 } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 
@@ -140,6 +255,12 @@ function toggleTestItem() {
     width: calc((100vw-4.75rem)/2);
     height: 40px;
     line-height: 2.5rem;
+}
+.header{
+    height: 3.75rem;;
+}
+.menuContents{
+    max-height: calc(80vh -8rem);
 }
 </style>
     
