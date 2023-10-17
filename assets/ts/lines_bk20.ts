@@ -11,10 +11,6 @@ class CanvasRenderer {
     // アニメーションが停止中は未定義です。
     private animationId: number | undefined; 
 
-    private linePatterns: LinePattern[];
-    private lineCount: number;
-    private startPosition: string;
-
     constructor(
         // キャンバス要素のID。
         canvasId: string, 
@@ -38,14 +34,11 @@ class CanvasRenderer {
         // キャンバスサイズを設定
         this.setupCanvasSize(parentId);
 
-        this.linePatterns = linePatterns;
-        this.lineCount = lineCount;
-        this.startPosition = startPosition;
         // ラインスタイルを生成
         this.lineStyles = this.generateDrawingStyles(
-            this.linePatterns,
-            this.lineCount,
-            this.startPosition
+            linePatterns,
+            lineCount,
+            startPosition
         );
         // リサイズハンドラを設定
         this.setupResizeHandler(parentId); 
@@ -66,8 +59,8 @@ class CanvasRenderer {
     private setupCanvasSize(parentId: string): void {
         const parentElement = document.getElementById(parentId);
         if (parentElement) {
-            this.canvas.width = Math.floor(parentElement.clientWidth);
-            this.canvas.height = Math.floor(parentElement.clientHeight);
+            this.canvas.width = parentElement.clientWidth;
+            this.canvas.height = parentElement.clientHeight;
         }
     }
 
@@ -99,33 +92,12 @@ class CanvasRenderer {
 
     // キャンバスリサイズハンドラを設定するメソッド
     private setupResizeHandler(parentId: string): void {
-        window.addEventListener("resize", () => {
-            // アニメーションを停止
-            this.stopAnimation();
-            // キャンバスサイズを更新
-            this.setupCanvasSize(parentId);
-            // ラインスタイルを生成
-            this.lineStyles = this.generateDrawingStyles(
-                this.linePatterns,
-                this.lineCount,
-                this.startPosition
-            );
-            // アニメーションを再開
-            this.startAnimation();
-        });
+        window.addEventListener("resize", () => this.setupCanvasSize(parentId));
     }
 
     // アニメーションを開始するメソッド
     private startAnimation(): void {
         this.animationId = requestAnimationFrame(() => this.updateCanvas());
-    }
-
-    // アニメーションを停止するメソッド
-    private stopAnimation(): void {
-        if (this.animationId !== undefined) {
-            cancelAnimationFrame(this.animationId);
-            this.animationId = undefined;
-        }
     }
 
     // キャンバスをアップデートするメソッド
@@ -143,7 +115,7 @@ class CanvasRenderer {
                 // }
             });
             // 次のアニメーションフレームをリクエスト
-            this.animationId = requestAnimationFrame(() => this.updateCanvas());
+            this.animationId = requestAnimationFrame(() => this.updateCanvas()); 
         }
     }
 
@@ -258,12 +230,7 @@ class LineStyle {
             // 破線がどの位置から始まるかを制御
             this.offset += 10;
             // 描かれる線の幅
-            context.lineWidth = 1; 
-            context.imageSmoothingEnabled = false;
-            // const translateX = 10; // 水平移動量 (調整が必要)
-            // const translateY = 10;  // 垂直移動量 (不要なら0に設定)
-            // // 移動を設定
-            // context.translate(translateX, translateY);
+            context.lineWidth = 0.2; 
         }
     }
 
