@@ -28,7 +28,7 @@
                     <NuxtLink to="/contact">お問い合わせ</NuxtLink>
                 </el-button>
             </el-menu-item>
-            <el-sub-menu index="6">
+            <!-- <el-sub-menu index="6">
                 <template #title>その他遷移</template>
                 <el-menu-item index="/recruit/message">
                     <NuxtLink to="/recruit/message">採用メッセージ</NuxtLink>
@@ -60,7 +60,7 @@
                 <el-menu-item index="/policy">
                     <NuxtLink to="/policy">個人情報保護方針ページ</NuxtLink>
                 </el-menu-item>
-            </el-sub-menu>
+            </el-sub-menu> -->
         </el-menu>
     </div>
 </template>
