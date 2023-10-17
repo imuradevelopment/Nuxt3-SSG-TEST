@@ -178,7 +178,7 @@
                         </NuxtLink>
                     </li>
                 </ul>
-                <div class="flex p-4 border-t border-t-gray-400">
+                <div class="flex p-4">
                     <el-button size="large" round type="primary" class="el-button-custom flex-grow">
                         <NuxtLink to="/access" class="w-full h-full" @click="closeMenu">アクセス</NuxtLink>
                     </el-button>
