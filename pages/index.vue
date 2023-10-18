@@ -14,19 +14,24 @@
     </div> -->
     <el-carousel arrow="never" indicator-position="none" height="450px">
       <el-carousel-item>
-        <el-image fit="cover" src="../images/free/001.webp" class="carousel-image"></el-image>
+        <!-- <el-image fit="cover" src="../images/free/001.webp" class="carousel-image"></el-image> -->
+        <div class="mainvisual1"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image fit="cover" src="../images/free/002.webp" class="carousel-image"></el-image>
+        <!-- <el-image fit="cover" src="../images/free/002.webp" class="carousel-image"></el-image> -->
+        <div class="mainvisual2"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image fit="cover" src="../images/free/003.webp" class="carousel-image"></el-image>
+        <!-- <el-image fit="cover" src="../images/free/003.webp" class="carousel-image"></el-image> -->
+        <div class="mainvisual3"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image fit="cover" src="../images/free/004.webp" class="carousel-image"></el-image>
+        <!-- <el-image fit="cover" src="../images/free/004.webp" class="carousel-image"></el-image> -->
+        <div class="mainvisual4"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image fit="cover" src="../images/free/005.webp" class="carousel-image"></el-image>
+        <!-- <el-image fit="cover" src="../images/free/005.webp" class="carousel-image"></el-image> -->
+        <div class="mainvisual5"></div>
       </el-carousel-item>
       <div class="carousel-string">
         <h2 class="catchString fontSerif mb-1 text-6xl md:mb-3 md:text-7xl">
@@ -165,6 +170,41 @@ onMounted(() => {
   height: auto;
   width: 1980px;
   overflow: hidden;
+}
+.mainvisual1 {
+    position: relative;
+    height: 100%;
+    background: url(../images/free/001.webp) no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+.mainvisual2 {
+    position: relative;
+    height: 100%;
+    background: url(../images/free/002.webp) no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+.mainvisual3 {
+    position: relative;
+    height: 100%;
+    background: url(../images/free/003.webp) no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+.mainvisual4 {
+    position: relative;
+    height: 100%;
+    background: url(../images/free/004.webp) no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+.mainvisual5 {
+    position: relative;
+    height: 100%;
+    background: url(../images/free/005.webp) no-repeat center;
+    background-size: cover;
+    text-align: center;
 }
 .carousel-string {
   position: relative;
