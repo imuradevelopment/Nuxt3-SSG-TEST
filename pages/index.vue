@@ -3,30 +3,36 @@
     <!-- <div id="canvasBox" style="min-height:400px width: 100%;">
       <canvas id="lines" style="position: absolute;"></canvas>
       <div class="carousel-string">
-        <h2 class="catchString fontSerif mb-1 pt-12 text-6xl md:mb-3 md:pt-24 md:text-7xl">
+        <h2 class="catchString fontSerif mb-1 text-6xl md:mb-3 md:text-7xl">
           Solution<br class="inline-block md2:hidden" /><span>&nbsp;</span>&<span>&nbsp;</span><br
             class="inline-block md2:hidden" />Evolution
         </h2>
-        <p class="pb-12 md:pb-24 text-xs md:text-sm">
+        <p class="text-xs md:text-sm">
           新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
         </p>
       </div>
     </div> -->
-    <el-carousel arrow="never" indicator-position="none" height="100%">
+    <el-carousel arrow="never" indicator-position="none" height="450px">
       <el-carousel-item>
-        <el-image src="../images/sample/suits001-blue.png" class="carousel-image"></el-image>
+        <el-image src="../images/free/001.webp" class="carousel-image"></el-image>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image src="../images/sample/suits002-blue.png" class="carousel-image"></el-image>
+        <el-image src="../images/free/002.webp" class="carousel-image"></el-image>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image src="../images/sample/suits003-blue.png" class="carousel-image"></el-image>
+        <el-image src="../images/free/003.webp" class="carousel-image"></el-image>
+      </el-carousel-item>
+      <el-carousel-item>
+        <el-image src="../images/free/004.webp" class="carousel-image"></el-image>
+      </el-carousel-item>
+      <el-carousel-item>
+        <el-image src="../images/free/005.webp" class="carousel-image"></el-image>
       </el-carousel-item>
       <div class="carousel-string">
-        <h2 class="catchString fontSerif mb-1 pt-12 text-6xl md:mb-3 md:pt-24 md:text-7xl">
-          Solution<br class="inline-block md:hidden" /><span>&nbsp;</span>&<span>&nbsp;</span><br class="inline-block md:hidden" />Evolution
+        <h2 class="catchString fontSerif mb-1 text-6xl md:mb-3 md:text-7xl">
+          Solution<br class="inline-block md2:hidden" /><span>&nbsp;</span>&<span>&nbsp;</span><br class="inline-block md2:hidden" />Evolution
         </h2>
-        <p class="pb-12 md:pb-24 text-xs md:text-sm">
+        <p class="text-xs md:text-sm">
           新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
         </p>
       </div>
@@ -156,16 +162,35 @@ onMounted(() => {
 }
 
 .carousel-image {
-  width: inherit;
-  height: inherit;
+  height: auto;
+  width: 1980px;
+  overflow: hidden;
 }
-
 .carousel-string {
   position: relative;
   color: white;
   text-align: center;
-  top: calc(50% - 40px);
+  top: calc(50% - 62px);
 }
+@media (max-width: 849px) {
+    /* 849px以下の幅のデバイスに適用するスタイル */
+    .carousel-string {
+      position: relative;
+      color: white;
+      text-align: center;
+      top: calc(50% - 134px);
+    }
+}
+@media (max-width: 767px) {
+    /* 767px以下の幅のデバイスに適用するスタイル */
+    .carousel-string {
+      position: relative;
+      color: white;
+      text-align: center;
+      top: calc(50% - 108px);
+    }
+}
+
 
 .container {
   height: auto;

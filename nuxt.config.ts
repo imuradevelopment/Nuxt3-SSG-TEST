@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindTypography from '@tailwindcss/typography'
+import tailwindTypography from "@tailwindcss/typography";
 
 export default defineNuxtConfig({
     devtools: {
@@ -125,11 +125,23 @@ export default defineNuxtConfig({
     },
     tailwindcss: {
         // cssPath: '~/assets/css/tailwind.css',
-        configPath: '~/tailwind.config.ts',
+        configPath: "~/tailwind.config.ts",
         // exposeConfig: false,
         // exposeLevel: 2,
         // config: {},
         // injectPosition: 'first',
         // viewer: true,
-      }
+    },
+    image: {
+        screens: {
+            xs: 320,
+            sm: 640,
+            md: 768,
+            md2: 849,
+            lg: 1024,
+            xl: 1280,
+            xxl: 1536,
+            "2xl": 1536,
+        },
+    },
 });

@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "@nuxt/image": "^1.0.0-rc.3",
     "@pinia/nuxt": "^0.4.11",
     "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
