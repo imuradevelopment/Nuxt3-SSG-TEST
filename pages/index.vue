@@ -14,19 +14,19 @@
     </div> -->
     <el-carousel arrow="never" indicator-position="none" height="450px">
       <el-carousel-item>
-        <el-image src="../images/free/001.webp" class="carousel-image"></el-image>
+        <el-image fit="cover" src="../images/free/001.webp" class="carousel-image"></el-image>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image src="../images/free/002.webp" class="carousel-image"></el-image>
+        <el-image fit="cover" src="../images/free/002.webp" class="carousel-image"></el-image>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image src="../images/free/003.webp" class="carousel-image"></el-image>
+        <el-image fit="cover" src="../images/free/003.webp" class="carousel-image"></el-image>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image src="../images/free/004.webp" class="carousel-image"></el-image>
+        <el-image fit="cover" src="../images/free/004.webp" class="carousel-image"></el-image>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image src="../images/free/005.webp" class="carousel-image"></el-image>
+        <el-image fit="cover" src="../images/free/005.webp" class="carousel-image"></el-image>
       </el-carousel-item>
       <div class="carousel-string">
         <h2 class="catchString fontSerif mb-1 text-6xl md:mb-3 md:text-7xl">
