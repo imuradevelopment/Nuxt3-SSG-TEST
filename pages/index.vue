@@ -1,6 +1,6 @@
 <template id="myTemplate">
   <div>
-    <div id="canvasBox" style="min-height:400px width: 100%;">
+    <!-- <div id="canvasBox" style="min-height:400px width: 100%;">
       <canvas id="lines" style="position: absolute;"></canvas>
       <div class="carousel-string">
         <h2 class="catchString fontSerif mb-1 pt-12 text-6xl md:mb-3 md:pt-24 md:text-7xl">
@@ -11,16 +11,16 @@
           新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
         </p>
       </div>
-    </div>
-    <!-- <el-carousel arrow="never" indicator-position="none" height="100%">
+    </div> -->
+    <el-carousel arrow="never" indicator-position="none" height="100%">
       <el-carousel-item>
-        <el-image src="./images/sample/suits001-blue.png" class="carousel-image"></el-image>
+        <el-image src="../images/sample/suits001-blue.png" class="carousel-image"></el-image>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image src="./images/sample/suits002-blue.png" class="carousel-image"></el-image>
+        <el-image src="../images/sample/suits002-blue.png" class="carousel-image"></el-image>
       </el-carousel-item>
       <el-carousel-item>
-        <el-image src="./images/sample/suits003-blue.png" class="carousel-image"></el-image>
+        <el-image src="../images/sample/suits003-blue.png" class="carousel-image"></el-image>
       </el-carousel-item>
       <div class="carousel-string">
         <h2 class="catchString fontSerif mb-1 pt-12 text-6xl md:mb-3 md:pt-24 md:text-7xl">
@@ -30,7 +30,7 @@
           新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
         </p>
       </div>
-    </el-carousel> -->
+    </el-carousel>
   </div>
   <el-button type="primary">
         <NuxtLink to="/recruit#TEST">TEST</NuxtLink>
@@ -111,7 +111,7 @@ onMounted(() => {
       { required: false, lineSize: 80, lineStyle: "pattern", color: { h: 220, s: 100, l: 60, a: 0.12 } },
       // { required: false, lineSize: 40, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
       // { required: false, lineSize: 20, lineStyle: "glitches", color: { h: 210, s: 100, l: 50, a: 0.3 } },
-      // { required: false, lineSize: 60, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } }
+      // { required: false, lineSize: 60, lineStyle: "glitches", color: { h: 216, s: 22, l: 52, a: 0.3 } },
       // { required: true, lineSize: 10, lineStyle: "test", color: { h: 209, s: 100, l: 40, a: 0.5 } },
       // { required: true, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
       // { required: true, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
