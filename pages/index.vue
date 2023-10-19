@@ -56,6 +56,28 @@
       問題解決のご提案(Solution)とさらなる発展(Evolution)をお約束します。<br/>
     </div>
   </section>
+  <div class="mx-8 flex flex-wrap justify-stretch">
+    <CustomCard url="/images/top/001.png" title-class="text-left" discription-class="text-left">
+      <template #title>
+        会社情報
+      </template>
+      <template #description>
+        ひとりひとりが試行錯誤を重ね<br/>
+        技術者として人間として成長し<br/>
+        続け共に発展してゆく為にVaileは存在しています。
+      </template>
+    </CustomCard>
+    <CustomCard url="/images/top/002.png" title-class="text-left" discription-class="text-left">
+      <template #title>
+        事業情報
+      </template>
+      <template #description>
+        情報サービスのビジネスフィールドは<br/>
+        ∞(無限)に広がっています。<br/>
+        ベイルの様々な事業についてご紹介します。
+      </template>
+    </CustomCard>
+  </div>
   <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink :to="`/${blog.id}`"
@@ -82,6 +104,8 @@
 </template>
 
 <script setup lang = "ts" >
+import CustomCard from '~/components/CustomCard.vue';
+
 // import { Blog } from "~~/types/Blog";
 // const { data } = await useMicroCMSGetList<Blog>({
 //   endpoint: "blogs",
