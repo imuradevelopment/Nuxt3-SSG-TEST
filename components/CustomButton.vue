@@ -1,5 +1,6 @@
 <template>
-    <NuxtLink :to=props.to
+    <NuxtLink 
+        :to=props.to
         class="flex items-center group border-2" :class="[buttonType, buttonStyle]">
         <span class="pl-8 pr-4 py-1 grow text-center">
             <slot>
@@ -46,7 +47,7 @@ const buttonType = [
 const hoverArrowType = [
   // props.modeに応じたクラスを追加
   props.hoverArrowType === '' ? [ ''] : '',
-  props.hoverArrowType === 'fill' ? [ 'group-hover:bg-custom-gray', 'text-white', 'group-hover:text-black'] : '',
+  props.hoverArrowType === 'fill' ? [ 'group-hover:bg-custom-blue2', 'text-white', 'group-hover:text-black'] : '',
   props.hoverArrowType === 'none' ? [ 'none'] : '',
 ];
 const buttonStyle = [
