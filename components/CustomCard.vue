@@ -1,114 +1,67 @@
-<!-- <template>
-    <div class="wrapper z-0">
-        <div class="bg-black absolute top-0 left-0 w-full h-full z-1"></div>
-        <div class="m-1 md:m-2 z-2">
-            <div :style="style" class="relative bg-cover text-white">
-                <div class="">
-                    <div class="text-2xl font-bold max-w-max ml-auto bg-custom-bgcolor text-custom-textcolor p-1 z-0" :class="titleClass">
-                        <slot name="title">デフォルトタイトル</slot>
+<template>
+    <div class="w-full h-full wrapper z-0 relative">
+        <!-- 3番目のレイヤー -->
+        <div class="p-1 md:p-2 h-full z-30 relative">
+            <div :style="style" class="relative  h-full">
+                <div class="flex flex-col h-full pt-16">
+                    <!-- 2番目のレイヤー -->
+                    <!-- ChatGPT:propsのmodeがcenterの場合は「flex, justify-around」、leftの場合は「flex」、rightの場合は「flex, justify-end」などを使用して位置を調節できるようにして-->
+                    <div :class=layer2Class>
+                        <div class="lnline-flex p-2 mr-2 max-w-80" :class="discriptionClass" >
+                            <slot name="description">デフォルト説明</slot>
+                        </div>
                     </div>
-                    <div class="m-2 text-base font-medium" :class="discriptionClass">
-                        <slot name="description">デフォルト説明</slot>
-                    </div>
-                    <div class="text-base font-medium flex flex-row-reverse justify-between" :class="buttonsClass">
-                        <CustomButton v-for="(button, index) in buttons" :to="button.to" :class="button.class" :key="index">
+                    <div class="text-base font-medium md:w-full" :class="buttonsClass">
+                        <CustomButton v-for="(button, index) in buttons" :to="button.to" :class="[button.class, 'my-4', 'mx-2']" :key="index">
                             {{ button.label }}
                         </CustomButton>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</template> -->
-<!-- <template>
-    <div class="wrapper z-0 relative">
-        <div class="bg-gray-700/90 absolute top-0 left-0 w-full h-full z-20"></div>
-        <div class="m-1 md:m-2 z-30">
-            <div :style="style" class="relative bg-cover text-white">
-                <div class="relative p-10">
-                    <div class="text-2xl font-bold max-w-max ml-auto bg-custom-bgcolor text-custom-textcolor"
-                        :class="titleClass">
-                        <slot name="title">デフォルトタイトル</slot>
-                    </div>
-                </div>
-                <div class="m-2 text-base font-medium" :class="discriptionClass">
-                    <slot name="description">デフォルト説明</slot>
-                </div>
-                <div class="text-base font-medium flex flex-row-reverse justify-between" :class="buttonsClass">
-                    <CustomButton v-for="(button, index) in buttons" :to="button.to" :class="button.class" :key="index">
-                        {{ button.label }}
-                    </CustomButton>
-                </div>
+
+        <!-- ChatGPT:propsのmodeがcenterの場合は左上、leftの場合は中央上、rightの場合は右上に位置を調節できるようにして-->
+        <!-- 1番目のレイヤーを3番目の右上に配置 -->
+        <div class="z-30 absolute" :class=layer1Class>
+            <div class="p-4 max-w-max ml-auto text-2xl font-bold line-clamp-1 z-20" :class="titleClass">
+                <slot name="title">デフォルトタイトル</slot>
             </div>
         </div>
     </div>
-</template> -->
-<!-- <template>
-    <div class="wrapper z-0 relative">
-      <div class="m-1 md:m-2 z-20 relative">
-        <div class="bg-gray-700/90 absolute top-0 left-0 w-full h-full z-10"></div>
-        <div :style="style" class="relative bg-cover text-white">
-          <div class="relative p-10">
-            <div class="text-2xl font-bold max-w-max ml-auto bg-custom-bgcolor text-custom-textcolor z-20" :class="titleClass">
-              <slot name="title">デフォルトタイトル</slot>
-            </div>
-          </div>
-          <div class="m-2 text-base font-medium" :class="discriptionClass">
-            <slot name="description">デフォルト説明</slot>
-          </div>
-          <div class="text-base font-medium flex flex-row-reverse justify-between" :class="buttonsClass">
-            <CustomButton v-for="(button, index) in buttons" :to="button.to" :class="button.class" :key="index">
-              {{ button.label }}
-            </CustomButton>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-   -->
-   <template>
-    <div class="w-full md:w-1/2 wrapper z-0 relative">
-      <!-- 4番目のレイヤー -->
-      <div class="m-1 md:m-2 z-40 relative">
-        <div :style="style" class="relative bg-cover text-white">
-          <!-- 3番目のレイヤー -->
-          <!-- <div class="bg-gray-700/90 absolute top-0 left-0 w-full h-full z-30"></div -->
-          <div class="relative pt-20">
-            <!-- 2番目のレイヤー -->
-            <div class="flex justify-end" :class="discriptionClass">
-                <div class="lnline-flex p-2 text-sm md:text-base font-medium bg-gray-900/40 max-w-80">
-                    <slot name="description">デフォルト説明</slot>
-                </div>
-            </div>
-            <div class="p-4 text-base font-medium flex flex-row-reverse justify-between" :class="buttonsClass">
-              <CustomButton v-for="(button, index) in buttons" :to="button.to" :class="button.class" :key="index">
-                {{ button.label }}
-              </CustomButton>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- 1番目のレイヤーを4番目の右上に配置 -->
-      <div class="z-40 absolute top-0 right-0">
-        <div class="p-4 max-w-max ml-auto text-2xl font-bold line-clamp-1 bg-gray-900/40 text-white z-20" :class="titleClass">
-          <slot name="title">デフォルトタイトル</slot>
-        </div>
-      </div>
-    </div>
-  </template>
+</template>
   
 <script setup lang="ts">
 import CustomButton from './CustomButton.vue';
 import { StyleValue } from 'nuxt/dist/app/compat/capi';
 
-interface Button {
-    to: string;
-    class: string;
-    label: string;
-}
-
 const props = defineProps({
+    mode: {
+        type: String,
+        required: false,
+        default: 'left'
+    },
+    titleMode: {
+        type: String,
+        required: false,
+    },
+    titleBackgroundMode: {
+        type: Boolean,
+        required: false,
+        default: true
+    },
+    discriptionMode: {
+        type: String,
+        required: false,
+    },
+    discriptionBackgroundMode: {
+        type: Boolean,
+        required: false,
+        default: true
+    },
+    buttonsMode: {
+        type: String,
+        required: false,
+    },
     url: {
         type: String,
         required: false,
@@ -116,30 +69,30 @@ const props = defineProps({
     },
     titleClass: {
         type: String,
-        required: false,
+        required: true,
         default: '',
     },
     discriptionClass: {
         type: String,
-        required: false,
+        required: true,
         default: '',
     },
     buttonsClass: {
         type: String,
-        required: false,
+        required: true,
         default: '',
     },
     buttons: {
-        type: Array as PropType<Button[]>,
+        type: Array as PropType<{ to: string; class: string; label: string }[]>,
         required: false,
         default: () => [
             {
-                to: "/",
-                class: "order-last",
-                label: "MORE"
-            }
-        ]
-    }
+                to: '/',
+                class: 'order-last',
+                label: 'MORE',
+            },
+        ],
+    },
 });
 
 const style: StyleValue = props.url
@@ -148,10 +101,49 @@ const style: StyleValue = props.url
         'background-size': 'cover'
     }
     : '';
+
+// modeによる切り替え
+const layer1Class = [
+  // props.modeに応じたクラスを追加
+  props.mode === 'left' ? ['top-0', 'left-0'] : '',
+  props.mode === 'center' ? ["top-0", 'left-1/2', '-translate-x-1/2'] : '',
+  props.mode === 'right' ? ['top-0', 'right-0'] : '',
+  props.titleMode === 'left' ? ['top-0', 'left-0'] : '',
+  props.titleMode === 'center' ? ["top-0", 'left-1/2', '-translate-x-1/2'] : '',
+  props.titleMode === 'right' ? ['top-0', 'right-0'] : '',
+];
+const layer2Class = [
+  // props.modeに応じたクラスを追加
+  props.mode === 'left' ? ['flex', 'flex-wrap', 'flex-1'] : '',
+  props.mode === 'center' ? ['flex', 'flex-wrap', 'flex-1', 'justify-around'] : '',
+  props.mode === 'right' ? ['flex', 'flex-wrap', 'flex-1', 'justify-end'] : '',
+  props.discriptionMode === 'left' ? ['flex', 'flex-wrap', 'flex-1'] : '',
+  props.discriptionMode === 'center' ? ['flex', 'flex-wrap', 'flex-1', 'justify-around'] : '',
+  props.discriptionMode === 'right' ? ['flex', 'flex-wrap', 'flex-1', 'justify-end'] : '',
+];
+const buttonsClass = [
+  // props.modeに応じたクラスを追加
+  props.mode === 'left' ? ['flex', 'flex-wrap', 'flex-col', 'md:flex-row', 'mr-auto'] : '',
+  props.mode === 'center' ? [ 'flex', 'flex-wrap', 'justify-around', 'flex-col', 'md:flex-row', 'm-auto'] : '',
+  props.mode === 'right' ? [ 'flex', 'flex-wrap', 'justify-end', 'flex-col', 'md:flex-row', 'ml-auto'] : '',
+  props.buttonsMode === 'left' ? ['flex', 'flex-wrap', 'flex-col', 'md:flex-row', 'mr-auto'] : '',
+  props.buttonsMode === 'center' ? [ 'flex', 'flex-wrap', 'justify-around', 'flex-col', 'md:flex-row', 'm-auto'] : '',
+  props.buttonsMode === 'right' ? [ 'flex', 'flex-wrap', 'justify-end', 'flex-col', 'md:flex-row', 'ml-auto'] : '',
+  props.buttonsClass
+];
+const titleClass = [
+    props.titleBackgroundMode === true ? ['bg-gray-900/40'] : '',
+    props.titleBackgroundMode === false ? ['pt-8'] : '',
+    props.titleClass
+];
+const discriptionClass = [
+    props.discriptionBackgroundMode === true ? ['bg-gray-900/40'] : '',
+    props.discriptionClass
+];
 </script>
 <style scoped>
 .max-w-80 {
-  max-width: 80%;
+    max-width: 80%;
 }
 </style>
   

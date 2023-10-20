@@ -35,7 +35,8 @@
       </el-carousel-item>
       <div class="carousel-string">
         <h2 class="catchString fontSerif mb-1 text-6xl md:mb-3 md:text-7xl">
-          Solution<br class="inline-block md2:hidden" /><span>&nbsp;</span>&<span>&nbsp;</span><br class="inline-block md2:hidden" />Evolution
+          Solution<br class="inline-block md2:hidden" /><span>&nbsp;</span>&<span>&nbsp;</span><br
+            class="inline-block md2:hidden" />Evolution
         </h2>
         <p class="text-xs md:text-sm">
           新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
@@ -44,37 +45,102 @@
     </el-carousel>
   </div>
   <section class="text-left md:text-center mx-8 my-6">
-    <div class="font-bold text-2xl md:text-4xl text-center">ペイルは、<br class="inline-block md:hidden" />「SE」を考えます。</div><br/>
+    <div class="font-bold text-2xl md:text-4xl text-center">ペイルは、<br class="inline-block md:hidden" />「SE」を考えます。</div>
+    <br />
     <div class="font-bold text-xs md:text-sm tracking-wide leading-4 md:leading-7">
       私どもがベストの提案をさせていただくに当たって大切なことは、<br class="hidden md:inline-block" />
-      SE（Solution & Evolution：問題解決と発展）であると考えています。<br/><br class="inline-block md:hidden" />
+      SE（Solution & Evolution：問題解決と発展）であると考えています。<br />
+      <!-- <br class="inline-block md:hidden" /> -->
       お客様の現状を正確に把握し、<br class="hidden md:inline-block" />
       業務コンサルティング／プランニングから機器の選定、<br class="hidden md:inline-block" />
       システムの開発からアフターフォローまで<br class="hidden md:inline-block" />
-      トータルでのサービスとサポートをご提供します。<br/><br class="inline-block md:hidden" />
+      トータルでのサービスとサポートをご提供します。<br />
+      <!-- <br class="inline-block md:hidden" /> -->
       お客様のご要望にもっともふさわしい<br class="hidden md:inline-block" />
-      問題解決のご提案(Solution)とさらなる発展(Evolution)をお約束します。<br/>
+      問題解決のご提案(Solution)とさらなる発展(Evolution)をお約束します。<br />
     </div>
   </section>
-  <div class="mx-8 flex flex-wrap justify-stretch">
-    <CustomCard url="/images/top/001.png" title-class="text-left" discription-class="text-left">
+  <div class="mx-8 flex flex-wrap justify-stretch items-stretch">
+    <div class="w-full md:w-1/2">
+      <CustomCard 
+        mode="right" 
+        url="/images/top/001.webp" 
+        title-class="text-center text-white"
+        discription-class="text-center text-xs md:text-sm font-medium text-white" 
+        :buttons="[
+            { to: '/company', class: '', label: 'MORE' },
+          ]"
+      >
+        <template #title>
+          会社情報
+        </template>
+        <template #description>
+          ひとりひとりが試行錯誤を重ね<br />
+          技術者として人間として成長し<br />
+          続け共に発展してゆく為にVaileは存在しています。
+        </template>
+      </CustomCard>
+    </div>
+    <div class="w-full md:w-1/2">
+      <CustomCard 
+        mode="right" 
+        url="/images/top/002.webp" 
+        title-class="text-center text-white"
+        discription-class="text-center text-xs md:text-sm font-medium text-white"
+        :buttons="[
+            { to: '/service', class: '', label: 'MORE' },
+          ]"
+      >
+        <template #title>
+          事業情報
+        </template>
+        <template #description>
+          情報サービスのビジネスフィールドは<br />
+          ∞(無限)に広がっています。<br />
+          ベイルの様々な事業についてご紹介します。
+        </template>
+      </CustomCard>
+    </div>
+  </div>
+  <div class="mx-4 flex justify-stretch items-stretch">
+    <CustomCard 
+      mode="center" 
+      :title-background-mode="false" 
+      :discription-background-mode="false" 
+      title-class="text-center text-custom-blue"
+      discription-class="text-xs md:text-sm font-medium text-center text-black"
+      :buttons="[
+          { to: '/recruit', class: '', label: '採用情報' },
+        ]"
+    >
       <template #title>
-        会社情報
+        採用情報
       </template>
       <template #description>
-        ひとりひとりが試行錯誤を重ね<br/>
-        技術者として人間として成長し<br/>
-        続け共に発展してゆく為にVaileは存在しています。
+        プログラミングのスキルアップや<br />
+        エンジニアとしてのキャリアアップを果たす環境を<br />
+        用意しています。
       </template>
     </CustomCard>
-    <CustomCard url="/images/top/002.png" title-class="text-left" discription-class="text-left">
+  </div>
+  <div class="mx-4 flex justify-stretch items-stretch">
+    <CustomCard 
+      mode="center" 
+      :title-background-mode="false" 
+      :discription-background-mode="false" 
+      url="/images/top/004.webp" 
+      title-class="text-center text-white"
+      discription-class="text-xs md:text-sm font-medium text-center text-white"
+      :buttons="[
+        { to: '/contact', class: 'w-80', label: '採用に関するお問い合わせ' },
+        { to: '/contact', class: 'w-80', label: 'その他お問い合わせ' },
+      ]"
+    >
       <template #title>
-        事業情報
+        お問い合わせ
       </template>
       <template #description>
-        情報サービスのビジネスフィールドは<br/>
-        ∞(無限)に広がっています。<br/>
-        ベイルの様々な事業についてご紹介します。
+        採用関連など各種お問い合わせはこちらから。
       </template>
     </CustomCard>
   </div>
@@ -100,7 +166,6 @@
     </li>
   </ul> -->
   <!-- <script src="../assets/ts/lines.ts"></script> -->
-
 </template>
 
 <script setup lang = "ts" >
@@ -206,68 +271,77 @@ import CustomCard from '~/components/CustomCard.vue';
   width: 1980px;
   overflow: hidden;
 }
+
 .mainvisual1 {
-    position: relative;
-    height: 100%;
-    background: url(/images/free/001.webp) no-repeat center;
-    background-size: cover;
-    text-align: center;
+  position: relative;
+  height: 100%;
+  background: url(/images/free/001.webp) no-repeat center;
+  background-size: cover;
+  text-align: center;
 }
+
 .mainvisual2 {
-    position: relative;
-    height: 100%;
-    background: url(/images/free/002.webp) no-repeat center;
-    background-size: cover;
-    text-align: center;
+  position: relative;
+  height: 100%;
+  background: url(/images/free/002.webp) no-repeat center;
+  background-size: cover;
+  text-align: center;
 }
+
 .mainvisual3 {
-    position: relative;
-    height: 100%;
-    background: url(/images/free/003.webp) no-repeat center;
-    background-size: cover;
-    text-align: center;
+  position: relative;
+  height: 100%;
+  background: url(/images/free/003.webp) no-repeat center;
+  background-size: cover;
+  text-align: center;
 }
+
 .mainvisual4 {
-    position: relative;
-    height: 100%;
-    background: url(/images/free/004.webp) no-repeat center;
-    background-size: cover;
-    text-align: center;
+  position: relative;
+  height: 100%;
+  background: url(/images/free/004.webp) no-repeat center;
+  background-size: cover;
+  text-align: center;
 }
+
 .mainvisual5 {
-    position: relative;
-    height: 100%;
-    background: url(/images/free/005.webp) no-repeat center;
-    background-size: cover;
-    text-align: center;
+  position: relative;
+  height: 100%;
+  background: url(/images/free/005.webp) no-repeat center;
+  background-size: cover;
+  text-align: center;
 }
+
 .carousel-string {
   position: relative;
   color: white;
   text-align: center;
   top: calc(50% - 62px);
 }
+
 @media (max-width: 849px) {
-    /* 849px以下の幅のデバイスに適用するスタイル */
-    .carousel-string {
-      position: relative;
-      color: white;
-      text-align: center;
-      top: calc(50% - 134px);
-    }
+
+  /* 849px以下の幅のデバイスに適用するスタイル */
+  .carousel-string {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: calc(50% - 134px);
+  }
 }
+
 @media (max-width: 767px) {
-    /* 767px以下の幅のデバイスに適用するスタイル */
-    .carousel-string {
-      position: relative;
-      color: white;
-      text-align: center;
-      top: calc(50% - 108px);
-    }
+
+  /* 767px以下の幅のデバイスに適用するスタイル */
+  .carousel-string {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: calc(50% - 108px);
+  }
 }
 
 
 .container {
   height: auto;
-}
-</style>
+}</style>
