@@ -68,7 +68,7 @@
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white" 
         :buttons="[
-            { to: '/company', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
+            { to: '/company#TEST', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
       >
         <template #title>
