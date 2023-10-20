@@ -83,7 +83,7 @@
     </div>
     <div class="w-full md:w-1/2">
       <CustomCard 
-        mode="right" 
+        mode="left" 
         url="/images/top/002.webp" 
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white"

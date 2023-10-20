@@ -1,18 +1,18 @@
 <template>
-    <div class="w-full h-full wrapper z-0 relative">
+    <div class="p-1 w-full h-full wrapper z-0 relative">
         <!-- 3番目のレイヤー -->
-        <div class="p-1 md:p-2 h-full z-30 relative">
+        <div class="p-2 h-full z-30 relative">
             <div :style="style" class="relative  h-full">
                 <div class="flex flex-col h-full pt-16">
                     <!-- 2番目のレイヤー -->
                     <!-- ChatGPT:propsのmodeがcenterの場合は「flex, justify-around」、leftの場合は「flex」、rightの場合は「flex, justify-end」などを使用して位置を調節できるようにして-->
                     <div :class=layer2Class>
-                        <div class="lnline-flex p-2 mr-2 max-w-80" :class="discriptionClass" >
+                        <div class="lnline-flex p-2 mx-2 max-w-80" :class="discriptionClass" >
                             <slot name="description">デフォルト説明</slot>
                         </div>
                     </div>
-                    <div class="text-base font-medium md:w-full" :class="buttonsClass">
-                        <CustomButton v-for="(button, index) in buttons" :to="button.to" :class="[button.class, 'my-4', 'mx-2']" :key="index">
+                    <div class="my-1 text-base font-medium md:w-full" :class="buttonsClass">
+                        <CustomButton v-for="(button, index) in buttons" :to="button.to" :class="[button.class, 'my-3', 'mx-2']" :key="index">
                             {{ button.label }}
                         </CustomButton>
                     </div>
@@ -105,12 +105,12 @@ const style: StyleValue = props.url
 // modeによる切り替え
 const layer1Class = [
   // props.modeに応じたクラスを追加
-  props.mode === 'left' ? ['top-0', 'left-0'] : '',
-  props.mode === 'center' ? ["top-0", 'left-1/2', '-translate-x-1/2'] : '',
-  props.mode === 'right' ? ['top-0', 'right-0'] : '',
-  props.titleMode === 'left' ? ['top-0', 'left-0'] : '',
-  props.titleMode === 'center' ? ["top-0", 'left-1/2', '-translate-x-1/2'] : '',
-  props.titleMode === 'right' ? ['top-0', 'right-0'] : '',
+  props.mode === 'left' ? ['top-1', 'left-1'] : '',
+  props.mode === 'center' ? ["top-1", 'left-1/2', '-translate-x-1/2'] : '',
+  props.mode === 'right' ? ['top-1', 'right-1'] : '',
+  props.titleMode === 'left' ? ['top-1', 'left-1'] : '',
+  props.titleMode === 'center' ? ["top-1", 'left-1/2', '-translate-x-1/2'] : '',
+  props.titleMode === 'right' ? ['top-1', 'right-1'] : '',
 ];
 const layer2Class = [
   // props.modeに応じたクラスを追加
