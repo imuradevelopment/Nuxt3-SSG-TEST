@@ -6,7 +6,7 @@
                     <el-image src="../images/logo/logo.svg"></el-image>
                 </div>
             </el-row>
-            <div class="flex flex-wrap flex-col md:flex-row px-12 md:px-6 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex flex-wrap flex-col md:flex-row px-12 md:px-6">
                 <div class="flex flex-col flex-auto basis-auto md:basis-16 px-1.5 mb-6 text-lg font-medium leading-6">
                     <NuxtLink to="/" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</NuxtLink>
                 </div>

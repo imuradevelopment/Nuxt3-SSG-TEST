@@ -34,7 +34,7 @@ import {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    max-width: 1980px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 .el-main-custom{
