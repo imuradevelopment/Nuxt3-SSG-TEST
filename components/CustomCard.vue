@@ -11,7 +11,7 @@
                         </div>
                     </div>
                     <div class="my-1 text-base font-medium md:w-full" :class="buttonsClass">
-                        <CustomButton v-for="(button, index) in buttons" :to="button.to" :class="[button.class, 'my-3', 'mx-2']" :key="index">
+                        <CustomButton v-for="(button, index) in buttons" :to="button.to" :type="button.type" :hoverArrowType="button.hoverArrowType" :buttonStyle="button.buttonStyle" :class="[button.class, 'my-3', 'mx-2']" :key="index">
                             {{ button.label }}
                         </CustomButton>
                     </div>
@@ -80,11 +80,14 @@ const props = defineProps({
         default: '',
     },
     buttons: {
-        type: Array as PropType<{ to: string; class: string; label: string }[]>,
+        type: Array as PropType<{ to: string; type: string; hoverArrowType: string; buttonStyle: string; class: string; label: string }[]>,
         required: false,
         default: () => [
             {
                 to: '/',
+                type: '',
+                hoverArrowType: '',
+                buttonStyle: '',
                 class: 'order-last',
                 label: 'MORE',
             },

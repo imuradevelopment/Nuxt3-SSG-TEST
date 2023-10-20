@@ -12,7 +12,7 @@
         </p>
       </div>
     </div> -->
-    <el-carousel arrow="never" indicator-position="none" height="450px">
+    <el-carousel arrow="never" indicator-position="none" height="400px">
       <el-carousel-item>
         <!-- <el-image fit="cover" src="../images/free/001.webp" class="carousel-image"></el-image> -->
         <div class="mainvisual1"></div>
@@ -68,7 +68,7 @@
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white" 
         :buttons="[
-            { to: '/company', class: '', label: 'MORE' },
+            { to: '/company', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
       >
         <template #title>
@@ -88,7 +88,7 @@
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white"
         :buttons="[
-            { to: '/service', class: '', label: 'MORE' },
+            { to: '/service', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
       >
         <template #title>
@@ -110,7 +110,7 @@
       title-class="text-center text-custom-blue"
       discription-class="text-xs md:text-sm font-medium text-center text-black"
       :buttons="[
-          { to: '/recruit', class: '', label: '採用情報' },
+          { to: '/recruit', type:'fill', hoverArrowType:'', buttonStyle:'', class: '', label: '採用情報' },
         ]"
     >
       <template #title>
@@ -132,8 +132,8 @@
       title-class="text-center text-white"
       discription-class="text-xs md:text-sm font-medium text-center text-white"
       :buttons="[
-        { to: '/contact', class: 'w-80', label: '採用に関するお問い合わせ' },
-        { to: '/contact', class: 'w-80', label: 'その他お問い合わせ' },
+        { to: '/contact', type:'', hoverArrowType:'', buttonStyle:'', class: 'w-80', label: '採用に関するお問い合わせ' },
+        { to: '/contact', type:'', hoverArrowType:'', buttonStyle:'', class: 'w-80', label: 'その他お問い合わせ' },
       ]"
     >
       <template #title>
