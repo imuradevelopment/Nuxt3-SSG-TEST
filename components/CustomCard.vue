@@ -2,11 +2,11 @@
     <div class="p-1 w-full h-full wrapper z-0 relative">
         <!-- 3番目のレイヤー -->
         <div class="p-2 h-full z-30 relative">
-            <div :style="style" class="relative  h-full">
+            <div :style="style" class="relative h-full rounded">
                 <div class="flex flex-col h-full pt-16">
                     <!-- 2番目のレイヤー -->
                     <div :class=layer2Class>
-                        <div class="lnline-flex p-2 mx-2 max-w-80" :class="discriptionClass" >
+                        <div class="lnline-flex p-2 mx-2 rounded max-w-80" :class="discriptionClass" >
                             <slot name="description">デフォルト説明</slot>
                         </div>
                     </div>
@@ -20,7 +20,7 @@
         </div>
         <!-- 1番目のレイヤーを3番目の右上に配置 -->
         <div class="z-30 absolute" :class=layer1Class>
-            <div class="p-4 max-w-max ml-auto text-2xl font-bold line-clamp-1 z-20" :class="titleClass">
+            <div class="p-4 max-w-max ml-auto text-2xl font-bold line-clamp-1 z-20 rounded" :class="titleClass">
                 <slot name="title">デフォルトタイトル</slot>
             </div>
         </div>
@@ -132,12 +132,12 @@ const buttonsClass = [
   props.buttonsClass
 ];
 const titleClass = [
-    props.titleBackgroundMode === true ? ['bg-gray-900/40'] : '',
+    props.titleBackgroundMode === true ? ['bg-gray-900/50'] : '',
     props.titleBackgroundMode === false ? ['pt-8'] : '',
     props.titleClass
 ];
 const discriptionClass = [
-    props.discriptionBackgroundMode === true ? ['bg-gray-900/40'] : '',
+    props.discriptionBackgroundMode === true ? ['bg-gray-900/60'] : '',
     props.discriptionClass
 ];
 </script>

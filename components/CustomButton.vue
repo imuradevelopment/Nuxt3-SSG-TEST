@@ -6,7 +6,7 @@
                 MORE
             </slot>
         </span>
-        <el-icon size="1.5rem" class="mb-1 mr-2" :class="hoverArrowType">
+        <el-icon size="1.5rem" style="margin-bottom: 0.1rem;" class="mr-2 rounded-full" :class="hoverArrowType">
             <CaretRight />
         </el-icon>
     </NuxtLink>
@@ -46,7 +46,7 @@ const buttonType = [
 const hoverArrowType = [
   // props.modeに応じたクラスを追加
   props.hoverArrowType === '' ? [ ''] : '',
-  props.hoverArrowType === 'fill' ? [ 'bg-custom-blue', 'hover:bg-custom-gray', 'text-white', 'hover:text-black'] : '',
+  props.hoverArrowType === 'fill' ? [ 'group-hover:bg-custom-gray', 'text-white', 'group-hover:text-black'] : '',
   props.hoverArrowType === 'none' ? [ 'none'] : '',
 ];
 const buttonStyle = [
