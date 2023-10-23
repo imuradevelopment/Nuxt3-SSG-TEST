@@ -52,6 +52,7 @@ export default defineNuxtConfig({
         "nuxt-microcms-module",
         "@nuxtjs/tailwindcss",
         "@pinia/nuxt",
+        "@nuxt/image",
     ],
     vite: {
         css: {
@@ -62,6 +63,9 @@ export default defineNuxtConfig({
             },
         },
     },
+    // alias: {
+    //     "@images": "../public/images",
+    // },
     elementPlus: {
         importStyle: "scss",
         themes: ["dark"],
@@ -132,16 +136,9 @@ export default defineNuxtConfig({
         // injectPosition: 'first',
         // viewer: true,
     },
-    image: {
-        screens: {
-            xs: 320,
-            sm: 640,
-            md: 768,
-            md2: 849,
-            lg: 1024,
-            xl: 1280,
-            xxl: 1536,
-            "2xl": 1536,
-        },
-    },
+    // image: {
+    //     image: {
+    //         inject: true
+    //       }
+    //   }
 });

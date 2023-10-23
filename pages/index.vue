@@ -14,23 +14,18 @@
     </div> -->
     <el-carousel arrow="never" indicator-position="none" height="400px">
       <el-carousel-item>
-        <!-- <el-image fit="cover" src="../images/free/001.webp" class="carousel-image"></el-image> -->
         <div class="mainvisual1"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <!-- <el-image fit="cover" src="../images/free/002.webp" class="carousel-image"></el-image> -->
         <div class="mainvisual2"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <!-- <el-image fit="cover" src="../images/free/003.webp" class="carousel-image"></el-image> -->
         <div class="mainvisual3"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <!-- <el-image fit="cover" src="../images/free/004.webp" class="carousel-image"></el-image> -->
         <div class="mainvisual4"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <!-- <el-image fit="cover" src="../images/free/005.webp" class="carousel-image"></el-image> -->
         <div class="mainvisual5"></div>
       </el-carousel-item>
       <div class="carousel-string">
@@ -64,7 +59,7 @@
     <div class="w-full md:w-1/2">
       <CustomCard 
         mode="right" 
-        url="/images/top/001.webp" 
+        url="../images/top/001.webp"
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white" 
         :buttons="[
@@ -84,7 +79,7 @@
     <div class="w-full md:w-1/2">
       <CustomCard 
         mode="left" 
-        url="/images/top/002.webp" 
+        url="../images/top/002.webp" 
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white"
         :buttons="[
@@ -128,7 +123,7 @@
       mode="center" 
       :title-background-mode="false" 
       :discription-background-mode="false" 
-      url="/images/top/004.webp" 
+      url="../images/top/004.webp" 
       title-class="text-center text-white"
       discription-class="text-xs md:text-sm font-medium text-center text-white"
       :buttons="[
@@ -170,7 +165,6 @@
 
 <script setup lang = "ts" >
 import CustomCard from '~/components/CustomCard.vue';
-
 // import { Blog } from "~~/types/Blog";
 // const { data } = await useMicroCMSGetList<Blog>({
 //   endpoint: "blogs",

@@ -3,7 +3,7 @@
         <el-col :sm="18" :span="24">
             <el-row>
                 <div class="mb-3 bg-white border-t-2 border-custom-gray drop-shadow-md">
-                    <el-image src="../images/logo/logo.svg"></el-image>
+                    <NuxtImg width="185" fit="cover" src="/images/logo/logo.svg" />
                 </div>
             </el-row>
             <div class="flex flex-wrap flex-col md:flex-row px-12 md:px-6">
@@ -75,7 +75,7 @@
     <el-row align="middle" class="pl-6 md:pl-12 text-black text-xs font-light">
         <el-col :span="12">
             <el-row align="middle">
-                <el-image class="mr-4 h-10 w-10" src="../images/footer/policy.png"></el-image>
+                <NuxtImg class="mr-4" width="40" height="40" fit="cover" src="/images/footer/policy.png" />
                 <span class="text-xs">個人情報保護方針</span>
             </el-row>
         </el-col>

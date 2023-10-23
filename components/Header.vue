@@ -5,7 +5,7 @@
         <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false">
             <el-menu-item index="/" class="logo">
                 <NuxtLink to="/">
-                    <el-image src="../images/logo/logo.svg"></el-image>
+                    <NuxtImg width="185" fit="cover" src="/images/logo/logo.svg" />
                 </NuxtLink>
             </el-menu-item>
             <div class="flex-grow" />
@@ -100,8 +100,9 @@ const activeIndexStore = useActiveIndexStore()
     margin: 0 0 0.25rem 0;
 }
 .logo {
-    width: 185px;
     padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     transition-property: none !important;
 }
 

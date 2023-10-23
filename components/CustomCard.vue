@@ -2,7 +2,7 @@
     <div class="p-1 w-full h-full wrapper z-0 relative">
         <!-- 3番目のレイヤー -->
         <div class="p-2 h-full z-30 relative">
-            <div :style="style" class="relative h-full rounded">
+            <div class="relative h-full rounded" :class="background">
                 <div class="flex flex-col h-full pt-16">
                     <!-- 2番目のレイヤー -->
                     <div :class=layer2Class>
@@ -102,6 +102,12 @@ const style: StyleValue = props.url
     }
     : '';
 
+const background = [
+    props.url ? 'background' : '',
+];
+const backgroundUrl = computed( () => props.url ? 'url(' + props.url + ') no-repeat center' : 'unset')
+const backgroundSize = computed( () => props.url ? 'cover' : 'auto')
+
 // modeによる切り替え
 const layer1Class = [
   // props.modeに応じたクラスを追加
@@ -144,6 +150,10 @@ const discriptionClass = [
 <style scoped>
 .max-w-80 {
     max-width: 80%;
+}
+.background{
+    background: v-bind(backgroundUrl);
+    background-size: v-bind(backgroundSize);
 }
 </style>
   

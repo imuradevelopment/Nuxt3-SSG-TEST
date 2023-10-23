@@ -9,7 +9,7 @@
                 <!-- ロゴ（クリックでメニューを閉じる） -->
                 <div @click="closeMenu">
                     <NuxtLink to="/">
-                        <el-image src="../images/logo/logo.svg"></el-image>
+                        <NuxtImg width="185" fit="cover" src="/images/logo/logo.svg" />
                     </NuxtLink>
                 </div>
                 <!-- ハンバーガーアイコンとメニューのトグル -->
