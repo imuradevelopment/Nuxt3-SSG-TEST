@@ -25,7 +25,10 @@ export default <Partial<Config>>{
                         blue2: "#006BCC",
                         orange: "#FFA500",
                     }
-                }
+                },
+                backgroundImage: {
+                    // 'back004': "url('public/images/top/003.webp')",
+                  }
             },
         },
         plugins: ["tailwindTypography"],

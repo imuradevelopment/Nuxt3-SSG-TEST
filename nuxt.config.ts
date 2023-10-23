@@ -4,21 +4,20 @@ import tailwindTypography from "@tailwindcss/typography";
 export default defineNuxtConfig({
     devtools: {
         enabled: true,
-
         timeline: {
             enabled: true,
         },
     },
     ssr: true,
     experimental: {
-        payloadExtraction: false,
+        payloadExtraction: true,
     },
     app: {
         // baseURL: '/',
-        // baseURL: '/Nuxt3-SSG-TEST',
+        baseURL: '/Nuxt3-SSG-TEST',
         // NUXT_APP_BASE_URL
         // cdnURL: '/',
-        // cdnURL: '/Nuxt3-SSG-TEST',
+        cdnURL: '/Nuxt3-SSG-TEST',
         // NUXT_APP_CDN_URL
         head: {
             charset: "utf-8",

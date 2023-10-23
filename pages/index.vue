@@ -14,19 +14,19 @@
     </div> -->
     <el-carousel arrow="never" indicator-position="none" height="400px">
       <el-carousel-item>
-        <div class="mainvisual1"></div>
+        <div class="bg-[url('/images/free/001.webp')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="mainvisual2"></div>
+        <div class="bg-[url('/images/free/002.webp')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="mainvisual3"></div>
+        <div class="bg-[url('/images/free/003.webp')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="mainvisual4"></div>
+        <div class="bg-[url('/images/free/004.webp')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="mainvisual5"></div>
+        <div class="bg-[url('/images/free/005.webp')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <div class="carousel-string">
         <h2 class="catchString fontSerif mb-1 text-6xl md:mb-3 md:text-7xl">
@@ -45,26 +45,24 @@
     <div class="font-bold text-xs md:text-sm tracking-wide leading-4 md:leading-7">
       私どもがベストの提案をさせていただくに当たって大切なことは、<br class="hidden md:inline-block" />
       SE（Solution & Evolution：問題解決と発展）であると考えています。<br />
-      <!-- <br class="inline-block md:hidden" /> -->
       お客様の現状を正確に把握し、<br class="hidden md:inline-block" />
       業務コンサルティング／プランニングから機器の選定、<br class="hidden md:inline-block" />
       システムの開発からアフターフォローまで<br class="hidden md:inline-block" />
       トータルでのサービスとサポートをご提供します。<br />
-      <!-- <br class="inline-block md:hidden" /> -->
       お客様のご要望にもっともふさわしい<br class="hidden md:inline-block" />
       問題解決のご提案(Solution)とさらなる発展(Evolution)をお約束します。<br />
     </div>
   </section>
-  <div class="mx-8 flex flex-wrap justify-stretch items-stretch">
+  <div class="mx-4 flex flex-wrap justify-stretch items-stretch">
     <div class="w-full md:w-1/2">
       <CustomCard 
         mode="right" 
-        url="../images/top/001.webp"
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white" 
         :buttons="[
             { to: '/company#TEST', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
+          background="bg-[url('/images/top/001.webp')] bg-center bg-cover"
       >
         <template #title>
           会社情報
@@ -79,12 +77,12 @@
     <div class="w-full md:w-1/2">
       <CustomCard 
         mode="left" 
-        url="../images/top/002.webp" 
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white"
         :buttons="[
             { to: '/service', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
+        background="bg-[url('/images/top/002.webp')] bg-center bg-cover"
       >
         <template #title>
           事業情報
@@ -97,39 +95,43 @@
       </CustomCard>
     </div>
   </div>
-  <div class="mx-4 flex justify-stretch items-stretch">
-    <CustomCard 
-      mode="center" 
-      :title-background-mode="false" 
-      :discription-background-mode="false" 
-      title-class="text-center text-custom-blue"
-      discription-class="text-xs md:text-sm font-medium text-center text-black"
-      :buttons="[
-          { to: '/recruit', type:'fill', hoverArrowType:'', buttonStyle:'', class: '', label: '採用情報' },
-        ]"
-    >
-      <template #title>
-        採用情報
-      </template>
-      <template #description>
-        プログラミングのスキルアップや<br />
-        エンジニアとしてのキャリアアップを果たす環境を<br />
-        用意しています。
-      </template>
-    </CustomCard>
+  <div class="mx-7 bg-[url('/images/top/003.webp')] bg-center bg-cover">
+    <div class="flex justify-center items-stretch">
+      <div class="w-96">
+        <CustomCard 
+          mode="center" 
+          :title-background-mode="false" 
+          :discription-background-mode="false" 
+          title-class="text-center text-custom-blue"
+          discription-class="text-xs md:text-sm font-medium text-center text-black"
+          :buttons="[
+              { to: '/recruit', type:'fill', hoverArrowType:'', buttonStyle:'', class: '', label: '採用情報' },
+            ]"
+        >
+          <template #title>
+            採用情報
+          </template>
+          <template #description>
+            プログラミングのスキルアップや<br />
+            エンジニアとしてのキャリアアップを果たす環境を<br />
+            用意しています。
+          </template>
+        </CustomCard>
+      </div>
+    </div>
   </div>
   <div class="mx-4 flex justify-stretch items-stretch">
     <CustomCard 
       mode="center" 
       :title-background-mode="false" 
       :discription-background-mode="false" 
-      url="../images/top/004.webp" 
       title-class="text-center text-white"
       discription-class="text-xs md:text-sm font-medium text-center text-white"
       :buttons="[
         { to: '/contact', type:'', hoverArrowType:'', buttonStyle:'', class: 'w-80', label: '採用に関するお問い合わせ' },
         { to: '/contact', type:'', hoverArrowType:'', buttonStyle:'', class: 'w-80', label: 'その他お問い合わせ' },
       ]"
+      background="bg-[url('/images/top/004.webp')] bg-center bg-cover"
     >
       <template #title>
         お問い合わせ
