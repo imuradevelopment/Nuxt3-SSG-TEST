@@ -3,7 +3,7 @@
         <!-- 3番目のレイヤー -->
         <div class="p-2 h-full z-30 relative">
             <div class="relative h-full" :class="props.background">
-                <div class="flex flex-col h-full pt-16">
+                <div class="flex flex-col h-full pt-16" :class="props.backgroundMask">
                     <!-- 2番目のレイヤー -->
                     <div :class=layer2Class>
                         <div class="lnline-flex p-2 mx-2 max-w-80" :class="discriptionClass" >
@@ -92,7 +92,12 @@ const props = defineProps({
         type: String,
         required: true,
         default: 'bg-white drop-shadow-lg',
-    }
+    },
+    backgroundMask: {
+        type: String,
+        required: true,
+        default: '',
+    },
 });
 
 // modeによる切り替え

@@ -63,6 +63,7 @@
             { to: '/company#TEST', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
           background="bg-[url('/images/top/001.webp')] bg-center bg-cover"
+          backgroundMask="bg-custom-blue/20"
       >
         <template #title>
           会社情報
@@ -83,6 +84,7 @@
             { to: '/service', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
         background="bg-[url('/images/top/002.webp')] bg-center bg-cover"
+        backgroundMask="bg-custom-blue/20"
       >
         <template #title>
           事業情報
@@ -96,7 +98,7 @@
     </div>
   </div>
   <div class="mx-7 bg-[url('/images/top/003.webp')] bg-center bg-cover">
-    <div class="flex justify-center items-stretch">
+    <div class="flex justify-center items-stretch bg-custom-blue/20">
       <div class="w-96">
         <CustomCard 
           mode="center" 
@@ -132,6 +134,7 @@
         { to: '/contact', type:'', hoverArrowType:'', buttonStyle:'', class: 'w-80', label: 'その他お問い合わせ' },
       ]"
       background="bg-[url('/images/top/004.webp')] bg-center bg-cover"
+      backgroundMask="bg-custom-blue/20"
     >
       <template #title>
         お問い合わせ
