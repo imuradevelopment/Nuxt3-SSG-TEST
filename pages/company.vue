@@ -26,7 +26,7 @@
         <p>お問い合わせ先の情報をここに記載します。電話番号、メールアドレス、住所などを提供しましょう。</p>
         <el-button>ボタン</el-button>
     </div>
-    <div class="container" id="TEST">
+    <div class="container linkScroll" id="TEST">
         <h2>会社紹介</h2>
         <p>会社紹介のテキストをここに追加します。会社の歴史、ビジョン、使命などを説明しましょう。</p>
         <h2>サービス</h2>

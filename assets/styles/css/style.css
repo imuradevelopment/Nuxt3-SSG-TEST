@@ -1,0 +1,3 @@
+.linkScroll {
+    @apply  scroll-mt-16 md:scroll-mt-0;
+  }
