@@ -21,10 +21,15 @@
                 <line x1="0" y1="12" x2="32" y2="12" stroke="white" stroke-width="3"/>
                 <polygon points="28,9 28,15 32,12" fill="white"/>
                 </svg> -->
-                <svg height="24" width="36" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg height="24" width="36" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="19" cy="12" r="12" stroke="white" stroke-width="3" fill="none"/>
                 <line x1="0" y1="12" x2="22" y2="12" stroke="white" stroke-width="3"/>
                 <polygon points="22,9 22,15 26,12" fill="white"/>
+                </svg> -->
+                <svg height="24" width="36" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="23.5" cy="12" r="10.5" stroke="white" stroke-width="3" fill="none"/>
+                <line x1="0" y1="12" x2="22" y2="12" stroke="white" stroke-width="3"/>
+                <polygon points="22,6 22,18 28,12" fill="white"/>
                 </svg>
             </span>
     </NuxtLink>
