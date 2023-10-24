@@ -2,14 +2,14 @@
     <NuxtLink 
         :to=props.to
         class="flex items-center group border-2" :class="[buttonType, buttonStyle]">
-        <span class="pl-8 pr-4 py-1 grow text-center">
-            <slot>
-                MORE
-            </slot>
-        </span>
-        <el-icon size="1.5rem" style="margin-bottom: 0.1rem;" class="mr-2 rounded-full" :class="hoverArrowType">
-            <CaretRight />
-        </el-icon>
+            <span class="pl-8 pr-4 py-1 grow text-center">
+                <slot>
+                    MORE
+                </slot>
+            </span>
+            <el-icon size="1.5rem" style="margin-bottom: 0.1rem;" class="mr-2 rounded-full" :class="hoverArrowType">
+                <CaretRight />
+            </el-icon>
     </NuxtLink>
 </template>
   

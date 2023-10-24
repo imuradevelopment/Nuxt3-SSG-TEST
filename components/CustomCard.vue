@@ -29,7 +29,6 @@
   
 <script setup lang="ts">
 import CustomButton from './CustomButton.vue';
-import { StyleValue } from 'nuxt/dist/app/compat/capi';
 
 const props = defineProps({
     mode: {
