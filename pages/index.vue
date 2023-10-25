@@ -80,6 +80,27 @@
     </div>
     <div class="w-full md:w-1/2">
       <CustomCard 
+        class="md:hidden"
+        mode="right" 
+        title-class="text-center text-white"
+        discription-class="text-center text-xs md:text-sm font-medium text-white"
+        :buttons="[
+            { to: '/service', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
+          ]"
+        background="bg-[url('/images/top/002.webp')] bg-center bg-cover"
+        backgroundMask="bg-custom-blue/20"
+      >
+        <template #title>
+          事業情報
+        </template>
+        <template #description>
+          情報サービスのビジネスフィールドは<br />
+          ∞(無限)に広がっています。<br />
+          ベイルの様々な事業についてご紹介します。
+        </template>
+      </CustomCard>
+      <CustomCard 
+      class="hidden md:inline-block"
         mode="left" 
         title-class="text-center text-white"
         discription-class="text-center text-xs md:text-sm font-medium text-white"
