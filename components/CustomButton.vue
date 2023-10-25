@@ -2,7 +2,7 @@
     <NuxtLink 
         :to=props.to
         class="flex items-center group border-2" :class="[buttonType, buttonStyle]">
-            <span class="pl-8 pr-4 py-1 grow text-center">
+            <span class="pl-8 pr-4 py-1 grow text-center font-bold">
                 <slot>
                     MORE
                 </slot>
@@ -10,7 +10,7 @@
             <!-- <el-icon size="1.5rem" style="margin-bottom: 0.1rem;" class="mr-2 rounded-full" :class="hoverArrowType">
                 <CaretRight />
             </el-icon> -->
-            <span class="h-6 w-9">
+            <span class="mr-2">
                 <!-- <svg height="24" width="36" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="19" cy="12" r="12" stroke="white" stroke-width="3" fill="none"/>
                 <line x1="0" y1="12" x2="22" y2="12" stroke="white" stroke-width="3"/>
@@ -26,10 +26,15 @@
                 <line x1="0" y1="12" x2="22" y2="12" stroke="white" stroke-width="3"/>
                 <polygon points="22,9 22,15 26,12" fill="white"/>
                 </svg> -->
-                <svg height="24" width="36" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg height="24" width="36" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="23.5" cy="12" r="10.5" stroke="white" stroke-width="3" fill="none"/>
                 <line x1="0" y1="12" x2="22" y2="12" stroke="white" stroke-width="3"/>
                 <polygon points="22,6 22,18 28,12" fill="white"/>
+                </svg> -->
+                <svg height="24" width="36" xmlns="http://www.w3.org/2000/svg" :class="hoverArrowType">
+                <circle cx="23.5" cy="12" r="10.5" stroke-width="3" fill="none"/>
+                <line x1="0" y1="12" x2="22" y2="12" stroke-width="3"/>
+                <polygon points="22,6 22,18 28,12" stroke="none"/>
                 </svg>
             </span>
     </NuxtLink>
@@ -68,7 +73,8 @@ const buttonType = [
 ];
 const hoverArrowType = [
   // props.modeに応じたクラスを追加
-  props.hoverArrowType === '' ? [ ''] : '',
+  props.type === '' ? [ 'stroke-white', 'fill-white' ] : '',
+  props.type === 'fill' ? [ 'stroke-white', 'group-hover:stroke-custom-blue', 'fill-white', 'group-hover:fill-custom-blue' ] : '',
   props.hoverArrowType === 'fill' ? [ 'group-hover:bg-custom-blue2', 'text-white', 'group-hover:text-black'] : '',
   props.hoverArrowType === 'none' ? [ 'none'] : '',
 ];
