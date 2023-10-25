@@ -14,26 +14,29 @@
     </div> -->
     <el-carousel arrow="never" indicator-position="none" height="400px">
       <el-carousel-item>
-        <div class="bg-[url('/images/free/001.webp')] bg-center bg-cover w-full h-full"></div>
+        <div class="bg-[url('/images/generate/001.jfif')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="bg-[url('/images/free/002.webp')] bg-center bg-cover w-full h-full"></div>
+        <div class="bg-[url('/images/generate/002.jfif')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="bg-[url('/images/free/003.webp')] bg-center bg-cover w-full h-full"></div>
+        <div class="bg-[url('/images/generate/003.jfif')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="bg-[url('/images/free/004.webp')] bg-center bg-cover w-full h-full"></div>
+        <div class="bg-[url('/images/generate/004.jfif')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <el-carousel-item>
-        <div class="bg-[url('/images/free/005.webp')] bg-center bg-cover w-full h-full"></div>
+        <div class="bg-[url('/images/generate/005.jfif')] bg-center bg-cover w-full h-full"></div>
+      </el-carousel-item>
+      <el-carousel-item>
+        <div class="bg-[url('/images/generate/006.jfif')] bg-center bg-cover w-full h-full"></div>
       </el-carousel-item>
       <div class="carousel-string">
-        <h2 class="catchString fontSerif mb-1 text-6xl md:mb-3 md:text-7xl">
+        <h2 class="catchString fontSerif mb-1 text-6xl md:mb-3 md:text-7xl text-stroke-2">
           Solution<br class="inline-block md2:hidden" /><span>&nbsp;</span>&<span>&nbsp;</span><br
             class="inline-block md2:hidden" />Evolution
         </h2>
-        <p class="text-xs md:text-sm">
+        <p class="text-xs md:text-sm text-stroke-1">
           新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
         </p>
       </div>
@@ -265,52 +268,28 @@ import CustomCard from '~/components/CustomCard.vue';
   font-family: 'Sorts Mill Goudy', serif;
 }
 
-.carousel-image {
-  height: auto;
-  width: 1980px;
-  overflow: hidden;
+.text-stroke-2 {
+  color: white!important;
+  text-shadow: 2px 2px 0 #002F5A, 
+              -2px -2px 0 #002F5A, 
+              -2px 2px 0 #002F5A, 
+              2px -2px 0 #002F5A, 
+              0px 2px 0 #002F5A, 
+              0 -2px 0 #002F5A, 
+              -2px 0 0 #002F5A, 
+              2px 0 0 #002F5A!important;
 }
-
-.mainvisual1 {
-  position: relative;
-  height: 100%;
-  background: url(/images/free/001.webp) no-repeat center;
-  background-size: cover;
-  text-align: center;
+.text-stroke-1 {
+  color: white!important;
+  text-shadow: 1px 1px 0 #002F5A, 
+              -1px -1px 0 #002F5A, 
+              -1px 1px 0 #002F5A, 
+              1px -1px 0 #002F5A, 
+              0px 1px 0 #002F5A, 
+              0 -1px 0 #002F5A, 
+              -1px 0 0 #002F5A, 
+              1px 0 0 #002F5A!important;
 }
-
-.mainvisual2 {
-  position: relative;
-  height: 100%;
-  background: url(/images/free/002.webp) no-repeat center;
-  background-size: cover;
-  text-align: center;
-}
-
-.mainvisual3 {
-  position: relative;
-  height: 100%;
-  background: url(/images/free/003.webp) no-repeat center;
-  background-size: cover;
-  text-align: center;
-}
-
-.mainvisual4 {
-  position: relative;
-  height: 100%;
-  background: url(/images/free/004.webp) no-repeat center;
-  background-size: cover;
-  text-align: center;
-}
-
-.mainvisual5 {
-  position: relative;
-  height: 100%;
-  background: url(/images/free/005.webp) no-repeat center;
-  background-size: cover;
-  text-align: center;
-}
-
 .carousel-string {
   position: relative;
   color: white;
