@@ -13,7 +13,7 @@
             <Footer />
         </el-footer>
     </el-container>
-    <el-backtop :right="48" :bottom="48" style="width:60px; height:60px;">
+    <el-backtop :right="48" :bottom="48" style="width:60px; height:60px; z-index: 51;">
         <el-icon size="1.8rem" class="w-full h-full text-center">
             <CaretTop />
         </el-icon>
