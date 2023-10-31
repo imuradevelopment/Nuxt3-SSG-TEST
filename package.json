@@ -20,7 +20,8 @@
     "@tailwindcss/typography": "^0.5.10",
     "element-plus": "^2.3.14",
     "nuxt": "^3.8.0",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",

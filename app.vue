@@ -1,15 +1,15 @@
 <template>
-    <el-container class="layoutThreeLayers">
-    <!-- <el-container> -->
-        <el-header class="el-header-custom">
-            <Header />
-        </el-header>
-        <el-main class="el-main-custom">
+    <el-container id="PAGETOP" class="layoutThreeLayers">
+        <!-- <el-container> -->
+            <el-header class="el-header-custom">
+                <Header />
+            </el-header>
+            <el-main class="el-main-custom">
             <NuxtLayou>
                 <NuxtPage />
             </NuxtLayou>
-        </el-main>
-        <el-footer class="el-footer-custom">
+            </el-main>
+            <el-footer class="el-footer-custom">
             <Footer />
         </el-footer>
     </el-container>

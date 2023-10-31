@@ -4,28 +4,28 @@
     <div class="hidden md:inline-block fixed mt-0 z-50" style="width:100%">
         <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false">
             <el-menu-item index="/" class="logo">
-                <NuxtLink to="/">
+                <NuxtLink @click="scrollToTarget()" to="/">
                     <NuxtImg width="185" fit="cover" src="/images/logo/logo.svg" />
                 </NuxtLink>
             </el-menu-item>
             <div class="flex-grow" />
             <el-menu-item index="/company" class="el-menu-item-custom">
-                <NuxtLink to="/company">会社情報</NuxtLink>
+                <NuxtLink @click="scrollToTarget()" to="/company">会社情報</NuxtLink>
             </el-menu-item>
             <el-menu-item index="/service" class="el-menu-item-custom">
-                <NuxtLink to="/service">事業情報</NuxtLink>
+                <NuxtLink @click="scrollToTarget()" to="/service">事業情報</NuxtLink>
             </el-menu-item>
             <el-menu-item index="/recruit" class="el-menu-item-custom">
-                <NuxtLink to="/recruit">採用情報</NuxtLink>
+                <NuxtLink @click="scrollToTarget()" to="/recruit">採用情報</NuxtLink>
             </el-menu-item>
             <el-menu-item index="/access" class="el-menu-item-custom2">
                 <el-button type="primary" class="el-button-custom">
-                    <NuxtLink to="/access">アクセス</NuxtLink>
+                    <NuxtLink @click="scrollToTarget()" to="/access">アクセス</NuxtLink>
                 </el-button>
             </el-menu-item>
             <el-menu-item index="/contact" class="el-menu-item-custom2">
                 <el-button type="primary" class="el-button-custom">
-                    <NuxtLink to="/contact">お問い合わせ</NuxtLink>
+                    <NuxtLink @click="scrollToTarget()" to="/contact">お問い合わせ</NuxtLink>
                 </el-button>
             </el-menu-item>
             <!-- <el-sub-menu index="6">
@@ -67,8 +67,10 @@
   
 <script setup lang="ts">
 import { useActiveIndexStore } from '~/stores/activeIndex'
-
 const activeIndexStore = useActiveIndexStore()
+import { useScrollToTarget } from '~/composables/useScrollToTarget'
+// useScrollToTargetを呼び出す
+const { targetId, scrollToTarget } = useScrollToTarget()
 </script>
   
 <style scoped>

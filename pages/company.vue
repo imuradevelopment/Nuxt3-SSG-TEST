@@ -132,7 +132,11 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+    scrollToTop: true
+})
+</script>
 
 <style scoped>
 h1 {

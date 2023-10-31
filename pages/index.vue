@@ -275,6 +275,9 @@
 <script setup lang = "ts" >
 import CustomCard from '~/components/CustomCard.vue';
 import TrapezoidCard from '~/components/TrapezoidCard.vue';
+definePageMeta({
+    scrollToTop: false
+})
 // import { Blog } from "~~/types/Blog";
 // const { data } = await useMicroCMSGetList<Blog>({
 //   endpoint: "blogs",

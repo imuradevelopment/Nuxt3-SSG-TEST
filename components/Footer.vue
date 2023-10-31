@@ -8,10 +8,11 @@
             </el-row>
             <div class="flex flex-wrap flex-col md:flex-row px-12 md:px-6">
                 <div class="flex flex-col flex-auto basis-auto md:basis-16 px-1.5 mb-6 text-lg font-medium leading-6">
-                    <NuxtLink to="/" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</NuxtLink>
+                    
+                    <NuxtLink @click="scrollToTarget()" to="/" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</NuxtLink>
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
-                    <NuxtLink to="/company" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</NuxtLink>
+                    <NuxtLink @click="scrollToTarget()" to="/company" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</NuxtLink>
                     <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">トップメッセージ</NuxtLink>
                     <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの由来</NuxtLink>
                     <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">沿革</NuxtLink>
@@ -19,7 +20,7 @@
                     <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">アクセス</NuxtLink>
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
-                    <NuxtLink to="/service" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</NuxtLink>
+                    <NuxtLink @click="scrollToTarget()" to="/service" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</NuxtLink>
                     <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SIサービス</NuxtLink>
                     <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ITサービス</NuxtLink>
                     <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SEサービス</NuxtLink>
@@ -28,7 +29,7 @@
                 <div class="flex flex-auto flex-col justify-around md:flex-row">
                     <div class="flex flex-col px-1.5 mb-6 text-lg font-medium leading-6">
                         <div class="mb-2">
-                            <NuxtLink to="/recruit" class="underLine w-fit hover:text-gray-200 hover:underline">採用情報</NuxtLink>
+                            <NuxtLink @click="scrollToTarget()" to="/recruit" class="underLine w-fit hover:text-gray-200 hover:underline">採用情報</NuxtLink>
                         </div>
                         <div class="flex flex-wrap flex-col md:flex-row">
                             <div class="flex flex-col">
@@ -47,7 +48,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col px-1.5 mb-6 text-lg font-medium leading-6">
-                        <NuxtLink to="/contact" class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">お問い合わせ</NuxtLink>
+                        <NuxtLink @click="scrollToTarget()" to="/contact" class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">お問い合わせ</NuxtLink>
                         <NuxtLink to="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用に関する問い合わせ</NuxtLink>
                         <NuxtLink to="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">その他の問い合わせ</NuxtLink>
                     </div>
@@ -75,7 +76,7 @@
     <el-row align="middle" class="pl-6 md:pl-12 text-black text-xs font-light">
         <el-col :span="12">
             <el-row align="middle">
-                <NuxtLink to="/policy">
+                <NuxtLink @click="scrollToTarget()" to="/policy">
                     <NuxtImg class="mr-4 inline-flex" width="40" height="40" fit="cover" src="/images/footer/policy.png" />
                     <span class="text-xs">個人情報保護方針</span>
                 </NuxtLink>
@@ -90,6 +91,9 @@
 </template>
 
 <script setup lang="ts">
+import { useScrollToTarget } from '~/composables/useScrollToTarget'
+// useScrollToTargetを呼び出す
+const { targetId, scrollToTarget } = useScrollToTarget()
 </script>
 
 <style scoped>

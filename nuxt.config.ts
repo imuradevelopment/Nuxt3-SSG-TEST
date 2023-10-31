@@ -65,4 +65,10 @@ export default defineNuxtConfig({
     tailwindcss: {
         configPath: "~/tailwind.config.ts",
     },
+    scrollBehavior(to: any, from: any, savedPosition: any){
+        console.log(to);
+        console.log(from);
+        console.log(savedPosition);
+        return { top: 0 }
+    }
 });
