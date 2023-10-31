@@ -75,8 +75,10 @@
     <el-row align="middle" class="pl-6 md:pl-12 text-black text-xs font-light">
         <el-col :span="12">
             <el-row align="middle">
-                <NuxtImg class="mr-4" width="40" height="40" fit="cover" src="/images/footer/policy.png" />
-                <span class="text-xs">個人情報保護方針</span>
+                <NuxtLink to="/policy">
+                    <NuxtImg class="mr-4 inline-flex" width="40" height="40" fit="cover" src="/images/footer/policy.png" />
+                    <span class="text-xs">個人情報保護方針</span>
+                </NuxtLink>
             </el-row>
         </el-col>
         <el-col :span="12">
