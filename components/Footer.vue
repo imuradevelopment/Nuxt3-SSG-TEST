@@ -13,7 +13,7 @@
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
                     <NuxtLink @click="scrollToTarget()" to="/company" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</NuxtLink>
-                    <NuxtLink @click="scrollToTarget('TEST')" to="/company" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">トップメッセージ</NuxtLink>
+                    <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">トップメッセージ</NuxtLink>
                     <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの由来</NuxtLink>
                     <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">沿革</NuxtLink>
                     <NuxtLink to="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">会社概要</NuxtLink>
