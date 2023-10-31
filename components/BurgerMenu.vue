@@ -39,26 +39,26 @@
                 <!-- メニューコンテンツ -->
                 <ul class="menuContents overflow-auto text-black">
                     <li class="h-14 border-b border-b-gray-400">
-                        <NuxtLink to="/" @click="closeMenu()" class="w-full h-full flex items-center"><el-icon size="1.5rem"
+                        <NuxtLink to="/" @click="closeMenu(true)" class="w-full h-full flex items-center"><el-icon size="1.5rem"
                                 class="mb-1">
                                 <House class="text-custom-blue" />
                             </el-icon>トップ</NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400">
-                        <NuxtLink to="/company" @click="closeMenu()" class="w-full h-full flex items-center"><el-icon
+                        <NuxtLink to="/company" @click="closeMenu(true)" class="w-full h-full flex items-center"><el-icon
                                 size="1.5rem" class="mb-1">
                                 <OfficeBuilding class="text-custom-blue" />
                             </el-icon>会社情報</NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400">
-                        <NuxtLink to="/service" @click="closeMenu()" class="w-full h-full flex items-center"><el-icon
+                        <NuxtLink to="/service" @click="closeMenu(true)" class="w-full h-full flex items-center"><el-icon
                                 size="1.5rem" class="mb-1">
                                 <DataAnalysis class="text-custom-blue" />
                             </el-icon>事業情報</NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400">
                         <div class="flex justify-between items-center w-full h-full">
-                            <NuxtLink to="/recruit" @click="closeMenu()" class="flex items-center">
+                            <NuxtLink to="/recruit" @click="closeMenu(true)" class="flex items-center">
                                 <el-icon size="1.5rem" class="mb-1">
                                     <User class="text-custom-blue" />
                                 </el-icon>
@@ -70,7 +70,7 @@
                         </div>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/message" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/message" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <ChatDotSquare />
                             </el-icon>
@@ -82,7 +82,7 @@
                         </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/feature" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/feature" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <Pointer />
                             </el-icon>
@@ -94,7 +94,7 @@
                         </NuxtLink>
                         </li>
                         <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/induction" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/induction" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <EditPen />
                             </el-icon>
@@ -106,7 +106,7 @@
                         </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/office" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/office" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <School />
                             </el-icon>
@@ -118,7 +118,7 @@
                         </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/welfare" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/welfare" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <ColdDrink />
                             </el-icon>
@@ -130,7 +130,7 @@
                         </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/data" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/data" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <TrendCharts />
                             </el-icon>
@@ -142,7 +142,7 @@
                         </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/qa" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/qa" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <QuestionFilled />
                             </el-icon>
@@ -154,7 +154,7 @@
                         </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/employee" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/employee" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <Avatar />
                             </el-icon>
@@ -166,7 +166,7 @@
                         </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400" v-if="showRecruitItem">
-                        <NuxtLink to="/recruit/information" @click="closeMenu()" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
+                        <NuxtLink to="/recruit/information" @click="closeMenu(true)" class="w-full h-full flex items-center group hover:text-custom-blue text-white bg-custom-blue hover:bg-white">
                             <el-icon size="1.5rem" class="mb-1 mx-4">
                                 <List />
                             </el-icon>
@@ -180,10 +180,10 @@
                 </ul>
                 <div class="flex p-4">
                     <el-button size="large" round type="primary" class="el-button-custom flex-grow">
-                        <NuxtLink to="/access" class="w-full h-full" @click="closeMenu()">アクセス</NuxtLink>
+                        <NuxtLink to="/access" class="w-full h-full" @click="closeMenu(true)">アクセス</NuxtLink>
                     </el-button>
                     <el-button size="large" round type="primary" class="el-button-custom flex-grow">
-                        <NuxtLink to="/contact" class="w-full h-full" @click="closeMenu()">お問い合わせ</NuxtLink>
+                        <NuxtLink to="/contact" class="w-full h-full" @click="closeMenu(true)">お問い合わせ</NuxtLink>
                     </el-button>
                 </div>
             </div>
@@ -229,11 +229,11 @@ const toggleMenu = () => {
     }
 }
 
-const closeMenu = (isTop: boolean = false) => {
+const closeMenu = (isTop: boolean = false, targetId: string = '') => {
     menuOpen.value = false
     document.body.classList.remove("overflow-hidden")
     if(isTop){
-        scrollToTarget()
+        scrollToTarget(targetId)
     }else{
         window.scrollTo(0, scrollY.value)
     }
