@@ -56,7 +56,7 @@
       問題解決のご提案(Solution)とさらなる発展(Evolution)をお約束します。<br />
     </div>
   </section>
-  <div class="mx-4 flex flex-wrap justify-stretch items-stretch">
+  <!-- <div class="mx-4 flex flex-wrap justify-stretch items-stretch">
     <div class="w-full md:w-1/2">
       <CustomCard 
         mode="right" 
@@ -167,6 +167,86 @@
         採用関連など各種お問い合わせはこちらから。
       </template>
     </CustomCard>
+  </div> -->
+
+  <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="">
+      <TrapezoidCard
+        src="/images/top/001.webp"
+      >
+        <template v-slot:tag>TOP 1</template>
+        <template v-slot:title>会社情報</template>
+        <template v-slot:content><div class="">ひとりひとりが試行錯誤を重ね、技術者として人間として成長し続け、共に発展してゆく為にVaileは存在しています。</div></template>
+        <template v-slot:button>
+          <div class="flex space-x-4 justify-end">
+              <!-- レイヤー4: ボタン3 -->
+              <NuxtLink to="/company#TEST">
+                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
+              </NuxtLink>
+          </div>
+        </template>
+      </TrapezoidCard>
+    </div>
+    <div class="">
+      <TrapezoidCard 
+        src="/images/top/002.webp"
+      >
+        <template v-slot:tag>TOP 2</template>
+        <template v-slot:title>事業情報</template>
+        <template v-slot:content><div class="">情報サービスのビジネスフィールドは、∞(無限)に広がっています。ベイルの様々な事業についてご紹介します。</div></template>
+        <template v-slot:button>
+          <div class="flex space-x-4 justify-end">
+              <!-- レイヤー4: ボタン3 -->
+              <NuxtLink to="/service">
+                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
+              </NuxtLink>
+          </div>
+        </template>
+      </TrapezoidCard>
+    </div>
+  </div>
+
+  <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="">
+      <TrapezoidCard
+        src="/images/top/003.webp"
+      >
+        <template v-slot:tag>TOP 3</template>
+        <template v-slot:title>採用情報</template>
+        <template v-slot:content><div class="">プログラミングのスキルアップや、エンジニアとしてのキャリアアップを果たす環境を用意しています。</div></template>
+        <template v-slot:button>
+          <div class="flex space-x-4 justify-end">
+              <!-- レイヤー4: ボタン3 -->
+              <NuxtLink to="/recruit">
+                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
+              </NuxtLink>
+          </div>
+        </template>
+      </TrapezoidCard>
+    </div>
+    <div class="">
+      <TrapezoidCard 
+        src="/images/top/004.webp"
+      >
+        <template v-slot:tag>TOP 4</template>
+        <template v-slot:title>お問い合わせ</template>
+        <template v-slot:content><div class="">採用関連など各種お問い合わせはこちらから</div></template>
+        <template v-slot:button>
+          <div class="flex space-x-4 justify-end">
+              <!-- レイヤー4: ボタン3 -->
+              <NuxtLink to="/contact">
+                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">採用に関するお問い合わせ</button>
+              </NuxtLink>
+          </div>
+          <div class="flex space-x-4 justify-end">
+              <!-- レイヤー4: ボタン3 -->
+              <NuxtLink to="/contact">
+                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">その他お問い合わせ</button>
+              </NuxtLink>
+          </div>
+        </template>
+      </TrapezoidCard>
+    </div>
   </div>
   <!-- <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
@@ -194,6 +274,7 @@
 
 <script setup lang = "ts" >
 import CustomCard from '~/components/CustomCard.vue';
+import TrapezoidCard from '~/components/TrapezoidCard.vue';
 // import { Blog } from "~~/types/Blog";
 // const { data } = await useMicroCMSGetList<Blog>({
 //   endpoint: "blogs",
