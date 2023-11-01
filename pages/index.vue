@@ -42,6 +42,9 @@
       </div>
     </el-carousel>
   </div>
+
+  <Hero></Hero>
+
   <section class="text-left md:text-center mx-8 my-6">
     <div class="font-bold text-2xl md:text-4xl text-center">ペイルは、<br class="inline-block md:hidden" />「SE」を考えます。</div>
     <br />
@@ -56,6 +59,7 @@
       問題解決のご提案(Solution)とさらなる発展(Evolution)をお約束します。<br />
     </div>
   </section>
+
   <!-- <div class="mx-4 flex flex-wrap justify-stretch items-stretch">
     <div class="w-full md:w-1/2">
       <CustomCard 
@@ -273,6 +277,7 @@
 </template>
 
 <script setup lang = "ts" >
+import Hero from '~/components/Hero.vue'
 import CustomCard from '~/components/CustomCard.vue';
 import TrapezoidCard from '~/components/TrapezoidCard.vue';
 definePageMeta({
