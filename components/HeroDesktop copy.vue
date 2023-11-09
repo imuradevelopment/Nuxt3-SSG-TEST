@@ -1,5 +1,5 @@
 <template>
-    <div style="display: flex; height: 450px">
+    <div class="hidden md:flex" style="height: 450px">
       <div id="overlay-element" style="margin: auto; margin-left: 3rem; flex: 1; margin-right: -17%">
         <h2 class="text-2xl bold mb-2">Solution & Evolution</h2>
         <div class="text-sm bold">
