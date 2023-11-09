@@ -1,7 +1,7 @@
 <template>
     <BurgerMenu class="md:hidden"/>
     <!-- デスクトップメニュー -->
-    <div class="hidden md:inline-block fixed mt-0 z-50" style="width:100%">
+    <div class="hidden md:inline-block fixed mt-0 z-50" style="width:100%; max-width:1280px">
         <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false">
             <el-menu-item index="/" class="logo">
                 <NuxtLink @click="scrollToTarget()" to="/">
