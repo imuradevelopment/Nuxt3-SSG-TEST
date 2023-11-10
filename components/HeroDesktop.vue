@@ -27,17 +27,23 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import * as THREE from 'three'
 
-const lineAnimation = ref(null) // ここを変更
-let camera, scene, renderer
+const lineAnimation = ref(null)
+let camera, scene, renderer, resizeObserver
 
 onMounted(() => {
   startAnimation()
   init()
   animate()
+  // ResizeObserverを作成
+  resizeObserver = new ResizeObserver(onResize)
+  // lineAnimation要素にResizeObserverを適用
+  resizeObserver.observe(lineAnimation.value)
 })
 
 onUnmounted(() => {
   renderer.dispose()
+  // ResizeObserverを解除
+  resizeObserver.unobserve(lineAnimation.value)
   if (animationTimer) {
     clearTimeout(animationTimer)
   }
@@ -123,6 +129,25 @@ function animate() {
   // レンダリングする
   renderer.render(scene, camera)
 }
+
+// リサイズ時のコールバック関数
+function onResize() {
+  // コンテナのサイズを取得
+  const width = lineAnimation.value.clientWidth
+  const height = lineAnimation.value.clientHeight
+  // カメラのアスペクト比を更新
+  camera.aspect = width / height
+  camera.updateProjectionMatrix()
+  // レンダラーのサイズを更新
+  renderer.setSize(width, height)
+  // アニメーションをリセット
+  for (let i = 0; i < scene.children.length; i++) {
+    scene.children[i].rotation.x = 0
+    scene.children[i].rotation.y = 0
+    scene.children[i].rotation.z = 0
+  }
+}
+
 const mainMessage = ref(null)
 const subMessage1 = ref(null)
 const subMessage2 = ref(null)
@@ -209,7 +234,7 @@ async function startAnimation() {
 .main-message {
   display: inline-block;
   position: relative;
-  font-size: 36px;
+  font-size: 33px;
   font-weight: 700;
 }
 
