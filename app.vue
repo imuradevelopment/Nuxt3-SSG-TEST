@@ -39,6 +39,7 @@ import {
 }
 .el-main-custom{
     padding:0 0 0 0;
+    overflow: hidden;
 }
 .el-footer-custom{
     padding: 0 0 0 0;
