@@ -1,7 +1,8 @@
 <template>
+  <div class="mx-4">
     <h1 class="font-bold text-2xl md:text-4xl text-center">会社情報</h1>
     <section class="text-center">
-        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue">TOPメッセージ</h2>
+        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">TOPメッセージ</h2>
         <p>
             ひとりひとりが提案や試行錯誤を重ね成長し、より良い人生を送り<br class="hidden md:inline-block" />
             会社が発展してゆく為にVaileは存在しています。<br/>
@@ -27,7 +28,7 @@
         </p>
     </section>
     <section class="text-center">
-        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue">ベイルの由来</h2>
+        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">ベイルの由来</h2>
         <p>
             社名のベイルとは、学生時代から始めたスキーが縁で生まれました。<br/>
             第2次世界大戦中、半身不随の重傷を負ったピーターサイバートがコロラドにあるベイル山に魅了され、理想のスキー場を建設するためにあらゆる困難に負けず夢を実現したエピソードが会社設立への想いに込められています。<br/>
@@ -38,7 +39,7 @@
         </p>
     </section>
     <section class="text-center">
-        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue">沿革</h2>
+        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">沿革</h2>
         <div class="m-auto text-left w-fit">
           <el-timeline>
               <el-timeline-item timestamp="1991年7月" type="primary" size="large">
@@ -66,19 +67,42 @@
         </div>
     </section>
     <section class="text-center">
-        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue">会社概要</h2>
+        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">会社概要</h2>
         <div class="text-sm text-left">
           <CustomTable :items="companySummary" :showHeader="false"></CustomTable>
         </div>
     </section>
-    <section class="text-center">
-        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue">アクセス</h2>
-        <p></p>
+    <section class="text-center mb-8">
+        <h2 class="font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
+        <GlassCard>
+          <template #content>
+            <div class="flex">
+              <div class="w-full md:w1/2">
+                <NuxtImg src="/images/company/image08.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
+              </div>
+              <div class="pl-4 flex flex-col w-full md:w1/2 text-left">
+                <div class="text-xs md:text-sm">
+                  日比谷線/東急東横線「中目黒駅」徒歩5分<br/><br/>
+                  中目黒駅 東口改札を出て、信号渡らずに左折。<br/>
+                  蕎麦屋さん（吉そば）がある方向へ進み、そのまま山手通り沿いを5分程歩くと1Fにお寿司屋さん(築地すし好)が入っているビルです。
+                </div>
+                <div class="my-1">
+                  <a href="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu" target="_blank"><button class="bg-custom-blue text-white py-2 px-4 rounded-full">Google Mapで開く</button></a>
+                </div>
+                <div class="m-2 md:m-4">
+                  <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
+                </div>
+              </div>
+            </div>
+          </template>
+        </GlassCard>
     </section>
+  </div>
 </template>
 
 <script setup lang="ts">
 import CustomTable from '~/components/CustomTable.vue'
+import GlassCard from '~/components/GlassCard.vue'
 interface CompanySummaryItem {
   column1: string;
   column2: string;
@@ -131,11 +155,11 @@ const companySummary = [
   },
   {
     column1: "オフィス",
-    column2: "〒153-0043<br/>東京都目黒区東山１－６－２<br/>TPR中目黒ビル<br/>7F　受付<br/>8F　開発フロア<br/>9F　セミナーフロア"
+    column2: '<div class="flex flex-wrap"><div>〒153-0043<br/>東京都目黒区東山１－６－２<br/>TPR中目黒ビル<br/>　7F 受付<br/>　8F 開発フロア<br/>　9F セミナーフロア</div><div class="m-auto"><a href="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu" target="_blank"><button class="bg-custom-blue text-white py-2 px-4 rounded-full">MAP</button></a></div></div>'
   },
   {
     column1: "連絡先",
-    column2: 'TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp">http://www.vaile.co.jp</a>'
+    column2: 'TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue2 underline">http://www.vaile.co.jp</a>'
   }
 ]
 
