@@ -33,41 +33,45 @@
         </p>
       </div>
       <!-- <div class="bg-[url('/images/company/image06.png')] bg-center bg-cover w-full h-full" style="clip-path: polygon(0 100%, 0 1rem, 2rem 1rem, 2rem 0, calc(50% - 2rem) 0, calc(50% - 2rem) 1rem, calc(50% + 2rem) 1rem, calc(50% + 2rem) 0, calc(100% - 2rem) 0, calc(100% - 2rem) 1rem, 100% 1rem, 100% 100%);"> -->
-      <div class="flex flex-wrap">
-        <div class="md:w-1/2 mb-4 md:mb-0">
-          <div class="md:mr-2 md:h-full">
-            <div class="bg-[url('/images/company/image06.png')] bg-center bg-cover w-full h-full"
-              style="clip-path: polygon(0% 1rem, 2rem 1rem, 2rem 0%, calc(100% - 2rem) 0%, calc(100% - 2rem) 1rem, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 2rem) calc(100% - 1rem), calc(100% - 2rem) 100%, 2rem 100%, 2rem calc(100% - 1rem), 0% calc(100% - 1rem));">
-              <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 w-full h-full">
-                <template #content>
-                  <h3 class="font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の「こうしたい」をお聞かせください。</h3>
-                  <p class="text-left text-xs md:text-sm text-white">
-                    急速な競争化時代の到来に伴い、今日の企業はよりタイムリーで効率的なビジネスへの対応を迫られています。<br />
-                    製造・販売・開発部門などの各現場をひとつに結んだスピーディーで無駄のない業務処理システムの構築、的確でクイックな意思決定を実現する自由な情報へのアクセスなど現実しなければならないことはたくさんあります。<br />
-                    しかし、それらを推し進めるに当たって、技術やコストの面でクリアしなければならない問題が多すぎることも事実です。<br />
-                    仕方がないとあきらめる前に、是非私どもへご相談ください。<br />
-                    確かな技術と豊富な経験で、きっとご満足頂けるベストなご提案をさせて頂きます。
-                  </p>
-                </template>
-              </GlassCard>
-            </div>
+      <div ref="flex" class="flex flex-wrap justify-around">
+        <div class="">
+          <div class="md:h-full">
+            <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover"
+              style="max-width: 32rem; min-width: 28rem">
+              <template #content>
+                <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 w-full h-full" style="padding-top: 25%; padding-bottom: 25%; overflow: auto;">
+                  <template #content>
+                    <h3 class="font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の「こうしたい」をお聞かせください。</h3>
+                    <p class="text-left text-xs text-white">
+                      急速な競争化時代の到来に伴い、今日の企業はよりタイムリーで効率的なビジネスへの対応を迫られています。<br />
+                      製造・販売・開発部門などの各現場をひとつに結んだスピーディーで無駄のない業務処理システムの構築、的確でクイックな意思決定を実現する自由な情報へのアクセスなど現実しなければならないことはたくさんあります。<br />
+                      しかし、それらを推し進めるに当たって、技術やコストの面でクリアしなければならない問題が多すぎることも事実です。<br />
+                      仕方がないとあきらめる前に、是非私どもへご相談ください。<br />
+                      確かな技術と豊富な経験で、きっとご満足頂けるベストなご提案をさせて頂きます。
+                    </p>
+                  </template>
+                </GlassCard>
+              </template>
+            </ClipHexagon>
           </div>
         </div>
-        <div class="md:w-1/2">
-          <div class="md:ml-2 md:h-full">
-            <div class="bg-[url('/images/company/image06.png')] bg-center bg-cover w-full h-full"
-              style="clip-path: polygon(0% 1rem, 2rem 1rem, 2rem 0%, calc(100% - 2rem) 0%, calc(100% - 2rem) 1rem, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 2rem) calc(100% - 1rem), calc(100% - 2rem) 100%, 2rem 100%, 2rem calc(100% - 1rem), 0% calc(100% - 1rem));">
-              <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 w-full h-full">
-                <template #content>
-                  <h3 class="font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の声にお応えできる理由。</h3>
-                  <p class="text-left text-xs md:text-sm text-white">
-                    私どもは、独立系ソフトウェア会社として特定のメーカーや機種、企業の規模や業種・業務に関わらず、幅広い提案実績がございます。<br />
-                    大型コンピュータを用いたシステムからワークステーション/パーソナルコンピュータをネットワークで結んだクライアント・サーバーコンピューティング、Windowsアプリケーションを駆使したOAシステム、さらにはそれらをすべて統合したエンタープライズシステムと数々のシステムを手がけて得た技術的成果を、お客様の「こうしたい」に実現力として活かします。<br />
-                    また、最近主流のクライアント・サーバーシステム/Windowsアプリケーションシステムについては開発環境を自社内に保有し、データベースの構築・アプリケーション開発など常に最新技術に対応できる体制を整えております。
-                  </p>
-                </template>
-              </GlassCard>
-            </div>
+        <div class="">
+          <div class="md:h-full">
+            <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover"
+              style="max-width: 32rem; min-width: 28rem">
+              <template #content>
+                <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 w-full h-full"  style="padding-top: 25%; padding-bottom: 25%; overflow: auto;">
+                  <template #content>
+                    <h3 class="font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の声にお応えできる理由。</h3>
+                    <p class="text-left text-xs text-white">
+                      私どもは、独立系ソフトウェア会社として特定のメーカーや機種、企業の規模や業種・業務に関わらず、幅広い提案実績がございます。<br />
+                      大型コンピュータを用いたシステムからワークステーション/パーソナルコンピュータをネットワークで結んだクライアント・サーバーコンピューティング、Windowsアプリケーションを駆使したOAシステム、さらにはそれらをすべて統合したエンタープライズシステムと数々のシステムを手がけて得た技術的成果を、お客様の「こうしたい」に実現力として活かします。<br />
+                      また、最近主流のクライアント・サーバーシステム/Windowsアプリケーションシステムについては開発環境を自社内に保有し、データベースの構築・アプリケーション開発など常に最新技術に対応できる体制を整えております。
+                    </p>
+                  </template>
+                </GlassCard>
+              </template>
+            </ClipHexagon>
           </div>
         </div>
       </div>
@@ -163,6 +167,8 @@
 import CustomTable from '~/components/CustomTable.vue'
 import GlassCard from '~/components/GlassCard.vue'
 import PageHeader from '~/components/PageHeader.vue'
+import ClipHexagon from '~/components/ClipHexagon.vue'
+import useDetectWrap from '~/composables/useDetectWrap'
 interface CompanySummaryItem {
   column1: string;
   column2: string;
@@ -264,6 +270,49 @@ const objectSpanMethod = ({
   }
 }
 
+// 要素の参照を取得する
+const hexagon = ref<HTMLElement | null>(null)
+
+// 正六角形を保つ関数
+const maintainHexagonShape = () => {
+  // hexagon.valueがnullまたはundefinedでないことをチェックする
+  if (hexagon.value) {
+    // 要素の横幅を取得する
+    const width = hexagon.value.offsetWidth
+    // 正六角形の一辺の長さを計算する
+    const side = (width / 2) * (2 / Math.sqrt(3))
+    // 要素の横幅を正六角形の一辺の長さに合わせる
+    // hexagon.value.style.width = side + 'px'
+    // 正六角形の高さを計算する
+    // const height = (side * Math.sqrt(3) / 2) + 'px'
+    const height = width + 'px'
+    // 要素の高さを設定する
+    hexagon.value.style.height = height
+  }
+}
+
+// ウィンドウのサイズが変更されたときに正六角形を保つ
+const handleResize = () => {
+  maintainHexagonShape()
+}
+
+// ページ読み込み時にも正六角形を保つ
+onMounted(() => {
+  maintainHexagonShape()
+  window.addEventListener('resize', handleResize)
+})
+
+// イベントリスナーを削除する
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
+
+const flex = ref<HTMLElement | null>(null)
+useDetectWrap(flex)
 </script>
 
-<style scoped></style>
+<style scoped>
+.wrapped {
+  padding-top: 1rem;
+}
+</style>
