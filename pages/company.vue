@@ -1,6 +1,5 @@
 <template>
-  <GlassCard :rounded="false" :opacity="0.6"
-    class="h-12 fixed top-16 w-full maxWidth mx-auto z-50">
+  <GlassCard :rounded="false" :opacity="0.6" class="h-12 fixed top-16 w-full maxWidth mx-auto z-50">
     <template #content>
       <div class="h-12 px-4 fixed top-16 w-full maxWidth mx-auto flex items-center justify-between">
         <div>
@@ -15,7 +14,8 @@
   <div class="mx-4">
     <section class="text-center">
       <div class="mb-4">
-        <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-16 mb-2">TOPメッセージ</h2>
+        <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-16 mb-2">
+          TOPメッセージ</h2>
         <p class="text-sm md:text-base font-bold">
           ひとりひとりが提案や試行錯誤を重ね成長し、より良い人生を送り
           <!-- <br class="hidden md:inline-block" /> -->
@@ -33,13 +33,12 @@
         </p>
       </div>
       <!-- <div class="bg-[url('/images/company/image06.png')] bg-center bg-cover w-full h-full" style="clip-path: polygon(0 100%, 0 1rem, 2rem 1rem, 2rem 0, calc(50% - 2rem) 0, calc(50% - 2rem) 1rem, calc(50% + 2rem) 1rem, calc(50% + 2rem) 0, calc(100% - 2rem) 0, calc(100% - 2rem) 1rem, 100% 1rem, 100% 100%);"> -->
-      <div ref="flex" class="flex flex-wrap justify-around">
-        <div class="">
+        <div ref="flex" class="flex flex-wrap justify-around">
           <div class="md:h-full">
-            <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover"
-              style="max-width: 32rem; min-width: 28rem">
+            <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover" style="max-width: 32rem;">
               <template #content>
-                <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 w-full h-full" style="padding-top: 25%; padding-bottom: 25%; overflow: auto;">
+                <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full"
+                  style="padding-top: 25%; padding-bottom: 25%; overflow: auto;">
                   <template #content>
                     <h3 class="font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の「こうしたい」をお聞かせください。</h3>
                     <p class="text-left text-xs text-white">
@@ -54,13 +53,11 @@
               </template>
             </ClipHexagon>
           </div>
-        </div>
-        <div class="">
           <div class="md:h-full">
-            <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover"
-              style="max-width: 32rem; min-width: 28rem">
+            <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover" style="max-width: 32rem;">
               <template #content>
-                <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 w-full h-full"  style="padding-top: 25%; padding-bottom: 25%; overflow: auto;">
+                <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full"
+                  style="padding-top: 25%; padding-bottom: 25%; overflow: auto;">
                   <template #content>
                     <h3 class="font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の声にお応えできる理由。</h3>
                     <p class="text-left text-xs text-white">
@@ -74,11 +71,11 @@
             </ClipHexagon>
           </div>
         </div>
-      </div>
       <!-- </div> -->
     </section>
     <section class="text-center">
-      <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">ベイルの由来</h2>
+      <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">ベイルの由来
+      </h2>
       <GlassCard class="p-4">
         <template #content>
           <div class="flex">
