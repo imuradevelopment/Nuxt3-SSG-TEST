@@ -165,7 +165,9 @@ import CustomTable from '~/components/CustomTable.vue'
 import GlassCard from '~/components/GlassCard.vue'
 import PageHeader from '~/components/PageHeader.vue'
 import ClipHexagon from '~/components/ClipHexagon.vue'
+import ClipPentagon from '~/components/ClipPentagon.vue'
 import useDetectWrap from '~/composables/useDetectWrap'
+
 interface CompanySummaryItem {
   column1: string;
   column2: string;
@@ -264,8 +266,8 @@ const companySummary = [
     //     colspan: 0,
     //   }
     // }
-  }
-}
+//   }
+// }
 
 // // 要素の参照を取得する
 // const hexagon = ref<HTMLElement | null>(null)
