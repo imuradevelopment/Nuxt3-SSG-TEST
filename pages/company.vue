@@ -226,33 +226,33 @@ const companySummary = [
   }
 ]
 
-import type { TableColumnCtx } from 'element-plus'
-interface SpanMethodProps {
-  row: CompanySummaryItem
-  column: TableColumnCtx<CompanySummaryItem>
-  rowIndex: number
-  columnIndex: number
-}
+// import type { TableColumnCtx } from 'element-plus'
+// interface SpanMethodProps {
+//   row: CompanySummaryItem
+//   column: TableColumnCtx<CompanySummaryItem>
+//   rowIndex: number
+//   columnIndex: number
+// }
 
-const objectSpanMethod = ({
-  row,
-  column,
-  rowIndex,
-  columnIndex,
-}: SpanMethodProps) => {
-  if (columnIndex === 0) {
-    switch (rowIndex) {
-      case 4:
-        return {
-          rowspan: 3,
-          colspan: 1,
-        }
-      case 7:
-        return {
-          rowspan: 8,
-          colspan: 1,
-        }
-    }
+// const objectSpanMethod = ({
+//   row,
+//   column,
+//   rowIndex,
+//   columnIndex,
+// }: SpanMethodProps) => {
+//   if (columnIndex === 0) {
+//     switch (rowIndex) {
+//       case 4:
+//         return {
+//           rowspan: 3,
+//           colspan: 1,
+//         }
+//       case 7:
+//         return {
+//           rowspan: 8,
+//           colspan: 1,
+//         }
+//     }
     // if (rowIndex % 2 === 0) {
     //   return {
     //     rowspan: 2,
@@ -267,42 +267,42 @@ const objectSpanMethod = ({
   }
 }
 
-// 要素の参照を取得する
-const hexagon = ref<HTMLElement | null>(null)
+// // 要素の参照を取得する
+// const hexagon = ref<HTMLElement | null>(null)
 
-// 正六角形を保つ関数
-const maintainHexagonShape = () => {
-  // hexagon.valueがnullまたはundefinedでないことをチェックする
-  if (hexagon.value) {
-    // 要素の横幅を取得する
-    const width = hexagon.value.offsetWidth
-    // 正六角形の一辺の長さを計算する
-    const side = (width / 2) * (2 / Math.sqrt(3))
-    // 要素の横幅を正六角形の一辺の長さに合わせる
-    // hexagon.value.style.width = side + 'px'
-    // 正六角形の高さを計算する
-    // const height = (side * Math.sqrt(3) / 2) + 'px'
-    const height = width + 'px'
-    // 要素の高さを設定する
-    hexagon.value.style.height = height
-  }
-}
+// // 正六角形を保つ関数
+// const maintainHexagonShape = () => {
+//   // hexagon.valueがnullまたはundefinedでないことをチェックする
+//   if (hexagon.value) {
+//     // 要素の横幅を取得する
+//     const width = hexagon.value.offsetWidth
+//     // 正六角形の一辺の長さを計算する
+//     const side = (width / 2) * (2 / Math.sqrt(3))
+//     // 要素の横幅を正六角形の一辺の長さに合わせる
+//     // hexagon.value.style.width = side + 'px'
+//     // 正六角形の高さを計算する
+//     // const height = (side * Math.sqrt(3) / 2) + 'px'
+//     const height = width + 'px'
+//     // 要素の高さを設定する
+//     hexagon.value.style.height = height
+//   }
+// }
 
-// ウィンドウのサイズが変更されたときに正六角形を保つ
-const handleResize = () => {
-  maintainHexagonShape()
-}
+// // ウィンドウのサイズが変更されたときに正六角形を保つ
+// const handleResize = () => {
+//   maintainHexagonShape()
+// }
 
-// ページ読み込み時にも正六角形を保つ
-onMounted(() => {
-  maintainHexagonShape()
-  window.addEventListener('resize', handleResize)
-})
+// // ページ読み込み時にも正六角形を保つ
+// onMounted(() => {
+//   maintainHexagonShape()
+//   window.addEventListener('resize', handleResize)
+// })
 
-// イベントリスナーを削除する
-onUnmounted(() => {
-  window.removeEventListener('resize', handleResize)
-})
+// // イベントリスナーを削除する
+// onUnmounted(() => {
+//   window.removeEventListener('resize', handleResize)
+// })
 
 const flex = ref<HTMLElement | null>(null)
 useDetectWrap(flex)
