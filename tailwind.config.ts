@@ -23,13 +23,13 @@ export default <Partial<Config>>{
                         gray: "#697F9F",
                         blue: "#005FB5",
                         blue2: "#006BCC",
-                        lightBlue: "#8AB7FF",
-                        orange: "#FFA500",
+                        lightBlue: "#00BFFF",
+                        lightOrange: "#E7C694",
                     }
                 },
                 backgroundImage: {
                     // 'back004': "url('public/images/top/003.webp')",
-                  }
+                }
             },
         },
         plugins: ["tailwindTypography"],
