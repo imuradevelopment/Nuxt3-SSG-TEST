@@ -15,7 +15,14 @@ const maintainHexagonShape = () => {
     if (hexagon.value) {
         // 要素の横幅を取得する
         const width = hexagon.value.offsetWidth
+        // 正六角形の一辺の長さを計算する
+        // const side = (width / 2) * (2 / Math.sqrt(3))
+        // 要素の横幅を正六角形の一辺の長さに合わせる
+        // hexagon.value.style.width = side + 'px'
+        // 正六角形の高さを計算する
+        // const height = (side * Math.sqrt(3) / 2) + 'px'
         // 要素の高さを設定する
+        // hexagon.value.style.height = height
         hexagon.value.style.height = width + 'px'
     }
 }
@@ -27,8 +34,8 @@ const handleResize = () => {
 
 // ページ読み込み時にも正六角形を保つ
 onMounted(() => {
-    window.addEventListener('resize', handleResize)
     maintainHexagonShape()
+    window.addEventListener('resize', handleResize)
 })
 
 // イベントリスナーを削除する

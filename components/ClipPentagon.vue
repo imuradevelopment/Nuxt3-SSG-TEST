@@ -10,24 +10,24 @@
 const pentagon = ref<HTMLElement | null>(null)
 
 // 正五角形を保つ関数
-const maintainHexagonShape = () => {
+const maintainPentagonShape = () => {
     // pentagon.valueがnullまたはundefinedでないことをチェックする
     if (pentagon.value) {
         // 要素の横幅を取得する
         const width = pentagon.value.offsetWidth
         // 要素の高さを設定する
-        pentagon.value.style.height = width + 'px'
+        // pentagon.value.style.height = width + 'px'
     }
 }
 
 // ウィンドウのサイズが変更されたときに正五角形を保つ
 const handleResize = () => {
-    maintainHexagonShape()
+    maintainPentagonShape()
 }
 
 // ページ読み込み時にも正五角形を保つ
 onMounted(() => {
-    maintainHexagonShape()
+    maintainPentagonShape()
     window.addEventListener('resize', handleResize)
 })
 

@@ -188,7 +188,7 @@
         <template v-slot:button>
           <div class="flex space-x-4 justify-end">
               <!-- レイヤー4: ボタン3 -->
-              <NuxtLink to="/company#TEST">
+              <NuxtLink to="/company">
                   <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
               </NuxtLink>
           </div>

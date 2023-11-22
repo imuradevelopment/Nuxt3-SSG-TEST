@@ -1,5 +1,6 @@
 <template>
-  <GlassCard :rounded="false" :opacity="0.6" class="h-12 fixed top-16 w-full maxWidth mx-auto z-50">
+  <GlassCard :rounded="false" :opacity="0.6"
+    class="h-12 fixed top-16 w-full maxWidth mx-auto z-50 hidden md:inline-block">
     <template #content>
       <div class="h-12 px-4 fixed top-16 w-full maxWidth mx-auto flex items-center justify-between">
         <div>
@@ -12,9 +13,10 @@
     </template>
   </GlassCard>
   <div class="mx-4">
-    <section class="text-center">
+    <section class="text-center mt-8 md:mt-20">
       <div class="mb-4">
-        <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-16 mb-2">
+        <h2 id="company01"
+          class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mb-2">
           TOPメッセージ</h2>
         <p class="text-sm md:text-base font-bold">
           ひとりひとりが提案や試行錯誤を重ね成長し、より良い人生を送り
@@ -32,72 +34,127 @@
           ひとりひとりの人間が成長してゆく為の器だとVaileは考えています。
         </p>
       </div>
-      <!-- <div class="bg-[url('/images/company/image06.png')] bg-center bg-cover w-full h-full" style="clip-path: polygon(0 100%, 0 1rem, 2rem 1rem, 2rem 0, calc(50% - 2rem) 0, calc(50% - 2rem) 1rem, calc(50% + 2rem) 1rem, calc(50% + 2rem) 0, calc(100% - 2rem) 0, calc(100% - 2rem) 1rem, 100% 1rem, 100% 100%);"> -->
-        <div ref="flex" class="flex flex-wrap justify-around">
-          <div class="md:h-full">
-            <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover" style="max-width: 32rem;">
-              <template #content>
-                <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full"
-                  style="padding-top: 25%; padding-bottom: 25%; overflow: auto;">
-                  <template #content>
-                    <h3 class="font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の「こうしたい」をお聞かせください。</h3>
-                    <p class="text-left text-xs text-white">
-                      急速な競争化時代の到来に伴い、今日の企業はよりタイムリーで効率的なビジネスへの対応を迫られています。<br />
-                      製造・販売・開発部門などの各現場をひとつに結んだスピーディーで無駄のない業務処理システムの構築、的確でクイックな意思決定を実現する自由な情報へのアクセスなど現実しなければならないことはたくさんあります。<br />
-                      しかし、それらを推し進めるに当たって、技術やコストの面でクリアしなければならない問題が多すぎることも事実です。<br />
-                      仕方がないとあきらめる前に、是非私どもへご相談ください。<br />
-                      確かな技術と豊富な経験で、きっとご満足頂けるベストなご提案をさせて頂きます。
-                    </p>
-                  </template>
-                </GlassCard>
-              </template>
-            </ClipHexagon>
-          </div>
-          <div class="md:h-full">
-            <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover" style="max-width: 32rem;">
-              <template #content>
-                <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full"
-                  style="padding-top: 25%; padding-bottom: 25%; overflow: auto;">
-                  <template #content>
-                    <h3 class="font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の声にお応えできる理由。</h3>
-                    <p class="text-left text-xs text-white">
-                      私どもは、独立系ソフトウェア会社として特定のメーカーや機種、企業の規模や業種・業務に関わらず、幅広い提案実績がございます。<br />
-                      大型コンピュータを用いたシステムからワークステーション/パーソナルコンピュータをネットワークで結んだクライアント・サーバーコンピューティング、Windowsアプリケーションを駆使したOAシステム、さらにはそれらをすべて統合したエンタープライズシステムと数々のシステムを手がけて得た技術的成果を、お客様の「こうしたい」に実現力として活かします。<br />
-                      また、最近主流のクライアント・サーバーシステム/Windowsアプリケーションシステムについては開発環境を自社内に保有し、データベースの構築・アプリケーション開発など常に最新技術に対応できる体制を整えております。
-                    </p>
-                  </template>
-                </GlassCard>
-              </template>
-            </ClipHexagon>
+
+      <div>
+        <div class="hidden md:inline-block">
+          <div ref="flex1" class="flex flex-wrap justify-around items-stretch mt-8">
+            <div class="noWrappedFirstChild">
+              <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
+                <template #content>
+                  <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full"
+                    style="padding-top: 25%; padding-bottom: 25%;">
+                    <template #content>
+                      <div class="h-full flex flex-wrap items-center">
+                        <h3 class="w-full font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の「こうしたい」をお聞かせください。
+                        </h3>
+                        <p class="text-left text-xs text-white">
+                          急速な競争化時代の到来に伴い、今日の企業はよりタイムリーで効率的なビジネスへの対応を迫られています。<br />
+                          製造・販売・開発部門などの各現場をひとつに結んだスピーディーで無駄のない業務処理システムの構築、的確でクイックな意思決定を実現する自由な情報へのアクセスなど現実しなければならないことはたくさんあります。<br />
+                          しかし、それらを推し進めるに当たって、技術やコストの面でクリアしなければならない問題が多すぎることも事実です。<br />
+                          仕方がないとあきらめる前に、是非私どもへご相談ください。<br />
+                          確かな技術と豊富な経験で、きっとご満足頂けるベストなご提案をさせて頂きます。
+                        </p>
+                      </div>
+                    </template>
+                  </GlassCard>
+                </template>
+              </ClipHexagon>
+            </div>
+            <div  class="noWrapped">
+              <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
+                <template #content>
+                  <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full flex items-center"
+                    style="padding-top: 25%; padding-bottom: 25%;">
+                    <template #content>
+                      <div class="h-full flex flex-wrap items-center">
+                        <h3 class="w-full font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の声にお応えできる理由。</h3>
+                        <p class="text-left text-xs text-white">
+                          私どもは、独立系ソフトウェア会社として特定のメーカーや機種、企業の規模や業種・業務に関わらず、幅広い提案実績がございます。<br />
+                          大型コンピュータを用いたシステムからワークステーション/パーソナルコンピュータをネットワークで結んだクライアント・サーバーコンピューティング、Windowsアプリケーションを駆使したOAシステム、さらにはそれらをすべて統合したエンタープライズシステムと数々のシステムを手がけて得た技術的成果を、お客様の「こうしたい」に実現力として活かします。<br />
+                          また、最近主流のクライアント・サーバーシステム/Windowsアプリケーションシステムについては開発環境を自社内に保有し、データベースの構築・アプリケーション開発など常に最新技術に対応できる体制を整えております。
+                        </p>
+                      </div>
+                    </template>
+                  </GlassCard>
+                </template>
+              </ClipHexagon>
+            </div>
           </div>
         </div>
-      <!-- </div> -->
-    </section>
-    <section class="text-center">
-      <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">ベイルの由来
-      </h2>
-      <GlassCard class="p-4">
-        <template #content>
-          <div class="flex">
-            <div class="m-auto mr-4">
-              <NuxtImg src="/images/company/image09.JPG"></NuxtImg>
+        <div class="md:hidden">
+          <div ref="flex2" class="flex flex-wrap justify-around items-stretch mt-8">
+            <div style="flex-basis: 32rem;">
+              <ClipPentagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
+                <template #content>
+                  <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full" style="padding-top: 6rem;">
+                    <template #content>
+                      <div class="h-full flex flex-wrap items-center">
+                        <h3 class="w-full font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の「こうしたい」をお聞かせください。
+                        </h3>
+                        <p class="text-left text-xs text-white">
+                          急速な競争化時代の到来に伴い、今日の企業はよりタイムリーで効率的なビジネスへの対応を迫られています。<br />
+                          製造・販売・開発部門などの各現場をひとつに結んだスピーディーで無駄のない業務処理システムの構築、的確でクイックな意思決定を実現する自由な情報へのアクセスなど現実しなければならないことはたくさんあります。<br />
+                          しかし、それらを推し進めるに当たって、技術やコストの面でクリアしなければならない問題が多すぎることも事実です。<br />
+                          仕方がないとあきらめる前に、是非私どもへご相談ください。<br />
+                          確かな技術と豊富な経験で、きっとご満足頂けるベストなご提案をさせて頂きます。
+                        </p>
+                      </div>
+                    </template>
+                  </GlassCard>
+                </template>
+              </ClipPentagon>
             </div>
-            <div class="text-left text-xs md:text-sm">
-              <p>
-                社名のベイルとは、学生時代から始めたスキーが縁で生まれました。<br />
-                第2次世界大戦中、半身不随の重傷を負ったピーターサイバートがコロラドにあるベイル山に魅了され、理想のスキー場を建設するためにあらゆる困難に負けず夢を実現したエピソードが会社設立への想いに込められています。<br />
-                社名にその山の名を冠したのは、どのような障害に突き当たろうとも投げ出さず、遊び心を忘れなかったピーターサイバート氏のように生きたいと願う強い意志の表れでもあるのです。<br />
-                ただ働くだけでなく常に夢を持ち続けて行きたい。<br />
-                <br />
-                ベイルは、そんな理想を共有できる仲間を求めています。
-              </p>
+            <div style="flex-basis: 32rem;">
+              <ClipPentagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
+                <template #content>
+                  <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full" style="padding-top: 6rem;">
+                    <template #content>
+                      <div class="h-full flex flex-wrap items-center">
+                        <h3 class="w-full font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の声にお応えできる理由。</h3>
+                        <p class="text-left text-xs text-white">
+                          私どもは、独立系ソフトウェア会社として特定のメーカーや機種、企業の規模や業種・業務に関わらず、幅広い提案実績がございます。<br />
+                          大型コンピュータを用いたシステムからワークステーション/パーソナルコンピュータをネットワークで結んだクライアント・サーバーコンピューティング、Windowsアプリケーションを駆使したOAシステム、さらにはそれらをすべて統合したエンタープライズシステムと数々のシステムを手がけて得た技術的成果を、お客様の「こうしたい」に実現力として活かします。<br />
+                          また、最近主流のクライアント・サーバーシステム/Windowsアプリケーションシステムについては開発環境を自社内に保有し、データベースの構築・アプリケーション開発など常に最新技術に対応できる体制を整えております。
+                        </p>
+                      </div>
+                    </template>
+                  </GlassCard>
+                </template>
+              </ClipPentagon>
             </div>
           </div>
-        </template>
-      </GlassCard>
+        </div>
+      </div>
     </section>
-    <section class="text-center">
-      <h2 id="company03" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">沿革</h2>
+    <section class="text-center mt-12">
+      <h2 id="company02"
+        class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
+      </h2>
+      <div class="bg-[url('/images/company/mtvaile.jfif')] bg-center bg-cover h-full rounded">
+        <GlassCard class="p-4" :opacity="0.6">
+          <template #content>
+            <div class="flex">
+              <div class="m-auto mr-4">
+                <NuxtImg src="/images/company/image09.JPG"></NuxtImg>
+              </div>
+              <div class="text-left text-xs md:text-sm text-white">
+                <p>
+                  社名のベイルとは、学生時代から始めたスキーが縁で生まれました。<br />
+                  第2次世界大戦中、半身不随の重傷を負ったピーターサイバートがコロラドにあるベイル山に魅了され、理想のスキー場を建設するためにあらゆる困難に負けず夢を実現したエピソードが会社設立への想いに込められています。<br />
+                  社名にその山の名を冠したのは、どのような障害に突き当たろうとも投げ出さず、遊び心を忘れなかったピーターサイバート氏のように生きたいと願う強い意志の表れでもあるのです。<br />
+                  ただ働くだけでなく常に夢を持ち続けて行きたい。<br />
+                  <br />
+                  ベイルは、そんな理想を共有できる仲間を求めています。
+                </p>
+              </div>
+            </div>
+          </template>
+        </GlassCard>
+      </div>
+    </section>
+    <section class="text-center mt-16">
+      <h2 id="company03"
+        class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mb-2">沿革</h2>
       <div class="m-auto text-left w-fit">
         <el-timeline>
           <el-timeline-item timestamp="1991年7月" type="primary" size="large">
@@ -124,14 +181,16 @@
         </el-timeline>
       </div>
     </section>
-    <section class="text-center">
-      <h2 id="company04" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">会社概要</h2>
-      <div class="text-sm text-left">
+    <section class="text-center mt-8">
+      <h2 id="company04"
+        class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mb-2">会社概要</h2>
+      <div class="text-xs md:text-sm text-left">
         <CustomTable :items="companySummary" :showHeader="false"></CustomTable>
       </div>
     </section>
-    <section class="text-center mb-8">
-      <h2 id="company05" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
+    <section class="text-center mb-16">
+      <h2 id="company05"
+        class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
       <GlassCard class="p-4">
         <template #content>
           <div class="flex flex-row-reverse md:flex-row flex-wrap">
@@ -166,6 +225,8 @@ import GlassCard from '~/components/GlassCard.vue'
 import PageHeader from '~/components/PageHeader.vue'
 import ClipHexagon from '~/components/ClipHexagon.vue'
 import ClipPentagon from '~/components/ClipPentagon.vue'
+import ClipConvexPolygon from '~/components/ClipConvexPolygon.vue'
+
 import useDetectWrap from '~/composables/useDetectWrap'
 
 interface CompanySummaryItem {
@@ -224,94 +285,30 @@ const companySummary = [
   },
   {
     column1: "連絡先",
-    column2: 'TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue2 underline">http://www.vaile.co.jp</a>'
+    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue2 underline">http://www.vaile.co.jp</a></div><div class="m-auto"><a href="/contact" class="bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div></div>'
   }
 ]
 
-// import type { TableColumnCtx } from 'element-plus'
-// interface SpanMethodProps {
-//   row: CompanySummaryItem
-//   column: TableColumnCtx<CompanySummaryItem>
-//   rowIndex: number
-//   columnIndex: number
-// }
-
-// const objectSpanMethod = ({
-//   row,
-//   column,
-//   rowIndex,
-//   columnIndex,
-// }: SpanMethodProps) => {
-//   if (columnIndex === 0) {
-//     switch (rowIndex) {
-//       case 4:
-//         return {
-//           rowspan: 3,
-//           colspan: 1,
-//         }
-//       case 7:
-//         return {
-//           rowspan: 8,
-//           colspan: 1,
-//         }
-//     }
-    // if (rowIndex % 2 === 0) {
-    //   return {
-    //     rowspan: 2,
-    //     colspan: 1,
-    //   }
-    // } else {
-    //   return {
-    //     rowspan: 0,
-    //     colspan: 0,
-    //   }
-    // }
-//   }
-// }
-
-// // 要素の参照を取得する
-// const hexagon = ref<HTMLElement | null>(null)
-
-// // 正六角形を保つ関数
-// const maintainHexagonShape = () => {
-//   // hexagon.valueがnullまたはundefinedでないことをチェックする
-//   if (hexagon.value) {
-//     // 要素の横幅を取得する
-//     const width = hexagon.value.offsetWidth
-//     // 正六角形の一辺の長さを計算する
-//     const side = (width / 2) * (2 / Math.sqrt(3))
-//     // 要素の横幅を正六角形の一辺の長さに合わせる
-//     // hexagon.value.style.width = side + 'px'
-//     // 正六角形の高さを計算する
-//     // const height = (side * Math.sqrt(3) / 2) + 'px'
-//     const height = width + 'px'
-//     // 要素の高さを設定する
-//     hexagon.value.style.height = height
-//   }
-// }
-
-// // ウィンドウのサイズが変更されたときに正六角形を保つ
-// const handleResize = () => {
-//   maintainHexagonShape()
-// }
-
-// // ページ読み込み時にも正六角形を保つ
-// onMounted(() => {
-//   maintainHexagonShape()
-//   window.addEventListener('resize', handleResize)
-// })
-
-// // イベントリスナーを削除する
-// onUnmounted(() => {
-//   window.removeEventListener('resize', handleResize)
-// })
-
-const flex = ref<HTMLElement | null>(null)
-useDetectWrap(flex)
+const flex1 = ref<HTMLElement | null>(null)
+useDetectWrap(flex1)
+const flex2 = ref<HTMLElement | null>(null)
+useDetectWrap(flex2)
 </script>
 
 <style scoped>
+.wrappedFirstChild {
+  flex-basis: 36rem;
+}
+
 .wrapped {
-  padding-top: 1rem;
+  padding-top: 2rem;
+  flex-basis: 36rem;
+}
+.noWrappedFirstChild {
+  flex-basis: 32rem;
+}
+
+.noWrapped {
+  flex-basis: 32rem;
 }
 </style>

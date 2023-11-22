@@ -5,7 +5,7 @@
 
         <!-- ヘッダー -->
         <div>
-            <div class="header fixed top-0 left-0 w-full bg-white z-50 px-2 pt-2 flex justify-between items-center">
+            <div class="header fixed top-0 left-0 w-full bg-white z-50 px-2 pt-2 flex justify-between items-center shadow-md">
                 <!-- ロゴ（クリックでメニューを閉じる） -->
                 <div @click="closeMenu(true)">
                     <NuxtLink to="/">

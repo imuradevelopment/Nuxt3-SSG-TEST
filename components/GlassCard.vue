@@ -1,8 +1,6 @@
 <template>
   <div class="glass-container" :class="props.rounded ? 'rounded': ''" :style="{backgroundColor: `rgba(0, 0, 0, ${props.opacity})`}"> <!-- ガラスの板を表すdiv要素 -->
-      <div class="glass-text">
-          <slot name="content">ガラスの上に表示するコンテンツ</slot>
-      </div> <!-- ガラスの上に表示するテキスト -->
+    <slot name="content">ガラスの上に表示するコンテンツ</slot>
   </div>
 </template>
 <script setup lang="ts">
