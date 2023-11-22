@@ -197,7 +197,7 @@
             <div class="w-full md:w-1/2">
               <NuxtImg src="/images/company/image08.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
             </div>
-            <div class="my-4 md:my-0 pl-4 md:pl-0 flex flex-col w-full md:w-1/2 text-left">
+            <div class="my-4 md:my-0 pl-0 md:pl-4 flex flex-col w-full md:w-1/2 text-left">
               <div class="text-xs md:text-sm">
                 日比谷線/東急東横線「中目黒駅」徒歩5分<br /><br />
                 中目黒駅 東口改札を出て、信号渡らずに左折。<br />
@@ -208,7 +208,7 @@
                   target="_blank"><button class="bg-custom-blue text-white py-2 px-4 rounded-full">Google
                     Mapで開く</button></a>
               </div>
-              <div class="m-2 md:m-4">
+              <div class="mt-4">
                 <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
               </div>
             </div>
