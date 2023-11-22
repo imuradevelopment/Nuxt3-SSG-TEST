@@ -1,11 +1,18 @@
 
-.linkScrollPageHeader {
-    scroll-margin-top: 8rem;
+.linkScroll {
+    scroll-margin-top: 4rem;
 }
 
-.linkScroll {
-    @apply scroll-mt-16;
+.linkScrollPageHeader {
+  scroll-margin-top: 8rem;
 }
+
+@media screen and (max-width: 768px) {
+  .linkScrollPageHeader {
+    scroll-margin-top: 4rem;
+  }
+}
+
 
 .maxWidth {
     max-width: 1280px;

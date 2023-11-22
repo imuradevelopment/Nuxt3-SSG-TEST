@@ -16,7 +16,7 @@
     <section class="text-center mt-8 md:mt-20">
       <div class="mb-4">
         <h2 id="company01"
-          class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mb-2">
+          class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">
           TOPメッセージ</h2>
         <p class="text-sm md:text-base font-bold">
           ひとりひとりが提案や試行錯誤を重ね成長し、より良い人生を送り
@@ -128,7 +128,7 @@
     </section>
     <section class="text-center mt-12">
       <h2 id="company02"
-        class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
+        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
       </h2>
       <div class="bg-[url('/images/company/mtvaile.jfif')] bg-center bg-cover h-full rounded">
         <GlassCard class="p-4" :opacity="0.6">
@@ -154,7 +154,7 @@
     </section>
     <section class="text-center mt-16">
       <h2 id="company03"
-        class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mb-2">沿革</h2>
+        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">沿革</h2>
       <div class="m-auto text-left w-fit">
         <el-timeline>
           <el-timeline-item timestamp="1991年7月" type="primary" size="large">
@@ -183,14 +183,14 @@
     </section>
     <section class="text-center mt-8">
       <h2 id="company04"
-        class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mb-2">会社概要</h2>
+        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">会社概要</h2>
       <div class="text-xs md:text-sm text-left">
         <CustomTable :items="companySummary" :showHeader="false"></CustomTable>
       </div>
     </section>
     <section class="text-center mb-16">
       <h2 id="company05"
-        class="linkScrollPageHeader md:linkScrollPage font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
+        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
       <GlassCard class="p-4">
         <template #content>
           <div class="flex flex-row-reverse md:flex-row flex-wrap">
@@ -208,7 +208,7 @@
                   target="_blank"><button class="bg-custom-blue text-white py-2 px-4 rounded-full">Google
                     Mapで開く</button></a>
               </div>
-              <div class="m-2 md:m-4">
+              <div class="md:m-4">
                 <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
               </div>
             </div>
