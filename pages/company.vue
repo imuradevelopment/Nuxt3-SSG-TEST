@@ -104,7 +104,7 @@
                 </template>
               </ClipPentagon>
             </div>
-            <div style="flex-basis: 32rem;">
+            <div style="flex-basis: 32rem; margin-top: 2rem;">
               <ClipPentagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
                 <template #content>
                   <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full" style="padding-top: 6rem;">
@@ -289,8 +289,8 @@ const companySummary = [
   }
 ]
 
-const flex1 = ref<HTMLElement | null>(null)
-useDetectWrap(flex1)
+// const flex1 = ref<HTMLElement | null>(null)
+// useDetectWrap(flex1)
 const flex2 = ref<HTMLElement | null>(null)
 useDetectWrap(flex2)
 </script>
