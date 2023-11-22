@@ -289,10 +289,10 @@ const companySummary = [
   }
 ]
 
-// const flex1 = ref<HTMLElement | null>(null)
-// useDetectWrap(flex1)
-const flex2 = ref<HTMLElement | null>(null)
-useDetectWrap(flex2)
+const flex1 = ref<HTMLElement | null>(null)
+useDetectWrap(flex1)
+// const flex2 = ref<HTMLElement | null>(null)
+// useDetectWrap(flex2)
 </script>
 
 <style scoped>
