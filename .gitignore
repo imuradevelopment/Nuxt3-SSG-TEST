@@ -22,4 +22,6 @@ logs
 .env
 .env.*
 !.env.example
-test.html
+
+# 直下のHTMLファイルを除外
+/*.html

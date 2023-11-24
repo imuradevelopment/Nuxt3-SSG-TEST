@@ -188,29 +188,29 @@
         <CustomTable :items="companySummary" :showHeader="false"></CustomTable>
       </div>
     </section>
-    <section class="text-center mb-16">
+    <section class="text-center mb-8 md:mb-16">
       <h2 id="company05"
         class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
       <GlassCard class="p-4">
         <template #content>
-          <div class="flex flex-row-reverse md:flex-row flex-wrap">
+          <div class="flex flex-row flex-wrap">
             <div class="w-full md:w-1/2">
-              <NuxtImg src="/images/company/image08.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
+              <NuxtImg src="/images/company/Map.png" alt="Image" class="w-full h-full object-contain"></NuxtImg>
             </div>
-            <div class="my-4 md:my-0 pl-0 md:pl-4 flex flex-col w-full md:w-1/2 text-left">
-              <div class="text-xs md:text-sm">
+            <div class="flex flex-col pl-0 md:pl-4 w-full md:w-1/2 mt-4 md:mt-0">
+              <div class="text-xs md:text-sm text-left">
                 日比谷線/東急東横線「中目黒駅」徒歩5分<br /><br />
                 中目黒駅 東口改札を出て、信号渡らずに左折。<br />
-                蕎麦屋さん（吉そば）がある方向へ進み、そのまま山手通り沿いを5分程歩くと1Fにお寿司屋さん(築地すし好)が入っているビルです。
-              </div>
-              <div class="mt-4">
-                <a href="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu"
-                  target="_blank"><button class="bg-custom-blue text-white py-2 px-4 rounded-full">Google
-                    Mapで開く</button></a>
-              </div>
-              <div class="mt-4">
+                蕎麦屋さん（吉そば）がある方向へ進み、そのまま山手通り沿いを5分程歩くと1Fにお寿司屋さん(築地すし好)が入っているビルです。<br />
+                <NuxtLink 
+                  class="bg-custom-blue text-white py-2 px-4 rounded-full inline-block my-4" 
+                  to="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu" 
+                  target="_blank"
+                >
+                  Google Mapで開く
+                </NuxtLink>
+                </div>
                 <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
-              </div>
             </div>
           </div>
         </template>
