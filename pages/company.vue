@@ -26,7 +26,16 @@
           ベイルの存在意義は、仕事と人生に誇りとやりがいを持ち、成長してゆく為の器となることです。<br/>
         </p>
       </div>
-
+      
+      <p class="mt-4 text-sm md:text-base font-bold break-keep text-left md:text-center">
+        お客様のニーズに応えるソリューション
+        私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。
+        迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
+        Windowsアプリケーション、エンタープライズシステムなど、お客様の「こうしたい」に実現力として活かします。
+        最新技術に対応できる体制を整えておりますので、お気軽にご相談ください。
+        確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。
+      </p>
+      
       <div>
         <div class="hidden md:inline-block">
           <div ref="flex1" class="flex flex-wrap justify-around items-stretch mt-8">
