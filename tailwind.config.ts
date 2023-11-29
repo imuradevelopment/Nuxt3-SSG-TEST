@@ -20,11 +20,12 @@ export default <Partial<Config>>{
                 },
                 colors: {
                     custom: {
-                        gray: "#697F9F",
-                        blue: "#005FB5",
-                        blue2: "#006BCC",
-                        lightBlue: "#00BFFF",
-                        lightOrange: "#E7C694",
+                        gray: "rgb(105 127 159)",
+                        blue: "rgba(0 95 181)",
+                        blue2: "rgb(0 107 204)",
+                        lightBlue: "rgb(0 191 255)",
+                        lightOrange: "rgb(231 198 148)",
+                        platina: "rgb(224 224 224)",
                     }
                 },
                 backgroundImage: {

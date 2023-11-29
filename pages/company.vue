@@ -1,13 +1,15 @@
 <template>
-  <GlassCard :rounded="false" :opacity="0.6"
+  <GlassCard :rounded="false" :opacity="0.5"
     class="h-12 fixed top-16 w-full maxWidth mx-auto z-50 hidden md:inline-block">
     <template #content>
-      <div class="h-12 px-4 fixed top-16 w-full maxWidth mx-auto flex items-center justify-between">
-        <div>
-          <h1 class="font-bold text-lg md:text-2xl text-center text-custom-lightOrange">会社情報</h1>
-        </div>
-        <div>
-          <PageHeader />
+      <div class="bg-custom-blue/30 h-full">
+        <div class="h-12 px-4 fixed top-16 w-full maxWidth mx-auto flex items-center justify-between">
+          <div>
+            <h1 class="font-bold text-lg md:text-2xl text-center text-custom-platina">会社情報</h1>
+          </div>
+          <div>
+            <PageHeader />
+          </div>
         </div>
       </div>
     </template>
@@ -18,20 +20,10 @@
         <h2 id="company01"
           class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">
           TOPメッセージ</h2>
-        <p class="text-sm md:text-base font-bold">
-          ひとりひとりが提案や試行錯誤を重ね成長し、より良い人生を送り
-          <!-- <br class="hidden md:inline-block" /> -->
-          会社が発展してゆく為にVaileは存在しています。
-          <br />
-          自分の人生については自分で考える。
-          <br />
-          そんな当たり前の事がやっと認識されはじめています。
-          <br />
-          個人の成長が会社をのばします。
-          <br />
-          会社とは自分の仕事と人生に誇りとやりがいを持ち、仕事を続けることにより、
-          <!-- <br class="hidden md:inline-block" /> -->
-          ひとりひとりの人間が成長してゆく為の器だとVaileは考えています。
+        <p class="text-sm md:text-base font-bold break-keep">
+          ベイルは、個人の提案や成長が会社の発展につながると考えています。<br/>
+          「自分の人生については自分で考える」ということが、やっと当たり前になりました。<br/>
+          ベイルの存在意義は、仕事と人生に誇りとやりがいを持ち、成長してゆく為の器となることです。<br/>
         </p>
       </div>
 
