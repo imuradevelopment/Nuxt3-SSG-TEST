@@ -20,9 +20,9 @@
         <h2 id="company01"
           class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">
           TOPメッセージ</h2>
-        <p class="text-xs md:text-sm font-bold break-keep text-left md:text-center">
-          ベイルは、個人の提案や成長が会社の発展につながると考えています。<br/>
-          「自分の人生については自分で考える」ということが、やっと当たり前になりました。<br/>
+        <p class="text-sm md:text-base font-bold break-keep text-left md:text-center">
+          私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br/>
+          「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br/>
           ベイルの存在意義は、仕事と人生に誇りとやりがいを持ち、成長してゆく為の器となることです。<br/>
         </p>
       </div>
