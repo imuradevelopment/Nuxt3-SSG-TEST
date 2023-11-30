@@ -23,7 +23,7 @@
         <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center">
           ベイルの存在意義
         </h3>
-        <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center">
+        <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center text-custom-lightOrange">
           私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br/>
           「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br/>
           ベイルは、仕事と人生に誇りとやりがいを持ち、共に成長してゆく為の器となる会社です。<br/>
@@ -33,7 +33,7 @@
       <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center">
         お客様のニーズに応えるソリューション
       </h3>
-      <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center">
+      <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center text-custom-lightOrange">
         私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。
         迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
         Windowsアプリケーション、エンタープライズシステムなど、お客様の「こうしたい」に実現力として活かします。
