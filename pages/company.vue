@@ -20,15 +20,20 @@
         <h2 id="company01"
           class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">
           TOPメッセージ</h2>
-        <p class="text-sm md:text-base font-bold break-keep text-left md:text-center">
+        <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center">
+          ベイルの存在意義
+        </h3>
+        <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center">
           私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br/>
           「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br/>
-          ベイルの存在意義は、仕事と人生に誇りとやりがいを持ち、成長してゆく為の器となることです。<br/>
+          ベイルは、仕事と人生に誇りとやりがいを持ち、共に成長してゆく為の器となる会社です。<br/>
         </p>
       </div>
-      
-      <p class="mt-4 text-sm md:text-base font-bold break-keep text-left md:text-center">
+
+      <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center">
         お客様のニーズに応えるソリューション
+      </h3>
+      <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center">
         私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。
         迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
         Windowsアプリケーション、エンタープライズシステムなど、お客様の「こうしたい」に実現力として活かします。
@@ -36,7 +41,7 @@
         確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。
       </p>
       
-      <div>
+      <!-- <div>
         <div class="hidden md:inline-block">
           <div ref="flex1" class="flex flex-wrap justify-around items-stretch mt-8">
             <div class="noWrappedFirstChild">
@@ -125,7 +130,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
     <section class="text-center mt-12">
       <h2 id="company02"
