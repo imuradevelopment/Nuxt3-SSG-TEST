@@ -22,8 +22,9 @@ export default <Partial<Config>>{
                     custom: {
                         gray: "rgb(105 127 159)",
                         blue: "rgba(0 95 181)",
-                        blue2: "rgb(0 107 204)",
-                        lightBlue: "rgb(0 191 255)",
+                        deepBlue: "rgba(70 130 180)",
+                        lightBlue: "rgb(50 156 255)",
+                        orange: "rgb(229 181 127)",
                         lightOrange: "rgb(231 198 148)",
                         platina: "rgb(224 224 224)",
                     }

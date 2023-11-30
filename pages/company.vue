@@ -20,20 +20,20 @@
         <h2 id="company01"
           class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">
           TOPメッセージ</h2>
-        <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center">
+        <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center text-custom-gray">
           ベイルの存在意義
         </h3>
-        <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center text-custom-lightOrange">
+        <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center">
           私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br/>
           「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br/>
           ベイルは、仕事と人生に誇りとやりがいを持ち、共に成長してゆく為の器となる会社です。<br/>
         </p>
       </div>
 
-      <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center">
+      <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center text-custom-gray">
         お客様のニーズに応えるソリューション
       </h3>
-      <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center text-custom-lightOrange">
+      <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center">
         私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。
         迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
         Windowsアプリケーション、エンタープライズシステムなど、お客様の「こうしたい」に実現力として活かします。
@@ -291,7 +291,7 @@ const companySummary = [
   },
   {
     column1: "連絡先",
-    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue2 underline">http://www.vaile.co.jp</a></div><div class="m-auto"><a href="/contact" class="bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div></div>'
+    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-deepBlue underline">http://www.vaile.co.jp</a></div><div class="m-auto"><a href="/contact" class="bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div></div>'
   }
 ]
 
