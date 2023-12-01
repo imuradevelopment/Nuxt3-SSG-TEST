@@ -38,7 +38,7 @@
                     <div class="text-xs">System Engineering Service</div>
                 </h2>
             </div>
-            <div class="mx-4 ml-20">
+            <div class="mx-4 ml-16 w-fit">
                 <div class="folder-structure">
                     <div class="font-bold text-lg md:text-xl" style="margin-left: -3rem;">提供システム</div>
                     <ul>
@@ -220,7 +220,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .folder-structure li:first-child::after {
+    .folder-structure > ul > li::after {
         border-bottom: 1px solid #d1d5db;
         content: "";
     
@@ -234,6 +234,7 @@
         width: var(--folder-structure-item-margin-left);
     }    
 }
+
 /* Remove the border from the last item */
 .folder-structure li:last-child::before {
     height: 1.75rem;
@@ -241,8 +242,15 @@
 @media screen and (max-width: 768px) {
     .folder-structure li:last-child::before {
         height: 1.5rem;
+    }
 }
+
+@media screen and (max-width: 768px) {
+    .folder-structure > ul > li:last-child::before {
+        height: 1.75rem;
+    }    
 }
+
 .content {
     position: relative;
 }
