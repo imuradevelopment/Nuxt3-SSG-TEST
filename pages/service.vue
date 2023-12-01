@@ -211,7 +211,7 @@
         /* Position */
         left: 0;
         position: absolute;
-        top: 1.25rem;
+        top: 1.5rem;
         transform: translate(-100%, 0);
     
         /* Size */
