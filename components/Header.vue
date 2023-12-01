@@ -23,7 +23,7 @@
                     <NuxtLink @click="scrollToTarget()" to="/access">アクセス</NuxtLink>
                 </el-button>
             </el-menu-item>
-            <el-menu-item index="/contact" class="el-menu-item-custom2">
+            <el-menu-item index="/contact" class="el-menu-item-custom2" style="margin-right: 0px;">
                 <el-button type="primary" class="el-button-custom">
                     <NuxtLink @click="scrollToTarget()" to="/contact">お問い合わせ</NuxtLink>
                 </el-button>
