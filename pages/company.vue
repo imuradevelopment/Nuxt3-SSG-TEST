@@ -16,31 +16,39 @@
   </GlassCard>
   <div class="mx-4">
     <section class="text-center mt-8 md:mt-20">
-      <div class="mb-4">
-        <h2 id="company01"
-          class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">
-          TOPメッセージ</h2>
-        <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center text-custom-gray">
+      <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">TOPメッセージ</h2>
+      <div class="md:flex md:items-center md:justify-center flex-col">
+        <h3
+          class="mt-4 ml-4 md:ml-0 py-2 px-4 text-base md:text-lg font-bold break-keep text-left md:text-center text-custom-gray rounded border border-custom-gray w-fit translate-y-1/2 bg-white">
           ベイルの存在意義
         </h3>
-        <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center">
-          私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br/>
-          「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br/>
-          ベイルは、仕事と人生に誇りとやりがいを持ち、共に成長してゆく為の器となる会社です。<br/>
+        <p
+          class="max-w-3xl w-full p-4 pt-8 text-sm md:text-base leading-7 md:leading-8 break-keep text-left md:text-center rounded border border-custom-gray">
+          私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br />
+          「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br />
+          <span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-8">
+            ベイルは、仕事と人生に誇りとやりがいを持ち、共に成長してゆく為の器となる会社です。<br />
+          </span>
         </p>
       </div>
 
-      <h3 class="mt-4 text-base md:text-lg font-bold break-keep text-left md:text-center text-custom-gray">
-        お客様のニーズに応えるソリューション
-      </h3>
-      <p class="mt-2 text-sm md:text-base break-keep text-left md:text-center">
-        私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。
-        迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
-        Windowsアプリケーション、エンタープライズシステムなど、お客様の「こうしたい」に実現力として活かします。
-        最新技術に対応できる体制を整えておりますので、お気軽にご相談ください。
-        確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。
-      </p>
-      
+      <div class="md:flex md:items-center md:justify-center flex-col">
+        <h3
+          class="mt-4 ml-4 md:ml-0 py-2 px-4 text-base md:text-lg font-bold break-keep text-left md:text-center text-custom-gray rounded border border-custom-gray w-fit translate-y-1/2 bg-white">
+          お客様のニーズに応えるソリューション
+        </h3>
+        <p
+          class="max-w-3xl w-full p-4 pt-8 text-sm md:text-base leading-7 md:leading-8 break-keep text-left md:text-center rounded border border-custom-gray">
+          私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。<br />
+          迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
+          Windowsアプリケーション、エンタープライズシステムなど、お客様の<span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-8">「こうしたい」</span>に実現力として活かします。<br />
+          最新技術に対応できる体制を整えておりますので、お気軽にご相談ください。<br />
+          <span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-8">
+            確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。<br />
+          </span>
+        </p>
+      </div>
+
       <!-- <div>
         <div class="hidden md:inline-block">
           <div ref="flex1" class="flex flex-wrap justify-around items-stretch mt-8">
@@ -133,8 +141,7 @@
       </div> -->
     </section>
     <section class="text-center mt-12">
-      <h2 id="company02"
-        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
+      <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
       </h2>
       <div class="bg-[url('/images/company/mtvaile.jfif')] bg-center bg-cover h-full rounded">
         <GlassCard class="p-4" :opacity="0.6">
@@ -159,8 +166,7 @@
       </div>
     </section>
     <section class="text-center mt-16">
-      <h2 id="company03"
-        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">沿革</h2>
+      <h2 id="company03" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">沿革</h2>
       <div class="m-auto text-left w-fit">
         <el-timeline>
           <el-timeline-item timestamp="1991年7月" type="primary" size="large">
@@ -188,15 +194,13 @@
       </div>
     </section>
     <section class="text-center mt-8">
-      <h2 id="company04"
-        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">会社概要</h2>
+      <h2 id="company04" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">会社概要</h2>
       <div class="text-xs md:text-sm text-left">
         <CustomTable :items="companySummary" :showHeader="false"></CustomTable>
       </div>
     </section>
     <section class="text-center mb-8 md:mb-16">
-      <h2 id="company05"
-        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
+      <h2 id="company05" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
       <GlassCard class="p-4">
         <template #content>
           <div class="flex flex-row flex-wrap">
@@ -208,15 +212,13 @@
                 日比谷線/東急東横線「中目黒駅」徒歩5分<br /><br />
                 中目黒駅 東口改札を出て、信号渡らずに左折。<br />
                 蕎麦屋さん（吉そば）がある方向へ進み、そのまま山手通り沿いを5分程歩くと1Fにお寿司屋さん(築地すし好)が入っているビルです。<br />
-                <NuxtLink 
-                  class="bg-custom-blue text-white py-2 px-4 rounded-full inline-block my-4" 
-                  to="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu" 
-                  target="_blank"
-                >
+                <NuxtLink class="bg-custom-blue text-white py-2 px-4 rounded-full inline-block my-4"
+                  to="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu"
+                  target="_blank">
                   Google Mapで開く
                 </NuxtLink>
-                </div>
-                <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
+              </div>
+              <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
             </div>
           </div>
         </template>
@@ -310,6 +312,7 @@ useDetectWrap(flex1)
   padding-top: 2rem;
   flex-basis: 36rem;
 }
+
 .noWrappedFirstChild {
   flex-basis: 32rem;
 }
