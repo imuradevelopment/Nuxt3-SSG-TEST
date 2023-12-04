@@ -22,11 +22,13 @@
 
                 <!-- コンテンツ -->
                 <div class="w-full flex items-center justify-center">
-                    <h2 id="service01"
-                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
-                        SIサービス
-                    </h2>
-                    <div class="text-xs">System Integration Service</div>
+                    <div class="flex flex-col">
+                        <h2 id="service01"
+                            class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                            SIサービス
+                        </h2>
+                        <div class="text-xs">System Integration Service</div>
+                    </div>
                 </div>
             </div>
 
@@ -36,11 +38,13 @@
                 <div class="zigzag-timeline__milestone"></div>
                 <!-- コンテンツ -->
                 <div class="w-full flex items-center justify-center">
-                    <h2 id="service01"
+                    <div class="flex flex-col">
+                        <h2 id="service01"
                         class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
                         ITサービス
-                    </h2>
-                    <div class="text-xs">Information Technology Service</div>
+                        </h2>
+                        <div class="text-xs">Information Technology Service</div>
+                    </div>
                 </div>
             </div>
 
@@ -50,28 +54,33 @@
 
                 <!-- コンテンツ -->
                 <div class="w-full flex items-center justify-center">
-                    <h2 id="service01"
+                    <div class="flex flex-col">
+                        <h2 id="service01"
                         class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
                         SEサービス
                     </h2>
                     <div class="text-xs">System Engineering Service</div>
+                    </div>
                 </div>
                 <div class="mx-4 ml-16 w-fit">
                     <FolderStructure></FolderStructure>
+                    <FolderStructure2></FolderStructure2>
                 </div>
             </div>
 
             <div class="zigzag-timeline__item">
                 <!-- マイルストーン -->
                 <div class="zigzag-timeline__milestone"></div>
-                
+
                 <!-- コンテンツ -->
                 <div class="w-full flex items-center justify-center">
-                    <h2 id="service01"
-                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
-                        開発実績
-                    </h2>
-                    <div class="text-xs">Development Achievements</div>
+                    <div class="flex flex-col">
+                        <h2 id="service01"
+                            class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                            開発実績
+                        </h2>
+                        <div class="text-xs">Development Achievements</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,6 +89,7 @@
 
 <script setup lang="ts">
 import FolderStructure from '~/components/FolderStructure.vue'
+import FolderStructure2 from '~/components/FolderStructure2.vue'
 </script>
 
 <style scoped>
