@@ -150,7 +150,7 @@
 
 /* 3段目 */
 .folder-structure ul li ul li ul li:last-child::before {
-    height: calc(var(--font-size-base) + var(--font-lineHeight-base) / 2 + var(--font-lineHeight-xs) / 2 - 3px);
+    height: calc(var(--font-size-base) + var(--font-lineHeight-base) / 2 + var(--font-lineHeight-base) / 2 - 3px);
 }
 
 /* 横線 */
@@ -172,5 +172,5 @@
 
 /* 3段目 */
 .folder-structure ul li ul li ul li::after {
-    top: calc(var(--font-size-sm) + var(--font-lineHeight-sm) / 2);
+    top: calc(var(--font-size-base) + var(--font-lineHeight-base) / 2);
 }</style>
