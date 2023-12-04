@@ -1,109 +1,125 @@
 <template>
-    <h1>事業情報</h1>
+    <div>
+        <GlassCard :rounded="false" :opacity="0.5"
+            class="h-12 fixed top-16 w-full maxWidth mx-auto z-50 hidden md:inline-block">
+            <template #content>
+                <div class="bg-custom-blue/30 h-full">
+                    <div class="h-12 px-4 fixed top-16 w-full maxWidth mx-auto flex items-center justify-between">
+                        <div>
+                            <h1 class="font-bold text-lg md:text-2xl text-center text-custom-platina">事業情報</h1>
+                        </div>
+                        <div>
+                            <PageHeader />
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </GlassCard>
+        <div class="m-4">
+            <div class="zigzag-timeline__item">
+                <!-- Milestone -->
+                <div class="zigzag-timeline__milestone"></div>
 
-    <div class="m-4">
-        <div class="zigzag-timeline__item">
-            <!-- Milestone -->
-            <div class="zigzag-timeline__milestone"></div>
-
-            <!-- Content -->
-            <div class="w-full flex items-center justify-center">
-                <h2 id="service01"
-                    class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
-                    SIサービス
+                <!-- Content -->
+                <div class="w-full flex items-center justify-center">
+                    <h2 id="service01"
+                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                        SIサービス
+                    </h2>
                     <div class="text-xs">System Integration Service</div>
-                </h2>
-            </div>
-        </div>
-        <div class="zigzag-timeline__item">
-            <!-- Milestone -->
-            <div class="zigzag-timeline__milestone"></div>
-            <!-- Content -->
-            <div class="w-full flex items-center justify-center">
-                <h2 id="service01"
-                    class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
-                    ITサービス
-                    <div class="text-xs">Information Technology Service</div>
-                </h2>
-            </div>
-        </div>
-        <div class="zigzag-timeline__item">
-            <!-- Milestone -->
-            <div class="zigzag-timeline__milestone"></div>
-            <!-- Content -->
-            <div class="w-full flex items-center justify-center">
-                <h2 id="service01"
-                    class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
-                    SEサービス
-                    <div class="text-xs">System Engineering Service</div>
-                </h2>
-            </div>
-            <div class="mx-4 ml-16 w-fit">
-                <div class="folder-structure">
-                    <div class="font-bold text-lg md:text-xl" style="margin-left: -3rem;">提供システム</div>
-                    <ul>
-                        <li>
-                            <!-- Content -->
-                            <div class="content">
-                                <div class="px-2 text-base md:text-lg font-bold">汎用系システム</div>
-                            </div>
-                            <!-- Sub items -->
-                            <ul>
-                                <li>
-                                    <div class="px-2 text-sm md:text-base">金融系システム</div>
-                                </li>
-                                <li>
-                                    <div class="px-2 text-sm md:text-base">省庁・地方自治体システム</div>
-                                </li>
-                                <li>
-                                    <div class="px-2 text-sm md:text-base">流通系システム</div>
-                                </li>
-                                <li>
-                                    <div class="px-2 text-sm md:text-base">製造系システム</div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <!-- Content -->
-                            <div class="content">
-                                <div class="px-2 text-base md:text-lg font-bold">オープン系システム</div>
-                            </div>
-                            <!-- Sub items -->
-                            <ul>
-                                <li>
-                                    <div class="px-2 text-sm md:text-base">Windowsアプリケーション開発</div>
-                                </li>
-                                <li>
-                                    <div class="px-2 text-sm md:text-base">通信/ネットワークシステム</div>
-                                </li>
-                                <li>
-                                    <div class="px-2 text-sm md:text-base">UNIXアプリケーション開発</div>
-                                </li>
-                                <li>
-                                    <div class="px-2 text-sm md:text-base">制御システム</div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="zigzag-timeline__item">
-            <!-- Milestone -->
-            <div class="zigzag-timeline__milestone"></div>
-            <!-- Content -->
-            <div class="w-full flex items-center justify-center">
-                <h2 id="service01"
-                    class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
-                    開発実績
+            <div class="zigzag-timeline__item">
+                <!-- Milestone -->
+                <div class="zigzag-timeline__milestone"></div>
+                <!-- Content -->
+                <div class="w-full flex items-center justify-center">
+                    <h2 id="service01"
+                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                        ITサービス
+                    </h2>
+                    <div class="text-xs">Information Technology Service</div>
+                </div>
+            </div>
+            <div class="zigzag-timeline__item">
+                <!-- Milestone -->
+                <div class="zigzag-timeline__milestone"></div>
+                <!-- Content -->
+                <div class="w-full flex items-center justify-center">
+                    <h2 id="service01"
+                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                        SEサービス
+                    </h2>
+                    <div class="text-xs">System Engineering Service</div>
+                </div>
+                <div class="mx-4 ml-16 w-fit">
+                    <div class="folder-structure">
+                        <div class="font-bold text-lg md:text-xl" style="margin-left: -3rem;">提供システム</div>
+                        <ul class="">
+                            <li>
+                                <!-- Content -->
+                                <div class="content">
+                                    <div class="px-2 text-base md:text-lg font-bold">汎用系システム</div>
+                                </div>
+                                <!-- Sub items -->
+                                <ul>
+                                    <li>
+                                        <div class="px-2 text-sm md:text-base leading-7">金融系システム</div>
+                                    </li>
+                                    <li>
+                                        <div class="px-2 text-sm md:text-base leading-7">省庁・地方自治体システム</div>
+                                    </li>
+                                    <li>
+                                        <div class="px-2 text-sm md:text-base leading-7">流通系システム</div>
+                                    </li>
+                                    <li>
+                                        <div class="px-2 text-sm md:text-base leading-7">製造系システム</div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <!-- Content -->
+                                <div class="content">
+                                    <div class="px-2 text-base md:text-lg font-bold">オープン系システム</div>
+                                </div>
+                                <!-- Sub items -->
+                                <ul>
+                                    <li>
+                                        <div class="px-2 text-sm md:text-base leading-7">Windowsアプリケーション開発</div>
+                                    </li>
+                                    <li>
+                                        <div class="px-2 text-sm md:text-base leading-7">通信/ネットワークシステム</div>
+                                    </li>
+                                    <li>
+                                        <div class="px-2 text-sm md:text-base leading-7">UNIXアプリケーション開発</div>
+                                    </li>
+                                    <li>
+                                        <div class="px-2 text-sm md:text-base leading-7">制御システム</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="zigzag-timeline__item">
+                <!-- Milestone -->
+                <div class="zigzag-timeline__milestone"></div>
+                <!-- Content -->
+                <div class="w-full flex items-center justify-center">
+                    <h2 id="service01"
+                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                        開発実績
+                    </h2>
                     <div class="text-xs">Development Achievements</div>
-                </h2>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <style scoped>
 /* Zigzag timeline */
@@ -152,13 +168,7 @@
     transform: translate(50%, -50%);
 }
 
-/* Folder structure */
-:root {
-    --folder-structure-item-height: 1.5rem;
-    --folder-structure-item-margin-left: 2.5rem;
-    --folder-structure-item-padding-top: 1rem;
-}
-
+/* フォルダ構造 */
 .folder-structure ul {
     /* Reset */
     list-style-type: none;
@@ -171,153 +181,45 @@
 }
 
 .folder-structure li {
-    padding: var(--folder-structure-item-padding-top) 0rem 0rem 0rem;
+    padding: var(--font-size-base) 0rem 0rem 0rem;
     position: relative;
 }
 
-.folder-structure ul li ul li::before {
+.folder-structure li::before {
     border-left: 1px solid #d1d5db;
     content: "";
-    height: calc(100% + 2.75rem);
-    left: 0;
-    position: absolute;
-    top: -1rem;
-    transform: translate(-2.5rem);
-}
-
-@media screen and (max-width: 768px) {
-    .folder-structure ul li ul li::before {
-        border-left: 1px solid #d1d5db;
-        content: "";
-        height: calc(100% + 2.25rem);
-        left: 0;
-        position: absolute;
-        top: -0.75rem;
-        transform: translate(-2.5rem);
-    }
-}
-
-.folder-structure>ul>li::before {
-    border-left: 1px solid #d1d5db;
-    content: "";
-    height: calc(100% + 1.75rem);
     left: 0;
     position: absolute;
     top: 0;
-    transform: translate(-2.5rem);
-}
-
-@media screen and (max-width: 768px) {
-    .folder-structure li::before {
-        border-left: 1px solid #d1d5db;
-        content: "";
-        height: calc(100% + 2.25rem);
-        left: 0;
-        position: absolute;
-        top: -0.75rem;
-        transform: translate(-2.5rem);
-    }
+    transform: translate(calc(-1 * var(--font-lineHeight-4xl)), 0);
+    height: 100%;
 }
 
 .folder-structure li::after {
     border-bottom: 1px solid #d1d5db;
     content: "";
-
-    /* Position */
     left: 0;
     position: absolute;
-    top: 1.75rem;
+    top: calc(var(--font-size-base) + var(--font-lineHeight-base) / 2);
     transform: translate(-100%, 0);
-
-    /* Size */
-    width: var(--folder-structure-item-margin-left);
+    width: var(--font-lineHeight-4xl);
 }
 
-@media screen and (max-width: 768px) {
-    .folder-structure li::after {
-        border-bottom: 1px solid #d1d5db;
-        content: "";
-
-        /* Position */
-        left: 0;
-        position: absolute;
-        top: 1.5rem;
-        transform: translate(-100%, 0);
-
-        /* Size */
-        width: var(--folder-structure-item-margin-left);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .folder-structure>ul>li::before {
-        border-left: 1px solid #d1d5db;
-        content: "";
-        height: calc(100% + 1.75rem);
-        left: 0;
-        position: absolute;
-        top: 0rem;
-        transform: translate(-2.5rem);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .folder-structure>ul>li::after {
-        border-bottom: 1px solid #d1d5db;
-        content: "";
-
-        /* Position */
-        left: 0;
-        position: absolute;
-        top: 1.75rem;
-        transform: translate(-100%, 0);
-
-        /* Size */
-        width: var(--folder-structure-item-margin-left);
-    }
-}
-
-/* Remove the border from the last item */
+/* 最後のアイテムからボーダーを取り除く */
 .folder-structure li:last-child::before {
-    height: 1.75rem;
+    height: calc(var(--font-size-base) + var(--font-lineHeight-base) / 2);
 }
 
+.folder-structure li:nth-child(1) li:nth-child(1)::before,
+.folder-structure li:nth-child(2) li:nth-child(1)::before {
+    top: -0.95rem;
+    height: calc(100% + 0.95rem);
+}
 @media screen and (max-width: 768px) {
-    .folder-structure li:last-child::before {
-        height: 1.5rem;
+    .folder-structure li:nth-child(1) li:nth-child(1)::before,
+    .folder-structure li:nth-child(2) li:nth-child(1)::before {
+        top: -0.725rem;
+        height: calc(100% + 0.725rem);
     }
 }
-
-@media screen and (max-width: 768px) {
-    .folder-structure>ul>li:last-child::before {
-        height: 1.75rem;
-    }
-}
-
-/* .content {
-    position: relative;
-
-}
-
-.content::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 1px;
-    height: calc(50% + 2px);
-    background-color: #d1d5db;
-}
-
-@media screen and (max-width: 768px) {
-    .content::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 1px;
-        height: 50%;
-        background-color: #d1d5db;
-    }
-} */
 </style>

@@ -1,4 +1,24 @@
 {
     "typescript.tsdk": "node_modules\\typescript\\lib",
-    "prettier.printWidth": 150
+    "prettier.printWidth": 150,
+    "prettier.tabWidth": 4,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "[javascript]": {
+        "editor.wordSeparators": "`~!@#%^&*()=+[]{}\\|;:'\",.<>/?"
+    },
+    "[typescript]": {
+        "editor.wordSeparators": "`~!@#%^&*()=+[]{}\\|;:'\",.<>/?"
+    },
+    "[css]": {
+        "editor.wordSeparators": "`~!@#%^&*()=+[]{}\\|;:',<>/?"
+    },
+    "[html]": {
+        "editor.wordSeparators": "`~!@#%^&*()=+[]{}\\|;:'\",.<>/?"
+    },
+    "[vue]": {
+        "editor.wordSeparators": "`~!@#%^&*()=+[]{}\\|;:'\",.<>/?"
+    }
 }

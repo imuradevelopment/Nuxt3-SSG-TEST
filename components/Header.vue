@@ -80,18 +80,18 @@ const { targetId, scrollToTarget } = useScrollToTarget()
 
 .el-menu-item-custom {
     padding: 0.25rem 1rem 0 1rem;
-    font-family: 'Meiryo';
-    font-size: medium;
-    font-weight: 600;
+    font-size: large;
+    font-weight: bold;
     height: auto;
+    letter-spacing: 0.075rem;
 }
 .el-menu-item-custom2 {
     padding: 0;
     margin: 0.25rem 0.5rem 0 0.5rem;
-    font-family: 'Meiryo';
-    font-size: medium;
-    font-weight: 600;
+    font-size: large;
+    font-weight: bold;
     height: auto;
+    letter-spacing: 0.075rem;
 }
 .el-menu-item-custom2 a {
     font-size: medium;
