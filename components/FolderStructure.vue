@@ -72,7 +72,7 @@
 /* 縦線 */
 /* 1段目 */
 .folder-structure ul li::before {
-    border-left: 1px solid var(--tw-gray-opacity50);
+    border-left: 1px solid var(--custom-color-lightGray);
     content: "";
     left: 0;
     position: absolute;
@@ -83,7 +83,7 @@
 
 /* 2段目 */
 .folder-structure ul li ul li::before {
-    border-left: 1px solid var(--tw-gray-opacity50);
+    border-left: 1px solid var(--custom-color-lightGray);
     content: "";
     left: 0;
     position: absolute;
@@ -94,7 +94,7 @@
 
 /* 3段目 */
 .folder-structure ul li ul li ul li::before {
-    border-left: 1px solid var(--tw-gray-opacity50);
+    border-left: 1px solid var(--custom-color-lightGray);
     content: "";
     left: 0;
     position: absolute;
@@ -121,7 +121,7 @@
 /* 横線 */
 /* 1段目 */
 .folder-structure ul li::after {
-    border-bottom: 1px solid var(--tw-gray-opacity50);
+    border-bottom: 1px solid var(--custom-color-lightGray);
     content: "";
     left: 0;
     position: absolute;
@@ -145,7 +145,7 @@
     /* 縦線 */
     /* 1段目 */
     .folder-structure ul li::before {
-        border-left: 1px solid var(--tw-gray-opacity50);
+        border-left: 1px solid var(--custom-color-lightGray);
         content: "";
         left: 0;
         position: absolute;
@@ -156,7 +156,7 @@
 
     /* 2段目 */
     .folder-structure ul li ul li::before {
-        border-left: 1px solid var(--tw-gray-opacity50);
+        border-left: 1px solid var(--custom-color-lightGray);
         content: "";
         left: 0;
         position: absolute;
@@ -167,7 +167,7 @@
 
     /* 3段目 */
     .folder-structure ul li ul li ul li::before {
-        border-left: 1px solid var(--tw-gray-opacity50);
+        border-left: 1px solid var(--custom-color-lightGray);
         content: "";
         left: 0;
         position: absolute;
@@ -194,7 +194,7 @@
     /* 横線 */
     /* 1段目 */
     .folder-structure ul li::after {
-        border-bottom: 1px solid var(--tw-gray-opacity50);
+        border-bottom: 1px solid var(--custom-color-lightGray);
         content: "";
         left: 0;
         position: absolute;

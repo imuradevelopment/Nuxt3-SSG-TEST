@@ -164,7 +164,7 @@ export default {
             custom: {
                 // 追加
                 gray: "rgb(105 127 159)",
-                lightGray: "rgb(209 213 219)",
+                lightGray: "rgb(156 163 175)",
                 deepGray: "rgb(65, 96, 144)",
                 blue: "rgb(0 95 181)",
                 deepBlue: "rgb(0 10 135)",
