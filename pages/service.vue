@@ -24,10 +24,10 @@
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
                         <h2 id="service01"
-                            class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                            class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2 text-center">
                             SIサービス
                         </h2>
-                        <div class="text-xs">System Integration Service</div>
+                        <div class="text-xs mb-2">System Integration Service</div>
                     </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
                         <h2 id="service01"
-                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2 text-center">
                         ITサービス
                         </h2>
-                        <div class="text-xs">Information Technology Service</div>
+                        <div class="text-xs mb-2">Information Technology Service</div>
                     </div>
                 </div>
             </div>
@@ -56,10 +56,10 @@
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
                         <h2 id="service01"
-                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2 text-center">
                         SEサービス
                     </h2>
-                    <div class="text-xs">System Engineering Service</div>
+                    <div class="text-xs mb-2">System Engineering Service</div>
                     </div>
                 </div>
                 <div class="mx-4 m-auto">
@@ -83,10 +83,10 @@
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
                         <h2 id="service01"
-                            class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue my-2 text-center">
+                            class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2 text-center">
                             開発実績
                         </h2>
-                        <div class="text-xs">Development Achievements</div>
+                        <div class="text-xs mb-2">Development Achievements</div>
                     </div>
                 </div>
             </div>
