@@ -52,14 +52,16 @@
   --font-lineHeight-8xl: 1;
   --font-lineHeight-9xl: 1;
   
-  --custom-color-gray: rgba(105 127 159);
+  --custom-color-gray: rgb(105 127 159);
   --custom-color-lightGray: rgba(209 213 219);
+  /* --custom-color-deepGray: rgb(69, 95, 135); */
+  --custom-color-deepGray: rgb(65, 96, 144);
   --custom-color-blue: rgba(0 95 181);
-  --custom-color-deepBlue: rgba(70 130 180);
+  --custom-color-deepBlue: rgb(0 10 135);
   --custom-color-lightBlue: rgba(50 156 255);
   --custom-color-orange: rgba(229 181 127);
   --custom-color-lightOrange: rgba(231 198 148);
   --custom-color-platina: rgba(224 224 224);
-  
+
   --tw-gray-opacity50:rgb(209 213 219 / 0.5);
 }

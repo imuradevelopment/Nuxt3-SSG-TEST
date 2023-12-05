@@ -1,12 +1,12 @@
 <!-- ネストは3階層まで -->
 <template>
     <div class="folder-structure" style="padding-left:3rem;">
-        <div class="font-bold text-lg md:text-xl text-custom-gray" style="margin-left:-3rem;">開発システム</div>
+        <div class="font-bold text-lg md:text-xl text-custom-deepGray" style="margin-left:-3rem;">開発システム</div>
         <ul class="">
             <li>
                 <!-- コンテンツ -->
                 <div class="content">
-                    <div class="px-2 text-base md:text-lg font-bold text-custom-gray">汎用系システム</div>
+                    <div class="px-2 text-base md:text-lg font-bold text-custom-deepGray">汎用系システム</div>
                 </div>
                 <!-- サブアイテム -->
                 <ul>
@@ -27,7 +27,7 @@
             <li>
                 <!-- コンテンツ -->
                 <div class="content">
-                    <div class="px-2 text-base md:text-lg font-bold text-custom-gray">オープン系システム</div>
+                    <div class="px-2 text-base md:text-lg font-bold text-custom-deepGray">オープン系システム</div>
                 </div>
                 <!-- サブアイテム -->
                 <ul>

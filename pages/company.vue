@@ -295,7 +295,7 @@ const companySummary = [
   },
   {
     column1: "連絡先",
-    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-deepBlue underline">http://www.vaile.co.jp</a></div><div class="m-auto"><a href="/contact" class="bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div></div>'
+    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue underline">http://www.vaile.co.jp</a></div><div class="m-auto"><a href="/contact" class="bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div></div>'
   }
 ]
 
