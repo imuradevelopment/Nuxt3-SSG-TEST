@@ -62,9 +62,16 @@
                     <div class="text-xs">System Engineering Service</div>
                     </div>
                 </div>
-                <div class="mx-4 ml-16 w-fit">
-                    <FolderStructure></FolderStructure>
-                    <FolderStructure2></FolderStructure2>
+                <div class="mx-4 m-auto">
+                    <div class="flex flex-col">
+                        <p class="text-sm md:text-base w-full text-center mt-4">
+                            時代とクライアントニーズに合った技術力を提供致します。<br/>
+                            技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
+                        </p>
+                        <div class="m-auto my-4">
+                            <FolderStructure></FolderStructure>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -89,7 +96,6 @@
 
 <script setup lang="ts">
 import FolderStructure from '~/components/FolderStructure.vue'
-import FolderStructure2 from '~/components/FolderStructure2.vue'
 </script>
 
 <style scoped>
