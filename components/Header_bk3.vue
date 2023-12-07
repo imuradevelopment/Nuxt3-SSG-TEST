@@ -1,9 +1,9 @@
 <template>
-    <BurgerMenu class="md:hidden"/>
+    <BurgerMenu class="md:hidden" />
     <!-- デスクトップメニュー -->
     <div class="hidden md:inline-block" style="width:100%">
-        <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false"
-            @select="handleSelect">
+        <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal"
+            :ellipsis="false" @select="handleSelect">
             <el-menu-item index="0" class="logo">
                 <NuxtLink to="/">
                     <el-image src="../images/header/logo.svg"></el-image>
@@ -35,7 +35,7 @@
                     <NuxtLink to="/recruit/message">採用メッセージ</NuxtLink>
                 </el-menu-item>
                 <el-menu-item index="8">
-                    <NuxtLink to="/recruit/feature">ペイルの特徴</NuxtLink>
+                    <NuxtLink to="/recruit/feature">ベイルの特徴</NuxtLink>
                 </el-menu-item>
                 <el-menu-item index="9">
                     <NuxtLink to="/recruit/office">オフィス紹介</NuxtLink>
@@ -98,6 +98,7 @@ const closeMenu = () => {
     font-weight: 600;
     height: auto;
 }
+
 .el-menu-item-custom2 {
     padding: 0;
     margin: 0.25rem 0.5rem 0 0.5rem;
@@ -106,14 +107,17 @@ const closeMenu = () => {
     font-weight: 600;
     height: auto;
 }
+
 .el-menu-item-custom2 a {
     font-size: medium;
     font-weight: 600;
 }
-.el-button-custom{
+
+.el-button-custom {
     height: 100%;
     margin: 0 0 0.25rem 0;
 }
+
 .logo {
     width: 185px;
     padding: 0;
@@ -127,5 +131,4 @@ const closeMenu = () => {
 .logo:hover,
 .logo:focus {
     background-color: white !important;
-}
-</style>
+}</style>

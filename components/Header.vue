@@ -1,8 +1,9 @@
 <template>
-    <BurgerMenu class="md:hidden"/>
+    <BurgerMenu class="md:hidden" />
     <!-- デスクトップメニュー -->
     <div class="hidden md:inline-block fixed mt-0 z-50" style="width:100%; max-width:1280px">
-        <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal" :ellipsis="false">
+        <el-menu class="hidden md:inline-block" :default-active="activeIndexStore.activeIndex" mode="horizontal"
+            :ellipsis="false">
             <el-menu-item index="/" class="logo">
                 <NuxtLink @click="scrollToTarget()" to="/">
                     <NuxtImg width="185" fit="cover" src="/images/logo/logo.svg" />
@@ -34,7 +35,7 @@
                     <NuxtLink to="/recruit/message">採用メッセージ</NuxtLink>
                 </el-menu-item>
                 <el-menu-item index="/recruit/feature">
-                    <NuxtLink to="/recruit/feature">ペイルの特徴</NuxtLink>
+                    <NuxtLink to="/recruit/feature">ベイルの特徴</NuxtLink>
                 </el-menu-item>
                 <el-menu-item index="/recruit/office">
                     <NuxtLink to="/recruit/office">オフィス紹介</NuxtLink>
@@ -85,6 +86,7 @@ const { targetId, scrollToTarget } = useScrollToTarget()
     height: auto;
     letter-spacing: 0.075rem;
 }
+
 .el-menu-item-custom2 {
     padding: 0;
     margin: 0.25rem 0.5rem 0 0.5rem;
@@ -93,14 +95,17 @@ const { targetId, scrollToTarget } = useScrollToTarget()
     height: auto;
     letter-spacing: 0.075rem;
 }
+
 .el-menu-item-custom2 a {
     font-size: medium;
     font-weight: 600;
 }
-.el-button-custom{
+
+.el-button-custom {
     height: 100%;
     margin: 0 0 0.25rem 0;
 }
+
 .logo {
     padding: 0;
     margin-top: auto;
@@ -115,5 +120,4 @@ const { targetId, scrollToTarget } = useScrollToTarget()
 .logo:hover,
 .logo:focus {
     background-color: white !important;
-}
-</style>
+}</style>

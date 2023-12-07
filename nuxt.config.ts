@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         },
     },
     ssr: true, // SSRを有効にする
-    target: 'static', // 静的ホスティングを対象とする
+    target: "static", // 静的ホスティングを対象とする
     experimental: {
         payloadExtraction: true,
     },
@@ -16,10 +16,8 @@ export default defineNuxtConfig({
         head: {
             charset: "utf-8",
             viewport: "width=device-width, initial-scale=1",
-            title: "株式会社ペイル",
-            meta: [
-                { name: "description", content: "リニューアルサイト" },
-            ],
+            title: "株式会社ベイル",
+            meta: [{ name: "description", content: "リニューアルサイト" }],
         },
     },
     nitro: {
@@ -29,13 +27,7 @@ export default defineNuxtConfig({
             },
         },
     },
-    modules: [
-        "@element-plus/nuxt",
-        "nuxt-microcms-module",
-        "@nuxtjs/tailwindcss",
-        "@pinia/nuxt",
-        "@nuxt/image",
-    ],
+    modules: ["@element-plus/nuxt", "nuxt-microcms-module", "@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxt/image"],
     vite: {
         css: {
             preprocessorOptions: {
@@ -65,10 +57,10 @@ export default defineNuxtConfig({
     tailwindcss: {
         configPath: "~/tailwind.config.ts",
     },
-    scrollBehavior(to: any, from: any, savedPosition: any){
+    scrollBehavior(to: any, from: any, savedPosition: any) {
         console.log(to);
         console.log(from);
         console.log(savedPosition);
-        return { top: 0 }
-    }
+        return { top: 0 };
+    },
 });

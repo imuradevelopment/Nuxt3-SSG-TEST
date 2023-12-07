@@ -24,7 +24,7 @@
                         <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">トップメッセージ</LinkIndex>
                     </el-row>
                     <el-row>
-                        <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">ペイルの由来</LinkIndex>
+                        <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">ベイルの由来</LinkIndex>
                     </el-row>
                     <el-row>
                         <LinkIndex linkTo="/company#TEST" class="footerTopInnnerText">沿革</LinkIndex>
@@ -69,7 +69,7 @@
                                 <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">採用メッセージ</LinkIndex>
                             </el-row>
                             <el-row>
-                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">ペイルの特徴</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">ベイルの特徴</LinkIndex>
                             </el-row>
                             <el-row>
                                 <LinkIndex linkTo="/recruit#TEST" class="footerTopInnnerText">オフィス紹介</LinkIndex>
@@ -115,7 +115,7 @@
         </el-col>
         <el-col :sm="4" :span="24">
             <div class="footerTopRight px-3 pb-3 md:px-0">
-                <div class="footerTopRightInner pt-3 px-9 md:px-3 border-t-2 md:mt-8 md:border-t-0 md:border-l-2" >
+                <div class="footerTopRightInner pt-3 px-9 md:px-3 border-t-2 md:mt-8 md:border-t-0 md:border-l-2">
                     <div class="addressTitle">本社</div>
                     <div class="address">
                         〒000-0000<br />
@@ -140,7 +140,7 @@
         </el-col>
         <el-col :span="12">
             <el-row justify="end" class="text-xs">
-                <div class="copyrightMark">© 2023 企業名. All rights reserved.</div>
+                <div class="copyrightMark">© 2023 Vaile. All rights reserved.</div>
             </el-row>
         </el-col>
     </el-row>
@@ -231,7 +231,8 @@
     width: 40px;
     margin: 0 1rem 0 0;
 }
-.copyrightMark{
+
+.copyrightMark {
     margin: 0 2.5rem 0 0;
 }
 </style>

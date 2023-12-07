@@ -50,7 +50,7 @@
   <HeroDesktop></HeroDesktop>
 
   <section class="text-left md:text-center mx-8 my-6">
-    <div class="font-bold text-2xl md:text-4xl text-center">ペイルは、<br class="inline-block md:hidden" />「SE」を考えます。</div>
+    <div class="font-bold text-2xl md:text-4xl text-center">ベイルは、<br class="inline-block md:hidden" />「SE」を考えます。</div>
     <br />
     <div class="font-bold text-xs md:text-sm tracking-wide leading-4 md:leading-7">
       私どもがベストの提案をさせていただくに当たって大切なことは、<br class="hidden md:inline-block" />
@@ -179,35 +179,35 @@
 
   <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="">
-      <TrapezoidCard
-        src="/images/top/001.webp"
-      >
+      <TrapezoidCard src="/images/top/001.webp">
         <template v-slot:tag>TOP 1</template>
         <template v-slot:title>会社情報</template>
-        <template v-slot:content><div class="">ひとりひとりが試行錯誤を重ね、技術者として人間として成長し続け、共に発展してゆく為にVaileは存在しています。</div></template>
+        <template v-slot:content>
+          <div class="">ひとりひとりが試行錯誤を重ね、技術者として人間として成長し続け、共に発展してゆく為にVaileは存在しています。</div>
+        </template>
         <template v-slot:button>
           <div class="flex space-x-4 justify-end">
-              <!-- レイヤー4: ボタン3 -->
-              <NuxtLink to="/company">
-                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
-              </NuxtLink>
+            <!-- レイヤー4: ボタン3 -->
+            <NuxtLink to="/company">
+              <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
+            </NuxtLink>
           </div>
         </template>
       </TrapezoidCard>
     </div>
     <div class="">
-      <TrapezoidCard 
-        src="/images/top/002.webp"
-      >
+      <TrapezoidCard src="/images/top/002.webp">
         <template v-slot:tag>TOP 2</template>
         <template v-slot:title>事業情報</template>
-        <template v-slot:content><div class="">情報サービスのビジネスフィールドは、∞(無限)に広がっています。ベイルの様々な事業についてご紹介します。</div></template>
+        <template v-slot:content>
+          <div class="">情報サービスのビジネスフィールドは、∞(無限)に広がっています。ベイルの様々な事業についてご紹介します。</div>
+        </template>
         <template v-slot:button>
           <div class="flex space-x-4 justify-end">
-              <!-- レイヤー4: ボタン3 -->
-              <NuxtLink to="/service">
-                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
-              </NuxtLink>
+            <!-- レイヤー4: ボタン3 -->
+            <NuxtLink to="/service">
+              <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
+            </NuxtLink>
           </div>
         </template>
       </TrapezoidCard>
@@ -216,41 +216,41 @@
 
   <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="">
-      <TrapezoidCard
-        src="/images/top/003.webp"
-      >
+      <TrapezoidCard src="/images/top/003.webp">
         <template v-slot:tag>TOP 3</template>
         <template v-slot:title>採用情報</template>
-        <template v-slot:content><div class="">プログラミングのスキルアップや、エンジニアとしてのキャリアアップを果たす環境を用意しています。</div></template>
+        <template v-slot:content>
+          <div class="">プログラミングのスキルアップや、エンジニアとしてのキャリアアップを果たす環境を用意しています。</div>
+        </template>
         <template v-slot:button>
           <div class="flex space-x-4 justify-end">
-              <!-- レイヤー4: ボタン3 -->
-              <NuxtLink to="/recruit">
-                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
-              </NuxtLink>
+            <!-- レイヤー4: ボタン3 -->
+            <NuxtLink to="/recruit">
+              <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
+            </NuxtLink>
           </div>
         </template>
       </TrapezoidCard>
     </div>
     <div class="">
-      <TrapezoidCard 
-        src="/images/top/004.webp"
-      >
+      <TrapezoidCard src="/images/top/004.webp">
         <template v-slot:tag>TOP 4</template>
         <template v-slot:title>お問い合わせ</template>
-        <template v-slot:content><div class="">採用関連など各種お問い合わせはこちらから</div></template>
+        <template v-slot:content>
+          <div class="">採用関連など各種お問い合わせはこちらから</div>
+        </template>
         <template v-slot:button>
           <div class="flex space-x-4 justify-end">
-              <!-- レイヤー4: ボタン3 -->
-              <NuxtLink to="/contact">
-                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">採用に関するお問い合わせ</button>
-              </NuxtLink>
+            <!-- レイヤー4: ボタン3 -->
+            <NuxtLink to="/contact">
+              <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">採用に関するお問い合わせ</button>
+            </NuxtLink>
           </div>
           <div class="flex space-x-4 justify-end">
-              <!-- レイヤー4: ボタン3 -->
-              <NuxtLink to="/contact">
-                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">その他お問い合わせ</button>
-              </NuxtLink>
+            <!-- レイヤー4: ボタン3 -->
+            <NuxtLink to="/contact">
+              <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">その他お問い合わせ</button>
+            </NuxtLink>
           </div>
         </template>
       </TrapezoidCard>
@@ -373,5 +373,4 @@ import TrapezoidCard from '~/components/TrapezoidCard.vue';
 
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

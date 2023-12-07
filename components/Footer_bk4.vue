@@ -12,56 +12,100 @@
                     <LinkIndex linkTo="/" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</LinkIndex>
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-3 text-lg font-medium leading-6">
-                    <LinkIndex linkTo="/company" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</LinkIndex>
+                    <LinkIndex linkTo="/company"
+                        class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</LinkIndex>
                     <!-- <LinkIndex linkTo="/company" class="w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white"><span class="underline underline-offset-8 decoration-2">会社</span>情報</LinkIndex> -->
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">トップメッセージ</LinkIndex>
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの由来</LinkIndex>
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">沿革</LinkIndex>
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">会社概要</LinkIndex>
-                    <LinkIndex linkTo="/company#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">アクセス</LinkIndex>
+                    <LinkIndex linkTo="/company#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        トップメッセージ</LinkIndex>
+                    <LinkIndex linkTo="/company#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        ベイルの由来</LinkIndex>
+                    <LinkIndex linkTo="/company#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        沿革</LinkIndex>
+                    <LinkIndex linkTo="/company#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        会社概要</LinkIndex>
+                    <LinkIndex linkTo="/company#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        アクセス</LinkIndex>
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-3 text-lg font-medium leading-6">
                     <!-- <LinkIndex linkTo="/service" class="w-fit mb-2 hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">事業</span>情報</LinkIndex> -->
-                    <LinkIndex linkTo="/service" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</LinkIndex>
-                    <LinkIndex linkTo="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SIサービス</LinkIndex>
-                    <LinkIndex linkTo="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ITサービス</LinkIndex>
-                    <LinkIndex linkTo="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SEサービス</LinkIndex>
-                    <LinkIndex linkTo="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">開発実績</LinkIndex>
+                    <LinkIndex linkTo="/service" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報
+                    </LinkIndex>
+                    <LinkIndex linkTo="/service#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        SIサービス</LinkIndex>
+                    <LinkIndex linkTo="/service#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        ITサービス</LinkIndex>
+                    <LinkIndex linkTo="/service#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        SEサービス</LinkIndex>
+                    <LinkIndex linkTo="/service#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        開発実績</LinkIndex>
                 </div>
                 <div class="flex flex-auto flex-col md:flex-row">
                     <div class="flex flex-col basis-1/2 px-1.5 mb-3 text-lg font-medium leading-6">
                         <div class="mb-2">
                             <!-- <LinkIndex linkTo="/recruit" class="w-fit hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">採用</span>情報</LinkIndex> -->
-                            <LinkIndex linkTo="/recruit" class="underLine w-fit hover:text-gray-200 hover:underline">採用情報</LinkIndex>
+                            <LinkIndex linkTo="/recruit" class="underLine w-fit hover:text-gray-200 hover:underline">採用情報
+                            </LinkIndex>
                         </div>
                         <div class="flex flex-wrap flex-col md:flex-row">
                             <div class="flex flex-col">
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用メッセージ</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの特徴</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">オフィス紹介</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">研修制度</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">福利厚生</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    採用メッセージ</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    ベイルの特徴</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    オフィス紹介</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    研修制度</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    福利厚生</LinkIndex>
                             </div>
                             <div class="flex flex-col">
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">各種データ</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">Q&A</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">社員紹介</LinkIndex>
-                                <LinkIndex linkTo="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">募集情報</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    各種データ</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    Q&A</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    社員紹介</LinkIndex>
+                                <LinkIndex linkTo="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    募集情報</LinkIndex>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col basis-1/2 px-1.5 mb-3 text-lg font-medium leading-6">
                         <!-- <LinkIndex linkTo="/contact" class="w-fit mb-2 hover:text-gray-200 hover:underline"><span class="underline underline-offset-8 decoration-2">お問</span>い合わせ</LinkIndex> -->
-                        <LinkIndex linkTo="/contact" class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">お問い合わせ</LinkIndex>
-                        <LinkIndex linkTo="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用に関する問い合わせ</LinkIndex>
-                        <LinkIndex linkTo="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">その他の問い合わせ</LinkIndex>
+                        <LinkIndex linkTo="/contact" class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">
+                            お問い合わせ</LinkIndex>
+                        <LinkIndex linkTo="/contact#TEST"
+                            class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                            採用に関する問い合わせ</LinkIndex>
+                        <LinkIndex linkTo="/contact#TEST"
+                            class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                            その他の問い合わせ</LinkIndex>
                     </div>
                 </div>
             </div>
         </el-col>
         <el-col :sm="6" :span="24">
             <div class=" px-6 py-6 md:px-0 h-full">
-                <div class="pt-3 px-9 md:px-3 h-full border-t-2 md:border-t-0 md:border-l-2" >
+                <div class="pt-3 px-9 md:px-3 h-full border-t-2 md:border-t-0 md:border-l-2">
                     <div class="mt-1 text-xs font-normal leading-6">本社</div>
                     <div class="text-xs font-normal leading-6">
                         〒000-0000<br />
@@ -86,7 +130,7 @@
         </el-col>
         <el-col :span="12">
             <el-row justify="end" class="text-xs">
-                <div class="pr-6 md:pr-12">© 2023 企業名. All rights reserved.</div>
+                <div class="pr-6 md:pr-12">© 2023 Vaile. All rights reserved.</div>
             </el-row>
         </el-col>
     </el-row>
@@ -169,7 +213,7 @@
     margin: 0 2.5rem 0 0;
 } */
 .underLine {
-  position: relative;
+    position: relative;
 }
 
 .underLine::before {

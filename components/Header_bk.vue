@@ -29,7 +29,7 @@
                 <NuxtLink to="/recruit/message">採用メッセージ</NuxtLink>
             </el-menu-item>
             <el-menu-item index="8">
-                <NuxtLink to="/recruit/feature">ペイルの特徴</NuxtLink>
+                <NuxtLink to="/recruit/feature">ベイルの特徴</NuxtLink>
             </el-menu-item>
             <el-menu-item index="9">
                 <NuxtLink to="/recruit/office">オフィス紹介</NuxtLink>
@@ -74,18 +74,21 @@ const handleSelect = (key: string, keyPath: string[]) => {
 .el-menu-item {
     padding: 0 1rem 0 1rem;
 }
+
 .logo {
     width: max-content;
-    padding:0;
-    transition-property: none!important;
+    padding: 0;
+    transition-property: none !important;
 }
+
 .logo.is-active {
-    border-bottom: 2px solid white!important;
+    border-bottom: 2px solid white !important;
 }
+
 .logo:hover {
-    background-color: white!important;
+    background-color: white !important;
 }
+
 .logo:focus {
-    background-color: white!important;
-}
-</style>
+    background-color: white !important;
+}</style>

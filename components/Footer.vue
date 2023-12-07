@@ -8,56 +8,101 @@
             </el-row>
             <div class="flex flex-wrap flex-col md:flex-row px-12 md:px-6">
                 <div class="flex flex-col flex-auto basis-auto md:basis-16 px-1.5 mb-6 text-lg font-medium leading-6">
-                    
-                    <NuxtLink @click="scrollToTarget()" to="/" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</NuxtLink>
+
+                    <NuxtLink @click="scrollToTarget()" to="/"
+                        class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</NuxtLink>
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
-                    <NuxtLink @click="scrollToTarget()" to="/company" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</NuxtLink>
-                    <NuxtLink to="/company#company01" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">トップメッセージ</NuxtLink>
-                    <NuxtLink to="/company#company02" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの由来</NuxtLink>
-                    <NuxtLink to="/company#company03" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">沿革</NuxtLink>
-                    <NuxtLink to="/company#company04" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">会社概要</NuxtLink>
-                    <NuxtLink to="/company#company05" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">アクセス</NuxtLink>
+                    <NuxtLink @click="scrollToTarget()" to="/company"
+                        class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</NuxtLink>
+                    <NuxtLink to="/company#company01"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        トップメッセージ</NuxtLink>
+                    <NuxtLink to="/company#company02"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        ベイルの由来</NuxtLink>
+                    <NuxtLink to="/company#company03"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        沿革</NuxtLink>
+                    <NuxtLink to="/company#company04"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        会社概要</NuxtLink>
+                    <NuxtLink to="/company#company05"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        アクセス</NuxtLink>
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
-                    <NuxtLink @click="scrollToTarget()" to="/service" class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</NuxtLink>
-                    <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SIサービス</NuxtLink>
-                    <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ITサービス</NuxtLink>
-                    <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">SEサービス</NuxtLink>
-                    <NuxtLink to="/service#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">開発実績</NuxtLink>
+                    <NuxtLink @click="scrollToTarget()" to="/service"
+                        class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</NuxtLink>
+                    <NuxtLink to="/service#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        SIサービス</NuxtLink>
+                    <NuxtLink to="/service#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        ITサービス</NuxtLink>
+                    <NuxtLink to="/service#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        SEサービス</NuxtLink>
+                    <NuxtLink to="/service#TEST"
+                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                        開発実績</NuxtLink>
                 </div>
                 <div class="flex flex-auto flex-col justify-around md:flex-row">
                     <div class="flex flex-col px-1.5 mb-6 text-lg font-medium leading-6">
                         <div class="mb-2">
-                            <NuxtLink @click="scrollToTarget()" to="/recruit" class="underLine w-fit hover:text-gray-200 hover:underline">採用情報</NuxtLink>
+                            <NuxtLink @click="scrollToTarget()" to="/recruit"
+                                class="underLine w-fit hover:text-gray-200 hover:underline">採用情報</NuxtLink>
                         </div>
                         <div class="flex flex-wrap flex-col md:flex-row">
                             <div class="flex flex-col">
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用メッセージ</NuxtLink>
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">ペイルの特徴</NuxtLink>
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">オフィス紹介</NuxtLink>
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">研修制度</NuxtLink>
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">福利厚生</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    採用メッセージ</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    ベイルの特徴</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    オフィス紹介</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    研修制度</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    福利厚生</NuxtLink>
                             </div>
                             <div class="flex flex-col">
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">各種データ</NuxtLink>
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">Q&A</NuxtLink>
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">社員紹介</NuxtLink>
-                                <NuxtLink to="/recruit#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">募集情報</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    各種データ</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    Q&A</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    社員紹介</NuxtLink>
+                                <NuxtLink to="/recruit#TEST"
+                                    class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                                    募集情報</NuxtLink>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col px-1.5 mb-6 text-lg font-medium leading-6">
-                        <NuxtLink @click="scrollToTarget()" to="/contact" class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">お問い合わせ</NuxtLink>
-                        <NuxtLink to="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">採用に関する問い合わせ</NuxtLink>
-                        <NuxtLink to="/contact#TEST" class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">その他の問い合わせ</NuxtLink>
+                        <NuxtLink @click="scrollToTarget()" to="/contact"
+                            class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">お問い合わせ</NuxtLink>
+                        <NuxtLink to="/contact#TEST"
+                            class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                            採用に関する問い合わせ</NuxtLink>
+                        <NuxtLink to="/contact#TEST"
+                            class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
+                            その他の問い合わせ</NuxtLink>
                     </div>
                 </div>
             </div>
         </el-col>
         <el-col :sm="6" :span="24">
             <div class=" px-6 py-6 md:px-0 h-full">
-                <div class="pt-3 px-9 md:px-3 h-full border-t-2 md:border-t-0 md:border-l-2" >
+                <div class="pt-3 px-9 md:px-3 h-full border-t-2 md:border-t-0 md:border-l-2">
                     <div class="mt-1 text-xs font-normal leading-6">本社</div>
                     <div class="text-xs font-normal leading-6">
                         〒000-0000<br />
@@ -84,7 +129,7 @@
         </el-col>
         <el-col :span="12">
             <el-row justify="end" class="text-xs">
-                <div class="pr-6 md:pr-12">© 2023 企業名. All rights reserved.</div>
+                <div class="pr-6 md:pr-12">© 2023 Vaile. All rights reserved.</div>
             </el-row>
         </el-col>
     </el-row>
@@ -98,7 +143,7 @@ const { targetId, scrollToTarget } = useScrollToTarget()
 
 <style scoped>
 .underLine {
-  position: relative;
+    position: relative;
 }
 
 .underLine::before {
@@ -109,5 +154,4 @@ const { targetId, scrollToTarget } = useScrollToTarget()
     position: absolute;
     top: 0;
     width: 2rem;
-}
-</style>
+}</style>
