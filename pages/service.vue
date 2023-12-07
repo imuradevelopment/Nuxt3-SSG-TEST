@@ -68,6 +68,7 @@
                             時代とクライアントニーズに合った技術力を提供致します。<br/>
                             技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
                         </p> -->
+
                         <div class="m-auto">
                             <CommentCard>
                                 <template #content>
@@ -77,6 +78,14 @@
                                     </p>
                                 </template>
                             </CommentCard>
+                            <InvertedCorners style="border-radius: 1rem 1rem 1rem 0; padding: 1rem var(--inverted-corners-size) 1rem var(--inverted-corners-size);">
+                                <template #content>
+                                    <p class="text-sm md:text-base w-full text-center">
+                                        時代とクライアントニーズに合った技術力を提供致します。<br/>
+                                        技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
+                                    </p>
+                                </template>
+                            </InvertedCorners>
                         </div>
                         <div class="m-auto my-4">
                             <FolderStructure></FolderStructure>
@@ -107,6 +116,7 @@
 <script setup lang="ts">
 import FolderStructure from '~/components/FolderStructure.vue'
 import CommentCard from '~/components/CommentCard.vue'
+import InvertedCorners from '~/components/InvertedCorners.vue'
 </script>
 
 <style scoped>
