@@ -19,11 +19,7 @@
 }
 
 :root {
-  /* Folder structure */
-  --folder-structure-item-height: 1.5rem;
-  --folder-structure-item-margin-left: 2.5rem;
-  --folder-structure-item-padding-top: 1rem;
-  /*  */
+  /* tailwind */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -37,7 +33,6 @@
   --font-size-7xl: 4.5rem;
   --font-size-8xl: 6rem;
   --font-size-9xl: 8rem;
-  /*  */
   --font-lineHeight-xs: 1rem;
   --font-lineHeight-sm: 1.25rem;
   --font-lineHeight-base: 1.5rem;
@@ -51,7 +46,7 @@
   --font-lineHeight-7xl: 1;
   --font-lineHeight-8xl: 1;
   --font-lineHeight-9xl: 1;
-  
+  /* カスタムカラー */
   --custom-color-gray: rgb(105 127 159);
   --custom-color-lightGray: rgb(156 163 175);
   --custom-color-deepGray: rgb(65, 96, 144);
@@ -62,6 +57,9 @@
   --custom-color-lightOrange: rgba(231 198 148);
   --custom-color-platina: rgba(224 224 224);
 
-  --inverted-corners-background: #d1d5db;
-  --inverted-corners-size: 2rem;
+
+  /*  */
+      --inverted-corners-background: #d1d5db;
+    --inverted-corners-size: 2rem;
+    --inverted-border-width: 1px;
 }

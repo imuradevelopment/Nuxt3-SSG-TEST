@@ -78,7 +78,7 @@
                                     </p>
                                 </template>
                             </CommentCard>
-                            <InvertedCorners style="border-radius: 1rem 1rem 1rem 0; padding: 1rem var(--inverted-corners-size) 1rem var(--inverted-corners-size);">
+                            <InvertedCorners>
                                 <template #content>
                                     <p class="text-sm md:text-base w-full text-center">
                                         時代とクライアントニーズに合った技術力を提供致します。<br/>
