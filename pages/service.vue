@@ -31,8 +31,8 @@
                     </div>
                 </div>
                 <div class="m-auto">
-                    <div class="flex flex-col">
-                        <CommentCard class="mt-4 mb-8 mr-4 md:max-w-screen-commentCardMaxWidth md:mx-auto">
+                    <div class="mt-4 mb-8 flex flex-col">
+                        <CommentCard class="mb-8 mr-4 md:max-w-screen-commentCardMaxWidth md:mx-auto">
                             <template #content>
                                 <p class="text-sm md:text-base w-full text-center break-keep">
                                     時代を先取りする技術力で、
