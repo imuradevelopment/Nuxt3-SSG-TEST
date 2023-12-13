@@ -144,7 +144,8 @@
                     </div>
                 </div>
                 <div class="mx-4 m-auto">
-                    <DevelopmentAchievements></DevelopmentAchievements>
+                    <!-- <DevelopmentAchievements></DevelopmentAchievements> -->
+                    <DevelopmentAchievements2></DevelopmentAchievements2>
                 </div>
             </div>
         </div>
@@ -156,6 +157,7 @@ import VennDiagram from '~/components/VennDiagram.vue'
 import FolderStructure from '~/components/FolderStructure.vue'
 import CommentCard from '~/components/CommentCard.vue'
 import DevelopmentAchievements from '~/components/DevelopmentAchievements.vue'
+import DevelopmentAchievements2 from '~/components/DevelopmentAchievements2.vue'
 </script>
 
 <style scoped>

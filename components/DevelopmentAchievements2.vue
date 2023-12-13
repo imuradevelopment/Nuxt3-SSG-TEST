@@ -250,15 +250,14 @@ tbody tr td:nth-child(9) {
 
     /* セルにパディングを追加し、テキストを左揃えに設定 */
     .table tr td:nth-child(1) {
-        border-left: none;
-        border-right: none;
-        color: var(--cumtom-color-lightIvory);
-        background: var(--custom-color-deepGray);
+        /* border-left: none; */
+        /* border-right: none; */
+        /* color: var(--cumtom-color-lightIvory); */
+        /* background: var(--custom-color-deepGray); */
         border-bottom: 1px solid #eee;
         position: relative;
         text-align: left;
         font-size: large;
-        font-weight: bold;
         padding-top: 6px;
     }
 
@@ -280,7 +279,7 @@ tbody tr td:nth-child(9) {
     }
 
     /* セルの内容の前にラベルを表示 */
-    .table tr td:nth-child(1):before {
+    .table tr td:nth-child(1):after {
         position: absolute;
         top: 6px;
         left: 6px;
@@ -288,9 +287,10 @@ tbody tr td:nth-child(9) {
         padding-right: 10px;
         white-space: nowrap;
         content: attr(data-value);
+        color:var(--cumtom-color-lightIvory)
     }
 
-    .table td:before {
+    .table td:after {
         position: absolute;
         top: 3px;
         left: 6px;
@@ -298,26 +298,28 @@ tbody tr td:nth-child(9) {
         padding-right: 10px;
         white-space: nowrap;
         content: attr(data-value);
+        color:var(--cumtom-color-lightIvory);
+        font-weight: bold;
     }
 
-    .table tr td:nth-child(1):after {
+    .table tr td:nth-child(1):before {
         content: "";
         left: 0px;
         top: 0px;
         position: absolute;
         white-space: nowrap;
-        width: 9rem;
+        width: 8.5rem;
         height: 100%;
         background: var(--custom-color-deepGray);
     }
 
-    .table td:after {
+    .table td:before {
         content: "";
         left: 0px;
         top: 0px;
         position: absolute;
         white-space: nowrap;
-        width: 9rem;
+        width: 8.5rem;
         height: 100%;
         background: var(--custom-color-deepGray);
     }
