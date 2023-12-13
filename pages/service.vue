@@ -47,7 +47,7 @@
                                 <p class="text-sm md:text-base w-full text-center break-keep">
                                     弊社が提供するシステムの概要です。
                                     詳しいシステムの内容や、
-                                    技術スタックや、参画工程については、
+                                    技術スタック、参画工程については、
                                     詳細情報を<NuxtLink to="#service02" class="text-custom-blue">「開発実績」</NuxtLink>の項でご確認いただけます。
                                 </p>
                             </template>
