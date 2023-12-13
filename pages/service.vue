@@ -172,7 +172,9 @@ import InvertedCorners from '~/components/InvertedCorners.vue'
     /* 最大幅まで伸ばす */
     width: 100%;
 }
-
+.zigzag-timeline__item:last-child {
+    margin-bottom: 1.75rem;
+}
 .zigzag-timeline__milestone {
     position: absolute;
     top: 50%;
