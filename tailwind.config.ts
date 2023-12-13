@@ -785,6 +785,7 @@ export default {
             150: "1.5",
         },
         screens: {
+            commentCardMaxWidth: "512px",
             sm: "640px",
             md: "768px",
             md2: "850px", // 追加

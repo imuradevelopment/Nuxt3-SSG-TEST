@@ -9,7 +9,7 @@
             <ul>
                 <li>業務分析</li>
                 <li>システム最適化計画</li>
-                <li>設計～保守まで<br class="hidden vennDiagramBreakpoint:inline-block" />トータルサポート</li>
+                <li>設計から保守まで<br class="hidden vennDiagramBreakpoint:inline-block" />トータルサポート</li>
             </ul>
         </div>
         <div class="pie-1-2-intersect">
@@ -69,7 +69,7 @@
 }
 
 .css-art--3-pie-venn-diagram li {
-    font-size: 0.6em;
+    font-size: 0.7em;
     padding: 0 0 0.25em;
     list-style: none;
 }
@@ -204,7 +204,7 @@
     }
 
     .css-art--3-pie-venn-diagram li {
-        font-size: 0.6em;
+        font-size: 0.7em;
         padding: 0 0 0.25em;
     }
 
@@ -253,8 +253,9 @@
     }
 
     .css-art--pie-1 ul {
-        top: 4em;
         left: 2.5em;
+        top: 6em;
+        right: 5em;
     }
 
     .css-art--pie-1 li:nth-child(2) {
@@ -280,8 +281,9 @@
     }
 
     .css-art--pie-2 ul {
-        top: 4em;
-        right: 0em;
+        right: 0;
+        top: 6em;
+        left: 10em;
     }
 
     .css-art--pie-2 li:nth-child(1) {
