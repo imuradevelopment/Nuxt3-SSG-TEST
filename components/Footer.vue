@@ -34,16 +34,10 @@
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
                     <NuxtLink @click="scrollToTarget()" to="/service"
                         class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</NuxtLink>
-                    <NuxtLink to="/service#TEST"
+                    <NuxtLink to="/service#service01"
                         class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
-                        SIサービス</NuxtLink>
-                    <NuxtLink to="/service#TEST"
-                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
-                        ITサービス</NuxtLink>
-                    <NuxtLink to="/service#TEST"
-                        class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
-                        SEサービス</NuxtLink>
-                    <NuxtLink to="/service#TEST"
+                        SI・IT・SEサービス</NuxtLink>
+                    <NuxtLink to="/service#service02"
                         class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                         開発実績</NuxtLink>
                 </div>
