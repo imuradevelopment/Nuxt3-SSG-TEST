@@ -172,6 +172,8 @@ export default {
                 orange: "rgb(229 181 127)",
                 lightOrange: "rgb(231 198 148)",
                 platina: "rgb(224 224 224)",
+                lightIvory: "rgb(238 238 238)",
+                ivory: "rgb(204 204 204)",
             },
         }),
         columns: {
@@ -785,7 +787,8 @@ export default {
             150: "1.5",
         },
         screens: {
-            commentCardMaxWidth: "512px",
+            commentCardMaxWidth: "512px", // 追加
+            tableTransform1: "955px", // 追加
             sm: "640px",
             md: "768px",
             md2: "850px", // 追加

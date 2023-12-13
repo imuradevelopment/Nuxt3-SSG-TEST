@@ -144,6 +144,9 @@
                         <div class="text-xs mb-2">Development Achievements</div>
                     </div>
                 </div>
+                <div class="mx-4 m-auto">
+                    <DevelopmentAchievements></DevelopmentAchievements>
+                </div>
             </div>
         </div>
     </div>
@@ -153,6 +156,7 @@
 import VennDiagram from '~/components/VennDiagram.vue'
 import FolderStructure from '~/components/FolderStructure.vue'
 import CommentCard from '~/components/CommentCard.vue'
+import DevelopmentAchievements from '~/components/DevelopmentAchievements.vue'
 import InvertedCorners from '~/components/InvertedCorners.vue'
 </script>
 
