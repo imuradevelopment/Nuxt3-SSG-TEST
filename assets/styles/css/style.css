@@ -19,11 +19,11 @@
 }
 
 .pageHeaderMargin {
-  padding-top: 3.25rem;
+  margin-top: 3.25rem;
 }
 @media screen and (max-width: 768px) {
   .pageHeaderMargin {
-    padding-top: 0rem;
+    margin-top: 0rem;
 }
 }
 
