@@ -292,7 +292,7 @@ tbody tr td:nth-child(9) {
 
     .table td:after {
         position: absolute;
-        top: 3px;
+        top: 6px;
         left: 6px;
         width: 45%;
         padding-right: 10px;
