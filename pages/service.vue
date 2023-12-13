@@ -27,7 +27,7 @@
                             class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2">
                             SI・IT・SEサービス
                         </h2>
-                        <div class="text-xs mb-2">System Integration Service</div>
+                        <div class="text-xs mb-2">Business Summary</div>
                     </div>
                 </div>
                 <div class="m-auto">
@@ -47,9 +47,8 @@
                                 <p class="text-sm md:text-base w-full text-center break-keep">
                                     弊社が提供するシステムの概要です。
                                     詳しいシステムの内容や、
-                                    技術スタックについては、
-                                    詳細情報を「開発実績」の項で
-                                    ご確認いただけます。
+                                    技術スタックにや、参画工程については、
+                                    詳細情報を<NuxtLink to="#service02" class="text-custom-blue">「開発実績」</NuxtLink>の項でご確認いただけます。
                                 </p>
                             </template>
                         </CommentCard>
@@ -137,7 +136,7 @@
                 <!-- コンテンツ -->
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
-                        <h2 id="service01"
+                        <h2 id="service02"
                             class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2 text-center">
                             開発実績
                         </h2>
@@ -157,7 +156,6 @@ import VennDiagram from '~/components/VennDiagram.vue'
 import FolderStructure from '~/components/FolderStructure.vue'
 import CommentCard from '~/components/CommentCard.vue'
 import DevelopmentAchievements from '~/components/DevelopmentAchievements.vue'
-import InvertedCorners from '~/components/InvertedCorners.vue'
 </script>
 
 <style scoped>
