@@ -34,6 +34,7 @@
     border-bottom: var(--inverted-border-width) solid white;
     width: calc(var(--inverted-corners-size));
     transform: translate(-0.175px, 0px);
+
 }
 
 .inverted-corners {

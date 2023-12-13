@@ -21,6 +21,35 @@
                 <div class="zigzag-timeline__milestone"></div>
 
                 <!-- コンテンツ -->
+                <div class="pageHeaderMargin w-full flex items-center justify-center">
+                    <div class="flex flex-col text-center">
+                        <h2 id="service01"
+                            class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2">
+                            SI・IT・SEサービス
+                        </h2>
+                        <div class="text-xs mb-2">System Integration Service</div>
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="flex flex-col">
+                        <CommentCard>
+                            <template #content>
+                                <p class="text-sm md:text-base w-full text-center">
+                                    時代とクライアントニーズに合った技術力を提供致します。<br />
+                                    技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
+                                </p>
+                            </template>
+                        </CommentCard>
+                        <VennDiagram></VennDiagram>
+                        <FolderStructure></FolderStructure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="zigzag-timeline__item">
+                
+                <div class="zigzag-timeline__milestone"></div>
+                
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
                         <h2 id="service01"
@@ -33,10 +62,9 @@
             </div>
 
             <div class="zigzag-timeline__item">
-                <!-- マイルストーン -->
 
                 <div class="zigzag-timeline__milestone"></div>
-                <!-- コンテンツ -->
+                
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
                         <h2 id="service01"
@@ -49,31 +77,25 @@
             </div>
 
             <div class="zigzag-timeline__item">
-                <!-- マイルストーン -->
+
                 <div class="zigzag-timeline__milestone"></div>
 
-                <!-- コンテンツ -->
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
                         <h2 id="service01"
-                        class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2 text-center">
-                        SEサービス
-                    </h2>
-                    <div class="text-xs mb-2">System Engineering Service</div>
+                            class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2 text-center">
+                            SEサービス
+                        </h2>
+                        <div class="text-xs mb-2">System Engineering Service</div>
                     </div>
                 </div>
                 <div class="mx-4 m-auto">
                     <div class="flex flex-col">
-                        <!-- <p class="text-sm md:text-base w-full text-center mt-4">
-                            時代とクライアントニーズに合った技術力を提供致します。<br/>
-                            技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
-                        </p> -->
-
                         <div class="m-auto">
                             <CommentCard>
                                 <template #content>
                                     <p class="text-sm md:text-base w-full text-center">
-                                        時代とクライアントニーズに合った技術力を提供致します。<br/>
+                                        時代とクライアントニーズに合った技術力を提供致します。<br />
                                         技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
                                     </p>
                                 </template>
@@ -81,7 +103,7 @@
                             <InvertedCorners>
                                 <template #content>
                                     <p class="text-sm md:text-base w-full text-center">
-                                        時代とクライアントニーズに合った技術力を提供致します。<br/>
+                                        時代とクライアントニーズに合った技術力を提供致します。<br />
                                         技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
                                     </p>
                                 </template>
@@ -92,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="zigzag-timeline__item">
                 <!-- マイルストーン -->
@@ -114,6 +136,7 @@
 </template>
 
 <script setup lang="ts">
+import VennDiagram from '~/components/VennDiagram.vue'
 import FolderStructure from '~/components/FolderStructure.vue'
 import CommentCard from '~/components/CommentCard.vue'
 import InvertedCorners from '~/components/InvertedCorners.vue'

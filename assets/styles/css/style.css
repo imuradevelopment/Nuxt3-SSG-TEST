@@ -18,6 +18,10 @@
     max-width: 1280px;
 }
 
+.pageHeaderMargin {
+  margin-top: 3.25rem;
+}
+
 :root {
   /* tailwind */
   --font-size-xs: 0.75rem;
@@ -59,7 +63,9 @@
 
 
   /*  */
-      --inverted-corners-background: #d1d5db;
-    --inverted-corners-size: 2rem;
-    --inverted-border-width: 1px;
+  --border-color: var(--custom-color-gray);
+  --background-color: white;
+  --arrow-size: 2rem;
+  --border-width: 1px;
+  --content-radius: 0.5rem;
 }
