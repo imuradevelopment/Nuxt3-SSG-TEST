@@ -34,18 +34,23 @@
                     <div class="flex flex-col">
                         <CommentCard class="mt-4 mb-8 mr-4">
                             <template #content>
-                                <p class="text-sm md:text-base w-full text-center">
-                                    時代とクライアントニーズに合った技術力を提供致します。
-                                    技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
+                                <p class="text-sm md:text-base w-full text-center break-keep">
+                                    時代を先取りする技術力で、
+                                    クライアントの未来を切り拓き、
+                                    システムエンジニアリングと人材
+                                    派遣で幅広いニーズに応えます。
                                 </p>
                             </template>
                         </CommentCard>
                         <VennDiagram></VennDiagram>
                         <CommentCard class="mt-4 mb-8 mr-4">
                             <template #content>
-                                <p class="text-sm md:text-base w-full text-center">
-                                    下記のようなシステムを提供しています。<br />
-                                    詳しくは次項目の「開発実績」を御覧ください。
+                                <p class="text-sm md:text-base w-full text-center break-keep">
+                                    弊社が提供するシステムの概要です。
+                                    詳しいシステムの内容や、
+                                    技術スタックについては、
+                                    詳細情報を「開発実績」の項で
+                                    ご確認いただけます。
                                 </p>
                             </template>
                         </CommentCard>
