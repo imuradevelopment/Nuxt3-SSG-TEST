@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 mx-auto speech-bubble-bottom">
+    <div class="p-4 speech-bubble-bottom">
         <slot name="content">
 
         </slot>
