@@ -37,8 +37,7 @@
                                 <p class="text-sm md:text-base w-full text-center break-keep">
                                     時代を先取りする技術力で、
                                     クライアントの未来を切り拓き、
-                                    システムエンジニアリングと人材
-                                    派遣で幅広いニーズに応えます。
+                                    システムエンジニアリングと人材派遣で幅広いニーズに応えます。
                                 </p>
                             </template>
                         </CommentCard>
