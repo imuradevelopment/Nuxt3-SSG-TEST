@@ -32,7 +32,7 @@
                 </div>
                 <div class="m-auto">
                     <div class="flex flex-col">
-                        <CommentCard>
+                        <CommentCard class="mt-4 mb-8 mx-4">
                             <template #content>
                                 <p class="text-sm md:text-base w-full text-center">
                                     時代とクライアントニーズに合った技術力を提供致します。<br />
