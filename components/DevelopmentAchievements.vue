@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             <tr class="mb-4">
-                <td class="table-id" data-value="業務内容">金融</td>
+                <td class="table-id" data-value="対象業務">金融</td>
                 <td class="table-name" data-value="システム">銀行向けデータ連携システム<br
                         class="hidden tableTransform1:inline-block" />開発・運用・保守開発</td>
                 <td class="table-job1" data-value="要件定義">◯</td>
@@ -30,7 +30,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">金融</td>
+                <td class="table-id" data-value="対象業務">金融</td>
                 <td class="table-name" data-value="システム">信託銀行向け<br
                         class="hidden tableTransform1:inline-block" />既存基幹システム法改正改修</td>
                 <td class="table-job1" data-value="要件定義">&nbsp;-&nbsp;</td>
@@ -43,7 +43,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">金融</td>
+                <td class="table-id" data-value="対象業務">金融</td>
                 <td class="table-name" data-value="システム">金融機関向け基盤インフラ<br
                         class="hidden tableTransform1:inline-block" />開発・保守開発</td>
                 <td class="table-job1" data-value="要件定義">&nbsp;-&nbsp;</td>
@@ -56,7 +56,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">金融</td>
+                <td class="table-id" data-value="対象業務">金融</td>
                 <td class="table-name" data-value="システム">銀行向けシステム<br
                         class="hidden tableTransform1:inline-block" />法規制変更に伴うシステム対応</td>
                 <td class="table-job1" data-value="要件定義">◯</td>
@@ -69,7 +69,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">金融</td>
+                <td class="table-id" data-value="対象業務">金融</td>
                 <td class="table-name" data-value="システム">銀行向け現行システム<br
                         class="hidden tableTransform1:inline-block" />保守・運用支援・ユーザサポート</td>
                 <td class="table-job1" data-value="要件定義">&nbsp;-&nbsp;</td>
@@ -82,7 +82,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">保険</td>
+                <td class="table-id" data-value="対象業務">保険</td>
                 <td class="table-name" data-value="システム">保険会社向けデータウェアハウスシステム<br
                         class="hidden tableTransform1:inline-block" />構築・保守開発</td>
                 <td class="table-job1" data-value="要件定義">◯</td>
@@ -95,7 +95,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">カード</td>
+                <td class="table-id" data-value="対象業務">カード</td>
                 <td class="table-name" data-value="システム">カード会社向けシステム<br
                         class="hidden tableTransform1:inline-block" />統合プロジェクト</td>
                 <td class="table-job1" data-value="要件定義">&nbsp;-&nbsp;</td>
@@ -108,7 +108,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">公共</td>
+                <td class="table-id" data-value="対象業務">公共</td>
                 <td class="table-name" data-value="システム">法人団体向け業務改善システム<br
                         class="hidden tableTransform1:inline-block" />要件定義・構築</td>
                 <td class="table-job1" data-value="要件定義">◯</td>
@@ -121,7 +121,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">公共</td>
+                <td class="table-id" data-value="対象業務">公共</td>
                 <td class="table-name" data-value="システム">官公庁向け業務改善システム<br
                         class="hidden tableTransform1:inline-block" />構築・保守開発</td>
                 <td class="table-job1" data-value="要件定義">◯</td>
@@ -134,7 +134,7 @@
             </tr>
 
             <tr>
-                <td class="table-id" data-value="業務内容">公共</td>
+                <td class="table-id" data-value="対象業務">公共</td>
                 <td class="table-name" data-value="システム">官公庁向け業務刷新システム<br
                         class="hidden tableTransform1:inline-block" />構築・保守開発</td>
                 <td class="table-job1" data-value="要件定義">◯</td>
