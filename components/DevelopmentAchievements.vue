@@ -2,7 +2,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col" class="medium text-base">業務</th>
+                <th scope="col" class="medium text-base">区分</th>
                 <th scope="col" class="text-base">システム</th>
                 <th scope="col" class="small text-base">要件<br class="hidden tableTransform1:inline-block" />定義</th>
                 <th scope="col" class="small text-base">設計</th>
