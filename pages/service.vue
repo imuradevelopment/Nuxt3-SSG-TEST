@@ -15,13 +15,13 @@
                 </div>
             </template>
         </GlassCard>
-        <div class="m-4">
+        <div class="mx-4">
             <div class="zigzag-timeline__item">
                 <!-- マイルストーン -->
                 <div class="zigzag-timeline__milestone"></div>
 
                 <!-- コンテンツ -->
-                <div class="pageHeaderMargin w-full flex items-center justify-center">
+                <div class="pageHeaderPadding w-full flex items-center justify-center">
                     <div class="flex flex-col text-center">
                         <h2 id="service01"
                             class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2">
@@ -35,13 +35,23 @@
                         <CommentCard class="mt-4 mb-8 mr-4">
                             <template #content>
                                 <p class="text-sm md:text-base w-full text-center">
-                                    時代とクライアントニーズに合った技術力を提供致します。<br />
+                                    時代とクライアントニーズに合った技術力を提供致します。
                                     技術力の提供については、システムエンジニアリングサービスと人材派遣の両方のニーズに対応しています。
                                 </p>
                             </template>
                         </CommentCard>
                         <VennDiagram></VennDiagram>
-                        <FolderStructure></FolderStructure>
+                        <CommentCard class="mt-4 mb-8 mr-4">
+                            <template #content>
+                                <p class="text-sm md:text-base w-full text-center">
+                                    下記のようなシステムを提供しています。<br />
+                                    詳しくは次項目の「開発実績」を御覧ください。
+                                </p>
+                            </template>
+                        </CommentCard>
+                        <div class="mx-auto">
+                            <FolderStructure></FolderStructure>
+                        </div>
                     </div>
                 </div>
             </div>
