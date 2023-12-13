@@ -70,7 +70,7 @@
   /*  */
   --border-color: var(--custom-color-gray);
   --background-color: white;
-  --arrow-size: 2rem;
+  --arrow-size: 1.5rem;
   --border-width: 1px;
   --content-radius: 0.5rem;
 }
