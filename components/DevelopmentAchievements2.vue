@@ -257,7 +257,6 @@ tbody tr td:nth-child(9) {
         border-bottom: 1px solid #eee;
         position: relative;
         text-align: left;
-        font-size: large;
         padding-top: 6px;
     }
 
