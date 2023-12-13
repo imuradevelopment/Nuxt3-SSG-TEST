@@ -16,12 +16,12 @@
             </template>
         </GlassCard>
         <div class="mx-4">
-            <div class="zigzag-timeline__item">
+            <div class="zigzag-timeline__item pageHeaderMargin">
                 <!-- マイルストーン -->
                 <div class="zigzag-timeline__milestone"></div>
 
                 <!-- コンテンツ -->
-                <div class="pageHeaderPadding w-full flex items-center justify-center">
+                <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col text-center">
                         <h2 id="service01"
                             class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2">

@@ -18,12 +18,12 @@
     max-width: 1280px;
 }
 
-.pageHeaderPadding {
+.pageHeaderMargin {
   padding-top: 3.25rem;
 }
 @media screen and (max-width: 768px) {
-  .pageHeaderPadding {
-    padding-top: 1rem;
+  .pageHeaderMargin {
+    padding-top: 0rem;
 }
 }
 
