@@ -129,7 +129,7 @@
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 50vw;
+    /* width: 50vw; */
     max-width: 640px;
     background-color: #555;
     color: #fff;
@@ -139,13 +139,23 @@
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: -25vw;
+    left: 320px;
     opacity: 0;
     transition: opacity 0.3s;
     padding: 1rem;
     margin: 1rem;
     font-size: xx-small;
     line-height: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .tooltip .tooltiptext {
+    width: 50vw;
+    /* left: 5%; */
+    left: -25vw;
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 .tooltip .tooltiptext::after {
