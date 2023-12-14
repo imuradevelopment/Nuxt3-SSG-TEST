@@ -130,7 +130,7 @@
 .tooltip .tooltiptext {
     visibility: hidden;
     /* width: 50vw; */
-    max-width: 640px;
+    width: 640px;
     background-color: #555;
     color: #fff;
     text-align: center;
