@@ -139,7 +139,7 @@
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 320px;
+    left: -320px;
     opacity: 0;
     transition: opacity 0.3s;
     padding: 1rem;
