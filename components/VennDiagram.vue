@@ -249,7 +249,9 @@
 
     .css-art--pie-1 h3 {
         padding-right: 4em;
-        font-size: x-large;
+        /* font-size: x-large; */ /* mod */
+        left: -2rem; /* mod */
+        font-size: xx-large; /* mod */
     }
 
     .css-art--pie-1 ul {
@@ -274,10 +276,12 @@
     }
 
     .css-art--pie-2 h3 {
-        padding-right: 2em;
+        /* padding-right: 2em; */ /* mod */
         color: rgb(53, 161, 172);
         text-align: right;
-        font-size: x-large;
+        /* font-size: x-large; */ /* mod */
+        left: 0rem; /* mod */
+        font-size: xx-large; /* mod */
     }
 
     .css-art--pie-2 ul {
@@ -307,7 +311,8 @@
         bottom: -3em;
         color: rgb(242, 141, 40);
         text-align: center;
-        font-size: x-large;
+        /* font-size: x-large; */
+        font-size: xx-large;
     }
 
     .css-art--pie-3 ul {

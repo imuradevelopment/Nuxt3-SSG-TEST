@@ -25,35 +25,51 @@
                     <div class="flex flex-col text-center">
                         <h2 id="service01"
                             class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-2">
-                            SI・IT・SEサービス
+                            事業概要
                         </h2>
                         <div class="text-xs mb-2">Business Summary</div>
                     </div>
                 </div>
-                <div class="m-auto">
-                    <div class="mt-4 mb-8 flex flex-col">
-                        <CommentCard class="mb-8 mr-4 md:max-w-screen-commentCardMaxWidth md:mx-auto">
-                            <template #content>
-                                <p class="text-sm md:text-base w-full text-center break-keep">
-                                    時代を先取りする技術力で、
-                                    クライアントの未来を切り拓き、
-                                    システムエンジニアリングと人材派遣で、幅広いニーズに応えます。
+                <div class="mx-4">
+                    <div class="m-auto">
+                        <div class="flex flex-col">
+                            <CommentCard class="mb-8 mr-4 md:max-w-screen-commentCardMaxWidth md:mx-auto">
+                                <template #content>
+                                    <p class="text-sm md:text-base w-full text-center break-keep">
+                                        時代を先取りする技術力で、
+                                        クライアントの未来を切り拓き、
+                                        システムエンジニアリングと人材派遣で、幅広いニーズに応えます。
+                                    </p>
+                                </template>
+                            </CommentCard>
+    
+                            <!-- <div class="flex md:items-center md:justify-center flex-col" style="margin:calc(var(--font-lineHeight-lg) * -0.5);">
+                                <h3
+                                    class="ml-4 md:ml-0 py-2 px-4 text-base md:text-lg font-bold break-keep text-left md:text-center text-custom-gray rounded border border-custom-gray w-fit translate-y-1/2 bg-white">
+                                    事業への取り組み
+                                </h3>
+                                <p
+                                    class="max-w-3xl w-full p-4 pt-8 text-sm md:text-base leading-7 md:leading-8 break-keep text-left md:text-center rounded border border-custom-gray">
+                                    弊社では<span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">3つの事業</span>を柱として、システム構築・改修はもとより、<br />
+                                    運用改善やお客様サポートなどの幅広いニーズに応え、<br />
+                                    より使いやすいシステム、最適な技術者チームをご提案致します。<br />
                                 </p>
-                            </template>
-                        </CommentCard>
-                        <VennDiagram></VennDiagram>
-                        <CommentCard class="mt-4 mb-8 mr-4 md:max-w-screen-commentCardMaxWidth md:mx-auto">
-                            <template #content>
-                                <p class="text-sm md:text-base w-full text-center break-keep">
-                                    弊社が提供するシステムの概要です。
-                                    詳しいシステムの内容や、
-                                    技術スタック、参画工程については、
-                                    詳細情報を<NuxtLink to="#service02" class="text-custom-blue">「開発実績」</NuxtLink>の項でご確認いただけます。
-                                </p>
-                            </template>
-                        </CommentCard>
-                        <div class="mx-auto">
-                            <FolderStructure></FolderStructure>
+                            </div> -->
+
+                            <VennDiagram></VennDiagram>
+                            <CommentCard class="mt-4 mb-8 mr-4 md:max-w-screen-commentCardMaxWidth md:mx-auto">
+                                <template #content>
+                                    <p class="text-sm md:text-base w-full text-center break-keep">
+                                        弊社が提供するシステムの概要です。
+                                        詳しいシステムの内容や、
+                                        技術スタック、参画工程については、
+                                        詳細情報を<NuxtLink to="#service02" class="text-custom-blue">「開発実績」</NuxtLink>の項でご確認いただけます。
+                                    </p>
+                                </template>
+                            </CommentCard>
+                            <div class="mx-auto">
+                                <FolderStructure></FolderStructure>
+                            </div>
                         </div>
                     </div>
                 </div>
