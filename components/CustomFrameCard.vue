@@ -50,6 +50,7 @@
     font-size: 0.875rem;
     white-space: pre-line;
     overflow-wrap: break-word;
+    word-break: keep-all;
     text-align: center;
     border-radius: 0.25rem;
     border: 1px solid var(--custom-color-gray);
