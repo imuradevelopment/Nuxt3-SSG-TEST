@@ -244,6 +244,7 @@
         <div class="text-xs md:text-sm text-left">
           <CustomTable :items="companySummary" :showHeader="false"></CustomTable>
         </div>
+
       </section>
       <section class="text-center mb-8 md:mb-16">
         <h2 id="company05" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス
@@ -338,11 +339,11 @@ const companySummary = [
   },
   {
     column1: "オフィス",
-    column2: '<div class="flex flex-wrap"><div>〒153-0043<br/>東京都目黒区東山１－６－２<br/>TPR中目黒ビル<br/>　7F 受付<br/>　8F 開発フロア<br/>　9F セミナーフロア</div><a href="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu" target="_blank" class="m-auto bg-custom-blue text-white py-2 px-4 rounded-full">MAP</a></div>'
+    column2: '<div class="flex flex-wrap"><div>〒153-0043<br/>東京都目黒区東山１－６－２<br/>TPR中目黒ビル<br/>　7F 受付<br/>　8F 開発フロア<br/>　9F セミナーフロア</div><a href="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu" target="_blank" class="m-auto mt-4 md:mt-auto bg-custom-blue text-white py-2 px-4 rounded-full">MAP</a></div>'
   },
   {
     column1: "連絡先",
-    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue underline">http://www.vaile.co.jp</a></div><a href="/contact" class="m-auto bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div>'
+    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue underline">http://www.vaile.co.jp</a></div><a href="/contact" class="m-auto mt-4 md:mt-auto bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div>'
   }
 ]
 
