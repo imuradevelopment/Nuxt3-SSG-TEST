@@ -19,7 +19,36 @@
       <section class="text-center mt-8 md:mt-20">
         <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">TOPメッセージ</h2>
 
-        <div class="flex md:items-center md:justify-center flex-col">
+        <CustomFrameCard>
+          <template #title>
+            ベイルの存在意義
+          </template>
+          <template #content>
+            私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br />
+            「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br />
+            <span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">
+              ベイルは、仕事と人生に誇りとやりがいを持ち、共に成長してゆく為の器となる会社です。<br />
+            </span>
+          </template>
+        </CustomFrameCard>
+
+        <CustomFrameCard>
+          <template #title>
+            お客様のニーズに応えるソリューション
+          </template>
+          <template #content>
+            私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。<br />
+            迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
+            Windowsアプリケーション、エンタープライズシステムなど、お客様の<span
+              class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">「こうしたい」</span>に実現力として活かします。<br />
+            最新技術に対応できる体制を整えておりますので、お気軽にご相談ください。<br />
+            <span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">
+              確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。<br />
+            </span>
+          </template>
+        </CustomFrameCard>
+
+        <!-- <div class="flex md:items-center md:justify-center flex-col">
           <h3
             class="mt-4 ml-4 md:ml-0 py-2 px-4 text-base md:text-lg font-bold break-keep text-left md:text-center text-custom-gray rounded border border-custom-gray w-fit translate-y-1/2 bg-white">
             ベイルの存在意義
@@ -64,8 +93,8 @@
               確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。<br />
             </span>
           </p>
-        </div>
-  
+        </div> -->
+
         <!-- <div>
           <div class="hidden md:inline-block">
             <div ref="flex1" class="flex flex-wrap justify-around items-stretch mt-8">
@@ -217,7 +246,8 @@
         </div>
       </section>
       <section class="text-center mb-8 md:mb-16">
-        <h2 id="company05" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス</h2>
+        <h2 id="company05" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス
+        </h2>
         <GlassCard class="p-4">
           <template #content>
             <div class="flex flex-row flex-wrap">
@@ -246,6 +276,7 @@
 </template>
 
 <script setup lang="ts">
+import CustomFrameCard from '~/components/CustomFrameCard.vue'
 import CustomTable from '~/components/CustomTable.vue'
 import GlassCard from '~/components/GlassCard.vue'
 import PageHeader from '~/components/PageHeader.vue'
@@ -307,11 +338,11 @@ const companySummary = [
   },
   {
     column1: "オフィス",
-    column2: '<div class="flex flex-wrap"><div>〒153-0043<br/>東京都目黒区東山１－６－２<br/>TPR中目黒ビル<br/>　7F 受付<br/>　8F 開発フロア<br/>　9F セミナーフロア</div><div class="m-auto"><a href="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu" target="_blank"><button class="bg-custom-blue text-white py-2 px-4 rounded-full">MAP</button></a></div></div>'
+    column2: '<div class="flex flex-wrap"><div>〒153-0043<br/>東京都目黒区東山１－６－２<br/>TPR中目黒ビル<br/>　7F 受付<br/>　8F 開発フロア<br/>　9F セミナーフロア</div><a href="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu" target="_blank" class="m-auto bg-custom-blue text-white py-2 px-4 rounded-full">MAP</a></div>'
   },
   {
     column1: "連絡先",
-    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue underline">http://www.vaile.co.jp</a></div><div class="m-auto"><a href="/contact" class="bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div></div>'
+    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue underline">http://www.vaile.co.jp</a></div><a href="/contact" class="m-auto bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div>'
   }
 ]
 
@@ -337,5 +368,4 @@ useDetectWrap(flex1)
 
 .noWrapped {
   flex-basis: 32rem;
-}
-</style>
+}</style>

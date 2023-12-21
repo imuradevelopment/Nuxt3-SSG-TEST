@@ -103,6 +103,10 @@
 
 .css-art--pie h3 {
     margin: 0 0 0.75em;
+    font-size: x-large;
+}
+.css-art--pie h3::before {
+    content: "▼ ";
 }
 
 .css-art--pie ul {
@@ -166,7 +170,10 @@
     background: #c5674c;
 }
 
-.pie-main-intersection h3 {
+.pie-main-intersection h3,
+.pie-main-intersection div {
+    font-size: large;
+    font-weight: bold;
     color: #444;
 }
 
