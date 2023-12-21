@@ -48,9 +48,9 @@
                                     事業への取り組み
                                 </template>
                                     <template #content>
-                                        弊社では<span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">3つの事業</span>を柱として、システム構築・改修はもとより、<br />
-                                        運用改善やお客様サポートなどの幅広いニーズに応え、<br />
-                                        より使いやすいシステム、最適な技術者チームをご提案致します。<br />
+                                        弊社では<span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">3つの事業</span>を柱として、システム構築・改修はもとより、<br class="hidden md:inline-block" />
+                                        運用改善やお客様サポートなどの幅広いニーズに応え、<br class="hidden md:inline-block" />
+                                        より使いやすいシステム、最適な技術者チームをご提案致します。<br class="hidden md:inline-block" />
                                     </template>
                             </CustomFrameCard>
 

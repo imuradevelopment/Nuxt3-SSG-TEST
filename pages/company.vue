@@ -24,10 +24,10 @@
             ベイルの存在意義
           </template>
           <template #content>
-            私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br />
-            「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br />
+            私どもベイルにおいては、個人の提案や成長が会社の発展につながると考えています。<br class="hidden md:inline-block" />
+            「自分の人生については自分で考える」ということが、ようやく当たり前になりました。<br class="hidden md:inline-block" />
             <span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">
-              ベイルは、仕事と人生に誇りとやりがいを持ち、共に成長してゆく為の器となる会社です。<br />
+              ベイルは、仕事と人生に誇りとやりがいを持ち、共に成長してゆく為の器となる会社です。<br class="hidden md:inline-block" />
             </span>
           </template>
         </CustomFrameCard>
@@ -37,13 +37,13 @@
             お客様のニーズに応えるソリューション
           </template>
           <template #content>
-            私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。<br />
+            私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。<br class="hidden md:inline-block" />
             迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
             Windowsアプリケーション、エンタープライズシステムなど、お客様の<span
-              class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">「こうしたい」</span>に実現力として活かします。<br />
-            最新技術に対応できる体制を整えておりますので、お気軽にご相談ください。<br />
+              class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">「こうしたい」</span>に実現力として活かします。<br class="hidden md:inline-block" />
+            最新技術に対応できる体制を整えておりますので、お気軽にご相談ください。<br class="hidden md:inline-block" />
             <span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">
-              確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。<br />
+              確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。<br class="hidden md:inline-block" />
             </span>
           </template>
         </CustomFrameCard>
