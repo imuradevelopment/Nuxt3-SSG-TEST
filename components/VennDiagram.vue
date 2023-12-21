@@ -173,7 +173,7 @@
 .pie-main-intersection h3,
 .pie-main-intersection div {
     font-size: large;
-    font-weight: bold;
+    font-weight: 500;
     color: #444;
 }
 
