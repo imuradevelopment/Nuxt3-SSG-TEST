@@ -36,7 +36,7 @@
                         class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</NuxtLink>
                     <NuxtLink to="/service#service01"
                         class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
-                        SI・IT・SEサービス</NuxtLink>
+                        事業概要</NuxtLink>
                     <NuxtLink to="/service#service02"
                         class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                         開発実績</NuxtLink>
