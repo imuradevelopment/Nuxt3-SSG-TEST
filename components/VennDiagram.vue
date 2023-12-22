@@ -88,7 +88,7 @@
 
 .css-art--pie h3 {
     box-sizing: border-box;
-    width: 100%;
+    /* width: 100%; */
     color: rgb(173, 53, 53);
 }
 
@@ -105,6 +105,7 @@
     margin: 0 0 0.75em;
     font-size: x-large;
 }
+
 .css-art--pie h3::before {
     content: "▼ ";
 }
@@ -237,9 +238,14 @@
 
     .css-art--pie h3 {
         position: absolute;
-        top: -2em;
+        /* top: -2em; */
+        top: 0.5em;
         box-sizing: border-box;
-        width: 100%;
+        /* width: 100%; */
+    }
+
+    .css-art--pie h3::before {
+        content: "";
     }
 
     .css-art--pie ul {
@@ -255,10 +261,14 @@
     }
 
     .css-art--pie-1 h3 {
-        padding-right: 4em;
+        /* padding-right: 4em; */
         /* font-size: x-large; */ /* mod */
-        left: -2rem; /* mod */
+        /* left: -2rem; */
         font-size: xx-large; /* mod */
+        left: -1rem;
+        padding: 0.5rem 1rem;
+        background: rgba(0,0,0,.5);
+        color: #fff;
     }
 
     .css-art--pie-1 ul {
@@ -284,11 +294,16 @@
 
     .css-art--pie-2 h3 {
         /* padding-right: 2em; */ /* mod */
-        color: rgb(53, 161, 172);
+        /* color: rgb(53, 161, 172); */
         text-align: right;
         /* font-size: x-large; */ /* mod */
         left: 0rem; /* mod */
         font-size: xx-large; /* mod */
+        left: 6em;
+        background: rgba(0,0,0,.5);
+        padding: 0.5rem 1rem;
+        width: max-content;
+        color: white;
     }
 
     .css-art--pie-2 ul {
@@ -314,12 +329,18 @@
 
     .css-art--pie-3 h3 {
         top: auto;
-        left: 0em;
-        bottom: -3em;
-        color: rgb(242, 141, 40);
+        /* left: 0em; */
+        /* bottom: -3em; */
+        /* color: rgb(242, 141, 40); */
         text-align: center;
         /* font-size: x-large; */
         font-size: xx-large;
+        bottom: -1em;
+        color: white;
+        font-size: xx-large;
+        left: 3em;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 0.5rem 1rem;
     }
 
     .css-art--pie-3 ul {
