@@ -73,7 +73,7 @@
         :buttons="[
             { to: '/company#TEST', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
-          background="bg-[url('/images/top/001.webp')] bg-center bg-cover"
+          background="bg-[url('/images/top/001.jpg')] bg-center bg-cover"
           backgroundMask="bg-custom-blue/20"
       >
         <template #title>
@@ -95,7 +95,7 @@
         :buttons="[
             { to: '/service', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
-        background="bg-[url('/images/top/002.webp')] bg-center bg-cover"
+        background="bg-[url('/images/top/002.jpg')] bg-center bg-cover"
         backgroundMask="bg-custom-blue/20"
       >
         <template #title>
@@ -115,7 +115,7 @@
         :buttons="[
             { to: '/service', type:'', hoverArrowType:'', buttonStyle:'', class: '', label: 'MORE' },
           ]"
-        background="bg-[url('/images/top/002.webp')] bg-center bg-cover"
+        background="bg-[url('/images/top/002.jpg')] bg-center bg-cover"
         backgroundMask="bg-custom-blue/20"
       >
         <template #title>
@@ -129,7 +129,7 @@
       </CustomCard>
     </div>
   </div>
-  <div class="mx-7 bg-[url('/images/top/003.webp')] bg-center bg-cover">
+  <div class="mx-7 bg-[url('/images/top/003.jpg')] bg-center bg-cover">
     <div class="flex justify-center items-stretch bg-custom-blue/20">
       <div class="w-96">
         <CustomCard 
@@ -165,7 +165,7 @@
         { to: '/contact', type:'', hoverArrowType:'', buttonStyle:'', class: 'w-80', label: '採用に関するお問い合わせ' },
         { to: '/contact', type:'', hoverArrowType:'', buttonStyle:'', class: 'w-80', label: 'その他お問い合わせ' },
       ]"
-      background="bg-[url('/images/top/004.webp')] bg-center bg-cover"
+      background="bg-[url('/images/top/004.jpg')] bg-center bg-cover"
       backgroundMask="bg-custom-blue/20"
     >
       <template #title>
@@ -179,7 +179,7 @@
 
   <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="">
-      <TrapezoidCard src="/images/top/001.webp">
+      <TrapezoidCard src="/images/top/001.jpg">
         <template v-slot:tag>TOP 1</template>
         <template v-slot:title>会社情報</template>
         <template v-slot:content>
@@ -196,7 +196,7 @@
       </TrapezoidCard>
     </div>
     <div class="">
-      <TrapezoidCard src="/images/top/002.webp">
+      <TrapezoidCard src="/images/top/002.jpg">
         <template v-slot:tag>TOP 2</template>
         <template v-slot:title>事業情報</template>
         <template v-slot:content>
@@ -216,7 +216,7 @@
 
   <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="">
-      <TrapezoidCard src="/images/top/003.webp">
+      <TrapezoidCard src="/images/top/003.jpg">
         <template v-slot:tag>TOP 3</template>
         <template v-slot:title>採用情報</template>
         <template v-slot:content>
@@ -233,7 +233,7 @@
       </TrapezoidCard>
     </div>
     <div class="">
-      <TrapezoidCard src="/images/top/004.webp">
+      <TrapezoidCard src="/images/top/004.jpg">
         <template v-slot:tag>TOP 4</template>
         <template v-slot:title>お問い合わせ</template>
         <template v-slot:content>
