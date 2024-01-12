@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         },
     },
     ssr: true, // SSRを有効にする
-    target: "static", // 静的ホスティングを対象とする
+    // target: "static", // 静的ホスティングを対象とする
     experimental: {
         payloadExtraction: false,
     },
