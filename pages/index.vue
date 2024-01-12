@@ -216,7 +216,7 @@
 
   <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="">
-      <TrapezoidCard src="/images/top/003.jpg">
+      <TrapezoidCard src="/images/top/003.png">
         <template v-slot:tag>TOP 3</template>
         <template v-slot:title>採用情報</template>
         <template v-slot:content>
