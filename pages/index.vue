@@ -179,7 +179,7 @@
 
   <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="">
-      <TrapezoidCard src="./images/top/001.jpg">
+      <TrapezoidCard src="/images/top/001.jpg">
         <template v-slot:tag>TOP 1</template>
         <template v-slot:title>会社情報</template>
         <template v-slot:content>
@@ -196,7 +196,7 @@
       </TrapezoidCard>
     </div>
     <div class="">
-      <TrapezoidCard src="./images/top/002.jpg">
+      <TrapezoidCard src="/images/top/002.jpg">
         <template v-slot:tag>TOP 2</template>
         <template v-slot:title>事業情報</template>
         <template v-slot:content>
@@ -216,7 +216,7 @@
 
   <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="">
-      <TrapezoidCard src="./images/top/003.jpg">
+      <TrapezoidCard src="/images/top/003.jpg">
         <template v-slot:tag>TOP 3</template>
         <template v-slot:title>採用情報</template>
         <template v-slot:content>
@@ -233,7 +233,7 @@
       </TrapezoidCard>
     </div>
     <div class="">
-      <TrapezoidCard src="./images/top/004.jpg">
+      <TrapezoidCard src="/images/top/004.jpg">
         <template v-slot:tag>TOP 4</template>
         <template v-slot:title>お問い合わせ</template>
         <template v-slot:content>
@@ -277,7 +277,7 @@
       </NuxtLink>
     </li>
   </ul> -->
-  <!-- <script src="../assets/ts/lines.ts"></script> -->
+  <!-- <script src="./assets/ts/lines.ts"></script> -->
 </template>
 
 <script setup lang = "ts" >

@@ -3,7 +3,7 @@
         <!-- レイヤー1: 画像部分 -->
         <div class="z-10 relative" style="width: 50%; clip-path: url(#imageClip); margin-bottom: 1rem;">
             <!-- レイヤー1: 画像 -->
-            <NuxtImg :src="props.src" alt="Image" class="w-full h-full object-cover" id="imageElement"></NuxtImg>
+            <img :src="props.src" alt="Image" class="w-full h-full object-cover" id="imageElement" />
             <!-- レイヤー1: 画像クリップ -->
             <!-- 以下svgは親要素に対して全画面サイズに配置し、覆い隠すためのスタイリング -->
             <svg width="0" height="0" id="imageClipSvg" class="absolute inset-0">
