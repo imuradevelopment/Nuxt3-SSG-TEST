@@ -48,6 +48,7 @@
     </div>
 </template>
 <script setup lang="ts">
+import { onMounted } from "vue";
 import { defineProps } from "vue";
 const props = defineProps({
     src : {
