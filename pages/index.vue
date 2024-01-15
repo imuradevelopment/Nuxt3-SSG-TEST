@@ -177,24 +177,55 @@
     </CustomCard>
   </div> -->
 
+
   <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div class="">
-      <TrapezoidCard src="/images/top/001.jpg">
-        <template v-slot:tag>TOP 1</template>
-        <template v-slot:title>会社情報</template>
-        <template v-slot:content>
-          <div class="">ひとりひとりが試行錯誤を重ね、技術者として人間として成長し続け、共に発展してゆく為にVaileは存在しています。</div>
-        </template>
-        <template v-slot:button>
-          <div class="flex space-x-4 justify-end">
-            <!-- レイヤー4: ボタン3 -->
-            <NuxtLink to="/company">
-              <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
-            </NuxtLink>
-          </div>
-        </template>
-      </TrapezoidCard>
-    </div>
+        <div class="">
+        <div class="flex h-full z-10 w-full">
+            <!-- レイヤー1: 画像部分 -->
+            <div class="z-10 relative" style="width: 50%; clip-path: url(#imageClip2); margin-bottom: 1rem;">
+                <!-- レイヤー1: 画像 -->
+                <img src="/images/top/001.jpg" alt="Image" class="w-full h-full object-cover" id="imageElement2" />
+                <!-- レイヤー1: 画像クリップ -->
+                <!-- 以下svgは親要素に対して全画面サイズに配置し、覆い隠すためのスタイリング -->
+                <svg width="0" height="0" id="imageClipSvg2" class="absolute inset-0">
+                    <defs>
+                        <clipPath id="imageClip2">
+                            <!-- jsで新しい座標を設定 -->
+                            <path d=""></path>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <!-- レイヤー2: タイトルとコンテンツ部分 -->
+            <div class=" flex flex-col z-20 relative p-4 pt-0"
+                style="box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.2); margin-left: -40%; padding-left: 37%; margin-top: 1rem; padding-bottom: 1rem; width: 90%">
+                <div class="text-xs text-custom-blue" style="margin-top: 1rem; margin-left: -0.25rem;">－ TOP 1 －</div>
+                <!-- レイヤー2: タイトル -->
+                <div class="h-14 mt-2 flex items-center">
+                    <h2 class="text-xl font-bold">会社情報</h2>
+                </div>
+
+                <!-- レイヤー3: コンテンツ -->
+                <div class="grow line-clamp-6 flex items-baseline" style="display: flex; flex-grow: 1;">
+                    <div style="overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6;">
+                        <div class="text-xs lg:text-sm text-ellipsis mb-4" style="text-overflow: ellipsis;">
+                            <div class="">ひとりひとりが試行錯誤を重ね、技術者として人間として成長し続け、共に発展してゆく為にVaileは存在しています。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- レイヤー4: ボタンセクション -->
+                <div class="flex flex-col self-end space-y-2 text-xs md:text-sm w-full">
+              <div class="flex space-x-4 justify-end">
+                <!-- レイヤー4: ボタン3 -->
+                <NuxtLink to="/company">
+                  <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">詳しく見る</button>
+                </NuxtLink>
+              </div>
+                </div>
+            </div>
+        </div>
+        </div>
     <div class="">
       <TrapezoidCard src="/images/top/002.jpg">
         <template v-slot:tag>TOP 2</template>
@@ -370,7 +401,33 @@ import TrapezoidCard from '~/components/TrapezoidCard.vue';
 //     // {minLength: 500, maxLength: 1000} 
 //   );
 // })
-
+onMounted(() => {
+  const observer = new ResizeObserver(function (entries) {
+    for (let entry of entries) {
+      if (entry.target === imageElement2) {
+        const imageWidth = entry.contentRect.width;
+        const imageHeight = entry.contentRect.height;
+        const imageAspect = imageWidth / imageHeight;
+        const hAspect = 0.5;
+        const hypotenuse = imageWidth + 5 * imageAspect;
+        const v = String(imageHeight);
+        const h = String(imageWidth * hAspect);
+        const l = String(hypotenuse);
+        // 新しいクリッピングパス座標を設定
+        const newPath = `M0 0 V${v} H${h} L${l} 0 H0 Z`;
+        document.querySelector("#imageClip2 path")!.setAttribute("d", newPath);
+        document.getElementById("imageClipSvg2")!.setAttribute("width", String(imageWidth));
+        document.getElementById("imageClipSvg2")!.setAttribute("height", String(imageHeight));
+        // viewBoxの値を設定
+        document
+          .getElementById("imageClipSvg2")!
+          .setAttribute("viewBox", `0 0 ${imageWidth} ${imageHeight}`);
+      }
+    }
+  });
+  const imageElement2 = document.getElementById("imageElement2") as HTMLImageElement;
+  observer.observe(imageElement2);
+});
 </script>
 
 <style scoped></style>
