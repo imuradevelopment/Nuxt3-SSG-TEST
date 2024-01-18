@@ -1,6 +1,6 @@
 
 .linkScroll {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: var(--header-height);
 }
 
 .linkScrollPageHeader {
@@ -67,6 +67,10 @@
   --custom-color-platina: rgba(224 224 224);
   --cumtom-color-lightIvory: rgb(238 238 238);
   --cumtom-color-ivory: rgb(204 204 204);
+
+  /* margin */
+  /* headerSize */
+  --header-height: 60px;
 
   /*  */
   --border-color: var(--custom-color-gray);

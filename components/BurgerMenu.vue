@@ -194,9 +194,9 @@
 <script setup lang="ts">
 import {
     House,
-    User,
-    DataAnalysis,
     OfficeBuilding,
+    DataAnalysis,
+    User,
     Plus,
     Minus,
     CaretRight,
@@ -205,9 +205,9 @@ import {
     EditPen,
     School,
     ColdDrink,
+    TrendCharts,
     QuestionFilled,
     Avatar,
-    TrendCharts,
     List,
 } from '@element-plus/icons-vue'
 import { ref } from 'vue'
