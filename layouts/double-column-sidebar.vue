@@ -54,11 +54,13 @@ import Sidebar from '~/components/Sidebar.vue'
 .main {
     width: calc(100% - 160px);
 }
+
 @media screen and (max-width: 768px) {
-  .main {
-    width: 100%;
-  }
+    .main {
+        width: 100%;
+    }
 }
+
 .sidebar {
     width: 160px;
 }
