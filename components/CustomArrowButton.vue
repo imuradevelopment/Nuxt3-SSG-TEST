@@ -41,7 +41,7 @@
             {{ props.buttonTitle }}
         </span>
     </NuxtLink>
-    <NuxtLink v-if="!isOuter" :href="props.to" class="
+        <NuxtLink v-if="isInner" @click="scrollToTarget()" :to="props.to" class="
             w-fit 
             relative 
             inline-flex 
@@ -79,14 +79,58 @@
             overflow-hidden
             shadow-md
         " :style="`--after-content: '${afterContent}'`">
-        <span class="relative z-10">
-            {{ props.buttonTitle }}
-        </span>
-    </NuxtLink>
+            <span class="relative z-10">
+                {{ props.buttonTitle }}
+            </span>
+        </NuxtLink>
+        <NuxtLink v-if="!isOuter && !isInner" :href="props.to" class="
+            w-fit 
+            relative 
+            inline-flex 
+            items-center 
+            justify-center 
+            px-6 
+            py-2 
+            text-lg 
+            cursor-pointer 
+            transition-all 
+            duration-300 
+            ease-in-out 
+            before:absolute 
+            before:inset-0 
+            before:transform 
+            before:-scale-x-0 
+            before:origin-left 
+            before:transition-transform 
+            before:duration-300 
+            before:ease-in-out 
+            before:rounded-full 
+            ml-2  
+            after:transform 
+            after:translate-x-0 
+            after:transition-transform 
+            after:duration-300 
+            after:ease-in-out 
+            hover:border-transparent 
+            hover:before:scale-x-100 
+            origin-left 
+            hover:after:translate-x-4 
+            rounded-l-full 
+            rounded-r-full 
+            hover:rounded-r-full 
+            overflow-hidden
+            shadow-md
+        " :style="`--after-content: '${afterContent}'`">
+            <span class="relative z-10">
+                {{ props.buttonTitle }}
+            </span>
+        </NuxtLink>
 </template>
 
 
 <script setup lang="ts">
+import { useScrollToTarget } from '~/composables/useScrollToTarget'
+const { targetId, scrollToTarget } = useScrollToTarget()
 
 const props = defineProps({
     buttonTitle: {
@@ -128,6 +172,14 @@ const afterContent = computed(() => {
 const isOuter = computed(() => {
     switch (props.arrowType) {
         case 'outer':
+            return true;
+        default:
+            return false;
+    }
+})
+const isInner = computed(() => {
+    switch (props.arrowType) {
+        case 'inner':
             return true;
         default:
             return false;

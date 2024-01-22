@@ -17,7 +17,7 @@
         <CustomArrowButton buttonTitle="外部リンク" arrowType="outer" to="https://www.google.co.jp/" />
         <CustomArrowButton buttonTitle="遷移" arrowType="transition" to="/company" />
         <CustomArrowButton buttonTitle="内部リンク" arrowType="inner" to="/" />
-        <div class="p-4 bg-custom-deepBlue"><CustomArrowButton buttonTitle="内部リンク" arrowType="inner" colorType="yellow" to="/" /></div>
+        <div class="p-4 bg-custom-deepBlue"><CustomArrowButton buttonTitle="内部リンク" arrowType="inner" colorType="yellow" to="/company#company01" /></div>
 
     </section>
     <section class="bg-gradient-to-r from-purple-500 to-pink-500">
