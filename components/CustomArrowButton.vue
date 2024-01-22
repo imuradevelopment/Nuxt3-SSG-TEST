@@ -18,7 +18,7 @@
             before:-scale-x-0 
             before:origin-left 
             before:transition-transform 
-            before:duration-300 
+            before:duration-100 
             before:ease-in-out 
             before:rounded-full 
             ml-2  
@@ -52,7 +52,7 @@
             text-lg 
             cursor-pointer 
             transition-all 
-            duration-300 
+            duration-100 
             ease-in-out 
             before:absolute 
             before:inset-0 
@@ -94,7 +94,7 @@
             text-lg 
             cursor-pointer 
             transition-all 
-            duration-300 
+            duration-100 
             ease-in-out 
             before:absolute 
             before:inset-0 
