@@ -1,47 +1,50 @@
 <template>
-    <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="
-            w-fit 
-            relative 
-            inline-flex 
-            items-center 
-            justify-center 
-            px-6 
-            py-2 
-            text-lg 
-            cursor-pointer 
-            transition-all 
-            duration-150 
-            ease-in-out 
-            before:absolute 
-            before:inset-0 
-            before:transform 
-            before:-scale-x-0 
-            before:origin-left 
-            before:transition-transform 
-            before:duration-150 
-            before:ease-in-out 
-            before:rounded-full 
-            ml-2  
-            after:transform 
-            after:translate-x-0 
-            after:transition-transform 
-            after:duration-150 
-            after:ease-in-out 
-            hover:border-transparent 
-            hover:before:scale-x-100 
-            origin-left 
-            hover:after:translate-x-4 
-            rounded-l-full 
-            rounded-r-full 
-            hover:rounded-r-full 
-            overflow-hidden
-            shadow-md
-        " :style="`--after-content: '${afterContent}'`">
-        <span class="relative z-10">
-            {{ props.buttonTitle }}
-        </span>
-    </NuxtLink>
-        <NuxtLink v-if="isInner" @click="scrollToTarget()" :to="props.to" class="
+    <transition v-if="isOuter">
+        <NuxtLink target="_blank" rel="noopener noreferrer" :href="props.to" class="
+                w-fit 
+                relative 
+                inline-flex 
+                items-center 
+                justify-center 
+                px-6 
+                py-2 
+                text-lg 
+                cursor-pointer 
+                transition-all 
+                duration-150 
+                ease-in-out 
+                before:absolute 
+                before:inset-0 
+                before:transform 
+                before:-scale-x-0 
+                before:origin-left 
+                before:transition-transform 
+                before:duration-150 
+                before:ease-in-out 
+                before:rounded-full 
+                ml-2  
+                after:transform 
+                after:translate-x-0 
+                after:transition-transform 
+                after:duration-150 
+                after:ease-in-out 
+                hover:border-transparent 
+                hover:before:scale-x-100 
+                origin-left 
+                hover:after:translate-x-4 
+                rounded-l-full 
+                rounded-r-full 
+                hover:rounded-r-full 
+                overflow-hidden
+                shadow-md
+            " :style="`--after-content: '${afterContent}'`">
+            <span class="relative z-10">
+                {{ props.buttonTitle }}
+            </span>
+        </NuxtLink>
+    </transition>
+    <transition v-if="isInner">
+        <NuxtLink @click="scrollToTarget()" :to="props.to" class="
             w-fit 
             relative 
             inline-flex 
@@ -83,7 +86,9 @@
                 {{ props.buttonTitle }}
             </span>
         </NuxtLink>
-        <NuxtLink v-if="!isOuter && !isInner" :href="props.to" class="
+    </transition>
+    <transition v-if="!isOuter && !isInner">
+        <NuxtLink :href="props.to" class="
             w-fit 
             relative 
             inline-flex 
@@ -125,6 +130,7 @@
                 {{ props.buttonTitle }}
             </span>
         </NuxtLink>
+    </transition>
 </template>
 
 
