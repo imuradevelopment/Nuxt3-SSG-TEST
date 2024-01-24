@@ -101,6 +101,9 @@ const isCollapse = ref(false)
 </script>
 
 <style>
+.el-menu {
+    border-right: none;
+}
 .el-menu-vertical:not(.el-menu--collapse) {
     width: 160px;
     min-height: 400px;

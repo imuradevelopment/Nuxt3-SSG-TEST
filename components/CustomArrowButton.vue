@@ -1,3 +1,34 @@
+<!-- 
+■■■■■■ 使い方 ■■■■■
+    背景色が明るい場合は「colorType」プロパティの指定無し
+        <div class="p-4 bg-gray-200">
+            <CustomArrowButton arrowType="outer" to="https://www.google.co.jp/"><template #buttonText>別タブリンクに使用</template></CustomArrowButton>
+            <CustomArrowButton arrowType="transition" to="/company"><template #buttonText>ページ遷移に使用</template></CustomArrowButton>
+            <CustomArrowButton arrowType="inner" to="/company#company01"><template #buttonText>ターゲット要素への遷移、ページ内遷移に使用</template></CustomArrowButton>
+        </div>
+
+    背景色が暗い場合は「colorType」プロパティに「yellow」を指定する
+        <div class="p-4 bg-custom-deepBlue">
+            <CustomArrowButton arrowType="outer" colorType="yellow" to="https://www.google.co.jp/"><template #buttonText>別タブリンクに使用</template></CustomArrowButton>
+            <CustomArrowButton arrowType="transition" colorType="yellow" to="/company"><template #buttonText>ページ遷移に使用</template></CustomArrowButton>
+            <CustomArrowButton arrowType="inner" colorType="yellow" to="/company#company01"><template #buttonText>ターゲット要素への遷移、ページ内遷移に使用</template></CustomArrowButton>
+        </div>
+
+■■■■■■ インポート等 ■■■■■
+<script setup lang="ts">
+//ここではコンポーネント内の「<script setup lang="ts">」でインポートし、タグ名を「CustomArrowButton」としている。
+import CustomArrowButton from '~/components/CustomArrowButton.vue'
+// 使いたい人は下記のようにiconをインポートしてボタンテキストに使用できます。
+// 参考：https://element-plus.org/en-US/component/icon.html#icon-collection
+import {
+    EditPen,
+} from '@element-plus/icons-vue'
+</script>
+
+■■■■■■ アイコンを使用する場合の例 ■■■■■
+<CustomArrowButton arrowType="transition" to="/company"><template #buttonText><EditPen class="h-6 w-6 inline" />ベイルの特徴</template></CustomArrowButton>
+ -->
+
 <template>
     <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="
             w-fit 
@@ -38,7 +69,7 @@
             shadow-md
         " :style="`--after-content: '${afterContent}'`">
         <span class="relative z-10">
-            {{ props.buttonTitle }}
+            <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
     <NuxtLink v-if="isInner" @click="scrollToTarget()" :to="props.to" class="
@@ -80,7 +111,7 @@
             shadow-md
         " :style="`--after-content: '${afterContent}'`">
         <span class="relative z-10">
-            {{ props.buttonTitle }}
+            <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
     <NuxtLink v-if="!isOuter && !isInner" :href="props.to" class="
@@ -122,7 +153,7 @@
             shadow-md
         " :style="`--after-content: '${afterContent}'`">
         <span class="relative z-10">
-            {{ props.buttonTitle }}
+            <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
 </template>
@@ -133,10 +164,6 @@ import { useScrollToTarget } from '~/composables/useScrollToTarget'
 const { targetId, scrollToTarget } = useScrollToTarget()
 
 const props = defineProps({
-    buttonTitle: {
-        type: String,
-        required: true,
-    },
     to: {
         type: String,
         required: true,

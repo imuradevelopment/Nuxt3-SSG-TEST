@@ -10,6 +10,13 @@
                 </div>
             </aside>
             <el-main class="el-main-custom main">
+                <div class="background-line-container">
+                    <div class="background-line0 quarter-pixel-border"></div>
+                    <div class="background-line1 quarter-pixel-border"></div>
+                    <div class="background-line2 quarter-pixel-border"></div>
+                    <div class="background-line3 quarter-pixel-border"></div>
+                    <div class="background-line4 quarter-pixel-border"></div>
+                </div>
                 <slot /><!-- pages配下のファイルを表示する -->
             </el-main>
         </div>
@@ -68,5 +75,53 @@ import Sidebar from '~/components/Sidebar.vue'
 .widget--sticky {
     position: sticky;
     top: var(--header-height);
+}
+
+.background-line-container {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    max-width: 1280px;
+    z-index: -1;
+}
+.quarter-pixel-border {
+    height: 100vh;
+    width: 1px;
+    box-shadow: -.25px 0 0 #818181;
+}
+
+.background-line0 {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: -1;
+}
+
+.background-line1 {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    z-index: -1;
+}
+
+.background-line2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+
+.background-line3 {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    z-index: -1;
+}
+
+.background-line4 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: -1;
 }
 </style>
