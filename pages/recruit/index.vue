@@ -81,7 +81,7 @@
             <div class="flex flex-col md2:flex-row">
               <div class="flex flex-col flex-1 order-1 md2:order-none">
                 <div class="h-auto">
-                    <h2 id="recruit02" class="ml-4 md:ml-0 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
+                    <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
                 </div>
                 <div class="h-auto hidden md2:inline-block">
                             <p class="px-4 font-bold break-keep">
