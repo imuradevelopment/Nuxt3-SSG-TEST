@@ -168,6 +168,13 @@ const props = defineProps({
         type: String,
         required: true,
     },
+    height: {
+        type: String,
+        required: false,
+        validator: (value: string) => {
+            return ['3rem'].includes(value)
+        }
+    },
     arrowType: {
         type: String,
         required: true,
@@ -277,7 +284,14 @@ const backgroundcolor = computed(() => {
             return 'transparent'
     }
 })
-
+const height = computed(() => {
+    switch (props.height) {
+        case '3rem':
+            return '3rem'
+        default:
+            return '3rem'
+    }
+})
 </script>
 
 <style scoped>
@@ -292,6 +306,7 @@ a {
     outline: v-bind(outline);
     outline-offset: v-bind(outlineoffset);
     background-color: v-bind(backgroundcolor);
+    height: v-bind(height);
 }
 
 a:after {
