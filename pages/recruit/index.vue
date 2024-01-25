@@ -118,7 +118,7 @@
     <section class="h-48 mt-24 flex w-full bg-cover" style="
         background-image: url(/images/recruit/index/003.png);
     ">
-        <div class="basis-1/2 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
+        <div class="basis-1/3 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
         </div>
         <div class="flex flex-col grow">
             <h2 id="recruit03" class="self-end text-white px-4 text-4xl leading-loose font-bold min-w-fit">ベイルの特徴</h2>
@@ -137,8 +137,10 @@
             </div>
         </div>
         <div class="grow">
-            <div class="z-0 relative -top-8 -right-16 w-[231.5px] h-32 md:w-[463px] md:h-64 bg-custom-deepBlue"></div>
-            <NuxtImg class="z-10 relative -top-64 bg-cover h-64" src="/images/recruit/index/004.png" fit="cover" alt="研修のイメージ"></NuxtImg>
+            <div class="z-0 relative -top-8 -right-12 w-[231.5px] h-32 md:w-[463px] md:h-64 bg-custom-deepBlue">
+                <NuxtImg class="z-10 relative top-8 right-8" src="/images/recruit/index/004.png" fit="inset" sizes="231 463" alt="研修のイメージ"></NuxtImg>
+            </div>
+            <!-- <NuxtImg class="inline-block md:hidden z-10 relative -top-64 h-64" src="/images/recruit/index/004.png" fit="cover" width="231.5px" alt="研修のイメージ"></NuxtImg> -->
             <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
         </div>
     </section>
