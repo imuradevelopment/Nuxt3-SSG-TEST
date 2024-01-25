@@ -186,7 +186,7 @@ const props = defineProps({
         type: String,
         required: false,
         validator: (value: string) => {
-            return ['yellow', 'fill'].includes(value)
+            return ['yellow', 'white'].includes(value)
         }
     }
 })
@@ -224,6 +224,8 @@ const bordercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
             return 'rgba(231 198 148)'
+        case 'white':
+            return 'white'
         default:
             return 'rgb(0 10 135)'
     }
@@ -232,6 +234,8 @@ const color = computed(() => {
     switch (props.colorType) {
         case 'yellow':
             return 'rgba(231 198 148)'
+        case 'white':
+            return 'white'
         default:
             return 'rgb(0 10 135)'
     }
@@ -240,6 +244,8 @@ const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
             return 'rgba(231 198 148)'
+        case 'white':
+            return 'rgb(0 10 135)'
         default:
             return 'rgb(0 10 135)'
     }
@@ -248,6 +254,8 @@ const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
             return 'rgb(0 10 135)'
+        case 'white':
+            return 'white'
         default:
             return 'rgb(231 198 148)'
     }
@@ -255,6 +263,8 @@ const hovercolor = computed(() => {
 const borderwidth = computed(() => {
     switch (props.colorType) {
         case 'yellow':
+            return '2px'
+        case 'white':
             return '2px'
         default:
             return '2px'
@@ -264,6 +274,8 @@ const outline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
             return '2px solid transparent'
+        case 'white':
+            return '2px solid white'
         default:
             return '2px solid transparent'
     }
@@ -272,6 +284,8 @@ const outlineoffset = computed(() => {
     switch (props.colorType) {
         case 'yellow':
             return '2px'
+        case 'white':
+            return '-2px'
         default:
             return '2px'
     }
@@ -279,6 +293,8 @@ const outlineoffset = computed(() => {
 const backgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
+            return 'transparent'
+        case 'white':
             return 'transparent'
         default:
             return 'transparent'
@@ -290,6 +306,16 @@ const height = computed(() => {
             return '3rem'
         default:
             return '3rem'
+    }
+})
+const hoveroutline = computed(() => {
+    switch (props.colorType) {
+        case 'yellow':
+            return '2px solid rgba(231 198 148)'
+        case 'white':
+            return '2px solid white'
+        default:
+            return '2px solid rgb(0 10 135)'
     }
 })
 </script>
@@ -316,6 +342,7 @@ a:after {
 
 a:hover {
     color: v-bind(hovercolor);
+    /* border: v-bind(hoveroutline); */
 }
 
 a:hover:after {

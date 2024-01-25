@@ -118,7 +118,7 @@
     <section class="h-48 mt-24 flex w-full bg-cover" style="
         background-image: url(/images/recruit/index/003.png);
     ">
-        <div class="w-1/3 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
+        <div class="w-1/2 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
         </div>
         <div class="flex flex-col grow">
             <h2 id="recruit03" class="self-end text-white px-4 text-4xl leading-loose font-bold">ベイルの特徴</h2>
