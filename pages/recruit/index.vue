@@ -115,7 +115,7 @@
         </div>
     </section>
 
-    <section class="h-48 flex w-full bg-cover" style="
+    <section class="h-48 mt-24 flex w-full bg-cover" style="
         background-image: url(/images/recruit/index/003.png);
     ">
         <div class="w-1/3 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
