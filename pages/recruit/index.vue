@@ -8,7 +8,9 @@
     </section>
 
     <section class="h-24 p-4 flex justify-end items-center">
-        <CustomArrowButton arrowType="transition" to="/recruit/feature"><template #buttonText><EditPen class="h-6 w-6 inline" />ベイルの特徴</template></CustomArrowButton>
+        <CustomArrowButton arrowType="transition" to="/recruit/feature"><template #buttonText>
+                <EditPen class="h-6 w-6 inline" />ベイルの特徴
+            </template></CustomArrowButton>
     </section>
 
     <!-- <section class="bg-gray-200 grid grid-rows-3 grid-cols-12 auto-rows-min">
@@ -27,7 +29,7 @@
         </div>
     </section> -->
 
-        <!-- <section class="bg-gray-200 flex flex-col md:flex-row">
+    <!-- <section class="bg-gray-200 flex flex-col md:flex-row">
             <div class="order-1 md:order-0 flex-col md:flex-row">
                 <h2 id="recruit02" class="px-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
             </div>
@@ -77,42 +79,53 @@
         </div>
     </section> -->
 
-        <section class="bg-gray-200 flex flex-col md2:flex-row md2:justify-evenly">
-            <div class="flex flex-col md2:flex-row">
-              <div class="flex flex-col flex-1 order-1 md2:order-none">
+    <section class="bg-gray-200 flex flex-col md2:flex-row md2:justify-evenly">
+        <div class="flex flex-col md2:flex-row">
+            <div class="flex flex-col flex-1 order-1 md2:order-none">
                 <div class="h-auto">
                     <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
                 </div>
                 <div class="h-auto hidden md2:inline-block">
-                            <p class="px-4 font-bold break-keep">
-                                代表取締役社長 安部 功<br />
-                                <br />
-                                人を育てるのに一番必要なのは<br class="hidden md2:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
-                            </p>
-                            <div class="mb-2 mt-2">
-                                <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
-                            </div>
+                    <p class="px-4 font-bold break-keep">
+                        代表取締役社長 安部 功<br />
+                        <br />
+                        人を育てるのに一番必要なのは<br class="hidden md2:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
+                    </p>
+                    <div class="mb-2 mt-2">
+                        <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
+                    </div>
                 </div>
-              </div>
-              <div class="flex-1 order-2 md2:order-none h-auto">
-                <NuxtImg class="hidden md2:inline-block" src="/images/recruit/index/002.png" fit="cover" width="560px" alt="代表取締役社長のイメージ"></NuxtImg>
-                <NuxtImg class="inline-block md2:hidden" src="/images/recruit/index/002.png" fit="cover" width="768px" alt="代表取締役社長のイメージ"></NuxtImg>
-              </div>
-              <div class="order-3 md2:order-none p-4 h-auto inline-block md2:hidden">
-                            <p class="px-4 font-bold break-keep">
-                                代表取締役社長 安部 功<br />
-                                <br />
-                                人を育てるのに一番必要なのは<br class="hidden md2:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
-                            </p>
-                            <div class="m-4">
-                                <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
-                            </div>
-              </div>
             </div>
-        </section>
+            <div class="flex-1 order-2 md2:order-none h-auto">
+                <NuxtImg class="hidden md2:inline-block" src="/images/recruit/index/002.png" fit="cover" width="560px"
+                    alt="代表取締役社長のイメージ"></NuxtImg>
+                <NuxtImg class="inline-block md2:hidden" src="/images/recruit/index/002.png" fit="cover" width="768px"
+                    alt="代表取締役社長のイメージ"></NuxtImg>
+            </div>
+            <div class="order-3 md2:order-none p-4 h-auto inline-block md2:hidden">
+                <p class="px-4 font-bold break-keep">
+                    代表取締役社長 安部 功<br />
+                    <br />
+                    人を育てるのに一番必要なのは<br class="hidden md2:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
+                </p>
+                <div class="m-4">
+                    <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="bg-gradient-to-r from-purple-500 to-pink-500">
-        <h2 id="recruit03">ベイルの特徴</h2>
+    <section class="h-48 flex w-full bg-cover" style="
+        background-image: url(/images/recruit/index/003.png);
+    ">
+        <div class="w-1/3 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
+        </div>
+        <div class="flex flex-col grow">
+            <h2 id="recruit03" class="self-end text-white px-4 text-4xl leading-loose font-bold">ベイルの特徴</h2>
+            <div class="grow self-end px-4 mt-8">
+                <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/feature"></CustomArrowButton>
+            </div>
+        </div>
     </section>
 
     <section class="bg-gradient-to-r from-cyan-500 to-blue-500">
@@ -147,7 +160,6 @@
     <section class="bg-gradient-to-r from-cyan-500 to-blue-500">
         <h2 id="recruit10">募集情報</h2>
     </section>
-
 </template>
 
 <script setup lang="ts">
