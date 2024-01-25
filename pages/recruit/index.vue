@@ -137,7 +137,7 @@
             </div>
         </div>
         <div class="grow">
-            <div class="z-0 relative -top-8 -right-16 w-[463px] h-64 bg-custom-deepBlue"></div>
+            <div class="z-0 relative -top-8 -right-16 w-[231.5px] h-32 md:w-[463px] md:h-64 bg-custom-deepBlue"></div>
             <NuxtImg class="z-10 relative -top-64 bg-cover h-64" src="/images/recruit/index/004.png" fit="cover" alt="研修のイメージ"></NuxtImg>
             <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
         </div>
