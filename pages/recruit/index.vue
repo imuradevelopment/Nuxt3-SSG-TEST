@@ -130,20 +130,20 @@
 
     <section class="mt-24 flex justify-items-stretch">
         <div class="flex flex-col gap-y-8">
-            <h2 id="recruit04" class="z-20 self-end w-fit min-w-fit pr-36 -mr-12 text-white px-4 text-4xl leading-loose font-bold bg-custom-deepBlue">研修制度</h2>
+            <h2 id="recruit04" class="z-20 self-end w-fit min-w-fit pr-36 -mr-12 text-white px-4 text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue">研修制度</h2>
             <p class="z-20 self-end mr-4 font-bold">成長に繋がるトレーニング制度</p>
             <div class="z-20 self-end mr-28">
                 <CustomArrowButton arrowType="transition" to="/recruit/induction"></CustomArrowButton>
             </div>
         </div>
         <div class="grow">
-            <div class="z-0 relative -top-8 -right-12 w-[33.333333%] h-32 md:w-[463px] md:h-64 bg-custom-deepBlue">
+            <div class="z-0 relative -top-8 -right-12 w-[231.5px] h-32 md:w-[463px] md:h-64 bg-custom-deepBlue">
                 <NuxtImg class="z-10 relative top-8 right-8" src="/images/recruit/index/004.png" fit="inset" sizes="231 463" alt="研修のイメージ"></NuxtImg>
             </div>
-            <!-- <NuxtImg class="inline-block md:hidden z-10 relative -top-64 h-64" src="/images/recruit/index/004.png" fit="cover" width="231.5px" alt="研修のイメージ"></NuxtImg> -->
-            <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
         </div>
     </section>
+    <!-- <NuxtImg class="inline-block md:hidden z-10 relative -top-64 h-64" src="/images/recruit/index/004.png" fit="cover" width="231.5px" alt="研修のイメージ"></NuxtImg> -->
+    <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
 
     <section class="bg-gradient-to-r from-cyan-500 to-blue-500">
         <h2 id="recruit04">研修制度</h2>
