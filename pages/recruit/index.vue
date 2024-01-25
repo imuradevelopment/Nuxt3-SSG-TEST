@@ -131,7 +131,7 @@
     <section class="mt-24 flex justify-items-stretch">
         <div class="flex flex-col gap-y-8">
             <h2 id="recruit04" class="z-20 self-end w-fit min-w-fit pr-20 md:pr-36 -mr-12 text-white px-4 text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue">研修制度</h2>
-            <p class="z-20 self-end mr-4 font-bold">成長に繋がるトレーニング制度</p>
+            <p class="z-20 self-end md:mr-4 font-bold text-sm md:text-base">成長に繋がるトレーニング制度</p>
             <div class="z-20 self-end md:mr-28">
                 <CustomArrowButton arrowType="transition" to="/recruit/induction"></CustomArrowButton>
             </div>
