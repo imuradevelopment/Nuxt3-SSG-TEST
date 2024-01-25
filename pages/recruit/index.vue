@@ -121,10 +121,25 @@
         <div class="basis-1/2 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
         </div>
         <div class="flex flex-col grow">
-            <h2 id="recruit03" class="self-end text-white px-4 text-4xl leading-loose font-bold">ベイルの特徴</h2>
+            <h2 id="recruit03" class="self-end text-white px-4 text-4xl leading-loose font-bold min-w-fit">ベイルの特徴</h2>
             <div class="grow self-end px-4 mt-8">
                 <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/feature"></CustomArrowButton>
             </div>
+        </div>
+    </section>
+
+    <section class="mt-24 flex justify-items-stretch">
+        <div class="flex flex-col gap-y-8">
+            <h2 id="recruit04" class="z-20 self-end w-fit pr-36 -mr-12 text-white px-4 text-4xl leading-loose font-bold bg-custom-deepBlue">研修制度</h2>
+            <p class="z-20 self-end mr-4 font-bold">成長に繋がるトレーニング制度</p>
+            <div class="z-20 self-end mr-28">
+                <CustomArrowButton arrowType="transition" to="/recruit/induction"></CustomArrowButton>
+            </div>
+        </div>
+        <div class="grow">
+            <div class="z-0 relative -top-8 -right-16 w-[463px] h-64 bg-custom-deepBlue"></div>
+            <NuxtImg class="z-10 relative -top-64 bg-cover h-64" src="/images/recruit/index/004.png" fit="cover" alt="研修のイメージ"></NuxtImg>
+            <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
         </div>
     </section>
 
