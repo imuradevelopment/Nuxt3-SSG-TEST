@@ -171,7 +171,7 @@
         <h2 id="recruit09">社員紹介</h2>
     </section>
 
-    <section class="mt-24 h-96 md:h-64 bg-[url('/images/recruit/index/013.png')]">
+    <section class="mt-24 mb-24 h-96 md:h-64 bg-[url('/images/recruit/index/013.png')]">
         <h2 id="recruit10" class="text-white px-4 text-4xl leading-loose font-bold w-fit ml-auto mr-auto">募集情報</h2>
         <div class="flex flex-col items-center md:flex-row md:justify-around">
             <div class="mt-6">
