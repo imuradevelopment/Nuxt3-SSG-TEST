@@ -13,6 +13,12 @@ export default defineNuxtConfig({
         payloadExtraction: false,
     },
     app: {
+        // NUXT_APP_BASE_URL
+        baseURL: '/',
+        // baseURL: '/Nuxt3-SSG-TEST',
+        // NUXT_APP_CDN_URL
+        cdnURL: '/',
+        // cdnURL: '/Nuxt3-SSG-TEST',
         head: {
             charset: "utf-8",
             viewport: "width=device-width, initial-scale=1",

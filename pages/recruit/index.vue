@@ -1,7 +1,5 @@
 <template>
-    <section class="flex flex-col bg-cover" style="
-                background-image: url(/images/recruit/index/001.png);
-            ">
+    <section class="flex flex-col bg-cover bg-[url('/images/recruit/index/001.png')]">
         <h1 id="recruit01" class="self-end m-4 text-4xl font-bold text-white">採用情報</h1>
         <div class="self-end mr-10 text-lg font-bold text-white">Recruit</div>
         <p class="mt-2 text-center mb-4 leading-10 text-lg font-bold text-white bg-custom-lightBlue">自身の成長が選択肢を拡げ、影響を与える</p>
@@ -115,9 +113,7 @@
         </div>
     </section>
 
-    <section class="h-48 mt-24 flex w-full bg-cover" style="
-        background-image: url(/images/recruit/index/003.png);
-    ">
+    <section class="h-48 mt-24 flex w-full bg-cover bg-[url('/images/recruit/index/003.png')]">
         <div class="basis-1/3 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
         </div>
         <div class="flex flex-col grow">
