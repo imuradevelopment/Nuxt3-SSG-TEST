@@ -114,7 +114,7 @@ import {
             <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
-    <NuxtLink v-if="!isOuter && !isInner" :href="props.to" class="
+    <NuxtLink v-if="!isOuter && !isInner" @click="scrollToTarget()" :to="props.to" class="
             w-fit 
             relative 
             inline-flex 
