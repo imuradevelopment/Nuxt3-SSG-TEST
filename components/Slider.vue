@@ -3,13 +3,13 @@
         <h2 id="recruit09" class="px-4 w-fit text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue text-white">社員紹介</h2>
         <div class="w-full h-[410px] flex justify-center items-center">
             <div class="flex flex-col h-full">
-                <img class="slide object-cover" :src="images[index]" alt="社員紹介" />
-                <div class="mb-8 flex-1 flex h-full items-end justify-center space-x-8 text-4xl font-bold text-custom-deepBlue">
+                <img class="ml-16 slide object-cover" :src="images[index]" alt="社員紹介" />
+                <div class="mb-8 ml-16 flex-1 flex h-full items-end justify-center space-x-8 text-4xl font-bold text-custom-deepBlue">
                     <div class="arrow cursor-pointer h-10 w-10 leading-9 border-2 rounded-full border-custom-deepBlue bg-gray-100" @click="prev">←</div>
                     <div class="arrow cursor-pointer h-10 w-10 leading-9 border-2 rounded-full border-custom-deepBlue bg-gray-100" @click="next">→</div>
                 </div>
             </div>
-            <div class="mb-8 w-16 self-end text-4xl font-bold text-custom-deepBlue">{{ index + 1 }}/{{ images.length }}</div>
+            <div class="mb-8 w-16 h-16 self-end border-2 rounded-full border-custom-deepBlue bg-gray-100 flex justify-center items-center"><div class="text-4xl font-bold text-custom-deepBlue leading-[3.5rem]">{{ index + 1 }}/{{ images.length }}</div></div>
         </div>
     </section>
 </template>
