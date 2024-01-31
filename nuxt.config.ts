@@ -14,10 +14,10 @@ export default defineNuxtConfig({
     },
     app: {
         // NUXT_APP_BASE_URL
-        baseURL: '/',
+        baseURL: "/",
         // baseURL: '/Nuxt3-SSG-TEST',
         // NUXT_APP_CDN_URL
-        cdnURL: '/',
+        cdnURL: "/",
         // cdnURL: '/Nuxt3-SSG-TEST',
         head: {
             charset: "utf-8",
@@ -42,6 +42,11 @@ export default defineNuxtConfig({
                 },
             },
         },
+        build: {
+            rollupOptions: {
+                external: ["./swiper/element/bundle"],
+            },
+        },
     },
     elementPlus: {
         importStyle: "scss",
@@ -62,6 +67,11 @@ export default defineNuxtConfig({
     },
     tailwindcss: {
         configPath: "~/tailwind.config.ts",
+    },
+    vue: {
+        compilerOptions: {
+            isCustomElement: (tag) => /^(swiper|swiper-slide|swiper-container)$/.test(tag),
+        },
     },
     // scrollBehavior(to: any, from: any, savedPosition: any) {
     //     console.log(to);

@@ -167,8 +167,9 @@
         </section>
     </div>
 
-    <section class="bg-gradient-to-r from-purple-500 to-pink-500">
-        <h2 id="recruit09">社員紹介</h2>
+
+    <section class="mt-24">
+        <Slider />
     </section>
 
     <section class="mt-24 mb-24 h-96 md:h-64 bg-[url('/images/recruit/index/013.png')]">
@@ -195,6 +196,7 @@ definePageMeta({
     layout: 'double-column-sidebar'
 })
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
+import Slider from '~/components/Slider.vue'
 import {
     EditPen,
 } from '@element-plus/icons-vue'
