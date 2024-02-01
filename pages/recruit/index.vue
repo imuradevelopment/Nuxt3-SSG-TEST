@@ -116,7 +116,7 @@
         <section class="bg-gray-200 flex flex-col md:flex-row">
             <div class="flex-1 flex flex-col space-y-6 pb-4">
             <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
-            <img class="md:hidden object-cover" src="/images/recruit/index/002.png" alt="代表取締役社長のイメージ"></img>
+            <img class="md:hidden object-cover" src="/images/recruit/index/002.png" alt="代表取締役社長のイメージ" />
             <p class="px-4 font-bold break-keep">
                 代表取締役社長 安部 功<br />
                 <br />
@@ -125,7 +125,7 @@
             <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
             </div>
             <div>
-                <img class="hidden md:inline-block object-cover" src="/images/recruit/index/002.png" alt="代表取締役社長のイメージ"></img>
+                <img class="hidden md:inline-block object-cover" src="/images/recruit/index/002.png" alt="代表取締役社長のイメージ" />
             </div>
         </section>
 
