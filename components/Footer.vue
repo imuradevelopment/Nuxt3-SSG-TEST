@@ -112,7 +112,7 @@
             </div>
         </el-col>
     </el-row>
-    <el-row align="middle" class="pl-6 md:pl-12 text-black text-xs font-light">
+    <el-row align="middle" class="pl-6 md:pl-12 bg-white text-black text-xs font-light">
         <el-col :span="12">
             <el-row align="middle">
                 <NuxtLink @click="scrollToTarget()" to="/policy">
