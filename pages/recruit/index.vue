@@ -77,7 +77,7 @@
         </div>
     </section> -->
 
-    <section class="bg-gray-200 flex flex-col md2:flex-row md2:justify-evenly">
+    <!-- <section class="bg-gray-200 flex flex-col md2:flex-row md2:justify-evenly">
         <div class="flex flex-col md2:flex-row">
             <div class="flex flex-col flex-1 order-1 md2:order-none">
                 <div class="h-auto">
@@ -111,7 +111,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="h-48 mt-24 flex w-full bg-cover bg-[url('/images/recruit/index/003.png')]">
         <div class="basis-1/3 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
@@ -124,7 +124,7 @@
         </div>
     </section>
 
-    <section class="mt-32 w-fit ml-auto mr-auto flex justify-items-stretch">
+    <!-- <section class="mt-32 w-fit ml-auto mr-auto flex justify-items-stretch">
         <div class="flex flex-col gap-y-4 md:gap-y-8">
             <h2 id="recruit04" class="z-20 self-end w-fit min-w-fit pr-20 md:pr-36 -mr-12 text-white px-4 text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue">研修制度</h2>
             <p class="z-20 self-end md:mr-4 font-bold text-sm md:text-base">成長に繋がるトレーニング制度</p>
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- <NuxtImg class="inline-block md:hidden z-10 relative -top-64 h-64" src="/images/recruit/index/004.png" fit="cover" width="231.5px" alt="研修のイメージ"></NuxtImg> -->
     <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
 
