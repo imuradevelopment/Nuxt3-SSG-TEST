@@ -7,7 +7,7 @@
 
     <section class="h-24 p-4 flex justify-end items-center">
         <CustomArrowButton arrowType="transition" to="/recruit/feature"><template #buttonText>
-                <EditPen class="h-6 w-6 inline" />ベイルの特徴
+                <Pointer class="h-6 w-6 inline" />ベイルの特徴
             </template></CustomArrowButton>
     </section>
 
@@ -234,7 +234,7 @@ definePageMeta({
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
 import Slider from '~/components/Slider.vue'
 import {
-    EditPen,
+    Pointer,
 } from '@element-plus/icons-vue'
 </script>
 
