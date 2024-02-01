@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full flex flex-col bg-[url('/images/recruit/index/009.png')]">
+    <section class="w-full flex flex-col bg-cover bg-[url('/images/recruit/index/009.png')]">
         <h2 id="recruit09" class="px-4 w-fit text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue text-white">社員紹介</h2>
         <div class="mb-4 w-full flex-1 flex justify-center items-center">
             <div class="ml-20 flex flex-col h-full w-72">
