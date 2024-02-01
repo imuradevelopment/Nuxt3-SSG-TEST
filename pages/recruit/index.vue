@@ -156,6 +156,26 @@
             </div>
         </div>
     </section> -->
+
+        <section class="mt-32 flex flex-row justify-stretch">
+            <div class="w-1/2 flex flex-col space-y-8 relative top-8 md:top-16">
+                <div class="flex flex-row">
+                    <h2 id="recruit04" class="z-20 w-full self-end text-white px-4 text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue">研修制度</h2>
+                    <div class="z-20 leading-loose bg-custom-deepBlue w-6 md:w-12 -mr-6 md:-mr-12"></div>
+                </div>
+                <p class="z-20 self-start ml-4 md:mr-4 font-bold text-sm md:text-base">成長に繋がるトレーニング制度</p>
+                <div class="z-20 self-start ml-4">
+                    <CustomArrowButton arrowType="transition" to="/recruit/induction"></CustomArrowButton>
+                </div>
+            </div>
+            <div class="w-1/2 overflow-hidden">
+                <div class="pr-6 md:pr-12 pt-6 md:pt-12">
+                    <div class="z-0 relative -top-6 md:-top-12 -right-6 md:-right-12  bg-custom-deepBlue">
+                        <img class="z-10 relative top-4 md:top-8 right-4 md:right-8" src="/images/recruit/index/004.png" alt="研修のイメージ"></img>
+                    </div>
+                </div>
+            </div>
+        </section>
     <!-- <NuxtImg class="inline-block md:hidden z-10 relative -top-64 h-64" src="/images/recruit/index/004.png" fit="cover" width="231.5px" alt="研修のイメージ"></NuxtImg> -->
     <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
 
