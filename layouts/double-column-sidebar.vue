@@ -121,7 +121,7 @@ import Sidebar from '~/components/Sidebar.vue'
 .background-line4 {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: calc(100% + 0.75px);
     z-index: -1;
 }
 </style>
