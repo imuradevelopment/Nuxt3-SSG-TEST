@@ -171,7 +171,7 @@
             <div class="w-1/2 overflow-hidden">
                 <div class="pr-6 md:pr-12 pt-6 md:pt-12">
                     <div class="z-0 relative -top-6 md:-top-12 -right-6 md:-right-12  bg-custom-deepBlue">
-                        <img class="z-10 relative top-4 md:top-8 right-4 md:right-8" src="/images/recruit/index/004.png" alt="研修のイメージ"></img>
+                        <img class="z-10 relative top-4 md:top-8 right-4 md:right-8" src="/images/recruit/index/004.png" alt="研修のイメージ" />
                     </div>
                 </div>
             </div>
@@ -180,23 +180,23 @@
     <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
 
     <div class="mt-24 mx-4 grid gap-4 grid-cols-1 md:grid-cols-2">
-        <section class="h-64 flex flex-col gap-y-8 bg-[url('/images/recruit/index/005.png')] items-center justify-center shadow-md">
+        <section class="h-64 flex flex-col gap-y-8 bg-cover bg-[url('/images/recruit/index/005.png')] items-center justify-center shadow-md">
             <h2 id="recruit05" class="text-white px-4 text-4xl leading-loose font-bold">オフィス紹介</h2>
             <p class="text-white">私たちの働くオフィスを紹介します。</p>
             <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/office"></CustomArrowButton>
         </section>
 
-        <section class="h-64 flex flex-col gap-y-8 bg-[url('/images/recruit/index/006.png')] items-center justify-center shadow-md">
+        <section class="h-64 flex flex-col gap-y-8 bg-cover bg-[url('/images/recruit/index/006.png')] items-center justify-center shadow-md">
             <h2 id="recruit06" class="text-white px-4 text-4xl leading-loose font-bold">福利厚生</h2>
             <p class="text-white">ベイルの福利厚生制度。</p>
             <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/welfare"></CustomArrowButton>
         </section>
-        <section class="h-64 flex flex-col gap-y-8 bg-[url('/images/recruit/index/007.png')] items-center justify-center shadow-md">
+        <section class="h-64 flex flex-col gap-y-8 bg-cover bg-[url('/images/recruit/index/007.png')] items-center justify-center shadow-md">
             <h2 id="recruit07" class="text-white px-4 text-4xl leading-loose font-bold">各種データ</h2>
             <p class="text-white">ベイルの様々な情報。</p>
             <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/data"></CustomArrowButton>
         </section>
-        <section class="h-64 flex flex-col gap-y-8 bg-[url('/images/recruit/index/008.png')] items-center justify-center shadow-md">
+        <section class="h-64 flex flex-col gap-y-8 bg-cover bg-[url('/images/recruit/index/008.png')] items-center justify-center shadow-md">
             <h2 id="recruit08" class="text-white px-4 text-4xl leading-loose font-bold">Ｑ＆Ａ</h2>
             <p class="text-white">よくある質問に関する回答。</p>
             <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/qa"></CustomArrowButton>
