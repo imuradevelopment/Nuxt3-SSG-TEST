@@ -158,7 +158,7 @@
     </section> -->
 
         <section class="mt-32 flex flex-row justify-stretch">
-            <div class="w-1/2 flex flex-col space-y-8 relative top-8 md:top-16">
+            <div class="w-1/2 flex flex-col space-y-4 md:space-y-8 relative top-8 md:top-16">
                 <div class="flex flex-row">
                     <h2 id="recruit04" class="z-20 w-full self-end text-white px-4 text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue">研修制度</h2>
                     <div class="z-20 leading-loose bg-custom-deepBlue w-6 md:w-12 -mr-6 md:-mr-12"></div>
