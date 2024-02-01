@@ -1,6 +1,6 @@
 <template>
     <section class="flex flex-col bg-cover bg-[url('/images/recruit/index/001.png')]">
-        <h1 id="recruit01" class="self-end m-4 text-4xl font-bold text-white">採用情報</h1>
+        <h1 id="recruit01" class="linkScroll self-end m-4 text-4xl font-bold text-white">採用情報</h1>
         <div class="self-end mr-10 text-lg font-bold text-white">Recruit</div>
         <p class="mt-2 text-center mb-4 leading-10 text-lg font-bold text-white bg-custom-lightBlue">自身の成長が選択肢を拡げ、影響を与える</p>
     </section>
