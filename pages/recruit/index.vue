@@ -222,7 +222,7 @@
                 </div>
             </div>
             <div class="flex mt-6 justify-center md:justify-end md:mr-20">
-                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information"><template #buttonText >ENTRY</template></CustomArrowButton>
+                <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/information"><template #buttonText >ENTRY</template></CustomArrowButton>
             </div>
         </section>
 </template>
