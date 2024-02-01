@@ -24,9 +24,9 @@ const images = [
     "/images/recruit/index/010.png",
 ];
 const imagesDiscription = [
-    '<div class="flex flex-col justyfy-center items-center space-y-2"><div class="font-bold">システムエンジニア</div><div class="font-bold">Y.K</div><div class="font-bold">東京理科大学</div><div class="font-bold">理工学部情報科学科出身</div></div>',
-    '<div class="flex flex-col justyfy-center items-center space-y-2"><div class="font-bold">システムエンジニア</div><div class="font-bold">J.K</div><div class="font-bold">山形大学</div><div class="font-bold">工学部応用生命システム工学科出身</div></div>',
-    '<div class="flex flex-col justyfy-center items-center space-y-2"><div class="font-bold">システムエンジニア</div><div class="font-bold">A.O</div><div class="font-bold">立正大学</div><div class="font-bold">文学部哲学科出身</div></div>',
+    '<div class="flex flex-col justyfy-center items-center"><div class="font-bold">システムエンジニア</div><div class="font-bold">Y.K</div><div class="font-bold">東京理科大学</div><div class="font-bold">理工学部情報科学科出身</div></div>',
+    '<div class="flex flex-col justyfy-center items-center"><div class="font-bold">システムエンジニア</div><div class="font-bold">J.K</div><div class="font-bold">山形大学</div><div class="font-bold">工学部応用生命システム工学科出身</div></div>',
+    '<div class="flex flex-col justyfy-center items-center"><div class="font-bold">システムエンジニア</div><div class="font-bold">A.O</div><div class="font-bold">立正大学</div><div class="font-bold">文学部哲学科出身</div></div>',
 ];
 const index = ref(0);
 
