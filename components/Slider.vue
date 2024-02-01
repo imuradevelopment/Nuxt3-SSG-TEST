@@ -2,7 +2,7 @@
     <section class="w-full flex flex-col bg-[url('/images/recruit/index/009.png')]">
         <h2 id="recruit09" class="px-4 w-fit text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue text-white">社員紹介</h2>
         <div class="mb-4 w-full flex-1 flex justify-center items-center">
-            <div class="ml-20 flex flex-col h-full w-[260px]">
+            <div class="ml-20 flex flex-col h-full w-72">
                 <img class="w-full mt-4 object-cover" :src="images[index]" alt="社員紹介" />
                 <div class="w-full p-2 bg-gray-100 border border-custom-lightGray border-t-0 text-sm md:text-base" v-html="imagesDiscription[index]"></div>
                 <div class="w-full mt-4 flex-1 flex h-full items-end justify-center space-x-8 text-4xl font-bold text-custom-deepBlue">
