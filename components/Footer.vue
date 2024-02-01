@@ -49,7 +49,7 @@
                         </div>
                         <div class="flex flex-wrap flex-col md:flex-row">
                             <div class="flex flex-col">
-                                <NuxtLink to="/recruit#recruit02"
+                                <NuxtLink to="/recruit#TEST"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     採用メッセージ</NuxtLink>
                                 <NuxtLink to="/recruit#TEST"
