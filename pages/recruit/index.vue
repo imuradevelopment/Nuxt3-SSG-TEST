@@ -113,6 +113,22 @@
         </div>
     </section> -->
 
+        <section class="bg-gray-200 p-4 flex flex-col md:flex-row">
+            <div class="flex-1 flex flex-col space-y-6">
+            <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
+            <img class="md:hidden" src="/images/recruit/index/002.png" alt="代表取締役社長のイメージ"></img>
+            <p class="px-4 font-bold break-keep">
+                代表取締役社長 安部 功<br />
+                <br />
+                人を育てるのに一番必要なのは<br class="hidden md:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
+            </p>
+            <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
+            </div>
+            <div>
+                <img class="hidden md:inline-block" src="/images/recruit/index/002.png" alt="代表取締役社長のイメージ"></img>
+            </div>
+        </section>
+
     <section class="h-48 mt-24 flex w-full bg-cover bg-[url('/images/recruit/index/003.png')]">
         <div class="basis-1/3 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
         </div>
