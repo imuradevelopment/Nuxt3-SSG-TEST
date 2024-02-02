@@ -313,13 +313,13 @@ const companySummary = [
     column1: "事業内容",
     column2: "情報サービス業"
   },
-  {
-    column1: "コアパートナー",
-    column2: "日本アイ・ビー・エム株式会社<br/>コベルコシステム株式会社<br/>三井情報株式会社"
-  },
+  // {
+  //   column1: "コアパートナー",
+  //   column2: ""
+  // },
   {
     column1: "主要取引先",
-    column2: "NECネクサソリューションズ株式会社<br/>日本電気株式会社（NEC）<br/>NTTコムソリューションズ株式会社<br/>株式会社TBK<br/>デロイト・トーマツ・リスクアドバイザリー株式会社<br/>日本タタ・コンサルタンシー・サービシズ株式会社<br/>富士フイルムシステムサービス株式会社<br/>富士通株式会社"
+    column2: '<div style="display:flex;justify-content:stretch; align-items:center;margin:0.5rem 0;"><hr style="width:calc(50% - 4rem); "><div style="padding: 0 1rem; ">コアパートナー</div><hr style="width:calc(50% - 4rem);"></div>日本アイ・ビー・エム株式会社<br/>コベルコシステム株式会社<br/>三井情報株式会社<br/><div style="display:flex;justify-content: stretch;align-items: center;margin:0.5rem 0;"><hr style="width: calc(50% - 3.5rem);"><div style="padding: 0 1rem;">主要取引先</div><hr style="width:calc(50% - 3.5rem);"></div>NECネクサソリューションズ株式会社<br/>日本電気株式会社（NEC）<br/>NTTコムソリューションズ株式会社<br/>株式会社TBK<br/>デロイト・トーマツ・リスクアドバイザリー株式会社<br/>日本タタ・コンサルタンシー・サービシズ株式会社<br/>富士フイルムシステムサービス株式会社<br/>富士通株式会社'
   },
   {
     column1: "技術者数",
