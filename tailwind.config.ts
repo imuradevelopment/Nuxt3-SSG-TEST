@@ -174,6 +174,7 @@ export default {
                 platina: "rgb(224 224 224)",
                 lightIvory: "rgb(238 238 238)",
                 ivory: "rgb(204 204 204)",
+                gray95: "rgb(242 242 242)",
             },
         }),
         columns: {

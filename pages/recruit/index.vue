@@ -129,12 +129,18 @@
             </div>
         </section>
 
-    <section class="h-48 mt-24 flex w-full bg-cover bg-[url('/images/recruit/index/003.png')]">
-        <div class="basis-1/3 h-full z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
+    <section class="mt-24 flex w-full bg-cover bg-[url('/images/recruit/index/003.png')]">
+        <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
         </div>
         <div class="flex flex-col grow">
             <h2 id="recruit03" class="self-end text-white px-4 text-4xl leading-loose font-bold min-w-fit">ベイルの特徴</h2>
-            <div class="grow self-end px-4 mt-8">
+            <ul class="w-fit list-disc self-end p-4 pl-8 mx-4 text-sm md:text-lg font-bold bg-custom-orange text-custom-deepBlue">
+                <li>日本アイビーエムのコアパートナー</li>
+                <li>未経験でも安心充実した研修制度</li>
+                <li>社員の育成を第一に考える</li>
+            </ul>
+
+            <div class="grow self-end px-4 mt-4 mb-4">
                 <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/feature"></CustomArrowButton>
             </div>
         </div>

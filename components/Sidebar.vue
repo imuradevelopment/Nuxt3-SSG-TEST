@@ -1,6 +1,16 @@
 <template>
     <div class="h-full w-min">
         <el-menu :default-active="activeIndexStore.activeIndex" class="el-menu-vertical" :collapse="isCollapse">
+            <el-menu-item index="/recruit">
+                <NuxtLink @click="scrollToTarget()" to="/recruit">
+                        <el-icon><InfoFilled /></el-icon>
+                </NuxtLink>
+                <template #title>
+                    <NuxtLink @click="scrollToTarget()" to="/recruit">
+                        採用情報
+                    </NuxtLink>
+                </template>
+            </el-menu-item>
             <el-menu-item index="/recruit/message">
                 <NuxtLink @click="scrollToTarget()" to="/recruit/message">
                         <el-icon><ChatDotSquare /></el-icon>
@@ -81,6 +91,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import {
+    InfoFilled,
     ChatDotSquare,
     Pointer,
     EditPen,
