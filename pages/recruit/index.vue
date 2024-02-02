@@ -134,7 +134,7 @@
         </div>
         <div class="flex flex-col grow">
             <h2 id="recruit03" class="self-end text-white px-4 text-4xl leading-loose font-bold min-w-fit">ベイルの特徴</h2>
-            <ul class="w-fit list-disc self-end p-4 pl-8 mx-4 text-sm md:text-lg font-bold bg-custom-orange text-custom-deepBlue">
+            <ul class="w-fit list-disc self-end p-4 pl-8 mx-4 text-sm md:text-lg font-bold bg-custom-lightOrange text-custom-deepBlue">
                 <li>日本アイビーエムのコアパートナー</li>
                 <li>未経験でも安心充実した研修制度</li>
                 <li>社員の育成を第一に考える</li>

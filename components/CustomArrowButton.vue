@@ -223,7 +223,7 @@ const isInner = computed(() => {
 const bordercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return 'rgba(229 181 127)'
+            return 'rgba(231 198 148)'
         case 'white':
             return 'white'
         default:
@@ -233,7 +233,7 @@ const bordercolor = computed(() => {
 const color = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return 'rgba(229 181 127)'
+            return 'rgba(231 198 148)'
         case 'white':
             return 'white'
         default:
@@ -243,7 +243,7 @@ const color = computed(() => {
 const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return 'rgba(229 181 127)'
+            return 'rgba(231 198 148)'
         case 'white':
             return 'rgb(0 10 135)'
         default:
@@ -311,7 +311,7 @@ const height = computed(() => {
 const hoveroutline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return '2px solid rgba(229 181 127)'
+            return '2px solid rgba(231 198 148)'
         case 'white':
             return '2px solid white'
         default:
