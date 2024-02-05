@@ -113,8 +113,8 @@
         </div>
     </section> -->
 
-        <section class="bg-gray-200 md:bg-custom-silver flex flex-col md:flex-row">
-            <div class="flex-1 flex flex-col space-y-6 pb-4">
+        <section class=" flex flex-col md:flex-row">
+            <div class="flex-1 flex flex-col space-y-6 pb-4 bg-gradient-to-r from-gray-200 to-custom-silver">
             <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
             <div class="md:hidden w-screen overflow-hidden">
                 <img class="object-cover" src="/images/recruit/index/002_M.png" alt="採用担当者イメージ" />
