@@ -9,8 +9,8 @@
             </h1>
         </div>
     </section>
-    <section class="mt-24 mb-24 bg-gray-200">
-        <div class="-mb-28 mx-4 py-4 px-4">
+    <section class="mt-24 mb-48 py-4 px-4">
+        <div class="-mb-28 mx-4 bg-gray-200">
             <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-2xl font-bold leading-loose">はじめの一歩</h2>
             <div class="flex flex-col sm:flex-row">
                 <p class="order-2 sm:order-1 w-1/2 p-4 break-keep text-xs sm:text-base font-bold">
