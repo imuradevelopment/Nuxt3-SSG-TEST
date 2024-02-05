@@ -323,7 +323,7 @@ const companySummary = [
   },
   {
     column1: "技術者数",
-    column2: "250名"
+    column2: '250名（社員100名、契約社員20名、協力会社技術者130名）'
   },
   {
     column1: "役員",
