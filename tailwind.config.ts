@@ -175,6 +175,7 @@ export default {
                 lightIvory: "rgb(238 238 238)",
                 ivory: "rgb(204 204 204)",
                 gray95: "rgb(242 242 242)",
+                silver: "rgb(196, 196, 198)",
             },
         }),
         columns: {

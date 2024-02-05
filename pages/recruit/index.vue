@@ -113,31 +113,33 @@
         </div>
     </section> -->
 
-        <section class="bg-gray-200 flex flex-col md:flex-row">
+        <section class="bg-custom-silver flex flex-col md:flex-row">
             <div class="flex-1 flex flex-col space-y-6 pb-4">
             <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
-            <img class="md:hidden object-cover" src="/images/recruit/index/002.png" alt="代表取締役社長のイメージ" />
+            <div class="md:hidden w-screen overflow-hidden">
+                <img class="object-cover" src="/images/recruit/index/002_M.png" alt="採用担当者イメージ" />
+            </div>
             <p class="px-4 font-bold break-keep">
-                代表取締役社長 安部 功<br />
+                採用担当者<br />
                 <br />
                 人を育てるのに一番必要なのは<br class="hidden md:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
             </p>
             <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
             </div>
-            <div>
-                <img class="hidden md:inline-block object-cover" src="/images/recruit/index/002.png" alt="代表取締役社長のイメージ" />
+            <div class="md:w-1/2">
+                <img class="hidden md:inline-block h-full object-cover" src="/images/recruit/index/002_D.png" alt="採用担当者イメージ" />
             </div>
         </section>
 
     <section class="mt-24 flex w-full bg-cover bg-[url('/images/recruit/index/003.png')]">
-        <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
+        <div class="hidden sm:inline-block basis-1/3 h-auto z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
         </div>
         <div class="flex flex-col grow">
-            <h2 id="recruit03" class="self-end text-white px-4 text-4xl leading-loose font-bold min-w-fit">ベイルの特徴</h2>
-            <ul class="w-fit list-disc self-end p-4 pl-8 mx-4 text-sm md:text-lg font-bold bg-custom-lightOrange text-custom-deepBlue">
-                <li>日本アイビーエムのコアパートナー</li>
-                <li>未経験でも安心充実した研修制度</li>
-                <li>社員の育成を第一に考える</li>
+            <h2 id="recruit03" class="self-end px-4 text-4xl leading-loose font-bold min-w-fit bg-custom-lightOrange text-custom-deepBlue">ベイルの特徴</h2>
+            <ul class="mt-4 w-fit list-disc self-end p-4 pl-8 mx-4 text-sm md:text-lg font-bold bg-custom-lightOrange text-custom-deepBlue">
+                <li>複数の大手Sierとの直接取引</li>
+                <li>未経験でも安心充実した１年間の研修制度</li>
+                <li>社員の育成をじっくり促せる安定した経営基盤</li>
             </ul>
 
             <div class="grow self-end px-4 mt-4 mb-4">
