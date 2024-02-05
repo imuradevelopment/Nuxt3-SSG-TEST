@@ -113,7 +113,7 @@
         </div>
     </section> -->
 
-        <section class="bg-custom-silver flex flex-col md:flex-row">
+        <section class="bg-gray-200 md:bg-custom-silver flex flex-col md:flex-row">
             <div class="flex-1 flex flex-col space-y-6 pb-4">
             <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
             <div class="md:hidden w-screen overflow-hidden">
