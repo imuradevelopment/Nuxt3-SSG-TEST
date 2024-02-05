@@ -16,7 +16,7 @@
                 <p class="order-2 sm:order-1 w-full sm:w-1/2 p-4 text-balance text-xs sm:text-base font-bold">
                     文系大学出身、PG志望。他業界からの転職、IT知識ほとんどなし。ベイルではじめの一歩を踏み出したそんな彼らも、入社5年後にはSE・PLとして第一線へ。あなたは5年後の姿、見えてますか？
                 </p>
-                <section class="mb-0 sm:-mt-28 order-1 sm:order-2 grow flex flex-col">
+                <section class="mb-0 mt-4 sm:-mt-28 order-1 sm:order-2 grow flex flex-col">
                     <div class="self-end">
                         <img class="object-cover" src="/images/recruit/message/002.png" />
                         <div class="my-1 text-center text-xs sm:text-base font-bold">代表取締役社長 安部 功</div>
