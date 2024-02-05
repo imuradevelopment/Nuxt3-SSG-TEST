@@ -10,10 +10,10 @@
         </div>
     </section>
     <section class="mt-24 mb-48 py-4 px-4">
-        <div class="-mb-28 mx-4 bg-gray-200">
+        <div class="-mb-28 mx-0 sm:mx-4 bg-gray-200">
             <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-2xl font-bold leading-loose">はじめの一歩</h2>
             <div class="flex flex-col sm:flex-row">
-                <p class="order-2 sm:order-1 w-1/2 p-4 text-balance text-xs sm:text-base font-bold">
+                <p class="order-2 sm:order-1 w-full sm:w-1/2 p-4 text-balance text-xs sm:text-base font-bold">
                     文系大学出身、PG志望。他業界からの転職、IT知識ほとんどなし。ベイルではじめの一歩を踏み出したそんな彼らも、入社5年後にはSE・PLとして第一線へ。あなたは5年後の姿、見えてますか？
                 </p>
                 <section class="-mt-28 order-1 sm:order-2 grow flex flex-col">
