@@ -245,7 +245,7 @@ const beforebackgroundcolor = computed(() => {
         case 'yellow':
             return 'rgba(231 198 148)'
         case 'white':
-            return 'rgb(0 10 135)'
+            return 'white'
         default:
             return 'rgb(0 10 135)'
     }
@@ -269,7 +269,7 @@ const hovercolor = computed(() => {
         case 'yellow':
             return 'rgb(0 10 135)'
         case 'white':
-            return 'white'
+            return 'rgb(0 10 135)'
         default:
             return 'rgb(231 198 148)'
     }
@@ -311,6 +311,18 @@ const outline = computed(() => {
     }
 })
 
+// ホバー時のアウトラインのスタイルを計算する
+const hoveroutline = computed(() => {
+    switch (props.colorType) {
+        case 'yellow':
+            return '2px solid transparent'
+        case 'white':
+            return '2px solid transparent'
+        default:
+            return '2px solid transparent'
+    }
+})
+
 // アウトラインのオフセットを計算する
 const outlineoffset = computed(() => {
     switch (props.colorType) {
@@ -320,18 +332,6 @@ const outlineoffset = computed(() => {
             return '-2px'
         default:
             return '2px'
-    }
-})
-
-// ホバー時のアウトラインのスタイルを計算する
-const hoveroutline = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-            return '2px solid rgba(231 198 148)'
-        case 'white':
-            return '2px solid white'
-        default:
-            return '2px solid rgb(0 10 135)'
     }
 })
 
@@ -379,7 +379,7 @@ a:after {
 
 a:hover {
     color: v-bind(hovercolor);
-    /* border: v-bind(hoveroutline); */
+    border: v-bind(hoveroutline);
 }
 
 a:hover:after {

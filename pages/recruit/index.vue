@@ -6,7 +6,7 @@
     </section>
 
     <section class="h-24 p-4 flex justify-end items-center">
-        <CustomArrowButton arrowType="transition" to="/recruit/feature"><template #buttonText>
+        <CustomArrowButton color-type="blue-bg-white" arrowType="transition" to="/recruit/feature"><template #buttonText>
                 <Pointer class="h-6 w-6 inline" />ベイルの特徴
             </template></CustomArrowButton>
     </section>
@@ -173,7 +173,7 @@
                 </div>
                 <p class="z-20 self-start ml-4 md:mr-4 font-bold text-sm md:text-base">成長に繋がるトレーニング制度</p>
                 <div class="z-20 self-start ml-4">
-                    <CustomArrowButton arrowType="transition" to="/recruit/induction"></CustomArrowButton>
+                    <CustomArrowButton color-type="blue-bg-white" arrowType="transition" to="/recruit/induction"></CustomArrowButton>
                 </div>
             </div>
             <div class="w-1/2 overflow-hidden">
@@ -216,23 +216,23 @@
         <Slider />
     </section>
 
-        <section class="mt-24 mb-24 h-96 md:h-64 bg-cover bg-[url('/images/recruit/index/013.png')]">
-            <h2 id="recruit10" class="text-white px-4 text-4xl leading-loose font-bold w-fit ml-auto mr-auto">募集情報</h2>
-            <div class="flex flex-col md:px-20 items-center md:flex-row md:justify-between">
-                <div class="mt-6">
-                    <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template #buttonText >新卒採用情報</template></CustomArrowButton>
-                </div>
-                <div class="mt-6">
-                    <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template #buttonText >キャリア採用情報</template></CustomArrowButton>
-                </div>
-                <div class="mt-6">
-                    <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template #buttonText >契約社員採用情報</template></CustomArrowButton>
-                </div>
+    <section class="mt-24 mb-24 p-4 bg-cover bg-[url('/images/recruit/index/013.png')]">
+        <h2 id="recruit10" class="text-white px-4 text-4xl leading-loose font-bold w-fit ml-auto mr-auto">募集情報</h2>
+        <div class="flex flex-col p-4 items-center md2:flex-row md2:flex-wrap md2:justify-between">
+            <div class="mt-6">
+                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template #buttonText >新卒採用情報</template></CustomArrowButton>
             </div>
-            <div class="flex mt-6 justify-center md:justify-end md:mr-20">
-                <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/information"><template #buttonText >ENTRY</template></CustomArrowButton>
+            <div class="mt-6">
+                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template #buttonText >キャリア採用情報</template></CustomArrowButton>
             </div>
-        </section>
+            <div class="mt-6">
+                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template #buttonText >契約社員採用情報</template></CustomArrowButton>
+            </div>
+        </div>
+        <div class="flex mt-6 px-4 justify-center md2:justify-end">
+            <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/information"><template #buttonText ><span class="tracking-wide">ENTRY</span></template></CustomArrowButton>
+        </div>
+    </section>
 </template>
 
 <script setup lang="ts">
