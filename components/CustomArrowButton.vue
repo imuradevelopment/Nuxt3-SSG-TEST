@@ -329,7 +329,7 @@ const outlineoffset = computed(() => {
         case 'yellow':
             return '2px'
         case 'white':
-            return '-2px'
+            return '2px'
         default:
             return '2px'
     }
