@@ -13,6 +13,8 @@ export default defineNuxtConfig({
         payloadExtraction: false,
     },
     app: {
+        pageTransition: { name: 'page', mode: 'out-in' },
+        layoutTransition: { name: 'layout', mode: 'out-in' },
         // NUXT_APP_BASE_URL
         baseURL: "/",
         // baseURL: '/Nuxt3-SSG-TEST',
