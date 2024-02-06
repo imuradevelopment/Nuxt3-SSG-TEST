@@ -77,7 +77,7 @@ import {
             <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
-    <a @click="handleClick" v-if="isInner" :href="props.to" class="
+    <NuxtLink v-if="isInner" @click="scrollToTarget()" :to="props.to" class="
             w-fit 
             relative 
             inline-flex 
@@ -118,8 +118,8 @@ import {
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
-    </a>
-    <a @click="handleClick" v-if="!isOuter && !isInner" :to="props.to" class="
+    </NuxtLink>
+    <NuxtLink v-if="!isOuter && !isInner" @click="scrollToTarget()" :to="props.to" class="
             w-fit 
             relative 
             inline-flex 
@@ -160,12 +160,13 @@ import {
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
-    </a>
+    </NuxtLink>
 </template>
 
 
 <script setup lang="ts">
 import { useScrollToTarget } from '~/composables/useScrollToTarget'
+const { targetId, scrollToTarget } = useScrollToTarget()
 
 // コンポーネントに渡されるプロパティ
 const props = defineProps({
@@ -354,23 +355,6 @@ const isInner = computed(() => {
             return false;
     }
 })
-
-const router = useRouter();
-// クリックイベントを処理する関数
-const handleClick = (event: Event) => {
-    // デフォルトの遷移動作を防ぐ
-    event.preventDefault()
-    // 遷移先のURLを取得
-    const targetPage = props.to
-    // リンク要素を取得
-    const link = event.currentTarget as HTMLElement
-    // transitionendイベントのリスナーを追加
-    link.addEventListener("transitionend", () => {
-        // アニメーションが終わったら遷移する
-        router.push(targetPage)
-    })
-    useScrollToTarget()
-}
 </script>
 
 <style scoped>

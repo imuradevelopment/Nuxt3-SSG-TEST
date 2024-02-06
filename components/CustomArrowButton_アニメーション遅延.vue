@@ -1,41 +1,7 @@
-<!-- 
-■■■■■■ 使い方 ■■■■■
-    背景色が明るい場合は「colorType」プロパティの指定無し
-        <div class="p-4 bg-gray-200">
-            <CustomArrowButton arrowType="outer" to="https://www.google.co.jp/"><template #buttonText>別タブリンクに使用</template></CustomArrowButton>
-            <CustomArrowButton arrowType="transition" to="/company"><template #buttonText>ページ遷移に使用</template></CustomArrowButton>
-            <CustomArrowButton arrowType="inner" to="/company#company01"><template #buttonText>ターゲット要素への遷移、ページ内遷移に使用</template></CustomArrowButton>
-        </div>
-
-    背景色が暗い場合は「colorType」プロパティに「yellow」を指定する
-        <div class="p-4 bg-custom-deepBlue">
-            <CustomArrowButton arrowType="outer" colorType="yellow" to="https://www.google.co.jp/"><template #buttonText>別タブリンクに使用</template></CustomArrowButton>
-            <CustomArrowButton arrowType="transition" colorType="yellow" to="/company"><template #buttonText>ページ遷移に使用</template></CustomArrowButton>
-            <CustomArrowButton arrowType="inner" colorType="yellow" to="/company#company01"><template #buttonText>ターゲット要素への遷移、ページ内遷移に使用</template></CustomArrowButton>
-        </div>
-
-■■■■■■ インポート等 ■■■■■
-<script setup lang="ts">
-//ここではコンポーネント内の「<script setup lang="ts">」でインポートし、タグ名を「CustomArrowButton」としている。
-import CustomArrowButton from '~/components/CustomArrowButton.vue'
-// 使いたい人は下記のようにiconをインポートしてボタンテキストに使用できます。
-// 参考：https://element-plus.org/en-US/component/icon.html#icon-collection
-import {
-    EditPen,
-} from '@element-plus/icons-vue'
-</script>
-
-■■■■■■ アイコンを使用する場合の例 ■■■■■
-<CustomArrowButton arrowType="transition" to="/company"><template #buttonText><EditPen class="h-6 w-6 inline" />ベイルの特徴</template></CustomArrowButton>
- -->
-
+// components/CustomArrowButton.vue
 <template>
-    <!--
-        コンポーネントの使い方：
-        背景色が明るい場合は「colorType」プロパティの指定無し
-        背景色が暗い場合は「colorType」プロパティに「yellow」を指定する
-    -->
-    <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="
+    <NuxtLink @click="handleClick" :to="props.to" class="
+            animated-button 
             w-fit 
             relative 
             inline-flex 
@@ -77,95 +43,13 @@ import {
             <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
-    <a @click="handleClick" v-if="isInner" :href="props.to" class="
-            w-fit 
-            relative 
-            inline-flex 
-            items-center 
-            justify-center 
-            px-6 
-            py-2 
-            text-lg 
-            cursor-pointer 
-            transition-all 
-            duration-150 
-            ease-in-out 
-            before:absolute 
-            before:inset-0 
-            before:transform 
-            before:-scale-x-0 
-            before:origin-left 
-            before:transition-transform 
-            before:duration-150 
-            before:ease-in-out 
-            before:rounded-full 
-            ml-2  
-            after:transform 
-            after:translate-x-0 
-            after:transition-transform 
-            after:duration-150 
-            after:ease-in-out 
-            hover:border-transparent 
-            hover:before:scale-x-100 
-            origin-left 
-            hover:after:translate-x-4 
-            rounded-l-full 
-            rounded-r-full 
-            hover:rounded-r-full 
-            overflow-hidden
-            shadow-md
-        " :style="`--after-content: '${afterContent}'`">
-        <span class="relative z-10">
-            <slot name="buttonText">MORE</slot>
-        </span>
-    </a>
-    <a @click="handleClick" v-if="!isOuter && !isInner" :to="props.to" class="
-            w-fit 
-            relative 
-            inline-flex 
-            items-center 
-            justify-center 
-            px-6 
-            py-2 
-            text-lg 
-            cursor-pointer 
-            transition-all 
-            duration-150 
-            ease-in-out 
-            before:absolute 
-            before:inset-0 
-            before:transform 
-            before:-scale-x-0 
-            before:origin-left 
-            before:transition-transform 
-            before:duration-150 
-            before:ease-in-out 
-            before:rounded-full 
-            ml-2  
-            after:transform 
-            after:translate-x-0 
-            after:transition-transform 
-            after:duration-150 
-            after:ease-in-out 
-            hover:border-transparent 
-            hover:before:scale-x-100 
-            origin-left 
-            hover:after:translate-x-4 
-            rounded-l-full 
-            rounded-r-full 
-            hover:rounded-r-full 
-            overflow-hidden
-            shadow-md
-        " :style="`--after-content: '${afterContent}'`">
-        <span class="relative z-10">
-            <slot name="buttonText">MORE</slot>
-        </span>
-    </a>
 </template>
 
 
 <script setup lang="ts">
-import { useScrollToTarget } from '~/composables/useScrollToTarget'
+
+// ルーターインスタンスを取得
+const router = useRouter()
 
 // コンポーネントに渡されるプロパティ
 const props = defineProps({
@@ -196,18 +80,6 @@ const props = defineProps({
     }
 })
 
-// ボタンの高さを計算する
-const height = computed(() => {
-    switch (props.height) {
-        case 'auto':
-            return 'auto'
-        default:
-            return 'auto'
-    }
-})
-
-
-
 // ボタンの矢印部分の表示内容を計算する
 const afterContent = computed(() => {
     switch (props.arrowType) {
@@ -219,6 +91,16 @@ const afterContent = computed(() => {
             return '↓'
         default:
             return ''
+    }
+})
+
+// ボタンの高さを計算する
+const height = computed(() => {
+    switch (props.height) {
+        case 'auto':
+            return 'auto'
+        default:
+            return 'auto'
     }
 })
 
@@ -355,7 +237,7 @@ const isInner = computed(() => {
     }
 })
 
-const router = useRouter();
+
 // クリックイベントを処理する関数
 const handleClick = (event: Event) => {
     // デフォルトの遷移動作を防ぐ
@@ -369,8 +251,32 @@ const handleClick = (event: Event) => {
         // アニメーションが終わったら遷移する
         router.push(targetPage)
     })
-    useScrollToTarget()
+    // スクロールする関数を定義
+    const scrollToTarget = (id: string = '') => {
+        // 引数で渡されたidをtargetIdに代入
+        const targetId = id
+        // target-idが空の場合
+        if (!targetId) {
+            // トップにスクロール
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth", });
+        } else {
+            // 要素を取得
+            const element = document.getElementById(targetId);
+            // 要素が存在する場合
+            if (element) {
+                // 要素の位置を取得
+                const rect = element.getBoundingClientRect()
+                const currentScrolledHeight = window.pageYOffset || document.documentElement.scrollTop
+                // スムーズにスクロール
+                window.scrollTo({ top: rect.top + currentScrolledHeight - 64, behavior: "smooth" })
+            }
+        }
+    }
+    // スクロールする関数を呼び出す
+    scrollToTarget()
 }
+
+
 </script>
 
 <style scoped>
