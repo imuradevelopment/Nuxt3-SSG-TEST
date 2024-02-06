@@ -305,7 +305,7 @@ const outline = computed(() => {
         case 'yellow':
             return '2px solid transparent'
         case 'white':
-            return '2px solid white'
+            return '2px solid transparent'
         default:
             return '2px solid transparent'
     }
