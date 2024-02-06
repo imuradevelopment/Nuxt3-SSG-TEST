@@ -46,7 +46,7 @@ import {
             text-lg 
             cursor-pointer 
             transition-all 
-            duration-300 
+            duration-200 
             ease-in-out 
             before:absolute 
             before:inset-0 
@@ -54,14 +54,14 @@ import {
             before:-scale-x-0 
             before:origin-left 
             before:transition-transform 
-            before:duration-300 
+            before:duration-200 
             before:ease-in-out 
             before:rounded-full 
             ml-2  
             after:transform 
             after:translate-x-0 
             after:transition-transform 
-            after:duration-300 
+            after:duration-200 
             after:ease-in-out 
             hover:border-transparent 
             hover:before:scale-x-100 
@@ -88,7 +88,7 @@ import {
             text-lg 
             cursor-pointer 
             transition-all 
-            duration-300 
+            duration-200
             ease-in-out 
             before:absolute 
             before:inset-0 
@@ -96,14 +96,14 @@ import {
             before:-scale-x-0 
             before:origin-left 
             before:transition-transform 
-            before:duration-300 
+            before:duration-200 
             before:ease-in-out 
             before:rounded-full 
             ml-2  
             after:transform 
             after:translate-x-0 
             after:transition-transform 
-            after:duration-300 
+            after:duration-200 
             after:ease-in-out 
             hover:border-transparent 
             hover:before:scale-x-100 
@@ -130,7 +130,7 @@ import {
             text-lg 
             cursor-pointer 
             transition-all 
-            duration-300 
+            duration-200 
             ease-in-out 
             before:absolute 
             before:inset-0 
@@ -138,14 +138,14 @@ import {
             before:-scale-x-0 
             before:origin-left 
             before:transition-transform 
-            before:duration-300 
+            before:duration-200 
             before:ease-in-out 
             before:rounded-full 
             ml-2  
             after:transform 
             after:translate-x-0 
             after:transition-transform 
-            after:duration-300 
+            after:duration-200 
             after:ease-in-out 
             hover:border-transparent 
             hover:before:scale-x-100 
