@@ -30,6 +30,11 @@ import {
  -->
 
 <template>
+    <!--
+        コンポーネントの使い方：
+        背景色が明るい場合は「colorType」プロパティの指定無し
+        背景色が暗い場合は「colorType」プロパティに「yellow」を指定する
+    -->
     <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="
             w-fit 
             relative 
@@ -163,6 +168,7 @@ import {
 import { useScrollToTarget } from '~/composables/useScrollToTarget'
 const { targetId, scrollToTarget } = useScrollToTarget()
 
+// コンポーネントに渡されるプロパティ
 const props = defineProps({
     to: {
         type: String,
@@ -172,7 +178,7 @@ const props = defineProps({
         type: String,
         required: false,
         validator: (value: string) => {
-            return ['3rem'].includes(value)
+            return ['auto'].includes(value)
         }
     },
     arrowType: {
@@ -186,11 +192,24 @@ const props = defineProps({
         type: String,
         required: false,
         validator: (value: string) => {
-            return ['yellow', 'white'].includes(value)
+            return ['blue-bg-white', 'yellow', 'white'].includes(value)
         }
     }
 })
 
+// ボタンの高さを計算する
+const height = computed(() => {
+    switch (props.height) {
+        case 'auto':
+            return 'auto'
+        default:
+            return 'auto'
+    }
+})
+
+
+
+// ボタンの矢印部分の表示内容を計算する
 const afterContent = computed(() => {
     switch (props.arrowType) {
         case 'outer':
@@ -203,43 +222,24 @@ const afterContent = computed(() => {
             return ''
     }
 })
-const isOuter = computed(() => {
-    switch (props.arrowType) {
-        case 'outer':
-            return true;
+
+// 背景の色を計算する
+const backgroundcolor = computed(() => {
+    switch (props.colorType) {
+        case 'blue-bg-white':
+            return 'white'
+        case 'yellow-bg-white':
+            return 'white'
+        case 'yellow':
+            return 'transparent'
+        case 'white':
+            return 'transparent'
         default:
-            return false;
-    }
-})
-const isInner = computed(() => {
-    switch (props.arrowType) {
-        case 'inner':
-            return true;
-        default:
-            return false;
+            return 'transparent'
     }
 })
 
-const bordercolor = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-            return 'rgba(231 198 148)'
-        case 'white':
-            return 'white'
-        default:
-            return 'rgb(0 10 135)'
-    }
-})
-const color = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-            return 'rgba(231 198 148)'
-        case 'white':
-            return 'white'
-        default:
-            return 'rgb(0 10 135)'
-    }
-})
+// 背景の色を計算する（前景の色の補完）
 const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -250,6 +250,20 @@ const beforebackgroundcolor = computed(() => {
             return 'rgb(0 10 135)'
     }
 })
+
+// テキストの色を計算する
+const color = computed(() => {
+    switch (props.colorType) {
+        case 'yellow':
+            return 'rgba(231 198 148)'
+        case 'white':
+            return 'white'
+        default:
+            return 'rgb(0 10 135)'
+    }
+})
+
+// ホバー時のテキスト色を計算する
 const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -260,6 +274,8 @@ const hovercolor = computed(() => {
             return 'rgb(231 198 148)'
     }
 })
+
+// ボーダーの幅を計算する
 const borderwidth = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -270,6 +286,20 @@ const borderwidth = computed(() => {
             return '2px'
     }
 })
+
+// ボーダーの色を計算する
+const bordercolor = computed(() => {
+    switch (props.colorType) {
+        case 'yellow':
+            return 'rgba(231 198 148)'
+        case 'white':
+            return 'white'
+        default:
+            return 'rgb(0 10 135)'
+    }
+})
+
+// アウトラインのスタイルを計算する
 const outline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -280,6 +310,8 @@ const outline = computed(() => {
             return '2px solid transparent'
     }
 })
+
+// アウトラインのオフセットを計算する
 const outlineoffset = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -290,24 +322,8 @@ const outlineoffset = computed(() => {
             return '2px'
     }
 })
-const backgroundcolor = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-            return 'transparent'
-        case 'white':
-            return 'transparent'
-        default:
-            return 'transparent'
-    }
-})
-const height = computed(() => {
-    switch (props.height) {
-        case '3rem':
-            return '3rem'
-        default:
-            return '3rem'
-    }
-})
+
+// ホバー時のアウトラインのスタイルを計算する
 const hoveroutline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -316,6 +332,27 @@ const hoveroutline = computed(() => {
             return '2px solid white'
         default:
             return '2px solid rgb(0 10 135)'
+    }
+})
+
+// ボタンのタイプが「outer」かどうかを判定
+const isOuter = computed(() => {
+    switch (props.arrowType) {
+        case 'outer':
+            return true;
+        default:
+            return false;
+    }
+})
+
+
+// ボタンのタイプが「inner」かどうかを判定
+const isInner = computed(() => {
+    switch (props.arrowType) {
+        case 'inner':
+            return true;
+        default:
+            return false;
     }
 })
 </script>
