@@ -51,7 +51,7 @@
                         src="/images/recruit/feature/002.png" />
                 </div>
                 <div class="order-1 sm:order-2 col-span-1 row-span-1">
-                    <div class="mb-4 sm:mb-0 text-2xl font-bold text-custom-orange">Point01</div>
+                    <div class="mb-4 sm:mb-0 text-2xl font-bold">Point01</div>
                     <div class="mb-4 sm:mb-0">
                         <div class="hidden sm:inline-block">
                             <div class="mb-1 px-4 w-fit text-white bg-custom-deepBlue text-xl font-bold leading-loose">
