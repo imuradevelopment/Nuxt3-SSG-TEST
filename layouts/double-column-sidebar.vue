@@ -16,6 +16,7 @@
                     <div class="background-line2 quarter-pixel-border"></div>
                     <div class="background-line3 quarter-pixel-border"></div>
                     <div class="background-line4 quarter-pixel-border"></div>
+                    <!-- <BackgroundPattern /> -->
                 </div>
                 <slot /><!-- pages配下のファイルを表示する -->
             </el-main>
@@ -27,6 +28,7 @@
 </template>
 <script setup lang="ts">
 import Sidebar from '~/components/Sidebar.vue'
+import BackgroundPattern from '~/components/BackgroundPattern.vue'
 </script>
 <style scoped>
 .el-header-custom {
