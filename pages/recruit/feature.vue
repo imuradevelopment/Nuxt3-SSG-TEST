@@ -45,9 +45,9 @@
                 </div>
             </div> -->
             <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:space-x-4">
-                <div class="order-2 mb-4 sm:mb-0 sm:order-1 col-span-1 row-span-2 overflow-hidden">
-                    <div class="z-10 relative w-[90%] h-[90%] bg-gray-200"></div>
-                    <img class="z-20 relative bottom-[85%] left-[5%] w-[90%] h-[90%] object-cover shadow-md"
+                <div class="order-2 max-w-screen mb-4 sm:mb-0 sm:order-1 col-span-1 row-span-2 overflow-hidden">
+                    <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
+                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-md"
                         src="/images/recruit/feature/002.png" />
                 </div>
                 <div class="order-1 sm:order-2 col-span-1 row-span-1">
