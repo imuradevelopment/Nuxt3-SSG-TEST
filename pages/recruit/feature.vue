@@ -93,7 +93,12 @@
                     </div>
                     <div class="order-3 sm:order-2 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
                         <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold">
-                            プログラミング未経験者が多いSier会社ではスキル不足により単純作業しか任せてもらえないことが多いです。ベイルでは文系・IT未経験でも確実にエンジニアとして成長できる環境を用意しており、入社後の1年間様々な研修・OJTで、技術者としての基礎を築きます。
+                                <div>
+                                    プログラミング未経験者が多いSier会社ではスキル不足により単純作業しか任せてもらえないことが多いです。ベイルでは文系・IT未経験でも確実にエンジニアとして成長できる環境を用意しており、入社後の1年間様々な研修・OJTで、技術者としての基礎を築きます。
+                                </div>
+                                <div class="self-end">
+                                    <CustomArrowButton arrowType="transition" to="/recruit/induction">研修内容を見る</CustomArrowButton>
+                                </div>
                         </div>
                     </div>
                 </div>
