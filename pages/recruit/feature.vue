@@ -96,7 +96,7 @@
                                 <div>
                                     プログラミング未経験者が多いSier会社ではスキル不足により単純作業しか任せてもらえないことが多いです。ベイルでは文系・IT未経験でも確実にエンジニアとして成長できる環境を用意しており、入社後の1年間様々な研修・OJTで、技術者としての基礎を築きます。
                                 </div>
-                                <div class="self-end p-4">
+                                <div class="self-end pt-4">
                                     <CustomArrowButton  arrowType="transition" to="/recruit/induction">
                                         <template #buttonText>研修内容を見る</template>template
                                     </CustomArrowButton>
