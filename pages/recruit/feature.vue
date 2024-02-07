@@ -15,7 +15,7 @@
             <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:gap-x-4">
                 <div class="order-2 max-w-screen mb-4 sm:mb-0 sm:order-1 col-span-1 row-span-2 overflow-hidden">
                     <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
-                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-md"
+                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
                         src="/images/recruit/feature/002.png" />
                 </div>
                 <div class="order-1 sm:order-2 col-span-1 row-span-1">
@@ -51,7 +51,7 @@
             <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
                 <div class="order-2 sm:order-1 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
                     <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
-                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-md"
+                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
                         src="/images/recruit/feature/002.png" />
                 </div>
                 <div class="order-1 sm:order-2 col-span-1 sm:row-span-1">
@@ -77,7 +77,7 @@
                 <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
                     <div class="order-2 sm:order-3 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
                         <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
-                        <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-md"
+                        <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
                             src="/images/recruit/feature/003.png" />
                     </div>
                     <div class="order-1 sm:order-1 col-span-1 sm:row-span-1">
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="self-end p-4">
                                     <CustomArrowButton  arrowType="transition" to="/recruit/induction">
-                                        <template>研修内容を見る</template>
+                                        <template #buttonText>研修内容を見る</template>template
                                     </CustomArrowButton>
                                 </div>
                         </div>
@@ -110,7 +110,7 @@
                 <div class="my-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
                     <div class="order-2 sm:order-1 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
                         <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
-                        <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-md"
+                        <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
                             src="/images/recruit/feature/004.png" />
                     </div>
                     <div class="order-1 sm:order-2 col-span-1 sm:row-span-1">
@@ -136,7 +136,7 @@
             <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:gap-x-4">
                 <div class="order-2 max-w-screen mb-4 sm:mb-0 col-span-1 row-span-2 overflow-hidden">
                     <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
-                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-md"
+                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
                         src="/images/recruit/feature/003.png" />
                 </div>
                 <div class="order-1 col-span-1 row-span-1">
@@ -179,7 +179,7 @@
             <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:gap-x-4">
                 <div class="order-2 max-w-screen mb-4 sm:mb-0 sm:order-1 col-span-1 row-span-2 overflow-hidden">
                     <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
-                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-md"
+                    <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
                         src="/images/recruit/feature/004.png" />
                 </div>
                 <div class="order-1 sm:order-2 col-span-1 row-span-1">
