@@ -37,7 +37,7 @@ onMounted(() => {
 
 <style scoped>
 #bg-canvas {
-    image-rendering: -moz-crisp-edges;
-    /* image-rendering: pixelated; */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: auto;
 }
 </style>
