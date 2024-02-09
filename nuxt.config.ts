@@ -16,11 +16,11 @@ export default defineNuxtConfig({
         // pageTransition: { name: 'page', mode: 'out-in' },
         // layoutTransition: { name: 'layout', mode: 'out-in' },
         // NUXT_APP_BASE_URL
-        baseURL: "/",
-        // baseURL: '/Nuxt3-SSG-TEST',
+        // baseURL: "/",
+        baseURL: '/Nuxt3-SSG-TEST',
         // NUXT_APP_CDN_URL
-        cdnURL: "/",
-        // cdnURL: '/Nuxt3-SSG-TEST',
+        // cdnURL: "/",
+        cdnURL: '/Nuxt3-SSG-TEST',
         head: {
             charset: "utf-8",
             viewport: "width=device-width, initial-scale=1",
