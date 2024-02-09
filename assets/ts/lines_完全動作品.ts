@@ -1,4 +1,3 @@
-// キャンバスレンダラークラス
 class CanvasRenderer {
     // 画面に描画するためのキャンバスとして使用します。
     private canvas: HTMLCanvasElement;
@@ -10,7 +9,7 @@ class CanvasRenderer {
     private backgroundColor: Color;
     // アニメーションフレームを制御するために使用します。
     // アニメーションが停止中は未定義です。
-    private animationId: number | undefined;
+    private animationId: number | undefined; 
 
     private linePatterns: LinePattern[];
     private lineCount: number;
@@ -18,22 +17,22 @@ class CanvasRenderer {
 
     constructor(
         // キャンバス要素のID。
-        canvasId: string,
+        canvasId: string, 
         // キャンバス要素の親要素のID。
-        parentId: string,
+        parentId: string, 
         // ラインのスタイルパターンの配列。
-        linePatterns: LinePattern[],
+        linePatterns: LinePattern[], 
         // 背景色の設定。
-        backgroundColor: Color,
+        backgroundColor: Color, 
         // 描画するラインの数。
-        lineCount: number,
+        lineCount: number, 
         // ラインの出発点の位置を示す文字列。
-        startPosition: string
+        startPosition: string 
     ) {
         // キャンバス要素を取得
         this.canvas = this.getCanvasElement(canvasId);
-        // 2D コンテキストを取得
-        this.context = this.canvas.getContext("2d", { alpha: false }) as CanvasRenderingContext2D;
+        // 2D コンテキストを取得 
+        this.context = this.canvas.getContext("2d", {alpha: false,}) as CanvasRenderingContext2D; 
         // 背景色を設定
         this.backgroundColor = backgroundColor;
         // キャンバスサイズを設定
@@ -43,9 +42,13 @@ class CanvasRenderer {
         this.lineCount = lineCount;
         this.startPosition = startPosition;
         // ラインスタイルを生成
-        this.lineStyles = this.generateDrawingStyles(this.linePatterns, this.lineCount, this.startPosition);
+        this.lineStyles = this.generateDrawingStyles(
+            this.linePatterns,
+            this.lineCount,
+            this.startPosition
+        );
         // リサイズハンドラを設定
-        // this.setupResizeHandler(parentId);
+        this.setupResizeHandler(parentId); 
         // アニメーションを開始
         this.startAnimation();
     }
@@ -71,11 +74,11 @@ class CanvasRenderer {
     // ラインスタイルを生成するメソッド
     private generateDrawingStyles(
         // ラインのスタイルパターンの配列。
-        linePatterns: LinePattern[],
+        linePatterns: LinePattern[], 
         // 生成するラインの数。
-        lineCount: number,
+        lineCount: number,  
         // ラインの出発点の位置を示す文字列。
-        startPosition: string
+        startPosition: string 
     ): LineStyle[] {
         const lines: LineStyle[] = [];
 
@@ -94,19 +97,23 @@ class CanvasRenderer {
         return lines;
     }
 
-    // // キャンバスリサイズハンドラを設定するメソッド
-    // private setupResizeHandler(parentId: string): void {
-    //     window.addEventListener("resize", () => {
-    //         // アニメーションを停止
-    //         this.stopAnimation();
-    //         // キャンバスサイズを更新
-    //         this.setupCanvasSize(parentId);
-    //         // ラインスタイルを生成
-    //         this.lineStyles = this.generateDrawingStyles(this.linePatterns, this.lineCount, this.startPosition);
-    //         // アニメーションを再開
-    //         this.startAnimation();
-    //     });
-    // }
+    // キャンバスリサイズハンドラを設定するメソッド
+    private setupResizeHandler(parentId: string): void {
+        window.addEventListener("resize", () => {
+            // アニメーションを停止
+            this.stopAnimation();
+            // キャンバスサイズを更新
+            this.setupCanvasSize(parentId);
+            // ラインスタイルを生成
+            this.lineStyles = this.generateDrawingStyles(
+                this.linePatterns,
+                this.lineCount,
+                this.startPosition
+            );
+            // アニメーションを再開
+            this.startAnimation();
+        });
+    }
 
     // アニメーションを開始するメソッド
     private startAnimation(): void {
@@ -115,7 +122,7 @@ class CanvasRenderer {
 
     // アニメーションを停止するメソッド
     private stopAnimation(): void {
-        if (this.animationId) {
+        if (this.animationId !== undefined) {
             cancelAnimationFrame(this.animationId);
             this.animationId = undefined;
         }
@@ -125,14 +132,14 @@ class CanvasRenderer {
     private updateCanvas(): void {
         if (this.animationId !== undefined) {
             // キャンバスをクリア
-            this.clearCanvas();
+            this.clearCanvas(); 
             this.lineStyles.forEach((line) => {
                 // ラインを描画
-                line.draw(this.context);
+                line.draw(this.context); 
                 // // 約5%の確率で条件が成立
-                // if (Math.random() > 0.95) {
+                // if (Math.random() > 0.95) { 
                 //     // パスの一部をランダムに変更
-                //     line.mutatePath();
+                //     line.mutatePath(); 
                 // }
             });
             // 次のアニメーションフレームをリクエスト
@@ -152,9 +159,6 @@ class CanvasRenderer {
     }
 }
 
-// 外部から使用できるようにexport
-export { CanvasRenderer };
-
 class LineStyle {
     lineSize: number;
     origin: { x: number; y: number };
@@ -167,7 +171,7 @@ class LineStyle {
     canvas: HTMLCanvasElement;
 
     constructor(linePattern: LinePattern, startPosition: string, canvas: HTMLCanvasElement) {
-        this.lineSize = linePattern.lineSize * (window.devicePixelRatio / 3);;
+        this.lineSize = linePattern.lineSize;
         this.origin = this.calculateOrigin(startPosition, canvas);
         this.length = 500 + Math.random() * 1000;
         this.color = linePattern.color;
@@ -241,7 +245,7 @@ class LineStyle {
             // 破線がどの位置から始まるかを制御
             this.offset += 20; 
             // 描かれる線の幅
-            context.lineWidth = 2 * (window.devicePixelRatio / 3); 
+            context.lineWidth = 2; 
         } else if (style === "pattern") {
             // 破線パターンのオフセットを設定
             context.lineDashOffset = this.length - this.offset; 
@@ -254,7 +258,7 @@ class LineStyle {
             // 破線がどの位置から始まるかを制御
             this.offset += 10;
             // 描かれる線の幅
-            context.lineWidth = 1 * (window.devicePixelRatio / 3); 
+            context.lineWidth = 1; 
             context.imageSmoothingEnabled = false;
             // const translateX = 10; // 水平移動量 (調整が必要)
             // const translateY = 10;  // 垂直移動量 (不要なら0に設定)

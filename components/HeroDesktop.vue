@@ -28,25 +28,31 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import * as THREE from 'three'
 
 const lineAnimation = ref(null)
-let camera, scene, renderer, resizeObserver
+let camera, scene, renderer, resizeObserver, animationTimer // animationTimerを追加
 
 onMounted(() => {
   startAnimation()
   init()
-  animate()
+  animationTimer = animate() // animationTimerに代入
   // ResizeObserverを作成
-  resizeObserver = new ResizeObserver(onResize)
+  resizeObserver = new ResizeObserver(onResize) // コードに置き換え
   // lineAnimation要素にResizeObserverを適用
-  resizeObserver.observe(lineAnimation.value)
+  resizeObserver.observe(lineAnimation.value) // コードに置き換え
 })
 
+// TODO:遷移後エラーがでるので原因の調査と対応を行う
 onUnmounted(() => {
-  renderer.dispose()
   // ResizeObserverを解除
-  resizeObserver.unobserve(lineAnimation.value)
+  if(lineAnimation.value){
+    resizeObserver.unobserve(lineAnimation.value) // コードに置き換え
+  }
   if (animationTimer) {
     clearTimeout(animationTimer)
   }
+  if(animationTimer2){
+    clearTimeout(animationTimer2)
+  }
+  renderer.dispose()
 })
 
 function init() {
@@ -108,7 +114,7 @@ function init() {
 }
 
 function animate() {
-  requestAnimationFrame(animate)
+  animationTimer = requestAnimationFrame(animate) // animationTimerに代入
 
   // ラインを回転させる
   for (let i = 0; i < scene.children.length; i++) {
@@ -130,23 +136,28 @@ function animate() {
   renderer.render(scene, camera)
 }
 
+
 // リサイズ時のコールバック関数
 function onResize() {
-  // コンテナのサイズを取得
-  const width = lineAnimation.value.clientWidth
-  const height = lineAnimation.value.clientHeight
-  // カメラのアスペクト比を更新
-  camera.aspect = width / height
-  camera.updateProjectionMatrix()
-  // レンダラーのサイズを更新
-  renderer.setSize(width, height)
-  // アニメーションをリセット
-  for (let i = 0; i < scene.children.length; i++) {
-    scene.children[i].rotation.x = 0
-    scene.children[i].rotation.y = 0
-    scene.children[i].rotation.z = 0
+  // lineAnimationがnullでないことをチェック
+  if (lineAnimation.value) {
+    // コンテナのサイズを取得
+    const width = lineAnimation.value.clientWidth
+    const height = lineAnimation.value.clientHeight
+    // カメラのアスペクト比を更新
+    camera.aspect = width / height
+    camera.updateProjectionMatrix()
+    // レンダラーのサイズを更新
+    renderer.setSize(width, height)
+    // アニメーションをリセット
+    for (let i = 0; i < scene.children.length; i++) {
+      scene.children[i].rotation.x = 0
+      scene.children[i].rotation.y = 0
+      scene.children[i].rotation.z = 0
+    }
   }
 }
+
 
 const mainMessage = ref(null)
 const subMessage1 = ref(null)
@@ -190,7 +201,7 @@ async function typeWithCursor(element, text, cursor) {
     cursor.style.display = "none"
 }
 
-let animationTimer = null
+let animationTimer2 = null
 
 async function startAnimation() {
     await typeWithCursor(mainMessage.value, heroText.main, cursor1.value)
@@ -198,7 +209,7 @@ async function startAnimation() {
     await typeWithCursor(subMessage2.value, heroText.sub2, cursor3.value)
 
     // アニメーションが終了したら3秒後に新しいアニメーションを開始
-    animationTimer = setTimeout(() => {
+    animationTimer2 = setTimeout(() => {
         mainMessage.value.textContent = ""
         subMessage1.value.textContent = ""
         subMessage2.value.textContent = ""
