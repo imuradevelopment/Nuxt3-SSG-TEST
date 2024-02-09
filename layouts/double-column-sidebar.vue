@@ -16,8 +16,8 @@
                     <div class="background-line2 quarter-pixel-border"></div>
                     <div class="background-line3 quarter-pixel-border"></div>
                     <div class="background-line4 quarter-pixel-border"></div> -->
-                    <BackgroundPattern />
-                    <!-- <BackgroundPattern2 /> -->
+                    <!-- <BackgroundPattern /> -->
+                    <BackgroundPattern2 />
                 </div>
                 <slot /><!-- pages配下のファイルを表示する -->
             </el-main>
