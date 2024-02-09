@@ -11,8 +11,8 @@ onMounted(() => {
     canvas.height = canvas.clientHeight;
 
     // 線の色と太さを設定する変数
-    const lineColor = "rgb(156 163 175)";
-    const lineWidth = 1;
+    const lineColor = "black";
+    const lineWidth = 0.5;
 
     // ランダムな線の数
     const numLines = 10;
