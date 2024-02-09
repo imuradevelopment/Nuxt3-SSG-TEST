@@ -15,7 +15,7 @@ onMounted(() => {
     const lineWidth = 1;
 
     // ランダムな線の数
-    const numLines = 30;
+    const numLines = 10;
 
     // ランダムな線の生成
     for (let i = 0; i < numLines; i++) {
