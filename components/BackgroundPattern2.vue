@@ -10,28 +10,19 @@ onMounted(() => {
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
 
-    const lineColor = "rgb(156 163 175)";
-    const lineWidth = 1;
+    // 線の色と太さを設定する変数
+    const lineColor = "black";
+    const lineWidth = 0.25;
 
     // ランダムな線の数
     const numLines = 30;
 
     // ランダムな線の生成
     for (let i = 0; i < numLines; i++) {
-        const isVertical = Math.random() < 0.5; // 垂直方向か水平方向かをランダムに決定
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
-        let x2, y2;
-
-        if (isVertical) {
-            // 垂直方向の場合
-            x2 = x1;
-            y2 = y1 + Math.random() * (canvas.height - y1);
-        } else {
-            // 水平方向の場合
-            x2 = x1 + Math.random() * (canvas.width - x1);
-            y2 = y1;
-        }
+        const x2 = Math.random() * canvas.width;
+        const y2 = Math.random() * canvas.height;
 
         ctx.beginPath();
         ctx.moveTo(x1, y1);
@@ -47,6 +38,6 @@ onMounted(() => {
 <style scoped>
 #bg-canvas {
     image-rendering: -moz-crisp-edges;
-    image-rendering: pixelated;
+    /* image-rendering: pixelated; */
 }
 </style>
