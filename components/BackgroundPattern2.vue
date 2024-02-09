@@ -12,7 +12,7 @@ onMounted(() => {
 
     // 線の色と太さを設定する変数
     const lineColor = "black";
-    const lineWidth = 0.5;
+    const lineWidth = 0.25;
 
     // ランダムな線の数
     const numLines = 10;
