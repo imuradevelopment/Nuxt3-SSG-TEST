@@ -1,15 +1,16 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div v-for="event in events" :key="event.id" class="col-4">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h5 class="card-title">{{ event.month }}月</h5>
+    <div class="center">
+        <div class="timeline-line">
+            <div v-for="(item, index) in items" :key="index" class="timeline-item">
+                <div class="timeline-month">{{ item.month }}</div>
+                <div class="timeline-dot">●</div>
+                <div class="timeline-content">
+                    <div v-if="item.text" class="timeline-bubble">
+                        <!-- v-htmlディレクティブを追加 -->
+                        <div class="timeline-text" v-html="item.text"></div>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">{{ event.title }}</p>
-                        <p class="card-text">{{ event.description }}</p>
-                        <img v-if="event.image" :src="event.image" class="card-img-top" alt="イベント画像">
+                    <div v-if="item.image" class="timeline-image">
+                        <img :src="item.image" alt="image" />
                     </div>
                 </div>
             </div>
@@ -18,71 +19,159 @@
 </template>
 
 <script setup>
-// イベントのデータは仮のものです。実際にはAPIやストアから取得することができます。
-const events = [
-    {
-        id: 1,
-        month: 4,
-        title: "プログラミング初級者講座（4日間）",
-        description: "4日間でプログラミングの基本、Javaを中心としたプログラミングの基礎を学びます。JavaScript、HTML、CSS、データベースについても学びます。実際の企業には欠かせないプロジェクトの進め方やチーム開発に役立ちます。",
-        image: null
-    },
-    {
-        id: 2,
-        month: 8,
-        title: "イベント一次審査会",
-        description: "社会人技術者向けのイベントランキングに参加して頂き、一次審査を通過した方には賞金や特典があります。審査基準は技術力、創造性、オリジナリティなどです。",
-        image: null
-    },
-    {
-        id: 3,
-        month: 9,
-        title: "Nuxt3ハンズオン",
-        description: "Nuxt3の新機能や使い方を実際に体験してみましょう。Nuxt3のエキスパートが丁寧に指導します。Vueの基本知識がある方が対象です。",
-        image: "[4](https://57code.gitee.io/nuxt3-docs-zh/directory-structure/components.html)"
-    },
-    {
-        id: 4,
-        month: 10,
-        title: "ハロウィンパーティー",
-        description: "仮装して楽しく盛り上がりましょう。仮装コンテストやゲームなどのイベントもあります。参加費は無料ですが、事前に申し込みが必要です。",
-        image: null
-    },
-    {
-        id: 5,
-        month: 11,
-        title: "AIチャレンジ",
-        description: "AIを使って面白いものや役に立つものを作ってみましょう。テーマは自由です。優秀な作品には賞金や表彰があります。",
-        image: null
-    },
-    {
-        id: 6,
-        month: 12,
-        title: "忘年会",
-        description: "今年一年の成果を振り返りながら、仲間と楽しく飲みましょう。食事や飲み物は無料です。参加者にはプレゼントもあります。",
-        image: null
-    },
-    {
-        id: 7,
-        month: 3,
-        title: "卒業式",
-        description: "卒業生の皆さん、おめでとうございます。卒業証書授与やスピーチなどの式典の後、懇親会もあります。卒業生以外の方も参加できます。",
-        image: "/images/recruit/induction/002.png"
+
+// コンポーネントのプロパティを定義
+defineProps({
+    // タイムラインのデータを受け取る
+    items: {
+        type: Array,
+        required: true
     }
-]
+})
 </script>
 
+
 <style scoped>
-.card {
-    background-color: #2196f3;
+.center {
+    margin-left: calc(50% - 3rem - 3px - 15rem);
+}
+@media screen and (max-width: 641px) {
+.center {
+    margin-left: calc(50% - 3rem - 3px - 8rem);
+}    
+}
+.timeline-line {
+    background-color: var(--custom-color-blue);
+    height: 100%;
+    margin-left: 4.25rem;
+    position: relative;
+    margin-top: 1.75rem;
+    width: 3px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 641px) {
+  .timeline-line {
+    background-color: var(--custom-color-blue);
+    height: 100%;
+    margin-left: 4.25rem;
+    position: relative;
+    margin-top: 1.75rem;
+    width: 2px;
+    z-index: -1;
+}
+}
+
+.timeline-item {
+  /* display: flex;
+  align-items: center;
+  margin: 20px 0; */
+}
+
+.timeline-month {
+    background-color: var(--custom-color-deepBlue);
     color: white;
+    padding: 0.125rem 0.25rem 0.25rem 0.25rem;
+    font-weight: 700;
+    margin-right: 10px;
+    position: absolute;
+    left: -3rem;
+    margin-top: -0.5rem;
 }
 
-.card-title {
-    font-weight: bold;
+.timeline-dot {
+position: relative;
+    color: var(--custom-color-deepBlue);
+    border-radius: 50%;
+    height: 1rem;
+    margin-right: 10px;
+    width: 1rem;
+    left: -0.45rem;
+    top: -0.25rem;
 }
 
-.card-text {
-    font-size: 14px;
+/* .timeline-line {
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: -1;
+} */
+
+.timeline-content {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.timeline-bubble {
+    border: 1px solid var(--custom-color-deepBlue);
+    background-color: var(--custom-color-deepBlue);
+    color:white;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    width: 30rem;
+    left: 1.25rem;
+    top: -2rem;
+}
+
+@media screen and (max-width: 641px) {
+    .timeline-bubble {
+    border: 1px solid var(--custom-color-deepBlue);
+    background-color: var(--custom-color-deepBlue);
+    color:white;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    width: 16rem;
+    left: 1.25rem;
+    top: -1.75rem;
+    }
+}
+
+.timeline-bubble::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid var(--custom-color-deepBlue);
+  border-bottom: 10px solid transparent;
+}
+
+.timeline-text {
+  margin: 0;
+}
+
+.timeline-image {
+    /* height: 150px; */
+    object-fit: cover;
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    margin: -0.75rem 0 1.75rem 1rem;
+    /* filter: drop-shadow(0 3px 3px var(--custom-color-deepBlue)); */
+    filter: drop-shadow(0 0 5px var(--custom-color-deepBlue));
+    /* filter: drop-shadow(1rem -1rem 0 var(--custom-color-deepBlue)); */
+}
+
+@media screen and (max-width: 641px) {
+  .timeline-image {
+      /* height: 150px; */
+      object-fit: cover;
+      position: relative;
+      width: 16rem;
+      overflow: hidden;
+      margin: -0.75rem 0 1.75rem 1rem;
+    /* filter: drop-shadow(0 3px 3px var(--custom-color-deepBlue)); */
+    filter: drop-shadow(0 0 7px var(--custom-color-deepBlue));
+    /* filter: drop-shadow(1rem -1rem 0 var(--custom-color-deepBlue)); */
+  }
+}
+.timeline-image > img {
+    object-fit: cover;
+    border-radius: 1rem;
 }
 </style>

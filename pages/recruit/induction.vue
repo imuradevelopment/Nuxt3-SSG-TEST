@@ -27,23 +27,23 @@
                 </div>
             </div>
         </section> -->
-            <section>
-                <h2 class="pl-8 pr-4 w-fit text-white bg-custom-deepBlue text-2xl font-bold leading-loose">研修制度</h2>
-                <div class="flex flex-col justify-center items-center">
-                    <p>
-                    <div>未経験でも安心。充実した研修制度。</div>
-                    <div class="break-keep">
-                        ベイルでは文系・IT未経験でも確実にエンジニアとして成長できる環境を用意しており、入社後の1年間 様々な研修・OJTで、社会人・技術者としての 基礎 を築きます。
-                    </div>
-                    </p>
+        <section class="mt-12">
+            <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">研修制度</h2>
+            <div class="flex flex-col justify-center items-center">
+                <div
+                    class="text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                    未経験でも安心。充実した研修制度。</div>
+                <div class="mt-4 text-sm sm:text-base font-bold text-center">
+                    ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
+                </div>
 
-                    <div class="text-custom-deepBlue text-xl font-bold leading-loose">研修プログラム</div>
-                    <div class="text-custom-deepBlue text-xs">※前年度の実績で研修内容は毎年変わります</div>
-                </div>
-                <div class="m-4">
-                    <Timeline2 :items="timeline" />
-                </div>
-            </section>
+                <div class="mt-4 text-custom-deepBlue text-2xl font-bold">研修プログラム</div>
+                <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
+            </div>
+            <div class="m-4">
+                <Timeline :items="timeline" />
+            </div>
+        </section>
         <section>
             <CareerPath />
         </section>
@@ -55,41 +55,39 @@ definePageMeta({
     layout: 'double-column-sidebar'
 })
 import CareerPath from '~/components/CareerPath.vue'
-// import Timeline from '~/components/Timeline.vue'
-import Timeline2 from '~/components/Timeline2.vue'
+import Timeline from '~/components/Timeline.vue'
 import { ref } from 'vue'
 // タイムラインのデータを定義
 const timeline = ref([
     {
         month: '4月',
-        text: 'プログラミング初級講座（4日間）\n4日間でJava基本文法やOOP概念、Javaを使ったプログラムの作成を学びます。上級者向けのHTML、CSS、データベースについても学びます。実際の現場には欠かせないプロジェクトの進め方やチーム開発に役立ちます。'
+        text: '<div class="font-bold leading-8">プログラミング外部研修（4ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">4月から7月末までの4か月間、Javaを中心としたプログラミングの基礎を学習します。Java以外にも、HTML、CSS、データベースについて学習します。研修の最後には実際のプロジェクトのようなチーム開発も行います。</div>'
     },
     {
         month: '8月',
-        text: 'インターン参加報告会\n社会人として働くイメージがつかめて自己成長したと感じた。貴重なアドバイスをいただきました。'
+        text: '<div class="font-bold leading-8">インターン講師担当</div><div class="text-sm font-bold tracking-wide leading-6">株式会社ベイルのインターンシップに講師として参加し、研修で得た技術・知識をアウトプットしていただきます。</div>',
+        // image: '/images/recruit/induction/002.png',
     },
     {
         month: '9月',
         image: '/images/recruit/induction/002.png',
-        text: '写真ブレソフィア社員（※2名）'
     },
     {
         month: '10月',
-        text: 'プログラミング中級講座（※2名）\nプログラミング中級者向けの内容でこのコースは開発現場で使える技術と知識をしっかり身に着ける為、Java、システム設計について深く学ぶ。プログラミング技術者認定試験対策も行います。'
+        text: '<div class="font-bold leading-8">プログラミング内部研修（約2ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">プログラミング外部研修の復習やグループでのプログラム開発など様々な課題に取り組みながら、Java、フレームワークについて理解を深め、プログラミング技術を定着化させます。</div>'
     },
     {
         month: '11月',
-        image: '/images/recruit/induction/003.png',
-        text: 'AWS勉強会（1カ月）\n1カ月間、AWSの基礎を学び、認定資格取得を目指します'
+        text: '<div class="font-bold leading-8">AWS外部研修（1ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">1か月間、AWSの基礎を学び、認定資格の取得を目指します。クラウド化が進む今のIT業界で、AWS(Amazon Web Services)の知識は必ず必要になります。</div>'
     },
     {
         month: '12月',
-        text: '忘年会\n一年間の成果を振り返り、仲間と楽しく交流しましょう。\n飲み放題・食べ放題のビュッフェ形式です。'
+        text: '<div class="font-bold leading-8">OJT参画</div><div class="text-sm font-bold tracking-wide leading-6">社内プロジェクト、もしくはお客様先のプロジェクトにOJTとして参画し、先輩社員の下で実務トレーニングになります。</div>',
+        image: '/images/recruit/induction/003.png',
     },
     {
         month: '3月',
-        image: '/images/recruit/induction/004.png',
-        text: '卒業式\nプログラミング初級講座の修了証書を授与します。\nおめでとうございます！'
+        text: '<div class="font-bold leading-8">プロジェクトアサイン</div><div class="text-sm font-bold tracking-wide leading-6">1人の技術者としてプロジェクトに参画し、作業を行います。</div>'
     }
 ])
 </script>
