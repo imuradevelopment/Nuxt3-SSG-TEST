@@ -31,7 +31,7 @@
             <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">研修制度</h2>
             <div class="flex flex-col justify-center items-center">
                 <div
-                    class="text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                    class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                     未経験でも安心。充実した研修制度。</div>
                 <div class="mt-4 text-sm sm:text-base font-bold text-center">
                     ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
