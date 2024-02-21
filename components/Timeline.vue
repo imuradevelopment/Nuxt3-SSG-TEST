@@ -75,9 +75,9 @@ defineProps({
     font-weight: 700;
     margin-right: 10px;
     position: absolute;
-    left: -3rem;
+    left: -4rem;
     margin-top: -0.5rem;
-    width: 2.5rem;
+    width: 3rem;
 }
 
 .timeline-dot {
