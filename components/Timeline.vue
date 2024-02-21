@@ -9,9 +9,10 @@
                         <!-- v-htmlディレクティブを追加 -->
                         <div class="timeline-text" v-html="item.text"></div>
                     </div>
-                    <div v-if="item.image" class="timeline-image">
+                    <!-- <div v-if="item.image" class="timeline-image">
                         <img :src="item.image" alt="image" />
-                    </div>
+                    </div> -->
+                    <img v-if="item.image" class="timeline-image" :src="item.image" alt="image" />
                 </div>
             </div>
         </div>
