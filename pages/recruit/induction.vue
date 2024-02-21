@@ -32,7 +32,7 @@
             <div class="flex flex-col justify-center items-center">
                 <div
                     class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
-                    未経験でも安心。充実した研修制度。</div>
+                    未経験でも安心。充実した研修。</div>
                 <div class="mt-4 text-sm sm:text-base font-bold text-center">
                     ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
                 </div>
@@ -61,7 +61,7 @@ import { ref } from 'vue'
 const timeline = ref([
     {
         month: '4月',
-        text: '<div class="font-bold leading-8">プログラミング外部研修（4ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">4月から7月末までの4か月間、Javaを中心としたプログラミングの基礎を学習します。Java以外にも、HTML、CSS、データベースについて学習します。研修の最後には実際のプロジェクトのようなチーム開発も行います。</div>'
+        text: '<div class="font-bold leading-8">プログラミング外部研修<br class="inline-block sm:hidden" />（4ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">4月から7月末までの4か月間、Javaを中心としたプログラミングの基礎を学習します。Java以外にも、HTML、CSS、データベースについて学習します。研修の最後には実際のプロジェクトのようなチーム開発も行います。</div>'
     },
     {
         month: '8月',
@@ -74,11 +74,11 @@ const timeline = ref([
     },
     {
         month: '10月',
-        text: '<div class="font-bold leading-8">プログラミング内部研修（約2ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">プログラミング外部研修の復習やグループでのプログラム開発など様々な課題に取り組みながら、Java、フレームワークについて理解を深め、プログラミング技術を定着化させます。</div>'
+        text: '<div class="font-bold leading-8">プログラミング内部研修<br class="inline-block sm:hidden" />（約2ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">プログラミング外部研修の復習やグループでのプログラム開発など様々な課題に取り組みながら、Java、フレームワークについて理解を深め、プログラミング技術を定着化させます。</div>'
     },
     {
         month: '11月',
-        text: '<div class="font-bold leading-8">AWS外部研修（1ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">1か月間、AWSの基礎を学び、認定資格の取得を目指します。クラウド化が進む今のIT業界で、AWS(Amazon Web Services)の知識は必ず必要になります。</div>'
+        text: '<div class="font-bold leading-8">AWS外部研修<br class="inline-block sm:hidden" />（1ヵ月）</div><div class="text-sm font-bold tracking-wide leading-6">1か月間、AWSの基礎を学び、認定資格の取得を目指します。クラウド化が進む今のIT業界で、AWS(Amazon Web Services)の知識は必ず必要になります。</div>'
     },
     {
         month: '12月',
