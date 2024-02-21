@@ -6,7 +6,6 @@
                 <div class="timeline-dot">●</div>
                 <div class="timeline-content">
                     <div v-if="item.text" class="timeline-bubble">
-                        <!-- v-htmlディレクティブを追加 -->
                         <div class="timeline-text" v-html="item.text"></div>
                     </div>
                     <!-- <div v-if="item.image" class="timeline-image">
@@ -64,9 +63,7 @@ defineProps({
 }
 
 .timeline-item {
-  /* display: flex;
-  align-items: center;
-  margin: 20px 0; */
+  width: max-content;
 }
 
 .timeline-month {
