@@ -1,14 +1,16 @@
 <template>
-    <div class="timeline-line">
-        <div v-for="(item, index) in items" :key="index" class="timeline-item">
-            <div class="timeline-month">{{ item.month }}</div>
-            <div class="timeline-dot">●</div>
-            <div class="timeline-content">
-                <div class="timeline-bubble">
-                    <div class="timeline-text">{{ item.text }}</div>
-                </div>
-                <div v-if="item.image" class="timeline-image">
-                    <img :src="item.image" alt="image" />
+    <div class="center">
+        <div class="timeline-line">
+            <div v-for="(item, index) in items" :key="index" class="timeline-item">
+                <div class="timeline-month">{{ item.month }}</div>
+                <div class="timeline-dot">●</div>
+                <div class="timeline-content">
+                    <div class="timeline-bubble">
+                        <div class="timeline-text">{{ item.text }}</div>
+                    </div>
+                    <div v-if="item.image" class="timeline-image">
+                        <img :src="item.image" alt="image" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,87 +29,34 @@ defineProps({
 })
 </script>
 
-<style>
-/* .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+<style scoped>
+.center {
+    margin-left: calc(50% - 3rem - 2px - 15rem);
 }
-
-.timeline-item {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
+@media screen and (max-width: 641px) {
+.center {
+    margin-left: calc(50% - 3rem - 2px - 8rem);
+}    
 }
-
-.timeline-month {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.timeline-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin-right: 10px;
-}
-
-.timeline-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.timeline-bubble {
-    position: relative;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.timeline-bubble::before {
-    content: "";
-    position: absolute;
-    left: -10px;
-    top: 10px;
-    border-top: 10px solid transparent;
-    border-right: 10px solid #ccc;
-    border-bottom: 10px solid transparent;
-}
-
-.timeline-text {
-    margin: 0;
-}
-
-.timeline-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-top: 10px;
-} */
-
-
-
 .timeline-line {
-background-color: #ccc;
+    background-color: #ccc;
     height: 100%;
-    left: 4.25rem;
+    margin-left: 4.25rem;
     position: relative;
-    top: 1rem;
+    margin-top: 1.75rem;
     width: 2px;
     z-index: -1;
 }
 
 @media screen and (max-width: 641px) {
   .timeline-line {
-background-color: #ccc;
+    background-color: #ccc;
     height: 100%;
-    left: 4.25rem;
+    margin-left: 4.25rem;
     position: relative;
-    top: 1rem;
+    margin-top: 1.75rem;
     width: 2px;
     z-index: -1;
-    margin-left: calc((100% - 376px) / 2);
 }
 }
 
@@ -121,7 +70,7 @@ background-color: #ccc;
     font-weight: 700;
     margin-right: 10px;
     position: absolute;
-    left: -4.25rem;
+    left: -3rem;
 }
 
 .timeline-dot {
