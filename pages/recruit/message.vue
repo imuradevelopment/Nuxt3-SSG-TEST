@@ -45,7 +45,7 @@
                             こういったことだと考えています。
                         </div>
                     </div>
-                    <p class="p-4 text-balance text-xs sm:text-base font-bold sm:leading-7 leading-7">
+                    <p class="p-4 text-balance text-xs sm:text-base font-bold sm:leading-7 leading-5">
                         人はみな一人ひとり違います。ですから「仕事が楽しい」・「やりがいある」と感じてもらうためには、それぞれ個々に合った作業をしてもらうのが一番近道なのです。IT業界は様々な作業内容・作業環境があります。ですからベイルでは社員一人ひとりの個性に合ったスキルプランを日々考え実施しています。社員一人ひとりの小さな成長が、会社を大きく成長させる原動力になる。こう考えています。
                     </p>
                 </section>
