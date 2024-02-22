@@ -85,7 +85,7 @@
                 資格取得支援</h2>
             <div class="flex flex-col justify-center items-center">
                 <div
-                    class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                    class="mt-4 text-2xl font-bold leading-loose underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                     ベイルは技術資格、<br class="inline-block md:hidden" />業務資格の取得を支援します。</div>
                 <div class="mt-6">
                     <div class="flex flex-wrap">
@@ -93,10 +93,10 @@
                             <ImageCard src="/images/recruit/induction/008.png"></ImageCard>
                         </div>
                         <div class="w-full sm:w-1/2">
-                            <div class="sm:leading-7 leading-7">
-                                <div class="text-2xl font-bold">技術資格、業務資格の取得支援</div>
-                                <p class="text-sm sm:mt-4 sm:text-base font-bold">資格取得に向けた支援（受験補助金） 及び、資格認定者に報奨金の支給を行っております。</p>
-                                <ul class="pl-4 list-image-[url(/images/common/check.svg)] text-sm sm:mt-4 sm:text-base font-bold">
+                            <div class="">
+                                <div class="text-2xl font-bold leading-loose">技術資格、業務資格の取得支援</div>
+                                <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">資格取得に向けた支援（受験補助金） 及び、資格認定者に報奨金の支給を行っております。</p>
+                                <ul class="pl-4 list-image-[url(/images/common/check.svg)] text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
                                     <li>情報処理技術者試験（例．基本情報技術者、応用情報技術者）</li>
                                     <li>ベンダー認定資格（例：OracleMaster、Cisco、LPIC）</li>
                                     <li>協会認定資格（例：PMP）</li>
@@ -112,9 +112,9 @@
                             <ImageCard src="/images/recruit/induction/009.png"></ImageCard>
                         </div>
                         <div class="w-full sm:w-1/2">
-                            <div class="sm:leading-7 leading-7">
-                                <div class="text-2xl font-bold">外部研修支援</div>
-                                <p class="text-sm sm:mt-4 sm:text-base font-bold">業務に必要となるスキルを補完する為に、短期的な外部研修を受講して頂く事が有ります。技術的な研修や、コーチング、チームリードなどの技能研修など、身に付けたい（付けて欲しい）スキルに応じて推奨します。
+                            <div class="">
+                                <div class="text-2xl font-bold leading-loose">外部研修支援</div>
+                                <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">業務に必要となるスキルを補完する為に、短期的な外部研修を受講して頂く事が有ります。技術的な研修や、コーチング、チームリードなどの技能研修など、身に付けたい（付けて欲しい）スキルに応じて推奨します。
                                 </p>
                             </div>
                         </div>
