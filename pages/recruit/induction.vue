@@ -23,7 +23,7 @@
                     ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
                 </div>
 
-                <div class="mt-4 text-custom-deepBlue text-2xl font-bold">■研修プログラム■</div>
+                <div class="mt-4 text-custom-deepBlue text-2xl font-bold">■ 研修プログラム ■</div>
                 <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
             </div>
             <div class="m-4">
