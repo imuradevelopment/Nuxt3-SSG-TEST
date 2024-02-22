@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <section class="flex bg-cover bg-[url('/images/recruit/induction/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
@@ -10,25 +11,10 @@
                 </h1>
             </div>
         </section>
-        <!-- <section>
-            <h2 class="pl-8 pr-4 w-fit text-white bg-custom-deepBlue text-2xl font-bold leading-loose">研修制度</h2>
-            <div class="flex flex-col justify-center items-center">
-                <p>
-                <div>未経験でも安心。充実した研修制度。</div>
-                <div class="break-keep">
-                    ベイルでは文系・IT未経験でも確実にエンジニアとして成長できる環境を用意しており、入社後の1年間 様々な研修・OJTで、社会人・技術者としての 基礎 を築きます。
-                </div>
-                </p>
 
-                <div class="text-custom-deepBlue text-xl font-bold leading-loose">研修プログラム</div>
-                <div class="text-custom-deepBlue text-xs">※前年度の実績で研修内容は毎年変わります</div>
-                <div class="m-auto text-left w-fit">
-                    <Timeline />
-                </div>
-            </div>
-        </section> -->
         <section class="mt-12">
-            <h2 id="recruit-induction02" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">研修制度</h2>
+            <h2 id="recruit-induction02" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+                研修制度</h2>
             <div class="flex flex-col justify-center items-center">
                 <div
                     class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
@@ -37,35 +23,106 @@
                     ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
                 </div>
 
-                <div class="mt-4 text-custom-deepBlue text-2xl font-bold">研修プログラム</div>
+                <div class="mt-4 text-custom-deepBlue text-2xl font-bold">■研修プログラム■</div>
                 <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
             </div>
             <div class="m-4">
                 <Timeline :items="timeline" />
             </div>
         </section>
+
         <section class="mt-12">
+            <h2 id="recruit-induction03" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+                教育システム</h2>
             <div class="m-4">
-                <h2 id="recruit-induction03" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">教育システム</h2>
+                <div class="flex flex-wrap">
+                    <div class="w-full sm:w-1/2">
+                        <ImageCard src="/images/recruit/induction/004.png"></ImageCard>
+                    </div>
+                    <div class="w-full sm:w-1/2">
+                        <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7"><span
+                                class="text-2xl font-bold">社員が自分で解決できるよう促します</span><br />最初に社会人としての基本的な挨拶から入ります。その後は、先輩から課題をもらって簡単なプログラムを作成し、業務に必要な知識を具体的に習熟していきます。課題に対してどのように処理していくのがいいのか、自分なりに答えを探して分からないことは聞いていくのですが、全部は教えてくれません、そのときに受けたアドバイスを基に解決するのですが、それまでの知識でやれるのならもう少し考えて、だめなら教えてもらいできるだけ自分で答えを見つけるようにします。そのような教え方でステップアップを図り、その後は現場で実際の業務に携わりながら覚えていきます。
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
+
         <section class="mt-12">
-            <h2 id="recruit-induction0" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">キャリアパス</h2>
+            <h2 id="recruit-induction04" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+                キャリアパス</h2>
             <div class="mx-4">
                 <div class="flex flex-col justify-center items-center">
                     <div
                         class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
-                        目標を見つけて ステップアップ !</div>
-                    <div class="mt-4 text-sm sm:text-base font-bold text-center">
+                        目標を見つけて、ステップアップ !</div>
+                    <div class="mt-4 text-base sm:text-lg font-bold text-center">
                         途中でやりたい事が変わっても<br />積み上げた経験を活かす事で 唯一無二のエンジニアに。
                     </div>
                 </div>
-                <div class="flex flex-col justify-center items-center">
+                <div class="mt-4 flex flex-col justify-center items-center">
                     <NuxtImg class="hidden md:inline-block" width="1087" src="/images/recruit/induction/005.png" />
                     <NuxtImg class="inline-block md:hidden" width="343" src="/images/recruit/induction/006.png" />
                 </div>
+                <div class="mt-6">
+                    <div class="flex flex-wrap">
+                        <div class="w-full sm:w-1/2">
+                            <ImageCard src="/images/recruit/induction/007.png"></ImageCard>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
+                                人それぞれで目指すものも違えば、向き不向きも有ります。<br
+                                    class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
+                                    class="hidden md:inline-block" />ベイルでは、適宜相談しながら その人に合ったキャリアパスを描いていきたいと考えます。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section class="mt-12">
+            <h2 id="recruit-induction05" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+                資格取得支援</h2>
+            <div class="flex flex-col justify-center items-center">
+                <div
+                    class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                    ベイルは技術資格、<br class="inline-block md:hidden" />業務資格の取得を支援します。</div>
+                <div class="mt-6">
+                    <div class="flex flex-wrap">
+                        <div class="w-full sm:w-1/2">
+                            <ImageCard src="/images/recruit/induction/008.png"></ImageCard>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="sm:leading-7 leading-7">
+                                <div class="text-2xl font-bold">技術資格、業務資格の取得支援</div>
+                                <p class="text-sm sm:mt-4 sm:text-base font-bold">資格取得に向けた支援（受験補助金） 及び、資格認定者に報奨金の支給を行っております。</p>
+                                <ul class="pl-4 list-image-[url(/images/common/check.svg)] text-sm sm:mt-4 sm:text-base font-bold">
+                                    <li>情報処理技術者試験（例．基本情報技術者、応用情報技術者）</li>
+                                    <li>ベンダー認定資格（例：OracleMaster、Cisco、LPIC）</li>
+                                    <li>協会認定資格（例：PMP）</li>
+                                    <li>業務系資格（例：ファイナンシャル・プランニング系、銀行業務系、英語系）</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <div class="flex flex-wrap">
+                        <div class="w-full sm:w-1/2">
+                            <ImageCard src="/images/recruit/induction/009.png"></ImageCard>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="sm:leading-7 leading-7">
+                                <div class="text-2xl font-bold">外部研修支援</div>
+                                <p class="text-sm sm:mt-4 sm:text-base font-bold">業務に必要となるスキルを補完する為に、短期的な外部研修を受講して頂く事が有ります。技術的な研修や、コーチング、チームリードなどの技能研修など、身に付けたい（付けて欲しい）スキルに応じて推奨します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 </template>
 
@@ -73,8 +130,8 @@
 definePageMeta({
     layout: 'double-column-sidebar'
 })
-import CareerPath from '~/components/CareerPath.vue'
 import Timeline from '~/components/Timeline.vue'
+import ImageCard from '~/components/ImageCard.vue'
 import { ref } from 'vue'
 // タイムラインのデータを定義
 const timeline = ref([
