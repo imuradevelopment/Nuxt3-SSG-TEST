@@ -97,7 +97,7 @@
                                 <div class="text-2xl font-bold leading-loose">技術資格、業務資格の取得支援</div>
                                 <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">資格取得に向けた支援（受験補助金） 及び、資格認定者に報奨金の支給を行っております。</p>
                                 <ul class="pl-4 list-image-[url(/images/common/check.svg)] text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
-                                    <li>情報処理技術者試験（例．基本情報技術者、応用情報技術者）</li>
+                                    <li>情報処理技術者試験（例：基本情報技術者、応用情報技術者）</li>
                                     <li>ベンダー認定資格（例：OracleMaster、Cisco、LPIC）</li>
                                     <li>協会認定資格（例：PMP）</li>
                                     <li>業務系資格（例：ファイナンシャル・プランニング系、銀行業務系、英語系）</li>
