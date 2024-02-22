@@ -80,7 +80,7 @@
             </div>
         </section>
 
-        <section class="mt-12">
+        <section class="my-12">
             <h2 id="recruit-induction05" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 資格取得支援</h2>
             <div class="mx-4 flex flex-col justify-center items-center">
