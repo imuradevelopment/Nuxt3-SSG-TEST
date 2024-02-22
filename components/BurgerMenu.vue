@@ -57,8 +57,8 @@
                             </el-icon>事業情報</NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400">
-                        <div class="flex justify-between items-center w-full h-full">
-                            <NuxtLink to="/recruit" @click="closeMenu(true)" class="flex items-center">
+                        <div class="flex justify-stretch items-center w-full h-full">
+                            <NuxtLink to="/recruit" @click="closeMenu(true)" class="grow flex items-center">
                                 <el-icon size="1.5rem" class="mb-1">
                                     <User class="text-custom-blue" />
                                 </el-icon>
