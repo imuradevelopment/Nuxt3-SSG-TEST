@@ -66,7 +66,7 @@
                             Vaileは存在しています。
                         </div>
                     </div>
-                    <p class="p-4 text-balance text-xs sm:text-base font-bold sm:leading-7 leading-7">
+                    <p class="p-4 text-balance text-xs sm:text-base font-bold sm:leading-7 leading-5">
                         自分の人生については自分で考える。そんな当たり前の事がやっと認識されはじめています。個人の成長が会社をのばします。会社とは自分の仕事と人生に誇りとやりがいを持ち、仕事を続けることにより、ひとりひとりの人間が成長してゆく為の器だとVaileは考えています。
                     </p>
                 </section>
