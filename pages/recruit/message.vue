@@ -15,7 +15,7 @@
             <div class="mb-0 sm:-mb-28 mx-0 sm:mx-4 bg-gray-200 py-4">
                 <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-2xl font-bold leading-loose">はじめの一歩</h2>
                 <div class="flex flex-col sm:flex-row">
-                    <p class="order-2 sm:order-1 w-full sm:w-1/2 p-4 text-balance text-sm sm:text-base font-bold">
+                    <p class="order-2 sm:order-1 w-full sm:w-1/2 p-4 text-balance text-sm sm:text-base font-bold sm:leading-7 leading-7">
                         文系大学出身、PG志望。他業界からの転職、IT知識ほとんどなし。ベイルではじめの一歩を踏み出したそんな彼らも、入社5年後にはSE・PLとして第一線へ。あなたは5年後の姿、見えてますか？
                     </p>
                     <section class="mb-0 mt-4 sm:-mt-28 order-1 sm:order-2 grow flex flex-col">
@@ -45,7 +45,7 @@
                             こういったことだと考えています。
                         </div>
                     </div>
-                    <p class="p-4 text-balance text-xs sm:text-base font-bold">
+                    <p class="p-4 text-balance text-xs sm:text-base font-bold sm:leading-7 leading-7">
                         人はみな一人ひとり違います。ですから「仕事が楽しい」・「やりがいある」と感じてもらうためには、それぞれ個々に合った作業をしてもらうのが一番近道なのです。IT業界は様々な作業内容・作業環境があります。ですからベイルでは社員一人ひとりの個性に合ったスキルプランを日々考え実施しています。社員一人ひとりの小さな成長が、会社を大きく成長させる原動力になる。こう考えています。
                     </p>
                 </section>
@@ -66,7 +66,7 @@
                             Vaileは存在しています。
                         </div>
                     </div>
-                    <p class="p-4 text-balance text-xs sm:text-base font-bold">
+                    <p class="p-4 text-balance text-xs sm:text-base font-bold sm:leading-7 leading-7">
                         自分の人生については自分で考える。そんな当たり前の事がやっと認識されはじめています。個人の成長が会社をのばします。会社とは自分の仕事と人生に誇りとやりがいを持ち、仕事を続けることにより、ひとりひとりの人間が成長してゆく為の器だとVaileは考えています。
                     </p>
                 </section>

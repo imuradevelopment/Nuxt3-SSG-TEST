@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="order-3 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
-                    <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold">
+                    <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold sm:leading-7 leading-7">
                         世界のリーディングカンパニーであるアイビーエム社は最新のプロダクトやノウハウを駆使したシステムを得意としています。そのようなシステム構築に、提案段階から共同で作業することもあります。また、コベルコシステム株式会社、三井情報株式会社のコアパートナーであり、最先端の技術やノウハウの習得に大きなメリットがあります。
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="order-3 sm:order-2 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
                         <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold">
-                                <div>
+                                <div class="sm:leading-7 leading-7">
                                     プログラミング未経験者が多いSier会社ではスキル不足により単純作業しか任せてもらえないことが多いです。ベイルでは文系・IT未経験でも確実にエンジニアとして成長できる環境を用意しており、入社後の1年間様々な研修・OJTで、技術者としての基礎を築きます。
                                 </div>
                                 <div class="self-end pt-4">
@@ -125,7 +125,7 @@
                         </div>
                     </div>
                     <div class="order-3 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
-                        <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold">
+                        <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold sm:leading-7 leading-7">
                             売上目標や利益目標を設けず、新しい技術、得たい技術などが学べる現場は、利益度外視で受ける、年齢や経験を重視せず先輩が居ても若手社員がリーダーを任せる、組織を細分化せず様々な業務を経験する事で技術の相乗的成長を図るなどベイルは社員の育成を第一に考えています。
                         </div>
                     </div>
