@@ -59,12 +59,11 @@
                     <div class="mt-4 text-sm sm:text-base font-bold text-center">
                         途中でやりたい事が変わっても<br />積み上げた経験を活かす事で 唯一無二のエンジニアに。
                     </div>
-
-                    <div class="mt-4 text-custom-deepBlue text-2xl font-bold">研修プログラム</div>
-                    <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
                 </div>
-                <NuxtImg class="hidden md:inline-block" src="/images/recruit/induction/005.png" />
-                <NuxtImg class="inline-block md:hidden" src="/images/recruit/induction/006.png" />
+                <div class="flex flex-col justify-center items-center">
+                    <NuxtImg class="hidden md:inline-block" width="1087" src="/images/recruit/induction/005.png" />
+                    <NuxtImg class="inline-block md:hidden" width="343" src="/images/recruit/induction/006.png" />
+                </div>
             </div>
         </section>
     </div>
