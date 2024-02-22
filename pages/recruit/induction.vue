@@ -83,7 +83,7 @@
         <section class="mt-12">
             <h2 id="recruit-induction05" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 資格取得支援</h2>
-            <div class="flex flex-col justify-center items-center">
+            <div class="mx-4 flex flex-col justify-center items-center">
                 <div
                     class="mt-4 text-2xl font-bold leading-loose underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                     ベイルは技術資格、<br class="inline-block md:hidden" />業務資格の取得を支援します。</div>
