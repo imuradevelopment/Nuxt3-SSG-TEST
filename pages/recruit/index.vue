@@ -119,7 +119,7 @@
             <div class="md:hidden w-screen overflow-hidden">
                 <img class="object-cover" src="/images/recruit/index/002_M.png" alt="採用担当者イメージ" />
             </div>
-            <p class="px-4 font-bold break-keep sm:leading-7 leading-7">
+            <p class="px-4 font-bold break-keep">
                 ベイル採用担当者<br />
                 <br />
                 人を育てるのに一番必要なのは<br class="hidden md:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
