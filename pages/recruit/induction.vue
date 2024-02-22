@@ -28,7 +28,7 @@
             </div>
         </section> -->
         <section class="mt-12">
-            <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">研修制度</h2>
+            <h2 id="recruit-induction02" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">研修制度</h2>
             <div class="flex flex-col justify-center items-center">
                 <div
                     class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
@@ -44,8 +44,28 @@
                 <Timeline :items="timeline" />
             </div>
         </section>
-        <section>
-            <CareerPath />
+        <section class="mt-12">
+            <div class="m-4">
+                <h2 id="recruit-induction03" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">教育システム</h2>
+            </div>
+        </section>
+        <section class="mt-12">
+            <h2 id="recruit-induction0" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">キャリアパス</h2>
+            <div class="mx-4">
+                <div class="flex flex-col justify-center items-center">
+                    <div
+                        class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                        目標を見つけて ステップアップ !</div>
+                    <div class="mt-4 text-sm sm:text-base font-bold text-center">
+                        途中でやりたい事が変わっても<br />積み上げた経験を活かす事で 唯一無二のエンジニアに。
+                    </div>
+
+                    <div class="mt-4 text-custom-deepBlue text-2xl font-bold">研修プログラム</div>
+                    <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
+                </div>
+                <NuxtImg class="hidden md:inline-block" src="/images/recruit/induction/005.png" />
+                <NuxtImg class="inline-block md:hidden" src="/images/recruit/induction/006.png" />
+            </div>
         </section>
     </div>
 </template>
