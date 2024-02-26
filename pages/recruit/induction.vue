@@ -98,16 +98,17 @@
             <h2 id="recruit-induction05" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 資格取得支援</h2>
             <div class="mx-4 flex flex-col justify-center items-center">
-                <div
-                    class="mt-4 text-2xl font-bold leading-loose underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
-                    ベイルは技術資格、<br class="inline-block md:hidden" />業務資格の取得を支援します。</div>
-                <div class="mt-6">
-                    <div class="flex flex-wrap">
-                        <div class="w-full md:w-1/2">
-                            <ImageCard src="/images/recruit/induction/008.png"></ImageCard>
-                        </div>
-                        <div class="w-full md:w-1/2">
-                            <BlurGlassCard>
+                <BlurGlassCard class="my-4 flex flex-col justify-center items-center">
+                    
+                    <div
+                        class="mt-4 text-2xl font-bold leading-loose underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                        ベイルは技術資格、<br class="inline-block md:hidden" />業務資格の取得を支援します。</div>
+                    <div class="mt-6">
+                        <div class="flex flex-wrap">
+                            <div class="w-full md:w-1/2">
+                                <ImageCard src="/images/recruit/induction/008.png"></ImageCard>
+                            </div>
+                            <div class="w-full md:w-1/2">
                                 <div class="text-2xl font-bold leading-loose">技術資格、業務資格の取得支援</div>
                                 <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">資格取得に向けた支援（受験補助金）
                                     及び、資格認定者に報奨金の支給を行っております。</p>
@@ -118,25 +119,27 @@
                                     <li>協会認定資格（例：PMP）</li>
                                     <li>業務系資格（例：ファイナンシャル・プランニング系、銀行業務系、英語系）</li>
                                 </ul>
-                            </BlurGlassCard>
+                                <!-- <BlurGlassCard>
+                                </BlurGlassCard> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mt-6">
-                    <div class="flex flex-wrap">
-                        <div class="w-full md:w-1/2">
-                            <ImageCard src="/images/recruit/induction/009.png"></ImageCard>
-                        </div>
-                        <div class="w-full md:w-1/2">
-                            <BlurGlassCard>
+                    <div class="mt-6">
+                        <div class="flex flex-wrap">
+                            <div class="w-full md:w-1/2">
+                                <ImageCard src="/images/recruit/induction/009.png"></ImageCard>
+                            </div>
+                            <div class="w-full md:w-1/2">
                                 <div class="text-2xl font-bold leading-loose">外部研修支援</div>
                                 <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
                                     業務に必要となるスキルを補完する為に、短期的な外部研修を受講して頂く事が有ります。技術的な研修や、コーチング、チームリードなどの技能研修など、身に付けたい（付けて欲しい）スキルに応じて推奨します。
                                 </p>
-                            </BlurGlassCard>
+                                <!-- <BlurGlassCard>
+                                </BlurGlassCard> -->
+                            </div>
                         </div>
                     </div>
-                </div>
+                </BlurGlassCard>
             </div>
         </section>
 
