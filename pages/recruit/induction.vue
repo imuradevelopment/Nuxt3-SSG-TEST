@@ -54,8 +54,8 @@
             <h2 id="recruit-induction04" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 キャリアパス</h2>
             <div class="mx-4">
-                <div class="flex flex-col justify-center items-center">
-                    <BlurGlassCard class="max-w-xl mt-4 mb-4 md:mb-0">
+                <BlurGlassCard class="max-w-xl mt-4 mb-4 md:mb-0">
+                    <div class="flex flex-col justify-center items-center">
                         <div
                             class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                             目標を見つけて、ステップアップ !</div>
@@ -67,8 +67,8 @@
                                 class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
                                 class="hidden md:inline-block" />ベイルでは、適宜相談しながら その人に合ったキャリアパスを描いていきたいと考えます。
                         </p>
-                    </BlurGlassCard>
-                </div>
+                    </div>
+                </BlurGlassCard>
                 <div class="flex flex-col justify-center items-center">
                     <NuxtImg class="hidden md:inline-block" width="576" src="/images/recruit/induction/006.png" />
                     <NuxtImg class="inline-block md:hidden"  width="343" src="/images/recruit/induction/006.png" />
