@@ -55,7 +55,7 @@
                 キャリアパス</h2>
             <div class="mx-4">
                 <div class="flex flex-col justify-center items-center">
-                    <BlurGlassCard class="max-w-xl mb-4 md:mb-0">
+                    <BlurGlassCard class="max-w-xl mt-4 mb-4 md:mb-0">
                         <div
                             class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                             目標を見つけて、ステップアップ !</div>
