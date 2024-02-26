@@ -15,7 +15,7 @@
         <section class="mt-12">
             <h2 id="recruit-induction02" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 研修制度</h2>
-            <BlurGlassCard class="md:max-w-2xl flex flex-col justify-center items-center">
+            <BlurGlassCard class="my-4 md:max-w-2xl flex flex-col justify-center items-center">
                 <div class="flex flex-col justify-center items-center">
                     <div
                         class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
