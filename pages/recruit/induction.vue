@@ -60,12 +60,12 @@
                             class="mt-4 text-2xl font-bold text-center underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                             目標を見つけて、ステップアップ !</div>
                         <div class="mt-4 text-base sm:text-lg font-bold text-center">
-                            途中でやりたい事が変わっても<br />積み上げた経験を活かす事で 唯一無二のエンジニアに。
+                            途中でやりたい事が変わっても<br />積み上げた経験を活かす事で唯一無二のエンジニアに。
                         </div>
                         <p class="text-center text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
                             人それぞれで目指すものも違えば、向き不向きも有ります。<br
                                 class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
-                                class="hidden md:inline-block" />ベイルでは、適宜相談しながら その人に合ったキャリアパスを描いていきたいと考えます。
+                                class="hidden md:inline-block" />ベイルでは、適宜相談しながらその人に合ったキャリアパスを描いていきたいと考えます。
                         </p>
                     </BlurGlassCard>
                 </div>
