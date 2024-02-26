@@ -174,7 +174,7 @@ const timeline = ref([
     },
     {
         month: '3月',
-        text: '<div class="font-bold leading-8">プロジェクトアサイン</div><div class="text-sm font-bold tracking-wide leading-6">1人の技術者としてプロジェクトに参画し、作業を行います。</div>'
+        text: '<div class="font-bold leading-8">プロジェクトアサイン</div><div class="text-sm font-bold tracking-wide leading-6">プロジェクトに参画。先輩社員指導の下で1人の技術者として作業を行います。</div>'
     }
 ])
 </script>
