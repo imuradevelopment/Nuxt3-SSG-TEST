@@ -55,9 +55,9 @@
                 キャリアパス</h2>
             <div class="mx-4">
                 <div class="flex flex-col justify-center items-center">
-                    <BlurGlassCard class="max-w-xl">
+                    <BlurGlassCard class="max-w-xl mb-4 md:mb-0">
                         <div
-                            class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-blue underline-offset-8">
+                            class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                             目標を見つけて、ステップアップ !</div>
                         <div class="mt-4 text-base sm:text-lg font-bold text-center">
                             途中でやりたい事が変わっても<br />積み上げた経験を活かす事で 唯一無二のエンジニアに。
