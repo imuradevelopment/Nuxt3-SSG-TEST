@@ -15,20 +15,22 @@
         <section class="mt-12">
             <h2 id="recruit-induction02" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 研修制度</h2>
-            <div class="flex flex-col justify-center items-center">
-                <div
-                    class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
-                    未経験でも安心。充実した研修。</div>
-                <div class="mt-4 text-sm sm:text-base font-bold text-center">
-                    ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
-                </div>
+            <BlurGlassCard class="md:max-w-2xl flex flex-col justify-center items-center">
+                <div class="flex flex-col justify-center items-center">
+                    <div
+                        class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                        未経験でも安心。充実した研修。</div>
+                    <div class="mt-4 text-sm sm:text-base font-bold text-center">
+                        ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
+                    </div>
 
-                <div class="mt-4 text-custom-deepBlue text-2xl font-bold">■ 研修プログラム ■</div>
-                <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
-            </div>
-            <div class="m-4">
-                <Timeline :items="timeline" />
-            </div>
+                    <div class="mt-4 text-custom-deepBlue text-2xl font-bold">■ 研修プログラム ■</div>
+                    <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
+                </div>
+                <div class="m-4">
+                    <Timeline :items="timeline" />
+                </div>
+            </BlurGlassCard>
         </section>
 
         <section class="mt-12">
@@ -63,15 +65,14 @@
                             途中でやりたい事が変わっても<br />積み上げた経験を活かす事で唯一無二のエンジニアに。
                         </div>
                         <p class="text-center text-sm mt-4 sm:text-base font-bold sm:leading-7 leading-7">
-                            人それぞれで目指すものも違えば、向き不向きも有ります。<br
-                                class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
+                            人それぞれで目指すものも違えば、向き不向きも有ります。<br class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
                                 class="hidden md:inline-block" />ベイルでは、適宜相談しながらその人に合ったキャリアパスを描いていきたいと考えます。
                         </p>
                     </BlurGlassCard>
                 </div>
                 <div class="flex flex-col justify-center items-center">
                     <NuxtImg class="hidden md:inline-block" width="576" src="/images/recruit/induction/006.png" />
-                    <NuxtImg class="inline-block md:hidden"  width="343" src="/images/recruit/induction/006.png" />
+                    <NuxtImg class="inline-block md:hidden" width="343" src="/images/recruit/induction/006.png" />
                 </div>
                 <!-- <div class="mt-6">
                     <div class="flex flex-wrap">
@@ -105,8 +106,10 @@
                         <div class="w-full sm:w-1/2">
                             <BlurGlassCard>
                                 <div class="text-2xl font-bold leading-loose">技術資格、業務資格の取得支援</div>
-                                <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">資格取得に向けた支援（受験補助金） 及び、資格認定者に報奨金の支給を行っております。</p>
-                                <ul class="pl-6 list-image-[url(/images/common/check.svg)] text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
+                                <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">資格取得に向けた支援（受験補助金）
+                                    及び、資格認定者に報奨金の支給を行っております。</p>
+                                <ul
+                                    class="pl-6 list-image-[url(/images/common/check.svg)] text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
                                     <li>情報処理技術者試験（例：基本情報技術者、応用情報技術者）</li>
                                     <li>ベンダー認定資格（例：OracleMaster、Cisco、LPIC）</li>
                                     <li>協会認定資格（例：PMP）</li>
@@ -124,7 +127,8 @@
                         <div class="w-full sm:w-1/2">
                             <BlurGlassCard>
                                 <div class="text-2xl font-bold leading-loose">外部研修支援</div>
-                                <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">業務に必要となるスキルを補完する為に、短期的な外部研修を受講して頂く事が有ります。技術的な研修や、コーチング、チームリードなどの技能研修など、身に付けたい（付けて欲しい）スキルに応じて推奨します。
+                                <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
+                                    業務に必要となるスキルを補完する為に、短期的な外部研修を受講して頂く事が有ります。技術的な研修や、コーチング、チームリードなどの技能研修など、身に付けたい（付けて欲しい）スキルに応じて推奨します。
                                 </p>
                             </BlurGlassCard>
                         </div>
