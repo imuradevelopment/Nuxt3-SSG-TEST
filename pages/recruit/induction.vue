@@ -59,12 +59,17 @@
                     <div class="mt-4 text-base sm:text-lg font-bold text-center">
                         途中でやりたい事が変わっても<br />積み上げた経験を活かす事で 唯一無二のエンジニアに。
                     </div>
+                    <p class=" max-w-xl text-center text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
+                        人それぞれで目指すものも違えば、向き不向きも有ります。<br
+                            class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
+                            class="hidden md:inline-block" />ベイルでは、適宜相談しながら その人に合ったキャリアパスを描いていきたいと考えます。
+                    </p>
                 </div>
                 <div class="mt-4 flex flex-col justify-center items-center">
-                    <NuxtImg class="hidden md:inline-block" width="1087" src="/images/recruit/induction/005.png" />
-                    <NuxtImg class="inline-block md:hidden" width="343" src="/images/recruit/induction/006.png" />
+                    <NuxtImg class="hidden md:inline-block" width="600" src="/images/recruit/induction/006.png" />
+                    <NuxtImg class="inline-block md:hidden"  width="343" src="/images/recruit/induction/006.png" />
                 </div>
-                <div class="mt-6">
+                <!-- <div class="mt-6">
                     <div class="flex flex-wrap">
                         <div class="w-full sm:w-1/2">
                             <ImageCard src="/images/recruit/induction/007.png"></ImageCard>
@@ -73,10 +78,11 @@
                             <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
                                 人それぞれで目指すものも違えば、向き不向きも有ります。<br
                                     class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
-                                    class="hidden md:inline-block" />ベイルでは、適宜相談しながら その人に合ったキャリアパスを描いていきたいと考えます。</p>
+                                    class="hidden md:inline-block" />ベイルでは、適宜相談しながら その人に合ったキャリアパスを描いていきたいと考えます。
+                            </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
