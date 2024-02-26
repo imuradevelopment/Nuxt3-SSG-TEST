@@ -35,5 +35,5 @@ const props = defineProps({
 
 /* カード内のテキストのスタイル */
 .card-text {
-    padding: 20px;
+    padding: 1rem;
 }</style>
