@@ -41,10 +41,10 @@
                 教育システム</h2>
             <div class="m-4">
                 <div class="flex flex-wrap">
-                    <div class="w-full sm:w-1/2">
+                    <div class="w-full md:w-1/2">
                         <ImageCard src="/images/recruit/induction/004.png"></ImageCard>
                     </div>
-                    <div class="w-full sm:w-1/2">
+                    <div class="w-full md:w-1/2">
                         <BlurGlassCard>
                             <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7"><span
                                     class="text-2xl font-bold leading-loose">社員が自分で解決できるよう促します</span><br />最初に社会人としての基本的な挨拶から入ります。その後は、先輩から課題をもらって簡単なプログラムを作成し、業務に必要な知識を具体的に習熟していきます。課題に対してどのように処理していくのがいいのか、自分なりに答えを探して分からないことは聞いていくのですが、全部は教えてくれません、そのときに受けたアドバイスを基に解決するのですが、それまでの知識でやれるのならもう少し考えて、だめなら教えてもらいできるだけ自分で答えを見つけるようにします。そのような教え方でステップアップを図り、その後は現場で実際の業務に携わりながら覚えていきます。
@@ -103,10 +103,10 @@
                     ベイルは技術資格、<br class="inline-block md:hidden" />業務資格の取得を支援します。</div>
                 <div class="mt-6">
                     <div class="flex flex-wrap">
-                        <div class="w-full sm:w-1/2">
+                        <div class="w-full md:w-1/2">
                             <ImageCard src="/images/recruit/induction/008.png"></ImageCard>
                         </div>
-                        <div class="w-full sm:w-1/2">
+                        <div class="w-full md:w-1/2">
                             <BlurGlassCard>
                                 <div class="text-2xl font-bold leading-loose">技術資格、業務資格の取得支援</div>
                                 <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">資格取得に向けた支援（受験補助金）
