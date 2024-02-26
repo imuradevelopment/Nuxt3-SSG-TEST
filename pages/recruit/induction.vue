@@ -101,7 +101,7 @@
                 <BlurGlassCard class="my-4 flex flex-col justify-center items-center">
                     
                     <div
-                        class="mt-4 text-2xl font-bold leading-loose underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                        class="mt-4 text-2xl font-bold text-center leading-loose underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                         ベイルは技術資格、<br class="inline-block md:hidden" />業務資格の取得を支援します。</div>
                     <div class="mt-6">
                         <div class="flex flex-wrap">

@@ -21,7 +21,7 @@ const props = defineProps({
         type: String,
         required: false,
         // default: "var(--custom-color-gray)"
-        default: "rgb(226 232 240)"
+        default: "rgba(0, 37, 92, 0.1)"
     },
     ShadowColor: {
         type: String,
