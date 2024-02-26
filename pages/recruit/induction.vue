@@ -124,10 +124,10 @@
                 </div>
                 <div class="mt-6">
                     <div class="flex flex-wrap">
-                        <div class="w-full sm:w-1/2">
+                        <div class="w-full md:w-1/2">
                             <ImageCard src="/images/recruit/induction/009.png"></ImageCard>
                         </div>
-                        <div class="w-full sm:w-1/2">
+                        <div class="w-full md:w-1/2">
                             <BlurGlassCard>
                                 <div class="text-2xl font-bold leading-loose">外部研修支援</div>
                                 <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
