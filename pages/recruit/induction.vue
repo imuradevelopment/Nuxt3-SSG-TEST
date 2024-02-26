@@ -17,7 +17,7 @@
                 研修制度</h2>
                 <div class="flex flex-col justify-center items-center">
 
-                    <BlurGlassCard class="my-4 w-[375px] sm:w-[608px] flex flex-col justify-center items-center">
+                    <BlurGlassCard class="my-4 mx-4 sm:w-[608px] flex flex-col justify-center items-center">
                         <div class="flex flex-col justify-center items-center">
                             <div
                                 class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
