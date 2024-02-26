@@ -72,7 +72,7 @@ import BackgroundPattern3 from '~/components/BackgroundPattern3.vue'
 
 @media screen and (max-width: 768px) {
     .main {
-        width: 100vw;
+        width: 100%;
     }
 }
 
