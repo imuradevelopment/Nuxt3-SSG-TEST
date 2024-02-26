@@ -22,7 +22,7 @@ const props = defineProps({
     color: {
         type: String,
         required: false,
-        default: "rgba(0, 37, 92, 0.2)"
+        default: "rgba(0, 37, 92, 0.1)"
     },
 })
 </script>
