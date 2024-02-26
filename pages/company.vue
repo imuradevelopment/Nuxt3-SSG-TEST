@@ -1,6 +1,6 @@
 <template>
   <div>
-    <GlassCard :rounded="false" :opacity="0.5"
+    <ClearGlassMaskCard :rounded="false" :opacity="0.5"
       class="h-12 fixed top-16 w-full maxWidth mx-auto z-50 hidden md:inline-block">
       <template #content>
         <div class="bg-custom-blue/30 h-full">
@@ -14,7 +14,7 @@
           </div>
         </div>
       </template>
-    </GlassCard>
+    </ClearGlassMaskCard>
     <div class="mx-4">
       <section class="text-center mt-8 md:mt-20">
         <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">TOPメッセージ</h2>
@@ -40,7 +40,8 @@
             私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。<br class="hidden md:inline-block" />
             迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
             Windowsアプリケーション、エンタープライズシステムなど、お客様の<span
-              class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">「こうしたい」</span>に実現力として活かします。<br class="hidden md:inline-block" />
+              class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">「こうしたい」</span>に実現力として活かします。<br
+              class="hidden md:inline-block" />
             最新技術に対応できる体制を整えておりますので、お気軽にご相談ください。<br class="hidden md:inline-block" />
             <span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">
               確かな技術と豊富な経験で、ご満足頂けるベストなご提案をさせて頂きます。<br class="hidden md:inline-block" />
@@ -101,7 +102,7 @@
               <div class="noWrappedFirstChild">
                 <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
                   <template #content>
-                    <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full"
+                    <ClearGlassMaskCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full"
                       style="padding-top: 25%; padding-bottom: 25%;">
                       <template #content>
                         <div class="h-full flex flex-wrap items-center">
@@ -116,14 +117,14 @@
                           </p>
                         </div>
                       </template>
-                    </GlassCard>
+                    </ClearGlassMaskCard>
                   </template>
                 </ClipHexagon>
               </div>
               <div  class="noWrapped">
                 <ClipHexagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
                   <template #content>
-                    <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full flex items-center"
+                    <ClearGlassMaskCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full flex items-center"
                       style="padding-top: 25%; padding-bottom: 25%;">
                       <template #content>
                         <div class="h-full flex flex-wrap items-center">
@@ -135,7 +136,7 @@
                           </p>
                         </div>
                       </template>
-                    </GlassCard>
+                    </ClearGlassMaskCard>
                   </template>
                 </ClipHexagon>
               </div>
@@ -146,7 +147,7 @@
               <div style="flex-basis: 32rem;">
                 <ClipPentagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
                   <template #content>
-                    <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full" style="padding-top: 6rem;">
+                    <ClearGlassMaskCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full" style="padding-top: 6rem;">
                       <template #content>
                         <div class="h-full flex flex-wrap items-center">
                           <h3 class="w-full font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の「こうしたい」をお聞かせください。
@@ -160,14 +161,14 @@
                           </p>
                         </div>
                       </template>
-                    </GlassCard>
+                    </ClearGlassMaskCard>
                   </template>
                 </ClipPentagon>
               </div>
               <div style="flex-basis: 32rem; margin-top: 2rem;">
                 <ClipPentagon class="bg-[url('/images/company/image06.png')] bg-center bg-cover h-full">
                   <template #content>
-                    <GlassCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full" style="padding-top: 6rem;">
+                    <ClearGlassMaskCard :rounded="false" :opacity="0.4" class="p-4 pb-8 h-full" style="padding-top: 6rem;">
                       <template #content>
                         <div class="h-full flex flex-wrap items-center">
                           <h3 class="w-full font-bold text-lg md:text-xl text-custom-lightOrange my-2">お客様の声にお応えできる理由。</h3>
@@ -178,7 +179,7 @@
                           </p>
                         </div>
                       </template>
-                    </GlassCard>
+                    </ClearGlassMaskCard>
                   </template>
                 </ClipPentagon>
               </div>
@@ -190,7 +191,7 @@
         <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
         </h2>
         <div class="bg-[url('/images/company/mtvaile.jfif')] bg-center bg-cover h-full rounded">
-          <GlassCard class="p-4" :opacity="0.6">
+          <ClearGlassMaskCard class="p-4" :opacity="0.6">
             <template #content>
               <div class="flex">
                 <div class="m-auto mr-4">
@@ -208,7 +209,7 @@
                 </div>
               </div>
             </template>
-          </GlassCard>
+          </ClearGlassMaskCard>
         </div>
       </section>
       <section class="text-center mt-16">
@@ -249,7 +250,7 @@
       <section class="text-center mb-8 md:mb-16">
         <h2 id="company05" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス
         </h2>
-        <GlassCard class="p-4">
+        <ClearGlassMaskCard class="p-4">
           <template #content>
             <div class="flex flex-row flex-wrap">
               <div class="w-full md:w-1/2">
@@ -270,7 +271,7 @@
               </div>
             </div>
           </template>
-        </GlassCard>
+        </ClearGlassMaskCard>
       </section>
     </div>
   </div>
@@ -279,7 +280,7 @@
 <script setup lang="ts">
 import CustomFrameCard from '~/components/CustomFrameCard.vue'
 import CustomTable from '~/components/CustomTable.vue'
-import GlassCard from '~/components/GlassCard.vue'
+import ClearGlassMaskCard from '~/components/ClearGlassMaskCard.vue'
 import PageHeader from '~/components/PageHeader.vue'
 import ClipHexagon from '~/components/ClipHexagon.vue'
 import ClipPentagon from '~/components/ClipPentagon.vue'
@@ -369,4 +370,5 @@ const companySummary = [
 
 .noWrapped {
   flex-basis: 32rem;
-}</style>
+}
+</style>

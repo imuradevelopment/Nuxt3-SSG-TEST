@@ -1,6 +1,6 @@
 <template>
     <div>
-        <GlassCard :rounded="false" :opacity="0.5"
+        <ClearGlassMaskCard :rounded="false" :opacity="0.5"
             class="h-12 fixed top-16 w-full maxWidth mx-auto z-50 hidden md:inline-block">
             <template #content>
                 <div class="bg-custom-blue/30 h-full">
@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </template>
-        </GlassCard>
+        </ClearGlassMaskCard>
         <div class="mx-4">
             <div class="zigzag-timeline__item pageHeaderMargin">
                 <!-- マイルストーン -->
@@ -47,11 +47,13 @@
                                 <template #title>
                                     事業への取り組み
                                 </template>
-                                    <template #content>
-                                        弊社では<span class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">3つの事業</span>を柱として、システム構築・改修はもとより、<br class="hidden md:inline-block" />
-                                        運用改善やお客様サポートなどの幅広いニーズに応え、<br class="hidden md:inline-block" />
-                                        より使いやすいシステム、最適な技術者チームをご提案致します。<br class="hidden md:inline-block" />
-                                    </template>
+                                <template #content>
+                                    弊社では<span
+                                        class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">3つの事業</span>を柱として、システム構築・改修はもとより、<br
+                                        class="hidden md:inline-block" />
+                                    運用改善やお客様サポートなどの幅広いニーズに応え、<br class="hidden md:inline-block" />
+                                    より使いやすいシステム、最適な技術者チームをご提案致します。<br class="hidden md:inline-block" />
+                                </template>
                             </CustomFrameCard>
 
                             <VennDiagram></VennDiagram>
@@ -188,9 +190,11 @@ import DevelopmentAchievements2 from '~/components/DevelopmentAchievements2.vue'
     /* 最大幅まで伸ばす */
     width: 100%;
 }
+
 .zigzag-timeline__item:last-child {
     margin-bottom: 1.75rem;
 }
+
 .zigzag-timeline__milestone {
     position: absolute;
     top: 50%;
