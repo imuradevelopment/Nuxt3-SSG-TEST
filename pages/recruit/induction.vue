@@ -62,7 +62,7 @@
                         <div class="mt-4 text-base sm:text-lg font-bold text-center">
                             途中でやりたい事が変わっても<br />積み上げた経験を活かす事で唯一無二のエンジニアに。
                         </div>
-                        <p class="text-center text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
+                        <p class="text-center text-sm mt-4 sm:text-base font-bold sm:leading-7 leading-7">
                             人それぞれで目指すものも違えば、向き不向きも有ります。<br
                                 class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
                                 class="hidden md:inline-block" />ベイルでは、適宜相談しながらその人に合ったキャリアパスを描いていきたいと考えます。
