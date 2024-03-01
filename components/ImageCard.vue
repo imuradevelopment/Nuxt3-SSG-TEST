@@ -35,6 +35,8 @@ const props = defineProps({
 .card {
     padding: 1.5rem;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 img {

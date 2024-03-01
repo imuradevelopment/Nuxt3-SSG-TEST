@@ -50,9 +50,10 @@
         <section>
             <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
                 <div class="order-2 sm:order-1 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
-                    <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
+                    <!-- <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
                     <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
-                        src="/images/recruit/feature/002.png" />
+                        src="/images/recruit/feature/002.png" /> -->
+                    <ImageCard src="/images/recruit/feature/002.png"></ImageCard>
                 </div>
                 <div class="order-1 sm:order-2 col-span-1 sm:row-span-1">
                     <div class="mb-4 sm:mb-0 text-2xl font-bold">Point01</div>
@@ -66,9 +67,9 @@
                     </div>
                 </div>
                 <div class="order-3 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
-                    <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold sm:leading-7 leading-7">
+                    <BlurGlassCard class="p-4 text-xs sm:text-base font-bold sm:leading-7 leading-7">
                         世界のリーディングカンパニーであるアイビーエム社は最新のプロダクトやノウハウを駆使したシステムを得意としています。そのようなシステム構築に、提案段階から共同で作業することもあります。また、コベルコシステム株式会社、三井情報株式会社のコアパートナーであり、最先端の技術やノウハウの習得に大きなメリットがあります。
-                    </div>
+                    </BlurGlassCard>
                 </div>
             </div>
         </section>
@@ -76,9 +77,10 @@
             <section>
                 <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
                     <div class="order-2 sm:order-3 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
-                        <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
+                        <!-- <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
                         <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
-                            src="/images/recruit/feature/003.png" />
+                            src="/images/recruit/feature/003.png" /> -->
+                        <ImageCard src="/images/recruit/feature/003.png"></ImageCard>
                     </div>
                     <div class="order-1 sm:order-1 col-span-1 sm:row-span-1">
                         <div class="mb-4 sm:mb-0 text-2xl font-bold">Point02</div>
@@ -92,7 +94,7 @@
                         </div>
                     </div>
                     <div class="order-3 sm:order-2 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
-                        <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold">
+                        <BlurGlassCard class="p-4 text-xs sm:text-base font-bold">
                                 <div class="sm:leading-7 leading-7">
                                     プログラミング未経験者が多いSier会社ではスキル不足により単純作業しか任せてもらえないことが多いです。ベイルでは文系・IT未経験でも確実にエンジニアとして成長できる環境を用意しており、入社後の1年間様々な研修・OJTで、技術者としての基礎を築きます。
                                 </div>
@@ -101,7 +103,7 @@
                                         <template #buttonText>研修内容を見る</template>template
                                     </CustomArrowButton>
                                 </div>
-                        </div>
+                        </BlurGlassCard>
                     </div>
                 </div>
             </section>
@@ -109,9 +111,10 @@
             <section>
                 <div class="my-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
                     <div class="order-2 sm:order-1 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
-                        <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
+                        <!-- <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
                         <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"
-                            src="/images/recruit/feature/004.png" />
+                            src="/images/recruit/feature/004.png" /> -->
+                        <ImageCard src="/images/recruit/feature/004.png"></ImageCard>
                     </div>
                     <div class="order-1 sm:order-2 col-span-1 sm:row-span-1">
                         <div class="mb-4 sm:mb-0 text-2xl font-bold">Point03</div>
@@ -125,9 +128,9 @@
                         </div>
                     </div>
                     <div class="order-3 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
-                        <div class="p-4 bg-gray-200 text-xs sm:text-base font-bold sm:leading-7 leading-7">
+                        <BlurGlassCard class="p-4 text-xs sm:text-base font-bold sm:leading-7 leading-7">
                             売上目標や利益目標を設けず、新しい技術、得たい技術などが学べる現場は、利益度外視で受ける、年齢や経験を重視せず先輩が居ても若手社員がリーダーを任せる、組織を細分化せず様々な業務を経験する事で技術の相乗的成長を図るなどベイルは社員の育成を第一に考えています。
-                        </div>
+                        </BlurGlassCard>
                     </div>
                 </div>
             </section>
@@ -219,6 +222,8 @@ import CustomArrowButton from '~/components/CustomArrowButton.vue'
 definePageMeta({
     layout: 'double-column-sidebar'
 })
+import ImageCard from '~/components/ImageCard.vue'
+import BlurGlassCard from '~/components/BlurGlassCard.vue'
 </script>
 
 <style scoped></style>
