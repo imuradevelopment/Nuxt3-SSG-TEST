@@ -1,5 +1,6 @@
 <template>
     <div class="card">
+        <div class="absolute top-6 left-6 z-10 px-4 leading-loose bg-custom-deepBlue text-white font-bold">{{ props.label }}</div>
         <img :src="props.src" :alt="props.alt"
             :style="{ filter: `drop-shadow(-1.5em -1.5em 0 ${props.tileColor}) drop-shadow(10px 10px 5px ${props.ShadowColor})` }" />
     </div>
@@ -17,10 +18,14 @@ const props = defineProps({
         required: false,
         default: "Image"
     },
+    label: {
+        type: String,
+        required: false,
+        default: ""
+    },
     tileColor: {
         type: String,
         required: false,
-        // default: "var(--custom-color-gray)"
         default: "rgba(0, 37, 92, 0.1)"
     },
     ShadowColor: {
