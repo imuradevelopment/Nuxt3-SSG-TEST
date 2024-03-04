@@ -47,7 +47,7 @@
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
-                            <p class="break-keep text-sm sm:text-base font-bold sm:leading-7 leading-7">
+                            <p class=" text-sm sm:text-base font-bold sm:leading-7 leading-7">
                                 エレベーターを7階で降りると、すぐ右手に受付があります。<br />
                                 こちらで来訪者の受付を行っています。
                             </p>
@@ -68,7 +68,7 @@
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
-                            <p class="break-keep text-sm sm:text-base font-bold sm:leading-7 leading-7">
+                            <p class=" text-sm sm:text-base font-bold sm:leading-7 leading-7">
                                 9階は、1つのフロアすべてがセミナールームになっており、<br />
                                 会社説明会や大人数会議の際に使用しています。
                             </p>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
-                            <p class="break-keep text-sm sm:text-base font-bold sm:leading-7 leading-7">
+                            <p class=" text-sm sm:text-base font-bold sm:leading-7 leading-7">
                                 8階は、主に開発フロアとなっており、本社在中の社員が仕事をしています。<br />
                                 開発フロアは9階でしたが、2022年にから8階にお引越ししました。
                             </p>
@@ -102,7 +102,7 @@
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
-                            <p class="break-keep text-sm sm:text-base font-bold sm:leading-7 leading-7">
+                            <p class=" text-sm sm:text-base font-bold sm:leading-7 leading-7">
                                 8階には開発フロアのほかにミーティングスペースがあり、<br />
                                 プロジェクトの打ち合わせや面談など用途に応じて使用出来るエリアを設けています。
                             </p>
@@ -115,7 +115,7 @@
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
-                            <p class="break-keep text-sm sm:text-base font-bold sm:leading-7 leading-7">
+                            <p class=" text-sm sm:text-base font-bold sm:leading-7 leading-7">
                                 8階にはグリコボックスが設置されていて、100円で好きなお菓子が食べれます。<br />
                                 小腹がすいたときやリフレッシュの際に利用されます。
                             </p>
