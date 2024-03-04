@@ -43,7 +43,7 @@
             <div class="mt-8 px-4 md:mx-auto max-w-xl">
                 <div class="flex flex-wrap">
                     <div class="w-full">
-                        <ImageCard src="/images/recruit/office/003.png" alt="7階 受付の写真" label="7階 受付の写真"></ImageCard>
+                        <ImageCard src="/images/recruit/office/003.png" alt="7階 受付" label="7階 受付"></ImageCard>
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
@@ -64,7 +64,7 @@
             <div class="mt-8 px-4 md:mx-auto max-w-xl">
                 <div class="flex flex-wrap">
                     <div class="w-full">
-                        <ImageCard src="/images/recruit/office/004.png" alt="9階 セミナールームの写真" label="9階 セミナールームの写真"></ImageCard>
+                        <ImageCard src="/images/recruit/office/004.png" alt="9階 セミナールーム" label="9階 セミナールーム"></ImageCard>
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
@@ -85,7 +85,7 @@
             <div class="mt-8 px-4 md:mx-auto max-w-xl">
                 <div class="mb-16 flex flex-wrap">
                     <div class="w-full">
-                        <ImageCard src="/images/recruit/office/005.png" alt="8階 開発ルームの写真" label="8階 開発ルームの写真"></ImageCard>
+                        <ImageCard src="/images/recruit/office/005.png" alt="8階 開発ルーム" label="8階 開発ルーム"></ImageCard>
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="mb-16 flex flex-wrap">
                     <div class="w-full">
-                        <ImageCard src="/images/recruit/office/006.png" alt="8階 ミーティングスペースの写真" label="8階 ミーティングスペースの写真"></ImageCard>
+                        <ImageCard src="/images/recruit/office/006.png" alt="8階 ミーティングスペース" label="8階 ミーティングスペース"></ImageCard>
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
@@ -111,7 +111,7 @@
                 </div>
                 <div class="flex flex-wrap">
                     <div class="w-full">
-                        <ImageCard src="/images/recruit/office/007.png" alt="8階 グリコボックスの写真" label="8階 グリコボックスの写真"></ImageCard>
+                        <ImageCard src="/images/recruit/office/007.png" alt="8階 グリコボックス" label="8階 グリコボックス"></ImageCard>
                     </div>
                     <div class="w-full">
                         <BlurGlassCard>
