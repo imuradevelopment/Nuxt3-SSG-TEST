@@ -74,8 +74,8 @@
                     </BlurGlassCard>
                 </div>
                 <div class="flex flex-col justify-center items-center">
-                    <NuxtImg class="hidden md:inline-block" width="576" src="/images/recruit/induction/006.png" />
-                    <NuxtImg class="inline-block md:hidden" width="343" src="/images/recruit/induction/006.png" />
+                    <NuxtImg class="hidden md:inline-block" width="576" src="/images/recruit/induction/006_desktop.png" />
+                    <NuxtImg class="inline-block md:hidden" width="343" src="/images/recruit/induction/006_mobile.png" />
                 </div>
                 <!-- <div class="mt-6">
                     <div class="flex flex-wrap">
