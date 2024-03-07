@@ -56,7 +56,7 @@
             </div>
         </section>
 
-        <section class="my-24">
+        <section class="mt-24">
             <h2 id="recruit-office05"
                 class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 開発ルーム（8階）</h2>
@@ -82,7 +82,8 @@
                         <BlurGlassCard>
                             <p class=" text-sm sm:text-base font-bold sm:leading-7 leading-7">
                                 8階には開発フロアのほかにミーティングスペースがあり、<br />
-                                プロジェクトの打ち合わせや面談など用途に応じて使用出来るエリアを設けています。
+                                プロジェクトの打ち合わせや面談など<br class="hidden md:inline-block" />
+                                用途に応じて使用出来るエリアを設けています。
                             </p>
                         </BlurGlassCard>
                     </div>
@@ -103,7 +104,7 @@
             </div>
         </section>
 
-        <section class="mt-24">
+        <section class="my-24">
             <h2 id="recruit-office04"
                 class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 セミナールーム（9階）</h2>
