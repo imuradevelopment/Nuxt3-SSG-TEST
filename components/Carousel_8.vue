@@ -1,25 +1,27 @@
 <template>
     <div class="grid">
         <main class="h-96">
-            <div class="hero" v-bind:style="{ backgroundImage: 'url(' + pics[pos] + ')' }"></div>
+            <div class="hero8" v-bind:style="{ backgroundImage: 'url(' + pics[pos] + ')' }"></div>
         </main>
         <nav class="scene-nav">
-                <div class="prev">
-                    <button @click="prevSlide"></button>
-                </div>
-                <div class="next">
-                    <button @click="nextSlide"></button>
-                </div>
+            <div class="prev">
+                <button @click="prevSlide"></button>
+            </div>
+            <div class="next">
+                <button @click="nextSlide"></button>
+            </div>
         </nav>
         <article class="wheel-wr">
             <div class="scene">
-                <div class="carousel">
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
+                <div class="carousel8">
+                    <div class="face8" v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
+                    <div class="face8" v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
+                    <div class="face8" v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
+                    <div class="face8" v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
+                    <div class="face8" v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
+                    <div class="face8" v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
+                    <div class="face8" v-bind:style="{ backgroundImage: 'url(' + pics[6] + ')' }"></div>
+                    <div class="face8" v-bind:style="{ backgroundImage: 'url(' + pics[7] + ')' }"></div>
                 </div>
             </div>
         </article>
@@ -37,22 +39,24 @@ export default {
                 "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg",
                 "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80",
                 "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wall-e.jpg",
+                "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/little-robot.jpg",
+                "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg",
             ],
             pos: 0,
             carPos: 0,
-            slides: 6
+            slides: 8
         };
     },
     methods: {
         rotateCarousel: function () {
             let angle = (this.carPos / this.slides) * -360;
-            const ctr = document.querySelector(".carousel");
+            const ctr = document.querySelector(".carousel8");
             ctr.style.transform = "rotate(0deg)translateZ(-190px) rotateY(" + angle + "deg)";
         },
         prevSlide: function () {
             this.carPos--;
             this.rotateCarousel();
-            const hero = document.querySelector(".hero");
+            const hero = document.querySelector(".hero8");
             hero.classList.add("switching-prev");
             hero.addEventListener("animationend", () => {
                 hero.classList.remove("switching-prev");
@@ -68,7 +72,7 @@ export default {
         nextSlide: function () {
             this.carPos++;
             this.rotateCarousel();
-            const hero = document.querySelector(".hero");
+            const hero = document.querySelector(".hero8");
             hero.classList.add("switching-next");
             hero.addEventListener("animationend", () => {
                 hero.classList.remove("switching-next");
@@ -151,13 +155,14 @@ button {
             }
         }
     }
+
     main {
         grid-column: 1;
         grid-row: 1;
         display: flex;
         filter: drop-shadow(0px 0px 2px #e0d040) drop-shadow(2px 2px 1px #e0d040) drop-shadow(-2px -2px 1px #e0d040);
 
-                .hero {
+        .hero8 {
             margin: auto;
             width: 75%;
             height: 75%;
@@ -332,6 +337,7 @@ button {
             }
         }
     }
+
     .wheel-wr {
         grid-column: 1;
         grid-row: 2;
@@ -348,7 +354,7 @@ button {
             left: 0.5%;
             align-self: center;
 
-            .carousel {
+            .carousel8 {
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -358,7 +364,7 @@ button {
                 transform-style: preserve-3d;
                 transition: transform 2s ease-in-out;
 
-                .face {
+                .face8 {
                     position: absolute;
                     width: 210px;
                     height: 100%;
@@ -373,29 +379,37 @@ button {
                         -1px -1px 2px #db6ce7;
 
                     &:nth-of-type(1) {
-                        transform: rotate(0deg) translateZ(190px);
+                        transform: rotate(0deg) translateZ(260px);
                     }
 
                     &:nth-of-type(2) {
-                        transform: rotateY(60deg) rotate(0deg) translateZ(190px);
+                        transform: rotateY(45deg) rotate(0deg) translateZ(260px);
                     }
 
                     &:nth-of-type(3) {
-                        transform: rotateY(120deg) rotate(0deg) translateZ(190px);
+                        transform: rotateY(90deg) rotate(0deg) translateZ(260px);
                     }
 
                     &:nth-of-type(4) {
-                        transform: rotateY(180deg) rotate(0deg) translateZ(190px);
+                        transform: rotateY(135deg) rotate(0deg) translateZ(260px);
                     }
 
                     &:nth-of-type(5) {
-                        transform: rotateY(240deg) rotate(0deg) translateZ(190px);
+                        transform: rotateY(180deg) rotate(0deg) translateZ(260px);
                     }
 
                     &:nth-of-type(6) {
-                        transform: rotateY(300deg) rotate(0deg) translateZ(190px);
+                        transform: rotateY(225deg) rotate(0deg) translateZ(260px);
                     }
-                    
+
+                    &:nth-of-type(7) {
+                        transform: rotateY(270deg) rotate(0deg) translateZ(260px);
+                    }
+
+                    &:nth-of-type(8) {
+                        transform: rotateY(315deg) rotate(0deg) translateZ(260px);
+                    }
+
                 }
             }
         }

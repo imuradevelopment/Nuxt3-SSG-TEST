@@ -1,25 +1,28 @@
 <template>
     <div class="grid">
-        <main class="h-96 md:h-auto">
-            <div class="hero" v-bind:style="{ backgroundImage: 'url(' + pics[pos] + ')' }"></div>
+        <main class="h-96">
+            <div class="hero3" v-bind:style="{ backgroundImage: 'url(' + pics[pos] + ')' }"></div>
         </main>
-        <article class="wheel-wr">
+        <nav class="scene-nav">
             <div class="prev">
                 <button @click="prevSlide"></button>
             </div>
-
-            <div class="scene">
-                <div class="carousel">
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
-                    <div class="face" v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
-                </div>
-            </div>
             <div class="next">
                 <button @click="nextSlide"></button>
+            </div>
+        </nav>
+        <article class="wheel-wr">
+            <div class="scene">
+                <div class="carousel3">
+                    <div class="face3" v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
+                    <div class="face3" v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
+                    <div class="face3" v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
+                    <!-- <div class="face3" v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
+                    <div class="face3" v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
+                    <div class="face3" v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
+                    <div class="face3" v-bind:style="{ backgroundImage: 'url(' + pics[6] + ')' }"></div>
+                    <div class="face3" v-bind:style="{ backgroundImage: 'url(' + pics[7] + ')' }"></div> -->
+                </div>
             </div>
         </article>
     </div>
@@ -33,38 +36,32 @@ export default {
                 "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/cheering-robot.jpg",
                 "https://images.unsplash.com/photo-1581481615985-ba4775734a9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
                 "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/little-robot.jpg",
-                "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg",
-                "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80",
-                "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wall-e.jpg"
+                // "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg",
+                // "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80",
+                // "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wall-e.jpg",
             ],
             pos: 0,
             carPos: 0,
-            slides: 6
+            slides: 3
         };
     },
     methods: {
         rotateCarousel: function () {
             let angle = (this.carPos / this.slides) * -360;
-            const ctr = document.querySelector(".carousel");
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                ctr.style.transform =
-                    "rotate(90deg)translateZ(-190px) rotateY(" + angle + "deg)";
-            } else {
-                ctr.style.transform =
-                    "rotate(0deg)translateZ(-190px) rotateY(" + angle + "deg)";
-            }
+            const ctr = document.querySelector(".carousel3");
+            ctr.style.transform = "rotate(0deg)translateZ(-190px) rotateY(" + angle + "deg)";
         },
         prevSlide: function () {
             this.carPos--;
             this.rotateCarousel();
-            const hero = document.querySelector(".hero");
+            const hero = document.querySelector(".hero3");
             hero.classList.add("switching-prev");
             hero.addEventListener("animationend", () => {
                 hero.classList.remove("switching-prev");
             });
             setTimeout(() => {
                 if (this.pos - 1 < 0) {
-                    this.pos = 5;
+                    this.pos = this.slides - 1;
                 } else {
                     this.pos--;
                 }
@@ -73,13 +70,13 @@ export default {
         nextSlide: function () {
             this.carPos++;
             this.rotateCarousel();
-            const hero = document.querySelector(".hero");
+            const hero = document.querySelector(".hero3");
             hero.classList.add("switching-next");
             hero.addEventListener("animationend", () => {
                 hero.classList.remove("switching-next");
             });
             setTimeout(() => {
-                if (this.pos + 1 > 5) {
+                if (this.pos + 1 > this.slides - 1) {
                     this.pos = 0;
                 } else {
                     this.pos++;
@@ -103,16 +100,67 @@ button {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: calc(100% - 300px) 300px;
-    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100% - 220px - 60px) 220px 60px;
+
+    nav {
+        grid-column: 1;
+        grid-row: 3;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .prev,
+        .next {
+            width: 45px;
+            height: 75px;
+            filter: drop-shadow(0 0 1px turquoise) drop-shadow(1px 1px 1px turquoise) drop-shadow(-1px -1px 1px turquoise);
+            align-self: center;
+            transform: rotate(-90deg);
+        }
+
+        .prev {
+
+            button {
+                clip-path: polygon(25% 100%,
+                        25% 45%,
+                        3% 45%,
+                        0 35%,
+                        45% 0,
+                        55% 0,
+                        100% 35%,
+                        97% 45%,
+                        75% 45%,
+                        75% 100%,
+                        25% 100%);
+            }
+        }
+
+        .next {
+
+            button {
+                clip-path: polygon(25% 0,
+                        25% 55%,
+                        3% 55%,
+                        0 65%,
+                        45% 100%,
+                        55% 100%,
+                        100% 65%,
+                        97% 55%,
+                        75% 55%,
+                        75% 0,
+                        25% 0);
+            }
+        }
+    }
 
     main {
-        grid-column: 0/1;
+        grid-column: 1;
         grid-row: 1;
         display: flex;
         filter: drop-shadow(0px 0px 2px #e0d040) drop-shadow(2px 2px 1px #e0d040) drop-shadow(-2px -2px 1px #e0d040);
 
-        .hero {
+        .hero3 {
             margin: auto;
             width: 75%;
             height: 75%;
@@ -289,67 +337,22 @@ button {
     }
 
     .wheel-wr {
-        grid-column: 2/3;
-        grid-row: 1;
+        grid-column: 1;
+        grid-row: 2;
         display: flex;
-        flex-wrap: wrap;
         padding-top: 30px;
         padding-bottom: 30px;
-        justify-content: center;
-
-        .prev,
-        .next {
-            width: 90px;
-            height: 150px;
-            filter: drop-shadow(0 0 1px turquoise) drop-shadow(1px 1px 1px turquoise) drop-shadow(-1px -1px 1px turquoise);
-        }
-
-        .prev {
-            align-self: flex-start;
-
-            button {
-                clip-path: polygon(25% 100%,
-                        25% 45%,
-                        3% 45%,
-                        0 35%,
-                        45% 0,
-                        55% 0,
-                        100% 35%,
-                        97% 45%,
-                        75% 45%,
-                        75% 100%,
-                        25% 100%);
-            }
-        }
-
-        .next {
-            align-self: flex-end;
-
-            button {
-                clip-path: polygon(25% 0,
-                        25% 55%,
-                        3% 55%,
-                        0 65%,
-                        45% 100%,
-                        55% 100%,
-                        100% 65%,
-                        97% 55%,
-                        75% 55%,
-                        75% 0,
-                        25% 0);
-            }
-        }
+        justify-content: space-evenly;
+        align-items: center;
 
         .scene {
             width: 220px;
             height: 200px;
-            align-self: center;
-            position: relative;
-            top: 0;
-            left: 20%;
             perspective: 3000px;
+            left: 0.5%;
+            align-self: center;
 
-            .carousel {
+            .carousel3 {
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -357,9 +360,9 @@ button {
                 left: 0;
                 transform: rotate(0deg) translateZ(-190px);
                 transform-style: preserve-3d;
-                transition: transform 1.5s ease-in-out;
+                transition: transform 2s ease-in-out;
 
-                .face {
+                .face3 {
                     position: absolute;
                     width: 210px;
                     height: 100%;
@@ -367,6 +370,7 @@ button {
                     left: 5px;
                     background-size: cover;
                     background-position: center;
+                    opacity: 1;
                     border: 2px solid #d040e0;
                     border-radius: 5px;
                     box-shadow: 0 0 1px #db6ce7, 1px 1px 2px #db6ce7,
@@ -377,146 +381,16 @@ button {
                     }
 
                     &:nth-of-type(2) {
-                        transform: rotateY(60deg) rotate(0deg) translateZ(190px);
-                    }
-
-                    &:nth-of-type(3) {
                         transform: rotateY(120deg) rotate(0deg) translateZ(190px);
                     }
 
-                    &:nth-of-type(4) {
-                        transform: rotateY(180deg) rotate(0deg) translateZ(190px);
-                    }
-
-                    &:nth-of-type(5) {
+                    &:nth-of-type(3) {
                         transform: rotateY(240deg) rotate(0deg) translateZ(190px);
                     }
 
-                    &:nth-of-type(6) {
-                        transform: rotateY(300deg) rotate(0deg) translateZ(190px);
-                    }
                 }
             }
         }
     }
-}
-
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 100%;
-        grid-template-rows: calc(100% - 220px) 220px;
-
-        main {
-            grid-column: 1;
-            grid-row: 0/1;
-        }
-
-        .wheel-wr {
-            grid-column: 1;
-            grid-row: 2/3;
-            display: flex;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            justify-content: space-evenly;
-            align-items: center;
-
-            .prev,
-            .next {
-                align-self: center;
-                transform: rotate(-90deg);
-            }
-
-            .prev {
-                button {
-                    clip-path: polygon(25% 100%,
-                            25% 45%,
-                            3% 45%,
-                            0 35%,
-                            45% 0,
-                            55% 0,
-                            100% 35%,
-                            97% 45%,
-                            75% 45%,
-                            75% 100%,
-                            25% 100%);
-                }
-            }
-
-            .next {
-                button {
-                    clip-path: polygon(25% 0,
-                            25% 55%,
-                            3% 55%,
-                            0 65%,
-                            45% 100%,
-                            55% 100%,
-                            100% 65%,
-                            97% 55%,
-                            75% 55%,
-                            75% 0,
-                            25% 0);
-                }
-            }
-
-            .scene {
-                width: 220px;
-                height: 200px;
-                perspective: 3000px;
-                top: 40%;
-                left: 0.5%;
-
-                .carousel {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    transform: rotate(90deg) translateZ(-190px);
-                    transform-style: preserve-3d;
-                    transition: transform 2s ease-in-out;
-
-                    .face {
-                        position: absolute;
-                        width: 210px;
-                        height: 100%;
-                        top: 0;
-                        left: 5px;
-                        background-size: cover;
-                        background-position: center;
-                        opacity: 1;
-
-                        &:nth-of-type(1) {
-                            transform: rotate(-90deg) translateZ(190px);
-                        }
-
-                        &:nth-of-type(2) {
-                            transform: rotateY(60deg) rotate(-90deg) translateZ(190px);
-                        }
-
-                        &:nth-of-type(3) {
-                            transform: rotateY(120deg) rotate(-90deg) translateZ(190px);
-                        }
-
-                        &:nth-of-type(4) {
-                            transform: rotateY(180deg) rotate(-90deg) translateZ(190px);
-                        }
-
-                        &:nth-of-type(5) {
-                            transform: rotateY(240deg) rotate(-90deg) translateZ(190px);
-                        }
-
-                        &:nth-of-type(6) {
-                            transform: rotateY(300deg) rotate(-90deg) translateZ(190px);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-body {
-    height: 100vh;
-    overflow: hidden;
 }
 </style>
