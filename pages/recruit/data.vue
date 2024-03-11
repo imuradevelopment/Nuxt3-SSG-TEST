@@ -4,7 +4,7 @@
         <section class="my-24 mx-4">
             <div class="text-center">6枚パターン</div>
             <div class="flex justify-center items-center">
-                <Carousel></Carousel>
+                <Carousel_6></Carousel_6>
             </div>
         </section>
 
@@ -28,7 +28,7 @@
 definePageMeta({
     layout: 'double-column-sidebar'
 })
-import Carousel from '~/components/Carousel.vue'
+import Carousel_6 from '~/components/Carousel_6.vue'
 import Carousel_3 from '~/components/Carousel_3.vue'
 import Carousel_8 from '~/components/Carousel_8.vue'
 </script>
