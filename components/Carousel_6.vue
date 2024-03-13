@@ -153,6 +153,27 @@ const nextSlide = () => {
     column-gap: 1rem;
     align-items: center;
 }
+/* スクロールバー全体のスタイル */
+.carousel::-webkit-scrollbar {
+  width: 8px; /* スクロールバーの幅を細く */
+  height: 8px;
+}
+
+/* スクロールバーのトラック（背景部分）のスタイル */
+.carousel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* 背景色を透明度の低い黒に */
+}
+
+/* スクロールバーのサム（動かす部分）のスタイル */
+.carousel::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* サムの色を透明度のやや高い黒に */
+  border-radius: 4px; /* 角を丸く */
+}
+
+/* スクロールバーのサムにホバーしたときのスタイル */
+.carousel::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* ホバー時の色を少し濃く */
+}
 
 .grid-carousel .scene .carousel .face1 {
     grid-area: img1;
