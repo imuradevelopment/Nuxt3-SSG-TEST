@@ -19,7 +19,7 @@
             </div>
         </nav>
         <div class="scene">
-            <div class="carousel">
+            <div class="carousel scrollable-element">
                 <div class="face face1" v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
                 <div class="face face2" v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
                 <div class="face face3" v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
@@ -58,6 +58,13 @@ let hero: HTMLElement | null;
 onMounted(() => {
     ctr = document.querySelector('.carousel');
     hero = document.querySelector('.hero');
+
+    const scrollableElement = document.querySelector('.scrollable-element') as HTMLElement;
+
+    scrollableElement.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scrollableElement.scrollLeft += e.deltaY;
+    });
 });
 
 const rotateCarousel = () => {
