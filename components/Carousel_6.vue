@@ -311,7 +311,7 @@ button {
     display: flex;
     padding-top: 30px;
     padding-bottom: 30px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
