@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-carousel">
+    <div class="grid-carousel h-[700px] w-full max-w-3xl">
         <div class="flex justify-center items-center flex-nowrap">
             <!-- <nav class="scene-nav">
                 <div class="prev">
@@ -59,8 +59,75 @@
         </article> -->
     </div>
 </template>
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
 
-<script>
+type ImageUrl = string;
+
+const pics = ref<ImageUrl[]>([
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/cheering-robot.jpg",
+    "https://images.unsplash.com/photo-1581481615985-ba4775734a9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/little-robot.jpg",
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg",
+    "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80",
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wall-e.jpg"
+]);
+const pos = ref<number>(0);
+const carPos = ref<number>(0);
+const slides = ref<number>(pics.value.length);
+
+let ctr: HTMLElement | null;
+let hero: HTMLElement | null;
+
+onMounted(() => {
+    ctr = document.querySelector('.carousel');
+    hero = document.querySelector('.hero');
+});
+
+const rotateCarousel = () => {
+    if (!ctr) {
+        console.error('カルーセル要素が見つかりません。');
+        return;
+    }
+    const angle = (carPos.value / slides.value) * -360;
+    ctr.style.transform = `rotate(0deg)translateZ(-190px) rotateY(${angle}deg)`;
+};
+
+const prevSlide = () => {
+    if (!hero) {
+        console.error('ヒーロー要素が見つかりません。');
+        return;
+    }
+    carPos.value--;
+    rotateCarousel();
+    hero.classList.add('switching-prev');
+    hero.addEventListener('animationend', () => {
+        hero.classList.remove('switching-prev');
+    });
+    setTimeout(() => {
+        pos.value = pos.value - 1 < 0 ? slides.value - 1 : pos.value - 1;
+    }, 250);
+};
+
+const nextSlide = () => {
+    if (!hero) {
+        console.error('ヒーロー要素が見つかりません。');
+        return;
+    }
+    carPos.value++;
+    rotateCarousel();
+    hero.classList.add('switching-next');
+    hero.addEventListener('animationend', () => {
+        hero.classList.remove('switching-next');
+    });
+    setTimeout(() => {
+        pos.value = pos.value + 1 > slides.value - 1 ? 0 : pos.value + 1;
+    }, 250);
+};
+</script>
+
+
+<!-- <script>
 export default {
     data() {
         return {
@@ -117,7 +184,7 @@ export default {
         }
     }
 };
-</script>
+</script> -->
 
 <style lang="scss" scoped>
 button {
@@ -130,8 +197,6 @@ button {
 
 .grid-carousel {
     display: grid;
-    width: 100%;
-    height: 100%;
     grid-template-columns: 1fr auto;
     grid-template-rows: calc(100% - 220px) 220px;
 }
@@ -166,7 +231,7 @@ button {
 .grid-carousel main .hero {
     margin: auto;
     width: 100%;
-    height: 1280px;
+    height: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -174,8 +239,6 @@ button {
 }
 
 .grid-carousel main .hero::after {
-    width: 100%;
-    height: 100%;
     background: transparent;
     content: "";
     position: absolute;
