@@ -3,11 +3,9 @@
         <h1>各種データ</h1>
         <section class="my-24 mx-4">
             <div class="text-center">6枚パターン</div>
-            <div class="flex justify-center items-center">
-                <Carousel_6></Carousel_6>
-            </div>
+            <Carousel_6></Carousel_6>
         </section>
-
+<!-- 
         <section class="my-24 mx-4">
             <div class="text-center">3枚パターン</div>
             <div class="flex justify-center items-center">
@@ -20,7 +18,7 @@
             <div class="flex justify-center items-center">
                 <Carousel_8></Carousel_8>
             </div>
-        </section>
+        </section> -->
     </div>
 </template>
 
@@ -29,8 +27,8 @@ definePageMeta({
     layout: 'double-column-sidebar'
 })
 import Carousel_6 from '~/components/Carousel_6.vue'
-import Carousel_3 from '~/components/Carousel_3.vue'
-import Carousel_8 from '~/components/Carousel_8.vue'
+// import Carousel_3 from '~/components/Carousel_3.vue'
+// import Carousel_8 from '~/components/Carousel_8.vue'
 </script>
 
 <style scoped></style>
