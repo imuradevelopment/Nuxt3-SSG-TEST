@@ -60,7 +60,7 @@ onMounted(() => {
     carousel = document.querySelector('.carousel') as HTMLElement;
     hero = document.querySelector('.hero') as HTMLElement;
 
-    const scrollableElement = document.querySelector('.scrollable-element') as HTMLElement;
+    const scrollableElement = document.querySelector('.carousel') as HTMLElement;
 
     scrollableElement.addEventListener('wheel', (e) => {
         e.preventDefault();
