@@ -6,33 +6,33 @@
             </div> -->
         </nav>
         <main>
-            <div class="hero" v-bind:style="{ backgroundImage: 'url(' + pics[pos] + ')' }"></div>
+            <div class="hero" v-bind:style="{ backgroundImage: 'url(' + pics[currentPhotoNumber] + ')' }"></div>
         </main>
         <nav class="scene-nav-nextcontent">
             <!-- <div class="next">
                 <button @click="nextSlide"></button>
             </div> -->
         </nav>
-        <nav class="scene-nav-prev">
+        <!-- <nav class="scene-nav-prev">
             <div class="prev">
                 <button @click="prevSlide"></button>
             </div>
-        </nav>
+        </nav> -->
         <div class="scene">
-            <div class="carousel scrollable-element">
-                <div class="face face1" v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
-                <div class="face face2" v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
-                <div class="face face3" v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
-                <div class="face face4" v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
-                <div class="face face5" v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
-                <div class="face face6" v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
+            <div class="carousel">
+                <div class="flex-item face face1" :id="slideIndex[0]" v-on:click="selectItem(slideIndex[0])" v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
+                <div class="flex-item face face2" :id="slideIndex[1]" v-on:click="selectItem(slideIndex[1])" v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
+                <div class="flex-item face face3" :id="slideIndex[2]" v-on:click="selectItem(slideIndex[2])" v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
+                <div class="flex-item face face4" :id="slideIndex[3]" v-on:click="selectItem(slideIndex[3])" v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
+                <div class="flex-item face face5" :id="slideIndex[4]" v-on:click="selectItem(slideIndex[4])" v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
+                <div class="flex-item face face6" :id="slideIndex[5]" v-on:click="selectItem(slideIndex[5])" v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
             </div>
         </div>
-        <nav class="scene-nav-next">
+        <!-- <nav class="scene-nav-next">
             <div class="next">
                 <button @click="nextSlide"></button>
             </div>
-        </nav>
+        </nav> -->
     </div>
 </template>
 <script setup lang="ts">
@@ -48,16 +48,17 @@ const pics = ref<ImageUrl[]>([
     "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80",
     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wall-e.jpg"
 ]);
-const pos = ref<number>(0);
-const carPos = ref<number>(0);
-const slides = ref<number>(pics.value.length);
 
-let ctr: HTMLElement | null;
-let hero: HTMLElement | null;
+const currentPhotoNumber = ref<number>(0);
+const slides = ref<number>(pics.value.length);
+const slideIndex = ref<string[]>(Array.from({ length: slides.value }, (_, i) => (i).toString()));
+
+let carousel: HTMLElement;
+let hero: HTMLElement;
 
 onMounted(() => {
-    ctr = document.querySelector('.carousel');
-    hero = document.querySelector('.hero');
+    carousel = document.querySelector('.carousel') as HTMLElement;
+    hero = document.querySelector('.hero') as HTMLElement;
 
     const scrollableElement = document.querySelector('.scrollable-element') as HTMLElement;
 
@@ -67,46 +68,58 @@ onMounted(() => {
     });
 });
 
-const rotateCarousel = () => {
-    if (!ctr) {
-        console.error('カルーセル要素が見つかりません。');
-        return;
-    }
-    // const angle = (carPos.value / slides.value) * -360;
-    // ctr.style.transform = `rotate(0deg)translateZ(-190px) rotateY(${angle}deg)`;
-};
-
-const prevSlide = () => {
+const selectItem = (id:string) => {
     if (!hero) {
         console.error('ヒーロー要素が見つかりません。');
         return;
     }
-    carPos.value--;
-    rotateCarousel();
+    let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
+    faceBefore.style.boxShadow = `none`;
+    currentPhotoNumber.value = parseInt(id);
+    let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
+    face.style.boxShadow = `0 0 1px var(--custom-color-deepGray), 1px 1px 2px var(--custom-color-deepGray), -1px -1px 2px var(--custom-color-deepGray)`;
+
+
     hero.classList.add('switching-prev');
     hero.addEventListener('animationend', () => {
         hero.classList.remove('switching-prev');
     });
-    setTimeout(() => {
-        pos.value = pos.value - 1 < 0 ? slides.value - 1 : pos.value - 1;
-    }, 250);
-};
+}
 
-const nextSlide = () => {
-    if (!hero) {
-        console.error('ヒーロー要素が見つかりません。');
-        return;
-    }
-    carPos.value++;
-    rotateCarousel();
-    hero.classList.add('switching-next');
-    hero.addEventListener('animationend', () => {
-        hero.classList.remove('switching-next');
-    });
-    setTimeout(() => {
-        pos.value = pos.value + 1 > slides.value - 1 ? 0 : pos.value + 1;
-    }, 250);
-};
+// const prevSlide = () => {
+//     if (!hero) {
+//         console.error('ヒーロー要素が見つかりません。');
+//         return;
+//     }
+//     let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
+//     faceBefore.style.boxShadow = `none`;
+//     currentPhotoNumber.value = currentPhotoNumber.value - 1 < 0 ? slides.value - 1 : currentPhotoNumber.value - 1;
+//     let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
+//     face.style.boxShadow = `0 0 1px var(--custom-color-deepGray), 1px 1px 2px var(--custom-color-deepGray), -1px -1px 2px var(--custom-color-deepGray)`;
+
+
+//     hero.classList.add('switching-prev');
+//     hero.addEventListener('animationend', () => {
+//         hero.classList.remove('switching-prev');
+//     });
+// };
+
+// const nextSlide = () => {
+//     if (!hero) {
+//         console.error('ヒーロー要素が見つかりません。');
+//         return;
+//     }
+//     let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
+//     faceBefore.style.boxShadow = `none`;
+//     currentPhotoNumber.value = currentPhotoNumber.value + 1 > slides.value - 1 ? 0 : currentPhotoNumber.value + 1;
+//     let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
+//     face.style.boxShadow = `0 0 1px var(--custom-color-deepGray), 1px 1px 2px var(--custom-color-deepGray), -1px -1px 2px var(--custom-color-deepGray)`;
+
+//     hero.classList.add('switching-next');
+//     hero.addEventListener('animationend', () => {
+//         hero.classList.remove('switching-next');
+//     });
+// };
 </script>
 
 <style scoped>
@@ -131,7 +144,8 @@ const nextSlide = () => {
     grid-template-areas:
         "previewcontent hero nextcontent"
         "prev images next";
-    grid-template-columns: 4rem minmax(300px, calc(1280px - 160px - 2rem)) 4rem;
+    /* grid-template-columns: 4rem minmax(300px, calc(1280px - 160px - 2rem)) 4rem; */
+    grid-template-columns: auto minmax(300px, calc(1280px - 160px - 2rem)) auto;
     grid-template-rows: 360px 180px;
     gap: 1rem;
 }
@@ -145,12 +159,10 @@ const nextSlide = () => {
 
 .grid-carousel .scene {
     grid-area: images;
-    align-self: center;
-    align-items: center;
 }
 
 .grid-carousel .scene .carousel {
-    width: 100%;
+    /* width: 100%;
     overflow-x: scroll;
     height: 100%;
     display: grid;
@@ -158,7 +170,18 @@ const nextSlide = () => {
     grid-template-columns: 7rem 7rem 7rem 7rem 7rem 7rem;
     grid-template-rows: auto;
     column-gap: 1rem;
+    align-items: center; */
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.flex-item {
+    flex-shrink: 0;
 }
 /* スクロールバー全体のスタイル */
 .carousel::-webkit-scrollbar {
@@ -182,7 +205,7 @@ const nextSlide = () => {
   background-color: rgba(0, 0, 0, 0.3); /* ホバー時の色を少し濃く */
 }
 
-.grid-carousel .scene .carousel .face1 {
+/* .grid-carousel .scene .carousel .face1 {
     grid-area: img1;
 }
 
@@ -204,7 +227,7 @@ const nextSlide = () => {
 
 .grid-carousel .scene .carousel .face6 {
     grid-area: img6;
-}
+} */
 
 .grid-carousel .scene .carousel .face {
     width: 7rem;
@@ -214,12 +237,11 @@ const nextSlide = () => {
     background-size: cover;
     background-position: center;
     opacity: 1;
-    border: 2px solid #d040e0;
+    border: 2px solid var(--custom-color-deepGray);
     border-radius: 5px;
-    box-shadow: 0 0 1px #db6ce7, 1px 1px 2px #db6ce7, -1px -1px 2px #db6ce7;
 }
 
-.grid-carousel nav .prev,
+/* .grid-carousel nav .prev,
 .grid-carousel nav .next {
     width: 4rem;
     height: 2rem;
@@ -234,11 +256,11 @@ const nextSlide = () => {
 
 .grid-carousel nav .next button {
     clip-path: polygon(100% 50%, 0 100%, 0 0);
-}
+} */
 
 .grid-carousel main {
     display: flex;
-    filter: drop-shadow(0px 0px 2px #e0d040) drop-shadow(2px 2px 1px #e0d040) drop-shadow(-2px -2px 1px #e0d040);
+    filter: drop-shadow(0px 0px 2px var(--custom-color-blue)) drop-shadow(2px 2px 1px var(--custom-color-blue)) drop-shadow(-2px -2px 1px var(--custom-color-blue));
 }
 
 .grid-carousel main .hero {
@@ -263,34 +285,8 @@ const nextSlide = () => {
     animation: leaving 1.5s ease-in-out forwards;
 }
 
-.grid-carousel main .hero.switching-prev::after {
-    animation: trans 1.5s ease-in-out forwards;
-}
-
 .grid-carousel main .hero.switching-next {
     animation: leaving 1s ease-in-out reverse forwards;
-}
-
-.grid-carousel main .hero.switching-next::after {
-    animation: trans 1s ease-in-out forwards;
-}
-
-@keyframes trans {
-    0% {
-        background: transparent;
-    }
-
-    30% {
-        background: white;
-    }
-
-    70% {
-        background: white;
-    }
-
-    100% {
-        background: transparent;
-    }
 }
 
 @keyframes leaving {
