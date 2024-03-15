@@ -6,7 +6,7 @@
             </div> -->
         </nav>
         <main>
-            <div class="hero" v-bind:style="{ backgroundImage: 'url(' + pics[currentPhotoNumber] + ')' }"></div>
+            <div class="hero" v-bind:style="{ backgroundImage: 'url(' + pics[currentHeroNumber] + ')' }"></div>
         </main>
         <nav class="scene-nav-nextcontent">
             <!-- <div class="next">
@@ -50,6 +50,7 @@ const pics = ref<ImageUrl[]>([
 ]);
 
 const currentPhotoNumber = ref<number>(0);
+const currentHeroNumber = ref<number>(0);
 const slides = ref<number>(pics.value.length);
 const slideIndex = ref<string[]>(Array.from({ length: slides.value }, (_, i) => (i).toString()));
 
@@ -78,6 +79,10 @@ const selectItem = (id:string) => {
     currentPhotoNumber.value = parseInt(id);
     let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
     face.style.boxShadow = `0 0 1px var(--custom-color-deepGray), 1px 1px 2px var(--custom-color-deepGray), -1px -1px 2px var(--custom-color-deepGray)`;
+    setTimeout(() => {
+        currentHeroNumber.value = currentPhotoNumber.value;
+    }, 500);
+    
 
 
     hero.classList.add('switching-prev');
@@ -278,11 +283,11 @@ const selectItem = (id:string) => {
     background: transparent;
     content: "";
     position: absolute;
-    transition: all 0.25s linear;
+    transition: all 1s linear;
 }
 
 .grid-carousel main .hero.switching-prev {
-    animation: leaving 1.5s ease-in-out forwards;
+    animation: leaving 1s ease-in-out forwards;
 }
 
 .grid-carousel main .hero.switching-next {
