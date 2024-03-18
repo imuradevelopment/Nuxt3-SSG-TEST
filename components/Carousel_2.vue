@@ -3,12 +3,15 @@
         <main class="hero-wrapper">
             <!-- ヒーローイメージとして選択された画像を表示 -->
             <div class="hero" :style="heroStyle">
-                <!-- BlurGlassCardコンポーネントを使用してメインテキストを表示 -->
-                <BlurGlassCard class="main-text-card" :rounded="true" :blur="10" :color="'rgba(255, 255, 255, 0.5)'">
-                    {{ pics[currentHeroNumber].mainText }}
-                </BlurGlassCard>
-                <!-- サブテキストを表示 -->
-                <div class="sub-text">{{ pics[currentHeroNumber].subText }}</div>
+                <ClientOnly>
+                    <!-- BlurGlassCardコンポーネントにメインテキストをpropsとして渡す -->
+                    <BlurGlassCard class="main-text-card" :rounded="true" :blur="10" :color="'rgba(255, 255, 255, 0.5)'"
+                        v-html="pics[currentHeroNumber].mainText" />
+                    <!-- サブテキストをpropsとして渡す -->
+                                        <BlurGlassCard class="sub-text-center-bottom" :rounded="true" :blur="10" :color="'rgba(255, 255, 255, 0.5)'"
+                            v-html="pics[currentHeroNumber].subText" />
+                    <!-- <div class="sub-text" v-html="pics[currentHeroNumber].subText"></div> -->
+                </ClientOnly>
             </div>
         </main>
         <div class="scene">
@@ -43,14 +46,10 @@ const props = defineProps({
 const currentPhotoNumber = ref<number>(0);
 const currentHeroNumber = ref<number>(0);
 const heroStyle = computed(() => ({
-    backgroundImage: `url(${props.pics[currentPhotoNumber.value].src})`,
+    backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center'
 }));
-
-// const selectItem = (index: number) => {
-//     currentPhotoNumber.value = index;
-// };
 
 let carousel: HTMLElement;
 let hero: HTMLElement;
@@ -65,14 +64,14 @@ onMounted(() => {
         e.preventDefault();
         scrollableElement.scrollLeft += e.deltaY;
     });
+
+    itemFocus(currentPhotoNumber.value);
 });
 
 const selectItem = (index: number) => {
-    let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
-    faceBefore.style.boxShadow = `none`;
-    currentPhotoNumber.value = index;
-    let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
-    face.style.boxShadow = `0 0 1px var(--custom-color-deepGray), 1px 1px 2px var(--custom-color-deepGray), -1px -1px 2px var(--custom-color-deepGray)`;
+
+    itemFocus(index);
+
     setTimeout(() => {
         currentHeroNumber.value = currentPhotoNumber.value;
     }, 500);
@@ -82,6 +81,14 @@ const selectItem = (index: number) => {
         hero.classList.remove('switching');
     });
 }
+
+const itemFocus = (index: number) => {
+    let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
+    faceBefore.style.boxShadow = `none`;
+    currentPhotoNumber.value = index;
+    let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
+    face.style.boxShadow = `0 0 1px var(--custom-color-blue), 1px 1px 2px var(--custom-color-blue), -1px -1px 2px var(--custom-color-blue)`;
+}
 </script>
 
 <style scoped>
@@ -90,7 +97,7 @@ const selectItem = (index: number) => {
     grid-template-areas:
         "hero"
         "images";
-    grid-template-columns: minmax(300px, calc(1280px - 160px - 2rem));
+    grid-template-columns: minmax(300px, calc(1280px - 160px));
     grid-template-rows: 450px 180px;
     gap: 1rem;
 }
@@ -98,7 +105,7 @@ const selectItem = (index: number) => {
 .hero-wrapper {
     grid-area: hero;
     display: flex;
-    filter: drop-shadow(0px 0px 2px var(--custom-color-blue)) drop-shadow(2px 2px 1px var(--custom-color-blue)) drop-shadow(-2px -2px 1px var(--custom-color-blue));
+    filter: drop-shadow(0px 0px 2px var(--custom-color-deepGray)) drop-shadow(2px 2px 1px var(--custom-color-deepGray)) drop-shadow(-2px -2px 1px var(--custom-color-deepGray));
 }
 
 .hero {
@@ -171,37 +178,41 @@ const selectItem = (index: number) => {
     background-size: cover;
     background-position: center;
     opacity: 1;
-    border: 2px solid var(--custom-color-deepGray);
+    border: 2px solid var(--custom-color-blue);
     border-radius: 5px;
 }
+
 .main-text-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* max-width: 300px; 適宜調整 */
-}
-.main-text {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: white;
-    font-size: 1.5em;
-    padding: 1rem;
+    top: 0;
+    left: 0;
+    /* max-width: 300px; 適宜調整 */
+}
+
+.card {
+    box-shadow: none!important;
 }
 
 .sub-text {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 1em;
-  margin-bottom: 1rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1em;
+    margin-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
 }
 
+.sub-text-center-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    top: auto;
+}
 /* スクロールバー全体のスタイル */
 .carousel::-webkit-scrollbar {
     width: 8px;

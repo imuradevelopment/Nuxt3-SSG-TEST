@@ -10,10 +10,10 @@
             <div class="text-center">3枚パターン</div>
                 <Carousel_2 :pics="[
                     {
-                        src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/little-robot.jpg',
-                        alt: '説明1',
-                        mainText: 'メインテキスト1',
-                        subText: 'サブテキスト1',
+                        src: '/images/recruit/office/005.png',
+                        alt: '8階 開発ルーム',
+                        mainText: `<h2 class='px-4 text-2xl font-bold leading-loose'>開発ルーム（8階）</h2>`,
+                        subText: `<p class='px-4 py-2 font-bold text-base leading-6'>8階は、主に開発フロアとなっており、<br />受託開発案件などを本社開発メンバーで行っております。</p>`,
                         tileColor: 'rgba(0, 37, 92, 0.1)',
                         shadowColor: 'rgb(0 0 0 / 0.5)'
                     },
