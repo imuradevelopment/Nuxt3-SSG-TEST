@@ -7,7 +7,7 @@
                     <!-- BlurGlassCardコンポーネントにメインテキストをpropsとして渡す -->
                     <BlurGlassCard class="main-text-card" :rounded="true" :blur="10" :color="'rgba(255, 255, 255, 0.5)'"
                         v-html="pics[currentHeroNumber].mainText" />
-                    <div class="h-full pb-4 flex justify-end items-center">
+                    <div class="h-full pb-4 flex justify-center items-end">
                         <!-- サブテキストをpropsとして渡す -->
                         <BlurGlassCard :rounded="true" :blur="10"
                             :color="'rgba(255, 255, 255, 0.5)'" v-html="pics[currentHeroNumber].subText" />
