@@ -9,8 +9,8 @@
                         v-html="pics[currentHeroNumber].mainText" />
                     <div class="h-full pb-4 flex justify-center items-end">
                         <!-- サブテキストをpropsとして渡す -->
-                        <BlurGlassCard :rounded="true" :blur="10"
-                            :color="'rgba(255, 255, 255, 0.5)'" v-html="pics[currentHeroNumber].subText" />
+                        <BlurGlassCard :rounded="true" :blur="1280"
+                            :color="'rgba(255, 255, 255, 0.7)'" v-html="pics[currentHeroNumber].subText" />
                     </div>
                     <!-- <div class="sub-text" v-html="pics[currentHeroNumber].subText"></div> -->
                 </ClientOnly>
@@ -100,7 +100,7 @@ const itemFocus = (index: number) => {
         "hero"
         "images";
     grid-template-columns: minmax(300px, calc(1280px - 160px));
-    grid-template-rows: 450px calc(7rem + 8px + 10px);
+    grid-template-rows: 450px calc(7rem + 8px + 12px);
     gap: 0.5rem;
 }
 
@@ -170,8 +170,8 @@ const itemFocus = (index: number) => {
     gap: 1rem;
     overflow-x: auto;
     flex-shrink: 0;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .face {
