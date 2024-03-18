@@ -168,7 +168,7 @@
                                         {
                                             src: '/images/recruit/office/007.png',
                                             alt: '8階 グリコボックス',
-                                            mainText: `'<h3 class='px-4 text-2xl font-bold leading-loose'>グリコボックス（8階）</h3>'`,
+                                            mainText: `<h3 class='px-4 text-2xl font-bold leading-loose'>グリコボックス（8階）</h3>`,
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>8階にはグリコボックスが設置されていて、200円で好きなお菓子が食べれます。<br />小腹がすいた時や、リフレッシュの際に利用されます。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
                                             shadowColor: 'rgb(0 0 0 / 0.5)'
@@ -176,7 +176,7 @@
                                         {
                                             src: '/images/recruit/office/004.png',
                                             alt: '9階 セミナールーム',
-                                            mainText: `'<h3 class='px-4 text-2xl font-bold leading-loose'>セミナールーム（9階）</h3>'`,
+                                            mainText: `<h3 class='px-4 text-2xl font-bold leading-loose'>セミナールーム（9階）</h3>`,
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>9階は、1つのフロアすべてがセミナールームになっており、<br />会社説明会や大人数会議の際に使用しています。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
                                             shadowColor: 'rgb(0 0 0 / 0.5)'
