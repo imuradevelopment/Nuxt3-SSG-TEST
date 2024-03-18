@@ -147,7 +147,7 @@
                                             alt: '7階 受付',
                                             mainText: `<h3 class='px-4 text-2xl font-bold leading-loose'>受付（7階）</h3>`,
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>7階右手に受付があります。<br />備え付けの受付電話でご用件をお伝え下さい。</p>`,
-                                            subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>7階右手に受付があります。備え付けの受付電話でご用件をお伝え下さい。</p>`,
+                                            subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>7階右手に受付があります。<br />備え付けの受付電話でご用件をお伝え下さい。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
                                             shadowColor: 'rgb(0 0 0 / 0.5)'
                                         },
