@@ -8,49 +8,53 @@
 
         <section class="my-24 mx-4">
             <div class="text-center">3枚パターン</div>
-                <Carousel_2 :pics="[
-                    {
-                        src: '/images/recruit/office/005.png',
-                        alt: '8階 開発ルーム',
-                        mainText: `<h2 class='px-4 text-2xl font-bold leading-loose'>開発ルーム（8階）</h2>`,
-                        subText: `<p class='px-4 py-2 font-bold leading-5 text-xs sm:leading-6 sm:text-sm md:text-base'>8階は、主に開発フロアとなっており、<br />受託開発案件などを本社開発メンバーで行っております。</p>`,
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)'
-                    },
-                    {
-                        src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg',
-                        alt: '説明1',
-                        mainText: 'メインテキスト2',
-                        subText: 'サブテキスト2',
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)'
-                    },
-                    {
-                        src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg',
-                        alt: '説明1',
-                        mainText: 'メインテキスト1',
-                        subText: 'サブテキスト1',
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)'
-                    },
-                    {
-                        src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg',
-                        alt: '説明1',
-                        mainText: 'メインテキスト1',
-                        subText: 'サブテキスト1',
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)'
-                    },
-                    {
-                        src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg',
-                        alt: '説明1',
-                        mainText: 'メインテキスト1',
-                        subText: 'サブテキスト1',
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)'
-                    },
-                    // 他の画像オブジェクト...
-                ]"></Carousel_2>
+            <div class="w-full flex justify-center items-center">
+                <div class="max-w-[930px]">
+                    <Carousel_2 :pics="[
+                        {
+                            src: '/images/recruit/office/005.png',
+                            alt: '8階 開発ルーム',
+                            mainText: `<h2 class='px-4 text-2xl font-bold leading-loose'>開発ルーム（8階）</h2>`,
+                            subText: `<p class='px-4 py-2 font-bold leading-5 text-xs sm:leading-6 sm:text-sm md:text-base'>8階は、主に開発フロアとなっており、<br />受託開発案件などを本社開発メンバーで行っております。</p>`,
+                            tileColor: 'rgba(0, 37, 92, 0.1)',
+                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                        },
+                        {
+                            src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg',
+                            alt: '説明1',
+                            mainText: 'メインテキスト2',
+                            subText: 'サブテキスト2',
+                            tileColor: 'rgba(0, 37, 92, 0.1)',
+                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                        },
+                        {
+                            src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg',
+                            alt: '説明1',
+                            mainText: 'メインテキスト1',
+                            subText: 'サブテキスト1',
+                            tileColor: 'rgba(0, 37, 92, 0.1)',
+                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                        },
+                        {
+                            src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg',
+                            alt: '説明1',
+                            mainText: 'メインテキスト1',
+                            subText: 'サブテキスト1',
+                            tileColor: 'rgba(0, 37, 92, 0.1)',
+                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                        },
+                        {
+                            src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg',
+                            alt: '説明1',
+                            mainText: 'メインテキスト1',
+                            subText: 'サブテキスト1',
+                            tileColor: 'rgba(0, 37, 92, 0.1)',
+                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                        },
+                        // 他の画像オブジェクト...
+                    ]"></Carousel_2>
+                </div>
+            </div>
         </section>
 <!-- 
         <section class="my-24 mx-4">
