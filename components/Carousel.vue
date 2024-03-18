@@ -5,8 +5,8 @@
             <div class="hero" :style="heroStyle">
                 <ClientOnly>
                     <!-- BlurGlassCardコンポーネントにメインテキストをpropsとして渡す -->
-                    <BlurGlassCard class="main-text-card text-white rounded-br-md" :rounded="false" :blur="0"
-                        :color="'rgba(0, 0, 0, 0.5)'" v-html="pics[currentHeroNumber].mainText" />
+                    <BlurGlassCard class="main-text-card text-white rounded-tl-md rounded-br-md" :rounded="false"
+                        :blur="0" :color="'rgba(0, 0, 0, 0.5)'" v-html="pics[currentHeroNumber].mainText" />
                     <div class="h-full pb-4 flex justify-center items-end mx-4 py-2 px-4">
                         <!-- サブテキストをpropsとして渡す -->
                         <BlurGlassCard class="mx-4 py-2 px-4 text-white" :rounded="true" :blur="0"
