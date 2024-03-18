@@ -100,7 +100,7 @@ const itemFocus = (index: number) => {
         "hero"
         "images";
     grid-template-columns: minmax(300px, calc(1280px - 160px));
-    grid-template-rows: 450px calc(7rem + 8px);
+    grid-template-rows: 450px calc(7rem + 8px + 10px);
     gap: 0.5rem;
 }
 
@@ -170,6 +170,8 @@ const itemFocus = (index: number) => {
     gap: 1rem;
     overflow-x: auto;
     flex-shrink: 0;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .face {
