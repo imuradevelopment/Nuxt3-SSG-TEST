@@ -7,9 +7,11 @@
                     <!-- BlurGlassCardコンポーネントにメインテキストをpropsとして渡す -->
                     <BlurGlassCard class="main-text-card" :rounded="true" :blur="10" :color="'rgba(255, 255, 255, 0.5)'"
                         v-html="pics[currentHeroNumber].mainText" />
-                    <!-- サブテキストをpropsとして渡す -->
-                                        <BlurGlassCard class="sub-text-center-bottom" :rounded="true" :blur="10" :color="'rgba(255, 255, 255, 0.5)'"
-                            v-html="pics[currentHeroNumber].subText" />
+                    <div class="h-full pb-4 flex justify-end items-center">
+                        <!-- サブテキストをpropsとして渡す -->
+                        <BlurGlassCard :rounded="true" :blur="10"
+                            :color="'rgba(255, 255, 255, 0.5)'" v-html="pics[currentHeroNumber].subText" />
+                    </div>
                     <!-- <div class="sub-text" v-html="pics[currentHeroNumber].subText"></div> -->
                 </ClientOnly>
             </div>
@@ -190,7 +192,7 @@ const itemFocus = (index: number) => {
 }
 
 .card {
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
 .sub-text {
@@ -213,6 +215,7 @@ const itemFocus = (index: number) => {
     bottom: 1rem;
     top: auto;
 }
+
 /* スクロールバー全体のスタイル */
 .carousel::-webkit-scrollbar {
     width: 8px;
