@@ -9,7 +9,7 @@
                         v-html="pics[currentHeroNumber].mainText" />
                     <div class="h-full pb-4 flex justify-center items-end mx-4 py-2 px-4">
                         <!-- サブテキストをpropsとして渡す -->
-                        <BlurGlassCard :rounded="true" :blur="1280"
+                        <BlurGlassCard class="mx-4 py-2 px-4" :rounded="true" :blur="1280"
                             :color="'rgba(255, 255, 255, 0.7)'" v-html="pics[currentHeroNumber].subText" />
                     </div>
                     <!-- <div class="sub-text" v-html="pics[currentHeroNumber].subText"></div> -->
