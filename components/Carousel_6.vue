@@ -1,38 +1,24 @@
 <template>
     <div class="grid-carousel">
-        <nav class="scene-nav-previewcontent">
-            <!-- <div class="prev">
-                <button @click="prevSlide"></button>
-            </div> -->
-        </nav>
-        <main>
+        <main class="hero-wrapper">
             <div class="hero" v-bind:style="{ backgroundImage: 'url(' + pics[currentHeroNumber] + ')' }"></div>
         </main>
-        <nav class="scene-nav-nextcontent">
-            <!-- <div class="next">
-                <button @click="nextSlide"></button>
-            </div> -->
-        </nav>
-        <!-- <nav class="scene-nav-prev">
-            <div class="prev">
-                <button @click="prevSlide"></button>
-            </div>
-        </nav> -->
         <div class="scene">
             <div class="carousel">
-                <div class="flex-item face face1" :id="slideIndex[0]" v-on:click="selectItem(slideIndex[0])" v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
-                <div class="flex-item face face2" :id="slideIndex[1]" v-on:click="selectItem(slideIndex[1])" v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
-                <div class="flex-item face face3" :id="slideIndex[2]" v-on:click="selectItem(slideIndex[2])" v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
-                <div class="flex-item face face4" :id="slideIndex[3]" v-on:click="selectItem(slideIndex[3])" v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
-                <div class="flex-item face face5" :id="slideIndex[4]" v-on:click="selectItem(slideIndex[4])" v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
-                <div class="flex-item face face6" :id="slideIndex[5]" v-on:click="selectItem(slideIndex[5])" v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
+                <div class="flex-item face face1" :id="slideIndex[0]" v-on:click="selectItem(slideIndex[0])"
+                    v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
+                <div class="flex-item face face2" :id="slideIndex[1]" v-on:click="selectItem(slideIndex[1])"
+                    v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
+                <div class="flex-item face face3" :id="slideIndex[2]" v-on:click="selectItem(slideIndex[2])"
+                    v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
+                <div class="flex-item face face4" :id="slideIndex[3]" v-on:click="selectItem(slideIndex[3])"
+                    v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
+                <div class="flex-item face face5" :id="slideIndex[4]" v-on:click="selectItem(slideIndex[4])"
+                    v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
+                <div class="flex-item face face6" :id="slideIndex[5]" v-on:click="selectItem(slideIndex[5])"
+                    v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
             </div>
         </div>
-        <!-- <nav class="scene-nav-next">
-            <div class="next">
-                <button @click="nextSlide"></button>
-            </div>
-        </nav> -->
     </div>
 </template>
 <script setup lang="ts">
@@ -69,7 +55,7 @@ onMounted(() => {
     });
 });
 
-const selectItem = (id:string) => {
+const selectItem = (id: string) => {
     if (!hero) {
         console.error('ヒーロー要素が見つかりません。');
         return;
@@ -82,194 +68,34 @@ const selectItem = (id:string) => {
     setTimeout(() => {
         currentHeroNumber.value = currentPhotoNumber.value;
     }, 500);
-    
 
 
-    hero.classList.add('switching-prev');
+
+    hero.classList.add('switching');
     hero.addEventListener('animationend', () => {
-        hero.classList.remove('switching-prev');
+        hero.classList.remove('switching');
     });
 }
-
-// const prevSlide = () => {
-//     if (!hero) {
-//         console.error('ヒーロー要素が見つかりません。');
-//         return;
-//     }
-//     let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
-//     faceBefore.style.boxShadow = `none`;
-//     currentPhotoNumber.value = currentPhotoNumber.value - 1 < 0 ? slides.value - 1 : currentPhotoNumber.value - 1;
-//     let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
-//     face.style.boxShadow = `0 0 1px var(--custom-color-deepGray), 1px 1px 2px var(--custom-color-deepGray), -1px -1px 2px var(--custom-color-deepGray)`;
-
-
-//     hero.classList.add('switching-prev');
-//     hero.addEventListener('animationend', () => {
-//         hero.classList.remove('switching-prev');
-//     });
-// };
-
-// const nextSlide = () => {
-//     if (!hero) {
-//         console.error('ヒーロー要素が見つかりません。');
-//         return;
-//     }
-//     let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
-//     faceBefore.style.boxShadow = `none`;
-//     currentPhotoNumber.value = currentPhotoNumber.value + 1 > slides.value - 1 ? 0 : currentPhotoNumber.value + 1;
-//     let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
-//     face.style.boxShadow = `0 0 1px var(--custom-color-deepGray), 1px 1px 2px var(--custom-color-deepGray), -1px -1px 2px var(--custom-color-deepGray)`;
-
-//     hero.classList.add('switching-next');
-//     hero.addEventListener('animationend', () => {
-//         hero.classList.remove('switching-next');
-//     });
-// };
 </script>
 
 <style scoped>
-.scene-nav-previewcontent {
-    grid-area: previewcontent;
-}
-
-.scene-nav-nextcontent {
-    grid-area: nextcontent;
-}
-
-.grid-carousel button {
-    border: none;
-    cursor: pointer;
-    background: #ebfbfa;
-    width: 100%;
-    height: 100%;
-}
-
 .grid-carousel {
     display: grid;
     grid-template-areas:
-        "previewcontent hero nextcontent"
-        "prev images next";
-    /* grid-template-columns: 4rem minmax(300px, calc(1280px - 160px - 2rem)) 4rem; */
-    grid-template-columns: auto minmax(300px, calc(1280px - 160px - 2rem)) auto;
-    grid-template-rows: 360px 180px;
+        "hero"
+        "images";
+    grid-template-columns:auto;
+    grid-template-rows: 450px 180px;
     gap: 1rem;
 }
-.scene-nav-prev {
-    grid-area: prev;
-}
 
-.scene-nav-next {
-    grid-area: next;
-}
-
-.grid-carousel .scene {
-    grid-area: images;
-}
-
-.grid-carousel .scene .carousel {
-    /* width: 100%;
-    overflow-x: scroll;
-    height: 100%;
-    display: grid;
-    grid-template-areas: "img1 img2 img3 img4 img5 img6";
-    grid-template-columns: 7rem 7rem 7rem 7rem 7rem 7rem;
-    grid-template-rows: auto;
-    column-gap: 1rem;
-    align-items: center; */
-    display: flex;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    overflow-x: auto;
-    flex-shrink: 0;
-}
-
-.flex-item {
-    flex-shrink: 0;
-}
-/* スクロールバー全体のスタイル */
-.carousel::-webkit-scrollbar {
-  width: 8px; /* スクロールバーの幅を細く */
-  height: 8px;
-}
-
-/* スクロールバーのトラック（背景部分）のスタイル */
-.carousel::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1); /* 背景色を透明度の低い黒に */
-}
-
-/* スクロールバーのサム（動かす部分）のスタイル */
-.carousel::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2); /* サムの色を透明度のやや高い黒に */
-  border-radius: 4px; /* 角を丸く */
-}
-
-/* スクロールバーのサムにホバーしたときのスタイル */
-.carousel::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* ホバー時の色を少し濃く */
-}
-
-/* .grid-carousel .scene .carousel .face1 {
-    grid-area: img1;
-}
-
-.grid-carousel .scene .carousel .face2 {
-    grid-area: img2;
-}
-
-.grid-carousel .scene .carousel .face3 {
-    grid-area: img3;
-}
-
-.grid-carousel .scene .carousel .face4 {
-    grid-area: img4;
-}
-
-.grid-carousel .scene .carousel .face5 {
-    grid-area: img5;
-}
-
-.grid-carousel .scene .carousel .face6 {
-    grid-area: img6;
-} */
-
-.grid-carousel .scene .carousel .face {
-    width: 7rem;
-    height: 7rem;
-    top: 0;
-    left: 5px;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-    border: 2px solid var(--custom-color-deepGray);
-    border-radius: 5px;
-}
-
-/* .grid-carousel nav .prev,
-.grid-carousel nav .next {
-    width: 4rem;
-    height: 2rem;
-    padding: 0 0.5rem 0 0.5rem;
-    filter: drop-shadow(0 0 1px turquoise) drop-shadow(1px 1px 1px turquoise) drop-shadow(-1px -1px 1px turquoise);
-    align-self: center;
-}
-
-.grid-carousel nav .prev button {
-    clip-path: polygon(0 50%, 100% 0, 100% 100%);
-}
-
-.grid-carousel nav .next button {
-    clip-path: polygon(100% 50%, 0 100%, 0 0);
-} */
-
-.grid-carousel main {
+.hero-wrapper {
+    grid-area: hero;
     display: flex;
     filter: drop-shadow(0px 0px 2px var(--custom-color-blue)) drop-shadow(2px 2px 1px var(--custom-color-blue)) drop-shadow(-2px -2px 1px var(--custom-color-blue));
 }
 
-.grid-carousel main .hero {
-    grid-area: hero;
+.hero {
     margin: auto;
     width: 100%;
     height: 100%;
@@ -279,19 +105,15 @@ const selectItem = (id:string) => {
     border-radius: 5px;
 }
 
-.grid-carousel main .hero::after {
+.hero::after {
     background: transparent;
     content: "";
     position: absolute;
     transition: all 1s linear;
 }
 
-.grid-carousel main .hero.switching-prev {
+.hero.switching {
     animation: leaving 1s ease-in-out forwards;
-}
-
-.grid-carousel main .hero.switching-next {
-    animation: leaving 1s ease-in-out reverse forwards;
 }
 
 @keyframes leaving {
@@ -320,4 +142,57 @@ const selectItem = (id:string) => {
     }
 }
 
-</style>
+.scene {
+    grid-area: images;
+}
+
+.carousel {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.face {
+    flex-shrink: 0;
+    width: 7rem;
+    height: 7rem;
+    top: 0;
+    left: 5px;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    border: 2px solid var(--custom-color-deepGray);
+    border-radius: 5px;
+}
+
+
+/* スクロールバー全体のスタイル */
+.carousel::-webkit-scrollbar {
+    width: 8px;
+    /* スクロールバーの幅を細く */
+    height: 8px;
+}
+
+/* スクロールバーのトラック（背景部分）のスタイル */
+.carousel::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    /* 背景色を透明度の低い黒に */
+}
+
+/* スクロールバーのサム（動かす部分）のスタイル */
+.carousel::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* サムの色を透明度のやや高い黒に */
+    border-radius: 4px;
+    /* 角を丸く */
+}
+
+/* スクロールバーのサムにホバーしたときのスタイル */
+.carousel::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* ホバー時の色を少し濃く */
+}</style>
