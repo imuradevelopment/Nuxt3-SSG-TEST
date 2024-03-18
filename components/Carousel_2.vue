@@ -100,7 +100,7 @@ const itemFocus = (index: number) => {
         "hero"
         "images";
     grid-template-columns: minmax(300px, calc(1280px - 160px));
-    grid-template-rows: 450px 180px;
+    grid-template-rows: 450px calc(7rem + 8px);
     gap: 1rem;
 }
 
