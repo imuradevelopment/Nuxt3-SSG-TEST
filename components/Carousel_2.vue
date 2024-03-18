@@ -1,44 +1,56 @@
 <template>
     <div class="grid-carousel">
         <main class="hero-wrapper">
-            <div class="hero" v-bind:style="{ backgroundImage: 'url(' + pics[currentHeroNumber] + ')' }"></div>
+            <!-- ヒーローイメージとして選択された画像を表示 -->
+            <div class="hero" :style="heroStyle">
+                <!-- BlurGlassCardコンポーネントを使用してメインテキストを表示 -->
+                <BlurGlassCard class="main-text-card" :rounded="true" :blur="10" :color="'rgba(255, 255, 255, 0.5)'">
+                    {{ pics[currentHeroNumber].mainText }}
+                </BlurGlassCard>
+                <!-- サブテキストを表示 -->
+                <div class="sub-text">{{ pics[currentHeroNumber].subText }}</div>
+            </div>
         </main>
         <div class="scene">
             <div class="carousel">
-                <div class="flex-item face face1" :id="slideIndex[0]" v-on:click="selectItem(slideIndex[0])"
-                    v-bind:style="{ backgroundImage: 'url(' + pics[0] + ')' }"></div>
-                <div class="flex-item face face2" :id="slideIndex[1]" v-on:click="selectItem(slideIndex[1])"
-                    v-bind:style="{ backgroundImage: 'url(' + pics[1] + ')' }"></div>
-                <div class="flex-item face face3" :id="slideIndex[2]" v-on:click="selectItem(slideIndex[2])"
-                    v-bind:style="{ backgroundImage: 'url(' + pics[2] + ')' }"></div>
-                <div class="flex-item face face4" :id="slideIndex[3]" v-on:click="selectItem(slideIndex[3])"
-                    v-bind:style="{ backgroundImage: 'url(' + pics[3] + ')' }"></div>
-                <div class="flex-item face face5" :id="slideIndex[4]" v-on:click="selectItem(slideIndex[4])"
-                    v-bind:style="{ backgroundImage: 'url(' + pics[4] + ')' }"></div>
-                <div class="flex-item face face6" :id="slideIndex[5]" v-on:click="selectItem(slideIndex[5])"
-                    v-bind:style="{ backgroundImage: 'url(' + pics[5] + ')' }"></div>
+                <!-- サムネイル画像をv-forで繰り返し表示 -->
+                <div class="face" v-for="(pic, index) in pics" :key="index" :id="index.toString()"
+                    @click="selectItem(index)" :style="{ backgroundImage: 'url(' + pic.src + ')' }"></div>
             </div>
         </div>
     </div>
 </template>
+
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, computed } from 'vue';
+import BlurGlassCard from './BlurGlassCard.vue';
 
-type ImageUrl = string;
-
-const pics = ref<ImageUrl[]>([
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/cheering-robot.jpg",
-    "https://images.unsplash.com/photo-1581481615985-ba4775734a9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/little-robot.jpg",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/robot.jpg",
-    "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wall-e.jpg"
-]);
+// propsでpicsをオブジェクトの配列として定義
+const props = defineProps({
+    pics: {
+        type: Array as () => {
+            src: string;
+            alt?: string;
+            mainText: string;
+            subText: string;
+            tileColor?: string;
+            shadowColor?: string;
+        }[],
+        required: true
+    }
+});
 
 const currentPhotoNumber = ref<number>(0);
 const currentHeroNumber = ref<number>(0);
-const slides = ref<number>(pics.value.length);
-const slideIndex = ref<string[]>(Array.from({ length: slides.value }, (_, i) => (i).toString()));
+const heroStyle = computed(() => ({
+    backgroundImage: `url(${props.pics[currentPhotoNumber.value].src})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+}));
+
+// const selectItem = (index: number) => {
+//     currentPhotoNumber.value = index;
+// };
 
 let carousel: HTMLElement;
 let hero: HTMLElement;
@@ -55,14 +67,10 @@ onMounted(() => {
     });
 });
 
-const selectItem = (id: string) => {
-    if (!hero) {
-        console.error('ヒーロー要素が見つかりません。');
-        return;
-    }
+const selectItem = (index: number) => {
     let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
     faceBefore.style.boxShadow = `none`;
-    currentPhotoNumber.value = parseInt(id);
+    currentPhotoNumber.value = index;
     let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
     face.style.boxShadow = `0 0 1px var(--custom-color-deepGray), 1px 1px 2px var(--custom-color-deepGray), -1px -1px 2px var(--custom-color-deepGray)`;
     setTimeout(() => {
@@ -82,7 +90,7 @@ const selectItem = (id: string) => {
     grid-template-areas:
         "hero"
         "images";
-    grid-template-columns:auto;
+    grid-template-columns: auto;
     grid-template-rows: 450px 180px;
     gap: 1rem;
 }
@@ -166,7 +174,33 @@ const selectItem = (id: string) => {
     border: 2px solid var(--custom-color-deepGray);
     border-radius: 5px;
 }
+.main-text-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* max-width: 300px; 適宜調整 */
+}
+.main-text {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.5em;
+    padding: 1rem;
+}
 
+.sub-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1em;
+  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
 
 /* スクロールバー全体のスタイル */
 .carousel::-webkit-scrollbar {
@@ -193,4 +227,5 @@ const selectItem = (id: string) => {
 .carousel::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.3);
     /* ホバー時の色を少し濃く */
-}</style>
+}
+</style>
