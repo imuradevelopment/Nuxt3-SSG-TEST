@@ -10,7 +10,7 @@
             <div class="text-center">3枚パターン</div>
             <div class="w-full flex justify-center items-center">
                 <div class="max-w-[930px]">
-                    <Carousel_2 :pics="[
+                    <Carousel :pics="[
                         {
                             src: '/images/recruit/office/005.png',
                             alt: '8階 開発ルーム',
@@ -52,7 +52,7 @@
                             shadowColor: 'rgb(0 0 0 / 0.5)'
                         },
                         // 他の画像オブジェクト...
-                    ]"></Carousel_2>
+                    ]"></Carousel>
                 </div>
             </div>
         </section>
@@ -78,7 +78,7 @@ definePageMeta({
     layout: 'double-column-sidebar'
 })
 import Carousel_6 from '~/components/Carousel_6.vue'
-import Carousel_2 from '~/components/Carousel_2.vue'
+import Carousel from '~/components/Carousel.vue'
 // import Carousel_3 from '~/components/Carousel_3.vue'
 // import Carousel_8 from '~/components/Carousel_8.vue'
 </script>
