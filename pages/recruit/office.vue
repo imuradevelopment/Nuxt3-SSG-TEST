@@ -126,11 +126,11 @@
             </div>
         </section> -->
 
-        <section class="my-24 mx-4">
+        <section class="my-24">
             <h2 id="recruit-office04"
                 class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 オフィス紹介</h2>
-            <div class="w-full mt-8 flex justify-center items-center">
+            <div class="w-full mt-8 mx-4 flex justify-center items-center">
                 <div class="max-auto">
                     <Carousel :pics="[
                                         {
