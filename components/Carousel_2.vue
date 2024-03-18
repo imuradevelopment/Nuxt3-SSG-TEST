@@ -90,7 +90,7 @@ const selectItem = (index: number) => {
     grid-template-areas:
         "hero"
         "images";
-    grid-template-columns: auto;
+    grid-template-columns: minmax(300px, calc(1280px - 160px - 2rem));
     grid-template-rows: 450px 180px;
     gap: 1rem;
 }
