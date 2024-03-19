@@ -86,7 +86,7 @@
                                 定期健康診断、インフルエンザ予防接種、育児休業制度、退職金制度、加入健康保険組合（関東ITソフトウェア健康保険組合）の保養施設利用可能
                             </div>
                         </div>
-                        <!-- <div class="flex flex-nowrap">
+                        <div class="flex flex-nowrap">
                             <div
                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/10 border-b border-custom-deepBlue/20 flex justify-center items-center">
                                 社内パーティ
@@ -95,11 +95,10 @@
                                 class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/20 flex items-center">
                                 ※2020年度以降はコロナ影響を鑑み中止。<br />
                                 ◆キックオフパーティ（4月）<br />
-                                ◇納涼会（7月）<br />
                                 ◆忘年会（11月）
                             </div>
-                        </div> -->
-                        <div class="flex flex-nowrap">
+                        </div>
+                        <!-- <div class="flex flex-nowrap">
                             <div
                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/10 border-b border-custom-deepBlue/20 flex justify-center items-center">
                                 社員旅行
@@ -115,7 +114,7 @@
                                 　上記以前にも、沖縄本島・北海道など。
 
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </BlurGlassCard>
             </div>
