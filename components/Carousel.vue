@@ -100,8 +100,19 @@ const itemFocus = (index: number) => {
         "hero"
         "images";
     grid-template-columns: minmax(300px, calc(1280px - 160px));
-    grid-template-rows: 450px calc(7rem + 8px + 12px);
+    grid-template-rows: 600px calc(7rem + 8px + 12px);
     gap: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+    .grid-carousel {
+        display: grid;
+        grid-template-areas:
+            "hero"
+            "images";
+        grid-template-columns: minmax(300px, calc(1280px - 160px));
+        grid-template-rows: 450px calc(7rem + 8px + 12px);
+        gap: 0.5rem;
+    }
 }
 
 .hero-wrapper {
