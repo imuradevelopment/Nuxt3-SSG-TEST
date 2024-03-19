@@ -118,7 +118,7 @@ const itemFocus = (index: number) => {
 .hero-wrapper {
     grid-area: hero;
     display: flex;
-    filter: drop-shadow(0px 0px 2px var(--custom-color-deepGray)) drop-shadow(2px 2px 1px var(--custom-color-deepGray)) drop-shadow(-2px -2px 1px var(--custom-color-deepGray));
+    filter: drop-shadow(0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue));
 }
 
 .hero {
@@ -170,7 +170,6 @@ const itemFocus = (index: number) => {
 
 .scene {
     grid-area: images;
-    padding-bottom: 0.5rem;
 }
 
 .carousel {
