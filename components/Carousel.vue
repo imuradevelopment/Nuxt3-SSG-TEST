@@ -89,7 +89,7 @@ const itemFocus = (index: number) => {
     faceBefore.style.boxShadow = `none`;
     currentPhotoNumber.value = index;
     let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
-    face.style.boxShadow = `0 0 1px var(--custom-color-blue), 1px 1px 2px var(--custom-color-blue), -1px -1px 2px var(--custom-color-blue)`;
+    face.style.boxShadow = `0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue)`;
 }
 </script>
 
@@ -118,7 +118,7 @@ const itemFocus = (index: number) => {
 .hero-wrapper {
     grid-area: hero;
     display: flex;
-    filter: drop-shadow(0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue));
+    filter: drop-shadow(0px 0px 2px var(--custom-color-deepGray)) drop-shadow(2px 2px 1px var(--custom-color-deepGray)) drop-shadow(-2px -2px 1px var(--custom-color-deepGray));
 }
 
 .hero {
