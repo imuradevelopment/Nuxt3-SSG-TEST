@@ -25,7 +25,10 @@ export default defineNuxtConfig({
             charset: "utf-8",
             viewport: "width=device-width, initial-scale=1",
             title: "株式会社ベイル",
-            meta: [{ name: "description", content: "リニューアルサイト" }],
+            meta: [
+                { name: "description", content: "リニューアルサイト" },
+                { name: "keywords", content: "a5b3878fa5c1b85e9db58feb9b6e3449" },
+            ],
         },
     },
     nitro: {
