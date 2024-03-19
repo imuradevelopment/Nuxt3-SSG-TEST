@@ -28,6 +28,7 @@ export default defineNuxtConfig({
             meta: [
                 { name: "description", content: "リニューアルサイト" },
                 { name: "keywords", content: "a5b3878fa5c1b85e9db58feb9b6e3449" },
+                { name: "google-site-verification", content: "MuapyJzQSkc_8HF8rwPlMke578eRvIc8JWPnP5z3aaE" },
             ],
         },
     },
