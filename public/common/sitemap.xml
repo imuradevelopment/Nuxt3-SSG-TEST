@@ -1,70 +1,78 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-  <loc>https://hp-renewal.netlify.app/</loc>
-  <priority>1.0</priority>
+  <loc>http://hp-renewal.netlify.app/</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/company</loc>
-  <priority>0.8</priority>
+  <loc>http://hp-renewal.netlify.app/company</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/service</loc>
-  <priority>0.8</priority>
+  <loc>http://hp-renewal.netlify.app/service</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit</loc>
-  <priority>0.8</priority>
+  <loc>http://hp-renewal.netlify.app/recruit</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/access</loc>
-  <priority>0.8</priority>
+  <loc>http://hp-renewal.netlify.app/access</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/contact</loc>
-  <priority>0.8</priority>
+  <loc>http://hp-renewal.netlify.app/contact</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/policy</loc>
-  <priority>0.8</priority>
+  <loc>http://hp-renewal.netlify.app/company#company01</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/message</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/company#company02</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/feature</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/company#company03</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/induction</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/company#company04</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/office</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/company#company05</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/welfare</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/service#service01</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/data</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/service#service02</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/qa</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/recruit#TEST</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/employee</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/contact#TEST</loc>
 </url>
 <url>
-  <loc>https://hp-renewal.netlify.app/recruit/information</loc>
-  <priority>0.7</priority>
+  <loc>http://hp-renewal.netlify.app/policy</loc>
 </url>
-
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/message</loc>
+</url>
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/feature</loc>
+</url>
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/induction</loc>
+</url>
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/office</loc>
+</url>
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/welfare</loc>
+</url>
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/data</loc>
+</url>
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/qa</loc>
+</url>
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/employee</loc>
+</url>
+<url>
+  <loc>http://hp-renewal.netlify.app/recruit/information</loc>
+</url>
 </urlset>
