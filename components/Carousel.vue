@@ -29,6 +29,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import BlurGlassCard from './BlurGlassCard.vue';
+import CustomArrowButton from '~/components/CustomArrowButton.vue'
 
 // propsでpicsをオブジェクトの配列として定義
 const props = defineProps({
