@@ -48,7 +48,7 @@ onMounted(() => {
 #bg-canvas3 {
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;
-    width: 100%;
+    max-width: calc(1280px - 160px);
     height: 860px;
     position: absolute;
     z-index: -1;
