@@ -20,6 +20,7 @@
 
 .layoutThreeLayers {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     max-width: 1280px;
