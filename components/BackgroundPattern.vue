@@ -45,7 +45,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-#bg-canvas {
+#bg-canvas3 {
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;
     width: 100%;
@@ -55,7 +55,7 @@ onMounted(() => {
     background-color: white;
 }
 @media screen and (max-width: 768px) {
-    #bg-canvas {
+    #bg-canvas3 {
         image-rendering: -moz-crisp-edges;
         image-rendering: pixelated;
         width: 100%;
