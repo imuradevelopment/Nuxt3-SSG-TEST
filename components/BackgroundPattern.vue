@@ -1,6 +1,5 @@
 <template>
-    <canvas id="bg-canvas3"
-        style="width:100%;height:100%;position: absolute;z-index: -1;background-color: white;"></canvas>
+    <canvas id="bg-canvas3"></canvas>
 </template>
 <script setup>
 onMounted(() => {
@@ -49,5 +48,21 @@ onMounted(() => {
 #bg-canvas {
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;
+    width: 100%;
+    height: 860px;
+    position: absolute;
+    z-index: -1;
+    background-color: white;
+}
+@media screen and (max-width: 768px) {
+    #bg-canvas {
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
+        width: 100%;
+        height: 710px;
+        position: absolute;
+        z-index: -1;
+        background-color: white;
+    }
 }
 </style>
