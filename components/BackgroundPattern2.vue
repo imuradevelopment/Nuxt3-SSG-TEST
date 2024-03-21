@@ -1,9 +1,10 @@
 <template>
-    <canvas id="bg-canvas" style="width:100vw;max-width:1280px;height:100vh;"></canvas>
+    <canvas id="bg-canvas2" style="width:100%;height:100%;position: absolute;">
+    </canvas>
 </template>
 <script setup>
 onMounted(() => {
-    const canvas = document.getElementById("bg-canvas");
+    const canvas = document.getElementById("bg-canvas2");
     const ctx = canvas.getContext("2d");
 
     // キャンバスの論理サイズをCSSの表示サイズに合わせる

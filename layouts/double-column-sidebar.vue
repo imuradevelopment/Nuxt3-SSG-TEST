@@ -91,7 +91,7 @@ import BackgroundPattern3 from '~/components/BackgroundPattern3.vue'
     inset: 0;
     margin: auto;
     max-width: 1280px;
-    z-index: -1;
+    z-index: -2;
 }
 .quarter-pixel-border {
     height: 100vh;

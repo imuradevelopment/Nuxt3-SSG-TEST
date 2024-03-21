@@ -1,20 +1,21 @@
 <template>
-    <canvas id="bg-canvas" style="width:100vw;max-width:1280px;height:100vh;"></canvas>
+    <canvas id="bg-canvas3"
+        style="width:100%;height:100%;position: absolute;z-index: -1;background-color: white;"></canvas>
 </template>
 <script setup>
 onMounted(() => {
-    const canvas = document.getElementById("bg-canvas");
+    const canvas = document.getElementById("bg-canvas3");
     const ctx = canvas.getContext("2d");
 
     // キャンバスの論理サイズをCSSの表示サイズに合わせる
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
 
-    const lineColor = "rgb(156 163 175)";
+    const lineColor = "rgb(0 10 135)";
     const lineWidth = 1;
 
     // ランダムな線の数
-    const numLines = 30;
+    const numLines = 60;
 
     // ランダムな線の生成
     for (let i = 0; i < numLines; i++) {

@@ -231,38 +231,44 @@
         <Slider />
     </section> -->
 
-    <section class="my-24 w-full flex flex-col bg-cover bg-[url('/images/recruit/index/009.png')]">
-        <h2 id="recruit09" class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
-            社員紹介</h2>
-        <div class="mx-4 mt-8 mb-4 flex justify-center items-center">
-            <div class="max-w-[500px]">
-                <Carousel :pics="[
-                    {
-                        src: '/images/recruit/index/012.png',
-                        alt: '社員紹介01',
-                        mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>Y.K</div>`,
-                        subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br>東京理科大学<br>理工学部情報科学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)'
-                    },
-                    {
-                        src: '/images/recruit/index/011.png',
-                        alt: '社員紹介02',
-                        mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>J.K</div>`,
-                        subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br />山形大学<br />工学部応用生命システム工学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)'
-                    },
-                    {
-                        src: '/images/recruit/index/010.png',
-                        alt: '社員紹介03',
-                        mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>A.O</div>`,
-                        subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br />山形大学<br />文学部哲学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)'
-                    },
-                    // 他の画像オブジェクト...
-                ]"></Carousel>
+    <section class="my-24">
+        <!-- <BackgroundPattern2>
+        </BackgroundPattern2> -->
+        <BackgroundPattern>
+        </BackgroundPattern>
+        <div class="w-full flex flex-col">
+            <h2 id="recruit09" class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+                社員紹介</h2>
+            <div class="mx-4 mt-8 mb-4 flex justify-center items-center">
+                <div class="max-w-[500px]">
+                    <Carousel :pics="[
+                        {
+                            src: '/images/recruit/index/012.png',
+                            alt: '社員紹介01',
+                            mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>Y.K</div>`,
+                            subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br>東京理科大学<br>理工学部情報科学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
+                            tileColor: 'rgba(0, 37, 92, 0.1)',
+                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                        },
+                        {
+                            src: '/images/recruit/index/011.png',
+                            alt: '社員紹介02',
+                            mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>J.K</div>`,
+                            subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br />山形大学<br />工学部応用生命システム工学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
+                            tileColor: 'rgba(0, 37, 92, 0.1)',
+                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                        },
+                        {
+                            src: '/images/recruit/index/010.png',
+                            alt: '社員紹介03',
+                            mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>A.O</div>`,
+                            subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br />山形大学<br />文学部哲学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
+                            tileColor: 'rgba(0, 37, 92, 0.1)',
+                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                        },
+                        // 他の画像オブジェクト...
+                    ]"></Carousel>
+                </div>
             </div>
         </div>
     </section>
@@ -297,6 +303,8 @@ definePageMeta({
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
 import Slider from '~/components/Slider.vue'
 import Carousel from '~/components/Carousel.vue'
+import BackgroundPattern from '~/components/BackgroundPattern.vue'
+// import BackgroundPattern2 from '~/components/BackgroundPattern2.vue'
 import {
     Pointer,
 } from '@element-plus/icons-vue'
