@@ -575,6 +575,9 @@
                                     <div class="text-2xl font-bold tracking-wide">
                                         月平均：22.4時間
                                     </div>
+                                    <div class="text-sm font-thin">
+                                        <br />
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex justify-center items-center">
