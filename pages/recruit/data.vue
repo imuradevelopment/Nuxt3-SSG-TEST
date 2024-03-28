@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="mb-24 flex bg-cover bg-[url('/images/recruit/data/001.png')]">
+        <section class="mb-16 flex bg-cover bg-[url('/images/recruit/data/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
@@ -12,9 +12,21 @@
                 </h1>
             </div>
         </section>
+
+        <section class="mb-16">
+            <div class="mx-4 md:mx-12 flex justify-center items-center">
+                <p
+                    class="rounded-full px-4 py-2 text-base md:text-3xl font-extrabold leading-loose bg-custom-deepBlue text-white ">
+                    ベイルに関する様々なデータを紹介します</p>
+            </div>
+        </section>
+
         <section class="mb-24">
+            <h2 id="recruit-data02"
+                class="px-8 mb-4 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+                事業データ</h2>
             <div class="mx-4 flex justify-center items-center">
-                <div class="data-card-grid">
+                <div class="data-card-grid1">
                     <div class="data-card card-text">
                         <div class="pancake-stack text-custom-deepBlue">
                             <div class="text-center text-4xl tracking-widest font-bold break-keep">
@@ -60,7 +72,7 @@
                             </div>
                             <hr class="mx-4 mb-4 mt-4 border border-custom-deepBlue" />
                             <div class="pl-4">
-                                <ui class="list-disc text-left text-base">
+                                <ui class="list-disc text-left text-base font-bold">
                                     <li>
                                         日本アイ・ビー・エム株式会社
                                     </li>
@@ -606,7 +618,187 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="mb-24">
+            <h2 id="recruit-data03"
+                class="px-8 mb-4 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+                新卒採用データ</h2>
+            <div class="mx-4 flex justify-center items-center">
+                <div class="data-card-grid2">
+                    <div class="data-card card-text">
+                        <div class="pancake-stack text-custom-deepBlue">
+                            <div class="text-center text-4xl tracking-widest font-bold">
+                                卒校別割合
+                            </div>
+                            <hr class="mx-4 mb-4 mt-4 border border-custom-deepBlue" />
+                            <div class="pl-4 w-4/5 horizontal-center">
+                                <ui class="list-disc text-left text-lg font-bold">
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                大学
+                                            </div>
+                                            <div>
+                                                64%
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                専門学校
+                                            </div>
+                                            <div>
+                                                27%
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                高校/短大
+                                            </div>
+                                            <div>
+                                                8%
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                大学院
+                                            </div>
+                                            <div>
+                                                1%
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ui>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card card-text">
+                        <div class="pancake-stack text-custom-deepBlue">
+                            <div class="text-center text-4xl tracking-widest font-bold">
+                                文理割合
+                            </div>
+                            <hr class="mx-4 mb-4 mt-4 border border-custom-deepBlue" />
+                            <div class="pl-4 w-4/5 horizontal-center">
+                                <ui class="list-disc text-left text-lg font-bold">
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                文系
+                                            </div>
+                                            <div>
+                                                44%
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                理系
+                                            </div>
+                                            <div>
+                                                46%
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                その他
+                                            </div>
+                                            <div>
+                                                10%
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ui>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card card-text">
+                        <div class="pancake-stack text-custom-deepBlue">
+                            <div class="text-center text-4xl tracking-widest font-bold">
+                                男女割合
+                            </div>
+                            <hr class="mx-4 mb-4 mt-4 border border-custom-deepBlue" />
+                            <div class="pl-4 w-4/5 horizontal-center">
+                                <ui class="list-disc text-left text-lg font-bold">
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                男性
+                                            </div>
+                                            <div>
+                                                89.4%
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                女性
+                                            </div>
+                                            <div>
+                                                10.6%
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ui>
+                            </div>
+                            <div class="flex justify-center items-center">
+                                <NuxtImg class="w-28 h-28" fit="cover" src="/images/recruit/data/009.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card card-text">
+                        <div class="pancake-stack text-custom-deepBlue">
+                            <div class="text-center text-3xl leading-10 tracking-widest font-bold text-custom-deepBlue">
+                                プログラミング経験
+                            </div>
+                            <hr class="mx-4 mb-4 mt-4 border border-custom-deepBlue" />
+                            <div class="pl-4 w-4/5 horizontal-center">
+                                <ui class="list-disc text-left text-lg font-bold">
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                未経験
+                                            </div>
+                                            <div>
+                                                68%
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                授業で
+                                            </div>
+                                            <div>
+                                                23%
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inline-flex justify-between items-center w-4/5">
+                                            <div>
+                                                趣味で
+                                            </div>
+                                            <div>
+                                                9%
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ui>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -629,29 +821,45 @@ import BlurGlassCard from '~/components/BlurGlassCard.vue'
     backdrop-filter: saturate(180%) blur(3px);
 }
 
-.data-card-grid {
+.data-card-grid1 {
     display: grid;
     grid-template-columns: repeat(3, minmax(270px, 352px));
     grid-template-rows: repeat(5, minmax(270px, auto));
     gap: 1rem;
 }
 
+.data-card-grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(270px, 352px));
+    grid-template-rows: repeat(2, minmax(270px, auto));
+    gap: 1rem;
+}
+
 @media (width <=1034px) {
 
-    .data-card-grid {
+    .data-card-grid1 {
         grid-template-columns: repeat(2, minmax(270px, 352px));
         grid-template-rows: repeat(7, minmax(270px, auto));
+    }
+
+    .data-card-grid2 {
+        grid-template-columns: repeat(2, minmax(270px, 352px));
+        grid-template-rows: repeat(2, minmax(270px, auto));
     }
 
 }
 
 @media (width <=587px) {
 
-    .data-card-grid {
+    .data-card-grid1 {
         grid-template-columns: repeat(1, minmax(270px, 352px));
         grid-template-rows: repeat(14, minmax(270px, auto));
     }
 
+    .data-card-grid2 {
+        grid-template-columns: repeat(1, minmax(270px, 352px));
+        grid-template-rows: repeat(4, minmax(270px, auto));
+    }
 }
 
 .data-card {
