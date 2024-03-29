@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="flex bg-cover bg-[url('/images/recruit/message/001.png')]">
+        <section class="mb-12 sm:mb-24 flex bg-cover bg-[url('/images/recruit/message/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
@@ -15,7 +15,7 @@
             </div>
         </section>
 
-        <section class="mb-24 sm:mb-48 py-4 px-4">
+        <section class="mb-12 sm:mb-36 py-4 px-4">
             <BlurGlassCard class="mb-0 sm:-mb-28 mx-0 sm:mx-4 py-4">
                 <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-2xl font-bold leading-loose">はじめの一歩</h2>
                 <div class="flex flex-col sm:flex-row">
