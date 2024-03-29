@@ -11,7 +11,7 @@
                 </h1>
                 <p
                     class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
-                    ベイルの先輩社員から貰ったコメントを紹介します。</p>
+                    ベイルの先輩社員から貰った<br class="inline-block md:hidden" />コメントを紹介します。</p>
             </div>
         </section>
     </div>

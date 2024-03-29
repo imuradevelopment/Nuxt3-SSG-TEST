@@ -11,7 +11,7 @@
                 </h1>
                 <p
                     class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
-                    数あるSier企業の中でのベイルはココが少し違います。</p>
+                    数あるSier企業の中での<br class="inline-block md:hidden" />ベイルはココが少し違います。</p>
             </div>
         </section>
 

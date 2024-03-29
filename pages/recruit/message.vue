@@ -11,7 +11,7 @@
                 </h1>
                 <p
                     class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
-                    皆様とお会い出来る事を楽しみにしております。</p>
+                    皆様とお会い出来る事を<br class="inline-block md:hidden" />楽しみにしております。</p>
             </div>
         </section>
 
