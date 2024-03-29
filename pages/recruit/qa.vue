@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="flex bg-cover bg-[url('/images/recruit/qa/001.png')]">
+        <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/qa/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>

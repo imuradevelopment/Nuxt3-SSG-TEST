@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="flex bg-cover bg-[url('/images/recruit/feature/001.png')]">
+        <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/feature/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
@@ -64,7 +64,7 @@
         </section> -->
 
         <section>
-            <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
+            <div class="px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
                 <div class="order-2 sm:order-1 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
                     <!-- <div class="z-10 relative w-[95%] h-[95%] bg-gray-200"></div>
                     <img class="z-20 relative bottom-[90%] left-[5%] w-[95%] h-[95%] object-cover shadow-lg"

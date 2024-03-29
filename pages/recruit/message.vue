@@ -6,16 +6,16 @@
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
             <div class="flex flex-col grow">
-                <h1 id="recruit-message01"
-                    class="linkScroll self-end mx-8 text-2xl sm:text-4xl font-bold text-white">
+                <h1 id="recruit-message01" class="linkScroll self-end mx-8 text-2xl sm:text-4xl font-bold text-white">
                     採用メッセージ
                 </h1>
-                <p class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
+                <p
+                    class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
                     皆様とお会い出来る事を楽しみにしております。</p>
             </div>
         </section>
 
-        <section class="mt-24 mb-24 sm:mb-48 py-4 px-4">
+        <section class="mb-24 sm:mb-48 py-4 px-4">
             <BlurGlassCard class="mb-0 sm:-mb-28 mx-0 sm:mx-4 py-4">
                 <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-2xl font-bold leading-loose">はじめの一歩</h2>
                 <div class="flex flex-col sm:flex-row">

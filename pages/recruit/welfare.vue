@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="flex bg-cover bg-[url('/images/recruit/welfare/001.png')]">
+        <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/welfare/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
@@ -27,15 +27,15 @@
             </div>
         </section> -->
 
-        <section class="mt-12">
+        <!-- <section class="mt-12">
             <div class="mx-4 md:mx-12 flex justify-center items-center">
                 <p
                     class="rounded-full px-4 py-2 text-base md:text-4xl text-balance font-extrabold leading-loose bg-custom-deepBlue text-white ">
                     ベイルの福利厚生について紹介します。</p>
             </div>
-        </section>
+        </section> -->
 
-        <section class="mt-8 mb-24">
+        <section class="mb-12 md:mb-24 ">
             <div class="mx-4">
                 <BlurGlassCard>
                     <div>

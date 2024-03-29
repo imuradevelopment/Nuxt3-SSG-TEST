@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="flex bg-cover bg-[url('/images/recruit/induction/001.png')]">
+        <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/induction/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
@@ -27,7 +27,7 @@
             </div>
         </section> -->
 
-        <section class="mt-12">
+        <section class="mb-12 md:mb-24 ">
             <h2 id="recruit-induction02"
                 class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 研修制度</h2>
@@ -52,7 +52,7 @@
             </div>
         </section>
 
-        <section class="mt-12">
+        <section class="mb-12 md:mb-24 ">
             <h2 id="recruit-induction03"
                 class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 教育システム</h2>
@@ -72,7 +72,7 @@
             </div>
         </section>
 
-        <section class="mt-12">
+        <section class="mb-12 md:mb-24 ">
             <h2 id="recruit-induction04"
                 class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 キャリアパス</h2>
@@ -113,7 +113,7 @@
             </div>
         </section>
 
-        <section class="my-12">
+        <section class="mb-12 md:mb-24 ">
             <h2 id="recruit-induction05"
                 class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 資格取得支援</h2>

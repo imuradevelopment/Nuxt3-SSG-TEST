@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="flex bg-cover bg-[url('/images/recruit/office/001.png')]">
+        <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/office/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
@@ -140,7 +140,7 @@
             </div>
         </section> -->
 
-        <section class="my-24">
+        <section class="mb-12 md:mb-24 ">
             <!-- <h2 id="recruit-office04"
                 class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 オフィス紹介</h2> -->
