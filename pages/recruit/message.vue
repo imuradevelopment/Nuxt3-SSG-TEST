@@ -15,7 +15,7 @@
             </div>
         </section>
 
-        <section class="mb-12 sm:mb-36 py-4 px-4">
+        <section class="mb-12 sm:mb-48 py-4 px-4">
             <BlurGlassCard class="mb-0 sm:-mb-28 mx-0 sm:mx-4 py-4">
                 <h2 class="px-8 w-fit text-white bg-custom-deepBlue text-2xl font-bold leading-loose">はじめの一歩</h2>
                 <div class="flex flex-col sm:flex-row">
