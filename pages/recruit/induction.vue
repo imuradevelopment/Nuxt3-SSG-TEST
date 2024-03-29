@@ -2,7 +2,22 @@
     <div>
 
         <section class="flex bg-cover bg-[url('/images/recruit/induction/001.png')]">
-            <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
+            <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
+                style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
+            </div>
+            <div class="flex flex-col grow">
+                <h1 id="recruit-induction01" class="linkScroll self-end mx-8 text-2xl sm:text-4xl font-bold text-white">
+                    研修制度
+                </h1>
+                <p
+                    class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
+                    入社後１年間の研修で社会人・技術者としての基礎を築きます。</p>
+            </div>
+        </section>
+
+        <!-- <section class="flex bg-cover bg-[url('/images/recruit/induction/001.png')]">
+            <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
+                style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
             <div class="flex flex-col grow">
                 <h1 id="recruit-induction01"
@@ -10,34 +25,36 @@
                     研修制度
                 </h1>
             </div>
-        </section>
+        </section> -->
 
         <section class="mt-12">
-            <h2 id="recruit-induction02" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+            <h2 id="recruit-induction02"
+                class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 研修制度</h2>
-                <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col justify-center items-center">
 
-                    <BlurGlassCard class="my-4 mx-4 sm:w-[608px] flex flex-col justify-center items-center">
-                        <div class="flex flex-col justify-center items-center">
-                            <div
-                                class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
-                                未経験でも安心。充実した研修。</div>
-                            <div class="mt-4 text-sm sm:text-base font-bold text-center">
-                                ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
-                            </div>
-        
-                            <div class="mt-4 text-custom-deepBlue text-2xl font-bold">■ 研修プログラム ■</div>
-                            <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
+                <BlurGlassCard class="my-4 mx-4 sm:w-[608px] flex flex-col justify-center items-center">
+                    <div class="flex flex-col justify-center items-center">
+                        <div
+                            class="mt-4 text-2xl font-bold underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
+                            未経験でも安心。充実した研修。</div>
+                        <div class="mt-4 text-sm sm:text-base font-bold text-center">
+                            ベイルでは文系・IT未経験でも確実にエンジニアとして<br />成長できる環境を用意しており、入社後の1年間<br />様々な研修・OJTで、社会人・技術者としての基礎を築きます。
                         </div>
-                        <div class="m-4">
-                            <Timeline :items="timeline" />
-                        </div>
-                    </BlurGlassCard>
-                </div>
+
+                        <div class="mt-4 text-custom-deepBlue text-2xl font-bold">■ 研修プログラム ■</div>
+                        <div class="text-custom-deepBlue text-sm font-bold">※前年度の実績で研修内容は毎年変わります</div>
+                    </div>
+                    <div class="m-4">
+                        <Timeline :items="timeline" />
+                    </div>
+                </BlurGlassCard>
+            </div>
         </section>
 
         <section class="mt-12">
-            <h2 id="recruit-induction03" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+            <h2 id="recruit-induction03"
+                class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 教育システム</h2>
             <div class="m-4">
                 <div class="flex flex-wrap">
@@ -56,7 +73,8 @@
         </section>
 
         <section class="mt-12">
-            <h2 id="recruit-induction04" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+            <h2 id="recruit-induction04"
+                class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 キャリアパス</h2>
             <div class="mx-4">
                 <div class="flex flex-col justify-center items-center">
@@ -68,7 +86,8 @@
                             途中でやりたい事が変わっても<br />積み上げた経験を活かす事で唯一無二のエンジニアに。
                         </div>
                         <p class="text-center text-sm mt-4 sm:text-base font-bold sm:leading-7 leading-7">
-                            人それぞれで目指すものも違えば、向き不向きも有ります。<br class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
+                            人それぞれで目指すものも違えば、向き不向きも有ります。<br
+                                class="hidden md:inline-block" />また、様々な経験の中でやりたい事が変わる事もあるでしょう。<br
                                 class="hidden md:inline-block" />ベイルでは、適宜相談しながらその人に合ったキャリアパスを描いていきたいと考えます。
                         </p>
                     </BlurGlassCard>
@@ -95,11 +114,12 @@
         </section>
 
         <section class="my-12">
-            <h2 id="recruit-induction05" class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+            <h2 id="recruit-induction05"
+                class="px-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 資格取得支援</h2>
             <div class="mx-4 flex flex-col justify-center items-center">
                 <BlurGlassCard class="my-4 flex flex-col justify-center items-center">
-                    
+
                     <div
                         class="mt-4 text-2xl font-bold text-center leading-loose underline decoration-wavy decoration-2 decoration-custom-deepBlue underline-offset-8">
                         ベイルは技術資格、<br class="inline-block md:hidden" />業務資格の取得を支援します。</div>
@@ -110,7 +130,8 @@
                             </div>
                             <div class="w-full md:w-1/2">
                                 <div class="text-2xl font-bold leading-loose">技術資格、業務資格の取得支援</div>
-                                <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">資格取得に向けた支援（受験補助金）
+                                <p class="text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">
+                                    資格取得に向けた支援（受験補助金）
                                     及び、資格認定者に報奨金の支給を行っております。</p>
                                 <ul
                                     class="pl-6 list-image-[url(/images/common/check.svg)] text-sm sm:mt-4 sm:text-base font-bold sm:leading-7 leading-7">

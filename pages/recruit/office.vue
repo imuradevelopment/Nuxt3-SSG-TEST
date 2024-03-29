@@ -6,12 +6,26 @@
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
             <div class="flex flex-col grow">
+                <h1 id="recruit-office01" class="linkScroll self-end mx-8 text-2xl sm:text-4xl font-bold text-white">
+                    オフィス紹介
+                </h1>
+                <p
+                    class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
+                    少しイメージ出来るように中目黒本社ビルのオフィスを紹介します。</p>
+            </div>
+        </section>
+
+        <!-- <section class="flex bg-cover bg-[url('/images/recruit/office/001.png')]">
+            <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
+                style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
+            </div>
+            <div class="flex flex-col grow">
                 <h1 id="recruit-office01"
                     class="linkScroll self-end mt-28 mb-4 sm:mt-36 sm:mb-8 mx-8 text-2xl sm:text-4xl font-bold text-white">
                     オフィス紹介
                 </h1>
             </div>
-        </section>
+        </section> -->
 
         <!-- <section class="mt-24">
             <h2 id="recruit-office02"
