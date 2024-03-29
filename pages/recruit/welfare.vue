@@ -11,7 +11,7 @@
                 </h1>
                 <p
                     class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
-                    とても大切な福利厚生。他社との比較にお役立て下さい。</p>
+                    とても大切な福利厚生。<br class="inline-block md:hidden" />他社との比較にお役立て下さい。</p>
             </div>
         </section>
 

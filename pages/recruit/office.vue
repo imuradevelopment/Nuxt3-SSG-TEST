@@ -11,7 +11,7 @@
                 </h1>
                 <p
                     class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
-                    少しイメージ出来るように中目黒本社ビルのオフィスを紹介します。</p>
+                    少しイメージ出来るように<br class="inline-block md:hidden" />中目黒本社ビルのオフィスを紹介します。</p>
             </div>
         </section>
 

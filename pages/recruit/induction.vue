@@ -11,7 +11,7 @@
                 </h1>
                 <p
                     class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
-                    入社後１年間の研修で社会人・技術者としての基礎を築きます。</p>
+                    入社後１年間の研修で社会人・<br class="inline-block md:hidden" />技術者としての基礎を築きます。</p>
             </div>
         </section>
 
