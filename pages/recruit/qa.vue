@@ -327,7 +327,7 @@
             <BlurGlassCard>
                 <div>
                     <h2 id="recruit-qa04" class="text-center text-custom-deepBlue text-4xl font-bold leading-loose">
-                        福利厚生・制度について
+                        その他
                     </h2>
                     <hr class="mx-auto mb-4 w-12 border-t-4 border-custom-deepBlue">
                 </div>
