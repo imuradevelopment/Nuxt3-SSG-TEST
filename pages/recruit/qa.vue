@@ -346,10 +346,12 @@
                                     <p
                                         class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
                                         お問い合わせフォームからご質問内容を入力・送信いただければ、後日回答を差し上げます。正式なエントリーではなくても、ご遠慮なくお問い合わせください。
-                                        <CustomArrowButton color-type="blue-bg-white" arrowType="transition"
-                                            to="/contact"><template #buttonText>
-                                                お問い合せフォームへ
-                                            </template></CustomArrowButton>
+                                        <div class="flex justify-end items-center">
+                                            <CustomArrowButton color-type="blue-bg-white" arrowType="transition"
+                                                to="/contact"><template #buttonText>
+                                                    お問い合せフォームへ
+                                                </template></CustomArrowButton>
+                                        </div>
                                     </p>
                                 </div>
                             </template>
