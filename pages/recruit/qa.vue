@@ -24,9 +24,9 @@
                     <hr class="mx-auto mb-4 w-12 border-t-4 border-custom-deepBlue">
                 </div>
                 <div>
-                    <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
+                    <ClearGlassMaskCard class="p-4 mb-4" :rounded="false" :opacity="0.1">
                         <template #content>
-                            <div class="flex flex-col">
+                            <div class="md:mx-4 flex flex-col">
                                 <p
                                     class="mb-2 pl-4 sm:text-3xl font-bold text-base sm:leading-loose border-l-4 border-custom-lightBlue">
                                     <span
