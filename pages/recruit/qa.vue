@@ -82,7 +82,7 @@
                         </ClearGlassMaskCard>
                     </div>
 
-                    <div class="mb-6">
+                    <div class="">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
                                 <div class="md:mx-4 flex flex-col">
