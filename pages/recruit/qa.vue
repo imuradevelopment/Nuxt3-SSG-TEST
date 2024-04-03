@@ -28,12 +28,12 @@
                         <template #content>
                             <div class="flex flex-col">
                                 <p
-                                    class="mb-2 pl-4 sm:text-3xl text-base sm:leading-loose border-l-4 border-custom-lightBlue">
-                                    <span class="text-custom-lightBlue text-base sm:text-4xl sm:leading-loose">Q：</span>
+                                    class="mb-2 pl-4 sm:text-3xl font-bold text-base sm:leading-loose border-l-4 border-custom-lightBlue">
+                                    <span
+                                        class="text-custom-lightBlue font-bold text-xl sm:text-4xl sm:leading-loose">Q：</span>
                                     遠方に住んでいますがリモートでの面接は可能ですか？
                                 </p>
-                                <p
-                                    class="mb-2 pl-4 sm:text-2xl text-sm sm:leading-loose border-l-4 border-custom-blue">
+                                <p class="mb-2 pl-4 sm:text-2xl text-sm sm:leading-loose border-l-4 border-custom-blue">
                                     最終面接は、来社頂いての面接とさせて頂いていますが、それ以外についてはリモート可能です。
                                 </p>
                             </div>
