@@ -36,7 +36,7 @@
                                         遠方に住んでいますがリモートでの面接は可能ですか？
                                     </p>
                                     <p
-                                        class="mb-2 pl-4 sm:text-2xl text-sm md:leading-loose border-l-4 border-custom-blue">
+                                        class="mb-2 pl-4 md:text-2xl text-sm md:leading-loose border-l-4 border-custom-blue">
                                         最終面接は、来社頂いての面接とさせて頂いていますが、それ以外についてはリモート可能です。
                                     </p>
                                 </div>
