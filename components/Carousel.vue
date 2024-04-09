@@ -41,6 +41,7 @@ const props = defineProps({
             subText: string;
             tileColor?: string;
             shadowColor?: string;
+            bgPosition?: string;
         }[],
         required: true
     }
@@ -51,7 +52,7 @@ const currentHeroNumber = ref<number>(0);
 const heroStyle = computed(() => ({
     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
 }));
 
 let carousel: HTMLElement;

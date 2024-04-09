@@ -206,16 +206,17 @@
                                             alt: '職場風景１',
                                             mainText: `<h3 class='px-4 text-2xl font-bold leading-loose'>職場風景１</h3>`,
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>9階は、1つのフロアすべてがセミナールームになっており、<br />会社説明会や大人数会議の際に使用しています。</p>`,
-                                            subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>実際の職場環境の風景<br class='hidden md:inline-block' />エンジニアに人気のBaronチェアやサブディスプレイ等完備</p>`,
+                                            subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>実際の職場環境の雰囲気。<br class='' />エンジニアに人気のBaronチェアやサブディスプレイ等完備。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
-                                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                                            shadowColor: 'rgb(0 0 0 / 0.5)',
+                                            bgPosition: 'right'
                                         },
                                         {
                                             src: '/images/recruit/office/009.png',
                                             alt: '職場風景２',
                                             mainText: `<h3 class='px-4 text-2xl font-bold leading-loose'>職場風景２</h3>`,
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>9階は、1つのフロアすべてがセミナールームになっており、<br />会社説明会や大人数会議の際に使用しています。</p>`,
-                                            subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>実際の職場環境の風景<br class='hidden md:inline-block' />エンジニアに人気のBaronチェアやサブディスプレイ等完備</p>`,
+                                            subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>実際の職場環境の雰囲気。<br class='' />エンジニアに人気のBaronチェアやサブディスプレイ等完備。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
                                             shadowColor: 'rgb(0 0 0 / 0.5)'
                                         },
