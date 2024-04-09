@@ -12,7 +12,7 @@
         <div class="hero-wrapper">
             <!-- ヒーローイメージとして選択された画像を表示 -->
             <div class="hero" :style="heroStyle">
-                <div class="introduction h-full" v-html="pics[currentHeroNumber].introduction"></div>
+                <div class="h-full" v-html="pics[currentHeroNumber].introduction"></div>
             </div>
         </div>
 
