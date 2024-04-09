@@ -154,7 +154,8 @@
                                             // subText: `<p class='text-sm sm:text-base font-bold sm:leading-7 leading-7'><span class='text-2xl font-bold leading-loose'>山手通りに面した本社オフィス。</span><br />日比谷線/東急東横線「中目黒駅」から山手通り沿いを5分程歩くと見えてくる、1階にお寿司屋さん(築地すし好)が入っているビルです。</p>`,
                                             subText: `<p class='text-sm sm:text-base font-bold sm:leading-7 leading-7'>山手通りに面した本社オフィス。<br />日比谷線/東急東横線「中目黒駅」から山手通り沿いを5分程歩くと見えてくる、<br class='hidden md:inline-block' />1階にお寿司屋さん(築地すし好)が入っているビルです。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
-                                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                                            shadowColor: 'rgb(0 0 0 / 0.5)',
+                                            bgPosition: 'center'
                                         },
                                         {
                                             src: '/images/recruit/office/003.png',
@@ -163,7 +164,8 @@
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>7階右手に受付があります。<br />備え付けの受付電話でご用件をお伝え下さい。</p>`,
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>7階右手に受付があります。<br />備え付けの受付電話でご用件をお伝え下さい。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
-                                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                                            shadowColor: 'rgb(0 0 0 / 0.5)',
+                                            bgPosition: 'center'
                                         },
                                         {
                                             src: '/images/recruit/office/005.png',
@@ -172,7 +174,8 @@
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>8階は、主に開発フロアとなっており、<br />受託開発案件などを本社開発メンバーで行っております。</p>`,
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>8階は、主に開発フロアとなっており、<br class='hidden md:inline-block' />受託開発案件などを本社開発メンバーで行っております。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
-                                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                                            shadowColor: 'rgb(0 0 0 / 0.5)',
+                                            bgPosition: 'center'
                                         },
                                         {
                                             src: '/images/recruit/office/006.png',
@@ -181,7 +184,8 @@
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>8階には開発フロアのほかにミーティングスペースがあり、<br />プロジェクトの打ち合わせや面談など<br class='hidden md:inline-block' />用途に応じて使用出来るエリアを設けています。</p>`,
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>8階には開発フロアのほかにミーティングスペースがあり、<br class='hidden md:inline-block' />プロジェクトの打ち合わせや面談など用途に応じて使用出来るエリアを設けています。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
-                                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                                            shadowColor: 'rgb(0 0 0 / 0.5)',
+                                            bgPosition: 'center'
                                         },
                                         {
                                             src: '/images/recruit/office/007.png',
@@ -190,7 +194,8 @@
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>8階にはグリコボックスが設置されていて、200円で好きなお菓子が食べれます。<br />小腹がすいた時や、リフレッシュの際に利用されます。</p>`,
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>8階にはグリコボックスが設置されていて、200円で好きなお菓子が食べれます。<br class='hidden md:inline-block' />小腹がすいた時や、リフレッシュの際に利用されます。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
-                                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                                            shadowColor: 'rgb(0 0 0 / 0.5)',
+                                            bgPosition: 'center'
                                         },
                                         {
                                             src: '/images/recruit/office/004.png',
@@ -199,7 +204,8 @@
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>9階は、1つのフロアすべてがセミナールームになっており、<br />会社説明会や大人数会議の際に使用しています。</p>`,
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>9階は、1つのフロアすべてがセミナールームになっており、<br class='hidden md:inline-block' />会社説明会や大人数会議の際に使用しています。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
-                                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                                            shadowColor: 'rgb(0 0 0 / 0.5)',
+                                            bgPosition: 'center'
                                         },
                                         {
                                             src: '/images/recruit/office/008.png',
@@ -218,7 +224,8 @@
                                             // subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>9階は、1つのフロアすべてがセミナールームになっており、<br />会社説明会や大人数会議の際に使用しています。</p>`,
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>実際の職場環境の雰囲気。<br class='' />エンジニアに人気のBaronチェアやサブディスプレイ等完備。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
-                                            shadowColor: 'rgb(0 0 0 / 0.5)'
+                                            shadowColor: 'rgb(0 0 0 / 0.5)',
+                                            bgPosition: 'center'
                                         },
                         // 他の画像オブジェクト...
                     ]"></Carousel>
