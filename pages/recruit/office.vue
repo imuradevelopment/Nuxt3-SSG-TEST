@@ -209,7 +209,7 @@
                                             subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>実際の職場環境の雰囲気。<br class='' />エンジニアに人気のBaronチェアやサブディスプレイ等完備。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
                                             shadowColor: 'rgb(0 0 0 / 0.5)',
-                                            bgPosition: 'right'
+                                            bgPosition: 'right top'
                                         },
                                         {
                                             src: '/images/recruit/office/009.png',
