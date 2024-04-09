@@ -52,7 +52,7 @@ const currentHeroNumber = ref<number>(0);
 const heroStyle = computed(() => ({
     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
     backgroundSize: 'cover',
-    backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
+    backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition} == '' ? 'center' ${props.pics[currentHeroNumber.value].bgPosition}`
 }));
 
 let carousel: HTMLElement;
