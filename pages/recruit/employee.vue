@@ -107,7 +107,7 @@
                         message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>就職活動の際には自分が持っている軸を大事にしてください。入社してから思っていたのとは違うなというのはとてももったいないです。私の場合は同じ企業でも面接毎に自分のやりたいことが本当にできるのか面接担当者に聞きました。選んだ会社が本当に自分とあっているのか、これでもかというくらい調べて納得のいく結果を得られるよう頑張ってください。</p>`,
                         tileColor: 'rgba(0, 37, 92, 0.1)',
                         shadowColor: 'rgb(0 0 0 / 0.5)',
-                        bgPosition: 'center'
+                        bgPosition: 'right'
                     },
                     // 他の画像オブジェクト...
                 ]"></CarouselEmployee>
