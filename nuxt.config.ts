@@ -40,7 +40,7 @@ export default defineNuxtConfig({
             },
         },
     },
-    modules: ["@element-plus/nuxt", "nuxt-microcms-module", "@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxt/image"],
+    modules: ["@element-plus/nuxt", "nuxt-microcms-module", "@nuxtjs/tailwindcss", "@pinia/nuxt", "@pinia-plugin-persistedstate/nuxt", "@nuxt/image"],
     vite: {
         css: {
             preprocessorOptions: {

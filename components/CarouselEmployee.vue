@@ -77,6 +77,8 @@
 import { ref, computed } from 'vue';
 import BlurGlassCard from './BlurGlassCard.vue';
 import ClearGlassMaskCard from '~/components/ClearGlassMaskCard.vue'
+import { useCurrentPhotoNumberStore } from '~/stores/currentPhotoNumber'
+let currentPhotoNumberStore = useCurrentPhotoNumberStore();
 
 // propsでpicsをオブジェクトの配列として定義
 const props = defineProps({
@@ -96,19 +98,45 @@ const props = defineProps({
     }
 });
 
-const currentPhotoNumber = ref<number>(0);
-const currentHeroNumber = ref<number>(0);
-const heroStyle = computed(() => ({
-    backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
-    backgroundSize: 'cover',
-    backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
-}));
+// const currentPhotoNumber = ref<number>(0);
+// const currentPhotoNumber = ref<number>(currentPhotoNumberStore.currentPhotoNumber);
+let currentPhotoNumber = useCurrentPhotoNumberStore();
+// const currentHeroNumber = ref<number>(0);
+// const currentHeroNumber = ref<number>(currentPhotoNumberStore.currentPhotoNumber);
+let currentHeroNumber = ref<number>(currentPhotoNumber.currentPhotoNumber);
+// let heroStyle = computed(() => ({
+//     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
+//     backgroundSize: 'cover',
+//     backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
+// }));
 
 let carousel: HTMLElement;
 let hero: HTMLElement;
 let message: HTMLElement;
-
+// let heroStyle: globalThis.Ref<{
+//     /* __placeholder__ */
+//     backgroundImage:
+//     /* __placeholder__ */
+//     string;
+//     /* __placeholder__ */
+//     backgroundSize:
+//     /* __placeholder__ */
+//     string;
+//     /* __placeholder__ */
+//     backgroundPosition:
+//     /* __placeholder__ */
+//     string;
+// }>
 onMounted(() => {
+    // heroStyle = ref<{
+    //     backgroundImage: string;
+    //     backgroundSize: string;
+    //     backgroundPosition: string;
+    // }>({
+    //     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
+    //     backgroundSize: 'cover',
+    //     backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
+    // });
     carousel = document.querySelector('.carousel') as HTMLElement;
     hero = document.querySelector('.hero') as HTMLElement;
     message = document.querySelector('.message') as HTMLElement;
@@ -120,16 +148,18 @@ onMounted(() => {
         scrollableElement.scrollLeft += e.deltaY;
     });
 
-    itemFocus(currentPhotoNumber.value);
+    selectItem(currentPhotoNumber.currentPhotoNumber);
 });
 
 const selectItem = (index: number) => {
+    
+    setTimeout(() => {
+        currentHeroNumber.value = index;
+        hero.style.backgroundImage = `url(${props.pics[index].src})`
+        hero.style.backgroundPosition = `${props.pics[index].bgPosition}`
+    }, 500);
 
     itemFocus(index);
-
-    setTimeout(() => {
-        currentHeroNumber.value = currentPhotoNumber.value;
-    }, 500);
 
     hero.classList.add('switching');
     hero.addEventListener('animationend', () => {
@@ -143,10 +173,10 @@ const selectItem = (index: number) => {
 }
 
 const itemFocus = (index: number) => {
-    let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
+    let faceBefore = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
     faceBefore.style.boxShadow = `none`;
-    currentPhotoNumber.value = index;
-    let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
+    currentPhotoNumber.currentPhotoNumber = index;
+    let face = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
     face.style.boxShadow = `0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue)`;
 }
 </script>
