@@ -2,7 +2,7 @@
     <div class="grid-carousel">
         <main class="hero-wrapper">
             <!-- ヒーローイメージとして選択された画像を表示 -->
-            <div class="hero" :style="heroStyle">
+            <div class="hero">
                 <ClientOnly>
                     <!-- BlurGlassCardコンポーネントにメインテキストをpropsとして渡す -->
                     <BlurGlassCard class="main-text-card text-white rounded-tl-sm rounded-br-md" :rounded="false"
@@ -30,6 +30,7 @@
 import { ref, computed } from 'vue';
 import BlurGlassCard from './BlurGlassCard.vue';
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
+import { useCurrentPhotoNumberStore } from '~/stores/currentPhotoNumber'
 
 // propsでpicsをオブジェクトの配列として定義
 const props = defineProps({
@@ -47,13 +48,13 @@ const props = defineProps({
     }
 });
 
-const currentPhotoNumber = ref<number>(0);
-const currentHeroNumber = ref<number>(0);
-const heroStyle = computed(() => ({
-    backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
-    backgroundSize: 'cover',
-    backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
-}));
+const currentPhotoNumber = useCurrentPhotoNumberStore();
+const currentHeroNumber = ref<number>(currentPhotoNumber.currentPhotoNumber);
+// const heroStyle = computed(() => ({
+//     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
+//     backgroundSize: 'cover',
+//     backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
+// }));
 
 let carousel: HTMLElement;
 let hero: HTMLElement;
@@ -69,7 +70,7 @@ onMounted(() => {
         scrollableElement.scrollLeft += e.deltaY;
     });
 
-    itemFocus(currentPhotoNumber.value);
+    selectItem(currentPhotoNumber.currentPhotoNumber);
 });
 
 const selectItem = (index: number) => {
@@ -77,7 +78,10 @@ const selectItem = (index: number) => {
     itemFocus(index);
 
     setTimeout(() => {
-        currentHeroNumber.value = currentPhotoNumber.value;
+        currentHeroNumber.value = index;
+        hero.style.backgroundImage = `url(${props.pics[index].src})`
+        hero.style.backgroundSize = `cover`
+        hero.style.backgroundPosition = `${props.pics[index].bgPosition}`
     }, 500);
 
     hero.classList.add('switching');
@@ -87,10 +91,10 @@ const selectItem = (index: number) => {
 }
 
 const itemFocus = (index: number) => {
-    let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
+    let faceBefore = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
     faceBefore.style.boxShadow = `none`;
-    currentPhotoNumber.value = index;
-    let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
+    currentPhotoNumber.currentPhotoNumber = index;
+    let face = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
     face.style.boxShadow = `0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue)`;
 }
 </script>

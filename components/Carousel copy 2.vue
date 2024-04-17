@@ -1,6 +1,21 @@
 <template>
     <div class="grid-carousel">
-
+        <main class="hero-wrapper">
+            <!-- ヒーローイメージとして選択された画像を表示 -->
+            <div class="hero" :style="heroStyle">
+                <ClientOnly>
+                    <!-- BlurGlassCardコンポーネントにメインテキストをpropsとして渡す -->
+                    <BlurGlassCard class="main-text-card text-white rounded-tl-sm rounded-br-md" :rounded="false"
+                        :blur="0" :color="'rgba(0, 0, 0, 0.5)'" v-html="pics[currentHeroNumber].mainText" />
+                    <div class="h-full pb-4 flex justify-center items-end">
+                        <!-- サブテキストをpropsとして渡す -->
+                        <BlurGlassCard class="mx-4 py-2 px-4 text-white" :rounded="true" :blur="0"
+                            :color="'rgba(0, 0, 0, 0.5)'" v-html="pics[currentHeroNumber].subText" />
+                    </div>
+                    <!-- <div class="sub-text" v-html="pics[currentHeroNumber].subText"></div> -->
+                </ClientOnly>
+            </div>
+        </main>
         <div class="scene">
             <div class="carousel">
                 <!-- サムネイル画像をv-forで繰り返し表示 -->
@@ -8,68 +23,13 @@
                     @click="selectItem(index)" :style="{ backgroundImage: 'url(' + pic.src + ')' }"></div>
             </div>
         </div>
-
-        <div class="hero-wrapper">
-            <!-- ヒーローイメージとして選択された画像を表示 -->
-            <div class="hero">
-                <div class="h-full" v-html="pics[currentHeroNumber].introduction"></div>
-            </div>
-        </div>
-
-        <div class="message">
-            <div class="my-6">
-                <BlurGlassCard :rounded="true">
-                    <div class="md:mx-4 flex flex-col">
-                        <p
-                            class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
-                            <span class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
-                            現在の仕事について教えて下さい。
-                        </p>
-                        <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
-                        <div v-html="pics[currentHeroNumber].message1"></div>
-                        </p>
-                    </div>
-                </BlurGlassCard>
-            </div>
-            <div class="mb-6">
-                <BlurGlassCard :rounded="true">
-                    <div class="md:mx-4 flex flex-col">
-                        <p
-                            class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
-                            <span class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
-                            この仕事の好きなところはどこですか？
-                        </p>
-                        <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
-                        <div v-html="pics[currentHeroNumber].message2"></div>
-                        </p>
-                    </div>
-                </BlurGlassCard>
-            </div>
-            <div class="mb-6">
-                <BlurGlassCard :rounded="true">
-                    <div class="md:mx-4 flex flex-col">
-                        <p
-                            class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
-                            <span class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
-                            就職活動へのアドバイスをお願いします。
-                        </p>
-                        <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
-                        <div v-html="pics[currentHeroNumber].message3"></div>
-                        </p>
-                    </div>
-                </BlurGlassCard>
-            </div>
-        </div>
-
     </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import BlurGlassCard from './BlurGlassCard.vue';
-import ClearGlassMaskCard from '~/components/ClearGlassMaskCard.vue'
-import { useCurrentPhotoNumberStore } from '~/stores/currentPhotoNumber'
-let currentPhotoNumberStore = useCurrentPhotoNumberStore();
+import CustomArrowButton from '~/components/CustomArrowButton.vue'
 
 // propsでpicsをオブジェクトの配列として定義
 const props = defineProps({
@@ -77,10 +37,8 @@ const props = defineProps({
         type: Array as () => {
             src: string;
             alt?: string;
-            introduction: string;
-            message1: string;
-            message2: string;
-            message3: string;
+            mainText: string;
+            subText: string;
             tileColor?: string;
             shadowColor?: string;
             bgPosition?: string;
@@ -89,48 +47,20 @@ const props = defineProps({
     }
 });
 
-// const currentPhotoNumber = ref<number>(0);
-// const currentPhotoNumber = ref<number>(currentPhotoNumberStore.currentPhotoNumber);
-let currentPhotoNumber = useCurrentPhotoNumberStore();
-// const currentHeroNumber = ref<number>(0);
-// const currentHeroNumber = ref<number>(currentPhotoNumberStore.currentPhotoNumber);
-let currentHeroNumber = ref<number>(currentPhotoNumber.currentPhotoNumber);
-// let heroStyle = computed(() => ({
-//     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
-//     backgroundSize: 'cover',
-//     backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
-// }));
+const currentPhotoNumber = ref<number>(0);
+const currentHeroNumber = ref<number>(0);
+const heroStyle = computed(() => ({
+    backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
+    backgroundSize: 'cover',
+    backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
+}));
 
 let carousel: HTMLElement;
 let hero: HTMLElement;
-let message: HTMLElement;
-// let heroStyle: globalThis.Ref<{
-//     /* __placeholder__ */
-//     backgroundImage:
-//     /* __placeholder__ */
-//     string;
-//     /* __placeholder__ */
-//     backgroundSize:
-//     /* __placeholder__ */
-//     string;
-//     /* __placeholder__ */
-//     backgroundPosition:
-//     /* __placeholder__ */
-//     string;
-// }>
+
 onMounted(() => {
-    // heroStyle = ref<{
-    //     backgroundImage: string;
-    //     backgroundSize: string;
-    //     backgroundPosition: string;
-    // }>({
-    //     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
-    //     backgroundSize: 'cover',
-    //     backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
-    // });
     carousel = document.querySelector('.carousel') as HTMLElement;
     hero = document.querySelector('.hero') as HTMLElement;
-    message = document.querySelector('.message') as HTMLElement;
 
     const scrollableElement = document.querySelector('.carousel') as HTMLElement;
 
@@ -139,36 +69,28 @@ onMounted(() => {
         scrollableElement.scrollLeft += e.deltaY;
     });
 
-    selectItem(currentPhotoNumber.currentPhotoNumber);
+    itemFocus(currentPhotoNumber.value);
 });
 
 const selectItem = (index: number) => {
-    
-    setTimeout(() => {
-        currentHeroNumber.value = index;
-        hero.style.backgroundImage = `url(${props.pics[index].src})`
-        hero.style.backgroundSize = `cover`
-        hero.style.backgroundPosition = `${props.pics[index].bgPosition}`
-    }, 500);
 
     itemFocus(index);
+
+    setTimeout(() => {
+        currentHeroNumber.value = currentPhotoNumber.value;
+    }, 500);
 
     hero.classList.add('switching');
     hero.addEventListener('animationend', () => {
         hero.classList.remove('switching');
     });
-
-    message.classList.add('switching');
-    message.addEventListener('animationend', () => {
-        message.classList.remove('switching');
-    });
 }
 
 const itemFocus = (index: number) => {
-    let faceBefore = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
+    let faceBefore = carousel.children[currentPhotoNumber.value] as HTMLElement;
     faceBefore.style.boxShadow = `none`;
-    currentPhotoNumber.currentPhotoNumber = index;
-    let face = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
+    currentPhotoNumber.value = index;
+    let face = carousel.children[currentPhotoNumber.value] as HTMLElement;
     face.style.boxShadow = `0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue)`;
 }
 </script>
@@ -177,22 +99,20 @@ const itemFocus = (index: number) => {
 .grid-carousel {
     display: grid;
     grid-template-areas:
-        "images"
         "hero"
-        "message";
+        "images";
     grid-template-columns: minmax(300px, calc(1280px - 160px));
-    grid-template-rows: calc(7rem + 8px + 12px) 600px auto;
+    grid-template-rows: 600px calc(7rem + 8px + 12px);
     gap: 0.5rem;
 }
 @media screen and (max-width: 768px) {
     .grid-carousel {
         display: grid;
         grid-template-areas:
-            "images"
             "hero"
-            "message";
+            "images";
         grid-template-columns: minmax(300px, calc(1280px - 160px));
-        grid-template-rows: calc(7rem + 8px + 12px) 450px auto;
+        grid-template-rows: 450px calc(7rem + 8px + 12px);
         gap: 0.5rem;
     }
 }
@@ -220,7 +140,7 @@ const itemFocus = (index: number) => {
     transition: all 1s linear;
 }
 
-.switching {
+.hero.switching {
     animation: leaving 1s ease-in-out forwards;
 }
 
@@ -336,9 +256,5 @@ const itemFocus = (index: number) => {
 .carousel::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.3);
     /* ホバー時の色を少し濃く */
-}
-
-.message {
-    grid-area: message;
 }
 </style>
