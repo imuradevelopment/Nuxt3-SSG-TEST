@@ -11,62 +11,56 @@
 
         <div class="hero-wrapper">
             <!-- ヒーローイメージとして選択された画像を表示 -->
-            <div class="hero" :style="heroStyle">
+            <div class="hero">
                 <div class="h-full" v-html="pics[currentHeroNumber].introduction"></div>
             </div>
         </div>
 
         <div class="message">
             <div class="my-6">
-                <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
-                    <template #content>
-                        <div class="md:mx-4 flex flex-col">
-                            <p
-                                class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
-                                <span
-                                    class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
-                                現在の仕事について教えて下さい。
-                            </p>
-                            <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
-                            <div v-html="pics[currentHeroNumber].message1"></div>
-                            </p>
-                        </div>
-                    </template>
-                </ClearGlassMaskCard>
+                <BlurGlassCard>
+                    <div class="md:mx-4 flex flex-col">
+                        <p
+                            class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
+                            <span
+                                class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
+                            現在の仕事について教えて下さい。
+                        </p>
+                        <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
+                        <div v-html="pics[currentHeroNumber].message1"></div>
+                        </p>
+                    </div>
+                </BlurGlassCard>
             </div>
             <div class="mb-6">
-                <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
-                    <template #content>
-                        <div class="md:mx-4 flex flex-col">
-                            <p
-                                class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
-                                <span
-                                    class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
-                                この仕事の好きなところはどこですか？
-                            </p>
-                            <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
-                            <div v-html="pics[currentHeroNumber].message2"></div>
-                            </p>
-                        </div>
-                    </template>
-                </ClearGlassMaskCard>
+                <BlurGlassCard>
+                    <div class="md:mx-4 flex flex-col">
+                        <p
+                            class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
+                            <span
+                                class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
+                            この仕事の好きなところはどこですか？
+                        </p>
+                        <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
+                        <div v-html="pics[currentHeroNumber].message2"></div>
+                        </p>
+                    </div>
+                </BlurGlassCard>
             </div>
             <div class="mb-6">
-                <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
-                    <template #content>
-                        <div class="md:mx-4 flex flex-col">
-                            <p
-                                class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
-                                <span
-                                    class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
-                                就職活動へのアドバイスをお願いします。
-                            </p>
-                            <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
-                            <div v-html="pics[currentHeroNumber].message3"></div>
-                            </p>
-                        </div>
-                    </template>
-                </ClearGlassMaskCard>
+                <BlurGlassCard>
+                    <div class="md:mx-4 flex flex-col">
+                        <p
+                            class="mb-2 pl-4 md:text-3xl font-bold text-base md:leading-loose border-l-4 border-custom-lightBlue">
+                            <span
+                                class="text-custom-lightBlue font-bold text-xl md:text-3xl md:leading-loose">Q:</span>
+                            就職活動へのアドバイスをお願いします。
+                        </p>
+                        <p class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
+                        <div v-html="pics[currentHeroNumber].message3"></div>
+                        </p>
+                    </div>
+                </BlurGlassCard>
             </div>
         </div>
 
@@ -156,6 +150,7 @@ const selectItem = (index: number) => {
     setTimeout(() => {
         currentHeroNumber.value = index;
         hero.style.backgroundImage = `url(${props.pics[index].src})`
+        hero.style.backgroundSize = `cover`
         hero.style.backgroundPosition = `${props.pics[index].bgPosition}`
     }, 500);
 
