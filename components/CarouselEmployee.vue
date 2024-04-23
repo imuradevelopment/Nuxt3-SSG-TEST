@@ -12,7 +12,9 @@
         <div class="hero-wrapper">
             <!-- ヒーローイメージとして選択された画像を表示 -->
             <div class="hero">
-                <div class="h-full" v-html="pics[currentHeroNumber].introduction"></div>
+                <ClientOnly>
+                    <div class="h-full" v-html="pics[currentHeroNumber].introduction"></div>
+                </ClientOnly>
             </div>
         </div>
 
@@ -168,7 +170,7 @@ const itemFocus = (index: number) => {
     let faceBefore = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
     faceBefore.style.boxShadow = `none`;
     currentPhotoNumber.currentPhotoNumber = index;
-    let face = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
+    let face = carousel.children[index] as HTMLElement;
     face.style.boxShadow = `0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue)`;
 }
 </script>
