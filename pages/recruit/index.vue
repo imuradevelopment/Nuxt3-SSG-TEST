@@ -240,7 +240,7 @@
             <h2 id="recruit09" class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 社員紹介</h2>
             <div class="mx-4 mt-8 mb-4 flex justify-center items-center">
-                <div class="max-w-[500px]">
+                <div class="max-w-xl">
                     <Carousel :pics="[
                         // {
                         //     src: '/images/recruit/index/012.png',
