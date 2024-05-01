@@ -65,10 +65,29 @@ onMounted(() => {
 
     const scrollableElement = document.querySelector('.carousel') as HTMLElement;
 
+    // scrollableElement.addEventListener('wheel', (e) => {
+    //     e.preventDefault();
+    //     scrollableElement.scrollLeft += e.deltaY;
+    // });
+
     scrollableElement.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        scrollableElement.scrollLeft += e.deltaY;
+        // 横スクロールが必要かどうかを判断する条件
+        const shouldScrollHorizontally =
+            scrollableElement.scrollWidth > scrollableElement.clientWidth;
+
+        // 横スクロールが最後まで達したかどうかを判断する条件
+        const isAtEndOfScroll =
+            scrollableElement.scrollLeft + scrollableElement.clientWidth >= scrollableElement.scrollWidth;
+
+        if (shouldScrollHorizontally && !isAtEndOfScroll) {
+            e.preventDefault();
+            scrollableElement.scrollLeft += e.deltaY;
+        } else {
+            // 横スクロールが不要、または最後まで達した場合、縦スクロールを許可する
+            // ここでは何もしない（ブラウザのデフォルトのスクロール動作を許可する）
+        }
     });
+
 
     selectItem(currentPhotoNumber.currentPhotoNumber);
 });
@@ -188,6 +207,7 @@ const itemFocus = (index: number) => {
     flex-shrink: 0;
     padding-left: 6px;
     padding-right: 6px;
+    background-color: white;
 }
 
 .face {

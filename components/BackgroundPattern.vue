@@ -49,7 +49,7 @@ onMounted(() => {
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;
     max-width: calc(1280px - 160px);
-    width: 100%;
+    width: calc(100vw - 160px - 2rem);
     height: 860px;
     position: absolute;
     z-index: -1;
