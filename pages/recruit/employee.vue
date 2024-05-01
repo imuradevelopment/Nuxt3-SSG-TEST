@@ -22,17 +22,6 @@
             <div class=" mx-4">
                 <CarouselEmployee :pics="[
                     {
-                        src: '/images/recruit/employee/004.jpg',
-                        alt: '人物写真R.T.',
-                        introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />R.T.<br />理系私立大学卒<br />2023年入社</div></div></div>`,
-                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>これから納品するシステムにバグや不具合が無いかを確認する、結合テストの工程に携わっています。</p>`,
-                        message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>テストを一つ消化する毎に、システムの信頼性が高まっていくのを感じられるのが今の業務の好きな部分です。お客様が安心してシステムを運用できることを一つずつ確認していくテスト工程は、大変なところもありますが大きなやりがいを感じます。また、テストを通じてシステムやプログラムの深い部分に触れられるもこの仕事の魅力だと思います。テスト工程でバグや不具合が見つかった際は、どのように対応するかを個人、またはチームで考えていきます。原因や対処方法を探って実践していく工程は、エンジニアとしてのスキルアップを目指せるとてもいい機会になります。やりがいと成長をどちらも感じられる点が、この仕事の好きな所です。</p>`,
-                        message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私が就職活動中に取り組んでよかったと思うことは、自分のアピールポイントの洗い出しを重点的に行ったことです。自己分析を行う中で、経験してきたことや勉強してきたことを些細なことでもいいのでどんどん列挙してみてください。自分では強みにならないと思っているような小さなことでも、周りから見れば立派なアピールポイントだったりもします。また、強みを自覚することは就職活動に対する自信にも繋がるので、自己分析はアピールポイントの洗い出しを強く意識して行うことを私はお勧めします。就職活動中は上手くいかなかったり焦ったりすることもあるかもしれませんが、そういう時だからこそ自分を大切にすることを忘れないでください。</p>`,
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)',
-                        bgPosition: 'center'
-                    },
-                    {
                         src: '/images/recruit/employee/005.jpg',
                         alt: '人物写真T.I.',
                         introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />T.I.<br />文系私立大学卒<br />2023年入社</div></div></div>`,
@@ -42,28 +31,6 @@
                         tileColor: 'rgba(0, 37, 92, 0.1)',
                         shadowColor: 'rgb(0 0 0 / 0.5)',
                         bgPosition: 'right top'
-                    },
-                    {
-                        src: '/images/recruit/employee/006.jpg',
-                        alt: '人物写真T.S.',
-                        introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />T.S.<br />情報系専門卒<br />2023年入社</div></div></div>`,
-                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>お客様の一連の業務を効率化することを目的とした管理システムの導入や、新環境へのデータ移行作業に関する調査に携わっています。</p>`,
-                        message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>様々な人とコミュニケーションを取り、チームでお客様の抱えている問題や悩みを解決することが、私の仕事の中で最も好きな部分です。ITエンジニアは一人で黙々とプログラミングをしているイメージを持たれがちですが、実際には仕事の中で人と話す機会がたくさんあります。例えば、プロジェクトの初期段階ではお客様やプロジェクトマネージャーとの要件定義や設計に関するコミュニケーションは不可欠です。その他にも、プログラミングが終了したあとのテスト工程でバグが発生した際には、チームメンバーや関係者の方々と協力して解決策を見つける必要があります。このように、時には一人で黙々と作業に取り組むことも求められますが、プロジェクトや日々業務を進行させるためにはコミュニケーションが欠かせません。私はチームメンバーと協力して問題解決に取り組むことが好きです。</p>`,
-                        message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>就職活動の中でも自己分析には特に時間を割くことをオススメします。就職活動の序盤で必ず誰しもが取り組む作業ですが、序盤だけでなくインターン・説明会・面接中など様々なタイミングで私は取り組んでいました。繰り返し自己分析を行うことで、自身に対する理解度や仕事に対する考え方が確立されていくので、就職活動だけでなく今後の社会人生活へも役立てる事ができます。</p>`,
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)',
-                        bgPosition: 'right top'
-                    },
-                    {
-                        src: '/images/recruit/employee/007.jpg',
-                        alt: '人物写真T.H.',
-                        introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />T.H.<br />文系私立大学卒<br />2023年入社</div></div></div>`,
-                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私は現在、完成したアプリケーションのソースコードを参考にしながら、詳細な設計書を作成するプロセスに携わっています。</p>`,
-                        message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私がこの仕事で好きな所は、ソースコードの理解に関するチャレンジです。初めて目にする複雑なコードや技術的な問題に直面するとき、先輩や同期とコミュニケーションをとることで、理解を深める手助けをしてもらえることが素晴らしいと感じます。チームメンバーとのコミュニケーションによって、自分の知識を補完し、新たな発見をすることができます。そして、ソースコードを理解し、問題を解決するための方法を考え出す過程で、自分の成長を実感することができます。このような経験を通じて、自分の技術力やコミュニケーション能力が向上していることを実感できることが、私にとってこの仕事の魅力の一つです。チームと協力しながら、共に成長していくことが、私の仕事におけるやりがいです。</p>`,
-                        message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私が就職活動中に取り組んでよかったと思うことは、自己分析と大学のキャリアセンターの活用です。自己分析を行うことで自分の強みや興味、将来のキャリア目標を明確にすることができます。これは面接での応答でとても役に立ちます。またキャリアセンターの活用は、就職活動の不安の相談や自己分析の手伝い、優良企業の紹介などをしてくれるため就職活動中に困ったことがあれば、キャリアセンターを活用することをお勧めします。一人で就職活動を行うよりも頼れる人や環境はすべて利用し焦らずに行動することで良い就職活動ができると思います。</p>`,
-                        tileColor: 'rgba(0, 37, 92, 0.1)',
-                        shadowColor: 'rgb(0 0 0 / 0.5)',
-                        bgPosition: 'center'
                     },
                     {
                         src: '/images/recruit/employee/008.jpg',
@@ -77,15 +44,15 @@
                         bgPosition: 'center top'
                     },
                     {
-                        src: '/images/recruit/employee/009.jpg',
-                        alt: '人物写真A.M.',
-                        introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />A.M.<br />文系私立大学卒<br />2022年入社</div></div></div>`,
-                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>現在はリリース済みシステムの詳細設計書の作成や、これから始まる案件についての資料作成をメインで行っています。未経験から始め、当初は膨大な知識が必要な環境に苦しいこともありました。日々の学習の積み重ねにより、スキルが身についている実感を感じられることが私にとって大きな挑戦と同時にとても価値あるものとなりました。</p>`,
-                        message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>日々の仕事を通して、成長を感じられることはこの仕事の大きな魅力の一つだと感じます。また、キャリアの選択肢が多い点も魅力の一つです。新たな挑戦の機会が豊富に用意されているため、自信の成長を通じてどんなふうになりたいかを常に考えて仕事に励んでいます。</p>`,
-                        message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私の中で就職活動は人生で一番苦労したと共に、自分自身のことを知る一番の機会となりました。自分の得意・不得意、好きなこと・嫌いなことすべてを見つめ返して自分を客観的に観察できる良い機会となります。その経験がこれからの人生にきっと役立ので、自分を信じて突き進んでください！</p>`,
+                        src: '/images/recruit/employee/007.jpg',
+                        alt: '人物写真T.H.',
+                        introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />T.H.<br />文系私立大学卒<br />2023年入社</div></div></div>`,
+                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私は現在、完成したアプリケーションのソースコードを参考にしながら、詳細な設計書を作成するプロセスに携わっています。</p>`,
+                        message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私がこの仕事で好きな所は、ソースコードの理解に関するチャレンジです。初めて目にする複雑なコードや技術的な問題に直面するとき、先輩や同期とコミュニケーションをとることで、理解を深める手助けをしてもらえることが素晴らしいと感じます。チームメンバーとのコミュニケーションによって、自分の知識を補完し、新たな発見をすることができます。そして、ソースコードを理解し、問題を解決するための方法を考え出す過程で、自分の成長を実感することができます。このような経験を通じて、自分の技術力やコミュニケーション能力が向上していることを実感できることが、私にとってこの仕事の魅力の一つです。チームと協力しながら、共に成長していくことが、私の仕事におけるやりがいです。</p>`,
+                        message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私が就職活動中に取り組んでよかったと思うことは、自己分析と大学のキャリアセンターの活用です。自己分析を行うことで自分の強みや興味、将来のキャリア目標を明確にすることができます。これは面接での応答でとても役に立ちます。またキャリアセンターの活用は、就職活動の不安の相談や自己分析の手伝い、優良企業の紹介などをしてくれるため就職活動中に困ったことがあれば、キャリアセンターを活用することをお勧めします。一人で就職活動を行うよりも頼れる人や環境はすべて利用し焦らずに行動することで良い就職活動ができると思います。</p>`,
                         tileColor: 'rgba(0, 37, 92, 0.1)',
                         shadowColor: 'rgb(0 0 0 / 0.5)',
-                        bgPosition: 'right top'
+                        bgPosition: 'center'
                     },
                     {
                         src: '/images/recruit/employee/010.jpg',
@@ -97,6 +64,39 @@
                         tileColor: 'rgba(0, 37, 92, 0.1)',
                         shadowColor: 'rgb(0 0 0 / 0.5)',
                         bgPosition: 'right'
+                    },
+                    {
+                        src: '/images/recruit/employee/006.jpg',
+                        alt: '人物写真T.S.',
+                        introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />T.S.<br />情報系専門卒<br />2023年入社</div></div></div>`,
+                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>お客様の一連の業務を効率化することを目的とした管理システムの導入や、新環境へのデータ移行作業に関する調査に携わっています。</p>`,
+                        message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>様々な人とコミュニケーションを取り、チームでお客様の抱えている問題や悩みを解決することが、私の仕事の中で最も好きな部分です。ITエンジニアは一人で黙々とプログラミングをしているイメージを持たれがちですが、実際には仕事の中で人と話す機会がたくさんあります。例えば、プロジェクトの初期段階ではお客様やプロジェクトマネージャーとの要件定義や設計に関するコミュニケーションは不可欠です。その他にも、プログラミングが終了したあとのテスト工程でバグが発生した際には、チームメンバーや関係者の方々と協力して解決策を見つける必要があります。このように、時には一人で黙々と作業に取り組むことも求められますが、プロジェクトや日々業務を進行させるためにはコミュニケーションが欠かせません。私はチームメンバーと協力して問題解決に取り組むことが好きです。</p>`,
+                        message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>就職活動の中でも自己分析には特に時間を割くことをオススメします。就職活動の序盤で必ず誰しもが取り組む作業ですが、序盤だけでなくインターン・説明会・面接中など様々なタイミングで私は取り組んでいました。繰り返し自己分析を行うことで、自身に対する理解度や仕事に対する考え方が確立されていくので、就職活動だけでなく今後の社会人生活へも役立てる事ができます。</p>`,
+                        tileColor: 'rgba(0, 37, 92, 0.1)',
+                        shadowColor: 'rgb(0 0 0 / 0.5)',
+                        bgPosition: 'right top'
+                    },
+                    {
+                        src: '/images/recruit/employee/009.jpg',
+                        alt: '人物写真A.M.',
+                        introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />A.M.<br />文系私立大学卒<br />2022年入社</div></div></div>`,
+                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>現在はリリース済みシステムの詳細設計書の作成や、これから始まる案件についての資料作成をメインで行っています。未経験から始め、当初は膨大な知識が必要な環境に苦しいこともありました。日々の学習の積み重ねにより、スキルが身についている実感を感じられることが私にとって大きな挑戦と同時にとても価値あるものとなりました。</p>`,
+                        message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>日々の仕事を通して、成長を感じられることはこの仕事の大きな魅力の一つだと感じます。また、キャリアの選択肢が多い点も魅力の一つです。新たな挑戦の機会が豊富に用意されているため、自信の成長を通じてどんなふうになりたいかを常に考えて仕事に励んでいます。</p>`,
+                        message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私の中で就職活動は人生で一番苦労したと共に、自分自身のことを知る一番の機会となりました。自分の得意・不得意、好きなこと・嫌いなことすべてを見つめ返して自分を客観的に観察できる良い機会となります。その経験がこれからの人生にきっと役立ので、自分を信じて突き進んでください！</p>`,
+                        tileColor: 'rgba(0, 37, 92, 0.1)',
+                        shadowColor: 'rgb(0 0 0 / 0.5)',
+                        bgPosition: 'right top'
+                    },
+                    {
+                        src: '/images/recruit/employee/004.jpg',
+                        alt: '人物写真R.T.',
+                        introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />R.T.<br />理系私立大学卒<br />2023年入社</div></div></div>`,
+                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>これから納品するシステムにバグや不具合が無いかを確認する、結合テストの工程に携わっています。</p>`,
+                        message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>テストを一つ消化する毎に、システムの信頼性が高まっていくのを感じられるのが今の業務の好きな部分です。お客様が安心してシステムを運用できることを一つずつ確認していくテスト工程は、大変なところもありますが大きなやりがいを感じます。また、テストを通じてシステムやプログラムの深い部分に触れられるもこの仕事の魅力だと思います。テスト工程でバグや不具合が見つかった際は、どのように対応するかを個人、またはチームで考えていきます。原因や対処方法を探って実践していく工程は、エンジニアとしてのスキルアップを目指せるとてもいい機会になります。やりがいと成長をどちらも感じられる点が、この仕事の好きな所です。</p>`,
+                        message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私が就職活動中に取り組んでよかったと思うことは、自分のアピールポイントの洗い出しを重点的に行ったことです。自己分析を行う中で、経験してきたことや勉強してきたことを些細なことでもいいのでどんどん列挙してみてください。自分では強みにならないと思っているような小さなことでも、周りから見れば立派なアピールポイントだったりもします。また、強みを自覚することは就職活動に対する自信にも繋がるので、自己分析はアピールポイントの洗い出しを強く意識して行うことを私はお勧めします。就職活動中は上手くいかなかったり焦ったりすることもあるかもしれませんが、そういう時だからこそ自分を大切にすることを忘れないでください。</p>`,
+                        tileColor: 'rgba(0, 37, 92, 0.1)',
+                        shadowColor: 'rgb(0 0 0 / 0.5)',
+                        bgPosition: 'center'
                     },
                     // 他の画像オブジェクト...
                 ]"></CarouselEmployee>
