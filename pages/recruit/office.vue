@@ -155,7 +155,7 @@
                                             subText: `<p class='text-sm sm:text-base font-bold sm:leading-7 leading-7'>山手通りに面した本社オフィス。<br />日比谷線/東急東横線「中目黒駅」から山手通り沿いを5分程歩くと見えてくる、<br class='hidden md:inline-block' />1階にお寿司屋さん(築地すし好)が入っているビルです。</p>`,
                                             tileColor: 'rgba(0, 37, 92, 0.1)',
                                             shadowColor: 'rgb(0 0 0 / 0.5)',
-                                            bgPosition: 'center'
+                                            bgPosition: 'bottom center'
                                         },
                                         {
                                             src: '/images/recruit/office/003.png',
