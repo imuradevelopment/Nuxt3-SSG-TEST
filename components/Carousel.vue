@@ -70,19 +70,15 @@ onMounted(() => {
     //     scrollableElement.scrollLeft += e.deltaY;
     // });
 
+
     scrollableElement.addEventListener('wheel', (e) => {
         // 横スクロールが必要かどうかを判断する条件
         const shouldScrollHorizontally =
             scrollableElement.scrollWidth > scrollableElement.clientWidth;
-
         // 横スクロールが最後まで達したかどうかを判断する条件
         const isAtEndOfScroll =
             scrollableElement.scrollLeft + scrollableElement.clientWidth >= scrollableElement.scrollWidth;
-
-        // 横スクロールが最初まで達したかどうかを判断する条件
-        const isAtStartOfScroll = scrollableElement.scrollLeft <= 0;
-
-        if (shouldScrollHorizontally && !isAtEndOfScroll || !isAtStartOfScroll) {
+        if (shouldScrollHorizontally && !isAtEndOfScroll) {
             e.preventDefault();
             scrollableElement.scrollLeft += e.deltaY;
         } else {
@@ -90,11 +86,6 @@ onMounted(() => {
             // ここでは何もしない（ブラウザのデフォルトのスクロール動作を許可する）
         }
     });
-
-
-
-
-
 
 
     selectItem(currentPhotoNumber.currentPhotoNumber);
