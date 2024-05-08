@@ -81,27 +81,20 @@ onMounted(() => {
         const isAtRightEdge =
             scrollableElement.scrollLeft + scrollableElement.clientWidth >= scrollableElement.scrollWidth;
 
-        // 縦スクロールが最後まで達したかどうかを判断する条件
-        const isAtBottomOfScroll =
-            scrollableElement.scrollTop + scrollableElement.clientHeight >= scrollableElement.scrollHeight;
-
         if (shouldScrollHorizontally) {
-            if (isAtLeftEdge && e.deltaY > 0) {
-                // 左端で下にスクロールする場合、右にスクロール
+            if ((isAtLeftEdge && e.deltaY > 0) || (isAtRightEdge && e.deltaY < 0)) {
+                // 左端で下にスクロールする場合、または右端で上にスクロールする場合、横にスクロール
                 e.preventDefault();
-                scrollableElement.scrollLeft += e.deltaY;
-            } else if (isAtRightEdge && e.deltaY < 0) {
-                // 右端で上にスクロールする場合、左にスクロール
-                e.preventDefault();
-                scrollableElement.scrollLeft -= e.deltaY;
+                scrollableElement.scrollLeft += Math.sign(e.deltaY) * 10; // 10はスクロール量を調整するための値
             }
         }
 
         // 横スクロールが最後まで達したか、または始まりにいる場合、縦スクロールを許可する
-        if ((isAtLeftEdge || isAtRightEdge) && !isAtBottomOfScroll) {
+        if (!shouldScrollHorizontally || isAtLeftEdge || isAtRightEdge) {
             scrollableElement.scrollTop += e.deltaY;
         }
     });
+
 
 
 
