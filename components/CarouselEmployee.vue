@@ -142,36 +142,58 @@ onMounted(() => {
     // });
 
     scrollableElement.addEventListener('wheel', (e) => {
+        e.preventDefault();
+
         // 横スクロールが必要かどうかを判断する条件
         const shouldScrollHorizontally =
             scrollableElement.scrollWidth > scrollableElement.clientWidth;
-
-        // 横スクロールが最後まで達したかどうか、または始まりにいるかを判断する条件
-        const isAtEndOfScroll =
-            scrollableElement.scrollLeft + scrollableElement.clientWidth >= scrollableElement.scrollWidth;
-        const isAtStartOfScroll =
-            scrollableElement.scrollLeft <= 0;
 
         // 縦スクロールが必要かどうかを判断する条件
         const shouldScrollVertically =
             scrollableElement.scrollHeight > scrollableElement.clientHeight;
 
-        // 縦スクロールが最後まで達したかどうかを判断する条件
-        const isAtBottomOfScroll =
+        // スクロール位置が左端かどうか
+        const isAtLeftEdge = scrollableElement.scrollLeft <= 0;
+        // スクロール位置が右端かどうか
+        const isAtRightEdge =
+            scrollableElement.scrollLeft + scrollableElement.clientWidth >= scrollableElement.scrollWidth;
+
+        // スクロール位置が上端かどうか
+        const isAtTopEdge = scrollableElement.scrollTop <= 0;
+        // スクロール位置が下端かどうか
+        const isAtBottomEdge =
             scrollableElement.scrollTop + scrollableElement.clientHeight >= scrollableElement.scrollHeight;
 
-        if (shouldScrollHorizontally && !isAtEndOfScroll && !isAtStartOfScroll) {
-            e.preventDefault();
-            scrollableElement.scrollLeft += e.deltaY;
-        } else if (shouldScrollVertically && !isAtBottomOfScroll && e.deltaY > 0) {
-            // 下方向へのスクロール
-            e.preventDefault();
-            scrollableElement.scrollTop += e.deltaY;
-        } else {
-            // 横スクロールが不要、または最後まで達した場合、縦スクロールが不要、または最後まで達した場合、
-            // ブラウザのデフォルトのスクロール動作を許可する
+        // ホイールイベントのデルタ値
+        const delta = e.deltaY;
+
+        if (shouldScrollHorizontally) {
+            if (isAtLeftEdge && delta > 0) {
+                // 左端で下にスクロールする場合、右にスクロール
+                scrollableElement.scrollLeft += delta;
+            } else if (isAtRightEdge && delta < 0) {
+                // 右端で上にスクロールする場合、左にスクロール
+                scrollableElement.scrollLeft += delta;
+            } else if (!isAtLeftEdge && !isAtRightEdge) {
+                // 左右の端ではない場合、横にスクロール
+                scrollableElement.scrollLeft += delta;
+            }
+        }
+
+        if (shouldScrollVertically && !isAtLeftEdge && !isAtRightEdge) {
+            if (isAtTopEdge && delta > 0) {
+                // 上端で下にスクロールする場合、下にスクロール
+                scrollableElement.scrollTop += delta;
+            } else if (isAtBottomEdge && delta < 0) {
+                // 下端で上にスクロールする場合、上にスクロール
+                scrollableElement.scrollTop += delta;
+            } else if (!isAtTopEdge && !isAtBottomEdge) {
+                // 上下の端ではない場合、縦にスクロール
+                scrollableElement.scrollTop += delta;
+            }
         }
     });
+
 
 
 
