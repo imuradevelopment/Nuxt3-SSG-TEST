@@ -141,47 +141,28 @@ onMounted(() => {
     //     scrollableElement.scrollLeft += e.deltaY;
     // });
 
-    // scrollableElement.addEventListener('wheel', (e) => {
-    //     // 横スクロールが必要かどうかを判断する条件
-    //     const shouldScrollHorizontally =
-    //         scrollableElement.scrollWidth > scrollableElement.clientWidth;
-
-    //     // 横スクロールが最後まで達したかどうかを判断する条件
-    //     const isAtEndOfScroll =
-    //         scrollableElement.scrollLeft + scrollableElement.clientWidth >= scrollableElement.scrollWidth;
-
-    //     if (shouldScrollHorizontally && !isAtEndOfScroll) {
-    //         e.preventDefault();
-    //         scrollableElement.scrollLeft += e.deltaY;
-    //     } else {
-    //         // 横スクロールが不要、または最後まで達した場合、縦スクロールを許可する
-    //         // ここでは何もしない（ブラウザのデフォルトのスクロール動作を許可する）
-    //     }
-    // });
     scrollableElement.addEventListener('wheel', (e) => {
         // 横スクロールが必要かどうかを判断する条件
         const shouldScrollHorizontally =
             scrollableElement.scrollWidth > scrollableElement.clientWidth;
 
-        // スクロール位置が左端かどうか
-        const isAtLeftEdge = scrollableElement.scrollLeft <= 0;
-        // スクロール位置が右端かどうか
-        const isAtRightEdge =
+        // 横スクロールが最後まで達したかどうかを判断する条件
+        const isAtEndOfScroll =
             scrollableElement.scrollLeft + scrollableElement.clientWidth >= scrollableElement.scrollWidth;
 
-        if (shouldScrollHorizontally) {
-            if ((isAtLeftEdge && e.deltaY > 0) || (isAtRightEdge && e.deltaY < 0)) {
-                // 左端で下にスクロールする場合、または右端で上にスクロールする場合、横にスクロール
-                e.preventDefault();
-                scrollableElement.scrollLeft += Math.sign(e.deltaY) * 10; // 10はスクロール量を調整するための値
-            }
-        }
+        // 横スクロールが最初まで達したかどうかを判断する条件
+        const isAtStartOfScroll = scrollableElement.scrollLeft <= 0;
 
-        // 横スクロールが最後まで達したか、または始まりにいる場合、縦スクロールを許可する
-        if (!shouldScrollHorizontally || isAtLeftEdge || isAtRightEdge) {
-            scrollableElement.scrollTop += e.deltaY;
+        if (shouldScrollHorizontally && !isAtEndOfScroll || !isAtStartOfScroll) {
+            e.preventDefault();
+            scrollableElement.scrollLeft += e.deltaY;
+        } else {
+            // 横スクロールが不要、または最後まで達した場合、縦スクロールを許可する
+            // ここでは何もしない（ブラウザのデフォルトのスクロール動作を許可する）
         }
     });
+
+
 
 
 
