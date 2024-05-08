@@ -25,7 +25,7 @@
                         src: '/images/recruit/employee/005.jpg',
                         alt: '人物写真T.I.',
                         introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />T.I.<br />文系私立大学卒<br />2023年入社</div></div></div>`,
-        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>従来紙ベースで行われていた書類のやり取りを、デジタル化しシステム上で送受信可能にする開発に携わっています。</p>`,
+                        message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>従来紙ベースで行われていた書類のやり取りを、デジタル化しシステム上で送受信可能にする開発に携わっています。</p>`,
                         message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>プログラミング未経験からの入社でしたが、わからなかったことが少しずつ理解できるようになったり、全然できなかったことが今ではできるようになったりと自分の成長が目に見えて感じられるのが嬉しいです。また、チームでの作業も楽しいです。時には一人では解決できない問題が出てきたとき、チーム全体で協力して解決していくプロセスがとても面白いですし、チームで一つのモノを作り上げていく作業にはやりがいも感じます。一つのプロジェクトを完成させていく過程で、多くのことを学び、成長することができるのも魅力的だと思います。</p>`,
                         message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>それぞれの人にとって、決め手となる要素(会社の仕事内容、環境、雰囲気など)は異なると思います。それを探すためにも、様々な会社（規模、業界、職種など含めて）を見てみることが大切だと考えます。就職活動中は、様々な会社や職種の方とお話することができるまたとない機会なので、説明会やイベントに積極的に参加し、新たな出会いや情報を得ることで、自分に合った道が見えてくるかもしれません。その上で情報を取捨選択していきながら、幅広い選択肢から自分自身が納得できるような結果を見つけていってほしいと思います。</p>`,
                         tileColor: 'rgba(0, 37, 92, 0.1)',
