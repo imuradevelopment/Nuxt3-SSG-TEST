@@ -21,7 +21,7 @@
             </el-menu-item>
             <el-menu-item index="/access" class="el-menu-item-custom2">
                 <el-button type="primary" class="el-button-custom">
-                    <NuxtLink @click="scrollToTarget()" to="/access">アクセス</NuxtLink>
+                    <NuxtLink @click="scrollToTarget()" to="/company#company05">アクセス</NuxtLink>
                 </el-button>
             </el-menu-item>
             <el-menu-item index="/contact" class="el-menu-item-custom2" style="margin-right: 0px;">
