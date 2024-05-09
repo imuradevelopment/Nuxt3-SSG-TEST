@@ -147,7 +147,7 @@ onMounted(() => {
             scrollableElement.scrollWidth > scrollableElement.clientWidth;
         // 横スクロールが最後まで達したかどうかを判断する条件
         const isAtEndOfScroll =
-            scrollableElement.scrollLeft + scrollableElement.clientWidth >= scrollableElement.scrollWidth;
+            Math.abs(scrollableElement.scrollLeft + scrollableElement.clientWidth - scrollableElement.scrollWidth) < 0.5;
         if (shouldScrollHorizontally && !isAtEndOfScroll) {
             e.preventDefault();
             scrollableElement.scrollLeft += e.deltaY;
@@ -339,13 +339,13 @@ const itemFocus = (index: number) => {
 
 /* スクロールバーのトラック（背景部分）のスタイル */
 .carousel::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 10, 135, 0.3);
     /* 背景色を透明度の低い黒に */
 }
 
 /* スクロールバーのサム（動かす部分）のスタイル */
 .carousel::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 10, 135, 0.4);
     /* サムの色を透明度のやや高い黒に */
     border-radius: 4px;
     /* 角を丸く */
@@ -353,7 +353,7 @@ const itemFocus = (index: number) => {
 
 /* スクロールバーのサムにホバーしたときのスタイル */
 .carousel::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 10, 135, 0.5);
     /* ホバー時の色を少し濃く */
 }
 
