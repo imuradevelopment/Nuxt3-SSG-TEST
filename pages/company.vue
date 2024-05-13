@@ -269,11 +269,8 @@
                   </NuxtLink>
                 </div>
                 <!-- <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg> -->
-                <!-- <div class="h-full flex justify-center items-center">
-                  <video id="video" src="/videos/vaile.mp4" poster="/images/company/007.png" controls class="w-full"></video>
-                </div> -->
                 <div class="h-full flex justify-center items-center">
-                  <video id="video" src="/videos/vaile.mp4" controls class="w-full"></video>
+                  <video id="video" src="/videos/vaile.mp4" poster="/images/company/image007.png" controls class="w-full h-full"></video>
                 </div>
               </div>
             </div>
@@ -371,28 +368,6 @@ const companySummary = [
 </script>
 
 <style scoped>
-#video {
-  width: 640px;
-  /* 動画の横幅を指定 */
-  height: 360px;
-  /* 動画の高さを指定 */
-}
-
-#video::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url('/images/company/007.png') no-repeat center center;
-  background-size: cover;
-  /* サムネイル画像をカバーとして設定 */
-  width: 100%;
-  /* コンテナの幅に合わせる */
-  height: 100%;
-  /* コンテナの高さに合わせる */
-}
-
 .wrappedFirstChild {
   flex-basis: 36rem;
 }
