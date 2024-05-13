@@ -17,7 +17,8 @@
     </ClearGlassMaskCard>
     <div class="mx-4">
       <section class="text-center mt-8 md:mt-20">
-        <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">TOPメッセージ</h2>
+        <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">TOPメッセージ
+        </h2>
 
         <CustomFrameCard>
           <template #title>
@@ -267,7 +268,10 @@
                     Google Mapで開く
                   </NuxtLink>
                 </div>
-                <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg>
+                <!-- <NuxtImg src="/images/company/image07.png" alt="Image" class="w-full h-full object-cover"></NuxtImg> -->
+                <div class="h-full flex justify-center items-center">
+                  <video id="video" src="/videos/vaile.mp4" poster="/images/company/007.png" controls class="w-full"></video>
+                </div>
               </div>
             </div>
           </template>
@@ -287,6 +291,15 @@ import ClipPentagon from '~/components/ClipPentagon.vue'
 import ClipConvexPolygon from '~/components/ClipConvexPolygon.vue'
 
 import useDetectWrap from '~/composables/useDetectWrap'
+
+const videoVolume = ref(0.3); // 音量を50%に設定
+
+onMounted(() => {
+  const videoElement = document.querySelector('video') as HTMLVideoElement;
+  if (videoElement) {
+    videoElement.volume = videoVolume.value;
+  }
+});
 
 interface CompanySummaryItem {
   column1: string;
