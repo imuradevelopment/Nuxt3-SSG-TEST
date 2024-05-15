@@ -203,7 +203,7 @@
                                     </p>
                                     <p
                                         class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
-                                        通勤する現場は都内近郊になります。基本的にお住まいの場所から通勤１時間程度の現場に参画頂きます。お住まいの場所によっては少しオーバーしてしまう事も有りますが、その際はご相談した上で決定します。
+                                        転勤や長時間の通勤は基本的に有りません。通勤する現場は都内近郊になります。基本的にお住まいの場所から通勤１時間程度の現場に参画頂きます。お住まいの場所によっては少しオーバーしてしまう事も有りますが、その際はご相談した上で決定します。
                                     </p>
                                 </div>
                             </template>
@@ -346,12 +346,12 @@
                                     <p
                                         class="mb-2 pl-4 text-sm md:text-xl md:leading-loose border-l-4 border-custom-blue">
                                         お問い合わせフォームからご質問内容を入力・送信いただければ、後日回答を差し上げます。正式なエントリーではなくても、ご遠慮なくお問い合わせください。
-                                        <div class="mt-4 flex justify-end items-center">
-                                            <CustomArrowButton color-type="blue-bg-white" arrowType="transition"
-                                                to="/contact"><template #buttonText>
-                                                    お問い合せフォームへ
-                                                </template></CustomArrowButton>
-                                        </div>
+                                    <div class="mt-4 flex justify-end items-center">
+                                        <CustomArrowButton color-type="blue-bg-white" arrowType="transition"
+                                            to="/contact"><template #buttonText>
+                                                お問い合せフォームへ
+                                            </template></CustomArrowButton>
+                                    </div>
                                     </p>
                                 </div>
                             </template>
