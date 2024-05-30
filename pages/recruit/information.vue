@@ -16,9 +16,9 @@
             </div>
         </section>
 
-        <section class="h-full w-full pr-4 mb-12 md:mb-24">
-            <div class="grid grid-flow-col grid-cols-12 grid-rows-6 gap-4">
-                <div class="col-span-12 row-span-2 md:col-span-8 md:row-span-6">
+        <section class="h-full w-full px-4 md:pl-0 mb-12 md:mb-24">
+            <div class="grid grid-flow-col grid-cols-11 grid-rows-12 gap-4">
+                <div class="col-span-12 row-span-7 md:col-span-8 md:row-span-12">
                     <el-tabs v-model="activeName" type="card" class="tabs" @tab-click="handleClick">
                         <el-tab-pane label="新卒採用" name="first">
                             <section>
@@ -188,7 +188,7 @@
                         </el-tab-pane>
                     </el-tabs>
                 </div>
-                <div class="col-span-12 row-span-2 md:col-span-4 md:row-span-3">
+                <div class="col-span-12 row-span-4 md:col-span-4 md:row-span-12">
                     <div class="flex flex-col gap-4">
                         <p class="self-center text-lg font-bold">エントリーはこちらから</p>
                         <BlurGlassCard class="self-center max-w-xs">
@@ -209,11 +209,19 @@
                                 </div>
                             </div>
                         </BlurGlassCard>
+                        <p class="self-center text-lg font-bold">採用フロー</p>
+                        <BlurGlassCard class="self-center">
+                            <Step :steps="steps" />
+                        </BlurGlassCard>
                     </div>
                 </div>
-                <div class="col-span-12 row-span-2 md:col-span-4 md:row-span-3">
-                    bbb
-                </div>
+                <!-- <div class="col-span-12 row-span-2 md:col-span-4 md:row-span-3">
+                    <div class="flex flex-col gap-4">
+                        <BlurGlassCard class="self-center">
+                            <Step :steps="steps" />
+                        </BlurGlassCard>
+                    </div>
+                </div> -->
             </div>
         </section>
     </div>
@@ -226,12 +234,19 @@ definePageMeta({
 import { ref } from 'vue'
 import type { TabsPaneContext } from 'element-plus'
 import BlurGlassCard from '~/components/BlurGlassCard.vue'
+import Step from '~/components/Step.vue'
 
 const activeName = ref('first')
 
 const handleClick = (tab: TabsPaneContext, event: Event) => {
     console.log(tab, event)
 }
+
+const steps = ref([
+    { title: 'Step 1', details: 'This is the first step.' },
+    { title: 'Step 2', details: 'This is the second step.' },
+    { title: 'Step 3', details: 'This is the third step.' },
+])
 </script>
 
 <style>
