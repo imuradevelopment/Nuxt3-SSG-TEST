@@ -280,6 +280,20 @@ const steps = ref([
     border-top-right-radius: 0.375rem !important;
     background-color: var(--cumtom-color-lightIvory);
     transition: color var(--el-transition-duration) var(--el-transition-function-ease-in-out-bezier), padding var(--el-transition-duration) var(--el-transition-function-ease-in-out-bezier) !important;
+    font-size: large;
+}
+
+@media screen and (max-width: 768px) {
+.el-tabs--card>.el-tabs__header .el-tabs__item {
+        border-bottom: 1px solid #0000 !important;
+        border-left: 1px solid var(--el-border-color-light) !important;
+        border-right: 1px solid var(--el-border-color-light) !important;
+        border-top: 1px solid var(--el-border-color-light) !important;
+        border-top-left-radius: 0.375rem !important;
+        border-top-right-radius: 0.375rem !important;
+        background-color: var(--cumtom-color-lightIvory);
+        transition: color var(--el-transition-duration) var(--el-transition-function-ease-in-out-bezier), padding var(--el-transition-duration) var(--el-transition-function-ease-in-out-bezier) !important;
+    }
 }
 
 .el-tabs__item.is-active,
