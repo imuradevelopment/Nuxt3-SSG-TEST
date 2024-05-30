@@ -173,8 +173,8 @@
                                             <div
                                                 class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
                                                 【応募方法】<br />
-                                                新卒採用につきましては、<span class="inline-block md:hidden">下記</span><span
-                                                    class="hidden md:inline-block">右記</span>リンクからマイナビ、リクナビにてご確認の上エントリーください。
+                                                新卒採用につきましては、<span class="contents md:hidden">下記</span><span
+                                                    class="hidden md:contents">右記</span>リンクからマイナビ、リクナビにてご確認の上エントリーください。
                                             </div>
                                         </div>
                                     </div>
