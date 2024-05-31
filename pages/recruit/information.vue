@@ -329,7 +329,7 @@
                                                     【応募方法】<br />
                                                     お問い合わせフォームからご応募ください。<br />
                                                     追ってこちらからご連絡さし上げます。<br />
-                                                    <CustomArrowButton color-type="blue-bg-white" arrowType="transition"
+                                                    <CustomArrowButton color-type="white" arrowType="transition"
                                                         to="/contact"><template #buttonText>
                                                             <Pointer class="h-6 w-6 inline" />お問い合わせ
                                                         </template></CustomArrowButton>
@@ -457,7 +457,7 @@
                                                     【応募方法】<br />
                                                     お問い合わせフォームからご応募ください。<br />
                                                     追ってこちらからご連絡さし上げます。<br />
-                                                    <CustomArrowButton color-type="blue-bg-white" arrowType="transition"
+                                                    <CustomArrowButton color-type="white" arrowType="transition"
                                                         to="/contact"><template #buttonText>
                                                             <Pointer class="h-6 w-6 inline" />お問い合わせ
                                                         </template></CustomArrowButton>
