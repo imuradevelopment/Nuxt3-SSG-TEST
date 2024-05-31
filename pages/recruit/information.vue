@@ -50,7 +50,7 @@
                                             <div
                                                 class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
                                                 <div class="font-bold">
-                                                    新卒採用
+                                                    正社員
                                                 </div>
                                             </div>
                                         </div>
@@ -170,7 +170,7 @@
                                                 <div class="font-bold">
                                                     【応募方法】<br />
                                                     新卒採用につきましては、<span class="contents md:hidden">下記</span><span
-                                                        class="hidden md:contents">右記</span>リンクからマイナビ、リクナビにてご確認の上エントリーください。
+                                                        class="hidden md:contents">右記</span>リンクからリクナビ、マイナビにてご確認の上エントリーください。
                                                 </div>
                                             </div>
                                         </div>
@@ -188,7 +188,7 @@
                                                 募集情報</div>
                                             <div
                                                 class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-y border-custom-deepBlue/30 flex items-center">
-                                                サーバー設計・構築エンジニア ※未経験者の方もOK
+                                                アプリケーションエンジニア、インフラエンジニア
                                             </div>
                                         </div>
                                         <div class="flex flex-nowrap">
@@ -208,7 +208,7 @@
                                             <div
                                                 class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
                                                 <div class="font-bold">
-                                                    キャリア採用
+                                                    正社員
                                                 </div>
                                             </div>
                                         </div>
@@ -328,7 +328,11 @@
                                                 <div class="font-bold">
                                                     【応募方法】<br />
                                                     お問い合わせフォームからご応募ください。<br />
-                                                    追ってこちらからご連絡さし上げます。
+                                                    追ってこちらからご連絡さし上げます。<br />
+                                                    <CustomArrowButton color-type="blue-bg-white" arrowType="transition"
+                                                        to="/contact"><template #buttonText>
+                                                            <Pointer class="h-6 w-6 inline" />お問い合わせ
+                                                        </template></CustomArrowButton>
                                                 </div>
                                             </div>
                                         </div>
@@ -346,7 +350,7 @@
                                                 募集情報</div>
                                             <div
                                                 class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-y border-custom-deepBlue/30 flex items-center">
-                                                サーバー設計・構築エンジニア ※未経験者の方もOK
+                                                アプリケーションエンジニア、インフラエンジニア
                                             </div>
                                         </div>
                                         <div class="flex flex-nowrap">
@@ -452,7 +456,11 @@
                                                 <div class="font-bold">
                                                     【応募方法】<br />
                                                     お問い合わせフォームからご応募ください。<br />
-                                                    追ってこちらからご連絡さし上げます。
+                                                    追ってこちらからご連絡さし上げます。<br />
+                                                    <CustomArrowButton color-type="blue-bg-white" arrowType="transition"
+                                                        to="/contact"><template #buttonText>
+                                                            <Pointer class="h-6 w-6 inline" />お問い合わせ
+                                                        </template></CustomArrowButton>
                                                 </div>
                                             </div>
                                         </div>
@@ -468,16 +476,16 @@
                         <BlurGlassCard class="self-center max-w-xs">
                             <div class="flex flex-col gap-4">
                                 <div>
-                                    <a href="https://job.mynavi.jp/25/pc/search/corp267137/outline.html" target="_blank"
+                                    <a href="https://job.rikunabi.com/2025/company/r110010051/" target="_blank"
                                         rel="noopener noreferrer">
-                                        <img src="/images/recruit/information/002.png" alt="External Link Image"
+                                        <img src="/images/recruit/information/003.png" alt="External Link Image"
                                             class="h-12 w-full bg-white cursor-pointer">
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="https://job.rikunabi.com/2025/company/r110010051/" target="_blank"
+                                    <a href="https://job.mynavi.jp/25/pc/search/corp267137/outline.html" target="_blank"
                                         rel="noopener noreferrer">
-                                        <img src="/images/recruit/information/003.png" alt="External Link Image"
+                                        <img src="/images/recruit/information/002.png" alt="External Link Image"
                                             class="h-12 w-full bg-white cursor-pointer">
                                     </a>
                                 </div>
@@ -508,6 +516,7 @@ definePageMeta({
 import { ref } from 'vue'
 import type { TabsPaneContext } from 'element-plus'
 import BlurGlassCard from '~/components/BlurGlassCard.vue'
+import CustomArrowButton from '~/components/CustomArrowButton.vue'
 import Step from '~/components/Step.vue'
 
 const activeName = ref('first')
