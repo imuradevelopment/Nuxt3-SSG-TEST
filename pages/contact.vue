@@ -16,6 +16,7 @@
             <el-step title="Step 3" />
         </el-steps>
 
+
         <div class="flex justify-center items-center">
             <div class="w-4/6 flex justify-center items-center">
                 <form v-if="active == 1" class="mb-4 w-full">
@@ -24,7 +25,12 @@
                             ステップ1
                         </div>
                         <div class="flex w-full justify-center items-center">
-                            <el-button @click="next">この内容で確認する</el-button>
+                            <!-- <el-button type="primary" @click="next">この内容で確認する</el-button> -->
+                            <CustomArrowEventButton color-type="blue-bg-white" arrowType="none" :click-handler="next">
+                                <template #buttonText>
+                                    この内容で確認する
+                                </template>
+                            </CustomArrowEventButton>
                         </div>
                     </div>
                 </form>
@@ -34,8 +40,18 @@
                             ステップ2
                         </div>
                         <div class="flex w-full justify-center items-center">
-                            <el-button @click="prev">修正する</el-button>
-                            <el-button @click="next">問い合わせする</el-button>
+                            <!-- <el-button type="info" @click="prev">修正する</el-button>
+                            <el-button type="primary" @click="next">問い合わせする</el-button> -->
+                            <CustomArrowEventButton color-type="yellow" arrowType="none" :click-handler="prev">
+                                <template #buttonText>
+                                    修正する
+                                </template>
+                            </CustomArrowEventButton>
+                            <CustomArrowEventButton color-type="blue-bg-white" arrowType="none" :click-handler="next">
+                                <template #buttonText>
+                                    問い合わせする
+                                </template>
+                            </CustomArrowEventButton>
                         </div>
                     </div>
                 </form>
@@ -45,7 +61,12 @@
                             ステップ3
                         </div>
                         <div class="flex w-full justify-center items-center">
-                            <el-button @click="next">Topに戻る</el-button>
+                            <!-- <el-button type="primary" @click="next">Topに戻る</el-button> -->
+                            <CustomArrowEventButton color-type="blue-bg-white" arrowType="none" to="/">
+                                <template #buttonText>
+                                    Topに戻る
+                                </template>
+                            </CustomArrowEventButton>
                         </div>
                     </div>
                 </form>
@@ -62,6 +83,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import CustomArrowEventButton from '~/components/CustomArrowEventButton.vue'
+import CustomArrowButton from '~/components/CustomArrowButton.vue'
 
 const active = ref(1)
 
@@ -76,5 +99,4 @@ const prev = () => {
     if (active.value-- <= startIndex) active.value = finalIndex
 }
 </script>
-
 <style scoped></style>
