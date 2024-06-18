@@ -26,11 +26,11 @@
                         </div>
                         <div class="flex w-full justify-center items-center">
                             <!-- <el-button type="primary" @click="next">この内容で確認する</el-button> -->
-                            <CustomArrowEventButton color-type="blue-bg-white" arrowType="none" :click-handler="next">
+                            <CustomArrowButton color-type="blue-bg-white" arrowType="none" :on-click="next">
                                 <template #buttonText>
                                     この内容で確認する
                                 </template>
-                            </CustomArrowEventButton>
+                            </CustomArrowButton>
                         </div>
                     </div>
                 </form>
@@ -42,16 +42,16 @@
                         <div class="flex w-full justify-center items-center">
                             <!-- <el-button type="info" @click="prev">修正する</el-button>
                             <el-button type="primary" @click="next">問い合わせする</el-button> -->
-                            <CustomArrowEventButton color-type="yellow" arrowType="none" :click-handler="prev">
+                            <CustomArrowButton color-type="yellow" arrowType="none" :on-click="prev">
                                 <template #buttonText>
                                     修正する
                                 </template>
-                            </CustomArrowEventButton>
-                            <CustomArrowEventButton color-type="blue-bg-white" arrowType="none" :click-handler="next">
+                            </CustomArrowButton>
+                            <CustomArrowButton color-type="blue-bg-white" arrowType="none" :on-click="next">
                                 <template #buttonText>
                                     問い合わせする
                                 </template>
-                            </CustomArrowEventButton>
+                            </CustomArrowButton>
                         </div>
                     </div>
                 </form>
@@ -62,11 +62,11 @@
                         </div>
                         <div class="flex w-full justify-center items-center">
                             <!-- <el-button type="primary" @click="next">Topに戻る</el-button> -->
-                            <CustomArrowEventButton color-type="blue-bg-white" arrowType="none" to="/">
+                            <CustomArrowButton color-type="blue-bg-white" arrowType="none" to="/">
                                 <template #buttonText>
                                     Topに戻る
                                 </template>
-                            </CustomArrowEventButton>
+                            </CustomArrowButton>
                         </div>
                     </div>
                 </form>
