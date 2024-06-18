@@ -210,18 +210,32 @@ const isOuter = computed(() => {
 // ルーターを使用してページ遷移を行う
 const router = useRouter();
 const handleClick = (event: Event) => {
-    // デフォルトの遷移動作を防ぐ
-    if (props.onClick) {
-        props.onClick(event);
-    }
+    const link = event.currentTarget as HTMLElement;
+    const handleTransitionEnd = () => {
+        link.removeEventListener("transitionend", handleTransitionEnd);
 
-    if (props.to) {
-        event.preventDefault();
-        // 遷移先のURLを取得
-        const targetPage = props.to;
-        // アニメーションなしで即座に遷移する
-        router.push(targetPage);
-        useScrollToTarget();
+        if (props.onClick) {
+            props.onClick(event);
+        }
+
+        if (props.to) {
+            event.preventDefault();
+            const targetPage = props.to;
+            router.push(targetPage);
+            useScrollToTarget();
+        }
+    };
+
+    // アニメーションが実行中かどうかを判定
+    const computedStyle = window.getComputedStyle(link);
+    const transitionDuration = parseFloat(computedStyle.transitionDuration) || 0;
+    const transitionDelay = parseFloat(computedStyle.transitionDelay) || 0;
+    const totalTransitionTime = (transitionDuration + transitionDelay) * 1000;
+
+    if (totalTransitionTime > 0) {
+        link.addEventListener("transitionend", handleTransitionEnd);
+    } else {
+        handleTransitionEnd();
     }
 };
 </script>
