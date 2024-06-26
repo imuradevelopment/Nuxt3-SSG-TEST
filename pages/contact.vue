@@ -293,7 +293,7 @@ const submitForm = async () => {
           inquiry_type: form.inquiryType,
           employment_type: form.employmentType,
           message: form.inquiryContent,
-          to_name: "Imura"  // これはテンプレートで受け取る名前です。変更可能です。
+          to_name: "【TEST】"  // これはテンプレートで受け取る名前です。変更可能です。
         },
         'UT32c97BFl2Tqs76R'
       )
