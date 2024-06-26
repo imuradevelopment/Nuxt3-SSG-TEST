@@ -29,6 +29,7 @@
     "@pinia/nuxt": "^0.5.1",
     "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
+    "emailjs-com": "^3.2.0",
     "nuxt-microcms-module": "^3.0.2",
     "pinia": "^2.1.6",
     "swiper": "^11.0.5",
