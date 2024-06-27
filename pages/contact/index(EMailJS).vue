@@ -241,6 +241,7 @@
 
 <script setup>
 import { ref, reactive, computed } from 'vue'
+import emailjs from 'emailjs-com'
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
 
 const active = ref(1)
@@ -353,31 +354,38 @@ const validateForm = () => {
 }
 
 const submitForm = async () => {
-  Object.keys(form).forEach((field) => validateField(field));
+  Object.keys(form).forEach((field) => validateField(field))
 
   if (Object.keys(errors).length === 0) {
     try {
-      const response = await fetch('http://localhost:8000/common/sendmail.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
+      const result = await emailjs.send(
+        'GmailTEST',
+        'GmailTemplateTEST',
+        {
+          company_name: from.companyName,
+          from_name: form.lastName,
+          kana_name: form.kanaName,
+          reply_to: form.email,
+          phone: form.phone,
+          inquiry_type: form.inquiryType,
+          employment_type: form.employmentType,
+          message: form.inquiryContent,
+          to_name: "Imura"
         },
-        body: JSON.stringify(form),
-        mode: 'cors'
-      });
+        'UT32c97BFl2Tqs76R'
+      )
 
-      if (response.ok) {
-        active.value = 3;
+      if (result.status === 200) {
+        active.value = 3
       } else {
-        alert('メール送信に失敗しました');
+        alert(`メール送信に失敗しました: ${result.text}`)
       }
     } catch (error) {
-      console.error(error);
-      alert('エラーが発生しました: ' + error.message);
+      console.error(error)
+      alert('エラーが発生しました: ' + error.message)
     }
   }
-};
-
+}
 
 const handleInquiryTypeChange = () => {
   if (form.inquiryType !== '採用に関するお問い合わせ') {
