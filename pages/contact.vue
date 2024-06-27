@@ -11,14 +11,14 @@
       </div>
     </div>
     <el-steps class="mb-4" style="max-width: 1280px" :active="active" align-center>
-      <el-step title="Step 1" />
-      <el-step title="Step 2" />
-      <el-step title="Step 3" />
+      <el-step title="フォーム入力" />
+      <el-step title="フォームの内容確認" />
+      <el-step title="完了" />
     </el-steps>
 
     <div class="flex justify-center items-center">
       <div class="w-4/6 flex justify-center items-center">
-        <form v-if="active == 1" class="mb-4 w-full" @submit.prevent="submitForm">
+        <form v-if="active == 1" class="mb-4 w-full">
           <div class="w-full flex flex-col">
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
@@ -113,45 +113,47 @@
                   <span>{{ error }}</span>
                 </div>
               </div>
-              <button :disabled="!isFormValid"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="submit">
-                 送信
-              </button>
+              <CustomArrowButton color-type="blue-bg-white" arrowType="none" @click="nextStep">
+                <template #buttonText>
+                  この内容で確認する
+                </template>
+              </CustomArrowButton>
             </div>
-          </div>
-          <div class="flex w-full justify-center items-center">
-            <CustomArrowButton color-type="blue-bg-white" arrowType="none" :on-click="next">
-              <template #buttonText>
-                この内容で確認する
-              </template>
-            </CustomArrowButton>
           </div>
         </form>
-        <form v-if="active == 2" class="mb-4 w-full">
+
+        <div v-if="active == 2" class="mb-4 w-full">
           <div class="w-full flex flex-col">
-            <div class="flex w-full">
-              ステップ2
+            <h3 class="mb-4 text-2xl font-bold">フォームの内容確認</h3>
+            <div class="mb-4">
+              <p><strong>氏名:</strong> {{ form.lastName }}</p>
+              <p><strong>氏名（フリガナ）:</strong> {{ form.kanaName }}</p>
+              <p><strong>メールアドレス:</strong> {{ form.email }}</p>
+              <p><strong>電話番号:</strong> {{ form.phone }}</p>
+              <p><strong>お問い合わせ区分:</strong> {{ form.inquiryType }}</p>
+              <p><strong>採用区分:</strong> {{ form.employmentType }}</p>
+              <p><strong>お問い合わせ内容:</strong> {{ form.inquiryContent }}</p>
+              <p><strong>個人情報の取り扱いに同意:</strong> {{ form.agree ? '同意する' : '同意しない' }}</p>
             </div>
-            <div class="flex w-full justify-center items-center">
-              <CustomArrowButton color-type="yellow" arrowType="none" :on-click="prev">
+            <div class="flex w-full justify-center items-center gap-4">
+              <CustomArrowButton color-type="yellow" arrowType="none" @click="prevStep">
                 <template #buttonText>
                   修正する
                 </template>
               </CustomArrowButton>
-              <CustomArrowButton color-type="blue-bg-white" arrowType="none" :on-click="next">
+              <CustomArrowButton color-type="blue-bg-white" arrowType="none" @click="submitForm">
                 <template #buttonText>
-                  問い合わせする
+                  お問い合わせする
                 </template>
               </CustomArrowButton>
             </div>
           </div>
-        </form>
-        <form v-if="active == 3" class="mb-4 w-full">
+        </div>
+
+        <div v-if="active == 3" class="mb-4 w-full">
           <div class="w-full flex flex-col">
-            <div class="flex w-full">
-              ステップ3
-            </div>
+            <h3 class="mb-4 text-2xl font-bold">完了</h3>
+            <p>お問い合わせいただきありがとうございます。担当者が確認次第、ご連絡いたします。</p>
             <div class="flex w-full justify-center items-center">
               <CustomArrowButton color-type="blue-bg-white" arrowType="none" to="/">
                 <template #buttonText>
@@ -160,12 +162,6 @@
               </CustomArrowButton>
             </div>
           </div>
-        </form>
-        <div v-if="active == 1">
-        </div>
-        <div v-if="active == 2" class="flex justify-center items-center gap-10">
-        </div>
-        <div v-if="active == 3">
         </div>
       </div>
     </div>
@@ -181,12 +177,12 @@ const active = ref(1)
 const startIndex = 1
 const finalIndex = 3
 
-const next = () => {
-  if (active.value++ >= finalIndex) active.value = startIndex
+const nextStep = () => {
+  if (active.value < finalIndex) active.value++
 }
 
-const prev = () => {
-  if (active.value-- <= startIndex) active.value = finalIndex
+const prevStep = () => {
+  if (active.value > startIndex) active.value--
 }
 
 const form = reactive({
@@ -293,21 +289,13 @@ const submitForm = async () => {
           inquiry_type: form.inquiryType,
           employment_type: form.employmentType,
           message: form.inquiryContent,
-          to_name: "【TEST】"  // これはテンプレートで受け取る名前です。変更可能です。
+          to_name: "Imura"
         },
         'UT32c97BFl2Tqs76R'
       )
 
       if (result.status === 200) {
-        alert('メールが送信されました')
-        form.lastName = ''
-        form.kanaName = ''
-        form.email = ''
-        form.phone = ''
-        form.inquiryType = ''
-        form.employmentType = ''
-        form.inquiryContent = ''
-        form.agree = false
+        active.value = 3
       } else {
         alert(`メール送信に失敗しました: ${result.text}`)
       }
