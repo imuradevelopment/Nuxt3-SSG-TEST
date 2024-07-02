@@ -243,18 +243,22 @@
 import { ref, reactive, computed } from 'vue'
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
 
-const active = ref(1)
-const startIndex = 1
-const finalIndex = 3
+// フォームのステップ管理に使用する変数
+const active = ref(1) // 現在のアクティブなステップ
+const startIndex = 1 // 最初のステップのインデックス
+const finalIndex = 3 // 最後のステップのインデックス
 
+// 次のステップに進む関数
 const nextStep = () => {
   if (active.value < finalIndex) active.value++
 }
 
+// 前のステップに戻る関数
 const prevStep = () => {
   if (active.value > startIndex) active.value--
 }
 
+// フォームのデータを管理するリアクティブオブジェクト
 const form = reactive({
   companyName: '',
   lastName: '',
@@ -267,8 +271,10 @@ const form = reactive({
   agree: false,
 })
 
+// バリデーションエラーを管理するリアクティブオブジェクト
 const errors = reactive({})
 
+// フィールドのバリデーションを行う関数
 const validateField = (field) => {
   switch (field) {
     case 'lastName':
@@ -344,6 +350,7 @@ const validateField = (field) => {
   }
 }
 
+// フォーム全体のバリデーションを行い、次のステップに進むかどうかを判断する関数
 const validateForm = () => {
   Object.keys(form).forEach((field) => validateField(field))
 
@@ -352,20 +359,25 @@ const validateForm = () => {
   }
 }
 
+// フォームの内容をサーバーに送信する関数
 const submitForm = async () => {
+  // フォームの各フィールドをバリデーションする
   Object.keys(form).forEach((field) => validateField(field));
 
+  // バリデーションエラーがない場合にのみフォームを送信する
   if (Object.keys(errors).length === 0) {
     try {
-      const response = await fetch('http://localhost:8000/common/sendmail.php', {
+      // フォームデータをサーバーに送信する
+      const response = await fetch('/common/sendmail.php', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: JSON.stringify(form),
-        mode: 'cors'
+        body: new URLSearchParams(form),
+        mode: 'same-origin'
       });
 
+      // レスポンスが正常な場合は完了ステップに進む
       if (response.ok) {
         active.value = 3;
       } else {
@@ -378,7 +390,7 @@ const submitForm = async () => {
   }
 };
 
-
+// お問い合わせ区分が変更されたときに実行される関数
 const handleInquiryTypeChange = () => {
   if (form.inquiryType !== '採用に関するお問い合わせ') {
     form.employmentType = ''
@@ -386,6 +398,7 @@ const handleInquiryTypeChange = () => {
   validateField('inquiryType')
 }
 
+// フォームがバリデーションエラーなしであるかどうかを判断する計算プロパティ
 const isFormValid = computed(() => Object.keys(errors).length === 0)
 </script>
 
