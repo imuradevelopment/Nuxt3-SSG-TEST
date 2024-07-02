@@ -39,18 +39,21 @@ error_log("Inquiry content: " . $inquiryContent);
 // お問い合わせ区分に応じた送信先メールアドレスの設定
 switch ($inquiryType) {
     case '個人情報に関するお問い合わせ':
-        $to = 'privacy-v@vaile.co.jp';
+        // $to = 'privacy-v@vaile.co.jp';
+        $to = 'yuta.miyaura@gmail.com';
         break;
     case '採用に関するお問い合わせ':
-        $to = 'recruit-v@vaile.co.jp';
+        // $to = 'recruit-v@vaile.co.jp';
+        $to = 'yuta.miyaura@gmail.com';
         break;
     default:
-        $to = 'business-v@vaile.co.jp';
+        // $to = 'business-v@vaile.co.jp';
+        $to = 'yuta.miyaura@gmail.com';
         break;
 }
 
 $subject = "お問い合わせフォームからのメッセージ";
-$headers = "From: noreply@example.com" . "\r\n" .
+$headers = "From: noreply@vaile.co.jp" . "\r\n" .
            "Reply-To: " . $email . "\r\n" .
            "Content-Type: text/plain; charset=UTF-8";
 
