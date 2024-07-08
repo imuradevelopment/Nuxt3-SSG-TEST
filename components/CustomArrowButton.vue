@@ -218,14 +218,15 @@ const handleClick = (event: Event) => {
         if (props.to && props.to !== 'javascript:void(0);') {
             event.preventDefault();
             const targetPage = props.to;
-            router.push(targetPage);
-            useScrollToTarget();
+            router.push(targetPage).then(() => {
+                useScrollToTarget();
+            });
         }
     };
 
     isAnimating.value = true;
 
-    link.addEventListener('transitionend', handleTransitionEnd);
+    link.addEventListener('transitionend', handleTransitionEnd, { once: true });
 
     // 安全のため、transitionendイベントが発火しない場合に備えてタイムアウトを設定
     setTimeout(() => {
