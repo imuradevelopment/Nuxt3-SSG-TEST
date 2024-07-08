@@ -13,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useScrollToTarget } from '~/composables/useScrollToTarget';
 
-// コンポーネントに渡されるプロパティ
 const props = defineProps({
     to: {
         type: String,
@@ -49,7 +49,6 @@ const props = defineProps({
     },
 });
 
-// スタイル用の計算プロパティを定義
 const buttonStyles = computed(() => {
     const baseStyles = {
         '--before-bg-color': beforebackgroundcolor.value,
@@ -66,7 +65,6 @@ const buttonStyles = computed(() => {
     return baseStyles;
 });
 
-// ボタンの高さを計算する
 const height = computed(() => {
     switch (props.height) {
         case 'auto':
@@ -76,7 +74,6 @@ const height = computed(() => {
     }
 });
 
-// ボタンの矢印部分の表示内容を計算する
 const afterContent = computed(() => {
     switch (props.arrowType) {
         case 'outer':
@@ -90,7 +87,6 @@ const afterContent = computed(() => {
     }
 });
 
-// 背景の色を計算する
 const backgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'blue-bg-white':
@@ -106,7 +102,6 @@ const backgroundcolor = computed(() => {
     }
 });
 
-// 背景の色を計算する（前景の色の補完）
 const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -118,7 +113,6 @@ const beforebackgroundcolor = computed(() => {
     }
 });
 
-// テキストの色を計算する
 const color = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -130,7 +124,6 @@ const color = computed(() => {
     }
 });
 
-// ホバー時のテキスト色を計算する
 const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -142,7 +135,6 @@ const hovercolor = computed(() => {
     }
 });
 
-// ボーダーの幅を計算する
 const borderwidth = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -154,7 +146,6 @@ const borderwidth = computed(() => {
     }
 });
 
-// ボーダーの色を計算する
 const bordercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -166,7 +157,6 @@ const bordercolor = computed(() => {
     }
 });
 
-// アウトラインのスタイルを計算する
 const outline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -178,7 +168,6 @@ const outline = computed(() => {
     }
 });
 
-// ホバー時のアウトラインのスタイルを計算する
 const hoveroutline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -190,7 +179,6 @@ const hoveroutline = computed(() => {
     }
 });
 
-// アウトラインのオフセットを計算する
 const outlineoffset = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -202,23 +190,32 @@ const outlineoffset = computed(() => {
     }
 });
 
-// ボタンのタイプが「outer」かどうかを判定
 const isOuter = computed(() => {
     return props.arrowType === 'outer';
 });
 
-// ルーターを使用してページ遷移を行う
 const router = useRouter();
+const isAnimating = ref(false);
+
 const handleClick = (event: Event) => {
     const link = event.currentTarget as HTMLElement;
+
+    if (isAnimating.value) return;
+
+    const computedStyle = window.getComputedStyle(link, '::before');
+    const transitionDuration = parseFloat(computedStyle.transitionDuration) || 0;
+    const transitionDelay = parseFloat(computedStyle.transitionDelay) || 0;
+    const totalTransitionTime = (transitionDuration + transitionDelay) * 1000;
+
     const handleTransitionEnd = () => {
-        link.removeEventListener("transitionend", handleTransitionEnd);
+        link.removeEventListener('transitionend', handleTransitionEnd);
+        isAnimating.value = false;
 
         if (props.onClick) {
             props.onClick(event);
         }
 
-        if (props.to) {
+        if (props.to && props.to !== 'javascript:void(0);') {
             event.preventDefault();
             const targetPage = props.to;
             router.push(targetPage);
@@ -226,17 +223,16 @@ const handleClick = (event: Event) => {
         }
     };
 
-    // アニメーションが実行中かどうかを判定
-    const computedStyle = window.getComputedStyle(link);
-    const transitionDuration = parseFloat(computedStyle.transitionDuration) || 0;
-    const transitionDelay = parseFloat(computedStyle.transitionDelay) || 0;
-    const totalTransitionTime = (transitionDuration + transitionDelay) * 1000;
+    isAnimating.value = true;
 
-    if (totalTransitionTime > 0) {
-        link.addEventListener("transitionend", handleTransitionEnd);
-    } else {
-        handleTransitionEnd();
-    }
+    link.addEventListener('transitionend', handleTransitionEnd);
+
+    // 安全のため、transitionendイベントが発火しない場合に備えてタイムアウトを設定
+    setTimeout(() => {
+        if (isAnimating.value) {
+            handleTransitionEnd();
+        }
+    }, totalTransitionTime + 50); // 少し余裕を持たせる
 };
 </script>
 

@@ -112,7 +112,7 @@
                 <span v-if="errors.agree" class="text-red-500 text-xs italic">{{ errors.agree }}</span>
               </label>
             </div>
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-center">
               <CustomArrowButton color-type="blue-bg-white" arrowType="none" @click="validateForm">
                 <template #buttonText>
                   この内容で確認する
