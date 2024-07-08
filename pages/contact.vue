@@ -359,36 +359,6 @@ const validateForm = () => {
   }
 }
 
-// // フォームの内容をサーバーに送信する関数
-// const submitForm = async () => {
-//   // フォームの各フィールドをバリデーションする
-//   Object.keys(form).forEach((field) => validateField(field));
-
-//   // バリデーションエラーがない場合にのみフォームを送信する
-//   if (Object.keys(errors).length === 0) {
-//     try {
-//       // フォームデータをサーバーに送信する
-//       const response = await fetch('http://localhost:3000/common/sendmail.php', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/x-www-form-urlencoded'
-//         },
-//         body: new URLSearchParams(form),
-//         mode: 'same-origin'
-//       });
-
-//       // レスポンスが正常な場合は完了ステップに進む
-//       if (response.ok) {
-//         active.value = 3;
-//       } else {
-//         alert('メール送信に失敗しました');
-//       }
-//     } catch (error) {
-//       console.error(error);
-//       alert('エラーが発生しました: ' + error.message);
-//     }
-//   }
-// };
 const submitForm = async () => {
   Object.keys(form).forEach((field) => validateField(field));
 

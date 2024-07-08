@@ -39,16 +39,13 @@ error_log("Inquiry content: " . $inquiryContent);
 // お問い合わせ区分に応じた送信先メールアドレスの設定
 switch ($inquiryType) {
     case '個人情報に関するお問い合わせ':
-        // $to = 'privacy-v@vaile.co.jp';
-        $to = 'yuta.miyaura@gmail.com';
+        $to = 'privacy-v@vaile.co.jp';
         break;
     case '採用に関するお問い合わせ':
-        // $to = 'recruit-v@vaile.co.jp';
-        $to = 'yuta.miyaura@gmail.com';
+        $to = 'recruit-v@vaile.co.jp';
         break;
     default:
-        // $to = 'business-v@vaile.co.jp';
-        $to = 'yuta.miyaura@gmail.com';
+        $to = 'business-v@vaile.co.jp';
         break;
 }
 
