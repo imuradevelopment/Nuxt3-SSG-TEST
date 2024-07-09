@@ -210,6 +210,9 @@ const handleClick = (event: Event) => {
     const transitionDelay = parseFloat(computedStyle.transitionDelay) || 0;
     const totalTransitionTime = (transitionDuration + transitionDelay) * 1000;
 
+    let transitionEnded = false;
+    let timeoutId: NodeJS.Timeout | null = null;
+
     // トランジションが存在しない場合、すぐに処理を実行
     if (totalTransitionTime === 0) {
         handleNavigation(event);
@@ -218,9 +221,22 @@ const handleClick = (event: Event) => {
 
     // トランジション完了を待つためのタイムアウトを設定
     isAnimating.value = true;
-    setTimeout(() => {
+    timeoutId = setTimeout(() => {
+        if (!transitionEnded) {
+            handleNavigation(event);
+        }
+    }, totalTransitionTime + 50); // 少し余裕を持たせる
+
+    // トランジション終了イベントを監視する
+    const handleTransitionEnd = () => {
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        transitionEnded = true;
         handleNavigation(event);
-    }, totalTransitionTime + 100); // 少し余裕を持たせる
+    };
+
+    link.addEventListener('transitionend', handleTransitionEnd, { once: true });
 };
 
 const handleNavigation = (event: Event) => {
