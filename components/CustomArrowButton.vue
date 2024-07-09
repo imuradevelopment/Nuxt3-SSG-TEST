@@ -169,8 +169,8 @@ const handleClick = (event: Event) => {
     isAnimating.value = true;
 
     const handleTransitionEnd = () => {
-        link.removeEventListener('transitionend', handleTransitionEnd);
         isAnimating.value = false;
+        link.removeEventListener('transitionend', handleTransitionEnd);
         handleNavigation(event);
     };
 
