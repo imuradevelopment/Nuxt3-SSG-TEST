@@ -220,7 +220,7 @@ const handleClick = (event: Event) => {
     isAnimating.value = true;
     setTimeout(() => {
         handleNavigation(event);
-    }, totalTransitionTime + 50); // 少し余裕を持たせる
+    }, totalTransitionTime + 100); // 少し余裕を持たせる
 };
 
 const handleNavigation = (event: Event) => {
