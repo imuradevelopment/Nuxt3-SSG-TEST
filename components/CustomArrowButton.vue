@@ -1,23 +1,22 @@
 <template>
-    <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :to="props.to" class="button-link"
+    <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="button-link"
         :style="buttonStyles" @click="handleClick">
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
-    <NuxtLink v-else :to="props.to || 'javascript:void(0);'" class="button-link" :style="buttonStyles"
-        @click="handleClick">
+    <a v-else @click="handleClick" :href="props.to || 'javascript:void(0);'" class="button-link" :style="buttonStyles">
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
-    </NuxtLink>
+    </a>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useScrollToTarget } from '~/composables/useScrollToTarget';
 
+// コンポーネントに渡されるプロパティ
 const props = defineProps({
     to: {
         type: String,
@@ -50,8 +49,9 @@ const props = defineProps({
     },
 });
 
+// スタイル用の計算プロパティを定義
 const buttonStyles = computed(() => {
-    return {
+    const baseStyles = {
         '--before-bg-color': beforebackgroundcolor.value,
         '--border-color': bordercolor.value,
         '--color': color.value,
@@ -63,10 +63,20 @@ const buttonStyles = computed(() => {
         '--height': height.value,
         '--after-content': `"${afterContent.value}"`,
     };
+    return baseStyles;
 });
 
-const height = computed(() => (props.height === 'auto' ? 'auto' : 'auto'));
+// ボタンの高さを計算する
+const height = computed(() => {
+    switch (props.height) {
+        case 'auto':
+            return 'auto';
+        default:
+            return 'auto';
+    }
+});
 
+// ボタンの矢印部分の表示内容を計算する
 const afterContent = computed(() => {
     switch (props.arrowType) {
         case 'outer':
@@ -80,12 +90,15 @@ const afterContent = computed(() => {
     }
 });
 
+// 背景の色を計算する
 const backgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'blue-bg-white':
+            return 'white';
         case 'yellow-bg-white':
             return 'white';
         case 'yellow':
+            return 'transparent';
         case 'white':
             return 'transparent';
         default:
@@ -93,6 +106,7 @@ const backgroundcolor = computed(() => {
     }
 });
 
+// 背景の色を計算する（前景の色の補完）
 const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -104,6 +118,7 @@ const beforebackgroundcolor = computed(() => {
     }
 });
 
+// テキストの色を計算する
 const color = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -115,9 +130,11 @@ const color = computed(() => {
     }
 });
 
+// ホバー時のテキスト色を計算する
 const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
+            return 'rgb(0, 10, 135)';
         case 'white':
             return 'rgb(0, 10, 135)';
         default:
@@ -125,8 +142,19 @@ const hovercolor = computed(() => {
     }
 });
 
-const borderwidth = computed(() => '-2px');
+// ボーダーの幅を計算する
+const borderwidth = computed(() => {
+    switch (props.colorType) {
+        case 'yellow':
+            return '-2px';
+        case 'white':
+            return '-2px';
+        default:
+            return '-2px';
+    }
+});
 
+// ボーダーの色を計算する
 const bordercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -138,53 +166,89 @@ const bordercolor = computed(() => {
     }
 });
 
-const outline = computed(() => '2px solid transparent');
+// アウトラインのスタイルを計算する
+const outline = computed(() => {
+    switch (props.colorType) {
+        case 'yellow':
+            return '2px solid transparent';
+        case 'white':
+            return '2px solid transparent';
+        default:
+            return '2px solid transparent';
+    }
+});
 
-const outlineoffset = computed(() => '2px');
+// ホバー時のアウトラインのスタイルを計算する
+const hoveroutline = computed(() => {
+    switch (props.colorType) {
+        case 'yellow':
+            return '2px solid transparent';
+        case 'white':
+            return '2px solid transparent';
+        default:
+            return '2px solid transparent';
+    }
+});
 
-const isOuter = computed(() => props.arrowType === 'outer');
+// アウトラインのオフセットを計算する
+const outlineoffset = computed(() => {
+    switch (props.colorType) {
+        case 'yellow':
+            return '2px';
+        case 'white':
+            return '2px';
+        default:
+            return '2px';
+    }
+});
 
+// ボタンのタイプが「outer」かどうかを判定
+const isOuter = computed(() => {
+    return props.arrowType === 'outer';
+});
+
+// ルーターを使用してページ遷移を行う
 const router = useRouter();
 const isAnimating = ref(false);
 
 const handleClick = (event: Event) => {
     const link = event.currentTarget as HTMLElement;
 
-    // イベントが既に実行中の場合は処理を中断する
     if (isAnimating.value) return;
 
-    // リンクのトランジション時間を取得する
     const computedStyle = window.getComputedStyle(link, '::before');
     const transitionDuration = parseFloat(computedStyle.transitionDuration) || 0;
     const transitionDelay = parseFloat(computedStyle.transitionDelay) || 0;
     const totalTransitionTime = (transitionDuration + transitionDelay) * 1000;
 
-    // トランジションが存在しない場合、すぐに処理を実行
+    console.log(`トランジション継続時間: ${transitionDuration}s, トランジション遅延時間: ${transitionDelay}s, トータルトランジション時間: ${totalTransitionTime}ms`);
+
     if (totalTransitionTime === 0) {
         handleNavigation(event);
         return;
     }
 
-    // トランジション完了を待つためのタイムアウトを設定
     isAnimating.value = true;
 
     const handleTransitionEnd = () => {
-        isAnimating.value = false;
+        console.log('トランジション終了');
         link.removeEventListener('transitionend', handleTransitionEnd);
+        isAnimating.value = false;
         handleNavigation(event);
     };
 
     link.addEventListener('transitionend', handleTransitionEnd, { once: true });
 
-    // 安全のため、transitionendイベントが発火しない場合に備えてタイムアウトを設定
     setTimeout(() => {
         if (isAnimating.value) {
+            console.log('タイムアウトがトランジション終了前に到達');
             handleTransitionEnd();
         }
     }, totalTransitionTime + 50); // 少し余裕を持たせる
 };
 
 const handleNavigation = (event: Event) => {
+    console.log('handleNavigation 呼び出し');
     // onClickプロパティが設定されている場合は実行する
     if (props.onClick) {
         props.onClick(event);
