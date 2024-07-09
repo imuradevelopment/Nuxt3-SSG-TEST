@@ -197,36 +197,6 @@ const isOuter = computed(() => {
 
 const router = useRouter();
 const isAnimating = ref(false);
-const animationStarted = ref(false);
-
-const handleTransitionEnd = (event: Event) => {
-    const link = event.currentTarget as HTMLElement;
-    if (event.target === link && animationStarted.value) {
-        link.removeEventListener('transitionend', handleTransitionEnd);
-        link.removeEventListener('transitionstart', handleTransitionStart);
-        isAnimating.value = false;
-        animationStarted.value = false;
-
-        // onClickプロパティが設定されている場合は実行する
-        if (props.onClick) {
-            props.onClick(event);
-        }
-
-        // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う
-        if (props.to && props.to !== 'javascript:void(0);') {
-            event.preventDefault();
-            const targetPage = props.to;
-            router.push(targetPage).then(() => {
-                useScrollToTarget();
-            });
-        }
-    }
-};
-
-// トランジション開始時の処理を定義する
-const handleTransitionStart = () => {
-    animationStarted.value = true;
-};
 
 const handleClick = (event: Event) => {
     const link = event.currentTarget as HTMLElement;
@@ -242,16 +212,33 @@ const handleClick = (event: Event) => {
 
     // トランジションが存在しない場合、すぐに処理を実行
     if (totalTransitionTime === 0) {
-        handleTransitionEnd(event);
+        handleNavigation(event);
         return;
     }
 
-    // トランジション開始と終了イベントを監視する
-    link.addEventListener('transitionstart', handleTransitionStart);
-    link.addEventListener('transitionend', handleTransitionEnd);
-
-    // 実行中フラグを立てる
+    // トランジション完了を待つためのタイムアウトを設定
     isAnimating.value = true;
+    setTimeout(() => {
+        handleNavigation(event);
+    }, totalTransitionTime + 50); // 少し余裕を持たせる
+};
+
+const handleNavigation = (event: Event) => {
+    isAnimating.value = false;
+
+    // onClickプロパティが設定されている場合は実行する
+    if (props.onClick) {
+        props.onClick(event);
+    }
+
+    // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う
+    if (props.to && props.to !== 'javascript:void(0);') {
+        event.preventDefault();
+        const targetPage = props.to;
+        router.push(targetPage).then(() => {
+            useScrollToTarget();
+        });
+    }
 };
 </script>
 
