@@ -196,8 +196,7 @@ const isOuter = computed(() => {
 
 const router = useRouter();
 const isAnimating = ref(false);
-const transitionEndCount = ref(0); // トランジションエンドの回数を追跡
-const timeoutExecuted = ref(false); // setTimeoutが実行されたかを追跡
+let timeoutId: NodeJS.Timeout | null = null;
 
 const handleClick = (event: Event) => {
     const link = event.currentTarget as HTMLElement;
@@ -213,25 +212,25 @@ const handleClick = (event: Event) => {
 
     // トランジション終了時の処理を定義する
     const handleTransitionEnd = () => {
-        transitionEndCount.value += 1; // トランジションエンドの回数を増加
-        // トランジションエンドが1回以上発生した場合にのみ処理を実行する
-        if (transitionEndCount.value === 1 && !timeoutExecuted.value) {
-            link.removeEventListener('transitionend', handleTransitionEnd);
-            isAnimating.value = false;
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+            timeoutId = null;
+        }
+        link.removeEventListener('transitionend', handleTransitionEnd);
+        isAnimating.value = false;
 
-            // onClickプロパティが設定されている場合は実行する
-            if (props.onClick) {
-                props.onClick(event);
-            }
+        // onClickプロパティが設定されている場合は実行する
+        if (props.onClick) {
+            props.onClick(event);
+        }
 
-            // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う
-            if (props.to && props.to !== 'javascript:void(0);') {
-                event.preventDefault();
-                const targetPage = props.to;
-                router.push(targetPage).then(() => {
-                    useScrollToTarget();
-                });
-            }
+        // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う
+        if (props.to && props.to !== 'javascript:void(0);') {
+            event.preventDefault();
+            const targetPage = props.to;
+            router.push(targetPage).then(() => {
+                useScrollToTarget();
+            });
         }
     };
 
@@ -242,9 +241,8 @@ const handleClick = (event: Event) => {
     link.addEventListener('transitionend', handleTransitionEnd);
 
     // トランジション終了イベントが発火しない場合に備えてタイムアウトを設定する
-    setTimeout(() => {
-        if (isAnimating.value && !transitionEndCount.value) {
-            timeoutExecuted.value = true;
+    timeoutId = setTimeout(() => {
+        if (isAnimating.value) {
             handleTransitionEnd();
         }
     }, totalTransitionTime + 50); // 少し余裕を持たせる
