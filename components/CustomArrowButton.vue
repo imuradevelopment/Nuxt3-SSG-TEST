@@ -197,7 +197,7 @@ const isOuter = computed(() => {
 
 const router = useRouter();
 const isAnimating = ref(false);
-let timeoutId: NodeJS.Timeout | null = null;
+const animationStarted = ref(false);
 
 const handleClick = (event: Event) => {
     const link = event.currentTarget as HTMLElement;
@@ -211,42 +211,47 @@ const handleClick = (event: Event) => {
     const transitionDelay = parseFloat(computedStyle.transitionDelay) || 0;
     const totalTransitionTime = (transitionDuration + transitionDelay) * 1000;
 
+    // トランジションが存在しない場合、すぐに処理を実行
+    if (totalTransitionTime === 0) {
+        handleTransitionEnd(event);
+        return;
+    }
+
+    // トランジション開始時の処理を定義する
+    const handleTransitionStart = () => {
+        animationStarted.value = true;
+    };
+
     // トランジション終了時の処理を定義する
-    const handleTransitionEnd = () => {
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-            timeoutId = null;
-        }
-        link.removeEventListener('transitionend', handleTransitionEnd);
-        isAnimating.value = false;
+    const handleTransitionEnd = (event: Event) => {
+        if (event.target === link && animationStarted.value) {
+            link.removeEventListener('transitionend', handleTransitionEnd);
+            link.removeEventListener('transitionstart', handleTransitionStart);
+            isAnimating.value = false;
+            animationStarted.value = false;
 
-        // onClickプロパティが設定されている場合は実行する
-        if (props.onClick) {
-            props.onClick(event);
-        }
+            // onClickプロパティが設定されている場合は実行する
+            if (props.onClick) {
+                props.onClick(event);
+            }
 
-        // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う
-        if (props.to && props.to !== 'javascript:void(0);') {
-            event.preventDefault();
-            const targetPage = props.to;
-            router.push(targetPage).then(() => {
-                useScrollToTarget();
-            });
+            // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う
+            if (props.to && props.to !== 'javascript:void(0);') {
+                event.preventDefault();
+                const targetPage = props.to;
+                router.push(targetPage).then(() => {
+                    useScrollToTarget();
+                });
+            }
         }
     };
 
-    // 実行中フラグを立てる
-    isAnimating.value = true;
-
-    // トランジション終了イベントを監視する
+    // トランジション開始と終了イベントを監視する
+    link.addEventListener('transitionstart', handleTransitionStart);
     link.addEventListener('transitionend', handleTransitionEnd);
 
-    // トランジション終了イベントが発火しない場合に備えてタイムアウトを設定する
-    timeoutId = setTimeout(() => {
-        if (isAnimating.value) {
-            handleTransitionEnd();
-        }
-    }, totalTransitionTime + 50); // 少し余裕を持たせる
+    // 実行中フラグを立てる
+    isAnimating.value = true;
 };
 </script>
 
