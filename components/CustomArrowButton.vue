@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useScrollToTarget } from '~/composables/useScrollToTarget';
 
@@ -51,7 +51,7 @@ const props = defineProps({
 });
 
 const buttonStyles = computed(() => {
-    const baseStyles = {
+    return {
         '--before-bg-color': beforebackgroundcolor.value,
         '--border-color': bordercolor.value,
         '--color': color.value,
@@ -63,17 +63,9 @@ const buttonStyles = computed(() => {
         '--height': height.value,
         '--after-content': `"${afterContent.value}"`,
     };
-    return baseStyles;
 });
 
-const height = computed(() => {
-    switch (props.height) {
-        case 'auto':
-            return 'auto';
-        default:
-            return 'auto';
-    }
-});
+const height = computed(() => (props.height === 'auto' ? 'auto' : 'auto'));
 
 const afterContent = computed(() => {
     switch (props.arrowType) {
@@ -91,11 +83,9 @@ const afterContent = computed(() => {
 const backgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'blue-bg-white':
-            return 'white';
         case 'yellow-bg-white':
             return 'white';
         case 'yellow':
-            return 'transparent';
         case 'white':
             return 'transparent';
         default:
@@ -128,7 +118,6 @@ const color = computed(() => {
 const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return 'rgb(0, 10, 135)';
         case 'white':
             return 'rgb(0, 10, 135)';
         default:
@@ -136,16 +125,7 @@ const hovercolor = computed(() => {
     }
 });
 
-const borderwidth = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-            return '-2px';
-        case 'white':
-            return '-2px';
-        default:
-            return '-2px';
-    }
-});
+const borderwidth = computed(() => '-2px');
 
 const bordercolor = computed(() => {
     switch (props.colorType) {
@@ -158,42 +138,11 @@ const bordercolor = computed(() => {
     }
 });
 
-const outline = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-            return '2px solid transparent';
-        case 'white':
-            return '2px solid transparent';
-        default:
-            return '2px solid transparent';
-    }
-});
+const outline = computed(() => '2px solid transparent');
 
-const hoveroutline = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-            return '2px solid transparent';
-        case 'white':
-            return '2px solid transparent';
-        default:
-            return '2px solid transparent';
-    }
-});
+const outlineoffset = computed(() => '2px');
 
-const outlineoffset = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-            return '2px';
-        case 'white':
-            return '2px';
-        default:
-            return '2px';
-    }
-});
-
-const isOuter = computed(() => {
-    return props.arrowType === 'outer';
-});
+const isOuter = computed(() => props.arrowType === 'outer');
 
 const router = useRouter();
 const isAnimating = ref(false);
@@ -218,14 +167,24 @@ const handleClick = (event: Event) => {
 
     // トランジション完了を待つためのタイムアウトを設定
     isAnimating.value = true;
-    setTimeout(() => {
+
+    const handleTransitionEnd = () => {
+        link.removeEventListener('transitionend', handleTransitionEnd);
+        isAnimating.value = false;
         handleNavigation(event);
+    };
+
+    link.addEventListener('transitionend', handleTransitionEnd, { once: true });
+
+    // 安全のため、transitionendイベントが発火しない場合に備えてタイムアウトを設定
+    setTimeout(() => {
+        if (isAnimating.value) {
+            handleTransitionEnd();
+        }
     }, totalTransitionTime + 50); // 少し余裕を持たせる
 };
 
 const handleNavigation = (event: Event) => {
-    isAnimating.value = false;
-
     // onClickプロパティが設定されている場合は実行する
     if (props.onClick) {
         props.onClick(event);
@@ -234,8 +193,7 @@ const handleNavigation = (event: Event) => {
     // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う
     if (props.to && props.to !== 'javascript:void(0);') {
         event.preventDefault();
-        const targetPage = props.to;
-        router.push(targetPage).then(() => {
+        router.push(props.to).then(() => {
             useScrollToTarget();
         });
     }
