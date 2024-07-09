@@ -219,7 +219,7 @@ const handleClick = (event: Event) => {
             event.preventDefault();
             const targetPage = props.to;
             router.push(targetPage).then(() => {
-                useScrollToTarget();
+                // useScrollToTarget();
             });
         }
     };
