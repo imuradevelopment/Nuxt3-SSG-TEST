@@ -1,15 +1,16 @@
 <template>
-    <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="button-link"
+    <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :to="props.to" class="button-link"
         :style="buttonStyles" @click="handleClick">
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
-    <a v-else @click="handleClick" :href="props.to || 'javascript:void(0);'" class="button-link" :style="buttonStyles">
+    <NuxtLink v-else :to="props.to || 'javascript:void(0);'" class="button-link" :style="buttonStyles"
+        @click="handleClick">
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
-    </a>
+    </NuxtLink>
 </template>
 
 <script setup lang="ts">
