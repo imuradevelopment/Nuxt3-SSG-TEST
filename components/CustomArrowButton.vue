@@ -1,12 +1,11 @@
 <template>
     <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="button-link"
-        :style="buttonStyles" @click="handleClick" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
+        :style="buttonStyles" @click="handleClick">
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
-    <a v-else @click="handleClick" :href="props.to || 'javascript:void(0);'" class="button-link" :style="buttonStyles"
-        @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
+    <a v-else @click="handleClick" :href="props.to || 'javascript:void(0);'" class="button-link" :style="buttonStyles">
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
@@ -17,7 +16,6 @@
 import { useRouter } from 'vue-router';
 import { useScrollToTarget } from '~/composables/useScrollToTarget';
 
-// プロパティの定義:
 const props = defineProps({
     to: {
         type: String,
@@ -50,7 +48,6 @@ const props = defineProps({
     },
 });
 
-// 計算プロパティを定義し、ボタンのスタイルを動的に決定します。
 const buttonStyles = computed(() => {
     const baseStyles = {
         '--before-bg-color': beforebackgroundcolor.value,
@@ -67,7 +64,6 @@ const buttonStyles = computed(() => {
     return baseStyles;
 });
 
-// ボタンの高さを計算する。
 const height = computed(() => {
     switch (props.height) {
         case 'auto':
@@ -77,7 +73,6 @@ const height = computed(() => {
     }
 });
 
-// ボタンの矢印部分の表示内容を計算する。
 const afterContent = computed(() => {
     switch (props.arrowType) {
         case 'outer':
@@ -91,7 +86,6 @@ const afterContent = computed(() => {
     }
 });
 
-// 背景色を計算する。
 const backgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'blue-bg-white':
@@ -107,7 +101,6 @@ const backgroundcolor = computed(() => {
     }
 });
 
-// 前景の色を計算する。
 const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -119,7 +112,6 @@ const beforebackgroundcolor = computed(() => {
     }
 });
 
-// テキストの色を計算する。
 const color = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -131,7 +123,6 @@ const color = computed(() => {
     }
 });
 
-// ホバー時のテキスト色を計算する。
 const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -143,7 +134,6 @@ const hovercolor = computed(() => {
     }
 });
 
-// ボーダーの幅を計算する。
 const borderwidth = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -153,7 +143,6 @@ const borderwidth = computed(() => {
     }
 });
 
-// ボーダーの色を計算する。
 const bordercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -165,7 +154,6 @@ const bordercolor = computed(() => {
     }
 });
 
-// アウトラインのスタイルを計算する。
 const outline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -175,7 +163,6 @@ const outline = computed(() => {
     }
 });
 
-// ホバー時のアウトラインのスタイルを計算する。
 const hoveroutline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -185,7 +172,6 @@ const hoveroutline = computed(() => {
     }
 });
 
-// アウトラインのオフセットを計算する。
 const outlineoffset = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -195,88 +181,29 @@ const outlineoffset = computed(() => {
     }
 });
 
-// ボタンのタイプが「outer」かどうかを判定する。
 const isOuter = computed(() => {
     return props.arrowType === 'outer';
 });
 
-// ルーターを使用してページ遷移を行うための設定。
 const router = useRouter();
-const isAnimating = ref(false);
-const isHovering = ref(false);
-const hasNavigated = ref(false); // ナビゲーションが実行されたかどうかを追跡するフラグ
 
-// マウスホバー時の状態を管理するための関数。
-const handleMouseOver = () => {
-    isHovering.value = true;
-};
-
-// マウスがボタンから離れた時の状態を管理するための関数。
-const handleMouseLeave = () => {
-    isHovering.value = false;
-};
-
-// クリックイベントの処理を行う関数。
 const handleClick = (event: Event) => {
     const link = event.currentTarget as HTMLElement;
-
-    // すでにアニメーション中の場合は処理を中断。
-    if (isAnimating.value) return;
-
-    // ボタンの::before疑似要素のスタイルを取得。
-    const computedStyle = window.getComputedStyle(link, '::before');
-    const transitionDuration = parseFloat(computedStyle.transitionDuration) || 0;
-    const transitionDelay = parseFloat(computedStyle.transitionDelay) || 0;
-    const totalTransitionTime = (transitionDuration + transitionDelay) * 1000;
-
-    console.log(`トランジション継続時間: ${transitionDuration}s, トランジション遅延時間: ${transitionDelay}s, トータルトランジション時間: ${totalTransitionTime}ms`);
-
-    // トランジション時間が0またはホバー中でない場合は即時ナビゲーション処理。
-    if (totalTransitionTime === 0 || !isHovering.value) {
-        handleNavigation(event);
-        return;
-    }
-
-    isAnimating.value = true;
-    hasNavigated.value = false; // ナビゲーションがまだ実行されていないことを設定
-
-    // トランジション終了時のイベントリスナー。
-    const handleTransitionEnd = () => {
-        if (!hasNavigated.value) {
-            console.log('トランジション終了');
-            hasNavigated.value = true; // フラグをセットして二重ナビゲーションを防ぐ
-            link.removeEventListener('transitionend', handleTransitionEnd);
-            isAnimating.value = false;
-            handleNavigation(event);
-        }
-    };
-
-    // トランジション終了イベントリスナーを追加。
-    link.addEventListener('transitionend', handleTransitionEnd, { once: true });
-
-    // トランジションが終了しない場合のタイムアウト処理。
-    setTimeout(() => {
-        if (isAnimating.value && !hasNavigated.value) {
-            console.log('タイムアウトがトランジション終了前に到達');
-            handleTransitionEnd();
-        }
-    }, totalTransitionTime + 50); // 少し余裕を持たせる。
+    handleNavigation(event);
 };
 
-// ナビゲーション処理を行う関数。
 const handleNavigation = (event: Event) => {
     console.log('handleNavigation 呼び出し');
-    // onClickプロパティが設定されている場合は実行。
     if (props.onClick) {
         props.onClick(event);
     }
-
-    // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う。
     if (props.to && props.to !== 'javascript:void(0);') {
         event.preventDefault();
-        router.push(props.to).then(() => {
-            useScrollToTarget();
-        });
+        setTimeout(() => {
+            router.push(props.to).then(() => {
+                useScrollToTarget();
+            });
+        }, 200); // 0.2秒の遅延
     }
 };
 </script>
