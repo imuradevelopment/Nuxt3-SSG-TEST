@@ -200,9 +200,11 @@ const handleNavigation = (event: Event) => {
     if (props.to && props.to !== 'javascript:void(0);') {
         event.preventDefault();
         setTimeout(() => {
-            router.push(props.to).then(() => {
-                useScrollToTarget();
-            });
+            if (props.to) {
+                router.push(props.to).then(() => {
+                    useScrollToTarget();
+                });
+            }
         }, 200); // 0.2秒の遅延
     }
 };
