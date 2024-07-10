@@ -1,4 +1,10 @@
 <template>
+    <!--
+        ボタンコンポーネントのテンプレート部分。条件によってNuxtLinkまたはaタグをレンダリングします。
+        - isOuterがtrueの場合、NuxtLinkを使用して外部リンクを生成。
+        - isOuterがfalseの場合、aタグを使用して内部リンクを生成。
+        ボタンにはクリックイベント（handleClick）とマウスオーバー、マウスリーブイベントがバインドされています。
+    -->
     <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="button-link"
         :style="buttonStyles" @click="handleClick" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
         <span class="relative z-10">
@@ -17,6 +23,12 @@
 import { useRouter } from 'vue-router';
 import { useScrollToTarget } from '~/composables/useScrollToTarget';
 
+// プロパティの定義:
+// - to: リンク先URL（省略可能）。
+// - height: ボタンの高さ（現状'auto'のみサポート、バリデーションあり）。
+// - arrowType: 矢印の種類（'outer', 'transition', 'inner'のいずれか）。
+// - colorType: ボタンの色タイプ（'blue-bg-white', 'yellow', 'white'のいずれか）。
+// - onClick: クリック時に実行される関数（省略可能）。
 const props = defineProps({
     to: {
         type: String,
@@ -49,6 +61,7 @@ const props = defineProps({
     },
 });
 
+// 計算プロパティを定義し、ボタンのスタイルを動的に決定します。
 const buttonStyles = computed(() => {
     const baseStyles = {
         '--before-bg-color': beforebackgroundcolor.value,
@@ -65,6 +78,7 @@ const buttonStyles = computed(() => {
     return baseStyles;
 });
 
+// ボタンの高さを計算する。現状では'auto'のみをサポート。
 const height = computed(() => {
     switch (props.height) {
         case 'auto':
@@ -74,6 +88,7 @@ const height = computed(() => {
     }
 });
 
+// ボタンの矢印部分の表示内容を計算する。arrowTypeによって異なる矢印を表示。
 const afterContent = computed(() => {
     switch (props.arrowType) {
         case 'outer':
@@ -87,6 +102,7 @@ const afterContent = computed(() => {
     }
 });
 
+// 背景色を計算する。colorTypeに応じて異なる色を返す。
 const backgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'blue-bg-white':
@@ -102,6 +118,7 @@ const backgroundcolor = computed(() => {
     }
 });
 
+// 前景の色を計算する。colorTypeに応じて異なる色を返す。
 const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -113,6 +130,7 @@ const beforebackgroundcolor = computed(() => {
     }
 });
 
+// テキストの色を計算する。colorTypeに応じて異なる色を返す。
 const color = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -124,6 +142,7 @@ const color = computed(() => {
     }
 });
 
+// ホバー時のテキスト色を計算する。colorTypeに応じて異なる色を返す。
 const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -135,17 +154,17 @@ const hovercolor = computed(() => {
     }
 });
 
+// ボーダーの幅を計算する。colorTypeに応じて同じ幅を返す。
 const borderwidth = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return '-2px';
         case 'white':
-            return '-2px';
         default:
             return '-2px';
     }
 });
 
+// ボーダーの色を計算する。colorTypeに応じて異なる色を返す。
 const bordercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -157,60 +176,64 @@ const bordercolor = computed(() => {
     }
 });
 
+// アウトラインのスタイルを計算する。colorTypeに応じて同じスタイルを返す。
 const outline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return '2px solid transparent';
         case 'white':
-            return '2px solid transparent';
         default:
             return '2px solid transparent';
     }
 });
 
+// ホバー時のアウトラインのスタイルを計算する。colorTypeに応じて同じスタイルを返す。
 const hoveroutline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return '2px solid transparent';
         case 'white':
-            return '2px solid transparent';
         default:
             return '2px solid transparent';
     }
 });
 
+// アウトラインのオフセットを計算する。colorTypeに応じて同じオフセットを返す。
 const outlineoffset = computed(() => {
     switch (props.colorType) {
         case 'yellow':
-            return '2px';
         case 'white':
-            return '2px';
         default:
             return '2px';
     }
 });
 
+// ボタンのタイプが「outer」かどうかを判定する。
 const isOuter = computed(() => {
     return props.arrowType === 'outer';
 });
 
+// ルーターを使用してページ遷移を行うための設定。
 const router = useRouter();
 const isAnimating = ref(false);
 const isHovering = ref(false);
 
+// マウスホバー時の状態を管理するための関数。
 const handleMouseOver = () => {
     isHovering.value = true;
 };
 
+// マウスがボタンから離れた時の状態を管理するための関数。
 const handleMouseLeave = () => {
     isHovering.value = false;
 };
 
+// クリックイベントの処理を行う関数。
 const handleClick = (event: Event) => {
     const link = event.currentTarget as HTMLElement;
 
+    // すでにアニメーション中の場合は処理を中断。
     if (isAnimating.value) return;
 
+    // ボタンの::before疑似要素のスタイルを取得。
     const computedStyle = window.getComputedStyle(link, '::before');
     const transitionDuration = parseFloat(computedStyle.transitionDuration) || 0;
     const transitionDelay = parseFloat(computedStyle.transitionDelay) || 0;
@@ -218,6 +241,7 @@ const handleClick = (event: Event) => {
 
     console.log(`トランジション継続時間: ${transitionDuration}s, トランジション遅延時間: ${transitionDelay}s, トータルトランジション時間: ${totalTransitionTime}ms`);
 
+    // トランジション時間が0またはホバー中でない場合は即時ナビゲーション処理。
     if (totalTransitionTime === 0 || !isHovering.value) {
         handleNavigation(event);
         return;
@@ -225,6 +249,7 @@ const handleClick = (event: Event) => {
 
     isAnimating.value = true;
 
+    // トランジション終了時のイベントリスナー。
     const handleTransitionEnd = () => {
         console.log('トランジション終了');
         link.removeEventListener('transitionend', handleTransitionEnd);
@@ -232,22 +257,27 @@ const handleClick = (event: Event) => {
         handleNavigation(event);
     };
 
+    // トランジション終了イベントリスナーを追加。
     link.addEventListener('transitionend', handleTransitionEnd, { once: true });
 
+    // トランジションが終了しない場合のタイムアウト処理。
     setTimeout(() => {
         if (isAnimating.value) {
             console.log('タイムアウトがトランジション終了前に到達');
             handleTransitionEnd();
         }
-    }, totalTransitionTime + 50);
+    }, totalTransitionTime + 50); // 少し余裕を持たせる。
 };
 
+// ナビゲーション処理を行う関数。
 const handleNavigation = (event: Event) => {
     console.log('handleNavigation 呼び出し');
+    // onClickプロパティが設定されている場合は実行。
     if (props.onClick) {
         props.onClick(event);
     }
 
+    // toプロパティが設定されており、かつ'javascript:void(0);'でない場合はリンク遷移を行う。
     if (props.to && props.to !== 'javascript:void(0);') {
         event.preventDefault();
         router.push(props.to).then(() => {
