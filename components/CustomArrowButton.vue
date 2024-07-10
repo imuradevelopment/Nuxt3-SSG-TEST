@@ -197,7 +197,6 @@ const isOuter = computed(() => {
 const router = useRouter();
 const isAnimating = ref(false);
 const isHovering = ref(false);
-const isHovered = ref(false);
 
 const handleMouseOver = () => {
     isHovering.value = true;
@@ -225,7 +224,6 @@ const handleClick = (event: Event) => {
     }
 
     isAnimating.value = true;
-    isHovered.value = true;
 
     const handleTransitionEnd = () => {
         console.log('トランジション終了');
