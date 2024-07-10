@@ -1,10 +1,4 @@
 <template>
-    <!--
-        ボタンコンポーネントのテンプレート部分。条件によってNuxtLinkまたはaタグをレンダリングします。
-        - isOuterがtrueの場合、NuxtLinkを使用して外部リンクを生成。
-        - isOuterがfalseの場合、aタグを使用して内部リンクを生成。
-        ボタンにはクリックイベント（handleClick）とマウスオーバー、マウスリーブイベントがバインドされています。
-    -->
     <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="button-link"
         :style="buttonStyles" @click="handleClick" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
         <span class="relative z-10">
@@ -24,11 +18,6 @@ import { useRouter } from 'vue-router';
 import { useScrollToTarget } from '~/composables/useScrollToTarget';
 
 // プロパティの定義:
-// - to: リンク先URL（省略可能）。
-// - height: ボタンの高さ（現状'auto'のみサポート、バリデーションあり）。
-// - arrowType: 矢印の種類（'outer', 'transition', 'inner'のいずれか）。
-// - colorType: ボタンの色タイプ（'blue-bg-white', 'yellow', 'white'のいずれか）。
-// - onClick: クリック時に実行される関数（省略可能）。
 const props = defineProps({
     to: {
         type: String,
@@ -78,7 +67,7 @@ const buttonStyles = computed(() => {
     return baseStyles;
 });
 
-// ボタンの高さを計算する。現状では'auto'のみをサポート。
+// ボタンの高さを計算する。
 const height = computed(() => {
     switch (props.height) {
         case 'auto':
@@ -88,7 +77,7 @@ const height = computed(() => {
     }
 });
 
-// ボタンの矢印部分の表示内容を計算する。arrowTypeによって異なる矢印を表示。
+// ボタンの矢印部分の表示内容を計算する。
 const afterContent = computed(() => {
     switch (props.arrowType) {
         case 'outer':
@@ -102,7 +91,7 @@ const afterContent = computed(() => {
     }
 });
 
-// 背景色を計算する。colorTypeに応じて異なる色を返す。
+// 背景色を計算する。
 const backgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'blue-bg-white':
@@ -118,7 +107,7 @@ const backgroundcolor = computed(() => {
     }
 });
 
-// 前景の色を計算する。colorTypeに応じて異なる色を返す。
+// 前景の色を計算する。
 const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -130,7 +119,7 @@ const beforebackgroundcolor = computed(() => {
     }
 });
 
-// テキストの色を計算する。colorTypeに応じて異なる色を返す。
+// テキストの色を計算する。
 const color = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -142,7 +131,7 @@ const color = computed(() => {
     }
 });
 
-// ホバー時のテキスト色を計算する。colorTypeに応じて異なる色を返す。
+// ホバー時のテキスト色を計算する。
 const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -154,7 +143,7 @@ const hovercolor = computed(() => {
     }
 });
 
-// ボーダーの幅を計算する。colorTypeに応じて同じ幅を返す。
+// ボーダーの幅を計算する。
 const borderwidth = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -164,7 +153,7 @@ const borderwidth = computed(() => {
     }
 });
 
-// ボーダーの色を計算する。colorTypeに応じて異なる色を返す。
+// ボーダーの色を計算する。
 const bordercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -176,7 +165,7 @@ const bordercolor = computed(() => {
     }
 });
 
-// アウトラインのスタイルを計算する。colorTypeに応じて同じスタイルを返す。
+// アウトラインのスタイルを計算する。
 const outline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -186,7 +175,7 @@ const outline = computed(() => {
     }
 });
 
-// ホバー時のアウトラインのスタイルを計算する。colorTypeに応じて同じスタイルを返す。
+// ホバー時のアウトラインのスタイルを計算する。
 const hoveroutline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -196,7 +185,7 @@ const hoveroutline = computed(() => {
     }
 });
 
-// アウトラインのオフセットを計算する。colorTypeに応じて同じオフセットを返す。
+// アウトラインのオフセットを計算する。
 const outlineoffset = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -249,6 +238,7 @@ const handleClick = (event: Event) => {
     }
 
     isAnimating.value = true;
+    hasNavigated.value = false; // ナビゲーションがまだ実行されていないことを設定
 
     // トランジション終了時のイベントリスナー。
     const handleTransitionEnd = () => {
