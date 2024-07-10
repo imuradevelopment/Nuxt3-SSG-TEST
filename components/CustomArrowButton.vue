@@ -215,6 +215,7 @@ const isOuter = computed(() => {
 const router = useRouter();
 const isAnimating = ref(false);
 const isHovering = ref(false);
+const hasNavigated = ref(false); // ナビゲーションが実行されたかどうかを追跡するフラグ
 
 // マウスホバー時の状態を管理するための関数。
 const handleMouseOver = () => {
@@ -251,10 +252,13 @@ const handleClick = (event: Event) => {
 
     // トランジション終了時のイベントリスナー。
     const handleTransitionEnd = () => {
-        console.log('トランジション終了');
-        link.removeEventListener('transitionend', handleTransitionEnd);
-        isAnimating.value = false;
-        handleNavigation(event);
+        if (!hasNavigated.value) {
+            console.log('トランジション終了');
+            hasNavigated.value = true; // フラグをセットして二重ナビゲーションを防ぐ
+            link.removeEventListener('transitionend', handleTransitionEnd);
+            isAnimating.value = false;
+            handleNavigation(event);
+        }
     };
 
     // トランジション終了イベントリスナーを追加。
@@ -262,7 +266,7 @@ const handleClick = (event: Event) => {
 
     // トランジションが終了しない場合のタイムアウト処理。
     setTimeout(() => {
-        if (isAnimating.value) {
+        if (isAnimating.value && !hasNavigated.value) {
             console.log('タイムアウトがトランジション終了前に到達');
             handleTransitionEnd();
         }
