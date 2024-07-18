@@ -40,7 +40,7 @@
             <section class="sec wrap policy-table-area">
                 <div class="policy-mark">
                     <a href="http://privacymark.jp/" target="_blank">
-                        <img src="/image/footer.png" alt="">
+                        <img src="/images/footer/policy.png" alt="">
                     </a>
                 </div>
                 <div class="policy-table">
