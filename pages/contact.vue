@@ -224,7 +224,7 @@
         <div v-if="active == 3" class="mb-4 w-full">
           <div class="w-full flex flex-col">
             <h3 class="mb-4 text-2xl font-bold">完了</h3>
-            <p>お問い合わせいただきありがとうございます。担当者が確認次第、ご連絡いたします。</p>
+            <p class="mb-4 text-xl font-bold">お問い合わせいただきありがとうございます。<br />担当者が確認次第、ご連絡いたします。</p>
             <div class="flex w-full justify-center items-center">
               <CustomArrowButton color-type="blue-bg-white" arrowType="none" to="/">
                 <template #buttonText>
