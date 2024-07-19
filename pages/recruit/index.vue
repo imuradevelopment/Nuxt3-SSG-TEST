@@ -126,7 +126,7 @@
                 <br />
                 人を育てるのに一番必要なのは<br class="hidden md:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
             </p>
-            <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
+            <CustomArrowButton class="ml-4" arrowType="transition" to="/recruit/message"></CustomArrowButton>
         </div>
         <div class="md:w-1/2">
             <img class="hidden md:inline-block h-full object-cover" src="/images/recruit/index/002_D.png"
