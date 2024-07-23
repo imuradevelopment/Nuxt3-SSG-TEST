@@ -40,8 +40,7 @@
           <template #content>
             私どもは、独立系ソフトウェア会社として、様々なメーカーや機種、規模や業種・業務に対応できる提案実績があります。<br class="hidden md:inline-block" />
             迅速で無駄のない業務処理システムの構築、自由な情報へのアクセス、クライアント・サーバーコンピューティング、
-            Windowsアプリケーション、エンタープライズシステムなど、お客様の<span
-              class="bg-blue-overlay">「こうしたい」</span>に実現力として活かします。<br
+            Windowsアプリケーション、エンタープライズシステムなど、お客様の<span class="bg-blue-overlay">「こうしたい」</span>に実現力として活かします。<br
               class="hidden md:inline-block" />
             最新技術に対応できる体制を整えておりますので、お気軽にご相談ください。<br class="hidden md:inline-block" />
             <span class="bg-blue-overlay">
@@ -131,8 +130,12 @@
                     Google Mapで開く
                   </NuxtLink>
                 </div>
+                <div class="font-bold">
+                  ※以下の写真をクリックすると道案内動画が再生されます。
+                </div>
                 <div class="h-full flex justify-center items-center">
-                  <video id="video" src="/videos/vaile.mp4" poster="/images/company/image007.png" controls class="w-full h-full"></video>
+                  <video id="video" src="/videos/vaile.mp4" poster="/images/company/image007.png" controls
+                    class="w-full h-full"></video>
                 </div>
               </div>
             </div>
@@ -215,7 +218,7 @@ const companySummary = [
   },
   {
     column1: "連絡先",
-    column2: '<div class="flex flex-wrap"><div>TEL: 03-5725-5921(代表)<br/>FAX: 03-5725-5922<br/>URL: <a href="http://www.vaile.co.jp" class="text-custom-blue underline">http://www.vaile.co.jp</a></div><a href="/contact" class="m-auto mt-4 ml-4 md:mt-auto bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div>'
+    column2: '<div class="flex flex-wrap"><a href="/contact" class="m-auto mt-4 ml-4 md:mt-auto bg-custom-blue text-white py-2 px-4 rounded-full">Contact</a></div>'
   }
 ]
 </script>
