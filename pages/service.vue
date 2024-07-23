@@ -49,7 +49,7 @@
                                 </template>
                                 <template #content>
                                     弊社では<span
-                                        class="underline decoration-wavy decoration-1 decoration-custom-gray underline-offset-5">3つの事業</span>を柱として、システム構築・改修はもとより、<br
+                                        class="bg-blue-overlay">3つの事業</span>を柱として、システム構築・改修はもとより、<br
                                         class="hidden md:inline-block" />
                                     運用改善やお客様サポートなどの幅広いニーズに応え、<br class="hidden md:inline-block" />
                                     より使いやすいシステム、最適な技術者チームをご提案致します。<br class="hidden md:inline-block" />
@@ -224,5 +224,25 @@ import DevelopmentAchievements2 from '~/components/DevelopmentAchievements2.vue'
 .zigzag-timeline__item:nth-child(2n + 1) .zigzag-timeline__milestone {
     right: 0;
     transform: translate(50%, -50%);
+}
+
+.bg-blue-overlay {
+background:
+        repeating-linear-gradient(45deg,
+            var(--custom-color-deepBlue),
+            var(--custom-color-deepBlue) 1px,
+            transparent 1px,
+            transparent 2px),
+        repeating-linear-gradient(-45deg,
+            var(--custom-color-deepBlue),
+            var(--custom-color-deepBlue) 1px,
+            transparent 1px,
+            transparent 2px);
+    background-size: 2px 2px;
+    /* これで網掛けがより細かくなります */
+    color: white;
+    display: inline;
+    padding: 0 4px;
+    border-radius: 2px;
 }
 </style>
