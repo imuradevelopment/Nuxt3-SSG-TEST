@@ -14,7 +14,8 @@
                 </div>
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
                     <NuxtLink @click="scrollToTarget()" to="/company"
-                        class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報</NuxtLink>
+                        class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報
+                    </NuxtLink>
                     <NuxtLink to="/company#company01"
                         class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                         トップメッセージ</NuxtLink>
@@ -49,33 +50,33 @@
                         </div>
                         <div class="flex flex-wrap flex-col md:flex-row">
                             <div class="flex flex-col">
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/message"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     採用メッセージ</NuxtLink>
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/feature"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     ベイルの特徴</NuxtLink>
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/office"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     オフィス紹介</NuxtLink>
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/induction"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     研修制度</NuxtLink>
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/welfare"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     福利厚生</NuxtLink>
                             </div>
                             <div class="flex flex-col">
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/data"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     各種データ</NuxtLink>
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/qa"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     Q&A</NuxtLink>
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/employee"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     社員紹介</NuxtLink>
-                                <NuxtLink to="/recruit#TEST"
+                                <NuxtLink to="/recruit/information"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     募集情報</NuxtLink>
                             </div>
@@ -84,10 +85,10 @@
                     <div class="flex flex-col px-1.5 mb-6 text-lg font-medium leading-6">
                         <NuxtLink @click="scrollToTarget()" to="/contact"
                             class=" underLine w-fit mb-2 hover:text-gray-200 hover:underline">お問い合わせ</NuxtLink>
-                        <NuxtLink to="/contact#TEST"
+                        <NuxtLink to="/contact?inquiryType=recruitment"
                             class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                             採用に関する問い合わせ</NuxtLink>
-                        <NuxtLink to="/contact#TEST"
+                        <NuxtLink to="/contact?inquiryType=other"
                             class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                             その他の問い合わせ</NuxtLink>
                     </div>
@@ -99,9 +100,9 @@
                 <div class="pt-3 px-9 md:px-3 h-full border-t-2 md:border-t-0 md:border-l-2">
                     <div class="mt-1 text-xs font-normal leading-6">本社</div>
                     <div class="text-xs font-normal leading-6">
-                        〒000-0000<br />
-                        東京都◯◯◯◯◯◯1-6-2<br class="hidden md:inline-block" />
-                        ◯◯◯◯◯ビル<br />
+                        〒153-0043<br />
+                        東京都目黒区東山1-6-2<br class="hidden md:inline-block" />
+                        ＴＰＲ中目黒ビル<br />
                     </div>
                     <div class="pl-3 text-xs font-normal leading-6">
                         7F（受付）<br />
@@ -116,7 +117,8 @@
         <el-col :span="12">
             <el-row align="middle">
                 <NuxtLink @click="scrollToTarget()" to="/policy">
-                    <NuxtImg class="mr-4 inline-flex" width="40" height="40" fit="cover" src="/images/footer/policy.png" />
+                    <NuxtImg class="mr-4 inline-flex" width="40" height="40" fit="cover"
+                        src="/images/footer/policy.png" />
                     <span class="text-xs">個人情報保護方針</span>
                 </NuxtLink>
             </el-row>

@@ -72,7 +72,7 @@
               <select v-model="form.inquiryType" @change="handleInquiryTypeChange"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="inquiryType" required>
-                <option value="" disabled selected>選択してください</option>
+                <option value="" disabled>選択してください</option>
                 <option value="個人情報に関するお問い合わせ">個人情報に関するお問い合わせ</option>
                 <option value="採用に関するお問い合わせ">採用に関するお問い合わせ</option>
                 <option value="その他">その他</option>
@@ -240,7 +240,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, onMounted } from 'vue'
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
 
 // フォームのステップ管理に使用する変数
@@ -395,6 +395,17 @@ const handleInquiryTypeChange = () => {
 
 // フォームがバリデーションエラーなしであるかどうかを判断する計算プロパティ
 const isFormValid = computed(() => Object.keys(errors).length === 0)
+
+// ページロード時にURLパラメータをチェックして初期値を設定する
+onMounted(() => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const inquiryType = urlParams.get('inquiryType');
+  if (inquiryType === 'recruitment') {
+    form.inquiryType = '採用に関するお問い合わせ';
+  }else if (inquiryType === 'other') {
+    form.inquiryType = 'その他';
+  }
+});
 </script>
 
 <style scoped>
