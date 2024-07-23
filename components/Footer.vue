@@ -125,7 +125,7 @@
         </el-col>
         <el-col :span="12">
             <el-row justify="end" class="text-xs">
-                <div class="pr-6 md:pr-12">© 2023 Vaile. All rights reserved.</div>
+                <div class="pr-6 md:pr-12">© 2024 Vaile. All rights reserved.</div>
             </el-row>
         </el-col>
     </el-row>
