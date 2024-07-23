@@ -343,21 +343,24 @@
         <h2 id="recruit10" class="text-white px-4 text-4xl leading-loose font-bold w-fit ml-auto mr-auto">募集情報</h2>
         <div class="flex flex-col p-4 items-center md2:flex-row md2:flex-wrap md2:justify-between">
             <div class="mt-6">
-                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template
-                        #buttonText>新卒採用情報</template></CustomArrowButton>
+                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information?tab=first">
+                    <template #buttonText>新卒採用情報</template>
+                </CustomArrowButton>
             </div>
             <div class="mt-6">
-                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template
-                        #buttonText>キャリア採用情報</template></CustomArrowButton>
+                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information?tab=second">
+                    <template #buttonText>キャリア採用情報</template>
+                </CustomArrowButton>
             </div>
             <div class="mt-6">
-                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information#TEST"><template
-                        #buttonText>契約社員採用情報</template></CustomArrowButton>
+                <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/information?tab=third">
+                    <template #buttonText>契約社員採用情報</template>
+                </CustomArrowButton>
             </div>
         </div>
         <div class="flex mt-6 px-4 justify-center md2:justify-end">
-            <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/information"><template
-                    #buttonText><span class="tracking-wide">ENTRY</span></template></CustomArrowButton>
+            <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/information#recruitInfomation02">
+                <template #buttonText><span class="tracking-wide">ENTRY</span></template></CustomArrowButton>
         </div>
     </section>
 </template>

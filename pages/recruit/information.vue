@@ -18,7 +18,8 @@
 
         <section class="h-full w-full px-4 md:pl-0 mb-12 md:mb-24">
             <div class="grid grid-flow-col grid-cols-11 grid-rows-4 md:grid-rows-12 gap-4">
-                <div class="col-span-12 row-span-3 md:col-span-8 md:row-span-12">
+                <div id="recruitInfomation01"
+                    class="linkScrollPageHeader col-span-12 row-span-3 md:col-span-8 md:row-span-12">
                     <el-tabs v-model="activeName" type="card" class="tabs" @tab-click="handleClick">
                         <el-tab-pane label="新卒採用" name="first">
                             <section>
@@ -474,7 +475,8 @@
                         </el-tab-pane>
                     </el-tabs>
                 </div>
-                <div class="col-span-12 row-span-1 md:col-span-4 md:row-span-12">
+                <div id="recruitInfomation02"
+                    class="linkScrollPageHeader col-span-12 row-span-1 md:col-span-4 md:row-span-12">
                     <div class="flex flex-col gap-4">
                         <p class="self-center text-lg font-bold">エントリーはこちらから</p>
                         <BlurGlassCard class="self-center max-w-xs">
@@ -495,19 +497,8 @@
                                 </div>
                             </div>
                         </BlurGlassCard>
-                        <!-- <p class="self-center text-lg font-bold">採用フロー</p>
-                        <BlurGlassCard class="self-center">
-                            <Step :steps="steps" />
-                        </BlurGlassCard> -->
                     </div>
                 </div>
-                <!-- <div class="col-span-12 row-span-2 md:col-span-4 md:row-span-3">
-                    <div class="flex flex-col gap-4">
-                        <BlurGlassCard class="self-center">
-                            <Step :steps="steps" />
-                        </BlurGlassCard>
-                    </div>
-                </div> -->
             </div>
         </section>
     </div>
@@ -516,24 +507,33 @@
 <script setup lang="ts">
 definePageMeta({
     layout: 'double-column-sidebar'
-})
-import { ref } from 'vue'
-import type { TabsPaneContext } from 'element-plus'
-import BlurGlassCard from '~/components/BlurGlassCard.vue'
-import CustomArrowButton from '~/components/CustomArrowButton.vue'
-import Step from '~/components/Step.vue'
+});
 
-const activeName = ref('first')
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { useTabStore } from '~/stores/tabStore';
+import type { TabsPaneContext } from 'element-plus';
+import BlurGlassCard from '~/components/BlurGlassCard.vue';
+import CustomArrowButton from '~/components/CustomArrowButton.vue';
+import Step from '~/components/Step.vue';
+
+const route = useRoute();
+const tabStore = useTabStore();
+
+const activeName = ref(tabStore.activeTab);
 
 const handleClick = (tab: TabsPaneContext, event: Event) => {
-    console.log(tab, event)
-}
+    tabStore.setActiveTab(tab.props.name as string);
+};
 
-const steps = ref([
-    { title: 'Step 1', details: 'This is the first step.' },
-    { title: 'Step 2', details: 'This is the second step.' },
-    { title: 'Step 3', details: 'This is the third step.' },
-])
+// 遷移前のページからの情報でactiveNameを初期化
+onMounted(() => {
+    const queryTab = route.query.tab as string;
+    if (queryTab) {
+        activeName.value = queryTab;
+        tabStore.setActiveTab(queryTab);
+    }
+});
 </script>
 
 <style>
