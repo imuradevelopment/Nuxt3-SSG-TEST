@@ -232,14 +232,14 @@ background:
             var(--custom-color-deepBlue),
             var(--custom-color-deepBlue) 1px,
             transparent 1px,
-            transparent 2px),
+            transparent 1.5px),
         repeating-linear-gradient(-45deg,
             var(--custom-color-deepBlue),
             var(--custom-color-deepBlue) 1px,
             transparent 1px,
-            transparent 2px);
-    background-size: 2px 2px;
-    /* これで網掛けがより細かくなります */
+            transparent 1.5px);
+    background-size: 1.5px 1.5px;
+    /* これで網掛けがさらに細かくなります */
     color: white;
     display: inline;
     padding: 0 4px;
