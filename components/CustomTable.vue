@@ -49,8 +49,4 @@ table tr:last-child td {
 table tr td:last-child {
     border-right: none;
 }
-
-hr {
-    border-color: rgba(209, 213, 219, 0.9);
-}
 </style>
