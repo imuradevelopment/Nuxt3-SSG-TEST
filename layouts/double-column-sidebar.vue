@@ -11,18 +11,9 @@
             </aside>
             <el-main class="el-main-custom main">
                 <div class="background-line-container">
-                    <!-- <div class="background-line0 quarter-pixel-border"></div>
-                    <div class="background-line1 quarter-pixel-border"></div>
-                    <div class="background-line2 quarter-pixel-border"></div>
-                    <div class="background-line3 quarter-pixel-border"></div>
-                    <div class="background-line4 quarter-pixel-border"></div> -->
-                    <!-- <BackgroundPattern /> -->
-                    <!-- <BackgroundPattern2 /> -->
                     <BackgroundPattern3 />
-                    <!-- <ClientOnly>
-                    </ClientOnly> -->
                 </div>
-                <slot /><!-- pages配下のファイルを表示する -->
+                <slot />
             </el-main>
         </div>
         <el-footer class="el-footer-custom">
@@ -32,8 +23,6 @@
 </template>
 <script setup lang="ts">
 import Sidebar from '~/components/Sidebar.vue'
-import BackgroundPattern from '~/components/BackgroundPattern.vue'
-import BackgroundPattern2 from '~/components/BackgroundPattern2.vue'
 import BackgroundPattern3 from '~/components/BackgroundPattern3.vue'
 </script>
 <style scoped>
