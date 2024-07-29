@@ -586,11 +586,11 @@ section {
     .table th,
     .table td {
         display: block !important;
-        width: 100%!important;
-        box-sizing: border-box!important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    >>> tbody {
+    >>>tbody {
         display: block !important;
         width: 100% !important;
         box-sizing: border-box !important;
@@ -633,5 +633,4 @@ section {
     letter-spacing: 0.1em;
     line-height: 1.6;
 }
-
 </style>

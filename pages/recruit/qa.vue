@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/qa/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
@@ -14,7 +13,6 @@
                     皆様の良く有る質問を纏めました。</p>
             </div>
         </section>
-
         <section class="mb-12 md:mb-24">
             <BlurGlassCard>
                 <div>
@@ -24,7 +22,6 @@
                     <hr class="mx-auto mb-4 w-12 border-t-4 border-custom-deepBlue">
                 </div>
                 <div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -43,7 +40,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -62,7 +58,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -81,7 +76,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-2">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -100,11 +94,9 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                 </div>
             </BlurGlassCard>
         </section>
-
         <section class="mb-12 md:mb-24">
             <BlurGlassCard>
                 <div>
@@ -114,7 +106,6 @@
                     <hr class="mx-auto mb-4 w-12 border-t-4 border-custom-deepBlue">
                 </div>
                 <div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -133,7 +124,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -152,7 +142,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -171,7 +160,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -190,7 +178,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -209,7 +196,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -228,7 +214,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-2">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -247,11 +232,9 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                 </div>
             </BlurGlassCard>
         </section>
-
         <section class="mb-12 md:mb-24">
             <BlurGlassCard>
                 <div>
@@ -261,7 +244,6 @@
                     <hr class="mx-auto mb-4 w-12 border-t-4 border-custom-deepBlue">
                 </div>
                 <div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -280,7 +262,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-6">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -299,7 +280,6 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                     <div class="mb-2">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -318,11 +298,9 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                 </div>
             </BlurGlassCard>
         </section>
-
         <section class="mb-12 md:mb-24">
             <BlurGlassCard>
                 <div>
@@ -332,7 +310,6 @@
                     <hr class="mx-auto mb-4 w-12 border-t-4 border-custom-deepBlue">
                 </div>
                 <div>
-
                     <div class="mb-2">
                         <ClearGlassMaskCard class="p-4" :rounded="false" :opacity="0.1">
                             <template #content>
@@ -357,21 +334,19 @@
                             </template>
                         </ClearGlassMaskCard>
                     </div>
-
                 </div>
             </BlurGlassCard>
         </section>
-
     </div>
 </template>
 
 <script setup lang="ts">
-            definePageMeta({
-            layout: 'double-column-sidebar'
-            })
+definePageMeta({
+    layout: 'double-column-sidebar'
+})
 import BlurGlassCard from '~/components/BlurGlassCard.vue'
 import ClearGlassMaskCard from '~/components/ClearGlassMaskCard.vue'
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
-            </script>
+</script>
 
-            <style scoped></style>
+<style scoped></style>

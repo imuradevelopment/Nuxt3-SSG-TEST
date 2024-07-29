@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/employee/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
@@ -14,7 +13,6 @@
                     ベイルの先輩社員から貰った<br class="inline-block md:hidden" />コメントを紹介します。</p>
             </div>
         </section>
-
         <section class="mb-12 md:mb-24">
             <h2 id="recruit-employee02 mb-4"
                 class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
@@ -98,7 +96,6 @@
                         shadowColor: 'rgb(0 0 0 / 0.5)',
                         bgPosition: 'center'
                     },
-                    // 他の画像オブジェクト...
                 ]"></CarouselEmployee>
             </div>
         </section>

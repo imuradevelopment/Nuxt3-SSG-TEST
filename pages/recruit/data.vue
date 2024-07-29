@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/data/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
@@ -14,27 +13,6 @@
                     様々な会社データを纏めました。</p>
             </div>
         </section>
-
-        <!-- <section class="mb-16 flex bg-cover bg-[url('/images/recruit/data/001.png')]">
-            <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
-                style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
-            </div>
-            <div class="flex flex-col grow">
-                <h1 id="recruit-data01"
-                    class="linkScroll self-end mt-28 mb-4 sm:mt-36 sm:mb-8 mx-8 text-2xl sm:text-4xl font-bold text-white">
-                    各種データ
-                </h1>
-            </div>
-        </section> -->
-
-        <!-- <section class="mb-16">
-            <div class="mx-4 md:mx-12 flex justify-center items-center">
-                <p
-                    class="rounded-full px-4 py-2 text-base md:text-3xl font-extrabold leading-loose bg-custom-deepBlue text-white ">
-                    ベイルに関する様々なデータを紹介します</p>
-            </div>
-        </section> -->
-
         <section class="mb-12 md:mb-24">
             <h2 id="recruit-data02"
                 class="px-8 mb-4 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
@@ -635,7 +613,6 @@
                 </div>
             </div>
         </section>
-
         <section class="mb-24">
             <h2 id="recruit-data03"
                 class="px-8 mb-4 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
@@ -823,7 +800,6 @@
 definePageMeta({
     layout: 'double-column-sidebar'
 })
-import BlurGlassCard from '~/components/BlurGlassCard.vue'
 </script>
 
 <style scoped>

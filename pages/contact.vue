@@ -402,7 +402,7 @@ onMounted(() => {
   const inquiryType = urlParams.get('inquiryType');
   if (inquiryType === 'recruitment') {
     form.inquiryType = '採用に関するお問い合わせ';
-  }else if (inquiryType === 'other') {
+  } else if (inquiryType === 'other') {
     form.inquiryType = 'その他';
   }
 });

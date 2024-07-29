@@ -19,7 +19,6 @@
       <section class="text-center mt-8 md:mt-20">
         <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">TOPメッセージ
         </h2>
-
         <CustomFrameCard>
           <template #title>
             ベイルの存在意義
@@ -32,7 +31,6 @@
             </span>
           </template>
         </CustomFrameCard>
-
         <CustomFrameCard>
           <template #title>
             お客様のニーズに応えるソリューション
@@ -49,7 +47,6 @@
           </template>
         </CustomFrameCard>
       </section>
-
       <section class="text-center mt-12">
         <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
         </h2>
@@ -108,7 +105,6 @@
         <div class="text-xs md:text-sm text-left">
           <CustomTable :items="companySummary" :showHeader="false"></CustomTable>
         </div>
-
       </section>
       <section class="text-center mb-8 md:mb-16">
         <h2 id="company05" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス
@@ -151,11 +147,6 @@ import CustomFrameCard from '~/components/CustomFrameCard.vue'
 import CustomTable from '~/components/CustomTable.vue'
 import ClearGlassMaskCard from '~/components/ClearGlassMaskCard.vue'
 import PageHeader from '~/components/PageHeader.vue'
-import ClipHexagon from '~/components/ClipHexagon.vue'
-import ClipPentagon from '~/components/ClipPentagon.vue'
-import ClipConvexPolygon from '~/components/ClipConvexPolygon.vue'
-
-import useDetectWrap from '~/composables/useDetectWrap'
 
 const videoVolume = ref(0.3);
 
@@ -254,7 +245,6 @@ const companySummary = [
         transparent 1px,
         transparent 1.5px);
     background-size: 1.5px 1.5px;
-    /* これで網掛けがさらに細かくなります */
     color: white;
     display: inline;
     padding: 0 4px;

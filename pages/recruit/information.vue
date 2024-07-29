@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/information/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
@@ -15,7 +14,6 @@
                     新卒採用の募集内容をお伝えします。</p>
             </div>
         </section>
-
         <section class="h-full w-full px-4 md:pl-0 mb-12 md:mb-24">
             <div class="grid grid-flow-col grid-cols-11 grid-rows-4 md:grid-rows-12 gap-4">
                 <div id="recruitInfomation01"
@@ -515,7 +513,6 @@ import { useTabStore } from '~/stores/tabStore';
 import type { TabsPaneContext } from 'element-plus';
 import BlurGlassCard from '~/components/BlurGlassCard.vue';
 import CustomArrowButton from '~/components/CustomArrowButton.vue';
-import Step from '~/components/Step.vue';
 
 const route = useRoute();
 const tabStore = useTabStore();
@@ -526,7 +523,6 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
     tabStore.setActiveTab(tab.props.name as string);
 };
 
-// 遷移前のページからの情報でactiveNameを初期化
 onMounted(() => {
     const queryTab = route.query.tab as string;
     if (queryTab) {
@@ -537,15 +533,14 @@ onMounted(() => {
 </script>
 
 <style>
-
 .el-tabs--card>.el-tabs__header .el-tabs__nav {
     border: none !important;
 }
 
 .el-tabs__header {
-    margin: 0 0 0 0!important;
-    padding: 0!important;
-    position: relative!important;
+    margin: 0 0 0 0 !important;
+    padding: 0 !important;
+    position: relative !important;
 }
 
 .el-tabs--card>.el-tabs__header .el-tabs__item:first-child {
@@ -570,7 +565,7 @@ onMounted(() => {
 }
 
 @media screen and (max-width: 768px) {
-.el-tabs--card>.el-tabs__header .el-tabs__item {
+    .el-tabs--card>.el-tabs__header .el-tabs__item {
         border-bottom: 1px solid #0000 !important;
         border-left: 1px solid var(--el-border-color-light) !important;
         border-right: 1px solid var(--el-border-color-light) !important;

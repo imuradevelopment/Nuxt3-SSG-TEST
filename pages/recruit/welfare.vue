@@ -14,27 +14,6 @@
                     とても大切な福利厚生。<br class="inline-block md:hidden" />他社との比較にお役立て下さい。</p>
             </div>
         </section>
-
-        <!-- <section class="flex bg-cover bg-[url('/images/recruit/welfare/001.png')]">
-            <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
-                style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
-            </div>
-            <div class="flex flex-col grow">
-                <h1 id="recruit-welfare01"
-                    class="linkScroll self-end mt-28 mb-4 sm:mt-36 sm:mb-8 mx-8 text-2xl sm:text-4xl font-bold text-white">
-                    福利厚生
-                </h1>
-            </div>
-        </section> -->
-
-        <!-- <section class="mt-12">
-            <div class="mx-4 md:mx-12 flex justify-center items-center">
-                <p
-                    class="rounded-full px-4 py-2 text-base md:text-4xl text-balance font-extrabold leading-loose bg-custom-deepBlue text-white ">
-                    ベイルの福利厚生について紹介します。</p>
-            </div>
-        </section> -->
-
         <section class="mb-12 md:mb-24 ">
             <div class="mx-4">
                 <BlurGlassCard color="rgba(0, 37, 92, 0.6)" :blur=2 class="text-white">
@@ -113,28 +92,10 @@
                                 ◆忘年会（11月）
                             </div>
                         </div>
-                        <!-- <div class="flex flex-nowrap">
-                            <div
-                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
-                                社員旅行
-                            </div>
-                            <div
-                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
-                                ※2020年度以降はコロナ影響を鑑み中止。<br />
-                                ◆2020年-月(実績)   ： (国内を予定していたがコロナ影響を鑑み中止。)<br />
-                                ◇2019年4月(実績)   ： 香港<br />
-                                ◆2017年3月(実績)   ： 沖縄（石垣島）<br />
-                                ◇2015年11月(実績) ： 台湾<br />
-                                ◆2013年11月(実績) ： 沖縄（石垣島）<br />
-                                　上記以前にも、沖縄本島・北海道など。
-
-                            </div>
-                        </div> -->
                     </div>
                 </BlurGlassCard>
             </div>
         </section>
-
     </div>
 </template>
 

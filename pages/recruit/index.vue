@@ -5,116 +5,12 @@
         <p class="mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
             自身の成長が選択肢を拡げ、影響を与える</p>
     </section>
-
     <section class="h-24 p-4 flex justify-end items-center">
         <CustomArrowButton color-type="blue-bg-white" arrowType="transition" to="/recruit/feature"><template
                 #buttonText>
                 <Pointer class="h-6 w-6 inline" />ベイルの特徴
             </template></CustomArrowButton>
     </section>
-
-    <!-- <section class="bg-gray-200 grid grid-rows-3 grid-cols-12 auto-rows-min">
-        <div class="order-1 md:order-none col-span-12 row-span-1 md:col-span-6 md:row-span-1">
-            <h2 id="recruit02" class="px-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
-        </div>
-        <div class="order-2 md:order-none w-full col-span-12 row-span-1 md:col-span-6 md:row-span-3">
-            <NuxtImg src="/images/recruit/index/002.png" fit="cover" width="100vw md:560" alt="代表取締役社長のイメージ"></NuxtImg>
-        </div>
-        <div class="order-3 md:order-none col-span-12 row-span-1 md:col-span-6 md:row-span-2">
-            <p class="px-4 font-bold break-keep">
-                代表取締役社長 安部 功<br />
-                <br />
-                人を育てるのに一番必要なのは<br class="hidden md:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます
-            </p>
-        </div>
-    </section> -->
-
-    <!-- <section class="bg-gray-200 flex flex-col md:flex-row">
-            <div class="order-1 md:order-0 flex-col md:flex-row">
-                <h2 id="recruit02" class="px-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
-            </div>
-            <div class="order-3 md:order-0 flex-col md:flex-row">
-                <p class="px-4 font-bold break-keep">
-                    代表取締役社長 安部 功<br />
-                    <br />
-                    人を育てるのに一番必要なのは<br class="hidden md:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます
-                </p>
-            </div>
-            <div class="order-2 md:order-0 flex-col md:flex-row">
-                <NuxtImg src="/images/recruit/index/002.png" fit="cover" sizes="100vw md:560px" alt="代表取締役社長のイメージ"></NuxtImg>
-            </div>
-        </section> -->
-
-    <!-- <section class="bg-gray-200 flex flex-col md:flex-row md:justify-evenly">
-        <div class="flex flex-col md:flex-row">
-          <div class="flex flex-col flex-1 order-1 md:order-none">
-            <div class="h-auto">
-                <h2 id="recruit02" class="text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
-            </div>
-            <div class="h-auto hidden md:inline-block">
-                        <p class="px-4 font-bold break-keep">
-                            代表取締役社長 安部 功<br />
-                            <br />
-                            人を育てるのに一番必要なのは<br class="hidden md:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます
-                        </p>
-                        <div class="mb-2 mt-2">
-                            <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
-                        </div>
-            </div>
-          </div>
-          <div class="flex-1 order-2 md:order-none h-auto">
-            <NuxtImg class="hidden md:inline-block" src="/images/recruit/index/002.png" fit="cover" width="560px" alt="代表取締役社長のイメージ"></NuxtImg>
-            <NuxtImg class="inline-block md:hidden" src="/images/recruit/index/002.png" fit="cover" width="768px" alt="代表取締役社長のイメージ"></NuxtImg>
-          </div>
-          <div class="order-3 md:order-none p-4 h-auto inline-block md:hidden">
-                        <p class="px-4 font-bold break-keep">
-                            代表取締役社長 安部 功<br />
-                            <br />
-                            人を育てるのに一番必要なのは<br class="hidden md:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます
-                        </p>
-                        <div class="m-4">
-                            <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
-                        </div>
-          </div>
-        </div>
-    </section> -->
-
-    <!-- <section class="bg-gray-200 flex flex-col md2:flex-row md2:justify-evenly">
-        <div class="flex flex-col md2:flex-row">
-            <div class="flex flex-col flex-1 order-1 md2:order-none">
-                <div class="h-auto">
-                    <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
-                </div>
-                <div class="h-auto hidden md2:inline-block">
-                    <p class="px-4 font-bold break-keep">
-                        代表取締役社長 安部 功<br />
-                        <br />
-                        人を育てるのに一番必要なのは<br class="hidden md2:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
-                    </p>
-                    <div class="mb-2 mt-2">
-                        <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-1 order-2 md2:order-none h-auto">
-                <NuxtImg class="hidden md2:inline-block" src="/images/recruit/index/002.png" fit="cover" width="560px"
-                    alt="代表取締役社長のイメージ"></NuxtImg>
-                <NuxtImg class="inline-block md2:hidden" src="/images/recruit/index/002.png" fit="cover" width="768px"
-                    alt="代表取締役社長のイメージ"></NuxtImg>
-            </div>
-            <div class="order-3 md2:order-none p-4 h-auto inline-block md2:hidden">
-                <p class="px-4 font-bold break-keep">
-                    代表取締役社長 安部 功<br />
-                    <br />
-                    人を育てるのに一番必要なのは<br class="hidden md2:inline-block" />「仕事が楽しい」「やりがいがある」と感じる事だと考えます。
-                </p>
-                <div class="m-4">
-                    <CustomArrowButton arrowType="transition" to="/recruit/message"></CustomArrowButton>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class=" flex flex-col md:flex-row">
         <div class="flex-1 flex flex-col space-y-6 pb-4 bg-gradient-to-r from-gray-200 to-custom-silver">
             <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
@@ -133,7 +29,6 @@
                 alt="採用担当者イメージ" />
         </div>
     </section>
-
     <section class="mt-24 flex w-full bg-cover bg-[url('/images/recruit/index/003.png')]">
         <div class="hidden sm:inline-block basis-1/3 h-auto z-10 bg-custom-deepBlue"
             style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
@@ -148,30 +43,11 @@
                 <li>未経験でも安心充実した１年間の研修制度</li>
                 <li>社員の育成をじっくり促せる安定した経営基盤</li>
             </ul>
-
             <div class="grow self-end px-4 mt-4 mb-4">
                 <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/feature"></CustomArrowButton>
             </div>
         </div>
     </section>
-
-    <!-- <section class="mt-32 w-fit ml-auto mr-auto flex justify-items-stretch">
-        <div class="flex flex-col gap-y-4 md:gap-y-8">
-            <h2 id="recruit04" class="z-20 self-end w-fit min-w-fit pr-20 md:pr-36 -mr-12 text-white px-4 text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue">研修制度</h2>
-            <p class="z-20 self-end md:mr-4 font-bold text-sm md:text-base">成長に繋がるトレーニング制度</p>
-            <div class="z-20 ml-8 md:ml-0 md:self-end md:mr-28">
-                <CustomArrowButton arrowType="transition" to="/recruit/induction"></CustomArrowButton>
-            </div>
-        </div>
-        <div class="grow">
-            <div class="pr-12">
-                <div class="z-0 relative -top-8 -right-12 w-[231.5px] h-32 md:w-[463px] md:h-64 bg-custom-deepBlue">
-                    <NuxtImg class="z-10 relative top-8 right-8" src="/images/recruit/index/004.png" fit="inset" sizes="231 463" alt="研修のイメージ"></NuxtImg>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="mt-24 flex flex-row justify-stretch">
         <div class="w-1/2 flex flex-col space-y-4 md:space-y-8 relative top-8 md:top-16">
             <div class="flex flex-row">
@@ -195,9 +71,6 @@
             </div>
         </div>
     </section>
-    <!-- <NuxtImg class="inline-block md:hidden z-10 relative -top-64 h-64" src="/images/recruit/index/004.png" fit="cover" width="231.5px" alt="研修のイメージ"></NuxtImg> -->
-    <!-- <img class="z-10 relative -top-64 bg-cover h-64" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYTWduM4_jBFVIzmFWC9txP6MaQBLbXuOp78azaKYT9r2q1ZHBMdhjMDJIT_gU9Y_yF7FZ4RVETvt9Vpu42u2tntShkd=w2190-h1921"></img> -->
-
     <div class="mt-24 mx-4 grid gap-4 grid-cols-1 md:grid-cols-2">
         <section
             class="h-64 flex flex-col gap-y-8 bg-cover bg-[url('/images/recruit/index/005.png')] items-center justify-center shadow-md">
@@ -205,7 +78,6 @@
             <p class="text-white">私たちの働くオフィスを紹介します。</p>
             <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/office"></CustomArrowButton>
         </section>
-
         <section
             class="h-64 flex flex-col gap-y-8 bg-cover bg-[url('/images/recruit/index/006.png')] items-center justify-center shadow-md">
             <h2 id="recruit06" class="text-white px-4 text-4xl leading-loose font-bold">福利厚生</h2>
@@ -225,15 +97,7 @@
             <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/qa"></CustomArrowButton>
         </section>
     </div>
-
-
-    <!-- <section class="mt-24">
-        <Slider />
-    </section> -->
-
     <section class="my-24">
-        <!-- <BackgroundPattern2>
-        </BackgroundPattern2> -->
         <BackgroundPattern>
         </BackgroundPattern>
         <div class="w-full flex flex-col">
@@ -242,33 +106,6 @@
             <div class="mx-4 mt-8 mb-4 flex justify-center items-center">
                 <div class="max-w-xl">
                     <Carousel :pics="[
-                        // {
-                        //     src: '/images/recruit/index/012.png',
-                        //     alt: '社員紹介01',
-                        //     mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>Y.K</div>`,
-                        //     subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br>東京理科大学<br>理工学部情報科学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
-                        //     tileColor: 'rgba(0, 37, 92, 0.1)',
-                        //     shadowColor: 'rgb(0 0 0 / 0.5)',
-                        //     bgPosition: 'center'
-                        // },
-                        // {
-                        //     src: '/images/recruit/index/011.png',
-                        //     alt: '社員紹介02',
-                        //     mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>J.K</div>`,
-                        //     subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br />山形大学<br />工学部応用生命システム工学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
-                        //     tileColor: 'rgba(0, 37, 92, 0.1)',
-                        //     shadowColor: 'rgb(0 0 0 / 0.5)',
-                        //     bgPosition: 'center'
-                        // },
-                        // {
-                        //     src: '/images/recruit/index/010.png',
-                        //     alt: '社員紹介03',
-                        //     mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>A.O</div>`,
-                        //     subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>システムエンジニア<br />山形大学<br />文学部哲学科出身</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
-                        //     tileColor: 'rgba(0, 37, 92, 0.1)',
-                        //     shadowColor: 'rgb(0 0 0 / 0.5)',
-                        //     bgPosition: 'center'
-                        // },
                         {
                             src: '/images/recruit/employee/005.jpg',
                             alt: '人物写真T.I.',
@@ -332,7 +169,6 @@
                             shadowColor: 'rgb(0 0 0 / 0.5)',
                             bgPosition: 'center'
                         },
-                        // 他の画像オブジェクト...
                     ]"></Carousel>
                 </div>
             </div>
@@ -360,7 +196,8 @@
         </div>
         <div class="flex mt-6 px-4 justify-center md2:justify-end">
             <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/information#recruitInfomation02">
-                <template #buttonText><span class="tracking-wide">ENTRY</span></template></CustomArrowButton>
+                <template #buttonText><span class="tracking-wide">ENTRY</span></template>
+            </CustomArrowButton>
         </div>
     </section>
 </template>
@@ -370,10 +207,8 @@ definePageMeta({
     layout: 'double-column-sidebar'
 })
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
-import Slider from '~/components/Slider.vue'
 import Carousel from '~/components/Carousel.vue'
 import BackgroundPattern from '~/components/BackgroundPattern.vue'
-// import BackgroundPattern2 from '~/components/BackgroundPattern2.vue'
 import {
     Pointer,
 } from '@element-plus/icons-vue'
