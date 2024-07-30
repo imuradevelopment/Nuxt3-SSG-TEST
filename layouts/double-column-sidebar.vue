@@ -11,7 +11,7 @@
             </aside>
             <el-main class="el-main-custom main">
                 <div class="background-line-container">
-                    <BackgroundPattern3 />
+                    <BackgroundPattern2 />
                 </div>
                 <slot />
             </el-main>
@@ -23,7 +23,7 @@
 </template>
 <script setup lang="ts">
 import Sidebar from '~/components/Sidebar.vue'
-import BackgroundPattern3 from '~/components/BackgroundPattern3.vue'
+import BackgroundPattern2 from '~/components/BackgroundPattern2.vue'
 </script>
 <style scoped>
 .el-header-custom {

@@ -40,7 +40,6 @@ onMounted(() => {
   resizeObserver.observe(lineAnimation.value) // コードに置き換え
 })
 
-// TODO:遷移後エラーがでるので原因の調査と対応を行う
 onUnmounted(() => {
   // ResizeObserverを解除
   if(lineAnimation.value){

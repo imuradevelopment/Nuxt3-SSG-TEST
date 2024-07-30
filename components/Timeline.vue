@@ -8,9 +8,6 @@
                     <div v-if="item.text" class="timeline-bubble">
                         <div class="timeline-text" v-html="item.text"></div>
                     </div>
-                    <!-- <div v-if="item.image" class="timeline-image">
-                        <img :src="item.image" alt="image" />
-                    </div> -->
                     <img v-if="item.image" class="timeline-image" :src="item.image" alt="image" />
                 </div>
             </div>
@@ -51,19 +48,19 @@ defineProps({
 }
 
 @media screen and (max-width: 641px) {
-  .timeline-line {
-    background-color: var(--custom-color-blue);
-    height: 100%;
-    margin-left: 4.25rem;
-    position: relative;
-    margin-top: 1.75rem;
-    width: 2px;
-    z-index: -1;
-}
+    .timeline-line {
+        background-color: var(--custom-color-blue);
+        height: 100%;
+        margin-left: 4.25rem;
+        position: relative;
+        margin-top: 1.75rem;
+        width: 2px;
+        z-index: -1;
+    }
 }
 
 .timeline-item {
-  width: max-content;
+    width: max-content;
 }
 
 .timeline-month {
@@ -87,21 +84,6 @@ position: relative;
     width: 1rem;
     left: -0.45rem;
     top: -0.25rem;
-}
-
-/* .timeline-line {
-  width: 2px;
-  height: 100%;
-  background-color: #ccc;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  z-index: -1;
-} */
-
-.timeline-content {
-  /* display: flex;
-  flex-direction: column; */
 }
 
 .timeline-bubble {
@@ -131,17 +113,17 @@ position: relative;
 }
 
 .timeline-bubble::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 10px;
-  border-top: 10px solid transparent;
-  border-right: 10px solid var(--custom-color-deepBlue);
-  border-bottom: 10px solid transparent;
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    border-top: 10px solid transparent;
+    border-right: 10px solid var(--custom-color-deepBlue);
+    border-bottom: 10px solid transparent;
 }
 
 .timeline-text {
-  margin: 0;
+    margin: 0;
 }
 
 .timeline-image {
@@ -157,16 +139,14 @@ position: relative;
 }
 
 @media screen and (max-width: 641px) {
-  .timeline-image {
-      object-fit: cover;
-      position: relative;
-      width: 16rem;
-      overflow: hidden;
-      margin: -0.75rem 0 1.75rem 1rem;
-    /* filter: drop-shadow(0 3px 3px var(--custom-color-deepBlue)); */
-    filter: drop-shadow(0 0 7px var(--custom-color-deepBlue));
-    /* filter: drop-shadow(1rem -1rem 0 var(--custom-color-deepBlue)); */
-    border-radius: 1rem;
-  }
+    .timeline-image {
+        object-fit: cover;
+        position: relative;
+        width: 16rem;
+        overflow: hidden;
+        margin: -0.75rem 0 1.75rem 1rem;
+        filter: drop-shadow(0 0 7px var(--custom-color-deepBlue));
+        border-radius: 1rem;
+    }
 }
 </style>

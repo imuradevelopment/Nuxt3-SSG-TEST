@@ -60,19 +60,4 @@
         font-size: 1rem;
     }
 }
-
-/* .content span {
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 1px;
-    text-decoration-color: rgb(105 127 159);
-    text-underline-offset: 5px;
-}
-
-.content br {
-    display: none;
-    @media (min-width: 768px) {
-    display: inline-block;
-    }
-} */
 </style>

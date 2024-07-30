@@ -250,10 +250,6 @@ tbody tr td:nth-child(9) {
 
     /* セルにパディングを追加し、テキストを左揃えに設定 */
     .table tr td:nth-child(1) {
-        /* border-left: none; */
-        /* border-right: none; */
-        /* color: var(--cumtom-color-lightIvory); */
-        /* background: var(--custom-color-deepGray); */
         border-bottom: 1px solid #eee;
         position: relative;
         text-align: left;

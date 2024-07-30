@@ -14,7 +14,7 @@
         </ol>
     </nav>
 </template>
-  
+
 <script setup>
 import { onMounted, ref } from 'vue'
 
@@ -46,4 +46,3 @@ const getPath = (type) => {
     }
 }
 </script>
-  

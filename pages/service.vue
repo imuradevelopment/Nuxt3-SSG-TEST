@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="mx-4 m-auto">
-                    <DevelopmentAchievements2></DevelopmentAchievements2>
+                    <DevelopmentAchievements></DevelopmentAchievements>
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
 <script setup lang="ts">
 import CustomFrameCard from '~/components/CustomFrameCard.vue'
 import VennDiagram from '~/components/VennDiagram.vue'
-import DevelopmentAchievements2 from '~/components/DevelopmentAchievements2.vue'
+import DevelopmentAchievements from '~/components/DevelopmentAchievements.vue'
 </script>
 
 <style scoped>

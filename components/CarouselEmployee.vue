@@ -91,55 +91,19 @@ const props = defineProps({
     }
 });
 
-// const currentPhotoNumber = ref<number>(0);
-// const currentPhotoNumber = ref<number>(currentPhotoNumberStore.currentPhotoNumber);
 let currentPhotoNumber = useCurrentPhotoNumberStore();
-// const currentHeroNumber = ref<number>(0);
-// const currentHeroNumber = ref<number>(currentPhotoNumberStore.currentPhotoNumber);
 let currentHeroNumber = ref<number>(currentPhotoNumber.currentPhotoNumber);
-// let heroStyle = computed(() => ({
-//     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
-//     backgroundSize: 'cover',
-//     backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
-// }));
 
 let carousel: HTMLElement;
 let hero: HTMLElement;
 let message: HTMLElement;
-// let heroStyle: globalThis.Ref<{
-//     /* __placeholder__ */
-//     backgroundImage:
-//     /* __placeholder__ */
-//     string;
-//     /* __placeholder__ */
-//     backgroundSize:
-//     /* __placeholder__ */
-//     string;
-//     /* __placeholder__ */
-//     backgroundPosition:
-//     /* __placeholder__ */
-//     string;
-// }>
+
 onMounted(() => {
-    // heroStyle = ref<{
-    //     backgroundImage: string;
-    //     backgroundSize: string;
-    //     backgroundPosition: string;
-    // }>({
-    //     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
-    //     backgroundSize: 'cover',
-    //     backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
-    // });
     carousel = document.querySelector('.carousel') as HTMLElement;
     hero = document.querySelector('.hero') as HTMLElement;
     message = document.querySelector('.message') as HTMLElement;
 
     const scrollableElement = document.querySelector('.carousel') as HTMLElement;
-
-    // scrollableElement.addEventListener('wheel', (e) => {
-    //     e.preventDefault();
-    //     scrollableElement.scrollLeft += e.deltaY;
-    // });
 
     scrollableElement.addEventListener('wheel', (e) => {
         // 横スクロールが必要かどうかを判断する条件

@@ -122,7 +122,6 @@ const isCollapse = ref(false)
 .el-menu-item {
     padding: 0 0!important;
     align-items: center;
-    /* justify-content: center; */
 }
 .el-menu-item .el-menu-tooltip__trigger {
     padding: 0 0!important;
@@ -135,7 +134,6 @@ const isCollapse = ref(false)
     height: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
 }
 
 </style>

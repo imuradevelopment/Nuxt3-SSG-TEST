@@ -12,7 +12,7 @@
         </tbody>
     </table>
 </template>
-  
+
 <script>
 
 export default defineComponent({

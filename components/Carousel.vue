@@ -50,11 +50,6 @@ const props = defineProps({
 
 const currentPhotoNumber = useCurrentPhotoNumberStore();
 const currentHeroNumber = ref<number>(currentPhotoNumber.currentPhotoNumber);
-// const heroStyle = computed(() => ({
-//     backgroundImage: `url(${props.pics[currentHeroNumber.value].src})`,
-//     backgroundSize: 'cover',
-//     backgroundPosition: `${props.pics[currentHeroNumber.value].bgPosition}`
-// }));
 
 let carousel: HTMLElement;
 let hero: HTMLElement;
@@ -64,12 +59,6 @@ onMounted(() => {
     hero = document.querySelector('.hero') as HTMLElement;
 
     const scrollableElement = document.querySelector('.carousel') as HTMLElement;
-
-    // scrollableElement.addEventListener('wheel', (e) => {
-    //     e.preventDefault();
-    //     scrollableElement.scrollLeft += e.deltaY;
-    // });
-
 
     scrollableElement.addEventListener('wheel', (e) => {
         // 横スクロールが必要かどうかを判断する条件
