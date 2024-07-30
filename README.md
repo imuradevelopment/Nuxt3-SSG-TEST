@@ -6,7 +6,7 @@
 
 1. Nodeのバージョンを18.18.0にする。
     1. 管理者権限でpowershellを起動し(Windowsボタンを押下したあと、「powershell」と入力、その後右リックから管理者として実行)、下記のコマンドを実行しバージョンが18.18.0であることを確認する。  
-    ※この時管理者権限が必要になるため、近藤さん等に相談して、権限を付与してもらうこと。
+    ※この時管理者権限が必要になるため、権限を付与してもらうこと。
 
         ```ps1
         node -v
@@ -71,7 +71,8 @@
             ```
 
    3. fork > clone > comit > push したらプルリクエストで返してください。
-3. リポジトリcloneからのお話
+
+3. リポジトリcloneから開発環境構築までのお話
    1. まずcloneしてNuxt-SSG-TESTフォルダをVSCodeで開く
 
         ```ps1
@@ -81,18 +82,12 @@
    2. 「ctrl + @」でターミナルを起動して下記コマンドを実行
 
         ```ps1
-        # 「package-lock.json」とかいうファイルに記述されているモジュールを「node_modules」とかいう所にDLしている
+        # 「package-lock.json」というファイルに記述されているモジュールを「node_modules」という所にインストールしている
         npm install
 
-        # ビルド
-        npm run generate
+        # ビルド（「.output/public」に新しいサイトが構築される）
+        npm run generate 
 
-        # ローカル開発
-        npm run local
+        # ローカルサーバー起動
+        npx serve .output/public
         ```
-
-4. ngrok
-
-   ```ps1
-   ngrok http --basic-auth="vaile:password" 3000
-   ```
