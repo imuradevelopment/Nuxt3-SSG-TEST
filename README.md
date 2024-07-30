@@ -1,75 +1,98 @@
-# Nuxt 3 Minimal Starter
+# ドキュメント
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 開発環境構築
 
-## Setup
+以下、windows10用に記載
 
-Make sure to install the dependencies:
+1. Nodeのバージョンを18.18.0にする。
+    1. 管理者権限でpowershellを起動し(Windowsボタンを押下したあと、「powershell」と入力、その後右リックから管理者として実行)、下記のコマンドを実行しバージョンが18.18.0であることを確認する。  
+    ※この時管理者権限が必要になるため、近藤さん等に相談して、権限を付与してもらうこと。
 
-```bash
-# npm
-npm install
+        ```ps1
+        node -v
+        ```
 
-# pnpm
-pnpm install
+    2. nvm(windowsでnodeのバージョンを切り替えながら使えるようにするやつ)をインストールする。
+    3. [nvmのGitHubRelease](https://github.com/coreybutler/nvm-windows/releases)から「Assets > nvm-setup.exe
+    」をDLしインストールする。
+    4. 下記コマンドを実行し、nvmがインストールされている事を確認する。(その他コマンドも後に使うので記載)
 
-# yarn
-yarn install
+        ```ps1
+        nvm -v
+        # > 出力
+        # 1.1.11
+        # 現状(2023/10/02)の最新のnvmバージョンは「1.1.11」
 
-# bun
-bun install
-```
+        nvm list
+        # > 出力
+        # * 16.17.1 (Currently using 64-bit executable)
+        #   14.19.1
+        # 現在nvmで管理されているnodeのバージョン一覧「現在選択されているのは16.17.1」
 
-## Development Server
+        # 下記コマンドでnodeをインストールする
+        nvm install lts # ltsは長期サポート対象の最新普段はこれで問題ない
+        # または
+        nvm install 18.18.0
 
-Start the development server on `http://localhost:3000`:
+        # 再びlistコマンドを実行すると下記のような出力になる
+        nvm list
+        # > 出力
+        #   18.18.0
+        # * 16.17.1 (Currently using 64-bit executable)
+        #   14.19.1
+        # 現在nvmで管理されているnodeのバージョン一覧「現在選択されているのは16.17.1」
 
-```bash
-# npm
-npm run dev
+        # 最後に使用するnodeのバージョンを使用して完了(今回は18.18.0)
+        nvm use 18.18.0
+        ```
 
-# pnpm
-pnpm run dev
+2. Gitの設定
+   1. 流石にgitはインストール済みであることを前提とする。
+   2. gitのconfig設定を行う。
+      1. 管理者権限で実行したpowershellで、下記コマンドにて諸々設定
 
-# yarn
-yarn dev
+            ```ps1
+            # 現在の設定を参照
+            git config --global --list
 
-# bun
-bun run dev
-```
+            # 以下設定
+            # コミット時の名称設定
+            git config --global user.name 'Yuta Miyaura'
+            # 自分の名前でね、間違ったら下記で消してね
+            # git config --global --unset user.name
+            git config --global user.email 'imuradevelopmentauth@gmail.com'
+            # 自分のメアドでね、間違ったら下記で消してね
+            # git config --global --unset user.email
+            git config --global init.defaultBranch main
+            git config --global core.autocrlf false
+            git config --global core.ignorecase false
+            git config --global color.ui true
+            git config --global core.quotepath false
+            ```
 
-## Production
+   3. fork > clone > comit > push したらプルリクエストで返してください。
+3. リポジトリcloneからのお話
+   1. まずcloneしてNuxt-SSG-TESTフォルダをVSCodeで開く
 
-Build the application for production:
+        ```ps1
+        git clone git@github.com:imuradevelopment/Nuxt3-SSG-TEST.git
+        ```
 
-```bash
-# npm
-npm run build
+   2. 「ctrl + @」でターミナルを起動して下記コマンドを実行
 
-# pnpm
-pnpm run build
+        ```ps1
+        # 「package-lock.json」とかいうファイルに記述されているモジュールを「node_modules」とかいう所にDLしている
+        npm install
 
-# yarn
-yarn build
+        # ビルド
+        npm run generate
 
-# bun
-bun run build
-```
+        # ローカル開発
+        npm run local
+        ```
 
-Locally preview production build:
+4. ngrok
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+   ```ps1
+   ngrok http --basic-auth="vaile:password" 3000
+   ```
