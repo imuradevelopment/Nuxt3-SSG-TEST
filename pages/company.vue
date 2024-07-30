@@ -50,12 +50,12 @@
       <section class="text-center mt-12">
         <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
         </h2>
-        <div class="bg-[url('/images/company/mtvaile.jfif')] bg-center bg-cover h-full rounded">
+        <div class="bg-[url('/images/company/001.jfif')] bg-center bg-cover h-full rounded">
           <ClearGlassMaskCard class="p-4" :opacity="0.6">
             <template #content>
               <div class="flex">
                 <div class="m-auto mr-4">
-                  <NuxtImg src="/images/company/image09.JPG"></NuxtImg>
+                  <NuxtImg src="/images/company/002.jpg"></NuxtImg>
                 </div>
                 <div class="text-left text-xs md:text-sm text-white">
                   <p>
@@ -113,7 +113,7 @@
           <template #content>
             <div class="flex flex-row flex-wrap">
               <div class="w-full md:w-1/2">
-                <NuxtImg src="/images/company/Map.png" alt="Image" class="w-full h-full object-contain"></NuxtImg>
+                <NuxtImg src="/images/company/003.png" alt="Image" class="w-full h-full object-contain"></NuxtImg>
               </div>
               <div class="flex flex-col pl-0 md:pl-4 w-full md:w-1/2 mt-4 md:mt-0">
                 <div class="text-xs md:text-sm text-left">
@@ -130,7 +130,7 @@
                   ※以下の写真をクリックすると道案内動画が再生されます。
                 </div>
                 <div class="h-full flex justify-center items-center">
-                  <video id="video" src="/videos/vaile.mp4" poster="/images/company/image007.png" controls
+                  <video id="video" src="/videos/vaile.mp4" poster="/images/company/004.png" controls
                     class="w-full h-full"></video>
                 </div>
               </div>

@@ -175,7 +175,7 @@
         </div>
     </section>
 
-    <section class="mt-24 mb-24 p-4 bg-cover bg-[url('/images/recruit/index/013.png')]">
+    <section class="mt-24 mb-24 p-4 bg-cover bg-[url('/images/recruit/index/009.png')]">
         <h2 id="recruit10" class="text-white px-4 text-4xl leading-loose font-bold w-fit ml-auto mr-auto">募集情報</h2>
         <div class="flex flex-col p-4 items-center md2:flex-row md2:flex-wrap md2:justify-between">
             <div class="mt-6">

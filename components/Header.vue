@@ -6,7 +6,7 @@
             :ellipsis="false">
             <el-menu-item index="/" class="logo">
                 <NuxtLink @click="scrollToTarget()" to="/">
-                    <NuxtImg width="185" fit="cover" src="/images/logo/logo.svg" />
+                    <NuxtImg width="185" fit="cover" src="/images/logo/logo.png" />
                 </NuxtLink>
             </el-menu-item>
             <div class="flex-grow" />
@@ -31,41 +31,41 @@
             </el-menu-item>
             <!-- <el-sub-menu index="6">
                 <template #title>その他遷移</template>
-                <el-menu-item index="/recruit/message">
-                    <NuxtLink to="/recruit/message">採用メッセージ</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/recruit/feature">
-                    <NuxtLink to="/recruit/feature">ベイルの特徴</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/recruit/office">
-                    <NuxtLink to="/recruit/office">オフィス紹介</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/recruit/induction">
-                    <NuxtLink to="/recruit/induction">研修制度</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/recruit/welfare">
-                    <NuxtLink to="/recruit/welfare">福利厚生</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/recruit/data">
-                    <NuxtLink to="/recruit/data">各種データ</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/recruit/qa">
-                    <NuxtLink to="/recruit/qa">QA</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/recruit/employee">
-                    <NuxtLink to="/recruit/employee">社員紹介</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/recruit/information">
-                    <NuxtLink to="/recruit/information">募集情報</NuxtLink>
-                </el-menu-item>
-                <el-menu-item index="/policy">
-                    <NuxtLink to="/policy">個人情報保護方針ページ</NuxtLink>
-                </el-menu-item>
-            </el-sub-menu> -->
+<el-menu-item index="/recruit/message">
+    <NuxtLink to="/recruit/message">採用メッセージ</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/recruit/feature">
+    <NuxtLink to="/recruit/feature">ベイルの特徴</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/recruit/office">
+    <NuxtLink to="/recruit/office">オフィス紹介</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/recruit/induction">
+    <NuxtLink to="/recruit/induction">研修制度</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/recruit/welfare">
+    <NuxtLink to="/recruit/welfare">福利厚生</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/recruit/data">
+    <NuxtLink to="/recruit/data">各種データ</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/recruit/qa">
+    <NuxtLink to="/recruit/qa">QA</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/recruit/employee">
+    <NuxtLink to="/recruit/employee">社員紹介</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/recruit/information">
+    <NuxtLink to="/recruit/information">募集情報</NuxtLink>
+</el-menu-item>
+<el-menu-item index="/policy">
+    <NuxtLink to="/policy">個人情報保護方針ページ</NuxtLink>
+</el-menu-item>
+</el-sub-menu> -->
         </el-menu>
     </div>
 </template>
-  
+
 <script setup lang="ts">
 import { useActiveIndexStore } from '~/stores/activeIndex'
 const activeIndexStore = useActiveIndexStore()
@@ -73,7 +73,7 @@ import { useScrollToTarget } from '~/composables/useScrollToTarget'
 // useScrollToTargetを呼び出す
 const { targetId, scrollToTarget } = useScrollToTarget()
 </script>
-  
+
 <style scoped>
 .flex-grow {
     flex-grow: 1;
@@ -120,4 +120,5 @@ const { targetId, scrollToTarget } = useScrollToTarget()
 .logo:hover,
 .logo:focus {
     background-color: white !important;
-}</style>
+}
+</style>

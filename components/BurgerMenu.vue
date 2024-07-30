@@ -11,7 +11,7 @@
                 <!-- ロゴ（クリックでメニューを閉じる） -->
                 <div @click="closeMenu(true)">
                     <NuxtLink to="/">
-                        <NuxtImg width="185" fit="cover" src="/images/logo/logo.svg" />
+                        <NuxtImg width="185" fit="cover" src="/images/logo/logo.png" />
                     </NuxtLink>
                 </div>
                 <!-- ハンバーガーアイコンとメニューのトグル -->
@@ -51,13 +51,15 @@
                         <NuxtLink to="/company" @click="closeMenu(true)" class="w-full h-full flex items-center">
                             <el-icon size="1.5rem" class="mb-1">
                                 <OfficeBuilding class="text-custom-blue" />
-                            </el-icon>会社情報</NuxtLink>
+                            </el-icon>会社情報
+                        </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400">
                         <NuxtLink to="/service" @click="closeMenu(true)" class="w-full h-full flex items-center">
                             <el-icon size="1.5rem" class="mb-1">
                                 <DataAnalysis class="text-custom-blue" />
-                            </el-icon>事業情報</NuxtLink>
+                            </el-icon>事業情報
+                        </NuxtLink>
                     </li>
                     <li class="h-14 border-b border-b-gray-400">
                         <div class="flex justify-stretch items-center w-full h-full">
@@ -204,7 +206,7 @@
         </div>
     </div>
 </template>
-  
+
 <script setup lang="ts">
 import {
     House,
@@ -261,25 +263,29 @@ function toggleRecruitItem() {
   showRecruitItem.value = !showRecruitItem.value
 }
 </script>
-    
+
 <style scoped>
 .recruitButton {
     background-color: var(--el-color-primary) !important;
     color: white !important;
 }
-.el-button-custom{
-    padding:0 !important;
+
+.el-button-custom {
+    padding: 0 !important;
 }
-.el-button-custom a{
+
+.el-button-custom a {
     width: calc((100vw-4.75rem)/2);
     height: 40px;
     line-height: 2.5rem;
 }
-.header{
-    height: 3.75rem;;
+
+.header {
+    height: 3.75rem;
+    ;
 }
-.menuContents{
+
+.menuContents {
     max-height: calc(80vh -8rem);
 }
 </style>
-    

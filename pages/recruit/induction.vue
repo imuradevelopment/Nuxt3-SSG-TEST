@@ -75,8 +75,8 @@
                     </BlurGlassCard>
                 </div>
                 <div class="flex flex-col justify-center items-center">
-                    <NuxtImg class="hidden md:inline-block" width="576" src="/images/recruit/induction/006.png" />
-                    <NuxtImg class="inline-block md:hidden" width="343" src="/images/recruit/induction/006.png" />
+                    <NuxtImg class="hidden md:inline-block" width="576" src="/images/recruit/induction/005.png" />
+                    <NuxtImg class="inline-block md:hidden" width="343" src="/images/recruit/induction/005.png" />
                 </div>
             </div>
         </section>
@@ -92,7 +92,7 @@
                     <div class="mt-6">
                         <div class="flex flex-wrap">
                             <div class="w-full md:w-1/2">
-                                <ImageCard src="/images/recruit/induction/008.png"></ImageCard>
+                                <ImageCard src="/images/recruit/induction/007.png"></ImageCard>
                             </div>
                             <div class="w-full md:w-1/2">
                                 <div class="text-2xl font-bold leading-loose">技術資格、業務資格の取得支援</div>
@@ -112,7 +112,7 @@
                     <div class="mt-6">
                         <div class="flex flex-wrap">
                             <div class="w-full md:w-1/2">
-                                <ImageCard src="/images/recruit/induction/009.png"></ImageCard>
+                                <ImageCard src="/images/recruit/induction/008.png"></ImageCard>
                             </div>
                             <div class="w-full md:w-1/2">
                                 <div class="text-2xl font-bold leading-loose">外部研修支援</div>

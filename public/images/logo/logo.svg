@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg width="185" height="46" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="46" height="46" fill="#005FB5"/>
-  <text x="56.683" y="30.734" font-family="Arial, sans-serif" font-size="20" fill="#005FB5" font-weight="bold" style="white-space: pre; font-size: 20px;" transform="matrix(1.304858, 0, 0, 1.52459, -25.356262, -14.028532)">Vaile INC</text>
-  <path d="M 2.85 43.085 L 2.85 3.557 L 42.378 23.321 L 2.85 43.085 Z" fill="#ffffff" style="transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(-0.009895, 0.999951, -0.999951, -0.009895, 0, 0)"/>
-  <path d="M 64.531 24.278 L 105.677 44.851 L 64.531 65.424 Z M 103.441 44.851 L 65.531 25.896 L 65.531 63.806 Z" style="fill: none;"/>
-  <path d="M 64.531 24.278 L 105.677 44.851 L 64.531 65.424 Z M 103.441 44.851 L 65.531 25.896 L 65.531 63.806 Z" style="fill: none;"/>
-  <path d="M 64.531 24.278 L 105.677 44.851 L 64.531 65.424 Z M 103.441 44.851 L 65.531 25.896 L 65.531 63.806 Z" style="fill: none;"/>
-</svg>

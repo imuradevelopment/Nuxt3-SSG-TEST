@@ -3,7 +3,7 @@
         <el-col :sm="18" :span="24">
             <el-row>
                 <div class="mb-3 bg-white border-t-2 border-custom-gray drop-shadow-md">
-                    <NuxtImg width="185" fit="cover" src="/images/logo/logo.svg" />
+                    <NuxtImg width="185" fit="cover" src="/images/logo/logo.png" />
                 </div>
             </el-row>
             <div class="flex flex-wrap flex-col md:flex-row px-12 md:px-6">
@@ -150,4 +150,5 @@ const { targetId, scrollToTarget } = useScrollToTarget()
     position: absolute;
     top: 0;
     width: 2rem;
-}</style>
+}
+</style>
