@@ -55,7 +55,7 @@
             <template #content>
               <div class="flex">
                 <div class="m-auto mr-4">
-                  <NuxtImg src="/images/company/002.jpg"></NuxtImg>
+                  <NuxtImg src="/images/company/002.jpg" width="175"></NuxtImg>
                 </div>
                 <div class="text-left text-xs md:text-sm text-white">
                   <p>
@@ -156,11 +156,6 @@ onMounted(() => {
     videoElement.volume = videoVolume.value;
   }
 });
-
-interface CompanySummaryItem {
-  column1: string;
-  column2: string;
-}
 
 const companySummary = [
   {

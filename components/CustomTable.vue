@@ -13,22 +13,18 @@
     </table>
 </template>
   
-<script lang="ts">
-
-interface CompanySummaryItem {
-    [key: string]: string;
-}
+<script>
 
 export default defineComponent({
     name: "CustomTable",
     props: {
         items: {
-            type: Array as PropType<CompanySummaryItem[]>,
+            type: Array,
             required: true,
-            validator: (value: CompanySummaryItem[]) => value.length >= 2,
+            validator: (value) => value.length >= 2,
         },
         showHeader: {
-            type: Boolean as PropType<boolean>,
+            type: Boolean,
             required: false,
             default: true,
             
