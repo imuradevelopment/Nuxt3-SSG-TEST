@@ -1,15 +1,10 @@
-import { defineNuxtPlugin } from "#app"
+import { defineNuxtPlugin } from "#app";
 
+// Nuxtプラグインを定義する
 export default defineNuxtPlugin((nuxtApp) => {
+    // ページのナビゲーションが終了した後に実行されるフックを設定
    nuxtApp.hook("page:finish", () => {
-      window.scrollTo({ top: 0, left: 0 })
-   })
-})
-
-// import { defineNuxtPlugin } from "#app"
-
-// export default defineNuxtPlugin((nuxtApp) => {
-//    nuxtApp.$router.options.scrollBehavior = (to, from, savedPosition) => {
-//       return { top: 0 }
-//    }
-// })
+      // ページナビゲーション後に画面をトップにスクロール
+      window.scrollTo({ top: 0, left: 0 });
+   });
+});

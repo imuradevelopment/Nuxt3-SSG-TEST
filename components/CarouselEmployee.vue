@@ -67,11 +67,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import BlurGlassCard from './BlurGlassCard.vue';
-import ClearGlassMaskCard from '~/components/ClearGlassMaskCard.vue'
-import { useCurrentPhotoNumberStore } from '~/stores/currentPhotoNumber'
-let currentPhotoNumberStore = useCurrentPhotoNumberStore();
+import { ref } from 'vue';
+import BlurGlassCard from './BlurGlassCard.vue'; // BlurGlassCardコンポーネントをインポート
+import { useCurrentPhotoNumberStore } from '~/stores/currentPhotoNumber'; // ストアをインポート
 
 // propsでpicsをオブジェクトの配列として定義
 const props = defineProps({
@@ -91,19 +89,19 @@ const props = defineProps({
     }
 });
 
-let currentPhotoNumber = useCurrentPhotoNumberStore();
-let currentHeroNumber = ref<number>(currentPhotoNumber.currentPhotoNumber);
+let currentPhotoNumber = useCurrentPhotoNumberStore(); // ストアのインスタンスを取得
+let currentHeroNumber = ref<number>(currentPhotoNumber.currentPhotoNumber); // 現在のヒーロー画像のインデックスを管理するref
 
-let carousel: HTMLElement;
-let hero: HTMLElement;
-let message: HTMLElement;
+let carousel: HTMLElement; // キャロセルのDOM要素
+let hero: HTMLElement; // ヒーロー画像のDOM要素
+let message: HTMLElement; // メッセージコンテナのDOM要素
 
 onMounted(() => {
-    carousel = document.querySelector('.carousel') as HTMLElement;
-    hero = document.querySelector('.hero') as HTMLElement;
-    message = document.querySelector('.message') as HTMLElement;
+    carousel = document.querySelector('.carousel') as HTMLElement; // キャロセルのDOM要素を取得
+    hero = document.querySelector('.hero') as HTMLElement; // ヒーロー画像のDOM要素を取得
+    message = document.querySelector('.message') as HTMLElement; // メッセージコンテナのDOM要素を取得
 
-    const scrollableElement = document.querySelector('.carousel') as HTMLElement;
+    const scrollableElement = document.querySelector('.carousel') as HTMLElement; // スクロール可能なキャロセル要素を取得
 
     scrollableElement.addEventListener('wheel', (e) => {
         // 横スクロールが必要かどうかを判断する条件
@@ -113,45 +111,41 @@ onMounted(() => {
         const isAtEndOfScroll =
             Math.abs(scrollableElement.scrollLeft + scrollableElement.clientWidth - scrollableElement.scrollWidth) < 0.5;
         if (shouldScrollHorizontally && !isAtEndOfScroll) {
-            e.preventDefault();
-            scrollableElement.scrollLeft += e.deltaY;
-        } else {
-            // 横スクロールが不要、または最後まで達した場合、縦スクロールを許可する
-            // ここでは何もしない（ブラウザのデフォルトのスクロール動作を許可する）
+            e.preventDefault(); // デフォルトのスクロール動作を防止
+            scrollableElement.scrollLeft += e.deltaY; // 横スクロールを実行
         }
     });
 
-    selectItem(currentPhotoNumber.currentPhotoNumber);
+    selectItem(currentPhotoNumber.currentPhotoNumber); // 初期表示のアイテムを選択
 });
 
 const selectItem = (index: number) => {
-    
     setTimeout(() => {
-        currentHeroNumber.value = index;
-        hero.style.backgroundImage = `url(${props.pics[index].src})`
-        hero.style.backgroundSize = `cover`
-        hero.style.backgroundPosition = `${props.pics[index].bgPosition}`
+        currentHeroNumber.value = index; // 現在のヒーロー画像のインデックスを更新
+        hero.style.backgroundImage = `url(${props.pics[index].src})`; // ヒーロー画像を更新
+        hero.style.backgroundSize = `cover`; // 背景サイズをカバーに設定
+        hero.style.backgroundPosition = `${props.pics[index].bgPosition}`; // 背景位置を更新
     }, 500);
 
-    itemFocus(index);
+    itemFocus(index); // 選択したアイテムにフォーカスを当てる
 
-    hero.classList.add('switching');
+    hero.classList.add('switching'); // 画像切り替えのアニメーションを開始
     hero.addEventListener('animationend', () => {
-        hero.classList.remove('switching');
+        hero.classList.remove('switching'); // アニメーション終了時にクラスを削除
     });
 
-    message.classList.add('switching');
+    message.classList.add('switching'); // メッセージの切り替えアニメーションを開始
     message.addEventListener('animationend', () => {
-        message.classList.remove('switching');
+        message.classList.remove('switching'); // アニメーション終了時にクラスを削除
     });
 }
 
 const itemFocus = (index: number) => {
-    let faceBefore = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement;
-    faceBefore.style.boxShadow = `none`;
-    currentPhotoNumber.currentPhotoNumber = index;
-    let face = carousel.children[index] as HTMLElement;
-    face.style.boxShadow = `0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue)`;
+    let faceBefore = carousel.children[currentPhotoNumber.currentPhotoNumber] as HTMLElement; // 前回選択されたアイテム
+    faceBefore.style.boxShadow = `none`; // 前回選択されたアイテムの影を削除
+    currentPhotoNumber.currentPhotoNumber = index; // 現在の写真番号を更新
+    let face = carousel.children[index] as HTMLElement; // 現在選択されたアイテム
+    face.style.boxShadow = `0 0 5px var(--custom-color-blue),2px 2px 3px var(--custom-color-blue),-2px -2px 3px var(--custom-color-blue)`; // 選択されたアイテムに影を追加
 }
 </script>
 
@@ -166,6 +160,7 @@ const itemFocus = (index: number) => {
     grid-template-rows: calc(7rem + 8px + 12px) 600px auto;
     gap: 0.5rem;
 }
+
 @media screen and (max-width: 768px) {
     .grid-carousel {
         display: grid;

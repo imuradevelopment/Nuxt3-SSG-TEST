@@ -1,11 +1,15 @@
 <template>
+    <!-- モバイル表示専用のヒーローセクション -->
     <div id="canvasBox" class="md:hidden" style="min-height:450px; width: 100%;">
+        <!-- キャンバス要素 -->
         <canvas id="lines" style="position: absolute;"></canvas>
         <div style="height:450px">
             <div class="heroString">
+                <!-- キャッチコピー -->
                 <h2 class="catchString fontSerif mb-1 text-6xl">
                     Solution<br /><span>&nbsp;</span>&<span>&nbsp;</span><br />Evolution
                 </h2>
+                <!-- サブメッセージ -->
                 <p class="text-xs">
                     新しい発想と技術とコミュニケーションで問題を解決し、<br />より良い方法をご提案させていただきます。
                 </p>
@@ -13,63 +17,43 @@
         </div>
     </div>
 </template>
+
 <script setup lang="ts">
 // キャンバスレンダラークラス
 class CanvasRenderer {
-    // 画面に描画するためのキャンバスとして使用します。
-    private canvas: HTMLCanvasElement;
-    // 描画操作を行うためのコンテキストです。
-    private context: CanvasRenderingContext2D;
-    // キャンバス上に描画される各線のスタイルとパス情報を格納します。
-    private lineStyles: LineStyle[];
-    // 背景色設定
-    private backgroundColor: Color;
-    // アニメーションフレームを制御するために使用します。
-    // アニメーションが停止中は未定義です。
-    private animationId: number | undefined;
-
-    private linePatterns: LinePattern[];
-    private lineCount: number;
-    private startPosition: string;
-    private parentElement: HTMLElement;
-    private currentCanvasWidth: number;
+    private canvas: HTMLCanvasElement; // キャンバス要素
+    private context: CanvasRenderingContext2D; // キャンバスの描画コンテキスト
+    private lineStyles: LineStyle[]; // ラインスタイルの配列
+    private backgroundColor: Color; // 背景色設定
+    private animationId: number | undefined; // アニメーションフレームを制御するためのID
+    private linePatterns: LinePattern[]; // ラインパターンの配列
+    private lineCount: number; // ラインの数
+    private startPosition: string; // ラインの出発点の位置
+    private parentElement: HTMLElement; // キャンバスの親要素
+    private currentCanvasWidth: number; // 現在のキャンバスの幅
 
     constructor(
-        // キャンバス要素のID。
-        canvasId: string,
-        // キャンバス要素の親要素のID。
-        parentId: string,
-        // ラインのスタイルパターンの配列。
-        linePatterns: LinePattern[],
-        // 背景色の設定。
-        backgroundColor: Color,
-        // 描画するラインの数。
-        lineCount: number,
-        // ラインの出発点の位置を示す文字列。
-        startPosition: string
+        canvasId: string, // キャンバス要素のID
+        parentId: string, // キャンバス要素の親要素のID
+        linePatterns: LinePattern[], // ラインのスタイルパターンの配列
+        backgroundColor: Color, // 背景色の設定
+        lineCount: number, // 描画するラインの数
+        startPosition: string // ラインの出発点の位置
     ) {
-        // キャンバス要素を取得
-        this.canvas = this.getCanvasElement(canvasId);
-        // 2D コンテキストを取得
-        this.context = this.canvas.getContext("2d", { alpha: false }) as CanvasRenderingContext2D;
-        // 背景色を設定
-        this.backgroundColor = backgroundColor;
-        this.parentElement = document.getElementById(parentId) as HTMLElement;
-        // キャンバスサイズを設定
-        const canvasSize = this.setupCanvasSize(this.parentElement);
-        this.currentCanvasWidth = canvasSize.width;
-        this.canvas.width = canvasSize.width;
-        this.canvas.height = canvasSize.height;
-
-        this.linePatterns = linePatterns;
-        this.lineCount = lineCount;
-        this.startPosition = startPosition;
-        // ラインスタイルを生成
-        this.lineStyles = this.generateDrawingStyles(this.linePatterns, this.lineCount, this.startPosition);
-        // リサイズハンドラを設定
-        this.setupResizeHandler(this.parentElement);
-        // アニメーションを開始
-        this.startAnimation();
+        this.canvas = this.getCanvasElement(canvasId); // キャンバス要素を取得
+        this.context = this.canvas.getContext("2d", { alpha: false }) as CanvasRenderingContext2D; // 2D コンテキストを取得
+        this.backgroundColor = backgroundColor; // 背景色を設定
+        this.parentElement = document.getElementById(parentId) as HTMLElement; // キャンバスの親要素を取得
+        const canvasSize = this.setupCanvasSize(this.parentElement); // キャンバスサイズを設定
+        this.currentCanvasWidth = canvasSize.width; // 現在のキャンバス幅を設定
+        this.canvas.width = canvasSize.width; // キャンバスの幅を設定
+        this.canvas.height = canvasSize.height; // キャンバスの高さを設定
+        this.linePatterns = linePatterns; // ラインパターンを設定
+        this.lineCount = lineCount; // ラインの数を設定
+        this.startPosition = startPosition; // ラインの出発点を設定
+        this.lineStyles = this.generateDrawingStyles(this.linePatterns, this.lineCount, this.startPosition); // ラインスタイルを生成
+        this.setupResizeHandler(this.parentElement); // リサイズハンドラを設定
+        this.startAnimation(); // アニメーションを開始
     }
 
     // キャンバス要素を取得するメソッド
@@ -82,7 +66,7 @@ class CanvasRenderer {
     }
 
     // キャンバスサイズを設定するメソッド
-    private setupCanvasSize(parentElement: HTMLElement): {width:number, height:number} {
+    private setupCanvasSize(parentElement: HTMLElement): { width: number, height: number } {
         return {
             width: Math.floor(parentElement.clientWidth),
             height: Math.floor(parentElement.clientHeight)
@@ -91,34 +75,28 @@ class CanvasRenderer {
 
     // ラインスタイルを生成するメソッド
     private generateDrawingStyles(
-        // ラインのスタイルパターンの配列。
-        linePatterns: LinePattern[],
-        // 生成するラインの数。
-        lineCount: number,
-        // ラインの出発点の位置を示す文字列。
-        startPosition: string
+        linePatterns: LinePattern[], // ラインのスタイルパターンの配列
+        lineCount: number, // 生成するラインの数
+        startPosition: string // ラインの出発点の位置
     ): LineStyle[] {
         const lines: LineStyle[] = [];
-
-        // 必須のラインスタイルパターンのみを抽出、lines 配列に追加
+        // 必須のラインスタイルパターンのみを抽出し、lines 配列に追加
         const requiredLinePatterns = linePatterns.filter((linePattern) => linePattern.required);
         requiredLinePatterns.forEach((requiredLinePattern) => {
             lines.push(new LineStyle(requiredLinePattern, startPosition, this.canvas));
         });
-
         // 必須でないラインスタイルパターンをランダムに抽出して、lines 配列に追加
         for (let i = 0; i < lineCount - requiredLinePatterns.length; i++) {
             const anRequiredLinePatterns = linePatterns[Math.floor(Math.random() * linePatterns.length)];
             lines.push(new LineStyle(anRequiredLinePatterns, startPosition, this.canvas));
         }
-
         return lines;
     }
 
     // キャンバスリサイズハンドラを設定するメソッド
     private setupResizeHandler(parentElement: HTMLElement): void {
         window.addEventListener("resize", () => {
-              // 現在と前回の横幅が違う場合だけ実行
+            // 現在と前回の横幅が違う場合だけ実行
             if (this.currentCanvasWidth != parentElement.clientWidth) {
                 // アニメーションを停止
                 this.stopAnimation();
@@ -174,6 +152,7 @@ class CanvasRenderer {
     }
 }
 
+// ラインスタイルクラス
 class LineStyle {
     lineSize: number;
     origin: { x: number; y: number };
@@ -186,7 +165,7 @@ class LineStyle {
     canvas: HTMLCanvasElement;
 
     constructor(linePattern: LinePattern, startPosition: string, canvas: HTMLCanvasElement) {
-        this.lineSize = linePattern.lineSize * (window.devicePixelRatio / 3);;
+        this.lineSize = linePattern.lineSize * (window.devicePixelRatio / 3);
         this.origin = this.calculateOrigin(startPosition, canvas);
         this.length = 500 + Math.random() * 1000;
         this.color = linePattern.color;
@@ -204,10 +183,8 @@ class LineStyle {
         }
         context.strokeStyle = this.getColorString();
         this.renderStyle(this.lineStyle, context);
-        // 線の末端のスタイルを指定
-        context.lineCap = "round";
-        // 2つの線が交差するときの角のスタイルを指定
-        context.lineJoin = "round";
+        context.lineCap = "round"; // 線の末端のスタイルを指定
+        context.lineJoin = "round"; // 2つの線が交差するときの角のスタイルを指定
         context.stroke(new Path2D(this.path));
     }
 
@@ -217,10 +194,7 @@ class LineStyle {
     }
 
     // キャンバス上のラインの出発点を計算するメソッド
-    private calculateOrigin(
-        position: string,
-        canvas: HTMLCanvasElement
-    ): { x: number; y: number } {
+    private calculateOrigin(position: string, canvas: HTMLCanvasElement): { x: number; y: number } {
         const canvasWidth = canvas.width;
         const canvasHeight = canvas.height;
         switch (position) {
@@ -244,36 +218,23 @@ class LineStyle {
     }
 
     // 描画スタイルを設定するメソッド
-    private renderStyle(
-        style: string,
-        context: CanvasRenderingContext2D
-    ): void {
+    private renderStyle(style: string, context: CanvasRenderingContext2D): void {
         if (style === "glitches") {
-            // 破線パターンのオフセットを設定
-            context.lineDashOffset = this.offset + this.length;
+            context.lineDashOffset = this.offset + this.length; // 破線パターンのオフセットを設定
             context.setLineDash([
-                // 実線部分の長さを指定
-                this.lineSize ** 1.5,
-                // 実線部分の長さを指定
-                (this.length / this.lineSize) * this.lineSize ** 2,
+                this.lineSize ** 1.5, // 実線部分の長さを指定
+                (this.length / this.lineSize) * this.lineSize ** 2, // 実線部分の長さを指定
             ]);
-            // 破線がどの位置から始まるかを制御
-            this.offset += 20;
-            // 描かれる線の幅
-            context.lineWidth = 2 * (window.devicePixelRatio / 3);
+            this.offset += 20; // 破線がどの位置から始まるかを制御
+            context.lineWidth = 2 * (window.devicePixelRatio / 3); // 描かれる線の幅
         } else if (style === "pattern") {
-            // 破線パターンのオフセットを設定
-            context.lineDashOffset = this.length - this.offset;
+            context.lineDashOffset = this.length - this.offset; // 破線パターンのオフセットを設定
             context.setLineDash([
-                // 実線部分の長さを指定
-                this.length,
-                // 実線部分の長さを指定
-                this.length,
+                this.length, // 実線部分の長さを指定
+                this.length, // 実線部分の長さを指定
             ]);
-            // 破線がどの位置から始まるかを制御
-            this.offset += 10;
-            // 描かれる線の幅
-            context.lineWidth = 1 * (window.devicePixelRatio / 3);
+            this.offset += 10; // 破線がどの位置から始まるかを制御
+            context.lineWidth = 1 * (window.devicePixelRatio / 3); // 描かれる線の幅
             context.imageSmoothingEnabled = false;
         }
     }
@@ -281,19 +242,12 @@ class LineStyle {
     // ラインのパスを生成するメソッド
     generatePath(): void {
         const segments = this.getPatterns();
-        // SVG パスの始点を指定
-        let path = `M${this.origin.x},${this.origin.y}`;
-        // mag は線セグメントの長さを表す変数
-        let mag = 0;
+        let path = `M${this.origin.x},${this.origin.y}`; // SVG パスの始点を指定
+        let mag = 0; // 線セグメントの長さを表す変数
         for (let i = 0; i < this.length; i += 1) {
-            // segments 配列からランダムに選択された要素を fragment 変数に代入しています。
-            // Math.floor(Math.random() * segments.length) は、segments 配列内のランダムなインデックスを生成します。
-            const fragment = segments[Math.floor(Math.random() * segments.length)];
-            // fragment オブジェクトが line プロパティを持つ場合に、SVG パスに新しい線セグメントを追加しています。
-            if (fragment.line) { path += ` ${fragment.line}`; }
-            // mag 変数に fragment.mag を加算しています。
-            // mag は線セグメントの長さを表す変数で、各セグメントの長さが加算されています。
-            mag += fragment.mag;
+            const fragment = segments[Math.floor(Math.random() * segments.length)]; // ランダムにセグメントを選択
+            if (fragment.line) { path += ` ${fragment.line}`; } // パスにセグメントを追加
+            mag += fragment.mag; // セグメントの長さを加算
         }
         this.path = path;
     }
@@ -338,74 +292,50 @@ class LineStyle {
     }
 
     // パスをランダムに変更するメソッド
-    // ラインの一部がランダムに変更され、
-    // アニメーション中にパスの一部が変わることで、ラインの外観が変化する効果が生じます。
     mutatePath(): void {
-        // パスの一部をランダムに変更
-        // this.path は、ラインのパスを表す文字列です。
-        // この文字列は、SVG パスデータの一部で、ラインがどのように描かれるかを定義します。
-        // ラインのパス文字列を空白文字で分割し、各パスセグメント（例: "h20"、"v10" など）に分割します。
-        // これにより、パス文字列がセグメントごとに配列に分かれます。
-        const lineFragments = this.path.split(" ").slice(1);
+        const lineFragments = this.path.split(" ").slice(1); // パスを分割
         const generator = this.getPatterns();
-        // 選択されたランダムなパスセグメントを generator 配列からランダムに選択し、
-        // lineFragments 配列内の対応するセグメントを置き換えます。
-        // 配列内からランダムに選択されたインデックスを生成します。
-        // これにより、ランダムに選択されたパスセグメントが決まります。
         lineFragments[Math.floor(Math.random() * lineFragments.length)] =
-            // 新しいパスセグメントを生成するためのパターンを表す配列です。
-            // 異なるパスセグメントのスタイルと長さが含まれています。
-            generator[Math.floor(Math.random() * generator.length)].line;
-        // 最後に、lineFragments 配列を再構築し、新しいパス文字列を生成します。
-        this.path = `${this.path.split(" ")[0]} ${lineFragments.join(" ")}`;
+            generator[Math.floor(Math.random() * generator.length)].line; // パスセグメントをランダムに置き換え
+        this.path = `${this.path.split(" ")[0]} ${lineFragments.join(" ")}`; // パスを再構築
     }
 }
 
 interface LinePattern {
-    required: boolean;
-    lineSize: number;
-    lineStyle: string;
-    color: Color;
+    required: boolean; // 必須かどうか
+    lineSize: number; // ラインのサイズ
+    lineStyle: string; // ラインのスタイル
+    color: Color; // ラインの色
 }
 
 interface Color {
-    h: number;
-    s: number;
-    l: number;
-    a: number;
+    h: number; // 色相 (Hue)
+    s: number; // 彩度 (Saturation)
+    l: number; // 明度 (Lightness)
+    a: number; // 透明度 (Alpha)
 }
 
-// 以下は HSLA の成分についての説明です:
-// 1. Hue (色相): Hue は色の種類やトーンを示します。
-//    赤が 0 度、緑が 120 度、青が 240 度です。
-// 2. Saturation (彩度): Saturation は色の鮮やかさや強さを示します。
-//    0% の場合はグレースケールに近い灰色になり、100% の場合は最も鮮やかな色になります。
-// 3. Lightness (明度): Lightness は色の明るさを示します。
-//    0% の場合は黒に、100% の場合は白に近い明るさになります。
-// 4. Alpha (透明度): Alpha は色の透明度を示します。
-//    0 は完全に透明で、1 は完全に不透明です。
 let canvasRenderer: CanvasRenderer | undefined;
 
 onMounted(() => {
-
-        canvasRenderer = new CanvasRenderer(
-            "lines",
-            "canvasBox",
-            [
-                { required: false, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
-                { required: false, lineSize: 2.5, lineStyle: "pattern", color: { h: 190, s: 90, l: 50, a: 0.3 } },
-                { required: false, lineSize: 5, lineStyle: "pattern", color: { h: 210, s: 70, l: 60, a: 0.2 } },
-                { required: false, lineSize: 10, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.15 } },
-                { required: false, lineSize: 20, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.12 } },
-                { required: false, lineSize: 20, lineStyle: "pattern", color: { h: 210, s: 20, l: 40, a: 0.12 } },
-                { required: false, lineSize: 40, lineStyle: "pattern", color: { h: 190, s: 40, l: 50, a: 0.12 } },
-                { required: false, lineSize: 80, lineStyle: "pattern", color: { h: 220, s: 100, l: 60, a: 0.12 } },
-            ],
-            { h: 200, s: 20, l: 10, a: 0.3 },
-            40,
-            "center",
-        );
-    if(canvasRenderer){
+    canvasRenderer = new CanvasRenderer(
+        "lines",
+        "canvasBox",
+        [
+            { required: false, lineSize: 1.25, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.5 } },
+            { required: false, lineSize: 2.5, lineStyle: "pattern", color: { h: 190, s: 90, l: 50, a: 0.3 } },
+            { required: false, lineSize: 5, lineStyle: "pattern", color: { h: 210, s: 70, l: 60, a: 0.2 } },
+            { required: false, lineSize: 10, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.15 } },
+            { required: false, lineSize: 20, lineStyle: "pattern", color: { h: 209, s: 100, l: 40, a: 0.12 } },
+            { required: false, lineSize: 20, lineStyle: "pattern", color: { h: 210, s: 20, l: 40, a: 0.12 } },
+            { required: false, lineSize: 40, lineStyle: "pattern", color: { h: 190, s: 40, l: 50, a: 0.12 } },
+            { required: false, lineSize: 80, lineStyle: "pattern", color: { h: 220, s: 100, l: 60, a: 0.12 } },
+        ],
+        { h: 200, s: 20, l: 10, a: 0.3 },
+        40,
+        "center",
+    );
+    if (canvasRenderer) {
         canvasRenderer.startAnimation();
     }
 })
@@ -417,6 +347,7 @@ onBeforeUnmount(() => {
     }
 })
 </script>
+
 <style scoped>
 #canvasBox {
     image-rendering: -webkit-optimize-contrast;
@@ -439,8 +370,6 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 849px) {
-
-    /* 849px以下の幅のデバイスに適用するスタイル */
     .heroString {
         position: relative;
         color: white;

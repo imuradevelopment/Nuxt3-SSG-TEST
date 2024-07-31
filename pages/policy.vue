@@ -1,10 +1,12 @@
 <template>
     <div>
         <main class="lower policy">
+            <!-- キービジュアルセクション -->
             <section class="kv kv--center">
                 <h1 class="lower__ttl lower__ttl--w">個人情報保護方針</h1>
                 <h2 class="lower__catch lower__catch--w"><span class="font-serif">Privacy Policy</span></h2>
             </section>
+            <!-- 個人情報保護方針セクション -->
             <section class="wrap">
                 <h3 class="lower__s-ttl">個人情報保護方針</h3>
                 <div class="policy-box bg-box">
@@ -94,6 +96,7 @@
                     </dl>
                 </div>
             </section>
+            <!-- 個人情報の取り扱いセクション -->
             <section class="wrap">
                 <h3 class="lower__s-ttl">個人情報の取り扱いについて</h3>
                 <div class="policy-box policy-box--2 bg-box">
@@ -244,6 +247,7 @@
                     </dl>
                 </div>
             </section>
+            <!-- プライバシーマークと連絡先セクション -->
             <section class="sec wrap policy-table-area">
                 <div class="policy-mark"><a href="http://privacymark.jp/" target="_blank"><img
                             src="/images/footer/policy.png" alt=""></a></div>
@@ -590,7 +594,7 @@ section {
         box-sizing: border-box !important;
     }
 
-    >>>tbody {
+    :deep(tbody) {
         display: block !important;
         width: 100% !important;
         box-sizing: border-box !important;

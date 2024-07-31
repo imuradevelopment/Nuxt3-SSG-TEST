@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- Q&Aセクションのヘッダー部分 -->
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/qa/001.png')]">
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
@@ -13,6 +14,7 @@
                     皆様の良く有る質問を纏めました。</p>
             </div>
         </section>
+        <!-- 採用に関するQ&Aセクション -->
         <section class="mb-12 md:mb-24">
             <BlurGlassCard>
                 <div>
@@ -97,6 +99,7 @@
                 </div>
             </BlurGlassCard>
         </section>
+        <!-- 仕事に関するQ&Aセクション -->
         <section class="mb-12 md:mb-24">
             <BlurGlassCard>
                 <div>
@@ -235,6 +238,7 @@
                 </div>
             </BlurGlassCard>
         </section>
+        <!-- 福利厚生・制度に関するQ&Aセクション -->
         <section class="mb-12 md:mb-24">
             <BlurGlassCard>
                 <div>
@@ -301,6 +305,7 @@
                 </div>
             </BlurGlassCard>
         </section>
+        <!-- その他に関するQ&Aセクション -->
         <section class="mb-12 md:mb-24">
             <BlurGlassCard>
                 <div>

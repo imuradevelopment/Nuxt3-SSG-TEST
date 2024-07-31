@@ -1,21 +1,26 @@
 <template>
   <div>
+    <!-- 固定ヘッダーカード -->
     <ClearGlassMaskCard :rounded="false" :opacity="0.5"
       class="h-12 fixed top-16 w-full maxWidth mx-auto z-50 hidden md:inline-block">
       <template #content>
         <div class="bg-custom-blue/30 h-full">
           <div class="h-12 px-4 fixed top-16 w-full maxWidth mx-auto flex items-center justify-between">
             <div>
+              <!-- ページタイトル -->
               <h1 class="font-bold text-lg md:text-2xl text-center text-custom-platina">会社情報</h1>
             </div>
             <div>
+              <!-- ページヘッダーコンポーネント -->
               <PageHeader />
             </div>
           </div>
         </div>
       </template>
     </ClearGlassMaskCard>
+
     <div class="mx-4">
+      <!-- TOPメッセージセクション -->
       <section class="text-center mt-8 md:mt-20">
         <h2 id="company01" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">TOPメッセージ
         </h2>
@@ -47,9 +52,10 @@
           </template>
         </CustomFrameCard>
       </section>
+
+      <!-- ベイルの由来セクション -->
       <section class="text-center mt-12">
-        <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来
-        </h2>
+        <h2 id="company02" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">ベイルの由来</h2>
         <div class="bg-[url('/images/company/001.jfif')] bg-center bg-cover h-full rounded">
           <ClearGlassMaskCard class="p-4" :opacity="0.6">
             <template #content>
@@ -72,6 +78,8 @@
           </ClearGlassMaskCard>
         </div>
       </section>
+
+      <!-- 沿革セクション -->
       <section class="text-center mt-16">
         <h2 id="company03" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">沿革</h2>
         <div class="m-auto text-left w-fit">
@@ -92,7 +100,7 @@
               目黒区東山へ本社移転
             </el-timeline-item>
             <el-timeline-item timestamp="2007年2月" type="primary" size="large">
-              資本金２，６００万円に増資
+              資本金2,600万円に増資
             </el-timeline-item>
             <el-timeline-item timestamp="2007年6月" type="primary" size="large">
               プライバシーマークの認証取得
@@ -100,12 +108,16 @@
           </el-timeline>
         </div>
       </section>
+
+      <!-- 会社概要セクション -->
       <section class="text-center mt-8">
         <h2 id="company04" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mb-2">会社概要</h2>
         <div class="text-xs md:text-sm text-left">
           <CustomTable :items="companySummary" :showHeader="false"></CustomTable>
         </div>
       </section>
+
+      <!-- アクセスセクション -->
       <section class="text-center mb-8 md:mb-16">
         <h2 id="company05" class="linkScrollPageHeader font-bold text-2xl md:text-4xl text-custom-blue mt-8 mb-2">アクセス
         </h2>
@@ -120,6 +132,7 @@
                   日比谷線/東急東横線「中目黒駅」徒歩5分<br /><br />
                   中目黒駅 東口改札を出て、信号渡らずに左折。<br />
                   蕎麦屋さん（吉そば）がある方向へ進み、そのまま山手通り沿いを5分程歩くと1Fにお寿司屋さん(築地すし好)が入っているビルです。<br />
+                  <!-- Google Mapリンク -->
                   <NuxtLink class="bg-custom-blue text-white py-2 px-4 rounded-full inline-block my-4"
                     to="https://www.google.com/maps/place/%E3%88%B1%E3%83%99%E3%82%A4%E3%83%AB/@35.646232,139.6936131,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b4c2a3cc4fb:0x83c884f6f8cca99!8m2!3d35.646232!4d139.696188!16s%2Fg%2F1tqtxwbw?entry=ttu"
                     target="_blank">
@@ -229,20 +242,20 @@ const companySummary = [
 
 .bg-blue-overlay {
   background:
-      repeating-linear-gradient(45deg,
-        var(--custom-color-deepBlue),
-        var(--custom-color-deepBlue) 1px,
-        transparent 1px,
-        transparent 1.5px),
-      repeating-linear-gradient(-45deg,
-        var(--custom-color-deepBlue),
-        var(--custom-color-deepBlue) 1px,
-        transparent 1px,
-        transparent 1.5px);
-    background-size: 1.5px 1.5px;
-    color: white;
-    display: inline;
-    padding: 0 4px;
-    border-radius: 2px;
+    repeating-linear-gradient(45deg,
+      var(--custom-color-deepBlue),
+      var(--custom-color-deepBlue) 1px,
+      transparent 1px,
+      transparent 1.5px),
+    repeating-linear-gradient(-45deg,
+      var(--custom-color-deepBlue),
+      var(--custom-color-deepBlue) 1px,
+      transparent 1px,
+      transparent 1.5px);
+  background-size: 1.5px 1.5px;
+  color: white;
+  display: inline;
+  padding: 0 4px;
+  border-radius: 2px;
 }
 </style>

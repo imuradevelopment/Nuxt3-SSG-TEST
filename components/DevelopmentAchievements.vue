@@ -1,5 +1,7 @@
 <template>
+    <!-- テーブル全体を囲む要素 -->
     <table class="table">
+        <!-- テーブルヘッダー -->
         <thead>
             <tr>
                 <th scope="col" class="medium text-base">区分</th>
@@ -11,11 +13,14 @@
                 <th scope="col" class="small text-base">保守<span class="inline-block tableTransform1:hidden">・</span><br
                         class="hidden tableTransform1:inline-block" />運用</th>
                 <th scope="col" class="large text-base">データベース</th>
-                <th scope="col" class="medium text-base">開発言語<span class="inline-block tableTransform1:hidden">・</span><br
+                <th scope="col" class="medium text-base">開発言語<span
+                        class="inline-block tableTransform1:hidden">・</span><br
                         class="hidden tableTransform1:inline-block" />ツール</th>
             </tr>
         </thead>
+        <!-- テーブルボディ -->
         <tbody>
+            <!-- 各行のデータをループで表示 -->
             <tr class="mb-4">
                 <td class="table-id" data-value="区分">金融</td>
                 <td class="table-name" data-value="システム">銀行向けデータ連携システム<br
@@ -149,16 +154,18 @@
     </table>
 </template>
 <script setup lang="ts">
-
 </script>
 <style scoped>
+/* テーブル全体のスタイル */
 .table {
     border-collapse: collapse;
+    /* セルのボーダーを重ねる */
     width: 100%;
     background-color: transparent;
-    margin-bottom: 1.75rem
+    margin-bottom: 1.75rem;
 }
 
+/* テーブルヘッダーのスタイル */
 .table th {
     padding: 0.5em 0.5em;
     border: 1px solid var(--cumtom-color-ivory);
@@ -167,11 +174,13 @@
     text-align: center;
 }
 
+/* テーブルボディのセルのスタイル */
 .table td {
     padding: 0.25em 0.5em;
     border: 1px solid var(--cumtom-color-ivory);
 }
 
+/* 偶数行の背景色を設定 */
 .table tr:nth-child(even) {
     background-color: var(--cumtom-color-lightIvory);
 }
@@ -213,7 +222,7 @@ tbody tr td:nth-child(9) {
     text-align: center;
 }
 
-/* 表全体をブロック要素として表示 */
+/* メディアクエリ：幅が954px以下の場合のスタイル */
 @media (max-width: 954px) {
 
     .table tr:nth-child(even) {
@@ -244,6 +253,7 @@ tbody tr td:nth-child(9) {
     .table tr {
         margin-bottom: 1.75rem;
     }
+
     .table tr:last-child {
         margin-bottom: 0;
     }
@@ -282,7 +292,7 @@ tbody tr td:nth-child(9) {
         padding-right: 10px;
         white-space: nowrap;
         content: attr(data-value);
-        color:var(--cumtom-color-lightIvory)
+        color: var(--cumtom-color-lightIvory)
     }
 
     .table td:after {
@@ -293,7 +303,7 @@ tbody tr td:nth-child(9) {
         padding-right: 10px;
         white-space: nowrap;
         content: attr(data-value);
-        color:var(--cumtom-color-lightIvory);
+        color: var(--cumtom-color-lightIvory);
         font-weight: bold;
     }
 

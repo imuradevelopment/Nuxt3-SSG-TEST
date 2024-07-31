@@ -1,16 +1,21 @@
 <template>
+  <!-- デスクトップ表示専用のヒーローセクション -->
   <div class="hidden md:flex" style="height: 450px">
+    <!-- オーバーレイ要素 -->
     <div id="overlay-element" style="margin: auto; margin-left: 3rem; flex: 1; margin-right: -14%">
       <div id="hero">
         <div id="text">
+          <!-- メインメッセージとカーソル -->
           <div class="line">
             <span class="main-message" ref="mainMessage"></span>
             <span class="cursor cursor1" ref="cursor1"></span>
           </div>
+          <!-- サブメッセージ1とカーソル -->
           <div class="line">
             <span class="sub-message1" ref="subMessage1"></span>
             <span class="cursor cursor2" ref="cursor2"></span>
           </div>
+          <!-- サブメッセージ2とカーソル -->
           <div class="line">
             <span class="sub-message2" ref="subMessage2"></span>
             <span class="cursor cursor3" ref="cursor3"></span>
@@ -18,46 +23,51 @@
         </div>
       </div>
     </div>
+    <!-- ラインアニメーション要素 -->
     <div id="line-animation" ref="lineAnimation"
       style="width: 60%; float: right; clip-path: polygon(55% 0%, 100% 0%, 100% 100%, 0% 100%)" />
   </div>
 </template>
-  
+
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
 import * as THREE from 'three'
 
+// 各種参照と変数の宣言
 const lineAnimation = ref(null)
 let camera, scene, renderer, resizeObserver, animationTimer // animationTimerを追加
 
+// コンポーネントがマウントされたときに実行される関数
 onMounted(() => {
-  startAnimation()
-  init()
-  animationTimer = animate() // animationTimerに代入
+  startAnimation() // テキストのタイピングアニメーションを開始
+  init() // Three.jsの初期設定
+  animationTimer = animate() // アニメーションを開始し、タイマーを保持
   // ResizeObserverを作成
-  resizeObserver = new ResizeObserver(onResize) // コードに置き換え
+  resizeObserver = new ResizeObserver(onResize) // リサイズ時の処理を設定
   // lineAnimation要素にResizeObserverを適用
-  resizeObserver.observe(lineAnimation.value) // コードに置き換え
+  resizeObserver.observe(lineAnimation.value) // リサイズイベントを監視
 })
 
+// コンポーネントがアンマウントされたときに実行される関数
 onUnmounted(() => {
   // ResizeObserverを解除
-  if(lineAnimation.value){
-    resizeObserver.unobserve(lineAnimation.value) // コードに置き換え
+  if (lineAnimation.value) {
+    resizeObserver.unobserve(lineAnimation.value) // 監視を解除
   }
   if (animationTimer) {
-    clearTimeout(animationTimer)
+    clearTimeout(animationTimer) // アニメーションタイマーをクリア
   }
-  if(animationTimer2){
-    clearTimeout(animationTimer2)
+  if (animationTimer2) {
+    clearTimeout(animationTimer2) // アニメーションタイマーをクリア
   }
-  renderer.dispose()
+  renderer.dispose() // レンダラーを解放
 })
 
+// Three.jsの初期設定を行う関数
 function init() {
   // コンテナのサイズを取得
-  const width = lineAnimation.value.clientWidth // ここを変更
-  const height = lineAnimation.value.clientHeight // ここを変更
+  const width = lineAnimation.value.clientWidth // lineAnimation要素の幅を取得
+  const height = lineAnimation.value.clientHeight // lineAnimation要素の高さを取得
 
   // カメラを作成
   camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000)
@@ -70,7 +80,7 @@ function init() {
   // レンダラーを作成
   renderer = new THREE.WebGLRenderer({ antialias: true })
   renderer.setSize(width, height)
-  lineAnimation.value.appendChild(renderer.domElement) // ここを変更
+  lineAnimation.value.appendChild(renderer.domElement) // lineAnimation要素にレンダラーを追加
 
   // ラインを作成
   const numLines = 300
@@ -112,6 +122,7 @@ function init() {
   }
 }
 
+// アニメーションを行う関数
 function animate() {
   animationTimer = requestAnimationFrame(animate) // animationTimerに代入
 
@@ -135,7 +146,6 @@ function animate() {
   renderer.render(scene, camera)
 }
 
-
 // リサイズ時のコールバック関数
 function onResize() {
   // lineAnimationがnullでないことをチェック
@@ -157,7 +167,7 @@ function onResize() {
   }
 }
 
-
+// 各種参照とタイピングテキストの設定
 const mainMessage = ref(null)
 const subMessage1 = ref(null)
 const subMessage2 = ref(null)
@@ -166,58 +176,62 @@ const cursor2 = ref(null)
 const cursor3 = ref(null)
 
 const heroText = {
-    main: "Solution & Evolution",
-    sub1: "新しい発想と技術とコミュニケーションで問題を解決し、",
-    sub2: "より良い方法をご提案させていただきます。",
+  main: "Solution & Evolution",
+  sub1: "新しい発想と技術とコミュニケーションで問題を解決し、",
+  sub2: "より良い方法をご提案させていただきます。",
 }
 
+// テキストのタイピングアニメーションを行う関数
 function typeText(element, text, speed) {
-    return new Promise((resolve) => {
-        let i = 0
-        const typing = setInterval(() => {
-            if (i < text.length) {
-                element.textContent += text[i]
-                i++
-            } else {
-                clearInterval(typing)
-                setTimeout(resolve, speed)
-            }
-        }, 200)
-    })
+  return new Promise((resolve) => {
+    let i = 0
+    const typing = setInterval(() => {
+      if (i < text.length) {
+        element.textContent += text[i]
+        i++
+      } else {
+        clearInterval(typing)
+        setTimeout(resolve, speed)
+      }
+    }, 200)
+  })
 }
 
+// カーソル付きのタイピングアニメーションを行う関数
 async function typeWithCursor(element, text, cursor) {
-    cursor.style.display = "inline-block"
-    let i = 0
-    cursor.style.left = "0%"
-    for (i; i < text.length; i++) {
-        element.textContent += text[i]
-        await new Promise((resolve) => setTimeout(resolve, 100))
-        cursor.style.left = `calc(0% + ${element.offsetWidth}px + 8px)`
-        cursor.style.height = `${element.offsetHeight * 0.6}px`
-        cursor.style.width = `8px`
-    }
-    cursor.style.display = "none"
+  cursor.style.display = "inline-block"
+  let i = 0
+  cursor.style.left = "0%"
+  for (i; i < text.length; i++) {
+    element.textContent += text[i]
+    await new Promise((resolve) => setTimeout(resolve, 100))
+    cursor.style.left = `calc(0% + ${element.offsetWidth}px + 8px)`
+    cursor.style.height = `${element.offsetHeight * 0.6}px`
+    cursor.style.width = `8px`
+  }
+  cursor.style.display = "none"
 }
 
 let animationTimer2 = null
 
+// アニメーションを開始する関数
 async function startAnimation() {
-    await typeWithCursor(mainMessage.value, heroText.main, cursor1.value)
-    await typeWithCursor(subMessage1.value, heroText.sub1, cursor2.value)
-    await typeWithCursor(subMessage2.value, heroText.sub2, cursor3.value)
+  await typeWithCursor(mainMessage.value, heroText.main, cursor1.value)
+  await typeWithCursor(subMessage1.value, heroText.sub1, cursor2.value)
+  await typeWithCursor(subMessage2.value, heroText.sub2, cursor3.value)
 
-    // アニメーションが終了したら3秒後に新しいアニメーションを開始
-    animationTimer2 = setTimeout(() => {
-        mainMessage.value.textContent = ""
-        subMessage1.value.textContent = ""
-        subMessage2.value.textContent = ""
-        startAnimation()
-    }, 3000)
+  // アニメーションが終了したら3秒後に新しいアニメーションを開始
+  animationTimer2 = setTimeout(() => {
+    mainMessage.value.textContent = ""
+    subMessage1.value.textContent = ""
+    subMessage2.value.textContent = ""
+    startAnimation()
+  }, 3000)
 }
 </script>
-  
+
 <style scoped>
+/* ヒーローセクションのスタイル */
 #hero {
   width: 100%;
   background-color: white;
@@ -228,19 +242,20 @@ async function startAnimation() {
   position: relative;
 }
 
+/* テキストコンテナのスタイル */
 #text {
-  /* text-align: center; */
   font-family: "Montserrat", sans-serif;
   color: black;
   position: relative;
   z-index: 1;
 }
 
+/* 各行のスタイル */
 .line {
-  /* margin-bottom: 10px; */
   position: relative;
 }
 
+/* メインメッセージのスタイル */
 .main-message {
   display: inline-block;
   position: relative;
@@ -248,6 +263,7 @@ async function startAnimation() {
   font-weight: 700;
 }
 
+/* サブメッセージのスタイル */
 .sub-message1,
 .sub-message2 {
   display: inline-block;
@@ -256,6 +272,7 @@ async function startAnimation() {
   font-weight: 500;
 }
 
+/* カーソルのスタイル */
 .cursor {
   width: 15px;
   height: 30px;
@@ -268,18 +285,7 @@ async function startAnimation() {
   display: none;
 }
 
-.cursor1 {
-  left: 50%;
-}
-
-.cursor2 {
-  left: 50%;
-}
-
-.cursor3 {
-  left: 50%;
-}
-
+/* カーソルのブリンクアニメーション */
 @keyframes blink {
 
   0%,
@@ -292,4 +298,3 @@ async function startAnimation() {
   }
 }
 </style>
-  

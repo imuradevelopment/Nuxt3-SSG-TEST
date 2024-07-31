@@ -1,9 +1,12 @@
 <template>
     <div>
+        <!-- トップセクション: 背景画像とタイトル -->
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/employee/001.png')]">
+            <!-- 背景装飾用の左側セクション -->
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
+            <!-- タイトルとサブタイトルを含む右側セクション -->
             <div class="flex flex-col grow">
                 <h1 id="recruit-employee01" class="linkScroll self-end mx-8 text-2xl sm:text-4xl font-bold text-white">
                     社員紹介
@@ -13,11 +16,14 @@
                     ベイルの先輩社員から貰った<br class="inline-block md:hidden" />コメントを紹介します。</p>
             </div>
         </section>
+
+        <!-- インタビューセクション -->
         <section class="mb-12 md:mb-24">
             <h2 id="recruit-employee02 mb-4"
                 class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
                 インタビュー</h2>
             <div class=" mx-4">
+                <!-- CarouselEmployeeコンポーネントの呼び出し -->
                 <CarouselEmployee :pics="[
                     {
                         src: '/images/recruit/employee/005.jpg',

@@ -1,14 +1,18 @@
 <template>
+    <!-- フッターのメインコンテナ -->
     <el-row class="bg-custom-gray text-white">
+        <!-- 左側のカラム（メインコンテンツ） -->
         <el-col :sm="18" :span="24">
+            <!-- ロゴ表示部分 -->
             <el-row>
                 <div class="mb-3 bg-white border-t-2 border-custom-gray drop-shadow-md">
                     <NuxtImg width="185" fit="cover" src="/images/logo/logo.png" />
                 </div>
             </el-row>
+            <!-- メニューリンク部分 -->
             <div class="flex flex-wrap flex-col md:flex-row px-12 md:px-6">
+                <!-- 各セクションのリンク -->
                 <div class="flex flex-col flex-auto basis-auto md:basis-16 px-1.5 mb-6 text-lg font-medium leading-6">
-
                     <NuxtLink @click="scrollToTarget()" to="/"
                         class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">Top</NuxtLink>
                 </div>
@@ -16,6 +20,7 @@
                     <NuxtLink @click="scrollToTarget()" to="/company"
                         class="underLine w-fit mb-2 hover:text-gray-200 hover:underline border-l-2-white">会社情報
                     </NuxtLink>
+                    <!-- 会社情報のサブリンク -->
                     <NuxtLink to="/company#company01"
                         class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                         トップメッセージ</NuxtLink>
@@ -35,6 +40,7 @@
                 <div class="flex flex-col flex-auto basis-auto px-1.5 mb-6 text-lg font-medium leading-6">
                     <NuxtLink @click="scrollToTarget()" to="/service"
                         class="underLine w-fit mb-2 hover:text-gray-200 hover:underline">事業情報</NuxtLink>
+                    <!-- 事業情報のサブリンク -->
                     <NuxtLink to="/service#service01"
                         class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                         事業概要</NuxtLink>
@@ -50,6 +56,7 @@
                         </div>
                         <div class="flex flex-wrap flex-col md:flex-row">
                             <div class="flex flex-col">
+                                <!-- 採用情報のサブリンク -->
                                 <NuxtLink to="/recruit/message"
                                     class="w-fit text-xs font-normal tracking-wide leading-6 ml-4 hover:text-gray-200 hover:underline">
                                     採用メッセージ</NuxtLink>
@@ -95,8 +102,9 @@
                 </div>
             </div>
         </el-col>
+        <!-- 右側のカラム（会社情報） -->
         <el-col :sm="6" :span="24">
-            <div class=" px-6 py-6 md:px-0 h-full">
+            <div class="px-6 py-6 md:px-0 h-full">
                 <div class="pt-3 px-9 md:px-3 h-full border-t-2 md:border-t-0 md:border-l-2">
                     <div class="mt-1 text-xs font-normal leading-6">本社</div>
                     <div class="text-xs font-normal leading-6">
@@ -113,7 +121,9 @@
             </div>
         </el-col>
     </el-row>
+    <!-- フッター下部のコンテナ -->
     <el-row align="middle" class="pl-6 md:pl-12 bg-white text-black text-xs font-light">
+        <!-- 左側のカラム（ポリシーリンク） -->
         <el-col :span="12">
             <el-row align="middle">
                 <NuxtLink @click="scrollToTarget()" to="/policy">
@@ -123,6 +133,7 @@
                 </NuxtLink>
             </el-row>
         </el-col>
+        <!-- 右側のカラム（著作権表示） -->
         <el-col :span="12">
             <el-row justify="end" class="text-xs">
                 <div class="pr-6 md:pr-12">© 2024 Vaile. All rights reserved.</div>

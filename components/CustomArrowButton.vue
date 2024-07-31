@@ -1,10 +1,12 @@
 <template>
+    <!-- 外部リンクの場合 -->
     <NuxtLink v-if="isOuter" target="_blank" rel="noopener noreferrer" :href="props.to" class="button-link"
         :style="buttonStyles" @click="handleClick">
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
         </span>
     </NuxtLink>
+    <!-- 内部リンクまたはボタンの場合 -->
     <a v-else @click="handleClick" :href="props.to || 'javascript:void(0);'" class="button-link" :style="buttonStyles">
         <span class="relative z-10">
             <slot name="buttonText">MORE</slot>
@@ -16,6 +18,7 @@
 import { useRouter } from 'vue-router';
 import { useScrollToTarget } from '~/composables/useScrollToTarget';
 
+// プロパティの定義
 const props = defineProps({
     to: {
         type: String,
@@ -48,6 +51,7 @@ const props = defineProps({
     },
 });
 
+// ボタンのスタイルを計算するためのcomputedプロパティ
 const buttonStyles = computed(() => {
     const baseStyles = {
         '--before-bg-color': beforebackgroundcolor.value,
@@ -64,6 +68,7 @@ const buttonStyles = computed(() => {
     return baseStyles;
 });
 
+// 高さの計算
 const height = computed(() => {
     switch (props.height) {
         case 'auto':
@@ -73,6 +78,7 @@ const height = computed(() => {
     }
 });
 
+// ボタンの矢印タイプに応じた内容
 const afterContent = computed(() => {
     switch (props.arrowType) {
         case 'outer':
@@ -86,6 +92,7 @@ const afterContent = computed(() => {
     }
 });
 
+// ボタンの背景色
 const backgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'blue-bg-white':
@@ -101,6 +108,7 @@ const backgroundcolor = computed(() => {
     }
 });
 
+// ボタンの背景色（before pseudo-element用）
 const beforebackgroundcolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -112,6 +120,7 @@ const beforebackgroundcolor = computed(() => {
     }
 });
 
+// ボタンのテキスト色
 const color = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -123,6 +132,7 @@ const color = computed(() => {
     }
 });
 
+// ボタンホバー時のテキスト色
 const hovercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -134,6 +144,7 @@ const hovercolor = computed(() => {
     }
 });
 
+// ボタンの枠線幅
 const borderwidth = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -143,6 +154,7 @@ const borderwidth = computed(() => {
     }
 });
 
+// ボタンの枠線色
 const bordercolor = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -154,6 +166,7 @@ const bordercolor = computed(() => {
     }
 });
 
+// ボタンのアウトライン
 const outline = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -163,15 +176,7 @@ const outline = computed(() => {
     }
 });
 
-const hoveroutline = computed(() => {
-    switch (props.colorType) {
-        case 'yellow':
-        case 'white':
-        default:
-            return '2px solid transparent';
-    }
-});
-
+// ボタンのアウトラインオフセット
 const outlineoffset = computed(() => {
     switch (props.colorType) {
         case 'yellow':
@@ -181,17 +186,20 @@ const outlineoffset = computed(() => {
     }
 });
 
+// 外部リンクかどうかを判定
 const isOuter = computed(() => {
     return props.arrowType === 'outer';
 });
 
-const router = useRouter();
+const router = useRouter(); // ルーターのインスタンスを取得
 
+// クリックハンドラー
 const handleClick = (event: Event) => {
     const link = event.currentTarget as HTMLElement;
-    handleNavigation(event);
+    handleNavigation(event); // ナビゲーションハンドラーを呼び出し
 };
 
+// ナビゲーションハンドラー
 const handleNavigation = (event: Event) => {
     console.log('handleNavigation 呼び出し');
     if (props.onClick) {
@@ -202,7 +210,7 @@ const handleNavigation = (event: Event) => {
         setTimeout(() => {
             if (props.to) {
                 router.push(props.to).then(() => {
-                    useScrollToTarget();
+                    useScrollToTarget(); // ターゲットへのスクロール
                 });
             }
         }, 200); // 0.2秒の遅延
@@ -231,6 +239,7 @@ const handleNavigation = (event: Event) => {
     height: var(--height);
 }
 
+/* before擬似要素のスタイル */
 .button-link:before {
     content: '';
     position: absolute;
@@ -242,10 +251,12 @@ const handleNavigation = (event: Event) => {
     border-radius: 9999px;
 }
 
+/* ホバー時のbefore擬似要素のスタイル */
 .button-link:hover:before {
     transform: scaleX(1);
 }
 
+/* after擬似要素のスタイル */
 .button-link:after {
     content: var(--after-content);
     transform: translateX(0);
@@ -253,10 +264,12 @@ const handleNavigation = (event: Event) => {
     margin-left: 0.25rem;
 }
 
+/* ホバー時のafter擬似要素のスタイル */
 .button-link:hover:after {
     transform: translateX(0.25rem);
 }
 
+/* ホバー時のボタンのテキスト色 */
 .button-link:hover {
     color: var(--hover-color);
 }

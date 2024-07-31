@@ -1,7 +1,8 @@
 <template id="myTemplate">
-  <HeroMobile></HeroMobile>
-  <HeroDesktop></HeroDesktop>
+  <HeroMobile></HeroMobile> <!-- モバイル用Heroセクション -->
+  <HeroDesktop></HeroDesktop> <!-- デスクトップ用Heroセクション -->
 
+  <!-- イントロダクションセクション -->
   <section class="text-left md:text-center mx-8 my-6">
     <div class="font-bold text-2xl md:text-4xl text-center">ベイルは、<br class="inline-block md:hidden" />「SE」を考えます。</div>
     <br />
@@ -17,8 +18,10 @@
     </div>
   </section>
 
+  <!-- 会社情報セクション -->
   <section>
     <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- 会社情報カード -->
       <div class="flex h-full z-10 w-full">
         <div class="z-10 relative" style="width: 50%; clip-path: url(#imageClip2); margin-bottom: 1rem;">
           <img src="/images/top/001.jpg" alt="Image" class="w-full h-full object-cover" id="imageElement2" />
@@ -55,6 +58,7 @@
         </div>
       </div>
 
+      <!-- 事業情報カード -->
       <div class="flex h-full z-10 w-full">
         <div class="z-10 relative" style="width: 50%; clip-path: url(#imageClip3); margin-bottom: 1rem;">
           <img src="/images/top/002.jpg" alt="Image" class="w-full h-full object-cover" id="imageElement3" />
@@ -92,9 +96,10 @@
       </div>
     </div>
 
-
+    <!-- 採用情報セクション -->
     <div class="m-4 auto-rows-min grid grid-cols-1 md:grid-cols-2 gap-4">
 
+      <!-- 採用情報カード -->
       <div class="flex h-full z-10 w-full">
         <div class="z-10 relative" style="width: 50%; clip-path: url(#imageClip4); margin-bottom: 1rem;">
           <img src="/images/top/003.jpg" alt="Image" class="w-full h-full object-cover" id="imageElement4" />
@@ -131,6 +136,7 @@
         </div>
       </div>
 
+      <!-- お問い合わせカード -->
       <div class="flex h-full z-10 w-full">
         <div class="z-10 relative" style="width: 50%; clip-path: url(#imageClip5); margin-bottom: 1rem;">
           <img src="/images/top/004.jpg" alt="Image" class="w-full h-full object-cover" id="imageElement5" />
@@ -180,6 +186,7 @@
 import HeroDesktop from '~/components/HeroDesktop.vue'
 import HeroMobile from '~/components/HeroMobile.vue'
 
+// 各画像のリサイズに応じたクリッピングパスを設定するためのスクリプト
 onMounted(() => {
   const observer = new ResizeObserver(function (entries) {
     for (let entry of entries) {

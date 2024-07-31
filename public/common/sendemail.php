@@ -1,10 +1,12 @@
 <?php
 // CORSヘッダーを追加
+// フロントエンドからのリクエストを許可するための設定
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 // OPTIONSリクエストへの対応
+// ブラウザからのプリフライトリクエストに応答する
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     http_response_code(200);
     echo "CORS preflight OK";
@@ -12,10 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 // デバッグ情報を出力
+// ログにリクエストメソッドとリクエストボディを記録する
 error_log("Request method: " . $_SERVER['REQUEST_METHOD']);
 error_log("Request body: " . file_get_contents('php://input'));
 
 // フォームデータの取得
+// JSON形式のリクエストボディをデコードして変数に格納する
 $input = json_decode(file_get_contents('php://input'), true);
 $companyName = isset($input['companyName']) ? $input['companyName'] : '未記入';
 $lastName = $input['lastName'];
@@ -27,6 +31,7 @@ $employmentType = isset($input['employmentType']) ? $input['employmentType'] : '
 $inquiryContent = $input['inquiryContent'];
 
 // デバッグ情報を出力
+// ログに取得したフォームデータを記録する
 error_log("Company name: " . $companyName);
 error_log("Last name: " . $lastName);
 error_log("Kana name: " . $kanaName);
@@ -37,6 +42,7 @@ error_log("Employment type: " . $employmentType);
 error_log("Inquiry content: " . $inquiryContent);
 
 // お問い合わせ区分に応じた送信先メールアドレスの設定
+// お問い合わせの種類に応じて適切なメールアドレスに振り分ける
 switch ($inquiryType) {
     case '個人情報に関するお問い合わせ':
         $to = 'privacy-v@vaile.co.jp';
@@ -49,12 +55,14 @@ switch ($inquiryType) {
         break;
 }
 
+// メールの件名とヘッダーの設定
 $subject = "お問い合わせフォームからのメッセージ";
 $headers = "From: noreply@vaile.co.jp" . "\r\n" .
            "Reply-To: " . $email . "\r\n" .
            "Content-Type: text/plain; charset=UTF-8";
 
 // メールの本文
+// フォームの入力内容をメール本文にまとめる
 $body = "会社名／学校名: $companyName\n";
 $body .= "氏名: $lastName\n";
 $body .= "氏名（フリガナ）: $kanaName\n";
@@ -67,9 +75,11 @@ if ($inquiryType === '採用に関するお問い合わせ') {
 $body .= "お問い合わせ内容:\n$inquiryContent\n";
 
 // デバッグ情報を出力
+// ログに送信先、件名、本文を記録する
 error_log("送信先: $to\n件名: $subject\n本文: $body\n");
 
 // メール送信
+// メール送信が成功したかどうかを確認し、HTTPステータスコードを設定する
 if (mail($to, $subject, $body, $headers)) {
     http_response_code(200);
     echo "メールが送信されました。";

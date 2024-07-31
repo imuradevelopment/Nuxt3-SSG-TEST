@@ -1,17 +1,25 @@
 <template>
+    <!-- 採用情報セクションの背景画像とテキストの配置 -->
     <section class="flex flex-col bg-cover bg-[url('/images/recruit/index/001.png')]">
+        <!-- 見出し: 採用情報 -->
         <h1 id="recruit01" class="linkScroll self-end m-4 text-4xl font-bold text-white">採用情報</h1>
         <div class="self-end mr-10 text-lg font-bold text-white">Recruit</div>
         <p class="mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
-            自身の成長が選択肢を拡げ、影響を与える</p>
+            自身の成長が選択肢を拡げ、影響を与える
+        </p>
     </section>
+
+    <!-- ベイルの特徴セクションへの遷移ボタン -->
     <section class="h-24 p-4 flex justify-end items-center">
-        <CustomArrowButton color-type="blue-bg-white" arrowType="transition" to="/recruit/feature"><template
-                #buttonText>
+        <CustomArrowButton color-type="blue-bg-white" arrowType="transition" to="/recruit/feature">
+            <template #buttonText>
                 <Pointer class="h-6 w-6 inline" />ベイルの特徴
-            </template></CustomArrowButton>
+            </template>
+        </CustomArrowButton>
     </section>
-    <section class=" flex flex-col md:flex-row">
+
+    <!-- 採用メッセージセクション -->
+    <section class="flex flex-col md:flex-row">
         <div class="flex-1 flex flex-col space-y-6 pb-4 bg-gradient-to-r from-gray-200 to-custom-silver">
             <h2 id="recruit02" class="ml-4 text-4xl leading-loose font-bold text-custom-deepBlue">採用メッセージ</h2>
             <div class="md:hidden w-screen overflow-hidden">
@@ -29,6 +37,8 @@
                 alt="採用担当者イメージ" />
         </div>
     </section>
+
+    <!-- ベイルの特徴セクション -->
     <section class="mt-24 flex w-full bg-cover bg-[url('/images/recruit/index/003.png')]">
         <div class="hidden sm:inline-block basis-1/3 h-auto z-10 bg-custom-deepBlue"
             style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
@@ -36,7 +46,8 @@
         <div class="flex flex-col grow">
             <h2 id="recruit03"
                 class="self-end px-4 text-4xl leading-loose font-bold min-w-fit bg-custom-lightOrange text-custom-deepBlue">
-                ベイルの特徴</h2>
+                ベイルの特徴
+            </h2>
             <ul
                 class="mt-4 w-fit list-disc self-end p-4 pl-8 mx-4 text-sm md:text-lg font-bold bg-custom-lightOrange text-custom-deepBlue">
                 <li>複数の大手Sierとの直接取引</li>
@@ -48,12 +59,15 @@
             </div>
         </div>
     </section>
+
+    <!-- 研修制度セクション -->
     <section class="mt-24 flex flex-row justify-stretch">
         <div class="w-1/2 flex flex-col space-y-4 md:space-y-8 relative top-8 md:top-16">
             <div class="flex flex-row">
                 <h2 id="recruit04"
                     class="z-20 w-full self-end text-white px-4 text-4xl leading-loose font-bold whitespace-nowrap bg-custom-deepBlue">
-                    研修制度</h2>
+                    研修制度
+                </h2>
                 <div class="z-20 leading-loose bg-custom-deepBlue w-6 md:w-12 -mr-6 md:-mr-12"></div>
             </div>
             <p class="z-20 self-start ml-4 md:mr-4 font-bold text-sm md:text-base">成長に繋がるトレーニング制度</p>
@@ -64,13 +78,15 @@
         </div>
         <div class="w-1/2 overflow-hidden">
             <div class="pr-6 md:pr-12 pt-6 md:pt-12">
-                <div class="z-0 relative -top-6 md:-top-12 -right-6 md:-right-12  bg-custom-deepBlue">
+                <div class="z-0 relative -top-6 md:-top-12 -right-6 md:-right-12 bg-custom-deepBlue">
                     <img class="z-10 relative top-4 md:top-8 right-4 md:right-8" src="/images/recruit/index/004.png"
                         alt="研修のイメージ" />
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- オフィス紹介と福利厚生のセクション -->
     <div class="mt-24 mx-4 grid gap-4 grid-cols-1 md:grid-cols-2">
         <section
             class="h-64 flex flex-col gap-y-8 bg-cover bg-[url('/images/recruit/index/005.png')] items-center justify-center shadow-md">
@@ -97,12 +113,15 @@
             <CustomArrowButton arrowType="transition" color-type="white" to="/recruit/qa"></CustomArrowButton>
         </section>
     </div>
+
+    <!-- 社員紹介セクション -->
     <section class="my-24">
         <BackgroundPattern>
         </BackgroundPattern>
         <div class="w-full flex flex-col">
             <h2 id="recruit09" class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
-                社員紹介</h2>
+                社員紹介
+            </h2>
             <div class="mx-4 mt-8 mb-4 flex justify-center items-center">
                 <div class="max-w-xl">
                     <Carousel :pics="[
@@ -175,6 +194,7 @@
         </div>
     </section>
 
+    <!-- 募集情報セクション -->
     <section class="mt-24 mb-24 p-4 bg-cover bg-[url('/images/recruit/index/009.png')]">
         <h2 id="recruit10" class="text-white px-4 text-4xl leading-loose font-bold w-fit ml-auto mr-auto">募集情報</h2>
         <div class="flex flex-col p-4 items-center md2:flex-row md2:flex-wrap md2:justify-between">

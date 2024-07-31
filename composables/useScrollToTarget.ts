@@ -1,31 +1,31 @@
 import { ref } from "vue";
 
 export const useScrollToTarget = () => {
-    // target-idを受け取るrefを作成
+    // targetIdを管理するrefを作成
     const targetId = ref("");
 
-    // スクロールする関数を定義
-    const scrollToTarget = (id: string = '') => {
+    // スクロール処理を行う関数を定義
+    const scrollToTarget = (id: string = "") => {
         // 引数で渡されたidをtargetIdに代入
         targetId.value = id;
-        // target-idが空の場合
+
+        // targetIdが空の場合はトップにスクロール
         if (!targetId.value) {
-            // トップにスクロール
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth", });
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         } else {
-            // 要素を取得
+            // targetIdが指定されている場合は該当の要素にスクロール
             const element = document.getElementById(targetId.value);
-            // 要素が存在する場合
             if (element) {
                 // 要素の位置を取得
-                const rect = element.getBoundingClientRect()
-                const currentScrolledHeight = window.pageYOffset || document.documentElement.scrollTop
+                const rect = element.getBoundingClientRect();
+                const currentScrolledHeight = window.pageYOffset || document.documentElement.scrollTop;
+
                 // スムーズにスクロール
-                window.scrollTo({top: rect.top + currentScrolledHeight - 64, behavior: "smooth"})
+                window.scrollTo({ top: rect.top + currentScrolledHeight - 64, behavior: "smooth" });
             }
         }
     };
 
-    // refと関数を返す
+    // targetIdとscrollToTarget関数を返す
     return { targetId, scrollToTarget };
 };

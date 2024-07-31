@@ -1,9 +1,11 @@
 <template>
     <div class="css-art--3-pie-venn-diagram">
+        <!-- 中央の共通部分 -->
         <div class="pie-main-intersection">
             <h3 class="inline-block">Vaile</h3>
             <div class="inline-block">：弊社の事業概要</div>
         </div>
+        <!-- SIサービスの円 -->
         <div class="css-art--pie css-art--pie-1">
             <h3>SIサービス</h3>
             <ul>
@@ -12,12 +14,14 @@
                 <li>設計から保守まで<br class="hidden vennDiagramBreakpoint:inline-block" />トータルサポート</li>
             </ul>
         </div>
+        <!-- SIサービスとITサービスの交差部分 -->
         <div class="pie-1-2-intersect">
             <h3>SIサービス ✕ ITサービス</h3>
             <ul>
                 <li>豊富な経験に基づく洞察力と、充実したサポートでお客様を全面的にバックアップします。</li>
             </ul>
         </div>
+        <!-- ITサービスの円 -->
         <div class="css-art--pie css-art--pie-2">
             <h3>ITサービス</h3>
             <ul>
@@ -26,12 +30,14 @@
                 <li>アウトソーシングサービス</li>
             </ul>
         </div>
+        <!-- ITサービスとSEサービスの交差部分 -->
         <div class="pie-2-3-intersect">
             <h3>ITサービス ✕ SEサービス</h3>
             <ul>
                 <li>システムを常に最適な状態で稼働、ビジネスの継続性を確保します。</li>
             </ul>
         </div>
+        <!-- SEサービスの円 -->
         <div class="css-art--pie css-art--pie-3">
             <h3>SEサービス</h3>
             <ul>
@@ -40,19 +46,23 @@
                 <li>共に対応可能</li>
             </ul>
         </div>
+        <!-- SEサービスとSIサービスの交差部分 -->
         <div class="pie-3-1-intersect">
             <h3 class="element-invisible">SEサービス ✕ SIサービス</h3>
             <ul>
-                <li>経験豊富なプロフェッショナルが、IT業務の効率化を実現し、<br class="inline-block vennDiagramBreakpoint:hidden" />コスト削減と品質向上を実現します。
-                </li>
+                <li>経験豊富なプロフェッショナルが、IT業務の効率化を実現し、<br
+                        class="inline-block vennDiagramBreakpoint:hidden" />コスト削減と品質向上を実現します。</li>
             </ul>
         </div>
     </div>
 </template>
-<script setup lang="ts">
 
+<script setup lang="ts">
+// 特にスクリプトの必要はないため、空のスクリプトタグ
 </script>
+
 <style scoped>
+/* 基本スタイル設定 */
 .css-art--3-pie-venn-diagram[class] {
     font-size: 1rem;
 }
@@ -80,6 +90,7 @@
     list-style: disc;
 }
 
+/* 各円のスタイル設定 */
 .css-art--pie {
     position: relative;
     box-sizing: border-box;
@@ -198,6 +209,7 @@
     height: 100%;
 }
 
+/* デスクトップ向けのスタイル設定 */
 @media (min-width: 51em) {
     .css-art--3-pie-venn-diagram {
         position: relative;
@@ -261,7 +273,7 @@
         font-size: xx-large;
         left: -1rem;
         padding: 0.5rem 1rem;
-        background: rgba(0,0,0,.5);
+        background: rgba(0, 0, 0, .5);
         color: #fff;
     }
 
@@ -291,7 +303,7 @@
         left: 0rem;
         font-size: xx-large;
         left: 6em;
-        background: rgba(0,0,0,.5);
+        background: rgba(0, 0, 0, .5);
         padding: 0.5rem 1rem;
         width: max-content;
         color: white;

@@ -1,9 +1,12 @@
 <template>
     <div>
+        <!-- トップセクション -->
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/feature/001.png')]">
+            <!-- 左側の装飾エリア -->
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
+            <!-- 右側のテキストエリア -->
             <div class="flex flex-col grow">
                 <h1 id="recruit-feature01" class="linkScroll self-end mx-8 text-2xl sm:text-4xl font-bold text-white">
                     ベイルの特徴
@@ -13,11 +16,15 @@
                     数あるSier企業の中での<br class="inline-block md:hidden" />ベイルはココが少し違います。</p>
             </div>
         </section>
+
+        <!-- 特徴セクション Point01 -->
         <section>
             <div class="px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
+                <!-- 画像エリア -->
                 <div class="order-2 sm:order-1 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
                     <ImageCard src="/images/recruit/feature/002.png"></ImageCard>
                 </div>
+                <!-- タイトルエリア -->
                 <div class="order-1 sm:order-2 col-span-1 sm:row-span-1">
                     <div class="mb-4 sm:mb-0 text-2xl font-bold">Point01</div>
                     <div class="mb-4 sm:mb-0">
@@ -29,6 +36,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 説明エリア -->
                 <div class="order-3 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
                     <BlurGlassCard class="p-4 text-xs sm:text-base font-bold sm:leading-7 leading-7">
                         世界のリーディングカンパニーであるアイビーエム社は最新のプロダクトやノウハウを駆使したシステムを得意としています。そのようなシステム構築に、提案段階から共同で作業することもあります。また、コベルコシステム株式会社、三井情報株式会社のコアパートナーであり、最先端の技術やノウハウの習得に大きなメリットがあります。
@@ -36,11 +44,15 @@
                 </div>
             </div>
         </section>
+
+        <!-- 特徴セクション Point02 -->
         <section>
             <div class="mt-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
+                <!-- 画像エリア -->
                 <div class="order-2 sm:order-3 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
                     <ImageCard src="/images/recruit/feature/003.png"></ImageCard>
                 </div>
+                <!-- タイトルエリア -->
                 <div class="order-1 sm:order-1 col-span-1 sm:row-span-1">
                     <div class="mb-4 sm:mb-0 text-2xl font-bold">Point02</div>
                     <div class="mb-4 sm:mb-0">
@@ -52,6 +64,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 説明エリア -->
                 <div class="order-3 sm:order-2 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
                     <BlurGlassCard class="p-4 text-xs sm:text-base font-bold">
                         <div class="sm:leading-7 leading-7">
@@ -59,18 +72,22 @@
                         </div>
                         <div class="self-end pt-4">
                             <CustomArrowButton arrowType="transition" to="/recruit/induction">
-                                <template #buttonText>研修内容を見る</template>template
+                                <template #buttonText>研修内容を見る</template>
                             </CustomArrowButton>
                         </div>
                     </BlurGlassCard>
                 </div>
             </div>
         </section>
+
+        <!-- 特徴セクション Point03 -->
         <section>
             <div class="my-12 px-4 sm:mx-0 grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-4">
+                <!-- 画像エリア -->
                 <div class="order-2 sm:order-1 max-w-screen mb-4 sm:mb-0 col-span-1 sm:row-span-3 overflow-hidden">
                     <ImageCard src="/images/recruit/feature/004.png"></ImageCard>
                 </div>
+                <!-- タイトルエリア -->
                 <div class="order-1 sm:order-2 col-span-1 sm:row-span-1">
                     <div class="mb-4 sm:mb-0 text-2xl font-bold">Point03</div>
                     <div class="mb-4 sm:mb-0">
@@ -82,6 +99,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 説明エリア -->
                 <div class="order-3 mb-4 sm:mb-0 col-span-1 sm:row-span-2">
                     <BlurGlassCard class="p-4 text-xs sm:text-base font-bold sm:leading-7 leading-7">
                         1.「売上目標・利益目標を設けない」事により、利益度外視で成長に繋がる仕事を選ぶ事が出来ます。<br />

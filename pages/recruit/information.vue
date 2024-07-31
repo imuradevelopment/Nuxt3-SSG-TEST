@@ -1,9 +1,12 @@
 <template>
     <div>
+        <!-- トップセクション -->
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/information/001.png')]">
+            <!-- 左側の装飾エリア -->
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
+            <!-- 右側のテキストエリア -->
             <div class="flex flex-col grow">
                 <h1 id="recruit-information01"
                     class="linkScroll self-end mx-8 text-2xl sm:text-4xl font-bold text-white">
@@ -14,15 +17,21 @@
                     新卒採用の募集内容をお伝えします。</p>
             </div>
         </section>
+
+        <!-- タブセクション -->
         <section class="h-full w-full px-4 md:pl-0 mb-12 md:mb-24">
             <div class="grid grid-flow-col grid-cols-11 grid-rows-4 md:grid-rows-12 gap-4">
+                <!-- タブコンテンツエリア -->
                 <div id="recruitInfomation01"
                     class="linkScrollPageHeader col-span-12 row-span-3 md:col-span-8 md:row-span-12">
                     <el-tabs v-model="activeName" type="card" class="tabs" @tab-click="handleClick">
+                        <!-- 新卒採用タブ -->
                         <el-tab-pane label="新卒採用" name="first">
                             <section>
+                                <!-- ぼかしガラスカード -->
                                 <BlurGlassCard color="rgba(0, 37, 92, 0.6)" :blur=2 class="text-white">
                                     <div>
+                                        <!-- 募集情報 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-y border-custom-deepBlue/30 flex justify-center items-center">
@@ -32,6 +41,7 @@
                                                 オープン系システム開発技術者
                                             </div>
                                         </div>
+                                        <!-- 応募資格 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -41,6 +51,7 @@
                                                 学部・学科やコンピュータに対する知識は問いません。
                                             </div>
                                         </div>
+                                        <!-- 雇用形態 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -53,6 +64,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- 本社地 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -63,6 +75,7 @@
                                                 株式会社ベイル 中目黒本社
                                             </div>
                                         </div>
+                                        <!-- 勤務地 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -73,6 +86,7 @@
                                                 都内近郊のお客様先オフィス、又は中目黒本社
                                             </div>
                                         </div>
+                                        <!-- 勤務時間 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -83,6 +97,7 @@
                                                 9:00 ~ 18:00（1時間休憩で、実働8時間）
                                             </div>
                                         </div>
+                                        <!-- 休日 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -93,6 +108,7 @@
                                                 完全週休2日制（毎週土曜・日曜）、祝日
                                             </div>
                                         </div>
+                                        <!-- 休暇 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -104,6 +120,7 @@
                                                 ・年次有給休暇（完全消化を推奨しております）
                                             </div>
                                         </div>
+                                        <!-- 給与 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -115,6 +132,7 @@
                                                     class="hidden md:contents">右記</span>リンクから、リクナビ／マイナビページを参照
                                             </div>
                                         </div>
+                                        <!-- 諸手当 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -129,6 +147,7 @@
                                                 情報処理、オラクルマスター、シスコ、など
                                             </div>
                                         </div>
+                                        <!-- 昇給 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -139,6 +158,7 @@
                                                 給与改定年1回（4月）
                                             </div>
                                         </div>
+                                        <!-- 賞与 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -149,6 +169,7 @@
                                                 賞与年2回（7月・12月）、決算賞与あり
                                             </div>
                                         </div>
+                                        <!-- 福利厚生 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -159,6 +180,7 @@
                                                 各種社会保険完備、育児介護休暇制度、退職金制度
                                             </div>
                                         </div>
+                                        <!-- 応募の流れ -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -177,10 +199,13 @@
                                 </BlurGlassCard>
                             </section>
                         </el-tab-pane>
+                        <!-- キャリア採用タブ -->
                         <el-tab-pane label="キャリア採用" name="second">
                             <section>
+                                <!-- ぼかしガラスカード -->
                                 <BlurGlassCard color="rgba(0, 37, 92, 0.6)" :blur=2 class="text-white">
                                     <div>
+                                        <!-- 募集情報 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-y border-custom-deepBlue/30 flex justify-center items-center">
@@ -190,6 +215,7 @@
                                                 アプリケーションエンジニア、インフラエンジニア
                                             </div>
                                         </div>
+                                        <!-- 応募資格 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -199,6 +225,7 @@
                                                 学歴・職歴不問
                                             </div>
                                         </div>
+                                        <!-- 雇用形態 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -211,6 +238,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- 本社地 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -221,6 +249,7 @@
                                                 株式会社ベイル 中目黒本社
                                             </div>
                                         </div>
+                                        <!-- 勤務地 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -231,6 +260,7 @@
                                                 都内近郊のお客様先オフィス、又は中目黒本社
                                             </div>
                                         </div>
+                                        <!-- 勤務時間 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -242,6 +272,7 @@
                                                 ・8:30 ~ 17:30（1時間休憩で、実働8時間）
                                             </div>
                                         </div>
+                                        <!-- 休日 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
@@ -252,78 +283,84 @@
                                                 完全週休2日制（毎週土曜・日曜）、祝日
                                             </div>
                                         </div>
+                                        <!-- 休暇 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
                                                 休暇
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 ・祝日、年末年始、特別休暇<br />
                                                 ・年次有給休暇（完全消化を推奨しております）
                                             </div>
                                         </div>
+                                        <!-- 給与 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
                                                 給与
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 年齢・経験・前職給与・スキル見合い
                                             </div>
                                         </div>
+                                        <!-- 諸手当 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
                                                 諸手当
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 【各種手当】<br />
                                                 時間外手当（100%保証）、家族手当、住宅手当、通勤手当、など<br />
-                                                <!-- <br /> -->
                                                 【資格取得推奨励金制度】<br />
                                                 情報処理、オラクルマスター、シスコ、など
                                             </div>
                                         </div>
+                                        <!-- 昇給 -->
                                         <div class="flex flex-nowrap">
                                             <div
                                                 class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
                                                 昇給
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 給与改定年1回（4月）
                                             </div>
                                         </div>
+                                        <!-- 賞与 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 賞与
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 賞与年2回（7月・12月）、決算賞与あり
                                             </div>
                                         </div>
+                                        <!-- 福利厚生 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 福利厚生
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 各種社会保険完備、育児介護休暇制度、退職金制度
                                             </div>
                                         </div>
+                                        <!-- 応募の流れ -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 応募の流れ
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 <div class="font-bold">
                                                     【応募方法】<br />
                                                     お問い合わせフォームからご応募ください。<br />
@@ -341,119 +378,132 @@
                                 </BlurGlassCard>
                             </section>
                         </el-tab-pane>
+                        <!-- 契約社員採用タブ -->
                         <el-tab-pane label="契約社員採用" name="third">
                             <section>
+                                <!-- ぼかしガラスカード -->
                                 <BlurGlassCard color="rgba(0, 37, 92, 0.6)" :blur=2 class="text-white">
                                     <div>
+                                        <!-- 募集情報 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-y border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-y border-custom-deepBlue/30 flex justify-center items中心">
                                                 募集情報</div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-y border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-y border-custom-deepBlue/30 flex items中心">
                                                 アプリケーションエンジニア、インフラエンジニア
                                             </div>
                                         </div>
+                                        <!-- 応募資格 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 応募資格</div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 学歴・職歴不問
                                             </div>
                                         </div>
+                                        <!-- 雇用形態 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 雇用形態
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 <div class="font-bold">
                                                     契約社員
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- 本社地 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 本社地
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 株式会社ベイル 中目黒本社
                                             </div>
                                         </div>
+                                        <!-- 勤務地 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 勤務地
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 都内近郊のお客様先オフィス、又は中目黒本社
                                             </div>
                                         </div>
+                                        <!-- 勤務時間 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 勤務時間
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 ・9:00 ~ 18:00（1時間休憩で、実働8時間）<br />
                                                 ・8:30 ~ 17:30（1時間休憩で、実働8時間）
                                             </div>
                                         </div>
+                                        <!-- 休日 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 休日
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 完全週休2日制（毎週土曜・日曜）、祝日
                                             </div>
                                         </div>
+                                        <!-- 休暇 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 休暇
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 ・祝日、年末年始、特別休暇<br />
                                                 ・年次有給休暇（完全消化を推奨しております）
                                             </div>
                                         </div>
+                                        <!-- 給与 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 給与
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 年齢・経験・前職給与・スキル見合い
                                             </div>
                                         </div>
+                                        <!-- 福利厚生 -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 福利厚生
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 各種社会保険完備、育児介護休暇制度、退職金制度
                                             </div>
                                         </div>
+                                        <!-- 応募の流れ -->
                                         <div class="flex flex-nowrap">
                                             <div
-                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                                                class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items中心">
                                                 応募の流れ
                                             </div>
                                             <div
-                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                                                class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items中心">
                                                 <div class="font-bold">
                                                     【応募方法】<br />
                                                     お問い合わせフォームからご応募ください。<br />
@@ -473,6 +523,7 @@
                         </el-tab-pane>
                     </el-tabs>
                 </div>
+                <!-- エントリーリンクエリア -->
                 <div id="recruitInfomation02"
                     class="linkScrollPageHeader col-span-12 row-span-1 md:col-span-4 md:row-span-12">
                     <div class="flex flex-col gap-4">

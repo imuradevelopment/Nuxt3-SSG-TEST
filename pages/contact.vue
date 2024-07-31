@@ -1,25 +1,34 @@
 <template>
+  <!-- お問い合わせセクション -->
   <section class="py-12 mb-6 flex flex-col justify-center items-center bg-cover bg-[url('/images/contact/001.png')]">
+    <!-- お問い合わせセクションのタイトル -->
     <h1 id="contact01" class="linkScroll m-4 text-4xl font-bold text-white">お問い合わせ</h1>
     <div class="mr-10 text-lg font-bold text-white">Contact</div>
   </section>
 
+  <!-- お問い合わせフォームセクション -->
   <section class="mb-4">
+    <!-- フォームタイトル -->
     <div class="flex justify-center items-center">
       <div class="mb-4 w-4/6 flex justify-center items-center">
         <h2 class="linkScroll text-4xl font-bold">お問い合わせフォーム</h2>
       </div>
     </div>
+
+    <!-- ステップインジケーター -->
     <el-steps class="mb-4" style="max-width: 1280px" :active="active" align-center>
       <el-step title="フォーム入力" />
       <el-step title="フォームの内容確認" />
       <el-step title="完了" />
     </el-steps>
 
+    <!-- フォーム内容 -->
     <div class="flex justify-center items-center">
       <div class="w-4/6 flex justify-center items-center">
+        <!-- ステップ1: フォーム入力 -->
         <form v-if="active == 1" class="mb-4 w-full">
           <div class="w-full flex flex-col">
+            <!-- 会社名／学校名入力フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="companyName">
                 会社名／学校名（任意）
@@ -28,6 +37,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="companyName" type="text" />
             </div>
+
+            <!-- 氏名入力フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
                 氏名 <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -37,6 +48,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="lastName" type="text" required />
             </div>
+
+            <!-- 氏名（フリガナ）入力フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="kanaName">
                 氏名（フリガナ）
@@ -46,6 +59,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="kanaName" type="text" />
             </div>
+
+            <!-- メールアドレス入力フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                 メールアドレス <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -55,6 +70,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="email" type="email" required />
             </div>
+
+            <!-- 電話番号入力フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
                 電話番号（ハイフン無しで入力） <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -64,6 +81,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="phone" type="tel" required />
             </div>
+
+            <!-- お問い合わせ区分選択フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="inquiryType">
                 お問い合わせ区分 <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -78,6 +97,8 @@
                 <option value="その他">その他</option>
               </select>
             </div>
+
+            <!-- 採用区分選択フィールド（採用に関するお問い合わせの場合のみ表示） -->
             <div class="mb-4" v-if="form.inquiryType === '採用に関するお問い合わせ'">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="employmentType">
                 採用区分 <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -93,6 +114,8 @@
                 <option value="契約社員採用">契約社員採用</option>
               </select>
             </div>
+
+            <!-- お問い合わせ内容入力フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="inquiryContent">
                 お問い合わせ内容 <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -103,6 +126,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="inquiryContent" required></textarea>
             </div>
+
+            <!-- 同意チェックボックス -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="agree">
                 <input v-model="form.agree" @change="validateField('agree')" class="mr-2 leading-tight" type="checkbox"
@@ -112,6 +137,8 @@
                 <span v-if="errors.agree" class="text-red-500 text-xs italic">{{ errors.agree }}</span>
               </label>
             </div>
+
+            <!-- 確認ボタン -->
             <div class="flex items-center justify-center">
               <CustomArrowButton color-type="blue-bg-white" arrowType="none" @click="validateForm">
                 <template #buttonText>
@@ -122,9 +149,11 @@
           </div>
         </form>
 
+        <!-- ステップ2: フォームの内容確認 -->
         <div v-if="active == 2" class="mb-4 w-full">
           <div class="w-full flex flex-col">
             <h3 class="mb-4 text-2xl font-bold">フォームの内容確認</h3>
+            <!-- 確認用フィールド（すべての入力内容を表示） -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="companyName">
                 会社名／学校名（任意）
@@ -133,6 +162,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="companyName" type="text" disabled />
             </div>
+
+            <!-- 氏名確認フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
                 氏名 <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -141,6 +172,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="lastName" type="text" disabled />
             </div>
+
+            <!-- 氏名（フリガナ）確認フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="kanaName">
                 氏名（フリガナ）
@@ -149,6 +182,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="kanaName" type="text" disabled />
             </div>
+
+            <!-- メールアドレス確認フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                 メールアドレス <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -157,6 +192,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="email" type="email" disabled />
             </div>
+
+            <!-- 電話番号確認フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
                 電話番号（ハイフン無しで入力） <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -165,6 +202,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="phone" type="tel" disabled />
             </div>
+
+            <!-- お問い合わせ区分確認フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="inquiryType">
                 お問い合わせ区分 <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -178,6 +217,8 @@
                 <option value="その他">その他</option>
               </select>
             </div>
+
+            <!-- 採用区分確認フィールド（採用に関するお問い合わせの場合のみ表示） -->
             <div class="mb-4" v-if="form.inquiryType === '採用に関するお問い合わせ'">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="employmentType">
                 採用区分 <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -191,6 +232,8 @@
                 <option value="契約社員採用">契約社員採用</option>
               </select>
             </div>
+
+            <!-- お問い合わせ内容確認フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="inquiryContent">
                 お問い合わせ内容 <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
@@ -199,6 +242,8 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="inquiryContent" disabled></textarea>
             </div>
+
+            <!-- 同意チェックボックス（確認用） -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="agree">
                 <input v-model="form.agree" class="mr-2 leading-tight" type="checkbox" id="agree" disabled />
@@ -206,6 +251,8 @@
                   class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
               </label>
             </div>
+
+            <!-- 修正ボタンと送信ボタン -->
             <div class="flex w-full justify-center items-center gap-4">
               <CustomArrowButton color-type="yellow" arrowType="none" @click="prevStep">
                 <template #buttonText>
@@ -221,6 +268,7 @@
           </div>
         </div>
 
+        <!-- ステップ3: 完了メッセージ -->
         <div v-if="active == 3" class="mb-4 w-full">
           <div class="w-full flex flex-col">
             <h3 class="mb-4 text-2xl font-bold">完了</h3>
@@ -359,6 +407,7 @@ const validateForm = () => {
   }
 }
 
+// フォームの送信処理を行う関数
 const submitForm = async () => {
   Object.keys(form).forEach((field) => validateField(field));
 

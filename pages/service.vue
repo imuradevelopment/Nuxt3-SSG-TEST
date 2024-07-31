@@ -1,14 +1,17 @@
 <template>
     <div>
+        <!-- 固定ヘッダーカード -->
         <ClearGlassMaskCard :rounded="false" :opacity="0.5"
             class="h-12 fixed top-16 w-full maxWidth mx-auto z-50 hidden md:inline-block">
             <template #content>
                 <div class="bg-custom-blue/30 h-full">
                     <div class="h-12 px-4 fixed top-16 w-full maxWidth mx-auto flex items-center justify-between">
                         <div>
+                            <!-- ページタイトル -->
                             <h1 class="font-bold text-lg md:text-2xl text-center text-custom-platina">事業情報</h1>
                         </div>
                         <div>
+                            <!-- ページヘッダーコンポーネント -->
                             <PageHeader />
                         </div>
                     </div>
@@ -16,6 +19,7 @@
             </template>
         </ClearGlassMaskCard>
         <div class="mx-4">
+            <!-- 事業概要セクション -->
             <div class="zigzag-timeline__item pageHeaderMargin">
                 <div class="zigzag-timeline__milestone"></div>
                 <div class="w-full flex items-center justify-center">
@@ -41,14 +45,16 @@
                                     より使いやすいシステム、最適な技術者チームをご提案致します。<br class="hidden md:inline-block" />
                                 </template>
                             </CustomFrameCard>
+                            <!-- ベン図コンポーネント -->
                             <VennDiagram></VennDiagram>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 開発実績セクション -->
             <div class="zigzag-timeline__item">
                 <div class="zigzag-timeline__milestone"></div>
-
                 <div class="w-full flex items-center justify-center">
                     <div class="flex flex-col">
                         <h2 id="service02"
@@ -59,6 +65,7 @@
                     </div>
                 </div>
                 <div class="mx-4 m-auto">
+                    <!-- 開発実績コンポーネント -->
                     <DevelopmentAchievements></DevelopmentAchievements>
                 </div>
             </div>
@@ -73,11 +80,10 @@ import DevelopmentAchievements from '~/components/DevelopmentAchievements.vue'
 </script>
 
 <style scoped>
+/* ジグザグタイムラインアイテムのスタイル */
 .zigzag-timeline__item {
     position: relative;
-
     border-bottom: 1px solid #9ca3af;
-
     width: 100%;
 }
 
@@ -85,16 +91,17 @@ import DevelopmentAchievements from '~/components/DevelopmentAchievements.vue'
     margin-bottom: 1.75rem;
 }
 
+/* ジグザグタイムラインマイルストーンのスタイル */
 .zigzag-timeline__milestone {
     position: absolute;
     top: 50%;
-
     border-radius: 50%;
     height: 1rem;
     width: 1rem;
     background: #9ca3af;
 }
 
+/* 偶数番目のアイテムのスタイル */
 .zigzag-timeline__item:nth-child(2n) {
     border-left: 1px solid #9ca3af;
 }
@@ -104,6 +111,7 @@ import DevelopmentAchievements from '~/components/DevelopmentAchievements.vue'
     transform: translate(-50%, -50%);
 }
 
+/* 奇数番目のアイテムのスタイル */
 .zigzag-timeline__item:nth-child(2n + 1) {
     border-right: 1px solid #9ca3af;
 }
@@ -113,6 +121,7 @@ import DevelopmentAchievements from '~/components/DevelopmentAchievements.vue'
     transform: translate(50%, -50%);
 }
 
+/* 青いオーバーレイスタイル */
 .bg-blue-overlay {
     background:
         repeating-linear-gradient(45deg,

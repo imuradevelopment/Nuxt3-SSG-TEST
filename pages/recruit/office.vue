@@ -1,28 +1,34 @@
 <template>
     <div>
-
+        <!-- オフィス紹介セクション -->
         <section class="mb-12 md:mb-24 flex bg-cover bg-[url('/images/recruit/office/001.png')]">
+            <!-- セクションの左側のスタイルを設定 -->
             <div class="basis-1/3 h-auto z-10 bg-custom-deepBlue"
                 style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)">
             </div>
+            <!-- セクションの右側のコンテンツ -->
             <div class="flex flex-col grow">
+                <!-- オフィス紹介のタイトル -->
                 <h1 id="recruit-office01" class="linkScroll self-end mx-8 text-2xl sm:text-4xl font-bold text-white">
                     オフィス紹介
                 </h1>
+                <!-- オフィス紹介の説明文 -->
                 <p
                     class="pl-28 pr-4 -ml-28 mt-12 text-center mb-4 py-2 text-base md:text-lg font-bold text-white bg-custom-blue/70">
-                    少しイメージ出来るように<br class="inline-block md:hidden" />中目黒本社ビルのオフィスを紹介します。</p>
+                    少しイメージ出来るように<br class="inline-block md:hidden" />中目黒本社ビルのオフィスを紹介します。
+                </p>
             </div>
         </section>
+        <!-- オフィス内部の各部屋やエリアの紹介セクション -->
         <section class="mb-12 md:mb-24 ">
             <div class="mx-4 flex justify-center items-center">
                 <div class="max-auto">
+                    <!-- オフィス内部の写真を表示するカルーセルコンポーネント -->
                     <Carousel :pics="[
                         {
                             src: '/images/recruit/office/002.png',
                             alt: 'オフィス外観',
                             mainText: `<h3 class='px-4 text-2xl font-bold leading-loose'>外観\（7階\～9階\）</h3>`,
-                            // subText: `<p class='text-sm sm:text-base font-bold sm:leading-7 leading-7'><span class='text-2xl font-bold leading-loose'>山手通りに面した本社オフィス。</span><br />日比谷線/東急東横線「中目黒駅」から山手通り沿いを5分程歩くと見えてくる、1階にお寿司屋さん(築地すし好)が入っているビルです。</p>`,
                             subText: `<p class='text-sm sm:text-base font-bold sm:leading-7 leading-7'>山手通りに面した本社オフィス。<br />日比谷線/東急東横線「中目黒駅」から山手通り沿いを5分程歩くと見えてくる、<br class='hidden md:inline-block' />1階にお寿司屋さん(築地すし好)が入っているビルです。</p>`,
                             tileColor: 'rgba(0, 37, 92, 0.1)',
                             shadowColor: 'rgb(0 0 0 / 0.5)',
