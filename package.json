@@ -6,10 +6,9 @@
         "build": "nuxt build",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
-        "gh-ps-generate": "NUXT_APP_BASE_URL=/Nuxt3-SSG-TEST NUXT_APP_CDN_URL=/Nuxt3-SSG-TEST nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "local": "nuxt generate & npx serve .output/public"
+        "local": "nuxt generate && npx serve .output/public"
     },
     "devDependencies": {
         "@element-plus/nuxt": "^1.0.6",
