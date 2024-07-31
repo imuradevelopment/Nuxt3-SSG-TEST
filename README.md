@@ -1,97 +1,126 @@
 # ドキュメント
 
-## 開発環境構築
+## GitHubの登録方法
 
-以下、windows10用に記載
+GitHubの登録方法を以下に示します。
 
-1. Nodeのバージョンを18.18.0にする。
-    1. 管理者権限でpowershellを起動し(Windowsボタンを押下したあと、「powershell」と入力、その後右リックから管理者として実行)、下記のコマンドを実行しバージョンが18.18.0であることを確認する。  
-    ※この時管理者権限が必要になるため、権限を付与してもらうこと。
+1. [GitHubの公式ウェブサイト](https://github.com/)にアクセスします。
+2. 右上の「Sign Up」ボタンをクリックします。
+3. 必要な情報（ユーザー名、メールアドレス、パスワード）を入力します。
+4. 「Create account」ボタンをクリックします。
+5. 登録したメールアドレスに送られてくる確認メールを開きます。
+6. メール内のリンクをクリックしてアカウントを確認します。
+7. [GitHubの利用規約](https://docs.github.com/ja/github/site-policy/github-terms-of-service)に同意します。
+8. プロフィール情報を設定します（任意）。
+9. 登録が完了しました。GitHubを利用する準備が整いました。
 
-        ```ps1
-        node -v
-        ```
+以上がGitHubの登録方法です。
 
-    2. nvm(windowsでnodeのバージョンを切り替えながら使えるようにするやつ)をインストールする。
-    3. [nvmのGitHubRelease](https://github.com/coreybutler/nvm-windows/releases)から「Assets > nvm-setup.exe
-    」をDLしインストールする。
-    4. 下記コマンドを実行し、nvmがインストールされている事を確認する。(その他コマンドも後に使うので記載)
+## GitHub Codespace向けの開発環境構築
 
-        ```ps1
-        nvm -v
-        # > 出力
-        # 1.1.11
-        # 現状(2023/10/02)の最新のnvmバージョンは「1.1.11」
+GitHub Codespaceは、クラウドベースの開発環境であり、GitHub上で直接コードを編集、ビルド、デバッグすることができます。以下は、GitHub Codespace向けの開発環境構築手順です。
 
-        nvm list
-        # > 出力
-        # * 16.17.1 (Currently using 64-bit executable)
-        #   14.19.1
-        # 現在nvmで管理されているnodeのバージョン一覧「現在選択されているのは16.17.1」
+1. リポジトリのフォークとクローン
+    - リポジトリのフォークとは、他のユーザーのリポジトリを自分のアカウントにコピーすることです。以下の手順でフォークしてください。
+        1. [GitHubのリポジトリ](https://github.com/imuradevelopment/Nuxt3-SSG-TEST)にアクセスします。
+        2. ページ右上の「Fork」ボタンをクリックします。
+        3. 自分のアカウントにリポジトリがフォークされます。
+    - Codespaceを利用するために、フォークしたリポジトリを自分のアカウントにクローンします。
 
-        # 下記コマンドでnodeをインストールする
-        nvm install lts # ltsは長期サポート対象の最新普段はこれで問題ない
-        # または
-        nvm install 18.18.0
+      ```bash
+      git clone git@github.com:your-username/Nuxt3-SSG-TEST.git
+      ```
 
-        # 再びlistコマンドを実行すると下記のような出力になる
-        nvm list
-        # > 出力
-        #   18.18.0
-        # * 16.17.1 (Currently using 64-bit executable)
-        #   14.19.1
-        # 現在nvmで管理されているnodeのバージョン一覧「現在選択されているのは16.17.1」
+2. Codespaceの作成
+    - フォークしたリポジトリを開き、画面右上の「Code」ボタンをクリックします。
+    - 「Open with Codespaces」を選択します。
+    - Codespaceの作成が開始され、数分待つと開発環境が準備されます。
 
-        # 最後に使用するnodeのバージョンを使用して完了(今回は18.18.0)
-        nvm use 18.18.0
-        ```
+3. 開発環境の利用
+    - Codespaceが作成されると、ブラウザ上で開発環境が表示されます。
+    - コードの編集、ビルド、デバッグなど、通常の開発作業を行うことができます。
 
-2. Gitの設定
-   1. 流石にgitはインストール済みであることを前提とする。
-   2. gitのconfig設定を行う。
-      1. 管理者権限で実行したpowershellで、下記コマンドにて諸々設定
+4. プロジェクトの依存関係のインストールと起動
+    - ターミナルで以下のコマンドを実行して、プロジェクトの依存関係をインストールします。
 
-            ```ps1
-            # 現在の設定を参照
-            git config --global --list
+      ```ps1
+      npm install
+      ```
 
-            # 以下設定
-            # コミット時の名称設定
-            git config --global user.name 'Yuta Miyaura'
-            # 自分の名前でね、間違ったら下記で消してね
-            # git config --global --unset user.name
-            git config --global user.email 'imuradevelopmentauth@gmail.com'
-            # 自分のメアドでね、間違ったら下記で消してね
-            # git config --global --unset user.email
-            git config --global init.defaultBranch main
-            git config --global core.autocrlf false
-            git config --global core.ignorecase false
-            git config --global color.ui true
-            git config --global core.quotepath false
-            ```
+    - プロジェクトをビルドし、ローカルサーバーを起動するには、以下のコマンドを実行します。
 
-   3. fork > clone > comit > push したらプルリクエストで返してください。
+      ```ps1
+      npm run generate
+      npx serve .output/public
+      ```
 
-3. リポジトリcloneから開発環境構築までのお話
-   1. まずcloneしてNuxt-SSG-TESTフォルダをVSCodeで開く
+    - ビルドとローカルサーバーの起動を一度に行いたい場合は、以下のコマンドを実行します。
 
-        ```ps1
-        git clone git@github.com:imuradevelopment/Nuxt3-SSG-TEST.git
-        ```
+      ```ps1
+      npm run local
+      ```
 
-   2. 「ctrl + @」でターミナルを起動して下記コマンドを実行
+以上がGitHub Codespace向けの環境で動かすための手順です。
 
-        ```ps1
-        # 「package-lock.json」というファイルに記述されているモジュールを「node_modules」という所にインストールしている
-        npm install
+## Windows向けの開発環境構築
 
-        # ビルド（「.output/public」に新しいサイトが構築される）
-        npm run generate 
+1. VSCodeのインストール
+    - [VSCodeの公式ウェブサイト](https://code.visualstudio.com/)にアクセスし、VSCodeをダウンロードしてインストールします。
 
-        # ローカルサーバー起動
-        npx serve .output/public
+2. Scoopのインストール
+    - 管理者権限でpowershellを起動します（Windowsボタンを押下した後、「powershell」と入力し、右クリックから「管理者として実行」を選択します）。
+    - 下記のコマンドを実行して、Scoopをインストールします。
 
-        # ビルドとローカルサーバー起動を一気に行いたい場合は下記
-        # カスタムコマンドなので環境によってはエラーが出るかも
-        npm run local
-        ```
+      ```ps1
+      iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+      ```
+
+3. Scoopを用いたGitのインストール
+    - powershellで以下のコマンドを実行して、Gitをインストールします。
+
+      ```ps1
+      scoop install git
+      ```
+
+4. Nodeのインストール
+    - powershellで以下のコマンドを実行して、Nodeのバージョンを18.18.0に設定します。
+
+      ```ps1
+      scoop install nodejs-lts
+      nvm install 18.18.0
+      nvm use 18.18.0
+      ```
+
+5. リポジトリのフォークとクローン
+    - リポジトリのフォークとは、他のユーザーのリポジトリを自分のアカウントにコピーすることです。以下の手順でフォークしてください。
+        1. [GitHubのリポジトリ](https://github.com/imuradevelopment/Nuxt3-SSG-TEST)にアクセスします。
+        2. ページ右上の「Fork」ボタンをクリックします。
+        3. 自分のアカウントにリポジトリがフォークされます。
+    - powershellで以下のコマンドを実行して、リポジトリをローカルにクローンします。
+
+      ```ps1
+      git clone git@github.com:your-username/Nuxt3-SSG-TEST.git
+      ```
+
+6. プロジェクトの依存関係のインストールと起動
+    - powershellで以下のコマンドを実行して、プロジェクトの依存関係をインストールします。
+
+      ```ps1
+      cd Nuxt3-SSG-TEST
+      npm install
+      ```
+
+    - プロジェクトをビルドし、ローカルサーバーを起動するには、以下のコマンドを実行します。
+
+      ```ps1
+      npm run generate
+      npx serve .output/public
+      ```
+
+    - ビルドとローカルサーバーの起動を一度に行いたい場合は、以下のコマンドを実行します。
+
+      ```ps1
+      npm run local
+      ```
+
+以上が、このプロジェクトをローカル環境で動かすための手順です。
