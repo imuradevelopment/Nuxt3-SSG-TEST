@@ -21,10 +21,86 @@ export default defineNuxtConfig({
             viewport: "width=device-width, initial-scale=1",
             title: "株式会社ベイル",
             meta: [
-                { name: "description", content: "リニューアルサイト" },
-                { name: "keywords", content: "a5b3878fa5c1b85e9db58feb9b6e3449" },
-                { name: "keywords", content: "https://hp-renewal.netlify.app/" },
-                { name: "google-site-verification", content: "MuapyJzQSkc_8HF8rwPlMke578eRvIc8JWPnP5z3aaE" },
+                {
+                    name: "description",
+                    content: "新しい発想と技術とコミュニケーションで問題を解決しより良い方法をご提案させて頂きます。お気軽にお問い合わせください。",
+                },
+                {
+                    name: "keywords",
+                    content: "ソフトウェア",
+                },
+                {
+                    name: "keywords",
+                    content: "システム",
+                },
+                {
+                    name: "keywords",
+                    content: "情報処理",
+                },
+                {
+                    name: "keywords",
+                    content: "パソコン",
+                },
+                {
+                    name: "keywords",
+                    content: "目黒区",
+                },
+                {
+                    name: "keywords",
+                    content: "中目黒駅",
+                },
+                {
+                    name: "keywords",
+                    content: "ベイル",
+                },
+                {
+                    name: "keywords",
+                    content: "vaile",
+                },
+                {
+                    name: "keywords",
+                    content: "人材派遣",
+                },
+                {
+                    name: "keywords",
+                    content: "アルバイト",
+                },
+                {
+                    name: "keywords",
+                    content: "採用情報",
+                },
+                {
+                    name: "keywords",
+                    content: "入力",
+                },
+                {
+                    name: "keywords",
+                    content: "システム構築",
+                },
+                {
+                    name: "keywords",
+                    content: "事務コン",
+                },
+                {
+                    name: "keywords",
+                    content: "OA販売",
+                },
+                {
+                    name: "keywords",
+                    content: "ホームページサービス",
+                },
+                {
+                    name: "keywords",
+                    content: "SE",
+                },
+                {
+                    name: "keywords",
+                    content: "PC",
+                },
+                {
+                    name: "keywords",
+                    content: "Windows",
+                },
             ],
         },
     },
@@ -44,19 +120,16 @@ export default defineNuxtConfig({
                 },
             },
         },
-        build: {
-        },
+        build: {},
     },
     elementPlus: {
         importStyle: "scss",
         themes: ["dark"],
     },
     css: ["~/assets/styles/css/reset.css", "~/assets/styles/css/style.css"],
-    pinia: {
-    },
+    pinia: {},
     tailwindcss: {
         configPath: "~/tailwind.config.ts",
     },
-    vue: {
-    },
+    vue: {},
 });
