@@ -26,11 +26,6 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
         1. [GitHub のリポジトリ](https://github.com/imuradevelopment/Nuxt3-SSG-TEST)にアクセスします。
         2. ページ右上の「Fork」ボタンをクリックします。
         3. 自分のアカウントにリポジトリがフォークされます。
-    - Codespace を利用するために、フォークしたリポジトリを自分のアカウントにクローンします。
-
-        ```bash
-        git clone git@github.com:your-username/Nuxt3-SSG-TEST.git
-        ```
 
 2. Codespace の作成
 
