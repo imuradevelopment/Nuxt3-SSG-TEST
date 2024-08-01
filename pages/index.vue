@@ -165,12 +165,12 @@
 
           <div class="flex flex-col self-end space-y-2 text-xs md:text-sm w-full">
             <div class="flex space-x-4 justify-end">
-              <NuxtLink to="/contact">
+              <NuxtLink to="/contact?inquiryType=recruitment">
                 <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">採用に関するお問い合わせ</button>
               </NuxtLink>
             </div>
             <div class="flex space-x-4 justify-end">
-              <NuxtLink to="/contact">
+              <NuxtLink to="/contact?inquiryType=other">
                 <button class="bg-custom-blue text-xs text-white font-semibold py-2 px-4 rounded">その他お問い合わせ</button>
               </NuxtLink>
             </div>
