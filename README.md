@@ -4,6 +4,7 @@
 1. [GitHub の登録方法（必須）](#GitHub-の登録方法)
 2. [GitHub Codespace 向けの開発環境構築（GitHub上のエディタで作業する場合）](#GitHub-Codespace-向けの開発環境構築)
 3. [Windows 向けの開発環境構築（ローカルPC上で作業する場合）](#Windows-向けの開発環境構築)
+4. [プロジェクトの構成（本プロジェクトのファイル構成）](#プロジェクトの構成)
 
 ## GitHub の登録方法
 
@@ -155,3 +156,134 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
         ```
 
 以上が、このプロジェクトをローカル環境で動かすための手順です。
+
+## プロジェクトの構成
+
+```
+Nuxt3-SSG-TEST-main/
+    .gitignore               # Gitで無視するファイルやディレクトリを指定
+    .npmrc                   # npmの設定ファイル
+    README.md                # プロジェクトの概要や設定手順
+    app.vue                  # アプリケーションのルートコンポーネント
+    nuxt.config.ts           # Nuxtの設定ファイル
+    package-lock.json        # 固定された依存関係のバージョン
+    package.json             # プロジェクトの依存関係やスクリプト
+    tailwind.config.ts       # Tailwind CSSの設定ファイル
+    tsconfig.json            # TypeScriptの設定ファイル
+    .github/                 # GitHubの設定ファイル
+        workflows/           # GitHub Actionsの設定
+            main.yml         # GitHub Actionsのワークフロー設定
+    .vscode/                 # Visual Studio Code用の設定ファイル
+        settings.json        # VSCodeの設定ファイル
+    assets/                  # 未加工のアセット（画像やスタイルシートなど）
+        styles/              # スタイルシート
+            css/             # CSSファイル
+                reset.css    # CSSリセットファイル
+                style.css    # カスタムスタイル
+                tailwind.css # Tailwindのスタイル
+            element/         # Element UIのスタイル
+                dark.scss    # ダークテーマスタイル
+                index.scss   # Element UIのスタイル
+    components/              # Vueコンポーネント
+        BackgroundPattern.vue        # 背景パターンコンポーネント
+        BackgroundPattern2.vue       # 背景パターンコンポーネント2
+        BlurGlassCard.vue            # ブラーガラスカードコンポーネント
+        BurgerMenu.vue               # ハンバーガーメニューコンポーネント
+        Carousel.vue                 # カルーセルコンポーネント
+        CarouselEmployee.vue         # 従業員カルーセルコンポーネント
+        ClearGlassMaskCard.vue       # クリアガラスマスクカードコンポーネント
+        CustomArrowButton.vue        # カスタム矢印ボタンコンポーネント
+        CustomFrameCard.vue          # カスタムフレームカードコンポーネント
+        CustomTable.vue              # カスタムテーブルコンポーネント
+        DevelopmentAchievements.vue  # 開発成果コンポーネント
+        Footer.vue                   # フッターコンポーネント
+        Header.vue                   # ヘッダーコンポーネント
+        HeroDesktop.vue              # デスクトップ用ヒーローコンポーネント
+        HeroMobile.vue               # モバイル用ヒーローコンポーネント
+        ImageCard.vue                # 画像カードコンポーネント
+        PageHeader.vue               # ページヘッダーコンポーネント
+        Sidebar.vue                  # サイドバーコンポーネント
+        Timeline.vue                 # タイムラインコンポーネント
+        VennDiagram.vue              # ベン図コンポーネント
+    composables/                      # Vue 3のComposition APIフック
+        useScrollToTarget.ts         # ターゲットへスクロールするフック
+    layouts/                         # アプリケーションのレイアウト
+        default.vue                  # デフォルトレイアウト
+        double-column-sidebar.vue    # 二列サイドバーのレイアウト
+    middleware/                      # ミドルウェア
+        nuxtLinkIntercept.global.ts  # Nuxtリンクのインターセプトミドルウェア
+    pages/                           # アプリケーションのページコンポーネント
+        company.vue                  # 会社情報ページ
+        contact.vue                  # お問い合わせページ
+        index.vue                    # ホームページ
+        policy.vue                   # ポリシーページ
+        service.vue                  # サービスページ
+        recruit/                     # 採用関連のページ
+            data.vue                 # 採用データページ
+            employee.vue             # 採用従業員ページ
+            feature.vue              # 採用特徴ページ
+            index.vue                # 採用インデックスページ
+            induction.vue            # 採用導入ページ
+            information.vue          # 採用情報ページ
+            message.vue              # 採用メッセージページ
+            office.vue               # 採用オフィスページ
+            qa.vue                   # 採用Q&Aページ
+            welfare.vue              # 採用福利厚生ページ
+    plugins/                         # Vueプラグイン
+        nuxtLinkIntercept.client.ts  # Nuxtリンクのインターセプトプラグイン
+    public/                          # 静的ファイル
+        favicon.ico                  # ファビコン
+        common/                      # 共通ファイル
+            sendemail.php            # メール送信スクリプト
+            sitemap.xml              # サイトマップ
+        images/                      # 画像ファイル
+            common/
+                check.svg            # 共通のチェックマーク画像
+            company/
+                001.jfif             # 会社画像1
+                002.jpg              # 会社画像2
+                003.png              # 会社画像3
+                004.png              # 会社画像4
+            contact/
+                001.png              # お問い合わせ画像1
+            footer/
+                policy.png           # フッターポリシー画像
+            logo/
+                logo.svg             # ロゴ画像
+            recruit/
+                data/
+                    001.png          # 採用データ画像1
+                    002.png          # 採用データ画像2
+                employee/
+                    001.png          # 採用従業員画像1
+                    002.jpg          # 採用従業員画像2
+                feature/
+                    001.png          # 採用特徴画像1
+                    002.png          # 採用特徴画像2
+                index/
+                    001.png          # 採用インデックス画像1
+                    002_D.png        # 採用インデックス画像2
+                induction/
+                    001.png          # 採用導入画像1
+                    002.png          # 採用導入画像2
+                information/
+                    001.png          # 採用情報画像1
+                message/
+                    001.png          # 採用メッセージ画像1
+                office/
+                    001.png          # 採用オフィス画像1
+                qa/
+                    001.png          # 採用Q&A画像1
+                welfare/
+                    001.png          # 採用福利厚生画像1
+            top/
+                001.jpg              # トップ画像1
+        videos/
+            vaile.mp4                # ビデオファイル
+    server/                          # サーバーサイドのロジック
+        tsconfig.json                # サーバー側のTypeScript設定ファイル
+    stores/                          # Vuexストア
+        activeIndex.ts               # アクティブインデックスの状態管理
+        currentPhotoNumber.ts        # 現在の写真番号の状態管理
+        tabStore.ts                  # タブの状態管理
+```
