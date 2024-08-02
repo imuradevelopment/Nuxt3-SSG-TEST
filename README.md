@@ -5,6 +5,7 @@
 2. [GitHub Codespace 向けの開発環境構築（GitHub上のエディタで作業する場合）](#GitHub-Codespace-向けの開発環境構築)
 3. [Windows 向けの開発環境構築（ローカルPC上で作業する場合）](#Windows-向けの開発環境構築)
 4. [プロジェクトの構成（本プロジェクトのファイル構成）](#プロジェクトの構成)
+5. [ファイル修正の影響範囲一覧（※参考）](#ファイル修正の影響範囲一覧（※参考）)
 
 ## GitHub の登録方法
 
@@ -287,3 +288,46 @@ Nuxt3-SSG-TEST-main/
         currentPhotoNumber.ts        # 現在の写真番号の状態管理
         tabStore.ts                  # タブの状態管理
 ```
+
+## ファイル修正の影響範囲一覧（※参考）
+
+| ファイル                   | 影響を受けるファイル・コンポーネント                     |
+|----------------------------|---------------------------------------------------------|
+| layouts/default.vue        | Header.vue, Footer.vue                                   |
+| layouts/double-column-sidebar.vue | Header.vue, Sidebar.vue, Footer.vue, BackgroundPattern2.vue |
+| pages/company.vue          | CustomFrameCard.vue, CustomTable.vue, ClearGlassMaskCard.vue, PageHeader.vue |
+| pages/contact.vue          | CustomArrowButton.vue                                    |
+| pages/index.vue            | HeroDesktop.vue, HeroMobile.vue                          |
+| pages/policy.vue           | None                                                    |
+| pages/service.vue          | CustomFrameCard.vue, VennDiagram.vue, DevelopmentAchievements.vue |
+| pages/recruit/data.vue     | None                                                    |
+| pages/recruit/employee.vue | CarouselEmployee.vue                                     |
+| pages/recruit/feature.vue  | CustomArrowButton.vue, ImageCard.vue, BlurGlassCard.vue  |
+| pages/recruit/index.vue    | CustomArrowButton.vue, Carousel.vue, BackgroundPattern.vue |
+| pages/recruit/induction.vue | Timeline.vue, ImageCard.vue, BlurGlassCard.vue           |
+| pages/recruit/information.vue | BlurGlassCard.vue, CustomArrowButton.vue                 |
+| pages/recruit/message.vue  | BlurGlassCard.vue                                        |
+| pages/recruit/office.vue   | Carousel.vue                                            |
+| pages/recruit/qa.vue       | BlurGlassCard.vue, ClearGlassMaskCard.vue, CustomArrowButton.vue |
+| pages/recruit/welfare.vue  | BlurGlassCard.vue                                        |
+| components/BackgroundPattern.vue | pages/recruit/index.vue                             |
+| components/BackgroundPattern2.vue | layouts/double-column-sidebar.vue                 |
+| components/BlurGlassCard.vue | pages/recruit/feature.vue, pages/recruit/induction.vue, pages/recruit/information.vue, pages/recruit/message.vue, pages/recruit/qa.vue, pages/recruit/welfare.vue |
+| components/BurgerMenu.vue  | Header.vue                                              |
+| components/Carousel.vue    | pages/recruit/index.vue, pages/recruit/office.vue       |
+| components/CarouselEmployee.vue | pages/recruit/employee.vue                          |
+| components/ClearGlassMaskCard.vue | pages/company.vue, pages/recruit/qa.vue            |
+| components/CustomArrowButton.vue | pages/contact.vue, pages/recruit/feature.vue, pages/recruit/index.vue, pages/recruit/information.vue, pages/recruit/qa.vue |
+| components/CustomFrameCard.vue | pages/company.vue, pages/service.vue                 |
+| components/CustomTable.vue | pages/company.vue                                       |
+| components/DevelopmentAchievements.vue | pages/service.vue                           |
+| components/Footer.vue      | layouts/default.vue, layouts/double-column-sidebar.vue  |
+| components/Header.vue      | layouts/default.vue, layouts/double-column-sidebar.vue  |
+| components/HeroDesktop.vue | pages/index.vue                                         |
+| components/HeroMobile.vue  | pages/index.vue                                         |
+| components/ImageCard.vue   | pages/recruit/feature.vue, pages/recruit/induction.vue  |
+| components/PageHeader.vue  | pages/company.vue                                       |
+| components/Sidebar.vue     | layouts/double-column-sidebar.vue                       |
+| components/Timeline.vue    | pages/recruit/induction.vue                             |
+| components/VennDiagram.vue | pages/service.vue                                       |
+
