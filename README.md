@@ -59,12 +59,20 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
         ```ps1
         npm run generate
         npx serve .output/public
+        # Need to install the following packages:
+        # serve@14.2.3
+        # Ok to proceed? (y) y
+        # ↑↑↑↑↑上記が出たら「y」を押下
         ```
 
     - ビルドとローカルサーバーの起動を一度に行いたい場合は、以下のコマンドを実行します。
 
         ```ps1
         npm run local
+        # Need to install the following packages:
+        # serve@14.2.3
+        # Ok to proceed? (y) y
+        # ↑↑↑↑↑上記が出たら「y」を押下
         ```
 
 以上が GitHub Codespace 向けの環境で動かすための手順です。
