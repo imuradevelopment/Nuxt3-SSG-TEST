@@ -26,7 +26,7 @@
                 <!-- CarouselEmployeeコンポーネントの呼び出し -->
                 <CarouselEmployee :pics="[
                     {
-                        src: '/images/recruit/employee/005.jpg',
+                        src: '/images/recruit/employee/002.jpg',
                         alt: '人物写真T.I.',
                         introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />T.I.<br />文系私立大学卒<br />2023年入社</div></div></div>`,
                         message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>従来紙ベースで行われていた書類のやり取りを、デジタル化しシステム上で送受信可能にする開発に携わっています。</p>`,
@@ -37,7 +37,7 @@
                         bgPosition: 'right top'
                     },
                     {
-                        src: '/images/recruit/employee/008.jpg',
+                        src: '/images/recruit/employee/003.jpg',
                         alt: '人物写真M.F.',
                         introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />M.F.<br />文系私立大学卒<br />2021年入社</div></div></div>`,
                         message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>文書決裁・管理システムの導入プロジェクトにおいて、設計段階からテストフェーズに至るまでの一連の業務を担当しています。</p>`,
@@ -48,7 +48,7 @@
                         bgPosition: 'center top'
                     },
                     {
-                        src: '/images/recruit/employee/007.jpg',
+                        src: '/images/recruit/employee/004.jpg',
                         alt: '人物写真T.H.',
                         introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />T.H.<br />文系私立大学卒<br />2023年入社</div></div></div>`,
                         message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私は現在、完成したアプリケーションのソースコードを参考にしながら、詳細な設計書を作成するプロセスに携わっています。</p>`,
@@ -59,7 +59,7 @@
                         bgPosition: 'center'
                     },
                     {
-                        src: '/images/recruit/employee/010.jpg',
+                        src: '/images/recruit/employee/005.jpg',
                         alt: '人物写真M.K.',
                         introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />M.K.<br />文系私立大学卒<br />2022年入社</div></div></div>`,
                         message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>リリース済みシステムの保守開発時に修正箇所をスムーズに特定できるよう、データの整理や品質の確保・向上に努めたり、後期に開始される追加案件のための資料作成などに携わっています。</p>`,
@@ -81,7 +81,7 @@
                         bgPosition: 'right top'
                     },
                     {
-                        src: '/images/recruit/employee/009.jpg',
+                        src: '/images/recruit/employee/007.jpg',
                         alt: '人物写真A.M.',
                         introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />A.M.<br />文系私立大学卒<br />2022年入社</div></div></div>`,
                         message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>現在、私はリリース済みのシステムに関する詳細設計書の作成と、新規プロジェクトの資料作成を主に担当しています。未経験から始め、当初は膨大な知識が必要な環境に苦しいこともありました。日々の学習の積み重ねにより、スキルが身についている実感を感じられることが私にとって大きな挑戦と同時にとても価値あるものとなりました。</p>`,
@@ -92,7 +92,7 @@
                         bgPosition: 'right top'
                     },
                     {
-                        src: '/images/recruit/employee/004.jpg',
+                        src: '/images/recruit/employee/008.jpg',
                         alt: '人物写真R.T.',
                         introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />R.T.<br />理系私立大学卒<br />2023年入社</div></div></div>`,
                         message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私は、納品予定のシステムにバグや不具合がないかを検証する結合テストの工程を担当しています。</p>`,
