@@ -1,5 +1,10 @@
 # ドキュメント
 
+## 目次
+1. [GitHub の登録方法（必須）](#GitHub-の登録方法)
+2. [GitHub Codespace 向けの開発環境構築（GitHub上のエディタで作業する場合）](#GitHub-Codespace-向けの開発環境構築)
+3. [Windows 向けの開発環境構築（ローカルPC上で作業する場合）](#Windows-向けの開発環境構築)
+
 ## GitHub の登録方法
 
 GitHub の登録方法を以下に示します。
