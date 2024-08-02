@@ -378,7 +378,7 @@ Nuxt3-SSG-TEST-main/
 | components/CustomTable.vue | pages/company.vue                                       |
 | components/DevelopmentAchievements.vue | pages/service.vue                           |
 | components/Footer.vue      | layouts/default.vue, layouts/double-column-sidebar.vue  |
-| components/Header.vue      | layouts/default.vue, layouts/double-column-sidebar.vue  |
+| components/Header.vue      | layouts/default.vue, layouts/double-column-sidebar.vue, components/BurgerMenu.vue  |
 | components/HeroDesktop.vue | pages/index.vue                                         |
 | components/HeroMobile.vue  | pages/index.vue                                         |
 | components/ImageCard.vue   | pages/recruit/feature.vue, pages/recruit/induction.vue  |
