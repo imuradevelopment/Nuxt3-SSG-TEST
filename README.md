@@ -107,7 +107,7 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
         例）「npx serve .output/public」実行後、開発サーバーを起動する場合  
         ![画像の説明](./README/015.png)  
 
-        例）「http://localhost:3000にアクセス」、クラウド環境上でランダムなURLにリダイレクトされます。  
+        例）「http://localhost:3000」にアクセス、クラウド環境上でランダムなURLにリダイレクトされます。  
         ![画像の説明](./README/016.png)  
 
 
