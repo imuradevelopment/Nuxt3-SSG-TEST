@@ -28,35 +28,56 @@ GitHub の登録方法を以下に示します。
 
 GitHub Codespace は、クラウドベースの開発環境であり、GitHub 上で直接コードを編集、ビルド、デバッグすることができます。以下は、GitHub Codespace 向けの開発環境構築手順です。
 
-1. リポジトリのフォークとクローン
+1. **GitHub にログイン**
 
-    - リポジトリのフォークとは、他のユーザーのリポジトリを自分のアカウントにコピーすることです。以下の手順でフォークしてください。
-        1. [GitHub のリポジトリ](https://github.com/imuradevelopment/Nuxt3-SSG-TEST)にアクセスします。
-        2. ページ右上の「Fork」ボタンをクリックします。
-        3. 自分のアカウントにリポジトリがフォークされます。
+    1. [GitHub の公式ウェブサイト](https://github.com/)にアクセスします。
+    2. 右上の「Sign In」ボタンをクリックします。
+    3. 登録済みのユーザー名（またはメールアドレス）とパスワードを入力して、「Sign in」ボタンをクリックします。
+    4. 例）ログイン後の画面  
+    ![画像の説明](./README/001.png)
 
-2. Codespace の作成
+2. **リポジトリのフォークとクローン**
 
-    - フォークしたリポジトリを開き、画面右上の「Code」ボタンをクリックします。
-    - 「Open with Codespaces」を選択します。
-    - Codespace の作成が開始され、数分待つと開発環境が準備されます。
+    1. [GitHub のリポジトリ](https://github.com/imuradevelopment/Nuxt3-SSG-TEST)にアクセスします。
+    2. ページ右上の「Fork」ボタンをクリックします。  
+    例）「Fork」ボタンを押下  
+    ![画像の説明](./README/002.png)  
+    例）「Create Fork」ボタンを押下  
+    ![画像の説明](./README/003.png)  
+    3. 自分のアカウントにリポジトリがフォークされます。  
+    例）Fork済みのリポジトリ  
+    ![画像の説明](./README/004.png)  
 
-3. 開発環境の利用
+3. **Codespace の作成**
 
-    - Codespace が作成されると、ブラウザ上で開発環境が表示されます。
-    - コードの編集、ビルド、デバッグなど、通常の開発作業を行うことができます。
+    1. フォークしたリポジトリを開き、画面右上の「Code」ボタンを押下します。  
+    例）「Code」ボタンを押下  
+    ![画像の説明](./README/005.png)  
+    2. 「Create codespace on main」ボタンを押下します。  
+    例）「Create codespace on main」ボタンを押下  
+    ![画像の説明](./README/006.png)  
+    3. Codespace の作成が開始され、数分待つと開発環境が準備されます。  
+    例）Codespace の作成が開始  
+    ![画像の説明](./README/007.png)  
+    例）Codespace の起動  
+    ![画像の説明](./README/008.png)  
 
-4. プロジェクトの依存関係のインストールと起動
+4. **開発環境の利用**
 
-    - ターミナルで以下のコマンドを実行して、プロジェクトの依存関係をインストールします。
+    1. Codespace が作成されると、ブラウザ上で開発環境が表示されます。
+    2. コードの編集、ビルド、デバッグなど、通常の開発作業を行うことができます。
 
-        ```ps1
+5. **プロジェクトの依存関係のインストールと起動**
+
+    1. ターミナルで以下のコマンドを実行して、プロジェクトの依存関係をインストールします。
+
+        ```sh
         npm install
         ```
 
-    - プロジェクトをビルドし、ローカルサーバーを起動するには、以下のコマンドを実行します。
+    2. プロジェクトをビルドし、ローカルサーバーを起動するには、以下のコマンドを実行します。
 
-        ```ps1
+        ```sh
         npm run generate
         npx serve .output/public
         # Need to install the following packages:
@@ -65,9 +86,9 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
         # ↑↑↑↑↑上記が出たら「y」を押下
         ```
 
-    - ビルドとローカルサーバーの起動を一度に行いたい場合は、以下のコマンドを実行します。
+    3. ビルドとローカルサーバーの起動を一度に行いたい場合は、以下のコマンドを実行します。
 
-        ```ps1
+        ```sh
         npm run local
         # Need to install the following packages:
         # serve@14.2.3
@@ -79,28 +100,28 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
 
 ## Windows 向けの開発環境構築
 
-1. VSCode のインストール
+1. **VSCode のインストール**
 
-    - [VSCode の公式ウェブサイト](https://code.visualstudio.com/)にアクセスし、VSCode をダウンロードしてインストールします。
+    1. [VSCode の公式ウェブサイト](https://code.visualstudio.com/)にアクセスし、VSCode をダウンロードしてインストールします。
 
-2. Scoop のインストール
+2. **Scoop のインストール**
 
-    - 管理者権限で powershell を起動します（Windows ボタンを押下した後、「powershell」と入力し、右クリックから「管理者として実行」を選択します）。
-    - 下記のコマンドを実行して、Scoop をインストールします。
+    1. 管理者権限で powershell を起動します（Windows ボタンを押下した後、「powershell」と入力し、右クリックから「管理者として実行」を選択します）。
+    2. 下記のコマンドを実行して、Scoop をインストールします。
 
         ```ps1
         iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
         ```
 
-3. Scoop を用いた Git のインストール
+3. **Scoop を用いた Git のインストール**
 
-    - powershell で以下のコマンドを実行して、Git をインストールします。
+    1. powershell で以下のコマンドを実行して、Git をインストールします。
 
         ```ps1
         scoop install git
         ```
 
-    - powershell で以下のコマンドを実行して、Git の設定を行います。
+    2. powershell で以下のコマンドを実行して、Git の設定を行います。
 
         ```ps1
         # 現在の設定を参照
@@ -121,9 +142,9 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
         git config --global core.quotepath false
         ```
 
-4. Node のインストール
+4. **Node のインストール**
 
-    - powershell で以下のコマンドを実行して、Node のバージョンを 18.18.0 に設定します。
+    1. powershell で以下のコマンドを実行して、Node のバージョンを 18.18.0 に設定します。
 
         ```ps1
         scoop install nodejs-lts
@@ -131,35 +152,40 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
         nvm use 18.18.0
         ```
 
-5. リポジトリのフォークとクローン
+5. **GitHub へのログイン**
 
-    - リポジトリのフォークとは、他のユーザーのリポジトリを自分のアカウントにコピーすることです。以下の手順でフォークしてください。
-        1. [GitHub のリポジトリ](https://github.com/imuradevelopment/Nuxt3-SSG-TEST)にアクセスします。
-        2. ページ右上の「Fork」ボタンをクリックします。
-        3. 自分のアカウントにリポジトリがフォークされます。
-    - powershell で以下のコマンドを実行して、リポジトリをローカルにクローンします。
+    1. [GitHub の公式ウェブサイト](https://github.com/)にアクセスします。
+    2. 右上の「Sign In」ボタンをクリックします。
+    3. 登録済みのユーザー名（またはメールアドレス）とパスワードを入力して、「Sign in」ボタンをクリックします。
+
+6. **リポジトリのフォークとクローン**
+
+    1. [GitHub のリポジトリ](https://github.com/imuradevelopment/Nuxt3-SSG-TEST)にアクセスします。
+    2. ページ右上の「Fork」ボタンをクリックします。
+    3. 自分のアカウントにリポジトリがフォークされます。
+    4. powershell で以下のコマンドを実行して、リポジトリをローカルにクローンします。
 
         ```ps1
         git clone git@github.com:your-username/Nuxt3-SSG-TEST.git
         ```
 
-6. プロジェクトの依存関係のインストールと起動
+7. **プロジェクトの依存関係のインストールと起動**
 
-    - powershell で以下のコマンドを実行して、プロジェクトの依存関係をインストールします。
+    1. powershell で以下のコマンドを実行して、プロジェクトの依存関係をインストールします。
 
         ```ps1
         cd Nuxt3-SSG-TEST
         npm install
         ```
 
-    - プロジェクトをビルドし、ローカルサーバーを起動するには、以下のコマンドを実行します。
+    2. プロジェクトをビルドし、ローカルサーバーを起動するには、以下のコマンドを実行します。
 
         ```ps1
         npm run generate
         npx serve .output/public
         ```
 
-    - ビルドとローカルサーバーの起動を一度に行いたい場合は、以下のコマンドを実行します。
+    3. ビルドとローカルサーバーの起動を一度に行いたい場合は、以下のコマンドを実行します。
 
         ```ps1
         npm run local
