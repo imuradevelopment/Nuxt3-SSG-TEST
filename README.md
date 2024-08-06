@@ -69,11 +69,17 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
 
 5. **プロジェクトの依存関係のインストールと起動**
 
-    1. ターミナルで以下のコマンドを実行して、プロジェクトの依存関係をインストールします。
+    1. ターミナルで以下のコマンドを実行して、プロジェクトの依存関係をインストールします。  
 
         ```sh
         npm install
         ```
+
+        例）ターミナルに「npm install」を入力しENTER  
+        ![画像の説明](./README/009.png)  
+
+        例）「npm install」実行後  
+        ![画像の説明](./README/010.png)  
 
     2. プロジェクトをビルドし、ローカルサーバーを起動するには、以下のコマンドを実行します。
 
@@ -85,6 +91,25 @@ GitHub Codespace は、クラウドベースの開発環境であり、GitHub �
         # Ok to proceed? (y) y
         # ↑↑↑↑↑上記が出たら「y」を押下
         ```
+
+        例）ターミナルに「npm run generate」を入力しENTER  
+        ![画像の説明](./README/011.png)  
+
+        例）「npm run generate」実行後、「.output/public」にビルド済みのコードが出力される  
+        ![画像の説明](./README/012.png)  
+
+        例）FTPでデプロイするファイルをDLする場合  
+        ![画像の説明](./README/013.png)  
+
+        例）ターミナルに「npx serve .output/public」を入力しENTER  
+        ![画像の説明](./README/014.png)  
+
+        例）「npx serve .output/public」実行後、開発サーバーを起動する場合  
+        ![画像の説明](./README/015.png)  
+
+        例）「http://localhost:3000にアクセス」、クラウド環境上でランダムなURLにリダイレクトされます。  
+        ![画像の説明](./README/016.png)  
+
 
     3. ビルドとローカルサーバーの起動を一度に行いたい場合は、以下のコマンドを実行します。
 
