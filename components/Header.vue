@@ -96,6 +96,7 @@ const { targetId, scrollToTarget } = useScrollToTarget() // スクロール処�
 .el-button-custom {
     height: 100%;
     margin: 0 0 0.25rem 0;
+    padding: 0!important;
 }
 
 /* ロゴ部分のカスタムスタイル */
