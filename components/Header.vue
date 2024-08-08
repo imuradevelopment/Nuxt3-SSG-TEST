@@ -39,7 +39,7 @@
             <el-menu-item index="/access" class="el-menu-item-custom2">
                 <!-- ボタンを使用してアクセスページへのリンクを設定 -->
                 <el-button type="primary" class="el-button-custom">
-                    <NuxtLink @click="scrollToTarget()" to="/company#company05">アクセス</NuxtLink>
+                    <NuxtLink class="w-full h-full" @click="scrollToTarget()" to="/company#company05">アクセス</NuxtLink>
                 </el-button>
             </el-menu-item>
 
@@ -47,7 +47,7 @@
             <el-menu-item index="/contact" class="el-menu-item-custom2" style="margin-right: 0px;">
                 <!-- ボタンを使用してお問い合わせページへのリンクを設定 -->
                 <el-button type="primary" class="el-button-custom">
-                    <NuxtLink @click="scrollToTarget()" to="/contact">お問い合わせ</NuxtLink>
+                    <NuxtLink class="w-full h-full" @click="scrollToTarget()" to="/contact">お問い合わせ</NuxtLink>
                 </el-button>
             </el-menu-item>
         </el-menu>
