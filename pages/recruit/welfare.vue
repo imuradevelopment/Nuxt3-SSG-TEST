@@ -99,7 +99,6 @@
                             </div>
                             <div
                                 class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
-                                ※2020年度以降はコロナ影響を鑑み中止。<br />
                                 ◆キックオフパーティ（4月）<br />
                                 ◆忘年会（11月）
                             </div>

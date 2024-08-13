@@ -214,11 +214,6 @@
                 </CustomArrowButton>
             </div>
         </div>
-        <div class="flex mt-6 px-4 justify-center md2:justify-end">
-            <CustomArrowButton arrowType="transition" color-type="yellow" to="/recruit/information#recruitInfomation02">
-                <template #buttonText><span class="tracking-wide">ENTRY</span></template>
-            </CustomArrowButton>
-        </div>
     </section>
 </template>
 
