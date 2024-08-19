@@ -290,6 +290,7 @@
 <script setup>
 import { ref, reactive, computed, onMounted } from 'vue'
 import CustomArrowButton from '~/components/CustomArrowButton.vue'
+import { useRoute } from 'vue-router'
 
 // フォームのステップ管理に使用する変数
 const active = ref(1) // 現在のアクティブなステップ
@@ -318,6 +319,31 @@ const form = reactive({
   inquiryContent: '',
   agree: false,
 })
+
+
+const route = useRoute();
+
+const updateInquiryTypeFromURL = () => {
+  const inquiryType = route.query.inquiryType;
+  if (inquiryType === 'recruitment') {
+    form.inquiryType = '採用に関するお問い合わせ';
+  } else if (inquiryType === 'other') {
+    form.inquiryType = 'その他';
+  } else {
+    form.inquiryType = '';
+  }
+};
+
+// 初期ロード時
+onMounted(() => {
+  updateInquiryTypeFromURL();
+});
+
+// URLパラメータの変化を監視
+watch(() => route.query.inquiryType, () => {
+  updateInquiryTypeFromURL();
+});
+
 
 // バリデーションエラーを管理するリアクティブオブジェクト
 const errors = reactive({})
@@ -445,16 +471,16 @@ const handleInquiryTypeChange = () => {
 // フォームがバリデーションエラーなしであるかどうかを判断する計算プロパティ
 const isFormValid = computed(() => Object.keys(errors).length === 0)
 
-// ページロード時にURLパラメータをチェックして初期値を設定する
-onMounted(() => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const inquiryType = urlParams.get('inquiryType');
-  if (inquiryType === 'recruitment') {
-    form.inquiryType = '採用に関するお問い合わせ';
-  } else if (inquiryType === 'other') {
-    form.inquiryType = 'その他';
-  }
-});
+// // ページロード時にURLパラメータをチェックして初期値を設定する
+// onMounted(() => {
+//   const urlParams = new URLSearchParams(window.location.search);
+//   const inquiryType = urlParams.get('inquiryType');
+//   if (inquiryType === 'recruitment') {
+//     form.inquiryType = '採用に関するお問い合わせ';
+//   } else if (inquiryType === 'other') {
+//     form.inquiryType = 'その他';
+//   }
+// });
 </script>
 
 <style scoped>
