@@ -31,7 +31,7 @@
             <!-- 会社名／学校名入力フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="companyName">
-                会社名／学校名（任意）
+                会社名／学校名 <span class="bg-gray-500 text-white px-2 py-1 rounded">任意</span>
               </label>
               <input v-model="form.companyName"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -74,12 +74,12 @@
             <!-- 電話番号入力フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
-                電話番号（ハイフン無しで入力） <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
-                <span v-if="errors.phone" class="text-red-500 text-xs italic">{{ errors.phone }}</span>
+                電話番号（ハイフン無しで入力） <span class="bg-gray-500 text-white px-2 py-1 rounded">任意</span>
+                <span v-if="optionalErrors.phone" class="text-red-500 text-xs italic">{{ optionalErrors.phone }}</span>
               </label>
               <input v-model="form.phone" @blur="validateField('phone')"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="phone" type="tel" required />
+                id="phone" type="tel" />
             </div>
 
             <!-- お問い合わせ区分選択フィールド -->
@@ -156,7 +156,7 @@
             <!-- 確認用フィールド（すべての入力内容を表示） -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="companyName">
-                会社名／学校名（任意）
+                会社名／学校名 <span class="bg-gray-500 text-white px-2 py-1 rounded">任意</span>
               </label>
               <input v-model="form.companyName"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -196,7 +196,7 @@
             <!-- 電話番号確認フィールド -->
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
-                電話番号（ハイフン無しで入力） <span class="bg-red-500 text-white px-2 py-1 rounded">必須</span>
+                電話番号（ハイフン無しで入力） <span class="bg-gray-500 text-white px-2 py-1 rounded">任意</span>
               </label>
               <input v-model="form.phone"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -345,8 +345,11 @@ watch(() => route.query.inquiryType, () => {
 });
 
 
-// バリデーションエラーを管理するリアクティブオブジェクト
+// 必須項目のバリデーションエラーを管理するリアクティブオブジェクト
 const errors = reactive({})
+
+// 任意項目のバリデーションエラーを管理するリアクティブオブジェクト
+const optionalErrors = reactive({})
 
 // フィールドのバリデーションを行う関数
 const validateField = (field) => {
@@ -381,12 +384,10 @@ const validateField = (field) => {
       }
       break
     case 'phone':
-      if (!form.phone) {
-        errors.phone = '電話番号を入力してください'
-      } else if (!/^\d+$/.test(form.phone)) {
-        errors.phone = '電話番号は数字のみで入力してください'
+      if (!/^\d+$/.test(form.phone)) {
+        optionalErrors.phone = '電話番号は数字のみで入力してください';
       } else {
-        delete errors.phone
+        delete optionalErrors.phone;
       }
       break
     case 'inquiryType':
@@ -426,10 +427,10 @@ const validateField = (field) => {
 
 // フォーム全体のバリデーションを行い、次のステップに進むかどうかを判断する関数
 const validateForm = () => {
-  Object.keys(form).forEach((field) => validateField(field))
+  Object.keys(form).forEach((field) => validateField(field));
 
   if (Object.keys(errors).length === 0) {
-    nextStep()
+    nextStep();
   }
 }
 
