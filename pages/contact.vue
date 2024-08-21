@@ -472,16 +472,6 @@ const handleInquiryTypeChange = () => {
 // フォームがバリデーションエラーなしであるかどうかを判断する計算プロパティ
 const isFormValid = computed(() => Object.keys(errors).length === 0)
 
-// // ページロード時にURLパラメータをチェックして初期値を設定する
-// onMounted(() => {
-//   const urlParams = new URLSearchParams(window.location.search);
-//   const inquiryType = urlParams.get('inquiryType');
-//   if (inquiryType === 'recruitment') {
-//     form.inquiryType = '採用に関するお問い合わせ';
-//   } else if (inquiryType === 'other') {
-//     form.inquiryType = 'その他';
-//   }
-// });
 </script>
 
 <style scoped>
