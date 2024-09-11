@@ -565,7 +565,7 @@ Nuxt3-SSG-TEST-main/
                 shadowColor: 'rgb(0 0 0 / 0.5)',
                 bgPosition: 'center'
             },
-                        {
+            {
                 src: '/images/recruit/employee/009.jpg',
                 alt: '人物写真X.X.',
                 introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />X.X.<br />文系国立大学卒<br />2024年入社</div></div></div>`,
