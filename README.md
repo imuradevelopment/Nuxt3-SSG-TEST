@@ -11,6 +11,15 @@
     - [基本的なフォルダ構成とその説明](#基本的なフォルダ構成とその説明)
   - [プロジェクトの構成](#プロジェクトの構成)
   - [ファイル修正の影響範囲一覧](#ファイル修正の影響範囲一覧)
+  - [定期修正箇所一覧](#定期修正箇所一覧)
+    - [マイナビ/リクナビリンク、画層差し替え（1年に1度で発生）](#マイナビリクナビリンク画層差し替え1年に1度で発生)
+    - [プライバシーマークの入れ替え（2年に一度発生）](#プライバシーマークの入れ替え2年に一度発生)
+    - [社員紹介入れ替え手順（不定期で発生）](#社員紹介入れ替え手順不定期で発生)
+    - [オフィス紹介写真の入替手順（不定期で発生）](#オフィス紹介写真の入替手順不定期で発生)
+    - [地図の修正・更新方法（不定期で発生）](#地図の修正更新方法不定期で発生)
+    - [会社概要の文言変更（年1回、もしくは不定期で発生）](#会社概要の文言変更年1回もしくは不定期で発生)
+    - [各種データの文言修正（年1回、もしくは不定期で発生）](#各種データの文言修正年1回もしくは不定期で発生)
+    - [募集情報の修正（年1回、もしくは不定期で発生）](#募集情報の修正年1回もしくは不定期で発生)
 
 ## GitHub の登録方法
 
@@ -450,3 +459,491 @@ Nuxt3-SSG-TEST-main/
 | components/Timeline.vue    | pages/recruit/induction.vue                             |
 | components/VennDiagram.vue | pages/service.vue                                       |
 
+## 定期修正箇所一覧
+
+### マイナビ/リクナビリンク、画層差し替え（1年に1度で発生）
+
+- 修正対象ファイルと作業
+  - pages\recruit\information.vue（募集情報ページ）
+    - URL更新を行う。（以下の抜粋コードのコメントを参照）
+  - public\images\recruit\information\002.png（マイナビリンク画像）
+    - 画像差し替え。
+  - public\images\recruit\information\003.png（リクナビリンク画像）
+    - 画像差し替え。
+
+```html
+<BlurGlassCard class="self-center max-w-xs">
+    <div class="flex flex-col gap-4">
+        <div>
+            <!-- 以下リクナビリンク修正 -->
+            <a href="https://job.rikunabi.com/2025/company/r110010051/" target="_blank"
+                rel="noopener noreferrer">
+                <img src="/images/recruit/information/003.png" alt="External Link Image"
+                    class="h-12 w-full bg-white cursor-pointer">
+            </a>
+        </div>
+        <div>
+            <!-- 以下マイナビリンク修正 -->
+            <a href="https://job.mynavi.jp/25/pc/search/corp267137/outline.html" target="_blank"
+                rel="noopener noreferrer">
+                <img src="/images/recruit/information/002.png" alt="External Link Image"
+                    class="h-12 w-full bg-white cursor-pointer">
+            </a>
+        </div>
+    </div>
+</BlurGlassCard>
+```
+
+### プライバシーマークの入れ替え（2年に一度発生）
+
+- プライバシーマークロゴの入替
+  - 修正対象ファイルと作業
+    - public\images\footer\policy.png（プライバシーマーク画像）
+      - 画像差し替え。
+
+- 個人情報保護ページの文言修正
+  - 修正対象ファイルと作業
+    - pages\policy.vue（個人情報保護ページ）
+      - 対象行の文言を修正。
+
+### 社員紹介入れ替え手順（不定期で発生）
+
+- 修正対象ファイルと作業
+  - pages\recruit\employee.vue（社員紹介ページ）
+    - 以下の「# pages\recruit\employee.vue（社員紹介ページ）修正手順」に沿ってその下の修正例のように修正を行う。
+  - pages\recruit\index.vue（採用情報ページ）
+    - 以下の「# pages\recruit\index.vue（採用情報ページ）修正手順」に沿ってその下の修正例のように修正を行う。
+  - public\images\recruit\employee\002.jpg ~ 008.jpg（社員紹介画像）
+    - 画像の追加、削除。また、それに伴って上記手順で修正を行う。
+
+```markdown
+# pages\recruit\employee.vue（社員紹介ページ）修正手順
+
+次のコード例に示す様にブロック単位でコピーして追加、または削除を行う。
+
+ここでは例として追加を行います。
+「008.jpg」のブロックをコピーして下記の様に修正し、末尾に追加。
+
+- src: 
+    - 008.jpg → 009.jpg
+- alt: 
+    - R.T. → X.X.
+- introduction: 
+    - 若手エンジニア<br />R.T.<br />理系私立大学卒<br />2023年入社 →　若手エンジニア<br />X.X.<br />文系国立大学卒<br />2024年入社
+- message1: 
+    - 私は、納品予定のシステムに... → 「現在の仕事について教えて下さい。」の回答
+- message2: 
+    - テストを一つ消化する毎に... → 「この仕事の好きなところはどこですか？」の回答
+- message3: 
+    - 私が就職活動中に... → 「就職活動へのアドバイスをお願いします。」の回答
+- tileColor:
+    - 修正なし
+- shadowColor:
+    - 修正なし
+- bgPosition:
+    - 修正なし
+```
+
+```html
+<!-- pages\recruit\index.vue（採用情報ページ）抜粋と修正例 -->
+<!-- インタビューセクション -->
+<section class="mb-12 md:mb-24">
+    <h2 id="recruit-employee02 mb-4"
+        class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+        インタビュー</h2>
+    <div class=" mx-4">
+        <!-- CarouselEmployeeコンポーネントの呼び出し -->
+        <CarouselEmployee :pics="[
+            {
+                src: '/images/recruit/employee/008.jpg',
+                alt: '人物写真R.T.',
+                introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />R.T.<br />理系私立大学卒<br />2023年入社</div></div></div>`,
+                message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私は、納品予定のシステムに...</p>`,
+                message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>テストを一つ消化する毎に...</p>`,
+                message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>私が就職活動中に...</p>`,
+                tileColor: 'rgba(0, 37, 92, 0.1)',
+                shadowColor: 'rgb(0 0 0 / 0.5)',
+                bgPosition: 'center'
+            },
+                        {
+                src: '/images/recruit/employee/009.jpg',
+                alt: '人物写真X.X.',
+                introduction: `<div class='flex h-full items-center justify-end'><div class='h-full w-auto bg-custom-deepBlue/70 text-white flex justify-center items-center'><div class='p-1 md:p-4 text-xs md:text-2xl font-bold leading-5 md:leading-loose text-center'>若手エンジニア<br />X.X.<br />文系国立大学卒<br />2024年入社</div></div></div>`,
+                message1: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>「現在の仕事について教えて下さい。」の回答</p>`,
+                message2: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>「この仕事の好きなところはどこですか？」の回答</p>`,
+                message3: `<p class='message text-sm sm:text-base font-bold sm:leading-7 leading-7'>「就職活動へのアドバイスをお願いします。」の回答</p>`,
+                tileColor: 'rgba(0, 37, 92, 0.1)',
+                shadowColor: 'rgb(0 0 0 / 0.5)',
+                bgPosition: 'center'
+            },
+        ]"></CarouselEmployee>
+    </div>
+</section>
+```
+
+```markdown
+# pages\recruit\index.vue（採用情報ページ）修正手順
+
+次のコード例に示す様にブロック単位でコピーして追加、または削除を行う。
+
+ここでは例として追加を行います。
+「008.jpg」のブロックをコピーして下記の様に修正し、末尾に追加を行う。
+
+- src: 
+    - 008.jpg → 009.jpg
+- alt: 
+    - R.T. → X.X.
+- mainText:
+    - R.T. → X.X.
+- subText: 
+    - 若手エンジニア<br>理系私立大学卒<br>2023年入社 → 若手エンジニア<br>文系国立大学卒<br>2024年入社
+- tileColor:
+    - 修正なし
+- shadowColor:
+    - 修正なし
+- bgPosition:
+    - 修正なし
+```
+
+```html
+<!-- pages\recruit\index.vue（採用情報ページ）抜粋と修正例 -->
+<!-- 社員紹介セクション -->
+<section class="my-24">
+    <BackgroundPattern>
+    </BackgroundPattern>
+    <div class="w-full flex flex-col">
+        <h2 id="recruit09" class="pl-16 pr-8 w-fit text-white bg-custom-deepBlue text-4xl font-bold leading-loose">
+            社員紹介
+        </h2>
+        <div class="mx-4 mt-8 mb-4 flex justify-center items-center">
+            <div class="max-w-xl">
+                <Carousel :pics="[
+                    {
+                        src: '/images/recruit/employee/008.jpg',
+                        alt: '人物写真R.T.',
+                        mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>R.T.</div>`,
+                        subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>若手エンジニア<br>理系私立大学卒<br>2023年入社</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
+                        tileColor: 'rgba(0, 37, 92, 0.1)',
+                        shadowColor: 'rgb(0 0 0 / 0.5)',
+                        bgPosition: 'center'
+                    },    
+                    {
+                        src: '/images/recruit/employee/009.jpg',
+                        alt: '人物写真X.X.',
+                        mainText: `<div class='text-center px-4 text-2xl font-bold leading-loose min-w-[6rem]'>X.X.</div>`,
+                        subText: `<div class='flex flex-col min-w-[210px]'><div class='grow text-center text-sm sm:text-base font-bold'>若手エンジニア<br>理系私立大学卒<br>2023年入社</div><a href='/recruit/employee' class='flex justify-center items-center border border-b-2 mt-2 py-1 px-4'>詳しく見る<i class='el-icon ml-2' style='font-size: 20px;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='currentColor' d='M160 224a32 32 0 0 0-32 32v512a32 32 0 0 0 32 32h704a32 32 0 0 0 32-32V256a32 32 0 0 0-32-32zm0-64h704a96 96 0 0 1 96 96v512a96 96 0 0 1-96 96H160a96 96 0 0 1-96-96V256a96 96 0 0 1 96-96'></path><path fill='currentColor' d='M704 320a64 64 0 1 1 0 128 64 64 0 0 1 0-128M288 448h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32m0 128h256q32 0 32 32t-32 32H288q-32 0-32-32t32-32'></path></svg></i></a></div>`,
+                        tileColor: 'rgba(0, 37, 92, 0.1)',
+                        shadowColor: 'rgb(0 0 0 / 0.5)',
+                        bgPosition: 'center'
+                    },
+                ]"></Carousel>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+### オフィス紹介写真の入替手順（不定期で発生）
+
+- 修正対象ファイルと作業
+  - pages\recruit\office.vue（オフィス紹介ページ）
+    - 以下の「# pages\recruit\office.vue（オフィス紹介ページ）修正手順」に沿ってその下の修正例のように修正を行う。
+  - public\images\recruit\office\002.png ~ 009.png（オフィス紹介画像）
+    - 画像の追加、削除。また、それに伴って上記手順で修正を行う。
+
+```markdown
+# pages\recruit\office.vue（オフィス紹介ページ）修正手順
+
+次のコード例に示す様にブロック単位でコピーして追加、または削除を行う。
+
+ここでは例として追加を行います。
+「009.jpg」のブロックをコピーして下記の様に修正し、末尾に追加。
+
+- src: 
+    - 009.jpg → 010.jpg
+- alt: 
+    - 職場風景２ → 画像の説明テキスト
+- mainText:
+    - 職場風景２ → 画面表示文字列。画像タイトル。
+- subText:
+    - 実際の職場環境の雰囲気。<br />エンジニアに人気のBaronチェアやサブディスプレイ等完備。 → 画面表示文字列。下部に表示される画像の説明。
+- tileColor:
+    - 修正なし
+- shadowColor:
+    - 修正なし
+- bgPosition:
+    - 修正なし
+```
+
+```html
+<!-- pages\recruit\office.vue（オフィス紹介ページ）抜粋と修正例 -->
+<!-- オフィス内部の各部屋やエリアの紹介セクション -->
+<section class="mb-12 md:mb-24 ">
+    <div class="mx-4 flex justify-center items-center">
+        <div class="max-auto">
+            <!-- オフィス内部の写真を表示するカルーセルコンポーネント -->
+            <Carousel :pics="[
+                {
+                    src: '/images/recruit/office/009.png',
+                    alt: '職場風景２',
+                    mainText: `<h3 class='px-4 text-2xl font-bold leading-loose'>職場風景２</h3>`,
+                    subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>実際の職場環境の雰囲気。<br class='' />エンジニアに人気のBaronチェアやサブディスプレイ等完備。</p>`,
+                    tileColor: 'rgba(0, 37, 92, 0.1)',
+                    shadowColor: 'rgb(0 0 0 / 0.5)',
+                    bgPosition: 'center'
+                },
+                {
+                    src: '/images/recruit/office/010.png',
+                    alt: '画像の説明テキスト',
+                    mainText: `<h3 class='px-4 text-2xl font-bold leading-loose'>画面表示文字列。画像タイトル。</h3>`,
+                    subText: `<p class=' text-sm sm:text-base font-bold sm:leading-7 leading-7'>画面表示文字列。下部に表示される画像の説明。</p>`,
+                    tileColor: 'rgba(0, 37, 92, 0.1)',
+                    shadowColor: 'rgb(0 0 0 / 0.5)',
+                    bgPosition: 'center'
+                },
+            ]"></Carousel>
+        </div>
+    </div>
+</section>
+
+```
+
+### 地図の修正・更新方法（不定期で発生）
+
+- 修正対象ファイルと作業
+  - Map.xlsx（地図の画像元）
+    - 廃店などによる修正を行う。
+  - public\images\company\003.png（地図の画像）
+    - ペイントなどでエクセルから画像を生成して再配置する。
+
+### 会社概要の文言変更（年1回、もしくは不定期で発生）
+
+- 修正対象ファイルと作業
+  - pages\company.vue（会社情報ページ）
+    - コアパートナー・主要取引先の追加・削除を行う。以下の「# コアパートナー・主要取引先の追加・削除」を参照してコメントの指示に従って修正を行う。
+    - 技術者数の増減を行う。以下の「# 技術者数の増減」を参照してコメントの指示に従って修正を行う。
+
+```html
+<!-- 
+# コアパートナー・主要取引先の追加・削除
+
+    {
+        column1: "事業内容",
+        column2: "情報サービス業"
+    },
+    {
+    column1: "主要取引先",
+    column2: 'ここに以下の内容を修正して1行で記載' 
+    },
+-->
+
+<!--  コアパートナー、主要取引先を追記、削除し「1行」にする -->
+<div style="display: flex; justify-content: stretch; align-items: center; margin: 0.5rem 0">
+    <hr style="width: calc(50% - 4rem); border-color: rgba(209, 213, 219, 0.9)" />
+    <div style="padding: 0 1rem">コアパートナー</div>
+    <hr style="width: calc(50% - 4rem); border-color: rgba(209, 213, 219, 0.9)" />
+</div>
+日本アイ・ビー・エム株式会社<br />
+コベルコシステム株式会社<br />
+三井情報株式会社<br />
+<!-- コアパートナーを追記・削除、改行「<br />」を忘れないように注意 -->
+
+<div style="display: flex; justify-content: stretch; align-items: center; margin: 0.5rem 0">
+    <hr style="width: calc(50% - 3.5rem); border-color: rgba(209, 213, 219, 0.9)" />
+    <div style="padding: 0 1rem">主要取引先</div>
+    <hr style="width: calc(50% - 3.5rem); border-color: rgba(209, 213, 219, 0.9)" />
+</div>
+NECネクサソリューションズ株式会社<br />
+日本電気株式会社（NEC）<br />
+NTTコムソリューションズ株式会社<br />
+株式会社TBK<br />
+デロイト・トーマツ・リスクアドバイザリー株式会社<br />
+日本タタ・コンサルタンシー・サービシズ株式会社<br />
+富士フイルムシステムサービス株式会社<br />
+富士通株式会社
+<!-- 主要取引先を追記・削除、改行「<br />」を忘れないように注意 -->
+```
+
+```js
+// # 技術者数の増減
+// column2の内容を修正。上記の「# コアパートナー・主要取引先の追加・削除」のようにhtml構文も使用できます。
+  {
+    column1: "技術者数",
+    column2: '250名（社員100名、契約社員20名、協力会社技術者130名）'
+  },
+```
+
+### 各種データの文言修正（年1回、もしくは不定期で発生）
+
+- 修正対象ファイルと作業
+  - pages\recruit\data.vue（各種データページ）
+    - 基本的にコメントでパネル毎に区切られているので、パネル内項目変更は各パネル内で繰り返している要素に対して追加、削除、編集を行う。例として以下の「# パネル内項目の追加、削除、編集」を参照してください。
+    - パネル自体の追加は「追加したいスタイルの既存のパネル」をコピーして編集し、任意の場所に追加を行う。画面全体のパネルのレイアウトは自動で適切に配置されるはずです。
+  - public\images\recruit\data\001.png ~ 009.png（パネル内で使用されているアイコン画像）
+    - 例として以下の「# パネル内項目の追加、削除、編集」を参照してください。下部の「# アイコン画像の差し替え」。
+
+```html
+<!-- # パネル内項目の追加、削除、編集 -->
+<!-- 男女割合カード -->
+<div class="data-card card-text">
+    <div class="pancake-stack text-custom-deepBlue">
+        <div class="text-center text-4xl tracking-widest font-bold">
+            男女割合
+        </div>
+        <hr class="mx-4 mb-4 mt-4 border border-custom-deepBlue" />
+        <div class="pl-4 w-4/5 horizontal-center">
+            <ul class="list-disc text-left text-lg font-bold">
+                <li>
+                    <div class="inline-flex justify-between items-center w-4/5">
+                        <div>
+                            男性
+                        </div>
+                        <div>
+                            <!-- %編集 -->
+                            88.4%
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="inline-flex justify-between items-center w-4/5">
+                        <div>
+                            女性
+                        </div>
+                        <div>
+                            10.6%
+                        </div>
+                    </div>
+                </li>
+                <!-- パネル内項目追加（↓↓↓） -->
+                <li>
+                    <div class="inline-flex justify-between items-center w-4/5">
+                        <div>
+                            その他
+                        </div>
+                        <div>
+                            1.0%
+                        </div>
+                    </div>
+                </li>
+                <!-- パネル内項目追加（↑↑↑） -->
+            </ul>
+        </div>
+        <div class="flex justify-center items-center">
+            <!-- 
+             # アイコン画像の差し替え
+             画像のパスは下記の「src」のパスを参照して差し替え
+              -->
+            <NuxtImg class="w-28 h-28" fit="cover" src="/images/recruit/data/009.png" />
+        </div>
+    </div>
+</div>
+```
+
+### 募集情報の修正（年1回、もしくは不定期で発生）
+
+　etc）項目(行)の追加、文言修正
+
+- 修正対象ファイルと作業
+  - pages\recruit\information.vue（募集情報ページ）
+    - 項目（行）の追加と文言修正を行う。下記の「# 項目（行）の追加と文言修正」を参照して下さい。
+
+```html
+<!-- 
+ # 項目（行）の追加と文言修正
+
+ 例えば下記の様に「新卒採用」のタブの項目（行）追加と文言修正を行います。
+ ここでは「応募資格の行ブロック（構成は同じなので任意の行ブロック）」をコピーし、行ごとに区切られているコメントを参照して追加したい場所（ここでは「応募資格のブロックの下の行」）にブロックを追加し、文言修正を行う。
+
+ -->
+
+<!-- 新卒採用タブ -->
+<el-tab-pane label="新卒採用" name="first">
+    <!--
+     新卒採用は「name="first"」 
+     キャリア採用は「name="second"」
+     契約社員採用は「name="third"」
+     の名称がそれぞれついています。
+     -->
+    <section>
+        <!-- ぼかしガラスカード -->
+        <BlurGlassCard color="rgba(0, 37, 92, 0.6)" :blur=2 class="text-white">
+            <div>
+                <!-- 募集情報 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 応募資格 -->
+                <div class="flex flex-nowrap">
+                    <div
+                        class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                        応募資格</div>
+                    <div
+                        class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                        学部・学科やコンピュータに対する知識は問いません。
+                    </div>
+                </div>
+                <!-- 
+                 # 追加項目（行）と文言修正
+                 「応募資格などの任意のブロックをコピーして追加したい行の場所にブロックを追加」 -->
+                <div class="flex flex-nowrap">
+                    <div
+                        class="w-1/3 text-base leading-loose bg-custom-deepBlue/20 border-b border-custom-deepBlue/30 flex justify-center items-center">
+                        追加項目（行の左の列）の記載内容</div>
+                    <div
+                        class="w-2/3 pl-2 text-xs md:text-sm leading-loose md:leading-loose border-b border-custom-deepBlue/30 flex items-center">
+                        追加項目（行の右の列）の記載内容
+                    </div>
+                </div>
+                <!-- 雇用形態 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 本社地 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 勤務地 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 勤務時間 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 休日 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 休暇 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 給与 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 諸手当 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 昇給 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 賞与 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 福利厚生 -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+                <!-- 応募の流れ -->
+                <div class="flex flex-nowrap">
+                    ...
+                </div>
+            </div>
+        </BlurGlassCard>
+    </section>
+</el-tab-pane>
+```
